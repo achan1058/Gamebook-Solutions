@@ -35,53 +35,50 @@
     <CustomBuild Include="template.dot">
       <Filter>Source Files</Filter>
     </CustomBuild>
-    <CustomBuild Include="Chooseomatic\old\Thrusts of Justice.dot">
-      <Filter>backup</Filter>
-    </CustomBuild>
-    <CustomBuild Include="..\Fighting Fantasy\Blood of the Zombie.dot">
-      <Filter>backup</Filter>
-    </CustomBuild>
-    <CustomBuild Include="..\Fighting Fantasy\backup\FF12.dot">
-      <Filter>backup</Filter>
-    </CustomBuild>
-    <CustomBuild Include="..\Fighting Fantasy\backup\ff64.dot">
-      <Filter>backup</Filter>
-    </CustomBuild>
-    <CustomBuild Include="..\Fighting Fantasy\House of Hell.dot">
-      <Filter>backup</Filter>
-    </CustomBuild>
-    <CustomBuild Include="..\Fighting Fantasy\Howl of the Werewolf.dot">
-      <Filter>backup</Filter>
-    </CustomBuild>
-    <CustomBuild Include="..\Fighting Fantasy\Stormslayer.dot">
-      <Filter>backup</Filter>
-    </CustomBuild>
-    <CustomBuild Include="Chooseomatic\Time Travel Dinosaur.dot">
-      <Filter>backup</Filter>
-    </CustomBuild>
     <CustomBuild Include="Fighting Fantasy\old\Appointment with F.E.A.R. incomplete.dot">
-      <Filter>backup</Filter>
-    </CustomBuild>
-    <CustomBuild Include="Fighting Fantasy\Deathtrap Dungeon.dot">
-      <Filter>Fighting Fantasy</Filter>
-    </CustomBuild>
-    <CustomBuild Include="Fighting Fantasy\old\Caverns of the Snow Witch.dot">
       <Filter>backup</Filter>
     </CustomBuild>
     <CustomBuild Include="Fighting Fantasy\old\Beneath Nightmare Castle.dot">
       <Filter>backup</Filter>
     </CustomBuild>
-    <CustomBuild Include="Fighting Fantasy\Creature of Havoc.dot">
-      <Filter>Fighting Fantasy</Filter>
+    <CustomBuild Include="Fighting Fantasy\old\Bloodbones.dot">
+      <Filter>backup</Filter>
     </CustomBuild>
-    <CustomBuild Include="Fighting Fantasy\The Warlock of Firetop Mountain.dot">
-      <Filter>Fighting Fantasy</Filter>
+    <CustomBuild Include="Fighting Fantasy\old\Caverns of the Snow Witch.dot">
+      <Filter>backup</Filter>
     </CustomBuild>
-    <CustomBuild Include="Fighting Fantasy\The Citadel of Chaos.dot">
-      <Filter>Fighting Fantasy</Filter>
+    <CustomBuild Include="Fighting Fantasy\old\City of Thieves.dot">
+      <Filter>backup</Filter>
     </CustomBuild>
-    <CustomBuild Include="Fighting Fantasy\Crypt of the Sorcerer.dot">
-      <Filter>Fighting Fantasy</Filter>
+    <CustomBuild Include="Fighting Fantasy\old\Creature of Havoc.dot">
+      <Filter>backup</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Fighting Fantasy\old\Crypt of the Sorcerer.dot">
+      <Filter>backup</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Fighting Fantasy\old\Deathtrap Dungeon.dot">
+      <Filter>backup</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Fighting Fantasy\old\Knights of Doom.dot">
+      <Filter>backup</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Fighting Fantasy\old\The Citadel of Chaos.dot">
+      <Filter>backup</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Tin Man Games\old\The Forgotten Spell.dot">
+      <Filter>backup</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Fighting Fantasy\old\The Warlock of Firetop Mountain.dot">
+      <Filter>backup</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Chooseomatic\old\Thrusts of Justice.dot">
+      <Filter>backup</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Chooseomatic\old\Time Travel Dinosaur.dot">
+      <Filter>backup</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Tin Man Games\old\Zombocalypse Now.dot">
+      <Filter>backup</Filter>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
@@ -91,5 +88,8 @@
     <Text Include="edges.txt">
       <Filter>Header Files</Filter>
     </Text>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include=".gitignore" />
   </ItemGroup>
 </Project>

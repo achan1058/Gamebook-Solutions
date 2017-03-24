@@ -9,21 +9,6 @@
 <g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 3309)">
 <title>Fighting Fantasy: Appointment with F.E.A.R.</title>
 <polygon fill="white" stroke="none" points="-4,4 -4,-3309 19007.5,-3309 19007.5,4 -4,4"/>
-<g id="clust7" class="cluster"><title>cluster_BODYGUARD_DANNY_RICH</title>
-<polygon fill="#90ee90" stroke="#90ee90" points="1846.2,-439 1846.2,-603 1954.12,-603 1954.12,-439 1846.2,-439"/>
-<text text-anchor="middle" x="1900.16" y="-587.8" font-family="Times New Roman,serif" font-size="14.00">Bodyguard</text>
-<text text-anchor="middle" x="1900.16" y="-572.8" font-family="Times New Roman,serif" font-size="14.00"> 8/9</text>
-<text text-anchor="middle" x="1900.16" y="-557.8" font-family="Times New Roman,serif" font-size="14.00"> 7/8</text>
-<text text-anchor="middle" x="1900.16" y="-542.8" font-family="Times New Roman,serif" font-size="14.00"> Danny Rich 9/8</text>
-</g>
-<g id="clust11" class="cluster"><title>cluster_RADIATION_DOG</title>
-<polygon fill="#90ee90" stroke="#90ee90" points="2857.92,-397 2857.92,-890 3455.71,-890 3455.71,-397 2857.92,-397"/>
-<text text-anchor="middle" x="3156.82" y="-874.8" font-family="Times New Roman,serif" font-size="14.00">Radiation Dog*</text>
-<text text-anchor="middle" x="3156.82" y="-859.8" font-family="Times New Roman,serif" font-size="14.00"> 7/5</text>
-<text text-anchor="middle" x="3156.82" y="-844.8" font-family="Times New Roman,serif" font-size="14.00"> 6/5</text>
-<text text-anchor="middle" x="3156.82" y="-829.8" font-family="Times New Roman,serif" font-size="14.00"> 7/6</text>
-<text text-anchor="middle" x="3156.82" y="-814.8" font-family="Times New Roman,serif" font-size="14.00"> 7/7</text>
-</g>
 <g id="clust12" class="cluster"><title>cluster_THE_TORMENTOR</title>
 <polygon fill="#90ee90" stroke="#90ee90" points="4146.44,-1054 4146.44,-1158 4248.44,-1158 4248.44,-1054 4146.44,-1054"/>
 <text text-anchor="middle" x="4197.44" y="-1142.8" font-family="Times New Roman,serif" font-size="14.00">The Tormentor</text>
@@ -39,15 +24,28 @@
 <text text-anchor="middle" x="6987.73" y="-671.8" font-family="Times New Roman,serif" font-size="14.00">Fountain Creature</text>
 <text text-anchor="middle" x="6987.73" y="-656.8" font-family="Times New Roman,serif" font-size="14.00"> 10/11</text>
 </g>
+<g id="clust19" class="cluster"><title>cluster_SCARLET_PRANKSTER</title>
+<polygon fill="#90ee90" stroke="#90ee90" points="8318.48,-536 8318.48,-712 8429.48,-712 8429.48,-536 8318.48,-536"/>
+<text text-anchor="middle" x="8373.98" y="-696.8" font-family="Times New Roman,serif" font-size="14.00">Scarlet Prankster</text>
+<text text-anchor="middle" x="8373.98" y="-681.8" font-family="Times New Roman,serif" font-size="14.00"> 9/8</text>
+</g>
+<g id="clust25" class="cluster"><title>cluster_FOUR_ARMED_BEAST_TIGER_MAN_DR_MACABRE</title>
+<polygon fill="#90ee90" stroke="#90ee90" points="12740.2,-1596 12740.2,-1745 12882.2,-1745 12882.2,-1596 12740.2,-1596"/>
+<text text-anchor="middle" x="12811.2" y="-1729.8" font-family="Times New Roman,serif" font-size="14.00">Four&#45;Armed Beast 8/6</text>
+<text text-anchor="middle" x="12811.2" y="-1714.8" font-family="Times New Roman,serif" font-size="14.00"> Tiger Man 9/5</text>
+<text text-anchor="middle" x="12811.2" y="-1699.8" font-family="Times New Roman,serif" font-size="14.00"> Dr Macabre 7/7</text>
+</g>
+<g id="clust7" class="cluster"><title>cluster_BODYGUARD_DANNY_RICH</title>
+<polygon fill="#90ee90" stroke="#90ee90" points="1846.2,-439 1846.2,-603 1954.12,-603 1954.12,-439 1846.2,-439"/>
+<text text-anchor="middle" x="1900.16" y="-587.8" font-family="Times New Roman,serif" font-size="14.00">Bodyguard</text>
+<text text-anchor="middle" x="1900.16" y="-572.8" font-family="Times New Roman,serif" font-size="14.00"> 8/9</text>
+<text text-anchor="middle" x="1900.16" y="-557.8" font-family="Times New Roman,serif" font-size="14.00"> 7/8</text>
+<text text-anchor="middle" x="1900.16" y="-542.8" font-family="Times New Roman,serif" font-size="14.00"> Danny Rich 9/8</text>
+</g>
 <g id="clust6" class="cluster"><title>cluster_MONSTER</title>
 <polygon fill="#90ee90" stroke="#90ee90" points="345.5,-1659 345.5,-1907 1271.2,-1907 1271.2,-1659 345.5,-1659"/>
 <text text-anchor="middle" x="808.348" y="-1891.8" font-family="Times New Roman,serif" font-size="14.00">? MONSTER</text>
 <text text-anchor="middle" x="808.348" y="-1876.8" font-family="Times New Roman,serif" font-size="14.00"> 0/0 0/0</text>
-</g>
-<g id="clust8" class="cluster"><title>cluster_ALCHEMIST</title>
-<polygon fill="#90ee90" stroke="#90ee90" points="3537.3,-1356 3537.3,-1460 3609.3,-1460 3609.3,-1356 3537.3,-1356"/>
-<text text-anchor="middle" x="3573.3" y="-1444.8" font-family="Times New Roman,serif" font-size="14.00">Alchemist</text>
-<text text-anchor="middle" x="3573.3" y="-1429.8" font-family="Times New Roman,serif" font-size="14.00"> 8/6</text>
 </g>
 <g id="clust9" class="cluster"><title>cluster_ALCHEMIST2</title>
 <polygon fill="#90ee90" stroke="#90ee90" points="3722.9,-1356 3722.9,-1475 3794.9,-1475 3794.9,-1356 3722.9,-1356"/>
@@ -62,20 +60,38 @@
 <text text-anchor="middle" x="3758.9" y="-1238.8" font-family="Times New Roman,serif" font-size="14.00"> 7/7</text>
 <text text-anchor="middle" x="3758.9" y="-1223.8" font-family="Times New Roman,serif" font-size="14.00"> 7/6</text>
 </g>
-<g id="clust13" class="cluster"><title>cluster_RIPPER_SHARK</title>
-<polygon fill="#90ee90" stroke="#90ee90" points="4506.46,-1497 4506.46,-1601 4597.46,-1601 4597.46,-1497 4506.46,-1497"/>
-<text text-anchor="middle" x="4551.96" y="-1585.8" font-family="Times New Roman,serif" font-size="14.00">Ripper Shark</text>
-<text text-anchor="middle" x="4551.96" y="-1570.8" font-family="Times New Roman,serif" font-size="14.00"> 10/8</text>
+<g id="clust8" class="cluster"><title>cluster_ALCHEMIST</title>
+<polygon fill="#90ee90" stroke="#90ee90" points="3537.3,-1356 3537.3,-1460 3609.3,-1460 3609.3,-1356 3537.3,-1356"/>
+<text text-anchor="middle" x="3573.3" y="-1444.8" font-family="Times New Roman,serif" font-size="14.00">Alchemist</text>
+<text text-anchor="middle" x="3573.3" y="-1429.8" font-family="Times New Roman,serif" font-size="14.00"> 8/6</text>
+</g>
+<g id="clust11" class="cluster"><title>cluster_RADIATION_DOG</title>
+<polygon fill="#90ee90" stroke="#90ee90" points="2857.92,-397 2857.92,-890 3455.71,-890 3455.71,-397 2857.92,-397"/>
+<text text-anchor="middle" x="3156.82" y="-874.8" font-family="Times New Roman,serif" font-size="14.00">Radiation Dog*</text>
+<text text-anchor="middle" x="3156.82" y="-859.8" font-family="Times New Roman,serif" font-size="14.00"> 7/5</text>
+<text text-anchor="middle" x="3156.82" y="-844.8" font-family="Times New Roman,serif" font-size="14.00"> 6/5</text>
+<text text-anchor="middle" x="3156.82" y="-829.8" font-family="Times New Roman,serif" font-size="14.00"> 7/6</text>
+<text text-anchor="middle" x="3156.82" y="-814.8" font-family="Times New Roman,serif" font-size="14.00"> 7/7</text>
 </g>
 <g id="clust14" class="cluster"><title>cluster_TIGER_CAT</title>
 <polygon fill="#90ee90" stroke="#90ee90" points="5065.05,-689 5065.05,-865 5275.05,-865 5275.05,-689 5065.05,-689"/>
 <text text-anchor="middle" x="5170.05" y="-849.8" font-family="Times New Roman,serif" font-size="14.00">Tiger Cat</text>
 <text text-anchor="middle" x="5170.05" y="-834.8" font-family="Times New Roman,serif" font-size="14.00"> 9/8</text>
 </g>
+<g id="clust13" class="cluster"><title>cluster_RIPPER_SHARK</title>
+<polygon fill="#90ee90" stroke="#90ee90" points="4506.46,-1497 4506.46,-1601 4597.46,-1601 4597.46,-1497 4506.46,-1497"/>
+<text text-anchor="middle" x="4551.96" y="-1585.8" font-family="Times New Roman,serif" font-size="14.00">Ripper Shark</text>
+<text text-anchor="middle" x="4551.96" y="-1570.8" font-family="Times New Roman,serif" font-size="14.00"> 10/8</text>
+</g>
 <g id="clust17" class="cluster"><title>cluster_PICKPOCKET</title>
 <polygon fill="#90ee90" stroke="#90ee90" points="7413.48,-1202 7413.48,-1306 7493.48,-1306 7493.48,-1202 7413.48,-1202"/>
 <text text-anchor="middle" x="7453.48" y="-1290.8" font-family="Times New Roman,serif" font-size="14.00">Pickpocket</text>
 <text text-anchor="middle" x="7453.48" y="-1275.8" font-family="Times New Roman,serif" font-size="14.00"> 7/6</text>
+</g>
+<g id="clust20" class="cluster"><title>cluster_MANTRAPPER</title>
+<polygon fill="#90ee90" stroke="#90ee90" points="9415.03,-896 9415.03,-1000 9496.03,-1000 9496.03,-896 9415.03,-896"/>
+<text text-anchor="middle" x="9455.53" y="-984.8" font-family="Times New Roman,serif" font-size="14.00">Mantrapper</text>
+<text text-anchor="middle" x="9455.53" y="-969.8" font-family="Times New Roman,serif" font-size="14.00"> 8/7</text>
 </g>
 <g id="clust18" class="cluster"><title>cluster_FIRE_WARRIOR</title>
 <polygon fill="#90ee90" stroke="#90ee90" points="6502.64,-1030 6502.64,-1179 6587.99,-1179 6587.99,-1030 6502.64,-1030"/>
@@ -85,92 +101,76 @@
 <text text-anchor="middle" x="6545.31" y="-1118.8" font-family="Times New Roman,serif" font-size="14.00"> 7/5</text>
 <text text-anchor="middle" x="6545.31" y="-1103.8" font-family="Times New Roman,serif" font-size="14.00"> 7/5</text>
 </g>
-<g id="clust20" class="cluster"><title>cluster_MANTRAPPER</title>
-<polygon fill="#90ee90" stroke="#90ee90" points="9415.03,-896 9415.03,-1000 9496.03,-1000 9496.03,-896 9415.03,-896"/>
-<text text-anchor="middle" x="9455.53" y="-984.8" font-family="Times New Roman,serif" font-size="14.00">Mantrapper</text>
-<text text-anchor="middle" x="9455.53" y="-969.8" font-family="Times New Roman,serif" font-size="14.00"> 8/7</text>
-</g>
-<g id="clust21" class="cluster"><title>cluster_THE_SERPENT</title>
-<polygon fill="#90ee90" stroke="#90ee90" points="9696.58,-942 9696.58,-1118 9788.58,-1118 9788.58,-942 9696.58,-942"/>
-<text text-anchor="middle" x="9742.58" y="-1102.8" font-family="Times New Roman,serif" font-size="14.00">The Serpent*</text>
-<text text-anchor="middle" x="9742.58" y="-1087.8" font-family="Times New Roman,serif" font-size="14.00"> 8/8</text>
-</g>
-<g id="clust19" class="cluster"><title>cluster_SCARLET_PRANKSTER</title>
-<polygon fill="#90ee90" stroke="#90ee90" points="8318.48,-536 8318.48,-712 8429.48,-712 8429.48,-536 8318.48,-536"/>
-<text text-anchor="middle" x="8373.98" y="-696.8" font-family="Times New Roman,serif" font-size="14.00">Scarlet Prankster</text>
-<text text-anchor="middle" x="8373.98" y="-681.8" font-family="Times New Roman,serif" font-size="14.00"> 9/8</text>
-</g>
-<g id="clust22" class="cluster"><title>cluster_RINGMASTER</title>
-<polygon fill="#90ee90" stroke="#90ee90" points="10269.6,-975 10269.6,-1079 10349.6,-1079 10349.6,-975 10269.6,-975"/>
-<text text-anchor="middle" x="10309.6" y="-1063.8" font-family="Times New Roman,serif" font-size="14.00">Ringmaster</text>
-<text text-anchor="middle" x="10309.6" y="-1048.8" font-family="Times New Roman,serif" font-size="14.00"> 8/6</text>
-</g>
-<g id="clust24" class="cluster"><title>cluster_MUMMY</title>
-<polygon fill="#90ee90" stroke="#90ee90" points="11346.4,-688 11346.4,-792 11412.4,-792 11412.4,-688 11346.4,-688"/>
-<text text-anchor="middle" x="11379.4" y="-776.8" font-family="Times New Roman,serif" font-size="14.00">Mummy</text>
-<text text-anchor="middle" x="11379.4" y="-761.8" font-family="Times New Roman,serif" font-size="14.00"> 10/10</text>
-</g>
 <g id="clust23" class="cluster"><title>cluster_LION</title>
 <polygon fill="#90ee90" stroke="#90ee90" points="10588.8,-1018 10588.8,-1137 10654.8,-1137 10654.8,-1018 10588.8,-1018"/>
 <text text-anchor="middle" x="10621.8" y="-1121.8" font-family="Times New Roman,serif" font-size="14.00">Lion</text>
 <text text-anchor="middle" x="10621.8" y="-1106.8" font-family="Times New Roman,serif" font-size="14.00"> 8/9</text>
 <text text-anchor="middle" x="10621.8" y="-1091.8" font-family="Times New Roman,serif" font-size="14.00"> 7/8</text>
 </g>
-<g id="clust28" class="cluster"><title>cluster_SIDNEY_KNOX</title>
-<polygon fill="#90ee90" stroke="#90ee90" points="14128.3,-541 14128.3,-645 14354.2,-645 14354.2,-541 14128.3,-541"/>
-<text text-anchor="middle" x="14241.3" y="-629.8" font-family="Times New Roman,serif" font-size="14.00">Sidney Knox</text>
-<text text-anchor="middle" x="14241.3" y="-614.8" font-family="Times New Roman,serif" font-size="14.00"> 7/6</text>
-</g>
-<g id="clust25" class="cluster"><title>cluster_FOUR_ARMED_BEAST_TIGER_MAN_DR_MACABRE</title>
-<polygon fill="#90ee90" stroke="#90ee90" points="12740.2,-1596 12740.2,-1745 12882.2,-1745 12882.2,-1596 12740.2,-1596"/>
-<text text-anchor="middle" x="12811.2" y="-1729.8" font-family="Times New Roman,serif" font-size="14.00">Four&#45;Armed Beast 8/6</text>
-<text text-anchor="middle" x="12811.2" y="-1714.8" font-family="Times New Roman,serif" font-size="14.00"> Tiger Man 9/5</text>
-<text text-anchor="middle" x="12811.2" y="-1699.8" font-family="Times New Roman,serif" font-size="14.00"> Dr Macabre 7/7</text>
-</g>
-<g id="clust26" class="cluster"><title>cluster_THE_DEVASTATOR</title>
-<polygon fill="#90ee90" stroke="#90ee90" points="12092.3,-1041 12092.3,-1217 12194.3,-1217 12194.3,-1041 12092.3,-1041"/>
-<text text-anchor="middle" x="12143.3" y="-1201.8" font-family="Times New Roman,serif" font-size="14.00">The Devastator</text>
-<text text-anchor="middle" x="12143.3" y="-1186.8" font-family="Times New Roman,serif" font-size="14.00"> 14/12</text>
+<g id="clust29" class="cluster"><title>cluster_CREATURE_OF_CARNAGE</title>
+<polygon fill="#90ee90" stroke="#90ee90" points="16380.3,-939 16380.3,-1115 16509.3,-1115 16509.3,-939 16380.3,-939"/>
+<text text-anchor="middle" x="16444.8" y="-1099.8" font-family="Times New Roman,serif" font-size="14.00">Creature of Carnage</text>
+<text text-anchor="middle" x="16444.8" y="-1084.8" font-family="Times New Roman,serif" font-size="14.00"> 12/14</text>
 </g>
 <g id="clust27" class="cluster"><title>cluster_THE_REINCARNATION</title>
 <polygon fill="#90ee90" stroke="#90ee90" points="13180.2,-905 13180.2,-1359 13410.1,-1359 13410.1,-905 13180.2,-905"/>
 <text text-anchor="middle" x="13295.2" y="-1343.8" font-family="Times New Roman,serif" font-size="14.00">The Reincarnation</text>
 <text text-anchor="middle" x="13295.2" y="-1328.8" font-family="Times New Roman,serif" font-size="14.00"> 10/12</text>
 </g>
-<g id="clust29" class="cluster"><title>cluster_CREATURE_OF_CARNAGE</title>
-<polygon fill="#90ee90" stroke="#90ee90" points="16380.3,-939 16380.3,-1115 16509.3,-1115 16509.3,-939 16380.3,-939"/>
-<text text-anchor="middle" x="16444.8" y="-1099.8" font-family="Times New Roman,serif" font-size="14.00">Creature of Carnage</text>
-<text text-anchor="middle" x="16444.8" y="-1084.8" font-family="Times New Roman,serif" font-size="14.00"> 12/14</text>
-</g>
 <g id="clust35" class="cluster"><title>cluster_TITANIUM_CYBORG</title>
 <polygon fill="#90ee90" stroke="#90ee90" points="18475.4,-1908 18475.4,-2221 18779.1,-2221 18779.1,-1908 18475.4,-1908"/>
 <text text-anchor="middle" x="18627.3" y="-2205.8" font-family="Times New Roman,serif" font-size="14.00">Titanium Cyborg</text>
 <text text-anchor="middle" x="18627.3" y="-2190.8" font-family="Times New Roman,serif" font-size="14.00"> 18/20</text>
+</g>
+<g id="clust26" class="cluster"><title>cluster_THE_DEVASTATOR</title>
+<polygon fill="#90ee90" stroke="#90ee90" points="12092.3,-1041 12092.3,-1217 12194.3,-1217 12194.3,-1041 12092.3,-1041"/>
+<text text-anchor="middle" x="12143.3" y="-1201.8" font-family="Times New Roman,serif" font-size="14.00">The Devastator</text>
+<text text-anchor="middle" x="12143.3" y="-1186.8" font-family="Times New Roman,serif" font-size="14.00"> 14/12</text>
+</g>
+<g id="clust22" class="cluster"><title>cluster_RINGMASTER</title>
+<polygon fill="#90ee90" stroke="#90ee90" points="10269.6,-975 10269.6,-1079 10349.6,-1079 10349.6,-975 10269.6,-975"/>
+<text text-anchor="middle" x="10309.6" y="-1063.8" font-family="Times New Roman,serif" font-size="14.00">Ringmaster</text>
+<text text-anchor="middle" x="10309.6" y="-1048.8" font-family="Times New Roman,serif" font-size="14.00"> 8/6</text>
+</g>
+<g id="clust21" class="cluster"><title>cluster_THE_SERPENT</title>
+<polygon fill="#90ee90" stroke="#90ee90" points="9696.58,-942 9696.58,-1118 9788.58,-1118 9788.58,-942 9696.58,-942"/>
+<text text-anchor="middle" x="9742.58" y="-1102.8" font-family="Times New Roman,serif" font-size="14.00">The Serpent*</text>
+<text text-anchor="middle" x="9742.58" y="-1087.8" font-family="Times New Roman,serif" font-size="14.00"> 8/8</text>
+</g>
+<g id="clust24" class="cluster"><title>cluster_MUMMY</title>
+<polygon fill="#90ee90" stroke="#90ee90" points="11346.4,-688 11346.4,-792 11412.4,-792 11412.4,-688 11346.4,-688"/>
+<text text-anchor="middle" x="11379.4" y="-776.8" font-family="Times New Roman,serif" font-size="14.00">Mummy</text>
+<text text-anchor="middle" x="11379.4" y="-761.8" font-family="Times New Roman,serif" font-size="14.00"> 10/10</text>
+</g>
+<g id="clust28" class="cluster"><title>cluster_SIDNEY_KNOX</title>
+<polygon fill="#90ee90" stroke="#90ee90" points="14128.3,-541 14128.3,-645 14354.2,-645 14354.2,-541 14128.3,-541"/>
+<text text-anchor="middle" x="14241.3" y="-629.8" font-family="Times New Roman,serif" font-size="14.00">Sidney Knox</text>
+<text text-anchor="middle" x="14241.3" y="-614.8" font-family="Times New Roman,serif" font-size="14.00"> 7/6</text>
 </g>
 <g id="clust30" class="cluster"><title>cluster_ILLYA_KARPOV</title>
 <polygon fill="#90ee90" stroke="#90ee90" points="16397.4,-797 16397.4,-931 16491.2,-931 16491.2,-797 16397.4,-797"/>
 <text text-anchor="middle" x="16444.3" y="-915.8" font-family="Times New Roman,serif" font-size="14.00">Illya Karpov</text>
 <text text-anchor="middle" x="16444.3" y="-900.8" font-family="Times New Roman,serif" font-size="14.00"> 8/8</text>
 </g>
-<g id="clust31" class="cluster"><title>cluster_ANDROID</title>
-<polygon fill="#90ee90" stroke="#90ee90" points="16025.9,-1297 16025.9,-1401 16091.9,-1401 16091.9,-1297 16025.9,-1297"/>
-<text text-anchor="middle" x="16058.9" y="-1385.8" font-family="Times New Roman,serif" font-size="14.00">Android</text>
-<text text-anchor="middle" x="16058.9" y="-1370.8" font-family="Times New Roman,serif" font-size="14.00"> 9/11</text>
-</g>
 <g id="clust32" class="cluster"><title>cluster_ICE_QUEEN</title>
 <polygon fill="#90ee90" stroke="#90ee90" points="16018.9,-407 16018.9,-511 16098.9,-511 16098.9,-407 16018.9,-407"/>
 <text text-anchor="middle" x="16058.9" y="-495.8" font-family="Times New Roman,serif" font-size="14.00">Ice Queen*</text>
 <text text-anchor="middle" x="16058.9" y="-480.8" font-family="Times New Roman,serif" font-size="14.00"> 7/8</text>
 </g>
-<g id="clust33" class="cluster"><title>cluster_ASSASSIN</title>
-<polygon fill="#90ee90" stroke="#90ee90" points="16943.2,-1411 16943.2,-1515 17125.2,-1515 17125.2,-1411 16943.2,-1411"/>
-<text text-anchor="middle" x="17034.2" y="-1499.8" font-family="Times New Roman,serif" font-size="14.00">Assassin</text>
-<text text-anchor="middle" x="17034.2" y="-1484.8" font-family="Times New Roman,serif" font-size="14.00"> 7/6</text>
+<g id="clust31" class="cluster"><title>cluster_ANDROID</title>
+<polygon fill="#90ee90" stroke="#90ee90" points="16025.9,-1297 16025.9,-1401 16091.9,-1401 16091.9,-1297 16025.9,-1297"/>
+<text text-anchor="middle" x="16058.9" y="-1385.8" font-family="Times New Roman,serif" font-size="14.00">Android</text>
+<text text-anchor="middle" x="16058.9" y="-1370.8" font-family="Times New Roman,serif" font-size="14.00"> 9/11</text>
 </g>
 <g id="clust34" class="cluster"><title>cluster_ASSASSIN2</title>
 <polygon fill="#90ee90" stroke="#90ee90" points="17059.2,-1083 17059.2,-1403 17125.2,-1403 17125.2,-1083 17059.2,-1083"/>
 <text text-anchor="middle" x="17092.2" y="-1387.8" font-family="Times New Roman,serif" font-size="14.00">Assassin</text>
 <text text-anchor="middle" x="17092.2" y="-1372.8" font-family="Times New Roman,serif" font-size="14.00"> 9/8</text>
+</g>
+<g id="clust33" class="cluster"><title>cluster_ASSASSIN</title>
+<polygon fill="#90ee90" stroke="#90ee90" points="16943.2,-1411 16943.2,-1515 17125.2,-1515 17125.2,-1411 16943.2,-1411"/>
+<text text-anchor="middle" x="17034.2" y="-1499.8" font-family="Times New Roman,serif" font-size="14.00">Assassin</text>
+<text text-anchor="middle" x="17034.2" y="-1484.8" font-family="Times New Roman,serif" font-size="14.00"> 7/6</text>
 </g>
 <!-- myTitle -->
 <g id="node1" class="node"><title>myTitle</title>
