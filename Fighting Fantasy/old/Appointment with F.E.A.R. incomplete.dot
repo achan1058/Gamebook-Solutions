@@ -1,0 +1,1670 @@
+digraph "Fighting Fantasy: Appointment with F.E.A.R." {
+	// graph defaults
+	rankdir=LR
+	mclimit=20
+	nodesep=.3 // changes horizontal separation of nodes
+	ranksep=.4 // changes vertical separation of nodes
+	node [height=.7
+		width=.7
+		shape=ellipse
+		margin=0]
+	edge[weight=5]
+
+	// a box for a graph label
+	// note that you can override the defaults set above
+	myTitle [label = "Fighting Fantasy: Appointment with F.E.A.R. 17/18/16\n\n \
+		Light Green Fill: Benefits\l \
+		Pink Fill: Damage\l \
+		Red Fill: Death\l \
+		Blue Text: Items/Events\l \
+		Purple Text: Shops\l \
+		Blue Line: Forced Items/Events\l \
+		Light Blue Line: Optional Items/Events\l \
+		Purple Line: Dice Related Events\l \
+		Pink Line: Stat Test Passed\l \
+		Brown Line: Stat Test Failed\l \
+		Grey Line: Hidden Option\l \
+		Red Line: Possible Error\l \
+		Gold/Yellow Fill: Required Nodes\l \
+		Light Blue Fill: Recommended Nodes\l \
+		Gold Outline: Recommended Path\l \
+		Green Box: Combat\l \
+		SK/ST/LK/AT/AR/HP: Skill/Stamina/Luck/Attack Strength/Attack Round/Hero Points\l \
+		STR/PSI/ETS/BLA: Super Strength(red)/Psi-Powers(magenta)/Enhanced Technical Skills(darkgreen)/Energy Blast(darkviolet)\l \
+		*: Special Combat Rules\l \
+		-: Negative Status\l \
+		+: Positive Status\l \
+		?: Subtract only for non STR\l \
+		^: -1SK per round lost, until next stamina gain\l \
+		@: Combat penalty (could be offset by skills or items)\l\l \
+		Starts with:\l \
+		Initial Skill: STR: 13, PSI/ETS/BLA: 1d6+6\l \
+		Initial Stamina: 2d6+12\l \
+		Initial Luck: 1d6+6\l\l \
+		Comments:\l \
+		Some paragraphs cannot be reached if you do not cheat. Most are there to catch you cheating, but at least one is a mistake.\l \
+		You only need to reduce enemy stamina to 2 points to capture a villain.\l \
+		BLA in a node indicates that you attempt to fire energy blast until successful, losing 2 stamina per attempt.\l \
+		Location of F.E.A.R. meeting and true path depends on power used.\l \
+		Location of F.E.A.R. meeting and true path depends on power used.\l \
+		Location of F.E.A.R. meeting and true path depends on power used.\l\l \
+		True Path Comments:\l \
+		Location of F.E.A.R. meeting depends on power used.\l \
+		Each power has 2 required clues and 2 guessable clues.\l \
+		Not all end of day nodes give stamina. Why should you not gain stamina for listening to music is beyond me.\l \
+		Avoid the radiation dogs as they are stupid. Chance of instant kill and chance to lose hero points is generally not worth it.\l \
+		Avoid the devastator unless you have ETS, and even so, he is dangerous.\l \
+		Avoid going to aunt as you gain no stamina, and have a good chance of losing a lot of it.\l \
+		Danny Rich, the alchemist, and the assassin is good for optional hero points.\l"
+		color = "gray"
+		shape = "box"
+		margin = 0.1]
+
+	subgraph Required {
+		node [style = "filled" color = "gold" fillcolor = "gold" fontcolor = "blue" shape = "rect"]
+		key3
+		boo5
+		dam5
+		monboo5
+		mondam5
+		mon5
+		013
+		035
+		182
+		217
+		246
+		329
+		333
+		364
+		440 [fontcolor = "black" shape = "octagon" label = "\N\n +10HP"]
+	}
+
+	subgraph Required2 {
+		node [style = "filled" color = "#FFF700" fillcolor = "#FFF700" fontcolor = "blue" shape = "rect"]
+		req2
+	}
+
+	subgraph Recommended {
+		node [penwidth = 3 color = "gold"]
+		txt2
+		key2 [shape = "rect" fontcolor = "blue"]
+		boo3 [style = "filled" fillcolor = "greenyellow"]
+		boo4 [style = "filled" fillcolor = "greenyellow"]
+		dam3 [style = "filled" fillcolor = "pink"]
+		dam4 [style = "filled" fillcolor = "pink"]
+		monboo3 [style = "filled" fillcolor = "greenyellow"]
+		monboo4 [style = "filled" fillcolor = "greenyellow"]
+		mondam3 [style = "filled" fillcolor = "pink"]
+		mondam4 [style = "filled" fillcolor = "pink"]
+		mon3
+		mon4
+	}
+	
+	subgraph Optional {
+		node [style = "filled" color = "paleturquoise1" fillcolor = "paleturquoise1" fontcolor = "blue" shape = "rect"]
+		opt
+		002
+		009
+		081
+		092
+		116
+		142
+		275
+		427
+	}
+
+	subgraph Combat {
+		style = "filled" color = "palegreen2"
+		subgraph cluster_MONSTER {
+			label = "? MONSTER\n 0/0 0/0"
+			mon1 [label = "\N\n text"]
+			mon2 [shape = "rect" fontcolor = "blue" label = "\N\n text"]
+			mon3 [label = "\N\n text"]
+			mon4 [shape = "rect" fontcolor = "blue" label = "\N\n text"]
+			mon5 [shape = "rect" fontcolor = "blue" label = "\N\n text"]
+			monboo1 [style = "filled" color = "greenyellow" label = "\N\n text"]
+			monboo2 [shape = "rect" style = "filled" color = "greenyellow" fontcolor = "blue" label = "\N\n text"]
+			monboo3 [label = "\N\n text"]
+			monboo4 [shape = "rect" fontcolor = "blue" label = "\N\n text"]
+			monboo5 [shape = "rect" fontcolor = "blue" label = "\N\n text"]
+			mondam1 [style = "filled" color = "pink" label = "\N\n text"]
+			mondam2 [shape = "rect" style = "filled" color = "pink" fontcolor = "blue" label = "\N\n text"]
+			mondam3 [label = "\N\n text"]
+			mondam4 [shape = "rect" fontcolor = "blue" label = "\N\n text"]
+			mondam5 [shape = "rect" fontcolor = "blue" label = "\N\n text"]
+		}
+		subgraph cluster_BODYGUARD_DANNY_RICH {
+			label = "Bodyguard\n 8/9\n 7/8\n Danny Rich 9/8"
+			139 [style = "filled" color = "greenyellow" label = "\N\n +3HP"]
+		}
+		subgraph cluster_ALCHEMIST {
+			label = "Alchemist\n 8/6"
+			437
+		}
+		subgraph cluster_ALCHEMIST2 {
+			label = "Alchemist\n 7/7\n 7/6"
+			354
+		}
+		subgraph cluster_ALCHEMIST3 {
+			label = "Alchemist\n 8/6\n 7/7\n 7/6"
+			243
+		}
+		subgraph cluster_RADIATION_DOG {
+			label = "Radiation Dog*\n 7/5\n 6/5\n 7/6\n 7/7"
+			031 [style = "filled" color = "red" label = "\N\n -2~3ST\n -1HP?"]
+			082 [label = "\N\n first ?\n no BLA"]
+			120 [style = "filled" color = "red" label = "\N\n remaining dogs\n -2~3ST\n -1AT?"]
+			193
+			213 [label = "\N\n first 2"]
+			247
+			401 [label = "\N\n first 1"]
+		}
+		subgraph cluster_THE_TORMENTOR {
+			label = "The Tormentor\n 8/9"
+			084
+		}
+		subgraph cluster_RIPPER_SHARK {
+			label = "Ripper Shark\n 10/8"
+			294
+		}
+		subgraph cluster_TIGER_CAT {
+			label = "Tiger Cat\n 9/8"
+			168
+			278
+			413
+		}
+		subgraph cluster_CHAINSAW_BRONSKI {
+			label = "\'Chainsaw\' Bronski\n 8/8"
+			003
+		}
+		subgraph cluster_FOUNTAIN_CREATURE {
+			label = "Fountain Creature\n 10/11"
+			272
+			326
+			404
+		}
+		subgraph cluster_PICKPOCKET {
+			label = "Pickpocket\n 7/6"
+			166
+		}
+		subgraph cluster_FIRE_WARRIOR {
+			label = "Fire Warrior\n 7/6\n 6/6\n 7/5\n 7/5"
+			133 [label = "\N*"]
+		}
+		subgraph cluster_SCARLET_PRANKSTER {
+			label = "Scarlet Prankster\n 9/8"
+			090
+			198
+		}
+		subgraph cluster_MANTRAPPER {
+			label = "Mantrapper\n 8/7"
+			396
+		}
+		subgraph cluster_THE_SERPENT {
+			label = "The Serpent*\n 8/8"
+			196
+			250
+		}
+		subgraph cluster_RINGMASTER {
+			label = "Ringmaster\n 8/6"
+			360
+		}
+		subgraph cluster_LION {
+			label = "Lion\n 8/9\n 7/8"
+			297
+		}
+		subgraph cluster_MUMMY {
+			label = "Mummy\n 10/10"
+			109
+		}
+		subgraph cluster_FOUR_ARMED_BEAST_TIGER_MAN_DR_MACABRE {
+			label = "Four-Armed Beast 8/6\n Tiger Man 9/5\n Dr Macabre 7/7"
+			078 [style = "filled" color = "greenyellow" label = "\N\n +3HP"]
+		}
+		subgraph cluster_THE_DEVASTATOR {
+			label = "The Devastator\n 14/12"
+			262
+			378
+		}
+		subgraph cluster_THE_REINCARNATION {
+			label = "The Reincarnation\n 10/12"
+			422 [style = "filled" color = "pink" label = "\N\n -4EST\n PSI"]
+			332 [style = "filled" color = "pink" label = "\N\n -3ESK*"]
+			352 [style = "filled" color = "pink" label = "\N\n -4EST\n 0~2BLA\n -6EST?"]
+			373
+		}
+		subgraph cluster_SIDNEY_KNOX {
+			label = "Sidney Knox\n 7/6"
+			033
+			419 [label = "\N*"]
+		}
+		subgraph cluster_CREATURE_OF_CARNAGE {
+			label = "Creature of Carnage\n 12/14"
+			163
+			315
+		}
+		subgraph cluster_ILLYA_KARPOV {
+			label = "Illya Karpov\n 8/8"
+			022 [style = "filled" color = "pink" label = "\N\n BLA"]
+		}
+		subgraph cluster_ANDROID {
+			label = "Android\n 9/11"
+			282
+		}
+		subgraph cluster_ICE_QUEEN {
+			label = "Ice Queen*\n 7/8"
+			436
+		}
+		subgraph cluster_ASSASSIN {
+			label = "Assassin\n 7/6"
+			007
+			359
+		}
+		subgraph cluster_ASSASSIN2 {
+			label = "Assassin\n 9/8"
+			057
+			177
+			194
+			236
+		}
+		subgraph cluster_TITANIUM_CYBORG {
+			label = "Titanium Cyborg\n 18/20"
+			087
+			159 [label = "\N\n ESK=9\n EST=10"]
+			298
+			411 [label = "\N\n ESK=9\n EST=10"]
+		}
+	}
+
+	subgraph Death {
+		node [style = "filled" color = "red"]
+		dea
+		008
+		031
+		032
+		048
+		059
+		136
+		173
+		184
+		230
+		277
+		274
+		292
+		335
+		376
+		384
+		390
+		392
+		414
+	}
+
+	subgraph Boost {
+		node [style = "filled" color = "greenyellow"]
+		boo1 [label = "\N\n text"]
+		boo2 [shape = "rect" fontcolor = "blue" label = "\N\n text"]
+		boo3 [label = "\N\n text"]
+		boo4 [shape = "rect" fontcolor = "blue" label = "\N\n text"]
+		boo5 [shape = "rect" fontcolor = "blue" label = "\N\n text"]
+		002 [shape = "rect" fontcolor = "blue" label = "\N\n STR: fear info\n +1HP" tooltip = "executive jet"]
+		010 [label = "\N\n +6ST"]
+		011 [label = "\N\n +2HP"]
+		016 [shape = "rect" fontcolor = "blue" label = "\N\n sidney knox\n +3HP\n +1LK" tooltip = "-40 reference"]
+		018 [label = "\N\n +6ST"]
+		035 [shape = "rect" fontcolor = "blue" label = "\N\n STR: fear date\n +2HP" tooltip = "27th"]
+		037 [label = "\N\n +1HP"]
+		038 [shape = "rect" fontcolor = "blue" label = "\N\n sidney knox\n +6ST\n +1LK" tooltip = "-40 reference"]
+		063 [label = "\N\n +1ST"]
+		064 [shape = "rect" fontcolor = "blue" label = "\N\n ice queen\n +1LK" tooltip = "-20 reference"]
+		074 [label = "\N\n +3HP"]
+		078 [label = "\N\n +3HP"]
+		079 [label = "\N\n +2LK"]
+		081 [shape = "rect" fontcolor = "blue" label = "\N\n PSI: fear info" tooltip = "gold watch"]
+		093 [shape = "rect" fontcolor = "blue" label = "\N\n info\n +1HP\n +1LK" tooltip = "lola manche"]
+		113 [shape = "rect" fontcolor = "blue" label = "\N\n info\n +6ST\n +1LK" tooltip = "appliances of the future"]
+		116 [shape = "rect" fontcolor = "blue" label = "\N\n circuit jammer\n STR: fear info\n +4HP" tooltip = "parker airport"]
+		119 [label = "\N\n +5HP"]
+		122 [label = "\N\n +6ST"]
+		124 [shape = "rect" fontcolor = "blue" label = "\N\n mantrapper\n 2HP\n +1LK" tooltip = "+60 reference"]
+		131 [label = "\N\n +5HP"]
+		126 [shape = "rect" fontcolor = "blue" label = "\N\n president\n +1LK" tooltip = "+100 reference"]
+		137 [shape = "rect" fontcolor = "blue" label = "\N\n info\n +2HP" tooltip = "fear summit opposite 35"]
+		138 [label = "\N\n +2HP"]
+		142 [shape = "rect" fontcolor = "blue" label = "\N\n BLA: fear info\n 3HP\n BLA" tooltip = "Clancey Bay"]
+		175 [shape = "rect" fontcolor = "blue" label = "\N\n circuit jammer\n +5HP"]
+		186 [shape = "rect" fontcolor = "blue" label = "\N\n circuit jammer\n +4HP"]
+		203 [color = "greenyellow:pink" label = "\N\n +2HP?\n -2ST"]
+		227 [label = "\N\n +4HP"]
+		231 [label = "\N\n +2HP"]
+		238 [shape = "rect" fontcolor = "blue" label = "\N\n lion cage\n +3HP\n +1LK" tooltip = "+50 reference"]
+		241 [label = "\N\n +4HP"]
+		258 [label = "\N\n +6HP"]
+		267 [label = "\N\n +1HP"]
+		285 [label = "\N\n +2HP"]
+		281 [shape = "rect" fontcolor = "blue" label = "\N\n mummy\n +1LK" tooltip = "2x reference"]
+		293 [label = "\N\n +6ST"]
+		295 [label = "\N\n +1HP"]
+		300 [shape = "rect" fontcolor = "blue" label = "\N\n poisoner\n +1LK\n +6ST" tooltip = "-30 reference"]
+		304 [shape = "rect" fontcolor = "blue" label = "\N\n circuit jammer\n +4HP"]
+		307 [color = "greenyellow:pink" label = "\N\n -4ST?\n &plusmn;2HP"]
+		311 [label = "\N\n +6ST"]
+		333 [shape = "rect" fontcolor = "blue" label = "\N\n STR: fear time\n +3HP" tooltip = "9am"]
+		336 [label = "\N\n +4HP"]
+		337 [label = "\N\n +6ST"]
+		350 [label = "\N\n -?~+4HP"]
+		358 [shape = "rect" fontcolor = "blue" label = "\N\n circuit jammer\n +2HP"]
+		364 [shape = "rect" fontcolor = "blue" label = "\N\n BLA: fear time\n +5HP" tooltip = "11am"]
+		371 [label = "\N\n +3HP"]
+		380 [label = "\N\n +3?~4HP"]
+		389 [color = "greenyellow:pink" label = "\N\n +2HP\n -4ST"]
+		393 [label = "\N\n +1HP"]
+		400 [label = "\N\n +1HP"]
+		427 [shape = "rect" fontcolor = "blue" label = "\N\n ETS: fear info\n +6HP" tooltip = "chinese laundry"]
+		431 [label = "\N\n +2HP"]
+		432 [shape = "rect" fontcolor = "blue" label = "\N\n president\n +2HP\n +2LK" tooltip = "+100 reference"]
+		433 [shape = "rect" fontcolor = "blue" label = "\N\n ice queen\n +3HP\n +1LK" tooltip = "-20 reference"]
+		438 [label = "\N\n +6ST"]
+	}
+
+	subgraph Damage {
+		node [style = "filled" color = "pink"]
+		dam1 [label = "\N\n text"]
+		dam2 [shape = "rect" fontcolor = "blue" label = "\N\n text"]
+		dam3 [label = "\N\n text"]
+		dam4 [shape = "rect" fontcolor = "blue" label = "\N\n text"]
+		dam5 [shape = "rect" fontcolor = "blue" label = "\N\n text"]
+		005 [label = "\N\n -1SK?\n -2ST"]
+		009 [shape = "rect" fontcolor = "blue" label = "\N\n PSI: fear info\n -2ST" tooltip = "pawnbroker"]
+		012 [label = "\N\n -2ST"]
+		028 [label = "\N\n -1SK\n -2ST"]
+		099 [label = "\N\n -1ST"]
+		105 [label = "\N\n -2ST"]
+		146 [label = "\N\n -2ST"]
+		170 [label = "\N\n 2BLA"]
+		180 [label = "\N\n -2ST"]
+		182 [shape = "rect" fontcolor = "blue" label = "\N\n ETS: fear ave\n -1LK\n -2ST?" tooltip = "3rd Ave"]
+		183 [label = "\N\n -2ST"]
+		188 [label = "\N\n -2ST"]
+		200 [label = "\N\n -4ST"]
+		209 [label = "\N\n -1SK\n -3ST"]
+		209 [label = "\N\n -2ST"]
+		217 [shape = "rect" fontcolor = "blue" label = "\N\n PSI: fear ave" tooltip = "5th Ave"]
+		244 [label = "\N\n -1HP"]
+		246 [shape = "rect" fontcolor = "blue" label = "\N\n PSI: fear street\n -2ST" tooltip = "209th Street"]
+		261 [label = "\N\n 2BLA"]
+		269 [label = "\N\n -1SK\n -2HP"]
+		275 [shape = "rect" fontcolor = "blue" label = "\N\n BLA: fear info\n -2ST" tooltip = "submarine"]
+		279 [label = "\N\n -2ST"]
+		283 [label = "\N\n -2ST"]
+		286 [label = "\N\n -1HP"]
+		314 [label = "\N\n -2HP"]
+		326 [label = "\N\n -2ST"]
+		330 [label = "\N\n -2ST"]
+		338 [label = "\N\n -2HP"]
+		344 [label = "\N\n -2ST"]
+		348 [label = "\N\n -2ST"]
+		363 [label = "\N\n BLA"]
+		367 [label = "\N\n 2BLA"]
+		383 [label = "\N\n -2HP"]
+		426 [label = "\N\n -2SK"]
+	}
+	
+	subgraph Psi {
+		node [style = "filled" color = "pink"]
+		321 [label = "\N\n PSI"]
+	}
+
+	subgraph Key_Item {
+		node [fontcolor = "blue" shape = "rect"]
+		key1 [label = "\N\n text"]
+		key2 [label = "\N\n text"]
+		key3 [label = "\N\n text"]
+		013 [label = "\N\n BLA: fear date" tooltip = "28th"]
+		020 [label = "\N\n info" tooltip = "map, 12th Street, 2nd Ave"]
+		077 [label = "\N\n abattoir" tooltip = "reference 129"]
+		083 [label = "\N\n ice queen" tooltip = "-20 reference"]
+		088 [label = "\N\n ETS: opt\n BLA: req\n alchemist" tooltip = "128th Street, 10th Ave"]
+		092 [label = "\N\n ETS: fear info" tooltip = "quicksilver"]
+		108 [label = "\N\n STR: opt\n PSI: opt\n danny rich" tooltip = "113, 58th Street"]
+		127 [label = "\N\n STR: req\n prankster" tooltip = "-50 reference"]
+		152 [label = "\N\n PSI: opt\n ETS: opt\n brain child" tooltip = "100th Street"]
+		140 [label = "\N\n circuit jammer"]
+		167 [label = "\N\n smoke" tooltip = "-20 reference"]
+		197 [label = "\N\n lion cage" tooltip = "444-5666, lion cage, +50 reference"]
+		222 [label = "\N\n PSI: req\n BLA: opt\n info" tooltip = "tiger cat can disguise as a pussy cat"]
+		264 [label = "\N\n president" tooltip = "+100 reference"]
+		280 [label = "\N\n STR: opt\n PSI: opt\n ETS: opt\n BLA: opt\n info" tooltip = "tormenter/richard storm, ice queen/slyvia frost, dr macabre/marcus buletta, likely to rob chemist"]
+		312 [label = "\N\n STR: opt\n BLA: opt\n info" tooltip = "rat-face flanagan and marcus buletta know assassination attempt"]
+		329 [label = "\N\n ETS: fear address\n acid" tooltip = "address 176"]
+		386 [label = "\N\n susan" tooltip = "555-9999"]
+
+	}
+
+	mon1 -> mon2 -> mon3 -> mon4 -> mon5
+	boo1 -> boo2 -> boo3 -> boo4 -> boo5
+	dam1 -> dam2 -> dam3 -> dam4 -> dam5
+	txt1 -> key1 -> txt2 -> key2 -> key3
+	monboo1 -> monboo2 -> monboo3 -> monboo4 -> monboo5
+	mondam1 -> mondam2 -> mondam3 -> mondam4 -> mondam5
+
+	myTitle -> 001 [penwidth = 3 arrowhead = none]
+	z000 -> z001 [penwidth = 3]
+	z001 -> z002 [color = "purple" fontcolor = "purple" label = "1-3"]
+	z001 -> z003 [color = "purple" fontcolor = "purple" label = "4-6"]
+	z002 -> z004 [color = "pink" fontcolor = "pink" label = "LK"]
+	z002 -> z005 [color = "brown" fontcolor = "brown"]
+	z003 -> z006 [dir = "both"]
+	z004 -> z007 [color = "blue" fontcolor = "blue" label = "req"]
+	z004 -> z008 [color = "cyan3" fontcolor = "cyan3" label = "-opt"]
+	z005 -> z009 [color = "grey" fontcolor = "grey" label = "info"]
+	z009 -> z010 [color = "red" fontcolor = "red" label = "error(?)"]
+	z010 -> z011 [color = "green" fontcolor = "green" label = "flee"]
+	{
+		rank = same
+		z003
+		z006
+	}
+	{
+		rank = same
+		010
+		018
+		438
+		293
+	}
+	{
+		rank = same
+		079
+		327
+	}
+	{
+		rank = same
+		038
+		076
+		113
+		122
+	}
+	
+	001 -> 263
+	001 -> 289
+	001 -> 228
+	001 -> 341
+	002 -> 276
+	003 -> 093
+	004 -> 399
+	004 -> 310
+	004 -> 223
+	005 -> 060
+	006 -> 298
+	007 -> 359 [color = "green" fontcolor = "green" label = "AR>2"]
+	008
+	009 -> 165
+	009 -> 341
+	009 -> 228
+	010 -> 201
+	010 -> 185
+	011 -> 162
+	012 -> 436
+	013 -> 380
+	014 -> 351
+	014 -> 368
+	015 -> 187
+	015 -> 174
+	015 -> 357
+	016 -> 428
+	017 -> 181
+	018 -> 369
+	018 -> 185
+	019 -> 440
+	020 -> 086
+	021 -> 100
+	021 -> 007
+	021 -> 121 [color = "grey" fontcolor = "grey" label = "president"]
+	022 -> 364
+	023 -> 366
+	023 -> 244
+	024 -> 402 [color = "cyan3" fontcolor = "cyan3" label = "ETS"]
+	024 -> 209 [color = "cyan3" fontcolor = "cyan3" label = "PSI"]
+	024 -> 344 [color = "cyan3" fontcolor = "cyan3" label = "BLA"]
+	024 -> 232
+	025 -> 107
+	026 -> 158
+	026 -> 113
+	027 -> 368
+	028 -> 372
+	029 -> 287 [color = "magenta" fontcolor = "magenta" label = "PSI"]
+	029 -> 203 [color = "darkviolet" fontcolor = "darkviolet" label = "BLA"]
+	029 -> 011 [color = "red" fontcolor = "red" label = "STR"]
+	029 -> 153 [color = "darkgreen" fontcolor = "darkgreen" label = "ETS"]
+	030 -> 368
+	030 -> 179 [color = "grey" fontcolor = "grey" label = "ETS\n fear ave\n fear address"]
+	//031 -> 082 [color = "purple" fontcolor = "purple" label = "1-5"]
+	082 -> 031 [dir = back color = "purple" fontcolor = "purple" label = "1-5"]
+	//031 -> 082 [color = "pink" fontcolor = "pink" label = "LK"]
+	082 -> 031 [dir = back color = "pink" fontcolor = "pink" label = "LK"]
+	//031 -> 213 [color = "purple" fontcolor = "purple" label = "1-5"]
+	213 -> 031 [dir = back color = "purple" fontcolor = "purple" label = "1-5"]
+	//031 -> 213 [color = "pink" fontcolor = "pink" label = "LK"]
+	213 -> 031 [dir = back color = "pink" fontcolor = "pink" label = "LK"]
+	//031 -> 401 [color = "purple" fontcolor = "purple" label = "1-5"]
+	401 -> 031 [dir = back color = "purple" fontcolor = "purple" label = "1-5"]
+	//031 -> 401 [color = "pink" fontcolor = "pink" label = "LK"]
+	401 -> 031 [dir = back color = "pink" fontcolor = "pink" label = "LK"]
+	032
+	033 -> 140
+	034 -> 066
+	034 -> 403
+	034 -> 257
+	035 -> 010
+	036 -> 073
+	037 -> 103
+	038 -> 215
+	039 -> 370
+	039 -> 317
+	040 -> 021
+	040 -> 311
+	041 -> 246 [color = "magenta" fontcolor = "magenta" label = "PSI"]
+	041 -> 414 [color = "cyan3" fontcolor = "cyan3" label = "STR"]
+	041 -> 331
+	042 -> 301
+	043 -> 407
+	043 -> 169
+	043 -> 079
+	044 -> 199
+	044 -> 110
+	045 -> 148
+	046 -> 220
+	047 -> 034
+	048
+	049 -> 285
+	050 -> 214 [color = "grey" fontcolor = "grey" label = "PSI\n fear ave\n fear street"]
+	050 -> 368
+	051 -> 035 [color = "red" fontcolor = "red" label = "STR"]
+	051 -> 285
+	052 -> 436
+	053 -> 013
+	053 -> 380
+	054 -> 405 [color = "pink" fontcolor = "pink" label = "LK"]
+	054 -> 091 [color = "brown" fontcolor = "brown"]
+	055 -> 294
+	056 -> 079
+	057 -> 400 [color = "cyan3" fontcolor = "cyan3" label = "BLA"]
+	057 -> 258
+	058 -> 154
+	058 -> 208
+	059
+	060 -> 072
+	060 -> 098
+	061 -> 184
+	061 -> 314
+	062 -> 186 [color = "darkgreen" fontcolor = "darkgreen" label = "ETS"]
+	062 -> 116 [color = "red" fontcolor = "red" label = "STR"]
+	062 -> 282 [color = "magenta" fontcolor = "magenta" label = "PSI"]
+	062 -> 304 [color = "darkviolet" fontcolor = "darkviolet" label = "BLA"]
+	063 -> 341
+	064 -> 438
+	065 -> 138
+	066 -> 303
+	067 -> 111
+	067 -> 047 [color = "grey" fontcolor = "grey" label = "smoke"]
+	068 -> 351
+	068 -> 368
+	069 -> 119
+	070 -> 030 [color = "grey" fontcolor = "grey" label = "ETS\n fear ave"]
+	070 -> 050 [color = "grey" fontcolor = "grey" label = "PSI\n fear ave"]
+	070 -> 368
+	071 -> 126
+	071 -> 393
+	072 -> 299 [color = "darkgreen" fontcolor = "darkgreen" label = "ETS"]
+	072 -> 180 [color = "darkviolet" fontcolor = "darkviolet" label = "BLA"]
+	072 -> 146 [color = "magenta" fontcolor = "magenta" label = "PSI"]
+	072 -> 055 [color = "red" fontcolor = "red" label = "STR"]
+	073 -> 181
+	074 -> 103
+	075 -> 021
+	075 -> 114
+	076 -> 425
+	076 -> 021
+	076 -> 114
+	//077 -> 097
+	078 -> 226
+	079 -> 245
+	079 -> 134
+	080 -> 033
+	081 -> 227
+	082 -> 031 [color = "green" fontcolor = "green" label = "lose AR"]
+	082 -> 193
+	083 -> 060
+	084 -> 346
+	084 -> 376 [color = "green" fontcolor = "green" label = "AR > 10"]
+	085 -> 332 [color = "darkgreen" fontcolor = "darkgreen" label = "ETS"]
+	085 -> 422 [color = "magenta" fontcolor = "magenta" label = "PSI"]
+	085 -> 352 [color = "darkviolet" fontcolor = "darkviolet" label = "BLA"]
+	085 -> 373 [color = "red" fontcolor = "red" label = "STR"]
+	086 -> 015
+	086 -> 202
+	087 -> 411 [color = "blue" fontcolor = "blue" label = "circuit jammer"]
+	087 -> 136 [color = "green" fontcolor = "green" label = "AR>3"]
+	088
+	089 -> 018
+	090 -> 074
+	091 -> 073
+	092 -> 433
+	093 -> 067
+	094 -> 313
+	094 -> 160
+	094 -> 264
+	095 -> 018
+	096 -> 027
+	096 -> 164
+	097 -> 389 [color = "magenta" fontcolor = "magenta" label = "PSI"]
+	097 -> 307 [color = "darkviolet" fontcolor = "darkviolet" label = "BLA"]
+	097 -> 338 [color = "red" fontcolor = "red" label = "STR"]
+	097 -> 231 [color = "darkgreen" fontcolor = "darkgreen" label = "ETS"]
+	097 -> 077 [dir = both color = "grey:black" fontcolor = "grey" label = "ice queen"]
+	098 -> 410
+	098 -> 118 [color = "grey" fontcolor = "grey" label = "alchemist"]
+	099 -> 063
+	099 -> 305
+	100 -> 157
+	101 -> 024
+	102 -> 023
+	102 -> 229
+	103 -> 202
+	103 -> 327 [color = "greenyellow" fontcolor = "greenyellow" label = "+6ST"]
+	103 -> 043
+	104 -> 318
+	104 -> 211
+	104 -> 054
+	105 -> 401 [color = "pink" fontcolor = "pink" label = "LK"]
+	105 -> 213 [color = "brown" fontcolor = "brown"]
+	106 -> 086
+	107 -> 342
+	107 -> 097
+	108
+	109 -> 002 [color = "green" fontcolor = "green" label = "EST&le;4"]
+	110 -> 199
+	111 -> 429
+	111 -> 301
+	112 -> 420
+	112 -> 323
+	112 -> 259
+	113 -> 215
+	114 -> 315 [color = "red" fontcolor = "red" label = "STR"]
+	114 -> 384 [color = "magenta" fontcolor = "magenta" label = "PSI"]
+	114 -> 022 [color = "darkviolet" fontcolor = "darkviolet" label = "BLA"]
+	114 -> 163 [color = "darkgreen" fontcolor = "darkgreen" label = "ETS"]
+	115 -> 220
+	116 -> 075
+	117 -> 079
+	118 -> 437
+	118 -> 309
+	119 -> 319
+	120 -> 350 [color = "green" fontcolor = "green" label = "win"]
+	121 -> 236 [color = "red" fontcolor = "red" label = "STR"]
+	121 -> 057 [color = "darkviolet" fontcolor = "darkviolet" label = "BLA"]
+	121 -> 177 [color = "magenta" fontcolor = "magenta" label = "PSI"]
+	121 -> 194 [color = "darkgreen" fontcolor = "darkgreen" label = "ETS"]
+	122 -> 021
+	122 -> 425
+	123 -> 018
+	124 -> 067
+	125 -> 412
+	125 -> 097
+	126 -> 435
+	127
+	128 -> 172 [color = "red" fontcolor = "red" label = "STR"]
+	128 -> 210 [color = "darkgreen" fontcolor = "darkgreen" label = "ETS"]
+	128 -> 243
+	129 -> 436 [color = "red" fontcolor = "red" label = "STR"]
+	129 -> 182 [color = "darkgreen" fontcolor = "darkgreen" label = "ETS"]
+	129 -> 052 [color = "magenta" fontcolor = "magenta" label = "PSI"]
+	129 -> 012 [color = "darkviolet" fontcolor = "darkviolet" label = "BLA"]
+	130 -> 298
+	131 -> 040
+	132 -> 082
+	133 -> 380
+	134 -> 219
+	134 -> 085
+	135 -> 240
+	135 -> 270 [color = "grey" fontcolor = "grey" label = "mummy"]
+	136
+	137 -> 398
+	138 -> 071
+	138 -> 238 [color = "grey" fontcolor = "grey" label = "brain child"]
+	139 -> 073
+	140 -> 125
+	141 -> 051 [color = "grey" fontcolor = "grey" label = "susan"]
+	142 -> 226
+	143 -> 439
+	143 -> 090
+	143 -> 212
+	144 -> 295 [color = "darkgreen" fontcolor = "darkgreen" label = "ETS"]
+	144 -> 339
+	145 -> 368
+	146 -> 294
+	147 -> 068 [color = "red" fontcolor = "red" label = "STR"]
+	147 -> 188 [color = "magenta" fontcolor = "magenta" label = "PSI"]
+	147 -> 014
+	148 -> 158
+	148 -> 038
+	149 -> 341
+	149 -> 228
+	150 -> 227
+	151 -> 428
+	151 -> 414 [color = "red" fontcolor = "red" label = "STR"]
+	152
+	153 -> 162
+	154 -> 311
+	155 -> 243
+	156 -> 380
+	157 -> 311
+	158 -> 416
+	158 -> 135
+	159 -> 440
+	160 -> 424
+	160 -> 008
+	161 -> 408
+	161 -> 148
+	162 -> 015
+	162 -> 225
+	163 -> 353
+	163 -> 131 [color = "green" fontcolor = "green" label = "win"]
+	164 -> 368
+	165 -> 036
+	165 -> 054
+	165 -> 181
+	166 -> 296
+	167 -> 398
+	168 -> 124
+	169 -> 322
+	169 -> 288
+	169 -> 250
+	170 -> 314 [color = "green" fontcolor = "green" label = "flee"]
+	170 -> 431
+	171 -> 371 [color = "darkviolet" fontcolor = "darkviolet" label = "BLA"]
+	171 -> 139
+	172 -> 336
+	173
+	174 -> 248 [color = "red" fontcolor = "red" label = "STR"]
+	174 -> 271 [color = "darkgreen" fontcolor = "darkgreen" label = "ETS"]
+	174 -> 143
+	175 -> 125
+	176 -> 049 [color = "pink" fontcolor = "pink" label = "SK"]
+	176 -> 260 [color = "brown" fontcolor = "brown"]
+	177 -> 258
+	178 -> 133
+	179 -> 266
+	179 -> 044
+	180 -> 123 [color = "pink" fontcolor = "pink" label = "SK"]
+	180 -> 255 [color = "brown" fontcolor = "brown"]
+	181 -> 284
+	181 -> 410
+	182 -> 241
+	183 -> 275
+	183 -> 060
+	184
+	185 -> 166 [color = "pink" fontcolor = "pink" label = "SK"]
+	185 -> 106 [color = "brown" fontcolor = "brown"]
+	186 -> 075
+	187 -> 415 [color = "pink" fontcolor = "pink" label = "SK"]
+	187 -> 224 [color = "brown" fontcolor = "brown"]
+	188 -> 298
+	189 -> 327
+	190 -> 134
+	190 -> 395
+	191 -> 418 [color = "darkgreen" fontcolor = "darkgreen" label = "ETS"]
+	191 -> 009 [color = "magenta" fontcolor = "magenta" label = "PSI"]
+	191 -> 149
+	192 -> 262
+	192 -> 319
+	193 -> 120
+	193 -> 350
+	194 -> 258
+	195 -> 348 [color = "magenta" fontcolor = "magenta" label = "PSI"]
+	195 -> 233
+	195 -> 073
+	196 -> 432
+	197 -> 018
+	198 -> 333
+	199 -> 368
+	200 -> 301
+	201 -> 272 [color = "red" fontcolor = "red" label = "STR"]
+	201 -> 326 [color = "magenta" fontcolor = "magenta" label = "PSI"]
+	201 -> 367 [color = "darkviolet" fontcolor = "darkviolet" label = "BLA"]
+	201 -> 404 [color = "darkgreen" fontcolor = "darkgreen" label = "ETS"]
+	202 -> 151
+	202 -> 041
+	202 -> 428
+	203 -> 153 [color = "brown" fontcolor = "brown"]
+	203 -> 162 [color = "pink" fontcolor = "pink" label = "SK"]
+	204 -> 033
+	204 -> 125
+	205 -> 398
+	206 -> 381
+	206 -> 130
+	207 -> 092 [color = "darkgreen" fontcolor = "darkgreen" label = "ETS"]
+	207 -> 297
+	208 -> 274 [color = "magenta" fontcolor = "magenta" label = "PSI"]
+	208 -> 427 [color = "darkgreen" fontcolor = "darkgreen" label = "ETS"]
+	208 -> 392 [color = "darkviolet" fontcolor = "darkviolet" label = "BLA"]
+	209 -> 286
+	210 -> 406
+	210 -> 243
+	211 -> 195
+	211 -> 233
+	211 -> 073
+	212 -> 187
+	212 -> 103
+	213 -> 247
+	213 -> 031 [color = "green" fontcolor = "green" label = "lose AR"]
+	214 -> 351
+	214 -> 147
+	215 -> 343
+	215 -> 377
+	215 -> 175 [color = "grey" fontcolor = "grey" label = "sidney knox"]
+	216 -> 308
+	216 -> 176
+	217 -> 124
+	218 -> 337
+	218 -> 043
+	219 -> 230
+	219 -> 279
+	220 -> 292
+	221 -> 368
+	222
+	223 -> 408
+	223 -> 365
+	224 -> 103
+	225 -> 201
+	225 -> 435
+	226 -> 134
+	226 -> 122
+	227 -> 107
+	228 -> 112
+	228 -> 386
+	229 -> 398
+	230
+	231 -> 362
+	231 -> 129 [color = "grey" fontcolor = "grey" label = "abattoir"]
+	231 -> 347
+	232 -> 316
+	233 -> 073
+	234 -> 103
+	235 -> 025
+	236 -> 258
+	237 -> 132 [color = "purple" fontcolor = "purple" label = "1-4"]
+	237 -> 375 [color = "purple" fontcolor = "purple" label = "5-6"]
+	238 -> 071
+	239 -> 076
+	240 -> 276
+	241 -> 362
+	242 -> 378 [color = "cyan3" fontcolor = "cyan3" label = "STR"]
+	242 -> 421 [color = "cyan3" fontcolor = "cyan3" label = "ETS"]
+	242 -> 192 [color = "cyan3" fontcolor = "cyan3" label = "PSI"]
+	242 -> 363 [color = "cyan3" fontcolor = "cyan3" label = "BLA"]
+	242 -> 319
+	243 -> 336
+	244 -> 398
+	245 -> 190
+	245 -> 094
+	245 -> 134
+	246 -> 428
+	246 -> 331
+	247 -> 120
+	248 -> 143
+	248 -> 198 [color = "grey" fontcolor = "grey" label = "prankster"]
+	249 -> 292
+	250 -> 432
+	251 -> 181
+	252 -> 390 [color = "red" fontcolor = "red" label = "STR"]
+	252 -> 059 [color = "magenta" fontcolor = "magenta" label = "PSI"]
+	252 -> 145 [color = "darkgreen" fontcolor = "darkgreen" label = "ETS"]
+	252 -> 006 [color = "darkviolet" fontcolor = "darkviolet" label = "BLA"]
+	253 -> 161
+	253 -> 345
+	254 -> 125
+	255 -> 294
+	256 -> 024
+	256 -> 101
+	257 -> 303
+	258 -> 311
+	259 -> 183
+	259 -> 005
+	259 -> 060
+	260 -> 010
+	261 -> 053
+	262 -> 119
+	263 -> 099
+	263 -> 191
+	264 -> 226
+	265 -> 138
+	266 -> 334
+	266 -> 206
+	267 -> 398
+	268 -> 107
+	269 -> 018
+	270 -> 170 [color = "darkviolet" fontcolor = "darkviolet" label = "BLA"]
+	270 -> 109 [color = "red" fontcolor = "red" label = "STR"]
+	270 -> 061
+	271 -> 143
+	272 -> 065 [color = "green" fontcolor = "green" label = "win 4 AR"]
+	273 -> 034
+	274
+	275 -> 060
+	276 -> 242
+	276 -> 038
+	277
+	278 -> 413 [color = "magenta" fontcolor = "magenta" label = "PSI"]
+	278 -> 168 [color = "darkgreen" fontcolor = "darkgreen" label = "ETS"]
+	278 -> 124
+	279 -> 076
+	280
+	281 -> 086
+	282 -> 335 [color = "green" fontcolor = "green" label = "AR>2"]
+	283 -> 261 [color = "pink" fontcolor = "pink" label = "SK"]
+	283 -> 200 [color = "brown" fontcolor = "brown"]
+	284 -> 328 [color = "darkgreen" fontcolor = "darkgreen" label = "ETS"]
+	284 -> 306 [color = "darkviolet" fontcolor = "darkviolet" label = "BLA"]
+	284 -> 105 [color = "magenta" fontcolor = "magenta" label = "PSI"]
+	284 -> 237 [color = "red" fontcolor = "red" label = "STR"]
+	285 -> 010
+	286 -> 316
+	287 -> 162
+	//288 -> 322
+	288 -> 117
+	289 -> 434
+	289 -> 104
+	290 -> 039 [color = "grey" fontcolor = "grey" label = "BLA\n fear date\n fear time"]
+	290 -> 368
+	291 -> 408
+	291 -> 365
+	292
+	293 -> 369
+	293 -> 273 [color = "grey" fontcolor = "grey" label = "smoke"]
+	294 -> 095 [color = "green" fontcolor = "green" label = "lose 4 AR"]
+	294 -> 197
+	295 -> 018
+	296 -> 423
+	296 -> 281
+	296 -> 020
+	297 -> 433
+	298 -> 159 [color = "blue" fontcolor = "blue" label = "circuit jammer"]
+	298 -> 136 [color = "green" fontcolor = "green" label = "AR>3"]
+	299 -> 294
+	300 -> 327
+	301 -> 015
+	301 -> 218
+	302 -> 368
+	303 -> 029
+	304 -> 075
+	305 -> 165
+	305 -> 341
+	306 -> 237
+	307 -> 362
+	307 -> 129 [color = "grey" fontcolor = "grey" label = "abattoir"]
+	308 -> 010
+	309 -> 128 [color = "pink" fontcolor = "pink" label = "LK"]
+	309 -> 155 [color = "brown" fontcolor = "brown"]
+	310 -> 383
+	310 -> 045
+	310 -> 321 [color = "magenta" fontcolor = "magenta" label = "PSI"]
+	310 -> 360 [color = "grey" fontcolor = "grey" label = "lion cage"]
+	311 -> 349
+	311 -> 070
+	311 -> 290
+	312
+	313 -> 325 [color = "darkgreen" fontcolor = "darkgreen" label = "ETS"]
+	313 -> 173 [color = "magenta" fontcolor = "magenta" label = "PSI"]
+	313 -> 078 [color = "red" fontcolor = "red" label = "STR"]
+	313 -> 142 [color = "darkviolet" fontcolor = "darkviolet" label = "BLA"]
+	314 -> 276
+	315 -> 131
+	316 -> 438
+	316 -> 064
+	317 -> 417
+	317 -> 252
+	317 -> 096
+	318 -> 233
+	318 -> 195
+	318 -> 073
+	319 -> 134
+	319 -> 245
+	320 -> 150
+	320 -> 025
+	321 -> 383
+	321 -> 148
+	322 -> 288 [dir = both constraint = false]
+	322 -> 117
+	323 -> 060
+	324 -> 075
+	325 -> 078
+	326 -> 065 [color = "green" fontcolor = "green" label = "win 4 AR"]
+	327 -> 365
+	327 -> 408
+	327 -> 004
+	328 -> 237
+	329 -> 015
+	329 -> 202
+	330 -> 249
+	331 -> 391 [color = "grey" fontcolor = "grey" label = "mantrapper"]
+	331 -> 428
+	332 -> 373
+	333 -> 103
+	334 -> 044
+	334 -> 368
+	335
+	336 -> 372
+	337 -> 079
+	338 -> 362
+	338 -> 129 [color = "grey" fontcolor = "grey" label = "abattoir"]
+	339 -> 269
+	339 -> 426
+	339 -> 089
+	340 -> 069 [color = "pink" fontcolor = "pink" label = "SK"]
+	340 -> 262 [color = "brown" fontcolor = "brown"]
+	341 -> 102
+	341 -> 023
+	341 -> 167
+	342 -> 379 [color = "red" fontcolor = "red" label = "STR"]
+	342 -> 058
+	343 -> 033 [color = "red" fontcolor = "red" label = "STR"]
+	343 -> 204 [color = "darkviolet" fontcolor = "darkviolet" label = "BLA"]
+	343 -> 419 [color = "magenta" fontcolor = "magenta" label = "PSI"]
+	343 -> 080 [color = "darkgreen" fontcolor = "darkgreen" label = "ETS"]
+	344 -> 286
+	345 -> 408
+	345 -> 148
+	346 -> 035
+	347 -> 362
+	348 -> 073
+	349 -> 394
+	349 -> 046
+	349 -> 115
+	350 -> 293
+	350 -> 397
+	351 -> 302
+	352 -> 373
+	352 -> 239
+	353 -> 040
+	354 -> 336
+	355 -> 133 [color = "red" fontcolor = "red" label = "STR"]
+	355 -> 178 [color = "magenta" fontcolor = "magenta" label = "PSI"]
+	355 -> 156 [color = "darkgreen" fontcolor = "darkgreen" label = "ETS"]
+	355 -> 283 [color = "darkviolet" fontcolor = "darkviolet" label = "BLA"]
+	356 -> 075
+	357 -> 388 [color = "brown" fontcolor = "brown"]
+	357 -> 234 [color = "pink" fontcolor = "pink" label = "SK"]
+	358 -> 125
+	359 -> 374
+	360 -> 207 [color = "green" fontcolor = "green" label = "AR>1"]
+	361 -> 107
+	362 -> 114
+	362 -> 342
+	363 -> 048
+	364 -> 040
+	365 -> 345
+	365 -> 253
+	366 -> 205 [color = "darkgreen" fontcolor = "darkgreen" label = "ETS"]
+	366 -> 137 [color = "red" fontcolor = "red" label = "STR"]
+	366 -> 267
+	367 -> 265
+	368 -> 292
+	369 -> 003
+	369 -> 278
+	370 -> 221
+	370 -> 368
+	371 -> 073
+	372 -> 072
+	372 -> 410
+	373 -> 239
+	374 -> 311
+	375 -> 120
+	376
+	377 -> 254
+	377 -> 343
+	378 -> 119
+	379 -> 032
+	379 -> 154
+	380 -> 301
+	380 -> 409
+	381 -> 368
+	382 -> 320 [color = "darkviolet" fontcolor = "darkviolet" label = "BLA"]
+	382 -> 081 [color = "magenta" fontcolor = "magenta" label = "PSI"]
+	382 -> 025 [color = "red" fontcolor = "red" label = "STR"]
+	382 -> 235 [color = "darkgreen" fontcolor = "darkgreen" label = "ETS"]
+	383 -> 148
+	384
+	385 -> 276
+	386 -> 112
+	386 -> 341
+	387 -> 356
+	387 -> 324
+	388 -> 103
+	389 -> 362
+	389 -> 347
+	389 -> 129 [color = "grey" fontcolor = "grey" label = "abattoir"]
+	390
+	391 -> 277
+	391 -> 396
+	392
+	393 -> 435
+	394 -> 220
+	394 -> 430 [color = "grey" fontcolor = "grey" label = "STR\n fear date\n fear time"]
+	395 -> 226
+	396 -> 016
+	397 -> 256
+	398 -> 256
+	398 -> 144
+	399 -> 223
+	399 -> 291
+	400 -> 311
+	401 -> 031 [color = "green" fontcolor = "green" label = "lose AR"]
+	401 -> 247
+	402 -> 286
+	403 -> 029
+	404 -> 065 [color = "green" fontcolor = "green" label = "win 4 AR"]
+	405 -> 251
+	405 -> 017
+	405 -> 171 [color = "grey" fontcolor = "grey" label = "danny rich"]
+	406 -> 372
+	407 -> 196 [color = "pink" fontcolor = "pink" label = "LK"]
+	407 -> 056 [color = "brown" fontcolor = "brown"]
+	408 -> 158
+	408 -> 026
+	409 -> 185
+	409 -> 301
+	410 -> 141 [color = "blue" fontcolor = "blue" label = "susan"]
+	410 -> 084 [color = "red" fontcolor = "red" label = "STR"]
+	410 -> 216 [color = "magenta" fontcolor = "magenta" label = "PSI"]
+	410 -> 176
+	411 -> 019
+	412 -> 361
+	412 -> 268
+	412 -> 382 [color = "grey" fontcolor = "grey" label = "poisoner"]
+	413 -> 217
+	414
+	415 -> 103
+	416 -> 385
+	416 -> 240
+	417 -> 368
+	418 -> 341
+	418 -> 165
+	419 -> 358 [color = "green" fontcolor = "green" label = "win"]
+	419 -> 033
+	420 -> 083
+	420 -> 323
+	420 -> 259
+	421 -> 340 [color = "blue" fontcolor = "blue" label = "acid"]
+	421 -> 262
+	421 -> 319
+	422 -> 373
+	423 -> 329 [color = "cyan3" fontcolor = "cyan3" label = "ETS"]
+	423 -> 086
+	424 -> 226
+	425 -> 387
+	425 -> 062
+	426 -> 269
+	426 -> 089
+	427 -> 311
+	428 -> 189
+	428 -> 300
+	429 -> 042
+	429 -> 355
+	430 -> 087 [color = "red" fontcolor = "red" label = "STR"]
+	430 -> 330 [color = "darkviolet" fontcolor = "darkviolet" label = "BLA"]
+	430 -> 249
+	431 -> 276
+	432 -> 079
+	433 -> 148
+	434 -> 181
+	435 -> 015
+	435 -> 202
+	436 -> 241
+	437 -> 028 [color = "brown" fontcolor = "brown" label = "lose AR\n LK"]
+	437 -> 354
+	438 -> 201
+	438 -> 369
+	439 -> 037
+	440
+	
+	001 [fontsize=25]
+	002 [fontsize=25]
+	003 [fontsize=25]
+	004 [fontsize=25]
+	005 [fontsize=25]
+	006 [fontsize=25]
+	007 [fontsize=25]
+	008 [fontsize=25]
+	009 [fontsize=25]
+	010 [fontsize=25]
+	011 [fontsize=25]
+	012 [fontsize=25]
+	013 [fontsize=25]
+	014 [fontsize=25]
+	015 [fontsize=25]
+	016 [fontsize=25]
+	017 [fontsize=25]
+	018 [fontsize=25]
+	019 [fontsize=25]
+	020 [fontsize=25]
+	021 [fontsize=25]
+	022 [fontsize=25]
+	023 [fontsize=25]
+	024 [fontsize=25]
+	025 [fontsize=25]
+	026 [fontsize=25]
+	027 [fontsize=25]
+	028 [fontsize=25]
+	029 [fontsize=25]
+	030 [fontsize=25]
+	031 [fontsize=25]
+	032 [fontsize=25]
+	033 [fontsize=25]
+	034 [fontsize=25]
+	035 [fontsize=25]
+	036 [fontsize=25]
+	037 [fontsize=25]
+	038 [fontsize=25]
+	039 [fontsize=25]
+	040 [fontsize=25]
+	041 [fontsize=25]
+	042 [fontsize=25]
+	043 [fontsize=25]
+	044 [fontsize=25]
+	045 [fontsize=25]
+	046 [fontsize=25]
+	047 [fontsize=25]
+	048 [fontsize=25]
+	049 [fontsize=25]
+	050 [fontsize=25]
+	051 [fontsize=25]
+	052 [fontsize=25]
+	053 [fontsize=25]
+	054 [fontsize=25]
+	055 [fontsize=25]
+	056 [fontsize=25]
+	057 [fontsize=25]
+	058 [fontsize=25]
+	059 [fontsize=25]
+	060 [fontsize=25]
+	061 [fontsize=25]
+	062 [fontsize=25]
+	063 [fontsize=25]
+	064 [fontsize=25]
+	065 [fontsize=25]
+	066 [fontsize=25]
+	067 [fontsize=25]
+	068 [fontsize=25]
+	069 [fontsize=25]
+	070 [fontsize=25]
+	071 [fontsize=25]
+	072 [fontsize=25]
+	073 [fontsize=25]
+	074 [fontsize=25]
+	075 [fontsize=25]
+	076 [fontsize=25]
+	077 [fontsize=25]
+	078 [fontsize=25]
+	079 [fontsize=25]
+	080 [fontsize=25]
+	081 [fontsize=25]
+	082 [fontsize=25]
+	083 [fontsize=25]
+	084 [fontsize=25]
+	085 [fontsize=25]
+	086 [fontsize=25]
+	087 [fontsize=25]
+	088 [fontsize=25]
+	089 [fontsize=25]
+	090 [fontsize=25]
+	091 [fontsize=25]
+	092 [fontsize=25]
+	093 [fontsize=25]
+	094 [fontsize=25]
+	095 [fontsize=25]
+	096 [fontsize=25]
+	097 [fontsize=25]
+	098 [fontsize=25]
+	099 [fontsize=25]
+	100 [fontsize=25]
+	101 [fontsize=25]
+	102 [fontsize=25]
+	103 [fontsize=25]
+	104 [fontsize=25]
+	105 [fontsize=25]
+	106 [fontsize=25]
+	107 [fontsize=25]
+	108 [fontsize=25]
+	109 [fontsize=25]
+	110 [fontsize=25]
+	111 [fontsize=25]
+	112 [fontsize=25]
+	113 [fontsize=25]
+	114 [fontsize=25]
+	115 [fontsize=25]
+	116 [fontsize=25]
+	117 [fontsize=25]
+	118 [fontsize=25]
+	119 [fontsize=25]
+	120 [fontsize=25]
+	121 [fontsize=25]
+	122 [fontsize=25]
+	123 [fontsize=25]
+	124 [fontsize=25]
+	125 [fontsize=25]
+	126 [fontsize=25]
+	127 [fontsize=25]
+	128 [fontsize=25]
+	129 [fontsize=25]
+	130 [fontsize=25]
+	131 [fontsize=25]
+	132 [fontsize=25]
+	133 [fontsize=25]
+	134 [fontsize=25]
+	135 [fontsize=25]
+	136 [fontsize=25]
+	137 [fontsize=25]
+	138 [fontsize=25]
+	139 [fontsize=25]
+	140 [fontsize=25]
+	141 [fontsize=25]
+	142 [fontsize=25]
+	143 [fontsize=25]
+	144 [fontsize=25]
+	145 [fontsize=25]
+	146 [fontsize=25]
+	147 [fontsize=25]
+	148 [fontsize=25]
+	149 [fontsize=25]
+	150 [fontsize=25]
+	151 [fontsize=25]
+	152 [fontsize=25]
+	153 [fontsize=25]
+	154 [fontsize=25]
+	155 [fontsize=25]
+	156 [fontsize=25]
+	157 [fontsize=25]
+	158 [fontsize=25]
+	159 [fontsize=25]
+	160 [fontsize=25]
+	161 [fontsize=25]
+	162 [fontsize=25]
+	163 [fontsize=25]
+	164 [fontsize=25]
+	165 [fontsize=25]
+	166 [fontsize=25]
+	167 [fontsize=25]
+	168 [fontsize=25]
+	169 [fontsize=25]
+	170 [fontsize=25]
+	171 [fontsize=25]
+	172 [fontsize=25]
+	173 [fontsize=25]
+	174 [fontsize=25]
+	175 [fontsize=25]
+	176 [fontsize=25]
+	177 [fontsize=25]
+	178 [fontsize=25]
+	179 [fontsize=25]
+	180 [fontsize=25]
+	181 [fontsize=25]
+	182 [fontsize=25]
+	183 [fontsize=25]
+	184 [fontsize=25]
+	185 [fontsize=25]
+	186 [fontsize=25]
+	187 [fontsize=25]
+	188 [fontsize=25]
+	189 [fontsize=25]
+	190 [fontsize=25]
+	191 [fontsize=25]
+	192 [fontsize=25]
+	193 [fontsize=25]
+	194 [fontsize=25]
+	195 [fontsize=25]
+	196 [fontsize=25]
+	197 [fontsize=25]
+	198 [fontsize=25]
+	199 [fontsize=25]
+	200 [fontsize=25]
+	201 [fontsize=25]
+	202 [fontsize=25]
+	203 [fontsize=25]
+	204 [fontsize=25]
+	205 [fontsize=25]
+	206 [fontsize=25]
+	207 [fontsize=25]
+	208 [fontsize=25]
+	209 [fontsize=25]
+	210 [fontsize=25]
+	211 [fontsize=25]
+	212 [fontsize=25]
+	213 [fontsize=25]
+	214 [fontsize=25]
+	215 [fontsize=25]
+	216 [fontsize=25]
+	217 [fontsize=25]
+	218 [fontsize=25]
+	219 [fontsize=25]
+	220 [fontsize=25]
+	221 [fontsize=25]
+	222 [fontsize=25]
+	223 [fontsize=25]
+	224 [fontsize=25]
+	225 [fontsize=25]
+	226 [fontsize=25]
+	227 [fontsize=25]
+	228 [fontsize=25]
+	229 [fontsize=25]
+	230 [fontsize=25]
+	231 [fontsize=25]
+	232 [fontsize=25]
+	233 [fontsize=25]
+	234 [fontsize=25]
+	235 [fontsize=25]
+	236 [fontsize=25]
+	237 [fontsize=25]
+	238 [fontsize=25]
+	239 [fontsize=25]
+	240 [fontsize=25]
+	241 [fontsize=25]
+	242 [fontsize=25]
+	243 [fontsize=25]
+	244 [fontsize=25]
+	245 [fontsize=25]
+	246 [fontsize=25]
+	247 [fontsize=25]
+	248 [fontsize=25]
+	249 [fontsize=25]
+	250 [fontsize=25]
+	251 [fontsize=25]
+	252 [fontsize=25]
+	253 [fontsize=25]
+	254 [fontsize=25]
+	255 [fontsize=25]
+	256 [fontsize=25]
+	257 [fontsize=25]
+	258 [fontsize=25]
+	259 [fontsize=25]
+	260 [fontsize=25]
+	261 [fontsize=25]
+	262 [fontsize=25]
+	263 [fontsize=25]
+	264 [fontsize=25]
+	265 [fontsize=25]
+	266 [fontsize=25]
+	267 [fontsize=25]
+	268 [fontsize=25]
+	269 [fontsize=25]
+	270 [fontsize=25]
+	271 [fontsize=25]
+	272 [fontsize=25]
+	273 [fontsize=25]
+	274 [fontsize=25]
+	275 [fontsize=25]
+	276 [fontsize=25]
+	277 [fontsize=25]
+	278 [fontsize=25]
+	279 [fontsize=25]
+	280 [fontsize=25]
+	281 [fontsize=25]
+	282 [fontsize=25]
+	283 [fontsize=25]
+	284 [fontsize=25]
+	285 [fontsize=25]
+	286 [fontsize=25]
+	287 [fontsize=25]
+	288 [fontsize=25]
+	289 [fontsize=25]
+	290 [fontsize=25]
+	291 [fontsize=25]
+	292 [fontsize=25]
+	293 [fontsize=25]
+	294 [fontsize=25]
+	295 [fontsize=25]
+	296 [fontsize=25]
+	297 [fontsize=25]
+	298 [fontsize=25]
+	299 [fontsize=25]
+	300 [fontsize=25]
+	301 [fontsize=25]
+	302 [fontsize=25]
+	303 [fontsize=25]
+	304 [fontsize=25]
+	305 [fontsize=25]
+	306 [fontsize=25]
+	307 [fontsize=25]
+	308 [fontsize=25]
+	309 [fontsize=25]
+	310 [fontsize=25]
+	311 [fontsize=25]
+	312 [fontsize=25]
+	313 [fontsize=25]
+	314 [fontsize=25]
+	315 [fontsize=25]
+	316 [fontsize=25]
+	317 [fontsize=25]
+	318 [fontsize=25]
+	319 [fontsize=25]
+	320 [fontsize=25]
+	321 [fontsize=25]
+	322 [fontsize=25]
+	323 [fontsize=25]
+	324 [fontsize=25]
+	325 [fontsize=25]
+	326 [fontsize=25]
+	327 [fontsize=25]
+	328 [fontsize=25]
+	329 [fontsize=25]
+	330 [fontsize=25]
+	331 [fontsize=25]
+	332 [fontsize=25]
+	333 [fontsize=25]
+	334 [fontsize=25]
+	335 [fontsize=25]
+	336 [fontsize=25]
+	337 [fontsize=25]
+	338 [fontsize=25]
+	339 [fontsize=25]
+	340 [fontsize=25]
+	341 [fontsize=25]
+	342 [fontsize=25]
+	343 [fontsize=25]
+	344 [fontsize=25]
+	345 [fontsize=25]
+	346 [fontsize=25]
+	347 [fontsize=25]
+	348 [fontsize=25]
+	349 [fontsize=25]
+	350 [fontsize=25]
+	351 [fontsize=25]
+	352 [fontsize=25]
+	353 [fontsize=25]
+	354 [fontsize=25]
+	355 [fontsize=25]
+	356 [fontsize=25]
+	357 [fontsize=25]
+	358 [fontsize=25]
+	359 [fontsize=25]
+	360 [fontsize=25]
+	361 [fontsize=25]
+	362 [fontsize=25]
+	363 [fontsize=25]
+	364 [fontsize=25]
+	365 [fontsize=25]
+	366 [fontsize=25]
+	367 [fontsize=25]
+	368 [fontsize=25]
+	369 [fontsize=25]
+	370 [fontsize=25]
+	371 [fontsize=25]
+	372 [fontsize=25]
+	373 [fontsize=25]
+	374 [fontsize=25]
+	375 [fontsize=25]
+	376 [fontsize=25]
+	377 [fontsize=25]
+	378 [fontsize=25]
+	379 [fontsize=25]
+	380 [fontsize=25]
+	381 [fontsize=25]
+	382 [fontsize=25]
+	383 [fontsize=25]
+	384 [fontsize=25]
+	385 [fontsize=25]
+	386 [fontsize=25]
+	387 [fontsize=25]
+	388 [fontsize=25]
+	389 [fontsize=25]
+	390 [fontsize=25]
+	391 [fontsize=25]
+	392 [fontsize=25]
+	393 [fontsize=25]
+	394 [fontsize=25]
+	395 [fontsize=25]
+	396 [fontsize=25]
+	397 [fontsize=25]
+	398 [fontsize=25]
+	399 [fontsize=25]
+	400 [fontsize=25]
+	401 [fontsize=25]
+	402 [fontsize=25]
+	403 [fontsize=25]
+	404 [fontsize=25]
+	405 [fontsize=25]
+	406 [fontsize=25]
+	407 [fontsize=25]
+	408 [fontsize=25]
+	409 [fontsize=25]
+	410 [fontsize=25]
+	411 [fontsize=25]
+	412 [fontsize=25]
+	413 [fontsize=25]
+	414 [fontsize=25]
+	415 [fontsize=25]
+	416 [fontsize=25]
+	417 [fontsize=25]
+	418 [fontsize=25]
+	419 [fontsize=25]
+	420 [fontsize=25]
+	421 [fontsize=25]
+	422 [fontsize=25]
+	423 [fontsize=25]
+	424 [fontsize=25]
+	425 [fontsize=25]
+	426 [fontsize=25]
+	427 [fontsize=25]
+	428 [fontsize=25]
+	429 [fontsize=25]
+	430 [fontsize=25]
+	431 [fontsize=25]
+	432 [fontsize=25]
+	433 [fontsize=25]
+	434 [fontsize=25]
+	435 [fontsize=25]
+	436 [fontsize=25]
+	437 [fontsize=25]
+	438 [fontsize=25]
+	439 [fontsize=25]
+	440 [fontsize=25]
+}

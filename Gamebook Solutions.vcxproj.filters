@@ -1,0 +1,95 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Fighting Fantasy">
+      <UniqueIdentifier>{e5a37266-66dc-4bf1-87ba-1926f21907a2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="backup">
+      <UniqueIdentifier>{4e08c107-8760-4db0-89cc-3d693350f27a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Tin Man Games">
+      <UniqueIdentifier>{989b9680-5339-44af-93af-73a69029dbe5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Chooseomatic">
+      <UniqueIdentifier>{5c96a6cd-c9a2-4978-ba92-f10a32155f28}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Gamebook Solutions.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="template.dot">
+      <Filter>Source Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Chooseomatic\old\Thrusts of Justice.dot">
+      <Filter>backup</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\Fighting Fantasy\Blood of the Zombie.dot">
+      <Filter>backup</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\Fighting Fantasy\backup\FF12.dot">
+      <Filter>backup</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\Fighting Fantasy\backup\ff64.dot">
+      <Filter>backup</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\Fighting Fantasy\House of Hell.dot">
+      <Filter>backup</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\Fighting Fantasy\Howl of the Werewolf.dot">
+      <Filter>backup</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\Fighting Fantasy\Stormslayer.dot">
+      <Filter>backup</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Chooseomatic\Time Travel Dinosaur.dot">
+      <Filter>backup</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Fighting Fantasy\old\Appointment with F.E.A.R. incomplete.dot">
+      <Filter>backup</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Fighting Fantasy\Deathtrap Dungeon.dot">
+      <Filter>Fighting Fantasy</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Fighting Fantasy\old\Caverns of the Snow Witch.dot">
+      <Filter>backup</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Fighting Fantasy\old\Beneath Nightmare Castle.dot">
+      <Filter>backup</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Fighting Fantasy\Creature of Havoc.dot">
+      <Filter>Fighting Fantasy</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Fighting Fantasy\The Warlock of Firetop Mountain.dot">
+      <Filter>Fighting Fantasy</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Fighting Fantasy\The Citadel of Chaos.dot">
+      <Filter>Fighting Fantasy</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Fighting Fantasy\Crypt of the Sorcerer.dot">
+      <Filter>Fighting Fantasy</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="vertex.txt">
+      <Filter>Header Files</Filter>
+    </Text>
+    <Text Include="edges.txt">
+      <Filter>Header Files</Filter>
+    </Text>
+  </ItemGroup>
+</Project>

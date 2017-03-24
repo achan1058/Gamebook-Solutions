@@ -1,0 +1,1599 @@
+digraph "Fighting Fantasy: Crypt of the Sorcerer" {
+	// graph defaults
+	rankdir=LR
+	mclimit=50
+	nodesep=.3 // changes horizontal separation of nodes
+	ranksep=.4 // changes vertical separation of nodes
+	node [height=.7
+		width=.7
+		shape=ellipse
+		margin=0]
+	edge[weight=5]
+
+	// a box for a graph label
+	// note that you can override the defaults set above
+	title [label = "Fighting Fantasy: Crypt of the Sorcerer 26/06/--\n\n \
+		Light Green Fill: Benefits\l \
+		Pink Fill: Penalties\l \
+		Red Fill: Death\l \
+		Blue Text: Key Items/Events\l \
+		Red Text: Lost Items\l \
+		Blue Line: Forced Items/Events\l \
+		Light Blue Text/Line: Optional Items/Events\l \
+		Purple Line: Dice Related Events\l \
+		Green Line: Stat Test Passed\l \
+		Brown Line: Stat Test Failed\l \
+		Magenta Line: Combat Related Events\l \
+		Grey Text: Riddle Answer\l \
+		Grey Line: Hidden Option\l \
+		Gold/Yellow Fill: Required Nodes\l \
+		Light Blue Fill: Recommended Nodes\l \
+		Gold Outline: Recommended Path\l \
+		Green Box: Combat\l \
+		SK/ST/LK/AS/AR/CW/CL: Skill/Stamina/Luck/Attack Strength/Attack Round/Consecutive Win Round/Consecutive Lose Round\l \
+		?: Chance of this happening, depending on instructions in text\l \
+		*: Special Combat Rules\l \
+		-: Negative Status\l\l \
+		Starts with:\l \
+		Initial Skill: 1d6+6\l \
+		Initial Stamina: 2d6+12\l \
+		Initial Luck: 1d6+6\l\l \
+		5 potion: +4ST\l \
+		sword\l \
+		backpack\l\l \
+		Comments:\l \
+		You need a loaded die.\l\l  \
+		True Path:\l\
+		Assume SK&ge;11 to have a realistic shot vs Razaak.\l \
+		Get armour to avoid luck test.\l \
+		Skip Chameleonite blood as chance of losing arm is higher than failing skill test.\l \
+		Rescue Budron for luck for dodging lightning and killing Razaak.\l \
+		Spend remaining luck on damaging Razaak to finish the fight quicker.\l \
+		"
+		shape = "box"
+		margin = 0.1]
+
+	subgraph Required {
+		node [style = "filled" color = "gold" fillcolor = "gold" fontcolor = "blue" shape = "rect"]
+		352
+		306
+		131
+		102
+		367
+		211
+		237
+		290
+		144
+		256
+		266
+		198
+		336
+		074
+		400 [fontcolor = "black" shape = "octagon"]
+	}
+	
+	subgraph Required2 {
+		node [style = "filled" color = "#FFF700" fillcolor = "#FFF700" fontcolor = "blue" shape = "rect"]
+		333
+	}
+
+	subgraph Recommended {
+		node [penwidth = 3 color = "gold"]
+		001
+		146
+		249
+		346 [style = "filled" fillcolor = "pink"]
+		185
+		097
+		310
+		045
+		143
+		087
+		295
+		328 [style = "filled" fillcolor = "paleturquoise1" fontcolor = "crimson" shape = "rect"]
+		235
+		284
+		033
+		052 [style = "filled" fillcolor = "paleturquoise1" fontcolor = "blue" shape = "rect"]
+		352
+		137
+		039
+		239
+		356
+		180
+		070
+		134 [style = "filled" fillcolor = "pink"]
+		287
+		265 [style = "filled" fillcolor = "paleturquoise1" fontcolor = "blue" shape = "rect"]
+		369
+		306
+		324
+		376 [style = "filled" fillcolor = "paleturquoise1" fontcolor = "blue" shape = "rect"]
+		391
+		016
+		100
+		129
+		365
+		232
+		089
+		319
+		360 [style = "filled" fillcolor = "paleturquoise1" fontcolor = "blue" shape = "rect"]
+		175 [shape = "rect" fontcolor = "blue"]
+		268 [style = "filled" fillcolor = "paleturquoise1" fontcolor = "blue" shape = "rect"]
+		221
+		168
+		302
+		194
+		252
+		036
+		230
+		178
+		358 [style = "filled" fillcolor = "greenyellow"]
+		131
+		029
+		205
+		299
+		362
+		102
+		339
+		165
+		289
+		304
+		127
+		258
+		048 [style = "filled" fillcolor = "paleturquoise1" fontcolor = "blue" shape = "rect"]
+		382
+		118
+		173
+		282 [shape = "rect" fontcolor = "blue"]
+		241
+		367
+		080
+		025
+		192
+		211
+		386
+		067
+		183
+		308
+		103 [style = "filled" fillcolor = "greenyellow"]
+		327
+		148
+		237
+		377
+		278
+		157 [style = "filled" fillcolor = "greenyellow"]
+		244 [style = "filled" fillcolor = "greenyellow"]
+		139
+		290
+		389
+		121
+		300 [style = "filled" fillcolor = "paleturquoise1" fontcolor = "blue" shape = "rect"]
+		050 [style = "filled" fillcolor = "paleturquoise1" fontcolor = "blue" shape = "rect"]
+		234
+		316 [style = "filled" fillcolor = "greenyellow"]
+		353
+		135
+		059
+		090
+		144
+		398
+		214
+		256
+		338
+		222
+		166
+		151
+		281
+		392
+		079
+		019
+		366
+		104
+		266
+		040
+		315
+		072
+		245
+		056
+		226
+		349 [style = "filled" fillcolor = "pink"]
+		088
+		193
+		375
+		128
+		038
+		311
+		054
+		279
+		253
+		226 [style = "filled" fillcolor = "pink"]
+		294
+		198
+		152
+		011
+		028 [style = "filled" fillcolor = "greenyellow"]
+		167
+		096
+		179
+		336
+		313
+		162
+		081
+		093
+		181
+		396
+		297
+		264
+		156
+		191
+		101
+		041
+		074
+		199
+		026
+		283
+		189
+		364
+		035
+		119
+		005
+		108
+		184
+		276
+		326
+		351
+		066
+		271
+		084
+		233
+		400
+	}
+	
+	subgraph Optional {
+		node [style = "filled" color = "paleturquoise1" fillcolor = "paleturquoise1" fontcolor = "blue" shape = "rect"]
+		328
+		052
+		265
+		376
+		360
+		268
+		048
+		300
+		050
+	}
+
+	subgraph Combat {
+		style = "filled" color = "palegreen2"
+
+		subgraph cluster_RAD_HULK {
+			label = "Rad-Hulk\n 10/5\n 10/6"
+			020 [label = "\N\n -2AS"]
+			143
+		}
+
+		subgraph cluster_ORC {
+			label = "Orc\n 6/5"
+			120 [label = "\N\n -2AS"]
+		}
+		
+		subgraph cluster_ORC2 {
+			label = "Orc\n 6/6 6/5"
+			008
+		}
+
+		subgraph cluster_ORC3 {
+			label = "Orc\n 6/5\n 6/6\n 6/5"
+			062
+		}
+
+		subgraph cluster_WEREWOLF {
+			label = "Werewolf\n 8/9"
+			252
+		}
+
+		subgraph cluster_CHAMELEONITE {
+			label = "Chameleonite\n 7/6\n 6/6\n 7/6"
+			239 [label = "\N\n +2AS?"]
+		}
+
+		subgraph cluster_BONEKEEPER {
+			label = "Bonekeeper\n 5/6"
+			134 [label = "\N\n -3LK"]
+		}
+
+		subgraph cluster_GOBLIN {
+			label = "Goblin\n 5/5\n 5/6\n 6/5\n 6/6"
+			006
+			060
+			190 [style = "filled" color = "pink" label = "\N\n -1LK"]
+			350 [style = "filled" color = "pink" label = "\N\n -1LK"]
+		}
+		
+		subgraph cluster_WOOD_DEMON {
+			label = "Wood Demon\n 9/10"
+			232
+			260 [label = "\N\n -2AS"]
+		}
+		
+		subgraph cluster_GIANT_FIRE_BEETLE {
+			label = "Giant Fire Beetle\n 5/4\n 5/4"
+			150
+		}
+
+		subgraph cluster_CLAY_GOLEM {
+			label = "Clay Golem\n 8/9"
+			299
+			393 [style = "filled" color = "red"]
+		}
+		
+		subgraph cluster_CENTAUR {
+			label = "Centaur\n 10/10"
+			165
+		}
+		
+		subgraph cluster_HILL_GIANT {
+			label = "Hill Giant\n 9/10"
+			173
+		}
+
+		subgraph cluster_WILD_HILL_MAN {
+			label = "Wild Hill Man\n 6/5"
+			196
+		}
+		
+		subgraph cluster_DEMONSPAWN {
+			label = "Demonspawn\n 6/6"
+			377
+		}
+
+		subgraph cluster_DEMONIC_SERVANT {
+			label = "Demonic Servant\n 8/7"
+			068
+		}
+		
+		subgraph cluster_APE_MAN {
+			label = "Ape Man\n 8/7"
+			083
+			219 [label = "\N\n -2AS"]
+		}
+		
+		subgraph cluster_DWARF {
+			label = "Dwarf\n 7/7"
+			126
+			378 [style = "filled" color = "pink" label = "\N\n -2ST"]
+		}
+		
+		subgraph cluster_SKELETON {
+			label = "Skeleton\n 6/5\n 6/6\n 5/6"
+			139
+		}
+		
+		subgraph cluster_DORAGAR {
+			label = "Doragar\n 9/9\n 9/10"
+			090
+		}
+		
+		subgraph cluster_IRON_EATER {
+			label = "Iron-Eater*\n 4/5"
+			296 [style = "filled" color = "pink" label = "\N\n -1SK"]
+		}
+		
+		subgraph cluster_CAVE_TROLL {
+			label = "Cave Troll*\n 8/9"
+			079
+		}
+		
+		subgraph cluster_GARGANTIS {
+			label = "Gargantis\n 12/24"
+			147
+		}
+		
+		subgraph cluster_RAT_MAN {
+			label = "Rat Man\n 5/6"
+			069
+			133 [style = "filled" color = "pink" label = "\N\n -2ST"]
+			238 [label = "\N*"]
+		}
+		
+		subgraph cluster_VAMPIRE_BAT {
+			label = "Vampire Bat\n 5/4"
+			257
+		}
+		
+		subgraph cluster_WILD_ELF {
+			label = "Wild Elf\n 7/6"
+			044
+		}
+		
+		subgraph cluster_HELLCAT {
+			label = "Hellcat\n 8/8"
+			340
+			355
+		}
+		
+		subgraph cluster_DEMONIC_SERVANT2 {
+			label = "Demonic Servant\n 8/7"
+			081
+		}
+		
+		subgraph cluster_LAVA_DEMON {
+			label = "Lava Demon\n 6/4\n 5/4\n 6/4"
+			115
+		}
+		
+		subgraph cluster_ZOMBIE {
+			label = "Zombie\n 6/6"
+			318
+			373 [label = "\N\n -1~5EST"]
+		}
+		
+		subgraph cluster_RAZAAK {
+			label = "Razaak\n 12/20"
+			271
+		}
+	}
+
+	subgraph Death {
+		node [style = "filled" color = "red"]
+		003
+		004
+		013
+		014
+		015
+		027
+		051
+		058
+		064
+		110
+		106
+		114
+		117
+		125
+		136
+		145
+		149
+		164
+		186
+		174
+		177
+		201
+		209
+		218
+		223
+		224
+		227
+		236
+		242
+		247
+		248
+		251
+		259
+		263
+		267
+		270
+		307
+		317
+		321
+		325
+		334
+		357
+		374
+		385
+		399
+	}
+
+	subgraph Boost {
+		node [style = "filled" color = "greenyellow"]
+		028 [label = "\N\n +2ST"]
+		032 [label = "\N\n +2ST"]
+		046 [label = "\N\n +2ST"]
+		048 [shape = "rect" fontcolor = "blue" label = "\N\n info\n +1d6+2ST" tooltip = "boulder beast"]
+		049 [label = "\N\n +1ST"]
+		050 [shape = "rect" fontcolor = "blue" label = "\N\n paralysis rod\n rabbit\n +1LK"]
+		052 [shape = "rect" fontcolor = "blue" label = "\N\n 10 gold\n knife\n holy water\n +1ST"]
+		092 [shape = "rect" fontcolor = "crimson" label = "\N\n -3 items\n +2ST"]
+		103 [label = "\N\n +2ST"]
+		131 [shape = "rect" fontcolor = "blue" label = "\N\n defender\n +1SK\n +1LK"]
+		140 [label = "\N\n +2ST"]
+		157 [shape = "rect" fontcolor = "blue" label = "\N\n 5 potion\n +2ST"]
+		244 [shape = "rect" fontcolor = "crimson" label = "\N\n -potion\n +1LK"]
+		316 [label = "\N\n +2ST"]
+		322 [label = "\N\n +2ST"]
+		328 [shape = "rect" fontcolor = "blue" label = "\N\n armour\n +1SK"]
+		341 [shape = "rect" fontcolor = "blue" label = "\N\n 5 potion\n +2ST"]
+		342 [label = "\N\n +1ST"]
+		358 [label = "\N\n +2SK?"]
+		361 [shape = "rect" fontcolor = "blue" label = "\N\n camouflage\n +1LK"]
+		367 [shape = "rect" fontcolor = "blue" label = "\N\n smoke\n +1LK"]
+		376 [shape = "rect" fontcolor = "blue" label = "\N\n stream\n +1ST"]
+		380 [shape = "rect" color = "greenyellow:pink" fontcolor = "blue" label = "\N\n armour\n +1SK\n -3LK"]
+	}
+
+	subgraph Damage {
+		node [style = "filled" color = "pink"]
+		012 [shape = "rect" fontcolor = "blue" label = "\N\n touched\n -2ST"]
+		017 [label = "\N\n -1LK"]
+		042 [label = "\N\n -2SK\n -1ST"]
+		085 [label = "\N\n -1d6ST"]
+		086 [label = "\N\n -3LK"]
+		098 [label = "\N\n -2LK"]
+		107 [label = "\N\n -1ST"]
+		111 [label = "\N\n -1LK\n -2SK\n -5ST"]
+		158 [label = "\N\n -2ST"]
+		161 [label = "\N\n -1SK\n -6ST"]
+		163 [shape = "rect" fontcolor = "blue" label = "\N\n camouflage\n no shield\n -2SK"]
+		170 [label = "\N\n -1SK\n -1d6+3ST"]
+		182 [label = "\N\n -2SK\n -1LK"]
+		197 [label = "\N-\n -2LK"]
+		226 [label = "\N\n -2~12ST"]
+		229 [label = "\N\n -1LK"]
+		246 [label = "\N\n -4ST"]
+		272 [shape = "rect" fontcolor = "blue" label = "\N\n camouflage\n -1SK\n -4ST"]
+		305 [label = "\N\n -4ST"]
+		312 [label = "\N\n -1ST"]
+		314 [label = "\N\n -2ST"]
+		320 [label = "\N\n -1d6ST"]
+		335 [label = "\N\n -2ST"]
+		337 [label = "\N\n -1d6ST"]
+		346 [shape = "rect" fontcolor = "crimson" label = "\N\n -potion\n -4ST"]
+		349 [label = "\N\n -2ST"]
+		388 [shape = "rect" fontcolor = "crimson" label = "\N\n -potion\n -2SK\n -6ST"]
+		394 [label = "\N\n -2LK"]
+	}
+
+	subgraph Key_Item {
+		node [fontcolor = "blue" shape = "rect"]
+		018 [fontcolor = "crimson" label = "\N\n -all items"]
+		023 [label = "\N\n knife"]
+		065 [label = "\N\n 2 gold\n mirror"]
+		074 [label = "\N\n tag: 283"]
+		075 [label = "\N\n talisman"]
+		102 [label = "\N\n gold ring"]
+		116 [label = "\N\n 2 gold\n mirror"]
+		144 [label = "\N\n key"]
+		155 [label = "\N\n 2 gold\n mirror"]
+		175 [label = "\N\n 4 gold\n candle"]
+		198 [label = "\N\n warhammer: 35"]
+		208 [label = "\N\n moon ring: 123"]
+		211 [label = "\N\n parchment: 66"]
+		212 [label = "\N\n info" tooltip = "leave crypt"]
+		237 [label = "\N\n suma: 11"]
+		243 [label = "\N\n 6 gold\n knife\n rat skull"]
+		254 [label = "\N\n stones"]
+		256 [label = "\N\n zombie: 5"]
+		265 [label = "\N\n skull ring"]
+		266 [label = "\N\n hobbits: 119"]
+		268 [label = "\N\n info" tooltip = "western flatlands"]
+		277 [fontcolor = "crimson" label = "\N\n -1 item"]
+		282 [label = "\N\n 1 gold"]
+		290 [label = "\N\n tamal: 108"]
+		300 [label = "\N\n silver rod: 13"]
+		306 [label = "\N\n granite: 184"]
+		333 [label = "\N\n tamal: 108"]
+		336 [label = "\N\n hamakei: 66"]
+		352 [label = "\N\n crystal"]
+		360 [label = "\N\n silver rod: 37"]
+	}
+	
+	{
+		rank = same
+		010
+		265
+	}
+
+	{
+		rank = same
+		111
+		360
+	}
+
+	title -> 001 [penwidth = 3]
+	001 -> 255
+	001 -> 146 [penwidth = 3]
+	002 -> 133 [color = "purple" fontcolor = "purple" label = "1-3"]
+	002 -> 069 [color = "purple" fontcolor = "purple" label = "4-6"]
+	005 -> 108 [penwidth = 3 color = "grey" fontcolor = "grey" label = "tamal"]
+	005 -> 303
+	006 -> 155
+	007 -> 044
+	007 -> 162
+	008 -> 243
+	009 -> 130
+	009 -> 169
+	010 -> 094
+	010 -> 265 [dir = both]
+	010 -> 369
+	011 -> 257
+	011 -> 028 [penwidth = 3]
+	012 -> 245
+	016 -> 171
+	016 -> 100 [penwidth = 3]
+	017 -> 030
+	018 -> 042 [color = "green" fontcolor = "green" label = "LK"]
+	018 -> 224 [color = "brown"]
+	019 -> 188
+	019 -> 366 [penwidth = 3]
+	019 -> 040
+	020 -> 235
+	020 -> 082
+	021 -> 215
+	021 -> 363
+	022 -> 342
+	022 -> 279
+	023 -> 053
+	024 -> 193 [color = "blue" fontcolor = "blue" label = "crystal"]
+	024 -> 307
+	025 -> 192 [penwidth = 3 color = "blue" fontcolor = "blue" label = "armour"]
+	025 -> 312
+	026 -> 283 [penwidth = 3 color = "grey" fontcolor = "grey" label = "tag"]
+	026 -> 136
+	028 -> 167 [penwidth = 3]
+	028 -> 313
+	029 -> 205 [penwidth = 3]
+	029 -> 339
+	030 -> 222
+	030 -> 090
+	031 -> 009
+	031 -> 297
+	032 -> 203
+	032 -> 280
+	033 -> 052 [penwidth = 3]
+	033 -> 261
+	034 -> 099
+	034 -> 135
+	034 -> 210
+	035 -> 119 [penwidth = 3 color = "grey" fontcolor = "grey" label = "hobbits"]
+	035 -> 303
+	036 -> 178 [penwidth = 3]
+	037 -> 095
+	037 -> 142
+	038 -> 311 [penwidth = 3 fontcolor = "grey" label = "rabbit"]
+	038 -> 122
+	038 -> 368
+	039 -> 239 [penwidth = 3]
+	040 -> 202
+	040 -> 315 [penwidth = 3]
+	041 -> 373 [color = "purple" fontcolor = "purple" label = "1-5"]
+	041 -> 074 [penwidth = 3 color = "purple" fontcolor = "purple" label = "6"]
+	042 -> 150
+	043 -> 132 [color = "green" fontcolor = "green" label = "LK"]
+	043 -> 201 [color = "brown"]
+	044 -> 212
+	045 -> 372
+	045 -> 395
+	045 -> 143 [penwidth = 3]
+	046 -> 280
+	046 -> 203
+	047 -> 357
+	048 -> 382 [penwidth = 3]
+	049 -> 152
+	050 -> 234 [penwidth = 3]
+	052 -> 352 [penwidth = 3]
+	052 -> 137
+	053 -> 039 [color = "green" fontcolor = "green" label = "SK"]
+	053 -> 298 [color = "brown"]
+	054 -> 279 [penwidth = 3]
+	055 -> 377
+	056 -> 024 [color = "blue" fontcolor = "blue" label = "camouflage"]
+	056 -> 349 [penwidth = 3]
+	057 -> 235
+	059 -> 222
+	059 -> 090 [penwidth = 3]
+	060 -> 116
+	061 -> 321
+	061 -> 347
+	062 -> 243
+	063 -> 286
+	063 -> 021
+	065 -> 032
+	065 -> 203
+	065 -> 280
+	066 -> 271 [penwidth = 3 color = "blue" fontcolor = "blue" label = "defender"]
+	066 -> 209
+	067 -> 183 [penwidth = 3]
+	067 -> 399
+	068 -> 055 [color = "magenta" fontcolor = "magenta" label = "2CW"]
+	069 -> 022
+	070 -> 134 [penwidth = 3]
+	070 -> 343
+	071 -> 126 [color = "green" fontcolor = "green" label = "LK"]
+	071 -> 378 [color = "brown"]
+	072 -> 245 [penwidth = 3]
+	073 -> 150
+	074 -> 217
+	074 -> 199 [penwidth = 3]
+	075 -> 304
+	076 -> 313
+	077 -> 213 [color = "purple" fontcolor = "purple" label = "3-6"]
+	077 -> 006 [color = "purple" fontcolor = "purple" label = "1-2"]
+	078 -> 269
+	078 -> 222
+	079 -> 019 [penwidth = 3]
+	080 -> 025 [penwidth = 3]
+	080 -> 386
+	081 -> 093 [penwidth = 3 color = "magenta" fontcolor = "magenta" label = "2CW"]
+	082 -> 295
+	082 -> 235
+	083 -> 254 [color = "magenta" fontcolor = "magenta" label = "AR=3"]
+	084 -> 390
+	084 -> 233 [penwidth = 3]
+	085 -> 023
+	086 -> 315
+	087 -> 295 [penwidth = 3]
+	087 -> 235
+	088 -> 193 [penwidth = 3 color = "blue" fontcolor = "blue" label = "crystal"]
+	088 -> 307
+	089 -> 319 [penwidth = 3]
+	089 -> 168
+	090 -> 144 [penwidth = 3]
+	091 -> 335 [color = "green" fontcolor = "green" label = "LK"]
+	091 -> 317 [color = "brown"]
+	092 -> 353
+	093 -> 064
+	093 -> 181 [penwidth = 3]
+	094 -> 227 [color = "purple" fontcolor = "purple" label = "1"]
+	094 -> 246 [color = "purple" fontcolor = "purple" label = "2-4"]
+	094 -> 314 [color = "purple" fontcolor = "purple" label = "5-6"]
+	095 -> 273
+	095 -> 063
+	095 -> 363
+	096 -> 179 [penwidth = 3]
+	096 -> 076
+	097 -> 310 [penwidth = 3]
+	097 -> 284
+	098 -> 147
+	099 -> 247 [color = "purple" fontcolor = "purple" label = "1"]
+	099 -> 293 [color = "purple" fontcolor = "purple" label = "2-3"]
+	099 -> 371 [color = "purple" fontcolor = "purple" label = "4-6"]
+	100 -> 129 [penwidth = 3 color = "blue" fontcolor = "blue" label = "stream"]
+	100 -> 350
+	101 -> 041 [penwidth = 3 color = "blue" fontcolor = "blue" label = "holy water"]
+	101 -> 318
+	102 -> 339 [penwidth = 3]
+	103 -> 196
+	103 -> 327 [penwidth = 3]
+	104 -> 266 [penwidth = 3]
+	104 -> 040
+	105 -> 143
+	107 -> 239
+	108 -> 184 [penwidth = 3 color = "grey" fontcolor = "grey" label = "granite"]
+	108 -> 291
+	109 -> 399
+	111 -> 360 [dir = both]
+	111 -> 175 [dir = both]
+	111 -> 221
+	112 -> 323 [color = "green" fontcolor = "green" label = "3xSK"]
+	112 -> 383 [color = "brown"]
+	113 -> 178
+	115 -> 309
+	116 -> 140
+	116 -> 292
+	118 -> 374 [color = "purple" fontcolor = "purple" label = "1-2"]
+	118 -> 173 [penwidth = 3 color = "purple" fontcolor = "purple" label = "3-6"]
+	119 -> 005 [penwidth = 3 color = "grey" fontcolor = "grey" label = "zombie"]
+	119 -> 291
+	120 -> 008
+	121 -> 300 [penwidth = 3]
+	122 -> 147
+	123 -> 036
+	124 -> 163 [color = "purple" fontcolor = "purple" label = "1"]
+	124 -> 272 [color = "purple" fontcolor = "purple" label = "2"]
+	124 -> 361 [color = "purple" fontcolor = "purple" label = "3-6"]
+	126 -> 250
+	127 -> 258 [penwidth = 3]
+	127 -> 382
+	128 -> 387
+	128 -> 206
+	128 -> 038 [penwidth = 3 fontcolor = "grey" label = "paralysis rod"]
+	129 -> 365 [penwidth = 3]
+	130 -> 385
+	130 -> 297
+	131 -> 029 [penwidth = 3]
+	132 -> 277 [color = "cyan3" fontcolor = "cyan3" label = "-9g"]
+	132 -> 325
+	133 -> 022
+	134 -> 287 [penwidth = 3]
+	135 -> 059 [penwidth = 3 color = "green" fontcolor = "green" label = "LK"]
+	135 -> 160 [color = "brown"]
+	137 -> 039 [penwidth = 3 color = "green" fontcolor = "green" label = "SK"]
+	137 -> 298 [color = "brown"]
+	138 -> 274 [color = "green" fontcolor = "green" label = "LK"]
+	138 -> 359 [color = "brown"]
+	139 -> 290 [penwidth = 3]
+	140 -> 292
+	141 -> 172 [color = "blue" fontcolor = "blue" label = "stones"]
+	141 -> 357
+	142 -> 092
+	142 -> 316
+	143 -> 087 [penwidth = 3]
+	144 -> 398 [penwidth = 3]
+	144 -> 222
+	146 -> 249 [penwidth = 3]
+	146 -> 053
+	147 -> 220
+	148 -> 237 [penwidth = 3]
+	148 -> 068
+	150 -> 113
+	151 -> 197
+	151 -> 281 [penwidth = 3]
+	152 -> 011 [penwidth = 3 color = "grey" fontcolor = "grey" label = "suma"]
+	152 -> 106
+	153 -> 374 [color = "purple" fontcolor = "purple" label = "1"]
+	153 -> 330 [color = "purple" fontcolor = "purple" label = "2-6"]
+	154 -> 226
+	155 -> 046
+	155 -> 280
+	155 -> 203
+	156 -> 191 [penwidth = 3]
+	156 -> 217
+	157 -> 244 [penwidth = 3]
+	157 -> 345
+	158 -> 056
+	159 -> 284
+	160 -> 030
+	160 -> 229
+	161 -> 211
+	161 -> 386
+	162 -> 081 [penwidth = 3]
+	162 -> 381
+	163 -> 180
+	165 -> 289 [penwidth = 3]
+	166 -> 151 [penwidth = 3]
+	167 -> 096 [penwidth = 3]
+	167 -> 313
+	168 -> 337
+	168 -> 302 [penwidth = 3]
+	169 -> 297
+	170 -> 300
+	171 -> 077 [color = "blue" fontcolor = "blue" label = "stream"]
+	171 -> 190
+	172 -> 158 [color = "green" fontcolor = "green" label = "LK"]
+	172 -> 285 [color = "brown"]
+	173 -> 282 [penwidth = 3]
+	175 -> 268 [penwidth = 3]
+	175 -> 221
+	176 -> 030
+	178 -> 230 [penwidth = 3]
+	179 -> 336 [penwidth = 3 color = "blue" fontcolor = "blue" label = "parchment"]
+	179 -> 195
+	180 -> 070 [penwidth = 3]
+	180 -> 369
+	181 -> 396 [penwidth = 3]
+	181 -> 321
+	182 -> 241
+	182 -> 067
+	183 -> 308 [penwidth = 3]
+	183 -> 270
+	184 -> 125 [color = "blue" fontcolor = "blue" label = "talisman"]
+	184 -> 276 [penwidth = 3]
+	185 -> 097 [penwidth = 3]
+	185 -> 159
+	187 -> 067
+	188 -> 204 [color = "green" fontcolor = "green" label = "SK"]
+	188 -> 305 [color = "brown"]
+	189 -> 364 [penwidth = 3]
+	189 -> 223
+	190 -> 155
+	191 -> 101 [penwidth = 3]
+	191 -> 217
+	192 -> 211 [penwidth = 3]
+	193 -> 147
+	193 -> 375 [penwidth = 3]
+	194 -> 252 [penwidth = 3]
+	195 -> 313
+	196 -> 200
+	197 -> 281
+	198 -> 152 [penwidth = 3]
+	199 -> 026 [penwidth = 3]
+	199 -> 248
+	200 -> 148
+	202 -> 086
+	202 -> 315
+	203 -> 365
+	204 -> 366
+	204 -> 040
+	205 -> 299 [penwidth = 3]
+	205 -> 339
+	206 -> 147
+	207 -> 083 [color = "green" fontcolor = "green" label = "LK"]
+	207 -> 219 [color = "brown"]
+	208 -> 369
+	210 -> 043 [color = "purple" fontcolor = "purple" label = "1-2"]
+	210 -> 114 [color = "purple" fontcolor = "purple" label = "3-6"]
+	211 -> 367
+	211 -> 386 [penwidth = 3]
+	212 -> 162
+	213 -> 280
+	213 -> 203
+	214 -> 338
+	214 -> 256 [penwidth = 3]
+	215 -> 139 [color = "blue" fontcolor = "blue" label = "skull ring"]
+	215 -> 333
+	216 -> 252
+	217 -> 199
+	217 -> 174
+	219 -> 254 [color = "magenta" fontcolor = "magenta" label = "AR=3"]
+	220 -> 054 [color = "green" fontcolor = "green" label = "LK"]
+	220 -> 138 [color = "brown"]
+	221 -> 168 [penwidth = 3]
+	222 -> 296 [color = "purple" fontcolor = "purple" label = "1-5"]
+	222 -> 166 [penwidth = 3 color = "purple" fontcolor = "purple" label = "6"]
+	225 -> 015
+	226 -> 294 [penwidth = 3]
+	228 -> 251 [color = "purple" fontcolor = "purple" label = "1-4"]
+	228 -> 340 [color = "purple" fontcolor = "purple" label = "5-6"]
+	229 -> 176 [color = "purple" fontcolor = "purple" label = "north"]
+	229 -> 017 [color = "purple" fontcolor = "purple" label = "south"]
+	230 -> 358 [penwidth = 3]
+	230 -> 029
+	231 -> 167
+	231 -> 313
+	232 -> 089 [penwidth = 3]
+	233 -> 400 [penwidth = 3 color = "green" fontcolor = "green" label = "ST&ge;6"]
+	233 -> 058 [color = "brown"]
+	234 -> 092
+	234 -> 316 [penwidth = 3]
+	235 -> 284 [penwidth = 3]
+	237 -> 377 [penwidth = 3]
+	237 -> 068
+	238 -> 022
+	239 -> 356 [penwidth = 3]
+	240 -> 370
+	240 -> 344
+	241 -> 080
+	241 -> 367 [penwidth = 3]
+	241 -> 386
+	243 -> 322
+	243 -> 216
+	244 -> 139 [penwidth = 3 color = "blue" fontcolor = "blue" label = "skull ring"]
+	244 -> 333
+	245 -> 056 [penwidth = 3]
+	245 -> 112
+	010 -> 246 [dir = back]
+	265 -> 246 [dir = back]
+	246 -> 369
+	249 -> 346 [penwidth = 3 color = "purple" fontcolor = "purple" label = "1-2"]
+	249 -> 388 [color = "purple" fontcolor = "purple" label = "3-4"]
+	249 -> 013 [color = "purple" fontcolor = "purple" label = "5-6"]
+	250 -> 092
+	250 -> 316
+	252 -> 123 [color = "grey" fontcolor = "grey" label = "moon ring"]
+	252 -> 275
+	252 -> 036 [penwidth = 3 color = "magenta" fontcolor = "magenta" label = "no damage"]
+	253 -> 226 [penwidth = 3]
+	254 -> 037
+	255 -> 332
+	255 -> 053
+	256 -> 338 [penwidth = 3]
+	257 -> 231
+	258 -> 048 [penwidth = 3]
+	258 -> 382
+	260 -> 089
+	261 -> 120 [color = "purple" fontcolor = "purple" label = "1-3"]
+	261 -> 062 [color = "purple" fontcolor = "purple" label = "4-6"]
+	262 -> 347
+	262 -> 061
+	264 -> 156 [penwidth = 3]
+	264 -> 199
+	265 -> 094
+	265 -> 369 [penwidth = 3]
+	266 -> 040 [penwidth = 3]
+	268 -> 360
+	268 -> 111
+	268 -> 221 [penwidth = 3]
+	269 -> 117
+	269 -> 222
+	271 -> 014 [color = "magenta" fontcolor = "magenta" label = "2CL"]
+	271 -> 084 [penwidth = 3]
+	272 -> 180
+	273 -> 215
+	273 -> 063
+	273 -> 363
+	274 -> 238
+	274 -> 002
+	275 -> 036 [color = "blue" fontcolor = "blue" label = "crystal"]
+	275 -> 091 [color = "blue" fontcolor = "blue" label = "candle"]
+	275 -> 317
+	276 -> 326 [penwidth = 3 color = "blue" fontcolor = "blue" label = "gold ring"]
+	276 -> 164
+	277 -> 222
+	277 -> 090
+	278 -> 341
+	278 -> 157 [penwidth = 3]
+	279 -> 253 [penwidth = 3 color = "green" fontcolor = "green" label = "SK"]
+	279 -> 331 [color = "brown"]
+	280 -> 018
+	280 -> 073
+	281 -> 392 [penwidth = 3 color = "green" fontcolor = "green" label = "LK"]
+	281 -> 320 [color = "brown"]
+	282 -> 182
+	282 -> 241 [penwidth = 3]
+	282 -> 067
+	283 -> 189 [penwidth = 3 color = "cyan3" fontcolor = "cyan3" label = "key"]
+	283 -> 334
+	284 -> 033 [penwidth = 3]
+	284 -> 261
+	285 -> 357
+	286 -> 021
+	286 -> 071
+	287 -> 010
+	287 -> 094
+	287 -> 265 [penwidth = 3]
+	288 -> 240
+	288 -> 177
+	289 -> 075
+	289 -> 304 [penwidth = 3]
+	290 -> 389 [penwidth = 3]
+	290 -> 234
+	291 -> 223
+	292 -> 203
+	292 -> 280
+	293 -> 225 [color = "green" fontcolor = "green" label = "LK"]
+	293 -> 004 [color = "brown"]
+	294 -> 198 [penwidth = 3]
+	294 -> 049
+	295 -> 380
+	295 -> 328 [penwidth = 3]
+	295 -> 235
+	296 -> 151 [color = "magenta" fontcolor = "magenta" label = "win AR"]
+	297 -> 115
+	297 -> 264 [penwidth = 3]
+	298 -> 107 [color = "green" fontcolor = "green" label = "LK"]
+	298 -> 218 [color = "brown"]
+	299 -> 393 [color = "purple" fontcolor = "purple" label = "1"]
+	299 -> 362 [penwidth = 3 color = "magenta" fontcolor = "magenta" label = "win"]
+	300 -> 050 [penwidth = 3 color = "grey" fontcolor = "grey" label = "2 silver rod"]
+	300 -> 234
+	301 -> 012 [color = "green" fontcolor = "green" label = "LK"]
+	301 -> 285 [color = "brown"]
+	302 -> 194 [penwidth = 3]
+	303 -> 223
+	304 -> 127 [penwidth = 3]
+	304 -> 382
+	305 -> 366
+	305 -> 040
+	306 -> 324 [penwidth = 3]
+	308 -> 103 [penwidth = 3]
+	308 -> 354
+	309 -> 051
+	309 -> 264
+	310 -> 045 [penwidth = 3]
+	310 -> 235
+	311 -> 054 [penwidth = 3 color = "green" fontcolor = "green" label = "LK"]
+	311 -> 138 [color = "brown"]
+	312 -> 348 [color = "green" fontcolor = "green" label = "LK"]
+	312 -> 161 [color = "brown"]
+	313 -> 007
+	313 -> 162 [penwidth = 3]
+	314 -> 010
+	314 -> 265
+	314 -> 369
+	315 -> 072 [penwidth = 3 color = "green" fontcolor = "green" label = "3xSK"]
+	315 -> 379 [color = "brown"]
+	316 -> 353 [penwidth = 3]
+	318 -> 074
+	319 -> 360 [penwidth = 3]
+	319 -> 111
+	319 -> 175
+	319 -> 221
+	320 -> 079
+	322 -> 216
+	323 -> 056
+	324 -> 376 [penwidth = 3]
+	324 -> 391
+	326 -> 351 [penwidth = 3 color = "blue" fontcolor = "blue" label = "smoke"]
+	326 -> 259
+	327 -> 148 [penwidth = 3]
+	328 -> 235 [penwidth = 3]
+	329 -> 110 [color = "purple" fontcolor = "purple" label = "1-4"]
+	329 -> 355 [color = "purple" fontcolor = "purple" label = "5-6"]
+	330 -> 183
+	330 -> 399
+	331 -> 154 [color = "green" fontcolor = "green" label = "SK"]
+	331 -> 267 [color = "brown"]
+	332 -> 384 [color = "green" fontcolor = "green" label = "LK"]
+	332 -> 085 [color = "brown"]
+	333 -> 234
+	335 -> 036
+	336 -> 313 [penwidth = 3]
+	337 -> 194
+	338 -> 078
+	338 -> 222 [penwidth = 3]
+	339 -> 165 [penwidth = 3]
+	340 -> 031
+	341 -> 207
+	341 -> 037
+	342 -> 279
+	343 -> 208 [color = "cyan3" fontcolor = "cyan3" label = "-knife"]
+	343 -> 134
+	343 -> 369
+	344 -> 177
+	345 -> 037
+	346 -> 185 [penwidth = 3]
+	347 -> 177
+	347 -> 329
+	348 -> 211
+	349 -> 088 [penwidth = 3 color = "green" fontcolor = "green" label = "SK"]
+	349 -> 236 [color = "brown"]
+	350 -> 065
+	351 -> 066 [penwidth = 3 color = "grey" fontcolor = "grey" label = "hamakei"]
+	351 -> 242
+	352 -> 137 [penwidth = 3]
+	353 -> 034
+	353 -> 135 [penwidth = 3]
+	353 -> 210
+	354 -> 109 [color = "green" fontcolor = "green" label = "LK"]
+	354 -> 263 [color = "brown"]
+	355 -> 288
+	356 -> 124
+	356 -> 180 [penwidth = 3]
+	358 -> 131 [penwidth = 3]
+	358 -> 029 [color = "blue" fontcolor = "blue" label = "no shield"]
+	359 -> 133 [color = "purple" fontcolor = "purple" label = "1-3"]
+	359 -> 069 [color = "purple" fontcolor = "purple" label = "4-6"]
+	360 -> 175 [penwidth = 3 dir = both]
+	360 -> 221
+	361 -> 180
+	362 -> 102 [penwidth = 3]
+	362 -> 339
+	363 -> 142
+	364 -> 035 [penwidth = 3 color = "grey" fontcolor = "grey" label = "warhammer"]
+	364 -> 291
+	365 -> 232 [penwidth = 3 color = "green" fontcolor = "green" label = "SK"]
+	365 -> 397 [color = "brown"]
+	366 -> 104 [penwidth = 3]
+	366 -> 040
+	367 -> 080 [penwidth = 3 dir = both]
+	367 -> 386
+	368 -> 147
+	369 -> 306 [penwidth = 3]
+	369 -> 324
+	370 -> 145
+	370 -> 177
+	371 -> 015
+	372 -> 105 [color = "green" fontcolor = "green" label = "SK&le;9"]
+	372 -> 020 [color = "brown"]
+	373 -> 074
+	375 -> 394 [color = "blue" fontcolor = "blue" label = "mirror"]
+	375 -> 128 [penwidth = 3 color = "blue" fontcolor = "blue" label = "2 silver rod"]
+	375 -> 098 [color = "blue" fontcolor = "blue" label = "rat skull"]
+	375 -> 147
+	376 -> 391 [penwidth = 3]
+	377 -> 278 [penwidth = 3]
+	378 -> 250
+	379 -> 301 [color = "blue" fontcolor = "blue" label = "stones"]
+	379 -> 357
+	380 -> 235
+	381 -> 186
+	381 -> 262
+	382 -> 187 [color = "cyan3" fontcolor = "cyan3" label = "-5g"]
+	382 -> 118 [penwidth = 3]
+	382 -> 153
+	383 -> 141
+	383 -> 047 [color = "blue" fontcolor = "blue" label = "touched"]
+	384 -> 023
+	386 -> 067 [penwidth = 3]
+	387 -> 147
+	388 -> 185
+	389 -> 121 [penwidth = 3 color = "green" fontcolor = "green" label = "LK"]
+	389 -> 170 [color = "brown"]
+	390 -> 149
+	390 -> 233
+	391 -> 060
+	391 -> 016 [penwidth = 3]
+	392 -> 079 [penwidth = 3]
+	393 -> 362 [color = "magenta" fontcolor = "magenta" label = "win"]
+	394 -> 147
+	395 -> 057 [color = "green" fontcolor = "green" label = "LK"]
+	395 -> 003 [color = "brown"]
+	396 -> 228
+	396 -> 297 [penwidth = 3]
+	397 -> 260 [color = "blue" fontcolor = "blue" label = "knife"]
+	397 -> 027
+	398 -> 214 [penwidth = 3]
+	398 -> 338
+
+
+	
+	001 [fontsize=25]
+	002 [fontsize=25]
+	003 [fontsize=25]
+	004 [fontsize=25]
+	005 [fontsize=25]
+	006 [fontsize=25]
+	007 [fontsize=25]
+	008 [fontsize=25]
+	009 [fontsize=25]
+	010 [fontsize=25]
+	011 [fontsize=25]
+	012 [fontsize=25]
+	013 [fontsize=25]
+	014 [fontsize=25]
+	015 [fontsize=25]
+	016 [fontsize=25]
+	017 [fontsize=25]
+	018 [fontsize=25]
+	019 [fontsize=25]
+	020 [fontsize=25]
+	021 [fontsize=25]
+	022 [fontsize=25]
+	023 [fontsize=25]
+	024 [fontsize=25]
+	025 [fontsize=25]
+	026 [fontsize=25]
+	027 [fontsize=25]
+	028 [fontsize=25]
+	029 [fontsize=25]
+	030 [fontsize=25]
+	031 [fontsize=25]
+	032 [fontsize=25]
+	033 [fontsize=25]
+	034 [fontsize=25]
+	035 [fontsize=25]
+	036 [fontsize=25]
+	037 [fontsize=25]
+	038 [fontsize=25]
+	039 [fontsize=25]
+	040 [fontsize=25]
+	041 [fontsize=25]
+	042 [fontsize=25]
+	043 [fontsize=25]
+	044 [fontsize=25]
+	045 [fontsize=25]
+	046 [fontsize=25]
+	047 [fontsize=25]
+	048 [fontsize=25]
+	049 [fontsize=25]
+	050 [fontsize=25]
+	051 [fontsize=25]
+	052 [fontsize=25]
+	053 [fontsize=25]
+	054 [fontsize=25]
+	055 [fontsize=25]
+	056 [fontsize=25]
+	057 [fontsize=25]
+	058 [fontsize=25]
+	059 [fontsize=25]
+	060 [fontsize=25]
+	061 [fontsize=25]
+	062 [fontsize=25]
+	063 [fontsize=25]
+	064 [fontsize=25]
+	065 [fontsize=25]
+	066 [fontsize=25]
+	067 [fontsize=25]
+	068 [fontsize=25]
+	069 [fontsize=25]
+	070 [fontsize=25]
+	071 [fontsize=25]
+	072 [fontsize=25]
+	073 [fontsize=25]
+	074 [fontsize=25]
+	075 [fontsize=25]
+	076 [fontsize=25]
+	077 [fontsize=25]
+	078 [fontsize=25]
+	079 [fontsize=25]
+	080 [fontsize=25]
+	081 [fontsize=25]
+	082 [fontsize=25]
+	083 [fontsize=25]
+	084 [fontsize=25]
+	085 [fontsize=25]
+	086 [fontsize=25]
+	087 [fontsize=25]
+	088 [fontsize=25]
+	089 [fontsize=25]
+	090 [fontsize=25]
+	091 [fontsize=25]
+	092 [fontsize=25]
+	093 [fontsize=25]
+	094 [fontsize=25]
+	095 [fontsize=25]
+	096 [fontsize=25]
+	097 [fontsize=25]
+	098 [fontsize=25]
+	099 [fontsize=25]
+	100 [fontsize=25]
+	101 [fontsize=25]
+	102 [fontsize=25]
+	103 [fontsize=25]
+	104 [fontsize=25]
+	105 [fontsize=25]
+	106 [fontsize=25]
+	107 [fontsize=25]
+	108 [fontsize=25]
+	109 [fontsize=25]
+	110 [fontsize=25]
+	111 [fontsize=25]
+	112 [fontsize=25]
+	113 [fontsize=25]
+	114 [fontsize=25]
+	115 [fontsize=25]
+	116 [fontsize=25]
+	117 [fontsize=25]
+	118 [fontsize=25]
+	119 [fontsize=25]
+	120 [fontsize=25]
+	121 [fontsize=25]
+	122 [fontsize=25]
+	123 [fontsize=25]
+	124 [fontsize=25]
+	125 [fontsize=25]
+	126 [fontsize=25]
+	127 [fontsize=25]
+	128 [fontsize=25]
+	129 [fontsize=25]
+	130 [fontsize=25]
+	131 [fontsize=25]
+	132 [fontsize=25]
+	133 [fontsize=25]
+	134 [fontsize=25]
+	135 [fontsize=25]
+	136 [fontsize=25]
+	137 [fontsize=25]
+	138 [fontsize=25]
+	139 [fontsize=25]
+	140 [fontsize=25]
+	141 [fontsize=25]
+	142 [fontsize=25]
+	143 [fontsize=25]
+	144 [fontsize=25]
+	145 [fontsize=25]
+	146 [fontsize=25]
+	147 [fontsize=25]
+	148 [fontsize=25]
+	149 [fontsize=25]
+	150 [fontsize=25]
+	151 [fontsize=25]
+	152 [fontsize=25]
+	153 [fontsize=25]
+	154 [fontsize=25]
+	155 [fontsize=25]
+	156 [fontsize=25]
+	157 [fontsize=25]
+	158 [fontsize=25]
+	159 [fontsize=25]
+	160 [fontsize=25]
+	161 [fontsize=25]
+	162 [fontsize=25]
+	163 [fontsize=25]
+	164 [fontsize=25]
+	165 [fontsize=25]
+	166 [fontsize=25]
+	167 [fontsize=25]
+	168 [fontsize=25]
+	169 [fontsize=25]
+	170 [fontsize=25]
+	171 [fontsize=25]
+	172 [fontsize=25]
+	173 [fontsize=25]
+	174 [fontsize=25]
+	175 [fontsize=25]
+	176 [fontsize=25]
+	177 [fontsize=25]
+	178 [fontsize=25]
+	179 [fontsize=25]
+	180 [fontsize=25]
+	181 [fontsize=25]
+	182 [fontsize=25]
+	183 [fontsize=25]
+	184 [fontsize=25]
+	185 [fontsize=25]
+	186 [fontsize=25]
+	187 [fontsize=25]
+	188 [fontsize=25]
+	189 [fontsize=25]
+	190 [fontsize=25]
+	191 [fontsize=25]
+	192 [fontsize=25]
+	193 [fontsize=25]
+	194 [fontsize=25]
+	195 [fontsize=25]
+	196 [fontsize=25]
+	197 [fontsize=25]
+	198 [fontsize=25]
+	199 [fontsize=25]
+	200 [fontsize=25]
+	201 [fontsize=25]
+	202 [fontsize=25]
+	203 [fontsize=25]
+	204 [fontsize=25]
+	205 [fontsize=25]
+	206 [fontsize=25]
+	207 [fontsize=25]
+	208 [fontsize=25]
+	209 [fontsize=25]
+	210 [fontsize=25]
+	211 [fontsize=25]
+	212 [fontsize=25]
+	213 [fontsize=25]
+	214 [fontsize=25]
+	215 [fontsize=25]
+	216 [fontsize=25]
+	217 [fontsize=25]
+	218 [fontsize=25]
+	219 [fontsize=25]
+	220 [fontsize=25]
+	221 [fontsize=25]
+	222 [fontsize=25]
+	223 [fontsize=25]
+	224 [fontsize=25]
+	225 [fontsize=25]
+	226 [fontsize=25]
+	227 [fontsize=25]
+	228 [fontsize=25]
+	229 [fontsize=25]
+	230 [fontsize=25]
+	231 [fontsize=25]
+	232 [fontsize=25]
+	233 [fontsize=25]
+	234 [fontsize=25]
+	235 [fontsize=25]
+	236 [fontsize=25]
+	237 [fontsize=25]
+	238 [fontsize=25]
+	239 [fontsize=25]
+	240 [fontsize=25]
+	241 [fontsize=25]
+	242 [fontsize=25]
+	243 [fontsize=25]
+	244 [fontsize=25]
+	245 [fontsize=25]
+	246 [fontsize=25]
+	247 [fontsize=25]
+	248 [fontsize=25]
+	249 [fontsize=25]
+	250 [fontsize=25]
+	251 [fontsize=25]
+	252 [fontsize=25]
+	253 [fontsize=25]
+	254 [fontsize=25]
+	255 [fontsize=25]
+	256 [fontsize=25]
+	257 [fontsize=25]
+	258 [fontsize=25]
+	259 [fontsize=25]
+	260 [fontsize=25]
+	261 [fontsize=25]
+	262 [fontsize=25]
+	263 [fontsize=25]
+	264 [fontsize=25]
+	265 [fontsize=25]
+	266 [fontsize=25]
+	267 [fontsize=25]
+	268 [fontsize=25]
+	269 [fontsize=25]
+	270 [fontsize=25]
+	271 [fontsize=25]
+	272 [fontsize=25]
+	273 [fontsize=25]
+	274 [fontsize=25]
+	275 [fontsize=25]
+	276 [fontsize=25]
+	277 [fontsize=25]
+	278 [fontsize=25]
+	279 [fontsize=25]
+	280 [fontsize=25]
+	281 [fontsize=25]
+	282 [fontsize=25]
+	283 [fontsize=25]
+	284 [fontsize=25]
+	285 [fontsize=25]
+	286 [fontsize=25]
+	287 [fontsize=25]
+	288 [fontsize=25]
+	289 [fontsize=25]
+	290 [fontsize=25]
+	291 [fontsize=25]
+	292 [fontsize=25]
+	293 [fontsize=25]
+	294 [fontsize=25]
+	295 [fontsize=25]
+	296 [fontsize=25]
+	297 [fontsize=25]
+	298 [fontsize=25]
+	299 [fontsize=25]
+	300 [fontsize=25]
+	301 [fontsize=25]
+	302 [fontsize=25]
+	303 [fontsize=25]
+	304 [fontsize=25]
+	305 [fontsize=25]
+	306 [fontsize=25]
+	307 [fontsize=25]
+	308 [fontsize=25]
+	309 [fontsize=25]
+	310 [fontsize=25]
+	311 [fontsize=25]
+	312 [fontsize=25]
+	313 [fontsize=25]
+	314 [fontsize=25]
+	315 [fontsize=25]
+	316 [fontsize=25]
+	317 [fontsize=25]
+	318 [fontsize=25]
+	319 [fontsize=25]
+	320 [fontsize=25]
+	321 [fontsize=25]
+	322 [fontsize=25]
+	323 [fontsize=25]
+	324 [fontsize=25]
+	325 [fontsize=25]
+	326 [fontsize=25]
+	327 [fontsize=25]
+	328 [fontsize=25]
+	329 [fontsize=25]
+	330 [fontsize=25]
+	331 [fontsize=25]
+	332 [fontsize=25]
+	333 [fontsize=25]
+	334 [fontsize=25]
+	335 [fontsize=25]
+	336 [fontsize=25]
+	337 [fontsize=25]
+	338 [fontsize=25]
+	339 [fontsize=25]
+	340 [fontsize=25]
+	341 [fontsize=25]
+	342 [fontsize=25]
+	343 [fontsize=25]
+	344 [fontsize=25]
+	345 [fontsize=25]
+	346 [fontsize=25]
+	347 [fontsize=25]
+	348 [fontsize=25]
+	349 [fontsize=25]
+	350 [fontsize=25]
+	351 [fontsize=25]
+	352 [fontsize=25]
+	353 [fontsize=25]
+	354 [fontsize=25]
+	355 [fontsize=25]
+	356 [fontsize=25]
+	357 [fontsize=25]
+	358 [fontsize=25]
+	359 [fontsize=25]
+	360 [fontsize=25]
+	361 [fontsize=25]
+	362 [fontsize=25]
+	363 [fontsize=25]
+	364 [fontsize=25]
+	365 [fontsize=25]
+	366 [fontsize=25]
+	367 [fontsize=25]
+	368 [fontsize=25]
+	369 [fontsize=25]
+	370 [fontsize=25]
+	371 [fontsize=25]
+	372 [fontsize=25]
+	373 [fontsize=25]
+	374 [fontsize=25]
+	375 [fontsize=25]
+	376 [fontsize=25]
+	377 [fontsize=25]
+	378 [fontsize=25]
+	379 [fontsize=25]
+	380 [fontsize=25]
+	381 [fontsize=25]
+	382 [fontsize=25]
+	383 [fontsize=25]
+	384 [fontsize=25]
+	385 [fontsize=25]
+	386 [fontsize=25]
+	387 [fontsize=25]
+	388 [fontsize=25]
+	389 [fontsize=25]
+	390 [fontsize=25]
+	391 [fontsize=25]
+	392 [fontsize=25]
+	393 [fontsize=25]
+	394 [fontsize=25]
+	395 [fontsize=25]
+	396 [fontsize=25]
+	397 [fontsize=25]
+	398 [fontsize=25]
+	399 [fontsize=25]
+	400 [fontsize=25]
+}
