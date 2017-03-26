@@ -80,6 +80,9 @@
     <CustomBuild Include="Tin Man Games\old\Zombocalypse Now.dot">
       <Filter>backup</Filter>
     </CustomBuild>
+    <CustomBuild Include="Fighting Fantasy\Knights of Doom.dot">
+      <Filter>Fighting Fantasy</Filter>
+    </CustomBuild>
   </ItemGroup>
   <ItemGroup>
     <Text Include="vertex.txt">

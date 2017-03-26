@@ -110,7 +110,7 @@
       <FileType>Document</FileType>
     </CustomBuild>
     <CustomBuild Include="Fighting Fantasy\old\Appointment with F.E.A.R. incomplete.dot">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
       <FileType>Document</FileType>
     </CustomBuild>
@@ -177,6 +177,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include=".gitignore" />
+    <CustomBuild Include="Fighting Fantasy\Knights of Doom.dot">
+      <FileType>Document</FileType>
+    </CustomBuild>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
