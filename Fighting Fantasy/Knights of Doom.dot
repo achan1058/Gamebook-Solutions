@@ -107,8 +107,18 @@ digraph "Fighting Fantasy: Knights of Doom" {
 		monboo5
 		mondam5
 		mon5
-		286
+		034
+		070
+		072
+		122
+		185
+		214
 		242
+		266
+		281
+		286
+		604
+		315
 		400 [fontcolor = "black" shape = "octagon"]
 	}
 
@@ -131,11 +141,173 @@ digraph "Fighting Fantasy: Knights of Doom" {
 		mondam4 [style = "filled" fillcolor = "pink"]
 		mon3
 		mon4
+
+
+		147
+		325
+		281
+		040
+
+
+		125
+		385
+		087
+		250
+		266
+		008
+		291
+
+
+
+
+		241
+		334
+		367
+		248
+		198
+		227
+
+
+
+
+		041
+		287
+
+
+
+		185
+		219
+		283
+		181
+		085 [style = "filled" fillcolor = "paleturquoise1"]
+		019
+		310
+		115
+		024 [style = "filled" fillcolor = "greenyellow"]
+		150
+		073
+		126
+
+
+		027
+
+
+
+		332
+		148
+
+
+
+
+
+		031
+		381
+		094
+
+
+
+
+		289
+		243
+
+
+
+
+		391
+		042
+		270
+		116
+		199 [style = "filled" fillcolor = "greenyellow"]
+
+
+
+
+		374 [style = "filled" fillcolor = "greenyellow"]
+		308
+		378
+		072
+		037
+		136 [style = "filled" fillcolor = "greenyellow"]
+		315
+		278
+		324
+		076
+		368 [style = "filled" fillcolor = "pink"]
+		280
+		033 [style = "filled" fillcolor = "greenyellow"]
+		245
+		330
+
+
+		222
+		058
+		286
+		344
+
+
+		023
+		010
+		173
+		306 [style = "filled" fillcolor = "greenyellow"]
+		184
+		149
+		236
+		035
+		302
+		322
+		340
+		326
+		326
+		151
+		247
+		342 [shape = "rect" fontcolor = "blue"]
+		110
+		242
+		296
+		351
+		142
+		167 [style = "filled" fillcolor = "pink"]
+		294 [style = "filled" fillcolor = "pink"]
+		329
+		047
+		240
+		198
+		335
+		313
+		006
+		070
+		212
+		372
+		100
+		054
+		122
+		014
+		029 [style = "filled" fillcolor = "pink"]
+		290
+		129
+		196
+		229
+		138
+		218
+
+
+
+		162
+		251
+		360
+		127
+		176
+		120
+		333
+		396
+		011
+		400
 	}
 	
 	subgraph Optional {
 		node [style = "filled" color = "paleturquoise1" fillcolor = "paleturquoise1" fontcolor = "blue" shape = "rect"]
 		opt
+		085
 	}
 
 	subgraph Combat {
@@ -423,7 +595,7 @@ digraph "Fighting Fantasy: Knights of Doom" {
 		
 		subgraph cluster_REPTILIAN {
 			label = "Reptilian\n 10/15"
-			294 [style = "filled" color = "pink" label = "\N\n -2ST?"]
+			294 [label = "\N\n -2ST?"]
 		}
 		
 		subgraph cluster_IRON_EATER {
@@ -433,12 +605,12 @@ digraph "Fighting Fantasy: Knights of Doom" {
 		
 		subgraph cluster_POLTERGEIST {
 			label = "Poltergeist\n 9/-"
-			198
+			240
 		}
 		
 		subgraph cluster_MORGWYN {
 			label = "Morgwyn*\n 9/9"
-			029 [style = "filled" color = "pink" label = "\N\n -1SK?\n -1ESK?\n -2EST?"]
+			029 [label = "\N\n -1SK?\n -1ESK?\n -2EST?"]
 		}
 		
 		subgraph cluster_MURGRIM {
@@ -569,6 +741,7 @@ digraph "Fighting Fantasy: Knights of Doom" {
 		033 [shape = "rect" fontcolor = "blue" label = "\N\n flame shield\n +1DAY\n +2ST"]
 		041 [color = "greenyellow:pink" label = "\N\n +1LK\n -4ST"]
 		081 [label = "\N\n +all SK\n +all ST"]
+		085 [shape = "rect" fontcolor = "blue" label = "\N\n chainmail\n +4ST"]
 		101 [shape = "rect" fontcolor = "blue" label = "\N\n Ecrof\n 5 meals\n 20 gold\n sword?\n +1LK\n +1HR\n +5ST\n +5FR"]
 		122 [shape = "rect" fontcolor = "blue" label = "\N\n Rotiart\n +1LK"]
 		125 [label = "\N\n +1DAY\n +4ST"]
@@ -660,7 +833,7 @@ digraph "Fighting Fantasy: Knights of Doom" {
 		key2 [label = "\N\n text"]
 		key3 [label = "\N\n text"]
 		009 [label = "\N\n lance"]
-		034 [label = "\N\n ballad, part 1: 7\n refund gold"]
+		034 [label = "\N\n ballad, part 2: 7\n refund gold"]
 		046 [label = "\N\n talisman"]
 		051 [label = "\N\n Enorc\n +1DAY"]
 		052 [label = "\N\n glass prism"]
@@ -1137,7 +1310,7 @@ digraph "Fighting Fantasy: Knights of Doom" {
 	243 -> 391
 	243 -> 109
 	244 -> 040
-	245 -> 330 [color = "green" fontcolor = "green" label = "HR\ge;11"]
+	245 -> 330 [color = "green" fontcolor = "green" label = "HR&ge;11"]
 	245 -> 257 [color = "brown"]
 	246 -> 332
 	247 -> 342
