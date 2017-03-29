@@ -83,6 +83,24 @@
     <CustomBuild Include="Fighting Fantasy\Knights of Doom.dot">
       <Filter>Fighting Fantasy</Filter>
     </CustomBuild>
+    <CustomBuild Include="..\Old\Fighting Fantasy\Blood of the Zombie.dot">
+      <Filter>backup</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\Old\Fighting Fantasy\backup\FF12.dot">
+      <Filter>backup</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\Old\Fighting Fantasy\backup\ff64.dot">
+      <Filter>backup</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\Old\Fighting Fantasy\House of Hell.dot">
+      <Filter>backup</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\Old\Fighting Fantasy\Howl of the Werewolf.dot">
+      <Filter>backup</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\Old\Fighting Fantasy\Stormslayer.dot">
+      <Filter>backup</Filter>
+    </CustomBuild>
   </ItemGroup>
   <ItemGroup>
     <Text Include="vertex.txt">
