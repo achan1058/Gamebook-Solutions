@@ -135,7 +135,7 @@ digraph "Fighting Fantasy: Title" {
 
 	subgraph Damage {
 		node [style = "filled" color = "pink"]
-		dmg
+		ddg
 		dam1 [label = "\N\n text"]
 		dam2 [shape = "rect" fontcolor = "blue" label = "\N\n text"]
 		dam3 [label = "\N\n text"]
