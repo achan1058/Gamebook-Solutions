@@ -107,7 +107,9 @@ digraph "Fighting Fantasy: Knights of Doom" {
 		monboo5
 		mondam5
 		mon5
-		ending [fontcolor = "black" shape = "octagon"]
+		286
+		242
+		400 [fontcolor = "black" shape = "octagon"]
 	}
 
 	subgraph Required2 {
@@ -1087,9 +1089,9 @@ digraph "Fighting Fantasy: Knights of Doom" {
 	215 -> 031
 	216 -> 291
 	217 -> 332
-	218 -> 118 [color = "blue" fontcolor = "blue" label = "crystal orb"]
-	218 -> 262 [color = "blue" fontcolor = "blue" label = "aelfgar"]
-	218 -> 299 [color = "blue" fontcolor = "blue" label = "crossbow"]
+	218 -> 118 [color = "cyan3" fontcolor = "cyan3" label = "crystal orb"]
+	218 -> 262 [color = "cyan3" fontcolor = "cyan3" label = "aelfgar"]
+	218 -> 299 [color = "cyan3" fontcolor = "cyan3" label = "crossbow"]
 	218 -> 079 [color = "orange" fontcolor = "orange" label = "holy"]
 	218 -> 020
 	219 -> 283
