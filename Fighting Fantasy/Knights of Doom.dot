@@ -75,26 +75,6 @@ digraph "Fighting Fantasy: Knights of Doom" {
 		ziridian charm pass 2 luck tests\l \
 		healing draught restores IST/2 stamina\l \
 		revelation equals commune\l \
-		none\l \
-		none\l \
-		none\l \
-		Market:\l \
-		1g: rope\l \
-		1g: lantern\l \
-		3g: 6 bolts\l \
-		1g: per meal\l \
-		5g: breastplate\l \
-		2g: mirror\l \
-		4g: salve\l \
-		6g: warhammer\l \
-		7g: holy oil\l \
-		3g: spear\l \
-		4g: ziridian charm\l \
-		Alchemist:\l \
-		4g: witherwell\l \
-		3g: 2 antitoxin\l \
-		3g: healing draught\l \
-		6g: revelation\l \
 		"
 		shape = "box"
 		margin = 0.1]
@@ -160,11 +140,11 @@ digraph "Fighting Fantasy: Knights of Doom" {
 
 
 
-		241
+		241 [style = "filled" fillcolor = "greenyellow"]
 		334
 		367
-		248
-		198
+		248 [shape = "rect" fontcolor = "purple"]
+		193 [shape = "rect" fontcolor = "purple"]
 		227
 
 
@@ -883,8 +863,25 @@ digraph "Fighting Fantasy: Knights of Doom" {
 	subgraph Shop {
 		node [fontcolor = "purple" shape = "rect"]
 		shp
-		193 [label = "\N\n Alchemist"]
-		248 [label = "\N\n Market"]
+		193 [label = "\N\n Alchemist\n \
+		4g: witherwell\l \
+		3g: 2 antitoxin\l \
+		3g: healing draught\l \
+		6g: revelation\l \
+		"]
+		248 [label = "\N\n Market\n \
+		1g: rope\l \
+		1g: lantern\l \
+		3g: 6 bolts\l \
+		1g: per meal\l \
+		5g: breastplate\l \
+		2g: mirror\l \
+		4g: salve\l \
+		6g: warhammer\l \
+		7g: holy oil\l \
+		3g: spear\l \
+		4g: ziridian charm\l \
+		"]
 	}
 
 	mon1 -> mon2 -> mon3 -> mon4 -> mon5 [penwidth = 3]
@@ -976,7 +973,7 @@ digraph "Fighting Fantasy: Knights of Doom" {
 	036 -> 164 [color = "magenta" fontcolor = "magenta" label = "win"]
 	037 -> 136
 	038 -> 293 [color = "magenta" fontcolor = "magenta" label = "2 kills"]
-	040 -> 258 [color = "cyan3" fontcolor = "cyan3" label = "-3g"]
+	040 -> 258 [color = "cyan3" fontcolor = "cyan3" label = "-3 gold"]
 	040 -> 125
 	041 -> 157 [color = "purple" fontcolor = "purple" label = "1-4"]
 	041 -> 287 [color = "purple" fontcolor = "purple" label = "5-6"]
@@ -1533,7 +1530,7 @@ digraph "Fighting Fantasy: Knights of Doom" {
 	365 -> 352
 	365 -> 017
 	366 -> 222
-	367 -> 123 [color = "cyan3" fontcolor = "cyan3" label = "-5g"]
+	367 -> 123 [color = "cyan3" fontcolor = "cyan3" label = "-5 gold"]
 	367 -> 248
 	368 -> 092 [color = "brown"]
 	368 -> 280 [color = "green" fontcolor = "green" label = "PT"]

@@ -101,6 +101,9 @@
     <CustomBuild Include="..\Old\Fighting Fantasy\Stormslayer.dot">
       <Filter>backup</Filter>
     </CustomBuild>
+    <CustomBuild Include="Fighting Fantasy\Deathmoor.dot">
+      <Filter>Fighting Fantasy</Filter>
+    </CustomBuild>
   </ItemGroup>
   <ItemGroup>
     <Text Include="vertex.txt">
