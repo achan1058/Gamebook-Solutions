@@ -48,9 +48,8 @@ digraph "Fighting Fantasy: Title" {
 		10 meal: +4ST\l \
 		sword\l \
 		leather armor\l \
-		lantern\l \
-		tinderbox\l \
-		2d6+6 gold\l \
+		scarlet pearl\l \
+		20 gold\l \
 		backpack\l\l \
 		Comments:\l \
 		shield, only lose ST after losing every other attack round\l \
@@ -83,7 +82,7 @@ digraph "Fighting Fantasy: Title" {
 		monboo5
 		mondam5
 		mon5
-		ending [fontcolor = "black" shape = "octagon"]
+		084 [fontcolor = "black" shape = "octagon"]
 	}
 
 	subgraph Required2 {
@@ -256,7 +255,123 @@ digraph "Fighting Fantasy: Title" {
 		
 		subgraph cluster_HOPELESS_HILLS {
 			label = "Fight 2 of:\n Gark 7/11\n Wild Boar 6/5\n Bristle Beast 5/7\n Hill Giant 9/11\n Harrun 6/7\n Goblin 6/6"
-			287
+			287 [shape = "rect" style = "filled" color = "pink" fontcolor = "blue" label = "\N\n -1 meal\n -1ST"]
+		}
+		
+		subgraph cluster_SLIME_MONSTER {
+			label = "Slime Monster\n 9/12"
+			055 [style = "filled" color = "pink" label = "\N\n -2ST?"]
+		}
+		
+		subgraph cluster_MARSH_ORC {
+			label = "Marsh Orc\n 7/6"
+			118
+		}
+		
+		subgraph cluster_MARSH_GHOST {
+			label = "Marsh Ghost*\n 7/8 7/8"
+			342
+		}
+		
+		subgraph cluster_FLESH_EATER {
+			label = "Flesh-Eater\n 10/16"
+			195
+		}
+		
+		subgraph cluster_MERE_FOLK {
+			label = "Mere-Folk\n 6/0"
+			047
+		}
+		
+		subgraph cluster_CRADOC {
+			label = "Cradoc\n 8/10"
+			096
+		}
+		
+		subgraph cluster_HOATZIN {
+			label = "Hoatzin\n 6/6"
+			136 [label = "\N\n -2AT?"]
+		}
+		
+		subgraph cluster_CRADOC2 {
+			label = "Cradoc\n 7/8"
+			079
+		}
+		
+		subgraph cluster_HARGON {
+			label = "Hargon\n 7/10"
+			024 [shape = "rect" fontcolor = "blue" label = "\N\n -compass"]
+		}
+		
+		subgraph cluster_SEMERLE {
+			label = "Semerle\n 6/14"
+			207
+		}
+		
+		subgraph cluster_MARSH_ORC2 {
+			label = "Marsh Orc\n 7/8 7/7"
+			361
+			043
+			149
+			334
+			065 [shape = "rect" fontcolor = "blue" style = "filled" color = "pink" label = "\N\n collpse\n -1LK\n -half EST?"]
+		}
+		
+		subgraph cluster_WRAITH {
+			label = "Wraith\n 7/8"
+			051
+		}
+		
+		subgraph cluster_OGRE_SMITH {
+			label = "Ogre Smith\n 8/12"
+			111 [shape = "rect" fontcolor = "blue" label = "\N\n helmet"]
+			348 [shape = "rect" fontcolor = "blue" label = "\N\n helmet"]
+		}
+		
+		subgraph cluster_RENEGADE_DWARF {
+			label = "Renegade Dwarf\n 7/7"
+			320 [shape = "rect" fontcolor = "blue" label = "\N\n 4 gold"]
+		}
+		subgraph cluster_INVISIBLE_WARRIOR {
+			label = "Invisible Warrior\n 7/7"
+			240 [label = "\N\n -1AT"]
+			182 [label = "\N\n -1EST"]
+			339 [label = "\N\n -2AT"]
+		}
+		
+		subgraph cluster_ORC {
+			label = "Orc\n 7/6"
+			176 [shape = "rect" fontcolor = "blue" label = "\N\n 2 gold"]
+		}
+		
+		subgraph cluster_GIANT_MILLIPEDE {
+			label = "Giant Millipede\n 9/12"
+			153
+		}
+		
+		subgraph cluster_POOL_CRAWLER {
+			label = "Pool Crawler\n 9/14"
+			275
+		}
+		
+		subgraph cluster_GIANT_RAT {
+			label = "Giant Rat\n 5/4 5/4"
+			002
+		}
+		
+		subgraph cluster_OPHIS_OMAN_OTUS {
+			label = "Ophis\n Oman\n Otus\n 8/12 8/10 9/12"
+			070
+		}
+		
+		subgraph cluster_OTUS {
+			label = "Otus\n 9/12"
+			248
+		}
+		
+		subgraph cluster_TROLL_ORC {
+			label = "Troll-Orc\n 7/4"
+			336
 		}
 		
 		cbt
@@ -265,24 +380,44 @@ digraph "Fighting Fantasy: Title" {
 	subgraph Death {
 		node [style = "filled" color = "red"]
 		ddt
+		019
 		022
 		038 [label = "\N\n -4ST"]
 		045
 		053
+		061
+		074
+		103
+		108
 		128
 		163
 		166
+		168
+		184
 		200
 		209
+		217
 		222
+		226
 		246
 		249
+		258
+		262
+		274
 		286
+		288
 		291
 		299 [label = "\N\n -6ST"]
+		305
+		309
 		324 [label = "\N\n -2ST"]
 		338
+		356
+		367
+		370
 		394
+		396
+		400
 	}
 
 	subgraph Boost {
@@ -296,13 +431,23 @@ digraph "Fighting Fantasy: Title" {
 		013 [label = "\N\n +2ILK\n +all LK"]
 		036 [label = "\N\n +1LK"]
 		030 [shape = "rect" fontcolor = "blue" label = "\N\n 4 gold\n 3 meal\n +1LK"]
-		106 [label = "\N\n +2ST"]
+		049 [shape = "rect" fontcolor = "blue" label = "\N\n invisibility\n +1LK"]
+		106 [shape = "rect" fontcolor = "blue" label = "\N\n sharpened flint\n +2ST"]
+		110 [shape = "rect" fontcolor = "blue" label = "\N\n 3 gold\n medallion\n +2ST"]
+		201 [label = "\N\n +1LK"]
 		233 [label = "\N\n +4ST"]
-		090 [shape = "rect" fontcolor = "blue" label = "\N\n moon: 112\n +1LK"]
+		266 [shape = "rect" fontcolor = "blue" label = "\N\n moon: 112\n +1LK"]
+		270 [shape = "rect" fontcolor = "blue" label = "\N\n -2 meal\n +2ST"]
+		281 [color = "greenyellow:pink" label = "\N\n +2LK\n -3~+2ST"]
 		304 [label = "\N\n +2ST"]
-		312 [shape = "rect" fontcolor = "blue" label = "\N\n ogres\n fire\n +1LK"]
+		307 [label = "\N\n +all SK\n +all LK"]
+		312 [shape = "rect" fontcolor = "blue" label = "\N\n ogres: 312\n fire\n +1LK"]
+		322 [shape = "rect" fontcolor = "blue" label = "\N\n hexagon: 158\n +1LK"]
+		330 [label = "\N\n +all ST"]
+		335 [label = "\N\n +1SK?"]
 		337 [label = "\N\n +1LK"]
 		382 [label = "\N\n +1LK"]
+		398 [label = "\N\n +1LK\n +2ST"]
 	}
 
 	subgraph Damage {
@@ -314,22 +459,37 @@ digraph "Fighting Fantasy: Title" {
 		dam4 [shape = "rect" fontcolor = "blue" label = "\N\n text"]
 		dam5 [shape = "rect" fontcolor = "blue" label = "\N\n text"]
 		003 [label = "\N\n -1ST"]
+		006 [label = "\N\n -1ST"]
+		039 [label = "\N\n -1LK"]
+		040 [label = "\N\n -2ST"]
+		073 [label = "\N\n -2ST"]
 		086 [label = "\N\n -4ST"]
 		081 [label = "\N\n -4ST"]
 		091 [label = "\N\n -1ST"]
 		093 [shape = "rect" fontcolor = "blue" label = "\N\n -6 gold\n -2ST"]
 		104 [shape = "rect" fontcolor = "blue" label = "\N\n -shoes\n -1SK?"]
+		115 [label = "\N\n -1SK?"]
+		123 [label = "\N\n -1ST"]
 		133 [label = "\N\n -6ST?"]
 		148 [label = "\N\n -1SK*"]
+		149 [label = "\N\n -2ST"]
 		151 [label = "\N\n -4ST"]
+		157 [label = "\N\n -6ST?"]
 		158 [label = "\N\n -2ST"]
 		165 [label = "\N\n -2ST"]
 		185 [label = "\N\n -1LK\n -1ST?"]
+		245 [label = "\N\n -2ST"]
 		259 [label = "\N\n -1ST"]
 		269 [label = "\N\n -?ST"]
+		293 [label = "\N\n -2~3ST"]
 		295 [label = "\N\n -2ST"]
+		300 [shape = "rect" fontcolor = "blue" label = "\N\n escaped\n -3ST"]
+		314 [label = "\N\n -2ST"]
+		326 [label = "\N\n -1SK?"]
 		345 [label = "\N\n -6ST"]
 		349 [label = "\N\n -4ST"]
+		372 [label = "\N\n -3ST"]
+		385 [label = "\N\n -2ST"]
 		390 [label = "\N\n -1SK\n -2ST"]
 	}
 
@@ -343,16 +503,23 @@ digraph "Fighting Fantasy: Title" {
 		023 [label = "\N\n ...garl"]
 		028 [label = "\N\n +1~6 gold"]
 		032 [label = "\N\n 1 gold"]
+		054 [label = "\N\n millipede"]
 		064 [label = "\N\n Pen..."]
 		090 [label = "\N\n room: 56"]
 		095 [label = "\N\n truthstone"]
+		134 [label = "\N\n -needle"]
+		172 [label = "\N\n helmet"]
 		174 [label = "\N\n fire"]
 		192 [label = "\N\n 7 paragraphs"]
 		202 [label = "\N\n bribe"]
+		228 [label = "\N\n -helmet"]
+		232 [label = "\N\n sun: 55"]
 		261 [label = "\N\n note"]
+		265 [label = "\N\n 1 gold\n needle"]
 		267 [label = "\N\n whistle: 333"]
 		271 [label = "\N\n medallion"]
 		282 [label = "\N\n -arrow\n -thread\n -tinder\n -oil\n -meal"]
+		298 [label = "\N\n age: 084"]
 		317 [label = "\N\n letter: 88"]
 		323 [label = "\N\n -2 gold\n bribe"]
 		329 [label = "\N\n -8 gold\n -2 meal"]
@@ -371,7 +538,8 @@ digraph "Fighting Fantasy: Title" {
 		2g: tinderbox and flint\l \
 		2g: old boots\l \
 		2g: gilded arrow\l \
-		2g: loadstone\l \
+		2g: lodestone\l \
+		2g: 2 silver pearls\l \
 		2g: rope\l \
 		2g: throwing knife\l \
 		2g: fishing net\l \
@@ -405,17 +573,20 @@ digraph "Fighting Fantasy: Title" {
 	title -> 001
 	001 -> 200
 	001 -> 064
-//	002 -> 
+	002 -> 040
+	002 -> 275
 	003 -> 080
 	004 -> 212
 	004 -> 236
 	005 -> 390
 	005 -> 087
-//	006 -> 
+	006 -> 207
+	006 -> 034
 	007 -> 397
 	008 -> 295 [color = "green" fontcolor = "green" label = "LK"]
 	008 -> 081 [color = "brown"]
-//	009 -> 
+	009 -> 067
+	009 -> 033
 	010 -> 083 [color = "cyan3" fontcolor = "cyan3" label = "-1 gold"]
 	010 -> 388
 //	011 -> 
@@ -424,116 +595,144 @@ digraph "Fighting Fantasy: Title" {
 	013 -> 220
 	014 -> 159
 	015 -> 382
-//	016 -> 
+	016 -> 193
+	016 -> 344
 	017 -> 388
 	018 -> 377
 	018 -> 175
-//	019 -> 
 	020 -> 261 [color = "purple" fontcolor = "purple" label = "6"]
 	020 -> 142 [color = "purple" fontcolor = "purple" label = "1-5"]
-//	021 -> 
+	021 -> 186 [color = "green" fontcolor = "green" label = "SK"]
+	021 -> 118 [color = "brown"]
 	023 -> 048
 	023 -> 145
-//	024 -> 
+	024 -> 311
 	025 -> 121
 	025 -> 146
 	026 -> 199
-//	027 -> 
+	027 -> 289
+	027 -> 057
+	027 -> 246
 	028 -> 329 [color = "purple" fontcolor = "purple" label = "5-6"]
 	028 -> 388 [color = "purple" fontcolor = "purple" label = "1-4"]
-//	029 -> 
+	029 -> 226 [color = "purple" fontcolor = "purple" label = "equal"]
+	029 -> 207 [color = "purple" fontcolor = "purple" label = "neq"]
 	030 -> 052
 	030 -> 165
 	030 -> 278
 //	031 -> 
 	032 -> 077
 	032 -> 237
-//	033 -> 
-//	034 -> 
+	033 -> 123 [color = "blue" fontcolor = "blue" label = "sallow-seed oil"]
+	033 -> 258
+	034 -> 221
+	034 -> 207
 	035 -> 150
 	035 -> 200
 	036 -> 355
-//	037 -> 
+	037 -> 101 [color = "purple" fontcolor = "purple" label = "1,6"]
+	037 -> 256 [color = "purple" fontcolor = "purple" label = "2x2-5"]
 	038 -> 242 [color = "purple" fontcolor = "purple" label = "odd"]
-//	039 -> 
-//	040 -> 
+	039 -> 253
+	040 -> 275
 //	041 -> 
 	042 -> 285 [color = "cyan3" fontcolor = "cyan3" label = "rope"]
 	042 -> 368
-//	043 -> 
-//	044 -> 
-//	046 -> 
-//	047 -> 
+	043 -> 149
+	043 -> 334
+	043 -> 361
+	044 -> 314
+	044 -> 240
+	046 -> 016
+	047 -> 253 [color = "magenta" fontcolor = "magenta" label = "3CW/\n >7AR"]
 	048 -> 384
-//	049 -> 
+	049 -> 115
+	049 -> 157
+	049 -> 219 [color = "cyan3" fontcolor = "cyan3" label = "-rope"]
 	050 -> 185
 	050 -> 060
-//	051 -> 
+	051 -> 196
+	051 -> 108 [color = "magenta" fontcolor = "magenta" label = "lose AR"]
 	052 -> 102
 	052 -> 278
-//	054 -> 
-//	055 -> 
+	054 -> 275
+	055 -> 154 [color = "magenta:black" fontcolor = "magenta" label = "escape (-3ST)"]
+	055 -> 214 [color = "magenta:black" fontcolor = "magenta" label = "escape (-3ST)"]
 	056 -> 095
 	056 -> 357 [color = "cyan3" fontcolor = "cyan3" label = "+25 gold"]
 	056 -> 381
 //	057 -> 
 	058 -> 014
-//	059 -> 
+	059 -> 131
+	059 -> 272
 	060 -> 308
 	060 -> 350
-//	061 -> 
 	062 -> 179
 	062 -> 012
 //	063 -> 
 	064 -> 075
 	064 -> 222
-//	065 -> 
-//	066 -> 
-//	067 -> 
+	065 -> 361
+	066 -> 378 [color = "grey" fontcolor = "grey" label = "ogre"]
+	066 -> 070
+	067 -> 320 [color = "blue" fontcolor = "blue" label = "invisibility"]
+	067 -> 374
 	068 -> 169
 	068 -> 269
 	068 -> 220
 	069 -> 166
 	069 -> 389
-//	070 -> 
-//	071 -> 
+	070 -> 298 [color = "blue" fontcolor = "blue" label = "truthstone"]
+	070 -> 284
+	071 -> 372
+	071 -> 098
 	072 -> 119
-//	073 -> 
-//	074 -> 
+	073 -> 024
 	075 -> 268
 	075 -> 005
-//	076 -> 
+	076 -> 365
+	076 -> 195
 	077 -> 197
 	077 -> 237
 	078 -> 263
 	078 -> 355
-//	079 -> 
+	079 -> 168
+	079 -> 147
 	080 -> 109 [color = "blue" fontcolor = "blue" label = "tinderbox"]
 	080 -> 020
 	081 -> 379
-//	082 -> 
+	082 -> 131
 	083 -> 388
 //	084 -> 
-//	085 -> 
+	085 -> 138
+	085 -> 219
 	086 -> 199
 	087 -> 200
 	087 -> 222
 	088 -> 137 [color = "blue" fontcolor = "blue" label = "arachnos"]
 	088 -> 231
-//	089 -> 
+	089 -> 034
+	089 -> 361
 	090 -> 189
 	090 -> 388
 	091 -> 278
-//	092 -> 
+	092 -> 205 [color = "cyan3" fontcolor = "cyan3" label = "-truthstone"]
+	092 -> 055
+	092 -> 154
+	092 -> 365
 	093 -> 132
 	093 -> 200
 	093 -> 222
-//	094 -> 
+	094 -> 002
 	095 -> 357
-//	096 -> 
+	096 -> 079
 	097 -> 030
-//	098 -> 
-//	099 -> 
+	098 -> 172
+	098 -> 210
+	099 -> 118
+	099 -> 021
+	099 -> 154
+	099 -> 365
 	100 -> 200
 //	101 -> 
 	102 -> 224
@@ -541,30 +740,35 @@ digraph "Fighting Fantasy: Title" {
 //	103 -> 
 	104 -> 269
 	104 -> 220
-//	105 -> 
+	105 -> 180 [color = "blue" fontcolor = "blue" label = "moon/sun"]
+	105 -> 046
 	399 -> 106 [dir = back]
 	106 -> 004
 	107 -> 007
 	107 -> 213
 	107 -> 327
-//	108 -> 
 	109 -> 174
 	109 -> 312
-//	110 -> 
-//	111 -> 
+	110 -> 006
+	110 -> 207
+	110 -> 034
+	111 -> 176
+	111 -> 082
 //	112 -> 
 	113 -> 282
 	113 -> 086
 	114 -> 340 [color = "green" fontcolor = "green" label = "SK"]
 	114 -> 107 [color = "brown"]
-//	115 -> 
+	115 -> 219
 	116 -> 208 [color = "magenta" fontcolor = "magenta" label = "escape\n -2ST"]
 	116 -> 208
 	116 -> 368
 	117 -> 056 [color = "grey" fontcolor = "grey" label = "room"]
 	117 -> 150
 	117 -> 171
-//	118 -> 
+	118 -> 265
+	118 -> 154
+	118 -> 365
 	119 -> 100
 	119 -> 244
 //	120 -> 
@@ -573,7 +777,7 @@ digraph "Fighting Fantasy: Title" {
 	122 -> 273
 	122 -> 150
 	122 -> 200
-//	123 -> 
+	123 -> 067
 	124 -> 362 [color = "blue" fontcolor = "blue" label = "money"]
 	124 -> 338 [color = "blue" fontcolor = "blue" label = "medallion"]
 	124 -> 255 [color = "blue" fontcolor = "blue" label = "pearls"]
@@ -581,47 +785,60 @@ digraph "Fighting Fantasy: Title" {
 	124 -> 301 [color = "blue" fontcolor = "blue" label = "meal"]
 	125 -> 297
 	125 -> 323
-//	126 -> 
+	126 -> 245
+	126 -> 136
+	126 -> 330
+	126 -> 069
 	127 -> 014
 	127 -> 058
 //	129 -> 
 	130 -> 280 [color = "blue" fontcolor = "blue" label = "bribe"]
 	130 -> 251
-//	131 -> 
+	131 -> 326
+	131 -> 228
 	132 -> 317 [color = "green" fontcolor = "green" label = "LK"]
 	132 -> 093 [color = "brown"]
 	133 -> 146
-//	134 -> 
+	134 -> 290
 	135 -> 388
-//	136 -> 
+	136 -> 245
+	136 -> 330
+	136 -> 069
 	137 -> 394
 	137 -> 306
-//	138 -> 
+	138 -> 358
+	138 -> 293
 	139 -> 053 [color = "magenta" fontcolor = "magenta" label = "4LR"]
 	139 -> 106
 	140 -> 013 [color = "green" fontcolor = "green" label = "3xSK"]
 	140 -> 299 [color = "brown"]
 //	141 -> 
 	142 -> 319
-//	143 -> 
+	143 -> 070
 	144 -> 246
 	144 -> 004
 	144 -> 139
 	145 -> 384
 	146 -> 382
-//	147 -> 
+	147 -> 069
 	148 -> 319
-//	149 -> 
+	149 -> 361
 	150 -> 200
 	150 -> 171
 	151 -> 215
-//	152 -> 
-//	153 -> 
-//	154 -> 
+	152 -> 182 [color = "green" fontcolor = "green" label = "LK"]
+	152 -> 044 [color = "brown"]
+	153 -> 054 [color = "magenta" fontcolor = "magenta" label = "escape"]
+	153 -> 275
+	154 -> 226 [color = "blue" fontcolor = "blue" label = "visited"]
+	154 -> 214
 	155 -> 197
 	156 -> 391
 	156 -> 355
-//	157 -> 
+	157 -> 108
+	157 -> 167
+	157 -> 051
+	157 -> 274
 	158 -> 366
 	158 -> 114
 	159 -> 277
@@ -629,42 +846,47 @@ digraph "Fighting Fantasy: Title" {
 //	160 -> 
 	161 -> 132 [color = "green" fontcolor = "green" label = "LK"]
 	161 -> 087 [color = "brown"]
-//	162 -> 
+	162 -> 281
 	164 -> 237
 	165 -> 278
-//	167 -> 
-//	168 -> 
+	167 -> 071
 	169 -> 140 [color = "blue" fontcolor = "blue" label = "shield"]
 	169 -> 104
 	169 -> 299
-//	170 -> 
+	170 -> 089 [color = "green" fontcolor = "green" label = "SK"]
+	170 -> 134 [color = "brown"]
 	171 -> 122
 	171 -> 364
 	171 -> 035
 	171 -> 343
-//	172 -> 
-//	173 -> 
+	172 -> 210
+	173 -> 247
+	173 -> 367
+	173 -> 029
 	174 -> 261 [color = "purple" fontcolor = "purple" label = "6"]
 	174 -> 192 [color = "purple" fontcolor = "purple" label = "1-5"]
 	175 -> 026 [color = "blue" fontcolor = "blue" label = "shield"]
 	175 -> 113
-//	176 -> 
+	176 -> 131
 	177 -> 125
 	177 -> 050
-//	178 -> 
+	178 -> 262 [color = "blue" fontcolor = "blue" label = "medallion"]
+	178 -> 039
 	179 -> 278
-//	180 -> 
+	180 -> 046 [color = "blue" fontcolor = "blue" label = "escaped"]
+	180 -> 322
 //	181 -> 
-//	182 -> 
+	182 -> 339
 	183 -> 340 [color = "green" fontcolor = "green" label = "LK"]
 	183 -> 107 [color = "brown"]
-//	184 -> 
 	185 -> 158
 	185 -> 366
 	185 -> 114
-//	186 -> 
+	186 -> 265 [color = "green" fontcolor = "green" label = "LK"]
+	186 -> 092 [color = "brown"]
 	187 -> 030
-//	188 -> 
+	188 -> 207
+	188 -> 346
 	189 -> 010
 	189 -> 028
 	190 -> 313 [color = "cyan3" fontcolor = "cyan3" label = "-1 gold\n -4 meals"]
@@ -673,72 +895,83 @@ digraph "Fighting Fantasy: Title" {
 //	191 -> 
 	192 -> 148
 	192 -> 319
-//	193 -> 
+	193 -> 363 [color = "blue" fontcolor = "blue" label = "throwing knife"]
+	193 -> 336
 //	194 -> 
-//	195 -> 
-//	196 -> 
+	195 -> 311
+	195 -> 154
+	196 -> 069
 	197 -> 395
 	197 -> 225
 //	198 -> 
 	199 -> 022 [color = "purple" fontcolor = "purple" label = "3-9"]
 	199 -> 252 [color = "purple" fontcolor = "purple" label = "10-18"]
 	200 -> 088 [color = "grey" fontcolor = "grey" label = "letter"]
-//	201 -> 
+	201 -> 335
+	201 -> 305
 	202 -> 183
 	202 -> 155
 //	203 -> 
 	204 -> 179
 	204 -> 062
-//	205 -> 
+	205 -> 055
+	205 -> 154
+	205 -> 365
 	206 -> 291 [color = "magenta" fontcolor = "magenta" label = "AR>4"]
 	206 -> 366
-//	207 -> 
+	207 -> 024
 	208 -> 018
-//	210 -> 
+	210 -> 111
+	210 -> 234
 	211 -> 233 [color = "cyan3" fontcolor = "cyan3" label = "-2 gold"]
 	211 -> 189
 	211 -> 388
-//	212 -> 
+	212 -> 236 [color = "green" fontcolor = "green" label = "3dST"]
+	212 -> 288 [color = "brown"]
 	213 -> 197
-//	214 -> 
+	214 -> 398
+	214 -> 099
 	215 -> 015 [color = "purple" fontcolor = "purple" label = "1-4"]
 	215 -> 324 [color = "purple" fontcolor = "purple" label = "5-6"]
 	216 -> 266 [color = "grey" fontcolor = "grey" label = "oaks"]
 	216 -> 068
 	216 -> 220
-//	217 -> 
 //	218 -> 
-//	219 -> 
+	219 -> 157
+	219 -> 069
 	220 -> 045 [color = "purple" fontcolor = "purple" label = "1"]
 	220 -> 259 [color = "purple" fontcolor = "purple" label = "6"]
 	220 -> 271
-//	221 -> 
+	221 -> 387 [color = "purple" fontcolor = "purple" label = "equal"]
+	221 -> 318 [color = "purple" fontcolor = "purple" label = "neq"]
 	222 -> 211 [color = "blue" fontcolor = "blue" label = "letter"]
 	222 -> 189 [color = "blue" fontcolor = "blue" label = "letter"]
 //	223 -> 
 	224 -> 204
 	224 -> 190
 	225 -> 072
-//	226 -> 
 	227 -> 319
-//	228 -> 
+	228 -> 326
 	229 -> 114
 	229 -> 315
 //	230 -> 
 	231 -> 137
-//	232 -> 
+	232 -> 307
+	232 -> 188
 	233 -> 283
 	233 -> 189
 	233 -> 388
-//	234 -> 
+	234 -> 356
+	234 -> 009
 	235 -> 216
-//	236 -> 
+	236 -> 170 [color = "blue" fontcolor = "blue" label = "needle\n lodestone\n thread"]
+	236 -> 290
 	237 -> 003
 	237 -> 080
 //	238 -> 
 	239 -> 291 [color = "magenta" fontcolor = "magenta" label = "3dST\n AR>4"]
 	239 -> 366 [color = "green" fontcolor = "green" label = "3dST"]
-//	240 -> 
+	240 -> 339
 	241 -> 133
 	241 -> 345
 	241 -> 163
@@ -748,33 +981,43 @@ digraph "Fighting Fantasy: Title" {
 //	243 -> 
 	244 -> 264 [color = "cyan3" fontcolor = "cyan3" label = "truthstone"]
 	244 -> 303
-//	245 -> 
-//	247 -> 
-//	248 -> 
+	245 -> 136
+	245 -> 330
+	245 -> 069
+	247 -> 188
+	247 -> 307
+	247 -> 232
+	248 -> 298
+	248 -> 284
 	249 -> 146 [color = "green" fontcolor = "green" label = "SK"]
 //	250 -> 
 	251 -> 359
 	252 -> 215 [color = "purple" fontcolor = "purple" label = "1-5"]
 	252 -> 151 [color = "purple" fontcolor = "purple" label = "6"]
-//	253 -> 
+	253 -> 178
+	253 -> 332
+	253 -> 184
 	254 -> 206 [color = "green" fontcolor = "green" label = "LK"]
 	254 -> 239 [color = "brown"]
 	255 -> 391
 	255 -> 263
 	255 -> 355
 	255 -> 078 [color = "cyan3" fontcolor = "cyan3" label = "-truthstone"]
-//	256 -> 
+	256 -> 300
+	256 -> 230
+	256 -> 243
 	257 -> 072
-//	258 -> 
 	259 -> 220
 //	260 -> 
 	261 -> 192 [color = "blue" fontcolor = "blue" label = "fire"]
 	261 -> 319
-//	262 -> 
 	263 -> 156
 	263 -> 287
 	264 -> 303
-//	265 -> 
+	265 -> 141 [color = "blue" fontcolor = "blue" label = "lost needle"]
+	265 -> 055
+	265 -> 154
+	265 -> 365
 	266 -> 068
 	266 -> 220
 	267 -> 208
@@ -784,23 +1027,29 @@ digraph "Fighting Fantasy: Title" {
 	269 -> 159 [color = "purple" fontcolor = "purple" label = "1-5,1-4"]
 	269 -> 220
 	269 -> 169
-//	270 -> 
+	270 -> 069
+	270 -> 393
 	271 -> 386
 	271 -> 373
 	271 -> 068
-//	272 -> 
+	272 -> 348
+	272 -> 176
 	273 -> 310
-//	274 -> 
-//	275 -> 
+	275 -> 217 [color = "blue" fontcolor = "blue" label = "millipede"]
+	275 -> 201
 //	276 -> 
 	277 -> 379
 	277 -> 355
 	277 -> 008
 	278 -> 235 [color = "purple" fontcolor = "purple" label = "1-3"]
 	278 -> 371 [color = "purple" fontcolor = "purple" label = "4-6"]
-//	279 -> 
+	279 -> 029
+	279 -> 247 [color = "cyan3" fontcolor = "cyan3" label = "-1 gold"]
+	279 -> 173 [color = "cyan3" fontcolor = "cyan3" label = "-2 gold"]
 	280 -> 359
-//	281 -> 
+	281 -> 096
+	281 -> 270
+	281 -> 126
 	282 -> 199
 	283 -> 369
 	283 -> 017
@@ -808,23 +1057,27 @@ digraph "Fighting Fantasy: Title" {
 	283 -> 090
 	283 -> 135
 	283 -> 294
-//	284 -> 
+	284 -> 084 [color = "grey" fontcolor = "grey" label = "age"]
 	285 -> 267
 	285 -> 208
 	287 -> 069
-//	288 -> 
-//	289 -> 
-//	290 -> 
+	289 -> 325 [color = "grey" fontcolor = "grey" label = "sun\n moon\n hexagon"]
+	289 -> 246
+	290 -> 055
+	290 -> 154
 	292 -> 382 [color = "magenta" fontcolor = "magenta" label = "AR>4"]
-//	293 -> 
+	293 -> 219
 	294 -> 388
 	295 -> 379
-//	296 -> 
+	296 -> 385 [color = "cyan3" fontcolor = "cyan3" label = "hut standing"]
+	296 -> 006
+	296 -> 207
+	296 -> 034
 	297 -> 202 [color = "cyan3" fontcolor = "cyan3" label = "-4 gold"]
 	297 -> 177
-//	298 -> 
+	298 -> 284
 	299 -> 104 [color = "purple" fontcolor = "purple" label = "1-3"]
-//	300 -> 
+	300 -> 352
 	301 -> 391
 	301 -> 263
 	301 -> 355
@@ -833,134 +1086,164 @@ digraph "Fighting Fantasy: Title" {
 	303 -> 209
 	303 -> 130
 	304 -> 216
-//	305 -> 
 	306 -> 097 [color = "green" fontcolor = "green" label = "LK"]
 	306 -> 187 [color = "brown"]
-//	307 -> 
+	307 -> 232
+	307 -> 188
 	308 -> 114
 	308 -> 366
-//	309 -> 
 	310 -> 125
 	310 -> 177
-//	311 -> 
+	311 -> 333 [color = "blue" fontcolor = "blue" label = "whistle"]
+	311 -> 047
+	311 -> 253
 	312 -> 261 [color = "purple" fontcolor = "purple" label = "6"]
 	312 -> 192 [color = "purple" fontcolor = "purple" label = "1-5"]
 	313 -> 091
 	313 -> 304
-//	314 -> 
+	314 -> 339
 	315 -> 331
 	315 -> 077
 	315 -> 237
-//	316 -> 
+	316 -> 037 [color = "blue" fontcolor = "blue" label = "knife\n sharp flint"]
+	316 -> 063
 	317 -> 337 [color = "green" fontcolor = "green" label = "LK"]
 	317 -> 353 [color = "brown"]
-//	318 -> 
+	318 -> 279
+	318 -> 029
 	319 -> 227
 	319 -> 197
-//	320 -> 
+	320 -> 059
 	321 -> 351
 	321 -> 124
-//	322 -> 
+	322 -> 016
 	323 -> 183
 	323 -> 155
 	324 -> 015 [color = "green" fontcolor = "green" label = "LK"]
-//	325 -> 
-//	326 -> 
+	325 -> 383
+	325 -> 071
+	326 -> 153
+	326 -> 094
 	327 -> 397
 //	328 -> 
 	329 -> 388
-//	330 -> 
+	330 -> 245
+	330 -> 136
+	330 -> 069
 	331 -> 032 [color = "blue" fontcolor = "blue" label = "gardener"]
 	331 -> 128
-//	332 -> 
-//	333 -> 
-//	334 -> 
-//	335 -> 
-//	336 -> 
+	332 -> 162 [color = "green" fontcolor = "green" label = "LK&ge;6"]
+	332 -> 253 [color = "brown"]
+	333 -> 281
+	334 -> 065 [color = "green" fontcolor = "green" label = "SK/\n 3dST"]
+	334 -> 361 [color = "brown"]
+	335 -> 396 [color = "blue" fontcolor = "blue" label = "helmet"]
+	335 -> 019
+	336 -> 309 [color = "magenta" fontcolor = "magenta" label = ">2AR"]
+	336 -> 027
 	337 -> 023
 	337 -> 384
-//	339 -> 
+	339 -> 059
 	340 -> 197
 	341 -> 042
-//	342 -> 
+	342 -> 214
 	343 -> 150
 	343 -> 200
 //	344 -> 
 	345 -> 146
-//	346 -> 
+	346 -> 281
+	346 -> 073
 	347 -> 014
 	347 -> 058
-//	348 -> 
+	348 -> 176
+	348 -> 082
 	349 -> 199
 	350 -> 254
 	350 -> 308
 	351 -> 391 [color = "green" fontcolor = "green" label = "ST"]
 	351 -> 263 [color = "green" fontcolor = "green" label = "ST"]
 	351 -> 355 [color = "green" fontcolor = "green" label = "ST"]
-//	352 -> 
+	352 -> 400 [color = "blue" fontcolor = "blue" label = "medallion possessions"]
+	352 -> 105
 	353 -> 337
-//	354 -> 
+	354 -> 221
 	355 -> 341
 	355 -> 042
-//	356 -> 
 	357 -> 150
 	357 -> 171
-//	358 -> 
+	358 -> 375 [color = "green" fontcolor = "green" label = "LK"]
+	358 -> 293 [color = "brown"]
 	359 -> 200
 //	360 -> 
-//	361 -> 
+	361 -> 043 [color = "magenta" fontcolor = "magenta" label = "-4ST"]
+	361 -> 296
 	362 -> 391
 	362 -> 263
 	362 -> 355
 	362 -> 078 [color = "cyan3" fontcolor = "cyan3" label = "-truthstone"]
-//	363 -> 
+	363 -> 260 [color = "green" fontcolor = "green" label = "SK"]
+	363 -> 336 [color = "brown"]
 	364 -> 150
 	364 -> 200
-//	365 -> 
+	365 -> 288 [color = "blue" fontcolor = "blue" label = "2x visited"]
+	365 -> 055
+	365 -> 342
+	365 -> 076
 	366 -> 038
 	366 -> 242
-//	367 -> 
 	368 -> 025
 	368 -> 292
 	369 -> 388
 //	370 -> 
 	371 -> 216
-//	372 -> 
+	372 -> 210
 	373 -> 347 [color = "green" fontcolor = "green" label = "LK"]
 	373 -> 127 [color = "brown"]
-//	374 -> 
-//	375 -> 
+	374 -> 380
+	374 -> 074
+	374 -> 152
+	375 -> 049 [color = "green" fontcolor = "green" label = "ST&ge;14"]
+	375 -> 293 [color = "brown"]
 //	376 -> 
 	377 -> 026 [color = "blue" fontcolor = "blue" label = "shield"]
 	377 -> 349
-//	378 -> 
+	378 -> 248 [color = "blue" fontcolor = "blue" label = ">10 gold"]
+	378 -> 143
 	379 -> 321
 	379 -> 355
-//	380 -> 
+	380 -> 339
 	381 -> 357
 	382 -> 139
 	382 -> 144
 //	383 -> 
 	384 -> 200
 	384 -> 222
-//	385 -> 
+	385 -> 110
+	385 -> 006
+	385 -> 207
+	385 -> 034
 	386 -> 373
 	386 -> 068
-//	387 -> 
+	387 -> 354 [color = "green" fontcolor = "green" label = "LK"]
+	387 -> 061 [color = "brown"]
 	388 -> 200
 	388 -> 117
-//	389 -> 
+	389 -> 316
+	389 -> 160
 	390 -> 200
 	390 -> 222
 	391 -> 263
 	391 -> 355
 	392 -> 388
-//	393 -> 
+	393 -> 085
+	393 -> 219
 	395 -> 286 [color = "purple" fontcolor = "purple" label = "even"]
 	395 -> 257 [color = "purple" fontcolor = "purple" label = "odd"]
-//	396 -> 
+	396 -> 370 [color = "blue" fontcolor = "blue" label = "moon"]
+	396 -> 066 [color = "blue" fontcolor = "blue" label = "medallion"]
+	396 -> 103 [color = "blue" fontcolor = "blue" label = "arrow"]
 	397 -> 197
-//	398 -> 
+	398 -> 154
+	398 -> 099
 	399 -> 379
-//	400 -> 
 }
