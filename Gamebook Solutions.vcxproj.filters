@@ -104,6 +104,12 @@
     <CustomBuild Include="Fighting Fantasy\Deathmoor.dot">
       <Filter>Fighting Fantasy</Filter>
     </CustomBuild>
+    <CustomBuild Include="Fighting Fantasy\Night Dragon.dot">
+      <Filter>Fighting Fantasy</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Tin Man Games\Vampire Boyfriends.dot">
+      <Filter>Tin Man Games</Filter>
+    </CustomBuild>
   </ItemGroup>
   <ItemGroup>
     <Text Include="vertex.txt">

@@ -1,0 +1,780 @@
+digraph "Fighting Fantasy: Title" {
+	// graph defaults
+	rankdir=LR
+	mclimit=50
+	nodesep=.3 // changes horizontal separation of nodes
+	ranksep=.4 // changes vertical separation of nodes
+	node [height=.7
+		width=.7
+		shape=ellipse
+		margin=0]
+	edge[weight=5]
+
+	// a box for a graph label
+	// note that you can override the defaults set above
+	title [label = "Fighting Fantasy: Title --/--/--\n\n \
+		Light Green Fill: Benefits\l \
+		Pink Fill: Penalties\l \
+		Red Fill: Death\l \
+		Blue Text: Key Items/Events\l \
+		Red Text: Lost Items\l \
+		Purple Text: Shops\l \
+		Blue Line: Forced Items/Events\l \
+		Light Blue Text/Line: Optional Items/Events\l \
+		Purple Line: Dice Related Events\l \
+		Green Line: Stat Test Passed\l \
+		Brown Line: Stat Test Failed\l \
+		Magenta Line: Combat Related Events\l \
+		Grey Text: Riddle Answer\l \
+		Grey Line: Hidden Option\l \
+		Orange Line: Spells\l \
+		Red Line: Possible Error\l \
+		Gold/Yellow Fill: Required Nodes\l \
+		Light Blue Fill: Recommended Nodes\l \
+		Gold Outline: Recommended Path\l \
+		Green Box: Combat\l \
+		SK/ST/LK/AS/AR/TM/CW/CL: Skill/Stamina/Luck/Attack Strength/Attack Round/Time/Consecutive Win Round/Consecutive Lose Round\l \
+		?: Chance of this happening, depending on instructions in text\l \
+		*: Special Combat Rules\l \
+		-: Negative Status\l \
+		+: Positive Status\l \
+		^: Damage can be reduced by items\l \
+		@: Take 2 items\l\l \
+		Starts with:\l \
+		Initial Skill: 1d6+6\l \
+		Initial Stamina: 2d6+12\l \
+		Initial Luck: 1d6+6\l\l \
+		skill/stamina/luck potion: +all SK/ST/LK&1ILK\l \
+		10 meal: +4ST\l \
+		sword\l \
+		leather armor\l \
+		lantern\l \
+		tinderbox\l \
+		2d6+6 gold\l \
+		backpack\l\l \
+		Comments:\l \
+		none\l \
+		"
+		shape = "box"
+		margin = 0.1]
+
+	subgraph Required {
+		node [style = "filled" color = "gold" fillcolor = "gold" fontcolor = "blue" shape = "rect"]
+		key3
+		boo5
+		dam5
+		monboo5
+		mondam5
+		mon5
+		079 [fontcolor = "black" shape = "octagon"]
+		172 [fontcolor = "black" shape = "octagon"]
+		178 [fontcolor = "black" shape = "octagon"]
+		216 [fontcolor = "black" shape = "octagon"]
+		270 [fontcolor = "black" shape = "octagon"]
+		287 [fontcolor = "black" shape = "octagon"]
+		297 [fontcolor = "black" shape = "octagon"]
+		310 [fontcolor = "black" shape = "octagon"]
+		319 [fontcolor = "black" shape = "octagon"]
+	}
+
+	subgraph Required2 {
+		node [style = "filled" color = "#FFF700" fillcolor = "#FFF700" fontcolor = "blue" shape = "rect"]
+		req2
+	}
+
+	subgraph Recommended {
+		node [penwidth = 3 color = "gold"]
+		txt2
+		key2 [shape = "rect" fontcolor = "blue"]
+		boo3 [style = "filled" fillcolor = "greenyellow"]
+		boo4 [style = "filled" fillcolor = "greenyellow"]
+		dam3 [style = "filled" fillcolor = "pink"]
+		dam4 [style = "filled" fillcolor = "pink"]
+		monboo3 [style = "filled" fillcolor = "greenyellow"]
+		monboo4 [style = "filled" fillcolor = "greenyellow"]
+		mondam3 [style = "filled" fillcolor = "pink"]
+		mondam4 [style = "filled" fillcolor = "pink"]
+		mon3
+		mon4
+	}
+	
+	subgraph Optional {
+		node [style = "filled" color = "paleturquoise1" fillcolor = "paleturquoise1" fontcolor = "blue" shape = "rect"]
+		opt
+	}
+
+	subgraph Combat {
+		style = "filled" color = "palegreen2"
+		subgraph cluster_MONSTER {
+			label = "? MONSTER\n 0/0 0/0"
+			mon1 [label = "\N\n text"]
+			mon2 [shape = "rect" fontcolor = "blue" label = "\N\n text"]
+			mon3 [label = "\N\n text"]
+			mon4 [shape = "rect" fontcolor = "blue" label = "\N\n text"]
+			mon5 [shape = "rect" fontcolor = "blue" label = "\N\n text"]
+			monboo1 [style = "filled" color = "greenyellow" label = "\N\n text"]
+			monboo2 [shape = "rect" style = "filled" color = "greenyellow" fontcolor = "blue" label = "\N\n text"]
+			monboo3 [label = "\N\n text"]
+			monboo4 [shape = "rect" fontcolor = "blue" label = "\N\n text"]
+			monboo5 [shape = "rect" fontcolor = "blue" label = "\N\n text"]
+			mondam1 [style = "filled" color = "pink" label = "\N\n text"]
+			mondam2 [shape = "rect" style = "filled" color = "pink" fontcolor = "blue" label = "\N\n text"]
+			mondam3 [label = "\N\n text"]
+			mondam4 [shape = "rect" fontcolor = "blue" label = "\N\n text"]
+			mondam5 [shape = "rect" fontcolor = "blue" label = "\N\n text"]
+		}
+		cbt
+	}
+
+	subgraph Death {
+		node [style = "filled" color = "red"]
+		ddt
+		020
+		022
+		047
+		051
+		060
+		066
+		087
+		096
+		189
+		204
+		213
+		217
+		254
+		255
+		266
+		271
+		302
+	}
+
+	subgraph Boost {
+		node [style = "filled" color = "greenyellow"]
+		bst
+		boo1 [label = "\N\n text"]
+		boo2 [shape = "rect" fontcolor = "blue" label = "\N\n text"]
+		boo3 [label = "\N\n text"]
+		boo4 [shape = "rect" fontcolor = "blue" label = "\N\n text"]
+		boo5 [shape = "rect" fontcolor = "blue" label = "\N\n text"]
+	}
+
+	subgraph Damage {
+		node [style = "filled" color = "pink"]
+		ddg
+		dam1 [label = "\N\n text"]
+		dam2 [shape = "rect" fontcolor = "blue" label = "\N\n text"]
+		dam3 [label = "\N\n text"]
+		dam4 [shape = "rect" fontcolor = "blue" label = "\N\n text"]
+		dam5 [shape = "rect" fontcolor = "blue" label = "\N\n text"]
+	}
+
+	subgraph Key_Item {
+		node [fontcolor = "blue" shape = "rect"]
+		kky
+		100 [label = "\N\n slayer"]
+		111 [label = "\N\n mma"]
+		139 [label = "\N\n theatre"]
+		145 [label = "\N\n vampire?"]
+		173 [label = "\N\n birthmark"]
+		key1 [label = "\N\n text"]
+		key2 [label = "\N\n text"]
+		key3 [label = "\N\n text"]
+	}
+	
+	subgraph Shop {
+		node [fontcolor = "purple" shape = "rect"]
+		shp
+		shop1 [label = "\N\n text"]
+	}
+
+	mon1 -> mon2 -> mon3 -> mon4 -> mon5 [penwidth = 3]
+	boo1 -> boo2 -> boo3 -> boo4 -> boo5 [penwidth = 3]
+	dam1 -> dam2 -> dam3 -> dam4 -> dam5
+	txt1 -> key1 -> txt2 -> key2 -> key3
+	monboo1 -> monboo2 -> monboo3 -> monboo4 -> monboo5
+	mondam1 -> mondam2 -> mondam3 -> mondam4 -> mondam5
+
+	myTitle -> z001 [penwidth = 3]
+	z001 -> z002 [color = "purple" fontcolor = "purple" label = "1-3"]
+	z001 -> z003 [color = "purple" fontcolor = "purple" label = "4-6"]
+	z002 -> z004 [color = "green" fontcolor = "green" label = "LK"]
+	z002 -> z005 [color = "brown"]
+	z003 -> z006 [dir = "both"]
+	z004 -> z007 [color = "blue" fontcolor = "blue" label = "req"]
+	z004 -> z008 [color = "cyan3" fontcolor = "cyan3" label = "-opt"]
+	z005 -> z009 [color = "grey" fontcolor = "grey" label = "info"]
+	z009 -> z010 [color = "crimson" fontcolor = "crimson" label = "error(?)"]
+	z010 -> z011 [color = "magenta" fontcolor = "magenta" label = "escape"]
+	{
+		rank = same
+		z003
+		z006
+	}
+
+	title -> 001
+	001 -> 056
+	002 -> 225
+	002 -> 298
+//	003 -> 
+//	004 -> 
+	005 -> 201
+	005 -> 021
+	006 -> 086
+	007 -> 164
+	007 -> 202
+//	008 -> 
+	009 -> 100
+	010 -> 128
+	010 -> 293
+	011 -> 217
+	011 -> 056
+	012 -> 236
+	012 -> 308
+	013 -> 311
+	014 -> 028
+	014 -> 132
+//	015 -> 
+//	016 -> 
+	017 -> 149
+//	018 -> 
+	019 -> 079
+	019 -> 287
+	021 -> 258
+//	023 -> 
+//	024 -> 
+	025 -> 226
+	025 -> 199
+	026 -> 105
+	027 -> 267
+	028 -> 106
+	028 -> 119
+//	029 -> 
+//	030 -> 
+//	031 -> 
+	032 -> 089
+	032 -> 141
+//	033 -> 
+//	034 -> 
+	035 -> 270
+//	036 -> 
+//	037 -> 
+	038 -> 046 [color = "blue" fontcolor = "blue" label = "girls"]
+	038 -> 008
+	039 -> 198
+//	040 -> 
+	041 -> 309
+	041 -> 292
+	042 -> 312
+//	043 -> 
+//	044 -> 
+	045 -> 318
+	046 -> 231
+	048 -> 183
+//	049 -> 
+//	050 -> 
+	052 -> 319
+	052 -> 178
+//	053 -> 
+	054 -> 022
+	054 -> 244
+	055 -> 025
+	056 -> 139
+	056 -> 111
+	056 -> 159
+//	057 -> 
+//	058 -> 
+	059 -> 019
+	061 -> 328
+	061 -> 320
+	062 -> 230
+//	063 -> 
+	064 -> 017 [color = "blue" fontcolor = "blue" label = "phone"]
+	064 -> 169
+//	065 -> 
+//	067 -> 
+//	068 -> 
+//	069 -> 
+//	070 -> 
+	071 -> 245
+	072 -> 315
+	072 -> 047
+	073 -> 143
+	074 -> 182
+//	075 -> 
+	076 -> 191
+	076 -> 044
+	077 -> 112
+	078 -> 076
+//	080 -> 
+//	081 -> 
+	082 -> 103
+	082 -> 091
+//	083 -> 
+	084 -> 330
+	085 -> 223
+	086 -> 069
+	086 -> 074
+//	088 -> 
+	089 -> 259
+	090 -> 087
+	091 -> 197
+//	092 -> 
+	093 -> 063 [color = "blue" fontcolor = "blue" label = "birthmark"]
+	093 -> 215
+	094 -> 061
+	094 -> 320
+	095 -> 125
+	095 -> 253
+	097 -> 200
+//	098 -> 
+	099 -> 331
+	099 -> 124 [color = "blue" fontcolor = "blue" label = "slayer"]
+	100 -> 073
+	100 -> 195
+	101 -> 094
+	102 -> 071
+	102 -> 255
+	103 -> 321
+	103 -> 072
+//	104 -> 
+	105 -> 221
+	106 -> 140
+	106 -> 326
+	107 -> 026
+//	108 -> 
+//	109 -> 
+	110 -> 278
+	111 -> 294
+	111 -> 256
+	112 -> 214
+	113 -> 048
+	114 -> 116
+//	115 -> 
+	116 -> 082 [color = "blue" fontcolor = "blue" label = "royce"]
+	116 -> 210
+//	117 -> 
+//	118 -> 
+//	119 -> 
+//	120 -> 
+//	121 -> 
+	122 -> 160 [color = "blue" fontcolor = "blue" label = "vampire"]
+	122 -> 136 [color = "blue" fontcolor = "blue" label = "slayer"]
+	122 -> 077 [color = "blue" fontcolor = "blue" label = "human"]
+	123 -> 188
+	123 -> 057 [color = "blue" fontcolor = "blue" label = "lukas"]
+	124 -> 340
+//	125 -> 
+	126 -> 019
+//	127 -> 
+	128 -> 020
+	128 -> 134
+//	129 -> 
+	130 -> 126
+	131 -> 257
+	131 -> 123
+	132 -> 335 [color = "blue" fontcolor = "blue" label = "theatre"]
+	132 -> 272 [color = "blue" fontcolor = "blue" label = "slayer"]
+	133 -> 313
+	134 -> 006 [color = "blue" fontcolor = "blue" label = "theatre"]
+	134 -> 152 [color = "blue" fontcolor = "blue" label = "mma"]
+	135 -> 121
+	135 -> 055
+	136 -> 235
+//	137 -> 
+	138 -> 288
+	139 -> 294
+	139 -> 032
+//	140 -> 
+	141 -> 224
+	142 -> 161 [color = "blue" fontcolor = "blue" label = "vampire"]
+	142 -> 332
+	142 -> 271 [color = "blue" fontcolor = "blue" label = "slayer"]
+	143 -> 204
+	143 -> 207
+//	144 -> 
+	145 -> 148
+//	146 -> 
+	147 -> 114
+	147 -> 240
+	148 -> 282
+	148 -> 122
+	149 -> 286
+//	150 -> 
+	151 -> 262 [color = "blue" fontcolor = "blue" label = "train"]
+	151 -> 214
+	152 -> 258
+	152 -> 209
+//	153 -> 
+	154 -> 091
+	154 -> 103
+	155 -> 048
+	155 -> 156
+	156 -> 258
+//	157 -> 
+//	158 -> 
+	159 -> 216
+	160 -> 045
+	161 -> 027
+	162 -> 081 [color = "blue" fontcolor = "blue" label = "drink me"]
+	162 -> 039
+//	163 -> 
+//	164 -> 
+//	165 -> 
+	166 -> 173
+	166 -> 014
+//	167 -> 
+//	168 -> 
+	169 -> 049 [color = "blue" fontcolor = "blue" label = "girls"]
+	169 -> 241
+//	170 -> 
+//	171 -> 
+	173 -> 078
+	173 -> 060
+	174 -> 191
+//	175 -> 
+//	176 -> 
+	177 -> 094
+//	179 -> 
+//	180 -> 
+	181 -> 095
+	181 -> 275
+	182 -> 135
+	182 -> 220
+	183 -> 009
+//	184 -> 
+//	185 -> 
+//	186 -> 
+//	187 -> 
+	188 -> 257
+	190 -> 013
+	190 -> 153
+	191 -> 101
+//	192 -> 
+	193 -> 260
+	194 -> 142
+	194 -> 144
+	195 -> 299
+	196 -> 151
+	197 -> 172
+	198 -> 142
+	198 -> 096
+//	199 -> 
+	200 -> 130
+//	201 -> 
+	202 -> 028
+	202 -> 132
+	203 -> 041
+//	205 -> 
+	206 -> 177
+	207 -> 249
+	207 -> 051
+//	208 -> 
+	209 -> 141
+//	210 -> 
+	211 -> 337
+	211 -> 162
+//	212 -> 
+	214 -> 066
+	215 -> 325
+	215 -> 292
+//	216 -> 
+//	218 -> 
+//	219 -> 
+//	220 -> 
+	221 -> 038
+	222 -> 302
+	222 -> 313
+	223 -> 213
+	223 -> 246
+	224 -> 042
+	225 -> 035
+	226 -> 181
+	226 -> 339
+//	227 -> 
+//	228 -> 
+//	229 -> 
+	230 -> 282
+	230 -> 160
+	231 -> 250
+//	232 -> 
+//	233 -> 
+	234 -> 091
+	234 -> 103
+	235 -> 189
+	236 -> 059
+//	237 -> 
+	238 -> 045 [color = "blue" fontcolor = "blue" label = "vampire"]
+	238 -> 338 [color = "blue" fontcolor = "blue" label = "slayer"]
+	238 -> 196 [color = "blue" fontcolor = "blue" label = "human"]
+//	239 -> 
+	240 -> 190
+	241 -> 265
+//	242 -> 
+	243 -> 310
+	244 -> 052
+	245 -> 138
+	245 -> 254
+	246 -> 059
+//	247 -> 
+	248 -> 154
+	249 -> 166
+	249 -> 110
+	250 -> 094
+//	251 -> 
+//	252 -> 
+	253 -> 174
+	256 -> 113
+	256 -> 141
+	257 -> 142
+	257 -> 281
+	258 -> 324
+	258 -> 131
+	259 -> 263
+	260 -> 002
+	260 -> 298
+//	261 -> 
+	262 -> 264
+	263 -> 007 [color = "blue" fontcolor = "blue" label = "prepared"]
+	263 -> 005 [color = "blue" fontcolor = "blue" label = "drunk"]
+	263 -> 074 [color = "blue" fontcolor = "blue" label = "blew off"]
+	264 -> 012
+	265 -> 017
+	267 -> 054
+//	268 -> 
+//	269 -> 
+	272 -> 084
+//	273 -> 
+//	274 -> 
+//	275 -> 
+//	276 -> 
+//	277 -> 
+	278 -> 330
+//	279 -> 
+	280 -> 102
+	281 -> 301
+	282 -> 238
+//	283 -> 
+//	284 -> 
+//	285 -> 
+	286 -> 187
+	286 -> 062
+	288 -> 133
+	288 -> 222 [color = "blue" fontcolor = "blue" label = "voice"]
+//	289 -> 
+//	290 -> 
+	291 -> 147
+	291 -> 035
+	292 -> 243
+	293 -> 259 [color = "blue" fontcolor = "blue" label = "theatre"]
+	293 -> 155 [color = "blue" fontcolor = "blue" label = "mma"]
+	294 -> 010
+//	295 -> 
+//	296 -> 
+//	297 -> 
+	298 -> 291
+	298 -> 040 [color = "blue" fontcolor = "blue" label = "met vampire"]
+	299 -> 203
+//	300 -> 
+	301 -> 234
+//	303 -> 
+//	304 -> 
+//	305 -> 
+//	306 -> 
+//	307 -> 
+	308 -> 266
+	309 -> 336
+	311 -> 107
+	312 -> 297
+	313 -> 206
+//	314 -> 
+	315 -> 280
+//	316 -> 
+//	317 -> 
+	318 -> 085
+//	319 -> 
+	320 -> 282
+	320 -> 122
+	321 -> 308
+//	322 -> 
+//	323 -> 
+	324 -> 036
+	324 -> 194
+//	325 -> 
+	326 -> 099
+//	327 -> 
+	328 -> 145
+//	329 -> 
+	330 -> 093
+//	331 -> 
+	332 -> 090
+	332 -> 248
+//	333 -> 
+//	334 -> 
+//	335 -> 
+	336 -> 193
+	337 -> 064
+	338 -> 097
+//	339 -> 
+	340 -> 211
+	340 -> 011
+//	341 -> 
+//	342 -> 
+//	343 -> 
+//	344 -> 
+//	345 -> 
+//	346 -> 
+//	347 -> 
+//	348 -> 
+//	349 -> 
+//	350 -> 
+//	351 -> 
+//	352 -> 
+//	353 -> 
+//	354 -> 
+//	355 -> 
+//	356 -> 
+//	357 -> 
+//	358 -> 
+//	359 -> 
+//	360 -> 
+//	361 -> 
+//	362 -> 
+//	363 -> 
+//	364 -> 
+//	365 -> 
+//	366 -> 
+//	367 -> 
+//	368 -> 
+//	369 -> 
+//	370 -> 
+//	371 -> 
+//	372 -> 
+//	373 -> 
+//	374 -> 
+//	375 -> 
+//	376 -> 
+//	377 -> 
+//	378 -> 
+//	379 -> 
+//	380 -> 
+//	381 -> 
+//	382 -> 
+//	383 -> 
+//	384 -> 
+//	385 -> 
+//	386 -> 
+//	387 -> 
+//	388 -> 
+//	389 -> 
+//	390 -> 
+//	391 -> 
+//	392 -> 
+//	393 -> 
+//	394 -> 
+//	395 -> 
+//	396 -> 
+//	397 -> 
+//	398 -> 
+//	399 -> 
+//	400 -> 
+//	401 -> 
+//	402 -> 
+//	403 -> 
+//	404 -> 
+//	405 -> 
+//	406 -> 
+//	407 -> 
+//	408 -> 
+//	409 -> 
+//	410 -> 
+//	411 -> 
+//	412 -> 
+//	413 -> 
+//	414 -> 
+//	415 -> 
+//	416 -> 
+//	417 -> 
+//	418 -> 
+//	419 -> 
+//	420 -> 
+//	421 -> 
+//	422 -> 
+//	423 -> 
+//	424 -> 
+//	425 -> 
+//	426 -> 
+//	427 -> 
+//	428 -> 
+//	429 -> 
+//	430 -> 
+//	431 -> 
+//	432 -> 
+//	433 -> 
+//	434 -> 
+//	435 -> 
+//	436 -> 
+//	437 -> 
+//	438 -> 
+//	439 -> 
+//	440 -> 
+//	441 -> 
+//	442 -> 
+//	443 -> 
+//	444 -> 
+//	445 -> 
+//	446 -> 
+//	447 -> 
+//	448 -> 
+//	449 -> 
+//	450 -> 
+//	451 -> 
+//	452 -> 
+//	453 -> 
+//	454 -> 
+//	455 -> 
+//	456 -> 
+//	457 -> 
+//	458 -> 
+//	459 -> 
+//	460 -> 
+//	461 -> 
+//	462 -> 
+//	463 -> 
+//	464 -> 
+//	465 -> 
+//	466 -> 
+//	467 -> 
+//	468 -> 
+//	469 -> 
+//	470 -> 
+//	471 -> 
+//	472 -> 
+//	473 -> 
+//	474 -> 
+//	475 -> 
+//	476 -> 
+//	477 -> 
+//	478 -> 
+//	479 -> 
+//	480 -> 
+//	481 -> 
+//	482 -> 
+//	483 -> 
+//	484 -> 
+//	485 -> 
+//	486 -> 
+//	487 -> 
+//	488 -> 
+//	489 -> 
+//	490 -> 
+//	491 -> 
+//	492 -> 
+//	493 -> 
+//	494 -> 
+//	495 -> 
+//	496 -> 
+//	497 -> 
+//	498 -> 
+//	499 -> 
+//	500 -> 
+}
