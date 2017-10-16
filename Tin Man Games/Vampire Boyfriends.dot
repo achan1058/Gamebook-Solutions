@@ -67,14 +67,14 @@ digraph "Fighting Fantasy: Title" {
 		mondam5
 		mon5
 		079 [fontcolor = "black" shape = "octagon"]
-		172 [fontcolor = "black" shape = "octagon"]
-		178 [fontcolor = "black" shape = "octagon"]
-		216 [fontcolor = "black" shape = "octagon"]
-		270 [fontcolor = "black" shape = "octagon"]
+		172
+		178
+		216
+		270
 		287 [fontcolor = "black" shape = "octagon"]
-		297 [fontcolor = "black" shape = "octagon"]
-		310 [fontcolor = "black" shape = "octagon"]
-		319 [fontcolor = "black" shape = "octagon"]
+		297
+		310
+		319
 	}
 
 	subgraph Required2 {
