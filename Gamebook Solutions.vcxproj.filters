@@ -25,6 +25,9 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Give Yourself Goosebumps">
+      <UniqueIdentifier>{52c2cc07-2fc7-4547-a58c-09b88c31cdf0}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Gamebook Solutions.cpp">
@@ -109,6 +112,12 @@
     </CustomBuild>
     <CustomBuild Include="Tin Man Games\Vampire Boyfriends.dot">
       <Filter>Tin Man Games</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Give Yourself Goosebumps\S3 - Trapped in the Circus of Fear.dot">
+      <Filter>Give Yourself Goosebumps</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Give Yourself Goosebumps\07 - Under the Magician%27s Spell.dot">
+      <Filter>Give Yourself Goosebumps</Filter>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>

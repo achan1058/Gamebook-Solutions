@@ -137,6 +137,7 @@ digraph "Fighting Fantasy: Title" {
 		066
 		087
 		096
+		127
 		189
 		204
 		213
@@ -144,6 +145,7 @@ digraph "Fighting Fantasy: Title" {
 		254
 		255
 		266
+		269
 		271
 		302
 	}
@@ -176,6 +178,7 @@ digraph "Fighting Fantasy: Title" {
 		139 [label = "\N\n theatre"]
 		145 [label = "\N\n vampire?"]
 		173 [label = "\N\n birthmark"]
+		294 [label = "\N\n drunk"]
 		key1 [label = "\N\n text"]
 		key2 [label = "\N\n text"]
 		key3 [label = "\N\n text"]
@@ -216,7 +219,8 @@ digraph "Fighting Fantasy: Title" {
 	002 -> 225
 	002 -> 298
 //	003 -> 
-//	004 -> 
+	004 -> 083 [color = "blue" fontcolor = "blue" label = "lukas"]
+	004 -> 205
 	005 -> 201
 	005 -> 021
 	006 -> 086
@@ -274,7 +278,8 @@ digraph "Fighting Fantasy: Title" {
 //	050 -> 
 	052 -> 319
 	052 -> 178
-//	053 -> 
+	053 -> 283
+	053 -> 303
 	054 -> 022
 	054 -> 244
 	055 -> 025
@@ -290,7 +295,8 @@ digraph "Fighting Fantasy: Title" {
 //	063 -> 
 	064 -> 017 [color = "blue" fontcolor = "blue" label = "phone"]
 	064 -> 169
-//	065 -> 
+	065 -> 053 [color = "blue" fontcolor = "blue" label = "girls out"]
+	065 -> 015
 //	067 -> 
 //	068 -> 
 //	069 -> 
@@ -305,16 +311,17 @@ digraph "Fighting Fantasy: Title" {
 	076 -> 044
 	077 -> 112
 	078 -> 076
-//	080 -> 
+	080 -> 234
 //	081 -> 
 	082 -> 103
 	082 -> 091
-//	083 -> 
+	083 -> 028
+	083 -> 132
 	084 -> 330
 	085 -> 223
 	086 -> 069
 	086 -> 074
-//	088 -> 
+	088 -> 301
 	089 -> 259
 	090 -> 087
 	091 -> 197
@@ -342,7 +349,7 @@ digraph "Fighting Fantasy: Title" {
 	106 -> 326
 	107 -> 026
 //	108 -> 
-//	109 -> 
+	109 -> 101
 	110 -> 278
 	111 -> 294
 	111 -> 256
@@ -354,7 +361,8 @@ digraph "Fighting Fantasy: Title" {
 	116 -> 210
 //	117 -> 
 //	118 -> 
-//	119 -> 
+	119 -> 137 [color = "blue" fontcolor = "blue" label = "girls out"]
+	119 -> 024
 //	120 -> 
 //	121 -> 
 	122 -> 160 [color = "blue" fontcolor = "blue" label = "vampire"]
@@ -365,7 +373,6 @@ digraph "Fighting Fantasy: Title" {
 	124 -> 340
 //	125 -> 
 	126 -> 019
-//	127 -> 
 	128 -> 020
 	128 -> 134
 //	129 -> 
@@ -380,11 +387,13 @@ digraph "Fighting Fantasy: Title" {
 	135 -> 121
 	135 -> 055
 	136 -> 235
-//	137 -> 
+	137 -> 283
+	137 -> 237
 	138 -> 288
 	139 -> 294
 	139 -> 032
-//	140 -> 
+	140 -> 171 [color = "blue" fontcolor = "blue" label = "slayer"]
+	140 -> 242
 	141 -> 224
 	142 -> 161 [color = "blue" fontcolor = "blue" label = "vampire"]
 	142 -> 332
@@ -417,9 +426,9 @@ digraph "Fighting Fantasy: Title" {
 	161 -> 027
 	162 -> 081 [color = "blue" fontcolor = "blue" label = "drink me"]
 	162 -> 039
-//	163 -> 
+	163 -> 101
 //	164 -> 
-//	165 -> 
+	165 -> 065
 	166 -> 173
 	166 -> 014
 //	167 -> 
@@ -460,7 +469,8 @@ digraph "Fighting Fantasy: Title" {
 	198 -> 096
 //	199 -> 
 	200 -> 130
-//	201 -> 
+	201 -> 004
+	201 -> 029
 	202 -> 028
 	202 -> 132
 	203 -> 041
@@ -497,19 +507,23 @@ digraph "Fighting Fantasy: Title" {
 	230 -> 160
 	231 -> 250
 //	232 -> 
-//	233 -> 
+	233 -> 127
+	233 -> 109
 	234 -> 091
 	234 -> 103
 	235 -> 189
 	236 -> 059
-//	237 -> 
+	237 -> 033 [color = "blue" fontcolor = "blue" label = "birthmark"]
+	237 -> 163
 	238 -> 045 [color = "blue" fontcolor = "blue" label = "vampire"]
 	238 -> 338 [color = "blue" fontcolor = "blue" label = "slayer"]
 	238 -> 196 [color = "blue" fontcolor = "blue" label = "human"]
 //	239 -> 
 	240 -> 190
 	241 -> 265
-//	242 -> 
+	242 -> 115
+	242 -> 279
+	242 -> 277
 	243 -> 310
 	244 -> 052
 	245 -> 138
@@ -541,19 +555,19 @@ digraph "Fighting Fantasy: Title" {
 	265 -> 017
 	267 -> 054
 //	268 -> 
-//	269 -> 
 	272 -> 084
-//	273 -> 
+	273 -> 080
 //	274 -> 
 //	275 -> 
 //	276 -> 
-//	277 -> 
+	277 -> 269
 	278 -> 330
-//	279 -> 
+	279 -> 165
 	280 -> 102
 	281 -> 301
 	282 -> 238
-//	283 -> 
+	283 -> 088
+	283 -> 273
 //	284 -> 
 //	285 -> 
 	286 -> 187
@@ -576,7 +590,8 @@ digraph "Fighting Fantasy: Title" {
 	299 -> 203
 //	300 -> 
 	301 -> 234
-//	303 -> 
+	303 -> 233 [color = "blue" fontcolor = "blue" label = "royce"]
+	303 -> 109
 //	304 -> 
 //	305 -> 
 //	306 -> 

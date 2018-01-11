@@ -211,8 +211,18 @@
     </CustomBuild>
     <CustomBuild Include="Fighting Fantasy\Night Dragon.dot">
       <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
     </CustomBuild>
     <CustomBuild Include="Tin Man Games\Vampire Boyfriends.dot">
+      <FileType>Document</FileType>
+    </CustomBuild>
+    <CustomBuild Include="Give Yourself Goosebumps\S3 - Trapped in the Circus of Fear.dot">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuild>
+    <CustomBuild Include="Give Yourself Goosebumps\07 - Under the Magician%27s Spell.dot">
       <FileType>Document</FileType>
     </CustomBuild>
   </ItemGroup>
