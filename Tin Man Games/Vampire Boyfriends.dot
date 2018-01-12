@@ -66,6 +66,8 @@ digraph "Fighting Fantasy: Title" {
 		monboo5
 		mondam5
 		mon5
+		016
+		030
 		079 [fontcolor = "black" shape = "octagon"]
 		172
 		178
@@ -77,66 +79,19 @@ digraph "Fighting Fantasy: Title" {
 		319
 	}
 
-	subgraph Required2 {
-		node [style = "filled" color = "#FFF700" fillcolor = "#FFF700" fontcolor = "blue" shape = "rect"]
-		req2
-	}
-
-	subgraph Recommended {
-		node [penwidth = 3 color = "gold"]
-		txt2
-		key2 [shape = "rect" fontcolor = "blue"]
-		boo3 [style = "filled" fillcolor = "greenyellow"]
-		boo4 [style = "filled" fillcolor = "greenyellow"]
-		dam3 [style = "filled" fillcolor = "pink"]
-		dam4 [style = "filled" fillcolor = "pink"]
-		monboo3 [style = "filled" fillcolor = "greenyellow"]
-		monboo4 [style = "filled" fillcolor = "greenyellow"]
-		mondam3 [style = "filled" fillcolor = "pink"]
-		mondam4 [style = "filled" fillcolor = "pink"]
-		mon3
-		mon4
-	}
-	
-	subgraph Optional {
-		node [style = "filled" color = "paleturquoise1" fillcolor = "paleturquoise1" fontcolor = "blue" shape = "rect"]
-		opt
-	}
-
-	subgraph Combat {
-		style = "filled" color = "palegreen2"
-		subgraph cluster_MONSTER {
-			label = "? MONSTER\n 0/0 0/0"
-			mon1 [label = "\N\n text"]
-			mon2 [shape = "rect" fontcolor = "blue" label = "\N\n text"]
-			mon3 [label = "\N\n text"]
-			mon4 [shape = "rect" fontcolor = "blue" label = "\N\n text"]
-			mon5 [shape = "rect" fontcolor = "blue" label = "\N\n text"]
-			monboo1 [style = "filled" color = "greenyellow" label = "\N\n text"]
-			monboo2 [shape = "rect" style = "filled" color = "greenyellow" fontcolor = "blue" label = "\N\n text"]
-			monboo3 [label = "\N\n text"]
-			monboo4 [shape = "rect" fontcolor = "blue" label = "\N\n text"]
-			monboo5 [shape = "rect" fontcolor = "blue" label = "\N\n text"]
-			mondam1 [style = "filled" color = "pink" label = "\N\n text"]
-			mondam2 [shape = "rect" style = "filled" color = "pink" fontcolor = "blue" label = "\N\n text"]
-			mondam3 [label = "\N\n text"]
-			mondam4 [shape = "rect" fontcolor = "blue" label = "\N\n text"]
-			mondam5 [shape = "rect" fontcolor = "blue" label = "\N\n text"]
-		}
-		cbt
-	}
-
 	subgraph Death {
 		node [style = "filled" color = "red"]
 		ddt
 		020
 		022
+		036
 		047
 		051
 		060
 		066
 		087
 		096
+		121
 		127
 		189
 		204
@@ -150,26 +105,6 @@ digraph "Fighting Fantasy: Title" {
 		302
 	}
 
-	subgraph Boost {
-		node [style = "filled" color = "greenyellow"]
-		bst
-		boo1 [label = "\N\n text"]
-		boo2 [shape = "rect" fontcolor = "blue" label = "\N\n text"]
-		boo3 [label = "\N\n text"]
-		boo4 [shape = "rect" fontcolor = "blue" label = "\N\n text"]
-		boo5 [shape = "rect" fontcolor = "blue" label = "\N\n text"]
-	}
-
-	subgraph Damage {
-		node [style = "filled" color = "pink"]
-		ddg
-		dam1 [label = "\N\n text"]
-		dam2 [shape = "rect" fontcolor = "blue" label = "\N\n text"]
-		dam3 [label = "\N\n text"]
-		dam4 [shape = "rect" fontcolor = "blue" label = "\N\n text"]
-		dam5 [shape = "rect" fontcolor = "blue" label = "\N\n text"]
-	}
-
 	subgraph Key_Item {
 		node [fontcolor = "blue" shape = "rect"]
 		kky
@@ -179,41 +114,8 @@ digraph "Fighting Fantasy: Title" {
 		145 [label = "\N\n vampire?"]
 		173 [label = "\N\n birthmark"]
 		294 [label = "\N\n drunk"]
-		key1 [label = "\N\n text"]
-		key2 [label = "\N\n text"]
-		key3 [label = "\N\n text"]
 	}
 	
-	subgraph Shop {
-		node [fontcolor = "purple" shape = "rect"]
-		shp
-		shop1 [label = "\N\n text"]
-	}
-
-	mon1 -> mon2 -> mon3 -> mon4 -> mon5 [penwidth = 3]
-	boo1 -> boo2 -> boo3 -> boo4 -> boo5 [penwidth = 3]
-	dam1 -> dam2 -> dam3 -> dam4 -> dam5
-	txt1 -> key1 -> txt2 -> key2 -> key3
-	monboo1 -> monboo2 -> monboo3 -> monboo4 -> monboo5
-	mondam1 -> mondam2 -> mondam3 -> mondam4 -> mondam5
-
-	myTitle -> z001 [penwidth = 3]
-	z001 -> z002 [color = "purple" fontcolor = "purple" label = "1-3"]
-	z001 -> z003 [color = "purple" fontcolor = "purple" label = "4-6"]
-	z002 -> z004 [color = "green" fontcolor = "green" label = "LK"]
-	z002 -> z005 [color = "brown"]
-	z003 -> z006 [dir = "both"]
-	z004 -> z007 [color = "blue" fontcolor = "blue" label = "req"]
-	z004 -> z008 [color = "cyan3" fontcolor = "cyan3" label = "-opt"]
-	z005 -> z009 [color = "grey" fontcolor = "grey" label = "info"]
-	z009 -> z010 [color = "crimson" fontcolor = "crimson" label = "error(?)"]
-	z010 -> z011 [color = "magenta" fontcolor = "magenta" label = "escape"]
-	{
-		rank = same
-		z003
-		z006
-	}
-
 	title -> 001
 	001 -> 056
 	002 -> 225
@@ -238,7 +140,6 @@ digraph "Fighting Fantasy: Title" {
 	014 -> 028
 	014 -> 132
 //	015 -> 
-//	016 -> 
 	017 -> 149
 //	018 -> 
 	019 -> 079
@@ -252,15 +153,18 @@ digraph "Fighting Fantasy: Title" {
 	027 -> 267
 	028 -> 106
 	028 -> 119
-//	029 -> 
-//	030 -> 
+	029 -> 295 [color = "cyan3" fontcolor = "cyan3" label = "reality show flyer"]
+	029 -> 228 [color = "cyan3" fontcolor = "cyan3" label = "audition"]
+	029 -> 333 [color = "cyan3" fontcolor = "cyan3" label = "phoned in"]
+	029 -> 182 [color = "cyan3" fontcolor = "cyan3" label = "blew it"]
+	029 -> 307
+	029 -> 030
 //	031 -> 
 	032 -> 089
 	032 -> 141
 //	033 -> 
 //	034 -> 
 	035 -> 270
-//	036 -> 
 //	037 -> 
 	038 -> 046 [color = "blue" fontcolor = "blue" label = "girls"]
 	038 -> 008
@@ -286,7 +190,8 @@ digraph "Fighting Fantasy: Title" {
 	056 -> 139
 	056 -> 111
 	056 -> 159
-//	057 -> 
+	057 -> 150 [color = "blue" fontcolor = "blue" label = "sex"]
+	057 -> 175
 //	058 -> 
 	059 -> 019
 	061 -> 328
@@ -300,7 +205,7 @@ digraph "Fighting Fantasy: Title" {
 //	067 -> 
 //	068 -> 
 //	069 -> 
-//	070 -> 
+	070 -> 258
 	071 -> 245
 	072 -> 315
 	072 -> 047
@@ -356,20 +261,23 @@ digraph "Fighting Fantasy: Title" {
 	112 -> 214
 	113 -> 048
 	114 -> 116
-//	115 -> 
+	115 -> 227
+	115 -> 070
+	115 -> 075 [color = "cyan3" fontcolor = "cyan3" label = "reality show?"]
 	116 -> 082 [color = "blue" fontcolor = "blue" label = "royce"]
 	116 -> 210
 //	117 -> 
 //	118 -> 
 	119 -> 137 [color = "blue" fontcolor = "blue" label = "girls out"]
 	119 -> 024
-//	120 -> 
-//	121 -> 
+	120 -> 258 [color = "cyan3" fontcolor = "cyan3" label = "royce"]
+	120 -> 295 [color = "cyan3" fontcolor = "cyan3" label = "reality show flyer"]
+	120 -> 212
 	122 -> 160 [color = "blue" fontcolor = "blue" label = "vampire"]
 	122 -> 136 [color = "blue" fontcolor = "blue" label = "slayer"]
 	122 -> 077 [color = "blue" fontcolor = "blue" label = "human"]
 	123 -> 188
-	123 -> 057 [color = "blue" fontcolor = "blue" label = "lukas"]
+	123 -> 057 [color = "cyan3" fontcolor = "cyan3" label = "lukas"]
 	124 -> 340
 //	125 -> 
 	126 -> 019
@@ -400,7 +308,7 @@ digraph "Fighting Fantasy: Title" {
 	142 -> 271 [color = "blue" fontcolor = "blue" label = "slayer"]
 	143 -> 204
 	143 -> 207
-//	144 -> 
+	144 -> 301
 	145 -> 148
 //	146 -> 
 	147 -> 114
@@ -408,7 +316,7 @@ digraph "Fighting Fantasy: Title" {
 	148 -> 282
 	148 -> 122
 	149 -> 286
-//	150 -> 
+	150 -> 165
 	151 -> 262 [color = "blue" fontcolor = "blue" label = "train"]
 	151 -> 214
 	152 -> 258
@@ -483,7 +391,7 @@ digraph "Fighting Fantasy: Title" {
 //	210 -> 
 	211 -> 337
 	211 -> 162
-//	212 -> 
+	212 -> 307
 	214 -> 066
 	215 -> 325
 	215 -> 292
@@ -500,7 +408,7 @@ digraph "Fighting Fantasy: Title" {
 	225 -> 035
 	226 -> 181
 	226 -> 339
-//	227 -> 
+	227 -> 174
 //	228 -> 
 //	229 -> 
 	230 -> 282
@@ -569,7 +477,7 @@ digraph "Fighting Fantasy: Title" {
 	283 -> 088
 	283 -> 273
 //	284 -> 
-//	285 -> 
+	285 -> 016
 	286 -> 187
 	286 -> 062
 	288 -> 133
@@ -595,7 +503,7 @@ digraph "Fighting Fantasy: Title" {
 //	304 -> 
 //	305 -> 
 //	306 -> 
-//	307 -> 
+	307 -> 285
 	308 -> 266
 	309 -> 336
 	311 -> 107
@@ -623,9 +531,15 @@ digraph "Fighting Fantasy: Title" {
 //	331 -> 
 	332 -> 090
 	332 -> 248
-//	333 -> 
+	333 -> 135
+	333 -> 120
 //	334 -> 
-//	335 -> 
+	335 -> 228 [color = "cyan3" fontcolor = "cyan3" label = "audition"]
+	335 -> 333 [color = "cyan3" fontcolor = "cyan3" label = "phoned in"]
+	335 -> 182 [color = "cyan3" fontcolor = "cyan3" label = "blew it"]
+	335 -> 295 [color = "cyan3" fontcolor = "cyan3" label = "reality show flyer"]
+	335 -> 307
+	335 -> 030
 	336 -> 193
 	337 -> 064
 	338 -> 097
