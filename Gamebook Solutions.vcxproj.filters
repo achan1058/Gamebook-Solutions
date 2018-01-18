@@ -119,6 +119,9 @@
     <CustomBuild Include="Give Yourself Goosebumps\07 - Under the Magician%27s Spell.dot">
       <Filter>Give Yourself Goosebumps</Filter>
     </CustomBuild>
+    <CustomBuild Include="Tin Man Games\Hex Boyfriends.dot">
+      <Filter>Tin Man Games</Filter>
+    </CustomBuild>
   </ItemGroup>
   <ItemGroup>
     <Text Include="vertex.txt">

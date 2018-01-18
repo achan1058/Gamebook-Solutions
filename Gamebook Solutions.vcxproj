@@ -225,6 +225,9 @@
     <CustomBuild Include="Give Yourself Goosebumps\07 - Under the Magician%27s Spell.dot">
       <FileType>Document</FileType>
     </CustomBuild>
+    <CustomBuild Include="Tin Man Games\Hex Boyfriends.dot">
+      <FileType>Document</FileType>
+    </CustomBuild>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
