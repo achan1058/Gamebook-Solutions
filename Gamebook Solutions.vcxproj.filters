@@ -110,17 +110,11 @@
     <CustomBuild Include="Fighting Fantasy\Night Dragon.dot">
       <Filter>Fighting Fantasy</Filter>
     </CustomBuild>
-    <CustomBuild Include="Tin Man Games\Vampire Boyfriends.dot">
-      <Filter>Tin Man Games</Filter>
-    </CustomBuild>
     <CustomBuild Include="Give Yourself Goosebumps\S3 - Trapped in the Circus of Fear.dot">
       <Filter>Give Yourself Goosebumps</Filter>
     </CustomBuild>
     <CustomBuild Include="Give Yourself Goosebumps\07 - Under the Magician%27s Spell.dot">
       <Filter>Give Yourself Goosebumps</Filter>
-    </CustomBuild>
-    <CustomBuild Include="Tin Man Games\Hex Boyfriends.dot">
-      <Filter>Tin Man Games</Filter>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
@@ -133,5 +127,8 @@
   </ItemGroup>
   <ItemGroup>
     <None Include=".gitignore" />
+    <None Include="Tin Man Games\Gun Dogs.dot">
+      <Filter>Tin Man Games</Filter>
+    </None>
   </ItemGroup>
 </Project>
