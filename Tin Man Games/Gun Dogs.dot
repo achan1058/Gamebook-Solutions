@@ -41,16 +41,20 @@ digraph "Fighting Fantasy: Title" {
 		^: Damage can be reduced by items\l \
 		@: Take 2 items\l\l \
 		Starts with:\l \
-		Initial Skill: 1d6+6\l \
-		Initial Stamina: 2d6+12\l \
-		Initial Luck: 1d6+6\l\l \
+		Initial Gun Skill: 8\l \
+		Initial Reload Skill: 8\l \
+		Initial Stamina: 4d6+24\l \
+		Initial Physical: 1d6+6\l \
+		Initial Mental: 1d6+6\l\l \
 		skill/stamina/luck potion: +all SK/ST/LK&1ILK\l \
-		10 meal: +4ST\l \
-		sword\l \
-		leather armor\l \
-		lantern\l \
-		tinderbox\l \
-		2d6+6 gold\l \
+		3 healing potions\l \
+		map\l \
+		30 bullets\l \
+		gun\l \
+		sword (+2off)\l \
+		dagger (+1off)\l \
+		armor (+2def)\l \
+		50 silver gert\l \
 		backpack\l\l \
 		Comments:\l \
 		none\l \
@@ -67,6 +71,7 @@ digraph "Fighting Fantasy: Title" {
 		mondam5
 		mon5
 		ending [fontcolor = "black" shape = "octagon"]
+		703
 	}
 
 	subgraph Required2 {
@@ -116,11 +121,151 @@ digraph "Fighting Fantasy: Title" {
 			mondam5 [shape = "rect" fontcolor = "blue" label = "\N\n text"]
 		}
 		cbt
+		
+		subgraph cluster_CRAKE {
+			label = "2 Crake\n 14/1/1 12/1/1"
+			140
+		}
+		
+		subgraph cluster_THUG {
+			label = "2 Thug\n 12/2/1 10/1/2"
+			789
+		}
+		
+		subgraph cluster_MASKER_GOBLIN {
+			label = "2 Masker Goblin\n 8/1/1 8/1/1"
+			634
+		}
+		
+		subgraph cluster_MASKER_GOBLIN_2 {
+			label = "Masker Goblin\n 9/1/1"
+			519
+		}
+		
+		subgraph cluster_ASSASSIN {
+			label = "Assassin\n 15/2/2"
+			587
+		}
+		
+		subgraph cluster_STICKLE_BACK_SPIDER {
+			label = "Stickle-back Spider\n 15/3/2"
+			158
+		}
+		
+		subgraph cluster_SWAMP_TROLL_HUNTER {
+			label = "Swamp Troll Hunter\n 26/3/2"
+			157
+		}
+		
+		subgraph cluster_SWAMP_TROLL {
+			label = "Swamp Troll\n 13/2/1"
+			184
+		}
+		
+		subgraph cluster_YETI {
+			label = "Yeti\n 25/3/3"
+			077
+			750
+			339
+		}
+		
+		subgraph cluster_YETI2 {
+			label = "Yeti\n 12/2/1"
+			194
+		}
+		
+		subgraph cluster_HOLY_PALADIN {
+			label = "Holy Paladin\n 26/4/3"
+			444
+		}
+		
+		subgraph cluster_HALFMAN_MUTANT {
+			label = "Halfman Mutant\n 25/3/2"
+			286
+		}
+		
+		subgraph cluster_CULTIST {
+			label = "2 Cultist\n 20/3/2 20/3/2"
+			249
+		}
+		
+		subgraph cluster_CULTIST2 {
+			label = "Cultist\n 20/3/2"
+			429
+		}
+		
+		subgraph cluster_HALFMAN_EXCAVATOR {
+			label = "2 Halfman Excavator\n 15/3/3 15/3/3"
+			412
+			306
+		}
+		
+		subgraph cluster_HALFMAN_EXCAVATOR2 {
+			label = "Halfman Excavator\n 15/3/3"
+			723
+		}
+		
+		subgraph cluster_LAKEMAN {
+			label = "2 Lakeman\n 16/3/2 15/3/2"
+			787
+		}
+		
+		subgraph cluster_GIANT_FIRE_SCORPION {
+			label = "Giant Fire Scorpion\n 15/3/3"
+			482
+			695 [shape = "rect" fontcolor = "blue" label = "\N\n -some equip"]
+		}
+		
+		subgraph cluster_ZOMBIE {
+			label = "2 Zombie\n 12/3/1 11/3/1"
+			647
+		}
+		
+		subgraph cluster_NIGHTWALKER {
+			label = "Nightwalker\n 25/3/3"
+			687
+		}
+		
+		subgraph cluster_MASKER_GOBLIN3 {
+			label = "2 Masker Goblin\n 8/1/1"
+			150
+		}
 	}
 
 	subgraph Death {
 		node [style = "filled" color = "red"]
 		ddt
+		024
+		027
+		035
+		056
+		061
+		069
+		123
+		171
+		172
+		199
+		214
+		250
+		252
+		260
+		270
+		314
+		316
+		374
+		398
+		419
+		457
+		528
+		568
+		577
+		658
+		659
+		731
+		741
+		744
+		778
+		790
 	}
 
 	subgraph Boost {
@@ -131,6 +276,15 @@ digraph "Fighting Fantasy: Title" {
 		boo3 [label = "\N\n text"]
 		boo4 [shape = "rect" fontcolor = "blue" label = "\N\n text"]
 		boo5 [shape = "rect" fontcolor = "blue" label = "\N\n text"]
+		120 [label = "\N\n +all LP"]
+		236 [shape = "rect" fontcolor = "blue" label = "\N\n improved gun\n 10 bullets\n +3GUN\n +2REL"]
+		394 [shape = "rect" fontcolor = "blue" label = "\N\n ring of health\n +5LP/+5ILP"]
+		411 [shape = "rect" fontcolor = "blue" label = "\N\n improved gun\n 10 bullets\n +3GUN\n +2REL"]
+		487 [label = "\N\n +25LP"]
+		613 [label = "\N\n +all LP"]
+		619 [label = "\N\n +all LP"]
+		768 [label = "\N\n +3LP"]
+		793 [label = "\N\n +2LP"]
 	}
 
 	subgraph Damage {
@@ -141,6 +295,21 @@ digraph "Fighting Fantasy: Title" {
 		dam3 [label = "\N\n text"]
 		dam4 [shape = "rect" fontcolor = "blue" label = "\N\n text"]
 		dam5 [shape = "rect" fontcolor = "blue" label = "\N\n text"]
+		092 [shape = "rect" fontcolor = "blue" label = "\N\n -1PHY\n witch's staff"]
+		181 [label = "\N\n -10LP"]
+		183 [label = "\N\n -2LP"]
+		228 [label = "\N\n -10LP"]
+		247 [label = "\N\n -2d6+2LP"]
+		269 [label = "\N\n -1MEN"]
+		326 [label = "\N\n -5LP"]
+		343 [label = "\N\n -5LP"]
+		468 [label = "\N\n -10LP"]
+		512 [label = "\N\n -1PHY"]
+		559 [label = "\N\n -5LP\n -5ILP (is it both?)"]
+		598 [label = "\N\n -5LP"]
+		648 [label = "\N\n -5LP"]
+		708 [shape = "rect" fontcolor = "blue" label = "\N\n -1MEN\n witch's staff"]
+		730 [label = "\N\n -5LP"]
 	}
 
 	subgraph Key_Item {
@@ -149,12 +318,57 @@ digraph "Fighting Fantasy: Title" {
 		key1 [label = "\N\n text"]
 		key2 [label = "\N\n text"]
 		key3 [label = "\N\n text"]
+		004 [label = "\N\n fine sword (+5 off)\n healing potion"]
+		022 [label = "\N\n -some items"]
+		026 [label = "\N\n key"]
+		049 [label = "\N\n 20 gert"]
+		058 [label = "\N\n -1 gert"]
+		068 [label = "\N\n lakemen info (human sacrifice, strong glass weapons)"]
+		071 [label = "\N\n sword (+2 off)\n dagger (+1 off)"]
+		074 [label = "\N\n 15 gert\n goblin sword (+3 off)"]
+		088 [label = "\N\n -all gert"]
+		118 [label = "\N\n room"]
+		122 [label = "\N\n -gun (-1 equip?)"]
+		177 [label = "\N\n holy smiter (+5 off)"]
+		243 [label = "\N\n blue potion"]
+		244 [label = "\N\n healing potion"]
+		304 [label = "\N\n 85 gert"]
+		312 [label = "\N\n dagger - the key"]
+		357 [label = "\N\n stone shires lionmen"]
+		360 [label = "\N\n witch's staff"]
+		408 [label = "\N\n -blue potion"]
+		418 [label = "\N\n nightwalker info (bonerot, how to kill)"]
+		428 [label = "\N\n inscribed dagger"]
+		430 [label = "\N\n -sword\n -gun\n broken gun"]
+		432 [label = "\N\n -gun"]
+		436 [label = "\N\n -torch"]
+		439 [label = "\N\n loaded gun"]
+		458 [label = "\N\n gold coin"]
+		462 [label = "\N\n wagonrider info (nomads in wheeled wagons)"]
+		478 [label = "\N\n fine sword (+5 off)\n healing potion"]
+		491 [label = "\N\n -1 gert"]
+		492 [label = "\N\n 2 healing potion\n gun\n 5 bullets"]
+		500 [label = "\N\n magical leather (+3 def)"]
+		527 [label = "\N\n witch's staff"]
+		539 [label = "\N\n gold coin"]
+		549 [label = "\N\n cultist loathe emperor\n cultist turn victims into hybrids\n cultist practice dark magic"]
+		561 [label = "\N\n holy water"]
+		584 [label = "\N\n -sword\n -gun\n broken gun"]
+		599 [label = "\N\n 15 gert\n swamp map"]
+		616 [label = "\N\n 15 gert\n glass spear (+3 off)"]
+		632 [label = "\N\n holy smiter (+5 off)"]
+		700 [label = "\N\n -sword\n -gun\n broken gun"]
+		713 [label = "\N\n torch"]
+		729 [label = "\N\n fine sword (+5 off)\n healing potion"]
+		733 [label = "\N\n furs\n bow & arrow"]
+		765 [label = "\N\n 25 gert\n goblin sword (+3 off)\n lakeman child"]
 	}
 	
 	subgraph Shop {
 		node [fontcolor = "purple" shape = "rect"]
 		shp
 		shop1 [label = "\N\n text"]
+		233 [label = "\N\n 10g: sword\n 5g: dagger\n 15g: steppehound fur"]
 	}
 
 	mon1 -> mon2 -> mon3 -> mon4 -> mon5 [penwidth = 3]
@@ -180,4 +394,1086 @@ digraph "Fighting Fantasy: Title" {
 		z003
 		z006
 	}
+
+	title -> 001
+	001 -> 289
+//	002 -> 
+//	003 -> 
+	004 -> 354
+//	005 -> 
+//	006 -> 
+//	007 -> 
+//	008 -> 
+//	009 -> 
+//	010 -> 
+//	011 -> 
+	012 -> 354
+	013 -> 148
+	013 -> 787
+//	014 -> 
+	015 -> 143
+//	016 -> 
+	017 -> 624 [color = "green" fontcolor = "green" label = "MEN>=16"]
+	017 -> 457 [color = "brown"]
+	018 -> 732
+	018 -> 404
+//	019 -> 
+//	020 -> 
+//	021 -> 
+	022 -> 018
+//	023 -> 
+//	025 -> 
+	026 -> 745
+//	028 -> 
+//	029 -> 
+	030 -> 062 [color = "green" fontcolor = "green" label = "PHY>=18"]
+	030 -> 616 [color = "brown"]
+//	031 -> 
+	032 -> 415
+	033 -> 298
+	033 -> 636
+	034 -> 274
+//	036 -> 
+	037 -> 432 [color = "green" fontcolor = "green" label = "GUN>=18"]
+	037 -> 339 [color = "brown"]
+	038 -> 346
+	038 -> 050
+//	039 -> 
+	040 -> 722 [color = "cyan3" fontcolor = "cyan3" label = "snake poison"]
+	040 -> 794
+	041 -> 493 [color = "green" fontcolor = "green" label = "PHY>=16"]
+	041 -> 142 [color = "brown"]
+//	042 -> 
+	043 -> 729 [color = "blue" fontcolor = "blue" label = "antivenom"]
+	043 -> 314
+//	044 -> 
+//	045 -> 
+	046 -> 571 [color = "green" fontcolor = "green" label = "PHY>=16"]
+	046 -> 658 [color = "brown"]
+	047 -> 556
+//	048 -> 
+	049 -> 130
+	050 -> 442 [color = "purple" fontcolor = "purple" label = "2-6"]
+	050 -> 790 [color = "purple" fontcolor = "purple" label = "1"]
+	051 -> 669
+	051 -> 647
+//	052 -> 
+	053 -> 471
+	054 -> 179
+//	055 -> 
+//	057 -> 
+	058 -> 595
+	058 -> 324
+	058 -> 130
+	059 -> 656
+	059 -> 361
+//	060 -> 
+	062 -> 032
+//	063 -> 
+	064 -> 344 [color = "green" fontcolor = "green" label = "MEN>=18"]
+	064 -> 113 [color = "brown"]
+	065 -> 157
+	065 -> 144
+	066 -> 538 [color = "blue" fontcolor = "blue" label = "fur"]
+	066 -> 623
+//	067 -> 
+	068 -> 580
+	068 -> 728
+	068 -> 672
+	068 -> 453
+	070 -> 325
+	070 -> 723
+	071 -> 477
+//	072 -> 
+//	073 -> 
+	074 -> 569
+	074 -> 223
+	075 -> 392 [color = "cyan3" fontcolor = "cyan3" label = "-15g"]
+	075 -> 253
+//	076 -> 
+	077 -> 575 [color = "magenta" fontcolor = "magenta" label = "win"]
+	077 -> 744
+//	078 -> 
+	285 -> 079 [dir = back]
+//	080 -> 
+//	081 -> 
+//	082 -> 
+//	083 -> 
+//	084 -> 
+	085 -> 388
+	086 -> 054
+	087 -> 666
+	088 -> 130
+//	089 -> 
+	090 -> 239
+	091 -> 278 [color = "blue" fontcolor = "blue" label = "saw lentican soldier"]
+	091 -> 300
+	092 -> 361
+//	093 -> 
+//	094 -> 
+//	095 -> 
+	096 -> 184
+	096 -> 513
+//	097 -> 
+	098 -> 441
+	098 -> 435
+	098 -> 246 [color = "cyan3" fontcolor = "cyan3" label = "room"]
+//	099 -> 
+//	100 -> 
+//	101 -> 
+	102 -> 074
+	103 -> 477
+//	104 -> 
+	105 -> 262 [color = "green" fontcolor = "green" label = "MEN>=14"]
+	105 -> 247 [color = "brown"]
+	106 -> 243 [color = "cyan3" fontcolor = "cyan3" label = "-5g"]
+	106 -> 130
+	107 -> 128
+//	108 -> 
+	109 -> 206
+	109 -> 034
+//	110 -> 
+	111 -> 611 [color = "green" fontcolor = "green" label = "PHY>=16"]
+	111 -> 199 [color = "brown"]
+//	112 -> 
+	113 -> 270
+//	114 -> 
+//	115 -> 
+	116 -> 331 [color = "cyan3" fontcolor = "cyan3" label = "-20g"]
+	116 -> 787
+//	117 -> 
+	118 -> 098
+//	119 -> 
+	120 -> 539
+//	121 -> 
+	122 -> 354
+	124 -> 319
+	124 -> 351
+//	125 -> 
+	126 -> 483 [color = "blue" fontcolor = "blue" label = "loaded gun"]
+	126 -> 286
+//	127 -> 
+	128 -> 231 [color = "blue" fontcolor = "blue" label = "furs"]
+	128 -> 381
+//	129 -> 
+	130 -> 793
+//	131 -> 
+	132 -> 759
+	132 -> 471
+	133 -> 768
+	133 -> 311
+//	134 -> 
+//	135 -> 
+//	136 -> 
+//	137 -> 
+	138 -> 354
+	139 -> 471
+	140 -> 599 [color = "magenta" fontcolor = "magenta" label = "win"]
+	140 -> 056
+//	141 -> 
+	142 -> 734 [color = "cyan3" fontcolor = "cyan3" label = "gun"]
+	142 -> 187 [color = "cyan3" fontcolor = "cyan3" label = "arrow & snake poison"]
+	142 -> 412
+	143 -> 434 [color = "blue" fontcolor = "blue" label = "taken over fort"]
+	143 -> 079
+	144 -> 157
+	144 -> 475
+//	145 -> 
+//	146 -> 
+//	147 -> 
+	148 -> 684 [color = "cyan3" fontcolor = "cyan3" label = "crake's egg"]
+	148 -> 232 [color = "cyan3" fontcolor = "cyan3" label = "steppehound fur"]
+	148 -> 372 [color = "cyan3" fontcolor = "cyan3" label = "witch's staff"]
+	148 -> 116 [color = "cyan3" fontcolor = "cyan3" label = "gold"]
+	148 -> 787
+//	149 -> 
+	150 -> 765 [color = "magenta" fontcolor = "magenta" label = "win"]
+	150 -> 123
+//	151 -> 
+	152 -> 118
+	152 -> 246 [color = "cyan3" fontcolor = "cyan3" label = "room"]
+	153 -> 503 [color = "green" fontcolor = "green" label = "MEN>=16"]
+	153 -> 043 [color = "brown"]
+	154 -> 538
+//	155 -> 
+//	156 -> 
+	157 -> 475 [color = "magenta" fontcolor = "magenta" label = "win"]
+	157 -> 577
+	158 -> 004 [color = "magenta" fontcolor = "magenta" label = "win"]
+	158 -> 398
+//	159 -> 
+//	160 -> 
+//	161 -> 
+//	162 -> 
+//	163 -> 
+	164 -> 692
+	165 -> 128
+//	166 -> 
+//	167 -> 
+//	168 -> 
+	169 -> 559 [color = "purple" fontcolor = "purple" label = "1-2"]
+	169 -> 269 [color = "purple" fontcolor = "purple" label = "3-4"]
+	169 -> 512 [color = "purple" fontcolor = "purple" label = "5-6"]
+//	170 -> 
+//	173 -> 
+//	174 -> 
+	175 -> 627 [color = "magenta" fontcolor = "magenta" label = "win"]
+	175 -> 195
+//	176 -> 
+	177 -> 471
+	178 -> 439 [color = "cyan3" fontcolor = "cyan3" label = "gun"]
+	178 -> 126
+	179 -> 229 [color = "blue" fontcolor = "blue" label = "look-a-like"]
+	179 -> 784
+//	180 -> 
+	181 -> 249 [color = "green" fontcolor = "green" label = "LP>0"]
+	181 -> 250 [color = "brown"]
+	182 -> 704 [color = "green" fontcolor = "green" label = "MEN>=14"]
+	182 -> 501 [color = "brown"]
+	183 -> 412 [color = "green" fontcolor = "green" label = "LP>0"]
+	183 -> 250 [color = "brown"]
+	184 -> 096 [color = "magenta" fontcolor = "magenta" label = "win"]
+	184 -> 577
+	185 -> 109
+	185 -> 274
+//	186 -> 
+	187 -> 302 [color = "green" fontcolor = "green" label = "PHY>=16"]
+	187 -> 327 [color = "brown"]
+	188 -> 669
+	188 -> 647
+//	189 -> 
+//	190 -> 
+	191 -> 678 [color = "green" fontcolor = "green" label = "GUN>=16"]
+	191 -> 730 [color = "brown"]
+//	192 -> 
+//	193 -> 
+	194 -> 619 [color = "magenta" fontcolor = "magenta" label = "win"]
+	194 -> 744
+	195 -> 538
+//	196 -> 
+	197 -> 157
+	197 -> 144
+//	198 -> 
+//	200 -> 
+	201 -> 178
+	201 -> 285
+	202 -> 538
+//	203 -> 
+//	204 -> 
+//	205 -> 
+	206 -> 274
+	207 -> 436 [color = "blue" fontcolor = "blue" label = "torch"]
+	207 -> 214
+//	208 -> 
+//	209 -> 
+//	210 -> 
+	211 -> 296
+	211 -> 318
+//	212 -> 
+	213 -> 361
+//	215 -> 
+	216 -> 158 [color = "green" fontcolor = "green" label = "PHY>=18"]
+	216 -> 437 [color = "brown"]
+//	217 -> 
+	218 -> 233
+	218 -> 576
+	218 -> 646
+//	219 -> 
+//	220 -> 
+	221 -> 513
+	221 -> 447
+	222 -> 386
+	222 -> 597
+	223 -> 030 [color = "cyan3" fontcolor = "cyan3" label = "-???"]
+	223 -> 571
+	224 -> 118
+	224 -> 435
+	225 -> 627
+	225 -> 154
+//	226 -> 
+//	227 -> 
+	228 -> 249 [color = "green" fontcolor = "green" label = "LP>0"]
+	228 -> 250 [color = "brown"]
+	229 -> 784
+//	230 -> 
+	231 -> 311
+	232 -> 684 [color = "cyan3" fontcolor = "cyan3" label = "crake's egg"]
+	232 -> 372 [color = "cyan3" fontcolor = "cyan3" label = "witch's staff"]
+	232 -> 116 [color = "cyan3" fontcolor = "cyan3" label = "gold"]
+	232 -> 787
+	233 -> 443
+	233 -> 556
+//	234 -> 
+//	235 -> 
+	236 -> 556
+	237 -> 133 [color = "green" fontcolor = "green" label = "MEN>=16"]
+	237 -> 077 [color = "brown"]
+//	238 -> 
+	239 -> 621
+	239 -> 608
+	240 -> 389
+	240 -> 130
+	241 -> 729 [color = "blue" fontcolor = "blue" label = "antivenom"]
+	241 -> 314
+	242 -> 563
+	242 -> 351
+	243 -> 130
+	244 -> 516
+//	245 -> 
+	246 -> 507
+	247 -> 745 [color = "green" fontcolor = "green" label = "LP>0"]
+	247 -> 260 [color = "brown"]
+	248 -> 665
+	248 -> 181
+	249 -> 272 [color = "magenta" fontcolor = "magenta" label = "win"]
+	249 -> 250
+//	251 -> 
+	253 -> 338
+	253 -> 414
+	253 -> 075
+	253 -> 068
+//	254 -> 
+	255 -> 064 [color = "green" fontcolor = "green" label = "PHY>=14"]
+	255 -> 612 [color = "brown"]
+//	256 -> 
+	257 -> 397 [color = "green" fontcolor = "green" label = "PHY>=18"]
+	257 -> 741 [color = "brown"]
+//	258 -> 
+//	259 -> 
+	261 -> 412
+	262 -> 026 [color = "cyan3" fontcolor = "cyan3" label = "the key"]
+	262 -> 247
+	262 -> 745
+//	263 -> 
+	264 -> 213
+	264 -> 671
+//	265 -> 
+//	266 -> 
+//	267 -> 
+//	268 -> 
+	269 -> 725
+	269 -> 501
+	271 -> 087 [color = "blue" fontcolor = "blue" label = "church"]
+	271 -> 666
+	272 -> 703
+//	273 -> 
+	274 -> 222
+	274 -> 118
+	274 -> 246 [color = "cyan3" fontcolor = "cyan3" label = "room"]
+//	275 -> 
+//	276 -> 
+	277 -> 138 [color = "green" fontcolor = "green" label = "PHY>=16"]
+	277 -> 207 [color = "brown"]
+	278 -> 749
+	279 -> 142
+//	280 -> 
+//	281 -> 
+//	282 -> 
+//	283 -> 
+//	284 -> 
+	285 -> 353
+	285 -> 201
+	285 -> 103
+	286 -> 143 [color = "magenta" fontcolor = "magenta" label = "win"]
+	286 -> 250
+	287 -> 564
+//	288 -> 
+	289 -> 400
+//	290 -> 
+//	291 -> 
+//	292 -> 
+//	293 -> 
+//	294 -> 
+	295 -> 124
+	296 -> 626 [color = "green" fontcolor = "green" label = "PHY>=14"]
+	296 -> 318 [color = "brown"]
+	296 -> 588 [color = "cyan3" fontcolor = "cyan3" label = "-invisibility potion"]
+//	297 -> 
+	298 -> 140
+	298 -> 636
+	299 -> 471
+	300 -> 749
+	301 -> 388
+	301 -> 085
+	302 -> 349 [color = "green" fontcolor = "green" label = "PHY>=16"]
+	302 -> 306 [color = "brown"]
+//	303 -> 
+	304 -> 118
+	304 -> 246 [color = "cyan3" fontcolor = "cyan3" label = "room"]
+//	305 -> 
+	306 -> 605 [color = "magenta" fontcolor = "magenta" label = "win"]
+	306 -> 250
+	307 -> 737 [color = "green" fontcolor = "green" label = "MEN>=18"]
+	307 -> 228 [color = "brown"]
+//	308 -> 
+//	309 -> 
+//	310 -> 
+	311 -> 471 [color = "green" fontcolor = "green" label = "MEN>=18"]
+	311 -> 132 [color = "brown"]
+	312 -> 609
+	313 -> 257
+	313 -> 608
+//	315 -> 
+//	317 -> 
+	318 -> 191 [color = "cyan3" fontcolor = "cyan3" label = "gun"]
+	318 -> 343
+	318 -> 171
+	319 -> 641
+	319 -> 351
+//	320 -> 
+//	321 -> 
+//	322 -> 
+//	323 -> 
+	324 -> 357 [color = "cyan3" fontcolor = "cyan3" label = "-2g"]
+	324 -> 130
+	325 -> 363 [color = "green" fontcolor = "green" label = "REL>=18"]
+	325 -> 723 [color = "brown"]
+	326 -> 542 [color = "green" fontcolor = "green" label = "LP>0"]
+	326 -> 419 [color = "brown"]
+	327 -> 412
+//	328 -> 
+//	329 -> 
+//	330 -> 
+	331 -> 018
+	332 -> 469 [color = "green" fontcolor = "green" label = "PHY>=14"]
+	332 -> 241 [color = "brown"]
+	333 -> 492 [color = "green" fontcolor = "green" label = "MEN>=18"]
+	333 -> 477 [color = "brown"]
+	334 -> 752 [color = "blue" fontcolor = "blue" label = "witch's staff"]
+	334 -> 552
+//	335 -> 
+//	336 -> 
+	337 -> 279 [color = "blue" fontcolor = "blue" label = "look-a-like"]
+	337 -> 142
+	338 -> 500 [color = "cyan3" fontcolor = "cyan3" label = "-40g/\n -all healing potions"]
+	338 -> 253
+	339 -> 177 [color = "magenta" fontcolor = "magenta" label = "win"]
+	339 -> 744
+//	340 -> 
+//	341 -> 
+	342 -> 468
+	342 -> 358
+	343 -> 634 [color = "green" fontcolor = "green" label = "LP>0"]
+	343 -> 172 [color = "brown"]
+	344 -> 467
+	344 -> 767
+//	345 -> 
+	346 -> 301
+//	347 -> 
+	348 -> 360 [color = "green" fontcolor = "green" label = "MEN>=18"]
+	348 -> 708 [color = "brown" fontcolor = "brown" label = "MEN>=16"]
+	348 -> 092 [color = "brown" fontcolor = "brown" label = "MEN>=14"]
+	348 -> 270 [color = "brown"]
+	349 -> 179
+//	350 -> 
+	351 -> 311
+//	352 -> 
+	353 -> 285
+	354 -> 405
+	354 -> 479
+//	355 -> 
+	356 -> 632 [color = "blue" fontcolor = "blue" label = "golden coin"]
+	356 -> 139
+	357 -> 130
+	358 -> 334
+	358 -> 625 [color = "cyan3" fontcolor = "cyan3" label = "holy water"]
+	359 -> 102 [color = "green" fontcolor = "green" label = "GUN>=14"]
+	359 -> 519 [color = "brown"]
+	360 -> 361
+	361 -> 409 [color = "purple" fontcolor = "purple" label = "4-6"]
+	361 -> 582 [color = "purple" fontcolor = "purple" label = "1-3"]
+	362 -> 359 [color = "green" fontcolor = "green" label = "PHY>=18"]
+	362 -> 519 [color = "brown"]
+	363 -> 054 [color = "green" fontcolor = "green" label = "GUN>=16"]
+	363 -> 723
+//	364 -> 
+	365 -> 312 [color = "cyan3" fontcolor = "cyan3" label = "-1g"]
+	365 -> 609
+//	366 -> 
+//	367 -> 
+	368 -> 066 [color = "green" fontcolor = "green" label = "LP>0"]
+	368 -> 568 [color = "brown"]
+//	369 -> 
+//	370 -> 
+//	371 -> 
+	372 -> 696
+//	373 -> 
+	375 -> 639 [color = "blue" fontcolor = "blue" label = "lakeman"]
+	375 -> 702
+	375 -> 239
+	376 -> 430 [color = "cyan3" fontcolor = "cyan3" label = "healing potion"]
+	376 -> 584 [color = "cyan3" fontcolor = "cyan3" label = "blue potion"]
+	376 -> 700
+	377 -> 480
+	378 -> 225 [color = "green" fontcolor = "green" label = "GUN>=14"]
+	378 -> 683 [color = "brown"]
+//	379 -> 
+	380 -> 360 [color = "green" fontcolor = "green" label = "MEN>=18"]
+	380 -> 708 [color = "brown" fontcolor = "brown" label = "MEN>=16"]
+	380 -> 092 [color = "brown" fontcolor = "brown" label = "MEN>=14"]
+	380 -> 270 [color = "brown"]
+	381 -> 311 [color = "green" fontcolor = "green" label = "LP>0"]
+	381 -> 568 [color = "brown"]
+//	382 -> 
+//	383 -> 
+	384 -> 769 [color = "green" fontcolor = "green" label = "MEN>=18"]
+	384 -> 027 [color = "brown"]
+//	385 -> 
+	386 -> 152 [color = "purple" fontcolor = "purple" label = "1-4"]
+	386 -> 304 [color = "purple" fontcolor = "purple" label = "5-6"]
+//	387 -> 
+	388 -> 353
+	388 -> 201
+	388 -> 103
+	389 -> 706
+	389 -> 130
+//	390 -> 
+//	391 -> 
+	392 -> 408 [color = "blue" fontcolor = "blue" label = "blue potion"]
+	392 -> 253
+//	393 -> 
+	394 -> 165
+//	395 -> 
+//	396 -> 
+	397 -> 541
+	399 -> 611 [color = "green" fontcolor = "green" label = "PHY>=16"]
+	399 -> 239 [color = "brown"]
+	400 -> 620
+//	401 -> 
+//	402 -> 
+//	403 -> 
+	404 -> 515 [color = "blue" fontcolor = "blue" label = "fur"]
+	404 -> 368
+	405 -> 562
+	405 -> 342
+//	406 -> 
+//	407 -> 
+	408 -> 253
+	409 -> 452
+	409 -> 608
+//	410 -> 
+	411 -> 556
+	412 -> 605 [color = "magenta" fontcolor = "magenta" label = "win"]
+	412 -> 250
+//	413 -> 
+	414 -> 428 [color = "cyan3" fontcolor = "cyan3" label = "-15g"]
+	414 -> 253
+	415 -> 486 [color = "blue" fontcolor = "blue" label = "wagonrider info"]
+	415 -> 504
+//	416 -> 
+//	417 -> 
+	418 -> 068
+//	420 -> 
+//	421 -> 
+//	422 -> 
+//	423 -> 
+	424 -> 399
+	424 -> 111
+//	425 -> 
+	426 -> 571 [color = "green" fontcolor = "green" label = "PHY>=18"]
+	426 -> 046 [color = "brown"]
+//	427 -> 
+	428 -> 253
+	429 -> 272 [color = "magenta" fontcolor = "magenta" label = "win"]
+	429 -> 250
+	430 -> 725
+	430 -> 501
+//	431 -> 
+	432 -> 444
+	432 -> 356 [color = "cyan3" fontcolor = "cyan3" label = "lost city"]
+	432 -> 471
+	433 -> 384 [color = "blue" fontcolor = "blue" label = "holy water"]
+	433 -> 051
+	434 -> 285
+	435 -> 591 [color = "green" fontcolor = "green" label = "MEN>=16"]
+	435 -> 274 [color = "brown"]
+	436 -> 354
+	437 -> 122 [color = "green" fontcolor = "green" label = "PHY>=18"]
+	437 -> 035 [color = "brown"]
+	438 -> 197
+	439 -> 126
+	440 -> 221
+	440 -> 096
+	441 -> 657 [color = "blue" fontcolor = "blue" label = "lentican soldiers farkle woods"]
+	442 -> 301
+	443 -> 772 [color = "blue" fontcolor = "blue" label = "gun/\n broken gun"]
+	443 -> 047
+	444 -> 053 [color = "magenta" fontcolor = "magenta" label = "win"]
+	444 -> 511
+//	445 -> 
+//	446 -> 
+	447 -> 221
+//	448 -> 
+//	449 -> 
+//	450 -> 
+//	451 -> 
+	452 -> 257
+	452 -> 608
+	453 -> 182
+	453 -> 501
+//	454 -> 
+//	455 -> 
+//	456 -> 
+	458 -> 351
+//	459 -> 
+//	460 -> 
+//	461 -> 
+	462 -> 068
+//	463 -> 
+//	464 -> 
+//	465 -> 
+//	466 -> 
+	467 -> 527 [color = "green" fontcolor = "green" label = "MEN>=16"]
+	467 -> 270 [color = "brown"]
+	468 -> 165 [color = "green" fontcolor = "green" label = "LP>0"]
+	468 -> 731 [color = "brown"]
+	469 -> 478 [color = "green" fontcolor = "green" label = "GUN>=16"]
+	469 -> 630 [color = "brown"]
+	470 -> 749
+	471 -> 601 [color = "green" fontcolor = "green" label = "LP>0"]
+	471 -> 568 [color = "brown"]
+//	472 -> 
+//	473 -> 
+	474 -> 070 [color = "green" fontcolor = "green" label = "GUN>=16"]
+	474 -> 261 [color = "brown"]
+	475 -> 354
+	476 -> 264
+	476 -> 213
+	477 -> 333
+	477 -> 071
+	477 -> 777
+	478 -> 354
+	479 -> 287 [color = "purple" fontcolor = "purple" label = "5-6"]
+	479 -> 598 [color = "purple" fontcolor = "purple" label = "1-4"]
+	480 -> 701
+	480 -> 351
+//	481 -> 
+	482 -> 295 [color = "magenta" fontcolor = "magenta" label = "win"]
+	482 -> 778
+	483 -> 015 [color = "green" fontcolor = "green" label = "GUN>=16"]
+	483 -> 286 [color = "brown"]
+//	484 -> 
+//	485 -> 
+	486 -> 224
+	486 -> 198
+	487 -> 561 [color = "cyan3" fontcolor = "cyan3" label = "-5g"]
+	487 -> 068
+	487 -> 549
+//	488 -> 
+	489 -> 120
+	489 -> 539
+	490 -> 733 [color = "green" fontcolor = "green" label = "GUN>=18"]
+	490 -> 592 [color = "brown"]
+	491 -> 664
+	491 -> 240
+	491 -> 130
+	492 -> 477
+	493 -> 337
+	493 -> 142
+	494 -> 490 [color = "green" fontcolor = "green" label = "REL>=16"]
+	494 -> 648 [color = "brown"]
+//	495 -> 
+//	496 -> 
+//	497 -> 
+//	498 -> 
+//	499 -> 
+	500 -> 253
+	501 -> 426
+	501 -> 062
+//	502 -> 
+	503 -> 332 [color = "cyan3" fontcolor = "cyan3" label = "gun"]
+	503 -> 216
+	504 -> 198
+	504 -> 224
+//	505 -> 
+//	506 -> 
+	507 -> 587 [color = "green" fontcolor = "green" label = "MEN>=16"]
+	507 -> 782 [color = "brown"]
+//	508 -> 
+//	509 -> 
+	510 -> 313
+	510 -> 059
+	511 -> 471
+	512 -> 725
+	512 -> 501
+	513 -> 438 [color = "green" fontcolor = "green" label = "MEN>=16"]
+	513 -> 523 [color = "brown"]
+//	514 -> 
+	515 -> 066
+	516 -> 041
+//	517 -> 
+//	518 -> 
+	519 -> 074 [color = "magenta" fontcolor = "magenta" label = "win"]
+	519 -> 172
+//	520 -> 
+//	521 -> 
+//	522 -> 
+	523 -> 065 [color = "green" fontcolor = "green" label = "PHY>=16"]
+	523 -> 252 [color = "brown"]
+//	524 -> 
+	525 -> 120
+	525 -> 539
+//	526 -> 
+	527 -> 361
+//	529 -> 
+//	530 -> 
+	531 -> 107 [color = "green" fontcolor = "green" label = "PHY>=16"]
+	531 -> 326 [color = "brown"]
+//	532 -> 
+//	533 -> 
+	534 -> 743
+	534 -> 606
+	535 -> 563
+	535 -> 351
+	535 -> 242 [color = "cyan3" fontcolor = "cyan3" label = "nightwalkers"]
+//	536 -> 
+//	537 -> 
+	538 -> 237
+	538 -> 077
+	539 -> 017
+	539 -> 351
+//	540 -> 
+	541 -> 732
+	542 -> 128
+//	543 -> 
+//	544 -> 
+//	545 -> 
+//	546 -> 
+//	547 -> 
+//	548 -> 
+	549 -> 561 [color = "cyan3" fontcolor = "cyan3" label = "-5g"]
+	549 -> 068
+//	550 -> 
+	551 -> 107 [color = "green" fontcolor = "green" label = "PHY>=16"]
+	551 -> 326 [color = "brown"]
+	552 -> 165
+//	553 -> 
+//	554 -> 
+//	555 -> 
+	556 -> 576
+	556 -> 646
+//	557 -> 
+//	558 -> 
+	559 -> 725 [color = "green" fontcolor = "green" label = "LP>0"]
+	559 -> 501 [color = "green" fontcolor = "green" label = "LP>0"]
+	559 -> 659 [color = "brown"]
+//	560 -> 
+	561 -> 487 [color = "cyan3" fontcolor = "cyan3" label = "-3g"]
+	561 -> 068
+	562 -> 334
+	562 -> 625 [color = "cyan3" fontcolor = "cyan3" label = "holy water"]
+	562 -> 468
+	563 -> 482 [color = "green" fontcolor = "green" label = "PHY>=16"]
+	563 -> 695 [color = "brown"]
+	564 -> 781 [color = "green" fontcolor = "green" label = "MEN>=18"]
+	564 -> 531 [color = "brown"]
+//	565 -> 
+//	566 -> 
+//	567 -> 
+//	569 -> 
+//	570 -> 
+	571 -> 569
+	571 -> 211
+//	572 -> 
+//	573 -> 
+//	574 -> 
+	575 -> 471
+	576 -> 510
+//	578 -> 
+//	579 -> 
+	580 -> 253
+//	581 -> 
+	582 -> 375
+	582 -> 608
+//	583 -> 
+	584 -> 169
+	585 -> 534
+	585 -> 606
+//	586 -> 
+	587 -> 091 [color = "magenta" fontcolor = "magenta" label = "win"]
+	587 -> 316
+	588 -> 569
+	588 -> 223
+//	589 -> 
+//	590 -> 
+	591 -> 185 [color = "blue" fontcolor = "blue" label = "lentican soldiers farkle woods"]
+	591 -> 109
+	592 -> 107 [color = "green" fontcolor = "green" label = "PHY>=16"]
+	592 -> 326 [color = "brown"]
+//	593 -> 
+//	594 -> 
+	595 -> 130
+//	596 -> 
+	597 -> 118
+	597 -> 246 [color = "cyan3" fontcolor = "cyan3" label = "room"]
+	598 -> 564 [color = "green" fontcolor = "green" label = "LP>0"]
+	598 -> 069 [color = "brown"]
+	599 -> 636
+//	600 -> 
+	601 -> 038 [color = "blue" fontcolor = "blue" label = "armor"]
+	601 -> 346
+//	602 -> 
+//	603 -> 
+//	604 -> 
+	605 -> 179
+//	606 -> 
+//	607 -> 
+	608 -> 621
+	608 -> 150
+//	609 -> 
+//	610 -> 
+	611 -> 239
+	612 -> 348
+	612 -> 380
+	613 -> 356 [color = "cyan3" fontcolor = "cyan3" label = "lost city"]
+	613 -> 471
+//	614 -> 
+//	615 -> 
+	616 -> 062 [color = "green" fontcolor = "green" label = "PHY>=18"]
+	616 -> 658 [color = "brown"]
+//	617 -> 
+//	618 -> 
+	619 -> 356 [color = "cyan3" fontcolor = "cyan3" label = "lost city"]
+	619 -> 471
+	620 -> 033
+	620 -> 716
+	620 -> 742
+	621 -> 754 [color = "blue" fontcolor = "blue" label = "lakeman child"]
+	621 -> 013
+//	622 -> 
+	623 -> 378 [color = "cyan3" fontcolor = "cyan3" label = "gun"]
+	623 -> 175
+	623 -> 538
+	624 -> 301
+	625 -> 165
+	626 -> 569
+	626 -> 223 [color = "cyan3" fontcolor = "cyan3" label = "-defeat goblin???"]
+	627 -> 202 [color = "green" fontcolor = "green" label = "PHY>=18"]
+	627 -> 680 [color = "brown"]
+//	628 -> 
+//	629 -> 
+	630 -> 729 [color = "blue" fontcolor = "blue" label = "antivenom"]
+	630 -> 314
+//	631 -> 
+	632 -> 471
+//	633 -> 
+	634 -> 074 [color = "magenta" fontcolor = "magenta" label = "win"]
+	634 -> 172
+//	635 -> 
+	636 -> 058
+	636 -> 491
+	637 -> 365 [color = "blue" fontcolor = "blue" label = "inscribed dagger"]
+	637 -> 609
+//	638 -> 
+	639 -> 239
+//	640 -> 
+	641 -> 164 [color = "blue" fontcolor = "blue" label = "the key"]
+	641 -> 351
+//	642 -> 
+//	643 -> 
+//	644 -> 
+//	645 -> 
+	646 -> 585 [color = "green" fontcolor = "green" label = "MEN>=18"]
+	646 -> 606 [color = "brown"]
+	647 -> 458 [color = "magenta" fontcolor = "magenta" label = "win"]
+	647 -> 061
+	648 -> 592 [color = "green" fontcolor = "green" label = "LP>0"]
+	648 -> 069 [color = "brown"]
+//	649 -> 
+//	650 -> 
+	651 -> 713 [color = "green" fontcolor = "green" label = "PHY>=16"]
+	651 -> 376 [color = "brown"]
+//	652 -> 
+//	653 -> 
+//	654 -> 
+//	655 -> 
+	656 -> 476 [color = "blue" fontcolor = "blue" label = "unvisible potion"]
+	656 -> 255
+	657 -> 435
+	657 -> 246 [color = "blue" fontcolor = "blue" label = "room"]
+//	660 -> 
+//	661 -> 
+//	662 -> 
+//	663 -> 
+	664 -> 106
+	664 -> 130
+	665 -> 429 [color = "green" fontcolor = "green" label = "PHY>=14"]
+	665 -> 024 [color = "brown"]
+	666 -> 218
+//	667 -> 
+//	668 -> 
+	669 -> 687
+	669 -> 647
+//	670 -> 
+	671 -> 360 [color = "green" fontcolor = "green" label = "MEN>=18"]
+	671 -> 092 [color = "brown" fontcolor = "brown" label = "MEN>=14"]
+	671 -> 708 [color = "brown"]
+	672 -> 637
+//	673 -> 
+//	674 -> 
+//	675 -> 
+	676 -> 494
+	676 -> 551
+//	677 -> 
+	678 -> 362
+	678 -> 519
+//	679 -> 
+	680 -> 538
+//	681 -> 
+//	682 -> 
+	683 -> 538
+	684 -> 018
+//	685 -> 
+//	686 -> 
+	687 -> 489 [color = "magenta" fontcolor = "magenta" label = "win"]
+	687 -> 374
+	688 -> 012 [color = "blue" fontcolor = "blue" label = "swamp map"]
+	688 -> 440
+//	689 -> 
+//	690 -> 
+//	691 -> 
+	692 -> 433
+	693 -> 733 [color = "green" fontcolor = "green" label = "GUN>=18"]
+	693 -> 676 [color = "brown"]
+//	694 -> 
+	695 -> 295 [color = "magenta" fontcolor = "magenta" label = "win"]
+	695 -> 778
+	696 -> 018
+//	697 -> 
+	698 -> 470
+	698 -> 316
+//	699 -> 
+	700 -> 169
+	701 -> 535
+	701 -> 563
+	702 -> 424
+	702 -> 090
+	702 -> 239
+	704 -> 651
+	704 -> 501
+	705 -> 377 [color = "green" fontcolor = "green" label = "MEN>=16"]
+	705 -> 724 [color = "brown"]
+	706 -> 088
+	706 -> 789
+	707 -> 086 [color = "green" fontcolor = "green" label = "GUN>=18"]
+	707 -> 183 [color = "brown"]
+	708 -> 361
+//	709 -> 
+//	710 -> 
+//	711 -> 
+//	712 -> 
+	713 -> 501
+//	714 -> 
+	715 -> 471
+//	716 -> 
+//	717 -> 
+//	718 -> 
+//	719 -> 
+//	720 -> 
+	721 -> 107 [color = "green" fontcolor = "green" label = "PHY>=16"]
+	721 -> 326 [color = "brown"]
+	722 -> 613 [color = "green" fontcolor = "green" label = "PHY>=16"]
+	722 -> 715 [color = "brown"]
+	723 -> 054 [color = "magenta" fontcolor = "magenta" label = "win"]
+	723 -> 250
+	724 -> 480
+	725 -> 501
+//	726 -> 
+//	727 -> 
+	728 -> 487 [color = "cyan3" fontcolor = "cyan3" label = "-3g"]
+	728 -> 561 [color = "cyan3" fontcolor = "cyan3" label = "-5g"]
+	728 -> 068
+	729 -> 354
+	730 -> 634 [color = "green" fontcolor = "green" label = "LP>0"]
+	730 -> 172 [color = "brown"]
+	732 -> 774 [color = "purple" fontcolor = "purple" label = "2-5"]
+	732 -> 688 [color = "purple" fontcolor = "purple" label = "6-10"]
+	732 -> 277 [color = "purple" fontcolor = "purple" label = "11-12"]
+	733 -> 128
+	734 -> 474
+	734 -> 707
+//	735 -> 
+//	736 -> 
+	737 -> 248
+	737 -> 228
+//	738 -> 
+//	739 -> 
+//	740 -> 
+//	742 -> 
+	743 -> 245 [color = "blue" fontcolor = "blue" label = "gun"]
+	743 -> 099
+	745 -> 705 [color = "blue" fontcolor = "blue" label = "the key"]
+	745 -> 311
+//	746 -> 
+//	747 -> 
+//	748 -> 
+	749 -> 271
+	749 -> 753
+	750 -> 619 [color = "magenta" fontcolor = "magenta" label = "win"]
+	750 -> 744
+//	751 -> 
+	752 -> 394
+	752 -> 165
+	753 -> 576
+	753 -> 646
+	754 -> 018
+//	755 -> 
+//	756 -> 
+//	757 -> 
+//	758 -> 
+	759 -> 299
+	759 -> 037 [color = "cyan3" fontcolor = "cyan3" label = "gun"]
+	759 -> 040 [color = "cyan3" fontcolor = "cyan3" label = "bow"]
+	759 -> 750
+//	760 -> 
+//	761 -> 
+//	762 -> 
+//	763 -> 
+//	764 -> 
+	765 -> 621
+//	766 -> 
+	767 -> 360 [color = "green" fontcolor = "green" label = "MEN>=18"]
+	767 -> 092 [color = "brown" fontcolor = "brown" label = "MEN>=14"]
+	767 -> 708 [color = "brown"]
+	768 -> 105 [color = "cyan3" fontcolor = "cyan3" label = "-torch"]
+	768 -> 311
+	769 -> 525 [color = "green" fontcolor = "green" label = "PHY>=14"]
+	769 -> 188 [color = "brown"]
+//	770 -> 
+//	771 -> 
+	772 -> 236 [color = "cyan3" fontcolor = "cyan3" label = "-75g"]
+	772 -> 411 [color = "cyan3" fontcolor = "cyan3" label = "gold feather"]
+	772 -> 556
+//	773 -> 
+	774 -> 153
+//	775 -> 
+//	776 -> 
+	777 -> 244 [color = "green" fontcolor = "green" label = "MEN>=18"]
+	777 -> 516 [color = "brown"]
+//	779 -> 
+//	780 -> 
+	781 -> 693 [color = "blue" fontcolor = "blue" label = "gun"]
+	781 -> 721
+	782 -> 698 [color = "green" fontcolor = "green" label = "LP>0"]
+	782 -> 316 [color = "brown"]
+//	783 -> 
+	784 -> 307
+//	785 -> 
+//	786 -> 
+	787 -> 696 [color = "magenta" fontcolor = "magenta" label = "win"]
+	787 -> 022
+//	788 -> 
+	789 -> 049 [color = "magenta" fontcolor = "magenta" label = "win"]
+	789 -> 528
+//	791 -> 
+//	792 -> 
+	793 -> 068
+	794 -> 194 [color = "green" fontcolor = "green" label = "PHY>=16"]
+	794 -> 715 [color = "brown"]
+//	795 -> 
+//	796 -> 
+//	797 -> 
+//	798 -> 
+//	799 -> 
+//	800 -> 
 }
