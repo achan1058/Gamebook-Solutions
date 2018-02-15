@@ -28,6 +28,9 @@
     <Filter Include="Give Yourself Goosebumps">
       <UniqueIdentifier>{52c2cc07-2fc7-4547-a58c-09b88c31cdf0}</UniqueIdentifier>
     </Filter>
+    <Filter Include="A Chooseable-Path Adventure">
+      <UniqueIdentifier>{5492adb3-1889-45d1-9fb7-fbf28d98800a}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Gamebook Solutions.cpp">
@@ -116,8 +119,8 @@
     <CustomBuild Include="Give Yourself Goosebumps\07 - Under the Magician%27s Spell.dot">
       <Filter>Give Yourself Goosebumps</Filter>
     </CustomBuild>
-    <CustomBuild Include="Tin Man Games\Gun Dogs.dot">
-      <Filter>Tin Man Games</Filter>
+    <CustomBuild Include="A Chooseable-Path Adventure\Romeo and or Juliet.dot">
+      <Filter>A Chooseable-Path Adventure</Filter>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>

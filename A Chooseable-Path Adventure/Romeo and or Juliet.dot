@@ -1,0 +1,979 @@
+digraph "Fighting Fantasy: Title" {
+	// graph defaults
+	rankdir=LR
+	mclimit=50
+	nodesep=.3 // changes horizontal separation of nodes
+	ranksep=.4 // changes vertical separation of nodes
+	node [height=.7
+		width=.7
+		shape=ellipse
+		margin=0]
+	edge[weight=5]
+
+	// a box for a graph label
+	// note that you can override the defaults set above
+	title [label = "Fighting Fantasy: Title --/--/--\n\n \
+		Light Green Fill: Benefits\l \
+		Pink Fill: Penalties\l \
+		Red Fill: Death\l \
+		Blue Text: Key Items/Events\l \
+		Red Text: Lost Items\l \
+		Purple Text: Shops\l \
+		Blue Line: Forced Items/Events\l \
+		Light Blue Text/Line: Optional Items/Events\l \
+		Purple Line: Dice Related Events\l \
+		Green Line: Stat Test Passed\l \
+		Brown Line: Stat Test Failed\l \
+		Magenta Line: Combat Related Events\l \
+		Grey Text: Riddle Answer\l \
+		Grey Line: Hidden Option\l \
+		Orange Line: Spells\l \
+		Red Line: Possible Error\l \
+		Gold/Yellow Fill: Required Nodes\l \
+		Light Blue Fill: Recommended Nodes\l \
+		Gold Outline: Recommended Path\l \
+		Green Box: Combat\l \
+		SK/ST/LK/AS/AR/TM/CW/CL: Skill/Stamina/Luck/Attack Strength/Attack Round/Time/Consecutive Win Round/Consecutive Lose Round\l \
+		?: Chance of this happening, depending on instructions in text\l \
+		*: Special Combat Rules\l \
+		-: Negative Status\l \
+		+: Positive Status\l \
+		^: Damage can be reduced by items\l \
+		@: Take 2 items\l\l \
+		Starts with:\l \
+		Initial Skill: 1d6+6\l \
+		Initial Stamina: 2d6+12\l \
+		Initial Luck: 1d6+6\l\l \
+		skill/stamina/luck potion: +all SK/ST/LK&1ILK\l \
+		10 meal: +4ST\l \
+		sword\l \
+		leather armor\l \
+		lantern\l \
+		tinderbox\l \
+		2d6+6 gold\l \
+		backpack\l\l \
+		Comments:\l \
+		none\l \
+		"
+		shape = "box"
+		margin = 0.1]
+
+	subgraph Required {
+		node [style = "filled" color = "gold" fillcolor = "gold" fontcolor = "blue" shape = "rect"]
+		key3
+		boo5
+		dam5
+		monboo5
+		mondam5
+		mon5
+		ending [fontcolor = "black" shape = "octagon"]
+		049
+		069
+		070
+		086
+		092
+		095
+		106
+		107
+		115
+		145
+		151
+		153
+		162
+		164
+		211
+		215
+		280
+		299
+		373
+		375
+		390
+		397
+		400
+		404 [fontcolor = "black" shape = "octagon"]
+		446
+		447
+		449
+		461 [fontcolor = "black" shape = "octagon"]
+		466
+	}
+
+	subgraph Required2 {
+		node [style = "filled" color = "#FFF700" fillcolor = "#FFF700" fontcolor = "blue" shape = "rect"]
+		req2
+	}
+
+	subgraph Recommended {
+		node [penwidth = 3 color = "gold"]
+		txt2
+		key2 [shape = "rect" fontcolor = "blue"]
+		boo3 [style = "filled" fillcolor = "greenyellow"]
+		boo4 [style = "filled" fillcolor = "greenyellow"]
+		dam3 [style = "filled" fillcolor = "pink"]
+		dam4 [style = "filled" fillcolor = "pink"]
+		monboo3 [style = "filled" fillcolor = "greenyellow"]
+		monboo4 [style = "filled" fillcolor = "greenyellow"]
+		mondam3 [style = "filled" fillcolor = "pink"]
+		mondam4 [style = "filled" fillcolor = "pink"]
+		mon3
+		mon4
+	}
+	
+	subgraph Optional {
+		node [style = "filled" color = "paleturquoise1" fillcolor = "paleturquoise1" fontcolor = "blue" shape = "rect"]
+		opt
+	}
+
+	subgraph Combat {
+		style = "filled" color = "palegreen2"
+		subgraph cluster_MONSTER {
+			label = "? MONSTER\n 0/0 0/0"
+			mon1 [label = "\N\n text"]
+			mon2 [shape = "rect" fontcolor = "blue" label = "\N\n text"]
+			mon3 [label = "\N\n text"]
+			mon4 [shape = "rect" fontcolor = "blue" label = "\N\n text"]
+			mon5 [shape = "rect" fontcolor = "blue" label = "\N\n text"]
+			monboo1 [style = "filled" color = "greenyellow" label = "\N\n text"]
+			monboo2 [shape = "rect" style = "filled" color = "greenyellow" fontcolor = "blue" label = "\N\n text"]
+			monboo3 [label = "\N\n text"]
+			monboo4 [shape = "rect" fontcolor = "blue" label = "\N\n text"]
+			monboo5 [shape = "rect" fontcolor = "blue" label = "\N\n text"]
+			mondam1 [style = "filled" color = "pink" label = "\N\n text"]
+			mondam2 [shape = "rect" style = "filled" color = "pink" fontcolor = "blue" label = "\N\n text"]
+			mondam3 [label = "\N\n text"]
+			mondam4 [shape = "rect" fontcolor = "blue" label = "\N\n text"]
+			mondam5 [shape = "rect" fontcolor = "blue" label = "\N\n text"]
+		}
+		cbt
+	}
+
+	subgraph Death {
+		node [style = "filled" color = "red"]
+		ddt
+		031
+		055
+		062
+		081
+		085
+		087
+		091
+		103
+		105
+		121
+		126
+		128
+		133
+		136
+		150
+		157
+		168
+		182
+		219
+		236
+		322
+		326
+		333
+		337
+		341
+		345
+		346
+		370
+		389
+		392
+		398
+		406
+		426
+		429
+		441
+		452
+		453
+		460
+		470
+	}
+
+	subgraph Boost {
+		node [style = "filled" color = "greenyellow"]
+		bst
+		boo1 [label = "\N\n text"]
+		boo2 [shape = "rect" fontcolor = "blue" label = "\N\n text"]
+		boo3 [label = "\N\n text"]
+		boo4 [shape = "rect" fontcolor = "blue" label = "\N\n text"]
+		boo5 [shape = "rect" fontcolor = "blue" label = "\N\n text"]
+	}
+
+	subgraph Damage {
+		node [style = "filled" color = "pink"]
+		ddg
+		dam1 [label = "\N\n text"]
+		dam2 [shape = "rect" fontcolor = "blue" label = "\N\n text"]
+		dam3 [label = "\N\n text"]
+		dam4 [shape = "rect" fontcolor = "blue" label = "\N\n text"]
+		dam5 [shape = "rect" fontcolor = "blue" label = "\N\n text"]
+	}
+
+	subgraph Key_Item {
+		node [fontcolor = "blue" shape = "rect"]
+		kky
+		key1 [label = "\N\n text"]
+		key2 [label = "\N\n text"]
+		key3 [label = "\N\n text"]
+	}
+	
+	subgraph Shop {
+		node [fontcolor = "purple" shape = "rect"]
+		shp
+		shop1 [label = "\N\n text"]
+	}
+
+	mon1 -> mon2 -> mon3 -> mon4 -> mon5 [penwidth = 3]
+	boo1 -> boo2 -> boo3 -> boo4 -> boo5 [penwidth = 3]
+	dam1 -> dam2 -> dam3 -> dam4 -> dam5
+	txt1 -> key1 -> txt2 -> key2 -> key3
+	monboo1 -> monboo2 -> monboo3 -> monboo4 -> monboo5
+	mondam1 -> mondam2 -> mondam3 -> mondam4 -> mondam5
+
+	myTitle -> z001 [penwidth = 3]
+	z001 -> z002 [color = "purple" fontcolor = "purple" label = "1-3"]
+	z001 -> z003 [color = "purple" fontcolor = "purple" label = "4-6"]
+	z002 -> z004 [color = "green" fontcolor = "green" label = "LK"]
+	z002 -> z005 [color = "brown"]
+	z003 -> z006 [dir = "both"]
+	z004 -> z007 [color = "blue" fontcolor = "blue" label = "req"]
+	z004 -> z008 [color = "cyan3" fontcolor = "cyan3" label = "-opt"]
+	z005 -> z009 [color = "grey" fontcolor = "grey" label = "info"]
+	z009 -> z010 [color = "crimson" fontcolor = "crimson" label = "error(?)"]
+	z010 -> z011 [color = "magenta" fontcolor = "magenta" label = "escape"]
+	{
+		rank = same
+		z003
+		z006
+	}
+
+	title -> 001
+	001 -> 003 [penwidth = 3]
+	001 -> 036
+	001 -> 022
+	002 -> 001
+	003 -> 036 [penwidth = 3]
+	004 -> 005
+	005 -> 006
+	006 -> 007
+	007 -> 008
+	008 -> 009 [penwidth = 3]
+	008 -> 009
+	009 -> 010 [penwidth = 3]
+	009 -> 418
+	010 -> 025
+	010 -> 011 [penwidth = 3]
+	011 -> 025
+	011 -> 012 [penwidth = 3]
+	012 -> 013 [penwidth = 3]
+	012 -> 044
+	013 -> 051 [penwidth = 3]
+	014 -> 028 [penwidth = 3]
+	014 -> 020
+	015 -> 036
+	016 -> 032
+	017 -> 038
+	018 -> 052 [penwidth = 3]
+	018 -> 039
+	019 -> 050 [penwidth = 3]
+	019 -> 037
+	020 -> 048
+	020 -> 038
+	021 -> 014
+	022 -> 015
+	022 -> 475
+	023 -> 054
+	023 -> 030
+	024 -> 049
+	024 -> 035
+	025 -> 046
+	025 -> 033
+	026 -> 032
+	027 -> 014 [penwidth = 3]
+	027 -> 021
+	028 -> 017
+	028 -> 038
+	028 -> 048 [penwidth = 3]
+	029 -> 052
+	029 -> 039
+	030 -> 042
+	030 -> 055
+	032 -> 040
+	032 -> 023
+	033 -> 058
+	034 -> 045
+	035 -> 059
+	036 -> 027 [penwidth = 3]
+	036 -> 004
+	036 -> cover
+	037 -> 045
+	038 -> 016
+	038 -> 026
+	039 -> 024
+	040 -> 023
+	040 -> 031
+	041 -> 079
+	041 -> 060
+	041 -> 067
+	042 -> 089
+	042 -> 056
+	043 -> 051
+	044 -> 058
+	045 -> 016
+	045 -> 026
+	046 -> 057
+	046 -> 075
+	047 -> 062
+	048 -> 029
+	048 -> 018 [penwidth = 3]
+	050 -> 043
+	050 -> 034
+	050 -> 008 [penwidth = 3]
+	051 -> 073 [penwidth = 3]
+	051 -> 061
+	052 -> 019 [penwidth = 3]
+	052 -> 006
+	053 -> 069
+	054 -> 064
+	054 -> 041
+	054 -> 083
+	056 -> 089
+	056 -> 065
+	057 -> 092
+	057 -> 063
+	058 -> 074
+	058 -> 068
+	059 -> 047
+	060 -> 053
+	060 -> 102
+	061 -> 100
+	061 -> 116 [penwidth = 3]
+	061 -> 080
+	063 -> 092
+	063 -> 075
+	064 -> 072
+	064 -> 041
+	064 -> 083
+	065 -> 089
+	065 -> 071
+	066 -> 093
+	066 -> 078
+	067 -> 053
+	067 -> 102
+	068 -> 094
+	068 -> 077
+	071 -> 101
+	071 -> 095
+	072 -> 064
+	072 -> 041
+	072 -> 083
+	073 -> 090
+	073 -> 112 [penwidth = 3]
+	074 -> 096
+	074 -> 096
+	075 -> 084
+	075 -> 066
+	076 -> 115
+	076 -> 098
+	077 -> 104
+	077 -> 088
+	078 -> 086
+	079 -> 053
+	079 -> 102
+	080 -> 103
+	080 -> 087
+	082 -> 117
+	082 -> 107
+	083 -> 053
+	084 -> 070
+	084 -> 078
+	088 -> 113
+	088 -> 097
+	089 -> 069
+	090 -> 099
+	090 -> 061
+	093 -> 086
+	094 -> 076
+	094 -> 082
+	096 -> 085
+	096 -> 111 [penwidth = 3]
+	097 -> 113
+	097 -> 141
+	098 -> 117
+	098 -> 107
+	099 -> 061 [penwidth = 3]
+	100 -> 024
+	101 -> 089
+	102 -> 081
+	102 -> 091
+	104 -> 113
+	108 -> 121
+	109 -> 121
+	110 -> 157
+	110 -> 142 [penwidth = 3]
+	111 -> 120 [penwidth = 3]
+	112 -> 099 [penwidth = 3]
+	112 -> 061
+	113 -> 120
+	114 -> 153
+	114 -> 163
+	116 -> 123
+	116 -> 096 [penwidth = 3]
+	116 -> 096
+	117 -> 145
+	117 -> 105
+	118 -> 163
+	118 -> 150
+	119 -> 108
+	119 -> 167
+	120 -> 148 [penwidth = 3]
+	120 -> 154
+	122 -> 169
+	122 -> 178 [penwidth = 3]
+	122 -> 217
+	123 -> 024
+	124 -> 128
+	124 -> 127
+	125 -> 130
+	125 -> 133
+	127 -> 132
+	127 -> 136
+	129 -> 135
+	129 -> 126
+//	130 -> 
+//	131 -> 
+	132 -> 129
+	132 -> 136
+//	134 -> 
+	135 -> 137
+	135 -> 125
+//	137 -> 
+//	138 -> 
+	139 -> 153
+	139 -> 163
+	140 -> 158
+	140 -> 187
+	141 -> 113
+	142 -> 163 [penwidth = 3]
+	142 -> 170
+	142 -> 150
+	143 -> 160
+	144 -> 106
+	144 -> 159
+	146 -> 227
+	146 -> 236
+	147 -> 157
+	147 -> 118
+	148 -> 119
+	148 -> 155
+	148 -> 167 [penwidth = 3]
+	149 -> 192
+	149 -> 166 [penwidth = 3]
+	149 -> 156
+	152 -> 164
+	154 -> 106
+	154 -> 144
+	155 -> 109
+	155 -> 167
+	156 -> 192
+	156 -> 199
+	158 -> 178
+	159 -> 114
+	159 -> 139
+	160 -> 203
+	160 -> 172 [penwidth = 3]
+	161 -> 173
+	163 -> 122 [penwidth = 3]
+	163 -> 151
+//	165 -> 
+	166 -> 160 [penwidth = 3]
+	167 -> 110 [penwidth = 3]
+	167 -> 147
+	169 -> 194
+	169 -> 143
+	170 -> 140
+	170 -> 158
+	170 -> 187
+	171 -> 202
+	171 -> 152
+	171 -> 185
+	172 -> 203
+	172 -> 188 [penwidth = 3]
+	172 -> 184
+	173 -> 179
+	173 -> 161
+//	174 -> 
+//	175 -> 
+	176 -> 183
+	176 -> 161
+//	177 -> 
+	178 -> 168
+	178 -> 149 [penwidth = 3]
+	179 -> 195
+	179 -> 212
+	179 -> 173
+	180 -> 214
+	180 -> 197 [penwidth = 3]
+	180 -> 190
+	181 -> 215
+	181 -> 198
+	183 -> 176
+	183 -> 161
+//	184 -> 
+	185 -> 202
+	185 -> 152
+	186 -> 226
+	186 -> 208
+	186 -> 200
+	187 -> 162
+	187 -> 171
+	188 -> 180 [penwidth = 3]
+	189 -> 210
+	189 -> 204
+	190 -> 207
+	191 -> 201
+	191 -> 182
+//	192 -> 
+	193 -> 223
+	193 -> 241
+	193 -> 216
+	194 -> 160
+	195 -> 173
+	196 -> 173
+	197 -> 207 [penwidth = 3]
+	198 -> 219
+	198 -> 211
+	199 -> 193
+	199 -> 181
+	200 -> 146
+	200 -> 236
+	201 -> 189
+	201 -> 213
+	202 -> 178
+//	203 -> 
+	204 -> 218
+	204 -> 257 [penwidth = 3]
+	204 -> 248
+	204 -> 232
+	205 -> 222 [penwidth = 3]
+//	206 -> 
+	207 -> 225
+	207 -> 244 [penwidth = 3]
+	208 -> 226
+	208 -> 200
+	209 -> 191
+	210 -> 221
+	210 -> 251
+	210 -> 240
+	212 -> 186
+	212 -> 196
+	212 -> 173
+	213 -> 205
+//	214 -> 
+//	216 -> 
+	217 -> 183
+	218 -> 204
+//	220 -> 
+	221 -> 237
+	221 -> 229
+	222 -> 239 [penwidth = 3]
+	222 -> 246
+	223 -> 209
+	223 -> 230
+//	224 -> 
+//	225 -> 
+	226 -> 208
+	226 -> 200
+	227 -> 243
+	227 -> 261
+	227 -> 253
+	227 -> 306
+	227 -> 354
+	228 -> 205
+	229 -> 245
+	229 -> 258
+	230 -> 250
+	230 -> 238
+	231 -> 263
+//	232 -> 
+//	233 -> 
+//	234 -> 
+//	235 -> 
+	236 -> 200
+	236 -> 217
+	237 -> 229
+//	238 -> 
+	239 -> 267
+	239 -> 260 [penwidth = 3]
+	240 -> 180
+//	241 -> 
+//	242 -> 
+	243 -> 340
+	243 -> 269
+	243 -> 305
+	243 -> 317
+	243 -> 354
+	244 -> 254 [penwidth = 3]
+	244 -> 231
+//	245 -> 
+	246 -> 262 [penwidth = 3]
+//	247 -> 
+//	248 -> 
+//	249 -> 
+	250 -> 209
+//	251 -> 
+//	252 -> 
+	253 -> 305
+	253 -> 331
+	253 -> 340
+	253 -> 266
+	253 -> 354
+	254 -> 263
+//	255 -> 
+//	256 -> 
+	257 -> 247
+	257 -> 228 [penwidth = 3]
+	258 -> 358
+//	259 -> 
+	260 -> 246 [penwidth = 3]
+	261 -> 269
+	261 -> 340
+	261 -> 331
+	261 -> 276
+	261 -> 354
+	262 -> 273
+	262 -> 283 [penwidth = 3]
+	263 -> 277
+	263 -> 204 [penwidth = 3]
+//	264 -> 
+//	265 -> 
+	266 -> 279
+	266 -> 285
+	266 -> 306
+	266 -> 253
+	266 -> 354
+//	267 -> 
+//	268 -> 
+	269 -> 261
+	269 -> 243
+	269 -> 331
+	269 -> 295
+	269 -> 354
+	270 -> 286
+	270 -> 280
+	271 -> 287
+//	272 -> 
+//	273 -> 
+//	274 -> 
+//	275 -> 
+	276 -> 295
+	276 -> 306
+	276 -> 285
+	276 -> 261
+	276 -> 354
+//	277 -> 
+//	278 -> 
+	279 -> 266
+	279 -> 342
+	279 -> 317
+	279 -> 305
+	279 -> 291
+//	281 -> 
+//	282 -> 
+	283 -> 316
+	283 -> 293 [penwidth = 3]
+//	284 -> 
+	285 -> 342
+	285 -> 266
+	285 -> 276
+	285 -> 331
+	285 -> 354
+	286 -> 319
+	286 -> 299
+	287 -> 303
+//	288 -> 
+//	289 -> 
+//	290 -> 
+	291 -> 313
+	291 -> 327
+	291 -> 369
+	292 -> 332 [penwidth = 3]
+	292 -> 314
+	293 -> 308 [penwidth = 3]
+	293 -> 322
+//	294 -> 
+	295 -> 276
+	295 -> 317
+	295 -> 342
+	295 -> 269
+	295 -> 354
+//	296 -> 
+//	297 -> 
+//	298 -> 
+//	300 -> 
+//	301 -> 
+//	302 -> 
+	303 -> 371
+	303 -> 323
+	304 -> 124
+	305 -> 253
+	305 -> 321
+	305 -> 243
+	305 -> 279
+	305 -> 354
+	306 -> 317
+	306 -> 276
+	306 -> 266
+	306 -> 340
+	306 -> 354
+//	307 -> 
+	308 -> 221
+	308 -> 324 [penwidth = 3]
+//	309 -> 
+//	310 -> 
+//	311 -> 
+//	312 -> 
+	313 -> 335
+	313 -> 343
+	313 -> 369
+	314 -> 329 [penwidth = 3]
+//	315 -> 
+//	316 -> 
+	317 -> 306
+	317 -> 295
+	317 -> 279
+	317 -> 243
+	317 -> 354
+//	318 -> 
+	319 -> 326
+	319 -> 337
+//	320 -> 
+	321 -> 331
+	321 -> 305
+	321 -> 269
+	321 -> 342
+	321 -> 354
+	323 -> 370
+	323 -> 334
+	324 -> 402 [penwidth = 3]
+//	325 -> 
+	326 -> 333
+	327 -> 313
+	327 -> 344
+	327 -> 369
+//	328 -> 
+	329 -> 347 [penwidth = 3]
+	330 -> 352
+	330 -> 341
+	330 -> 399
+	331 -> 321
+	331 -> 253
+	331 -> 261
+	331 -> 285
+	331 -> 354
+	332 -> 314 [penwidth = 3]
+	333 -> 353
+	334 -> 346
+	334 -> 370
+	334 -> 379
+	335 -> 313
+	335 -> 327
+	335 -> 369
+//	336 -> 
+	337 -> 345
+//	338 -> 
+//	339 -> 
+	340 -> 243
+	340 -> 261
+	340 -> 253
+	340 -> 306
+	340 -> 354
+	341 -> 330
+	341 -> 217
+	342 -> 285
+	342 -> 279
+	342 -> 295
+	342 -> 321
+	342 -> 354
+	343 -> 313
+	343 -> 327
+	343 -> 369
+	344 -> 313
+	344 -> 327
+	344 -> 369
+	345 -> 353
+	347 -> 375
+	347 -> 355 [penwidth = 3]
+	348 -> 373
+//	349 -> 
+//	350 -> 
+	351 -> 399
+	351 -> 382
+	352 -> 372
+	337 -> 353 [dir = back]
+	326 -> 353 [dir = back]
+	353 -> 376
+	354 -> 227
+	354 -> 236
+	355 -> 387 [penwidth = 3]
+	355 -> 415
+	355 -> 381
+	355 -> 397
+	356 -> 392
+	356 -> 385
+//	357 -> 
+	358 -> 360
+	358 -> 365
+//	359 -> 
+//	360 -> 
+//	361 -> 
+//	362 -> 
+//	363 -> 
+//	364 -> 
+	365 -> 292
+	365 -> 358
+	365 -> 304
+//	366 -> 
+//	367 -> 
+//	368 -> 
+	369 -> 330
+	371 -> 346
+	371 -> 334
+	372 -> 352
+	372 -> 341
+	372 -> 399
+	374 -> 393 [penwidth = 3]
+	374 -> 393
+	376 -> 394
+	376 -> 383
+//	377 -> 
+	378 -> 349
+	378 -> 338
+	378 -> 386 [penwidth = 3]
+	379 -> 389
+	379 -> 356
+//	380 -> 
+	381 -> 425
+	382 -> 399
+	382 -> 391
+	383 -> 394
+	383 -> 401
+//	384 -> 
+	385 -> 398
+	385 -> 410
+	386 -> 405
+	386 -> 374 [penwidth = 3]
+	387 -> 425 [penwidth = 3]
+//	388 -> 
+	390 -> 373
+	390 -> 400
+	391 -> 404
+	391 -> 426
+	393 -> 413
+	393 -> 403 [penwidth = 3]
+	394 -> 430
+//	395 -> 
+//	396 -> 
+//	398 -> 
+	399 -> 351
+	399 -> 372
+	401 -> 394
+	401 -> 409
+	402 -> 378 [penwidth = 3]
+	402 -> 338
+	403 -> 427 [penwidth = 3]
+	403 -> 416
+	404 -> 194
+	404 -> 183
+//	405 -> 
+//	407 -> 
+//	408 -> 
+	409 -> 423
+	410 -> 440
+	410 -> 398
+	411 -> 470
+	411 -> 452
+	412 -> 422 [penwidth = 3]
+	412 -> 435
+//	413 -> 
+	414 -> 451 [penwidth = 3]
+	414 -> 434
+	415 -> 425
+//	416 -> 
+//	417 -> 
+	418 -> 010
+	419 -> 431
+	419 -> 452
+//	420 -> 
+	421 -> 453
+	422 -> 468
+	422 -> 474 [penwidth = 3]
+	423 -> 438
+	423 -> 449
+//	424 -> 
+	425 -> 414 [penwidth = 3]
+	425 -> 406
+	426 -> 351
+	426 -> 217
+	427 -> 457 [penwidth = 3]
+	427 -> 443
+//	428 -> 
+	430 -> 445
+	430 -> 411
+	430 -> 419
+	430 -> 456
+	431 -> 442
+	432 -> 448 [penwidth = 3]
+	432 -> 460
+//	433 -> 
+	434 -> 441
+	434 -> 461
+//	435 -> 
+	436 -> 280
+	436 -> 270
+//	437 -> 
+	438 -> 394
+//	439 -> 
+	440 -> 446
+	440 -> 429
+	442 -> 447
+	442 -> 466
+	443 -> 436
+//	444 -> 
+	445 -> 431
+	445 -> 421
+//	446 -> 
+	448 -> 473 [penwidth = 3]
+	448 -> 467
+//	450 -> 
+	451 -> 441
+	451 -> 461 [penwidth = 3]
+//	454 -> 
+	455 -> 412
+	455 -> 462 [penwidth = 3]
+	456 -> 470
+	456 -> 421
+	457 -> 439
+	457 -> 432 [penwidth = 3]
+//	458 -> 
+//	459 -> 
+	461 -> 271 [color = "grey"]
+	462 -> 412 [penwidth = 3]
+//	463 -> 
+	464 -> 472
+	464 -> 292 [penwidth = 3]
+	465 -> 348
+	465 -> 390
+//	467 -> 
+	468 -> 474
+//	469 -> 
+//	471 -> 
+	472 -> 124
+	473 -> 455 [penwidth = 3]
+	473 -> 465
+	474 -> 124
+	474 -> 464 [penwidth = 3]
+	475 -> 036
+}
