@@ -71,9 +71,6 @@
     <CustomBuild Include="Fighting Fantasy\old\The Citadel of Chaos.dot">
       <Filter>backup</Filter>
     </CustomBuild>
-    <CustomBuild Include="Tin Man Games\old\The Forgotten Spell.dot">
-      <Filter>backup</Filter>
-    </CustomBuild>
     <CustomBuild Include="Fighting Fantasy\old\The Warlock of Firetop Mountain.dot">
       <Filter>backup</Filter>
     </CustomBuild>
