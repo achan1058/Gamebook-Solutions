@@ -119,6 +119,9 @@
     <CustomBuild Include="A Chooseable-Path Adventure\Romeo and or Juliet.dot">
       <Filter>A Chooseable-Path Adventure</Filter>
     </CustomBuild>
+    <CustomBuild Include="A Chooseable-Path Adventure\To Be or Not To Be.dot">
+      <Filter>A Chooseable-Path Adventure</Filter>
+    </CustomBuild>
   </ItemGroup>
   <ItemGroup>
     <Text Include="vertex.txt">

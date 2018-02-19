@@ -160,7 +160,7 @@ digraph "Fighting Fantasy: Title" {
 		470
 	}
 
-	title -> 001
+	title -> 001 [penwidth = 3]
 	001 -> 003 [penwidth = 3]
 	001 -> 036
 	001 -> 022
