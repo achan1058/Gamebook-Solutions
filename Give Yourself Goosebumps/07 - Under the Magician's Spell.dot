@@ -1,4 +1,4 @@
-digraph "Fighting Fantasy: Title" {
+digraph "Give Yourself Goosebumps: Under the Magician's Spell" {
 	// graph defaults
 	rankdir=LR
 	mclimit=50
@@ -12,7 +12,7 @@ digraph "Fighting Fantasy: Title" {
 
 	// a box for a graph label
 	// note that you can override the defaults set above
-	title [label = "Fighting Fantasy: Title --/--/--\n\n \
+	title [label = "Give Yourself Goosebumps: Under the Magician's Spell 07\n\n \
 		Light Green Fill: Benefits\l \
 		Pink Fill: Penalties\l \
 		Red Fill: Death\l \
@@ -20,37 +20,10 @@ digraph "Fighting Fantasy: Title" {
 		Red Text: Lost Items\l \
 		Purple Text: Shops\l \
 		Blue Line: Forced Items/Events\l \
-		Light Blue Text/Line: Optional Items/Events\l \
 		Purple Line: Dice Related Events\l \
-		Green Line: Stat Test Passed\l \
-		Brown Line: Stat Test Failed\l \
-		Magenta Line: Combat Related Events\l \
 		Grey Text: Riddle Answer\l \
 		Grey Line: Hidden Option\l \
-		Orange Line: Spells\l \
-		Red Line: Possible Error\l \
-		Gold/Yellow Fill: Required Nodes\l \
-		Light Blue Fill: Recommended Nodes\l \
 		Gold Outline: Recommended Path\l \
-		Green Box: Combat\l \
-		SK/ST/LK/AS/AR/TM/CW/CL: Skill/Stamina/Luck/Attack Strength/Attack Round/Time/Consecutive Win Round/Consecutive Lose Round\l \
-		?: Chance of this happening, depending on instructions in text\l \
-		*: Special Combat Rules\l \
-		-: Negative Status\l \
-		+: Positive Status\l \
-		^: Damage can be reduced by items\l \
-		@: Take 2 items\l\l \
-		Starts with:\l \
-		Initial Skill: 1d6+6\l \
-		Initial Stamina: 2d6+12\l \
-		Initial Luck: 1d6+6\l\l \
-		skill/stamina/luck potion: +all SK/ST/LK&1ILK\l \
-		10 meal: +4ST\l \
-		sword\l \
-		leather armor\l \
-		lantern\l \
-		tinderbox\l \
-		2d6+6 gold\l \
 		backpack\l\l \
 		Comments:\l \
 		none\l \
@@ -60,268 +33,172 @@ digraph "Fighting Fantasy: Title" {
 
 	subgraph Required {
 		node [style = "filled" color = "gold" fillcolor = "gold" fontcolor = "blue" shape = "rect"]
-		key3
-		boo5
-		dam5
-		monboo5
-		mondam5
-		mon5
-		ending [fontcolor = "black" shape = "octagon"]
-	}
-
-	subgraph Required2 {
-		node [style = "filled" color = "#FFF700" fillcolor = "#FFF700" fontcolor = "blue" shape = "rect"]
-		req2
-	}
-
-	subgraph Recommended {
-		node [penwidth = 3 color = "gold"]
-		txt2
-		key2 [shape = "rect" fontcolor = "blue"]
-		boo3 [style = "filled" fillcolor = "greenyellow"]
-		boo4 [style = "filled" fillcolor = "greenyellow"]
-		dam3 [style = "filled" fillcolor = "pink"]
-		dam4 [style = "filled" fillcolor = "pink"]
-		monboo3 [style = "filled" fillcolor = "greenyellow"]
-		monboo4 [style = "filled" fillcolor = "greenyellow"]
-		mondam3 [style = "filled" fillcolor = "pink"]
-		mondam4 [style = "filled" fillcolor = "pink"]
-		mon3
-		mon4
-	}
-	
-	subgraph Optional {
-		node [style = "filled" color = "paleturquoise1" fillcolor = "paleturquoise1" fontcolor = "blue" shape = "rect"]
-		opt
-	}
-
-	subgraph Combat {
-		style = "filled" color = "palegreen2"
-		subgraph cluster_MONSTER {
-			label = "? MONSTER\n 0/0 0/0"
-			mon1 [label = "\N\n text"]
-			mon2 [shape = "rect" fontcolor = "blue" label = "\N\n text"]
-			mon3 [label = "\N\n text"]
-			mon4 [shape = "rect" fontcolor = "blue" label = "\N\n text"]
-			mon5 [shape = "rect" fontcolor = "blue" label = "\N\n text"]
-			monboo1 [style = "filled" color = "greenyellow" label = "\N\n text"]
-			monboo2 [shape = "rect" style = "filled" color = "greenyellow" fontcolor = "blue" label = "\N\n text"]
-			monboo3 [label = "\N\n text"]
-			monboo4 [shape = "rect" fontcolor = "blue" label = "\N\n text"]
-			monboo5 [shape = "rect" fontcolor = "blue" label = "\N\n text"]
-			mondam1 [style = "filled" color = "pink" label = "\N\n text"]
-			mondam2 [shape = "rect" style = "filled" color = "pink" fontcolor = "blue" label = "\N\n text"]
-			mondam3 [label = "\N\n text"]
-			mondam4 [shape = "rect" fontcolor = "blue" label = "\N\n text"]
-			mondam5 [shape = "rect" fontcolor = "blue" label = "\N\n text"]
-		}
-		cbt
+		004 [fontcolor = "black" shape = "octagon"]
+		068 [fontcolor = "black" shape = "octagon"]
 	}
 
 	subgraph Death {
 		node [style = "filled" color = "red"]
-		ddt
+		005
+		009
+		010
+		013
+		016
 		021
-	}
-
-	subgraph Boost {
-		node [style = "filled" color = "greenyellow"]
-		bst
-		boo1 [label = "\N\n text"]
-		boo2 [shape = "rect" fontcolor = "blue" label = "\N\n text"]
-		boo3 [label = "\N\n text"]
-		boo4 [shape = "rect" fontcolor = "blue" label = "\N\n text"]
-		boo5 [shape = "rect" fontcolor = "blue" label = "\N\n text"]
-	}
-
-	subgraph Damage {
-		node [style = "filled" color = "pink"]
-		ddg
-		dam1 [label = "\N\n text"]
-		dam2 [shape = "rect" fontcolor = "blue" label = "\N\n text"]
-		dam3 [label = "\N\n text"]
-		dam4 [shape = "rect" fontcolor = "blue" label = "\N\n text"]
-		dam5 [shape = "rect" fontcolor = "blue" label = "\N\n text"]
-	}
-
-	subgraph Key_Item {
-		node [fontcolor = "blue" shape = "rect"]
-		kky
-		key1 [label = "\N\n text"]
-		key2 [label = "\N\n text"]
-		key3 [label = "\N\n text"]
-	}
-	
-	subgraph Shop {
-		node [fontcolor = "purple" shape = "rect"]
-		shp
-		shop1 [label = "\N\n text"]
-	}
-
-	mon1 -> mon2 -> mon3 -> mon4 -> mon5 [penwidth = 3]
-	boo1 -> boo2 -> boo3 -> boo4 -> boo5 [penwidth = 3]
-	dam1 -> dam2 -> dam3 -> dam4 -> dam5
-	txt1 -> key1 -> txt2 -> key2 -> key3
-	monboo1 -> monboo2 -> monboo3 -> monboo4 -> monboo5
-	mondam1 -> mondam2 -> mondam3 -> mondam4 -> mondam5
-
-	myTitle -> z001 [penwidth = 3]
-	z001 -> z002 [color = "purple" fontcolor = "purple" label = "1-3"]
-	z001 -> z003 [color = "purple" fontcolor = "purple" label = "4-6"]
-	z002 -> z004 [color = "green" fontcolor = "green" label = "LK"]
-	z002 -> z005 [color = "brown"]
-	z003 -> z006 [dir = "both"]
-	z004 -> z007 [color = "blue" fontcolor = "blue" label = "req"]
-	z004 -> z008 [color = "cyan3" fontcolor = "cyan3" label = "-opt"]
-	z005 -> z009 [color = "grey" fontcolor = "grey" label = "info"]
-	z009 -> z010 [color = "crimson" fontcolor = "crimson" label = "error(?)"]
-	z010 -> z011 [color = "magenta" fontcolor = "magenta" label = "escape"]
-	{
-		rank = same
-		z003
-		z006
+		029
+		035
+		046
+		063
+		067
+		072
+		084
+		088
+		090
+		100
+		104
+		109
+		117
+		131
+		134
 	}
 
 	title -> 001
 	001 -> 002
 	002 -> 003
 	003 -> 018
-//	004 -> 
-//	005 -> 
 	006 -> 125
 	007 -> 114
 	008 -> 032
 	008 -> 047
-//	009 -> 
-//	010 -> 
-//	011 -> 
-//	012 -> 
-//	013 -> 
-//	014 -> 
-//	015 -> 
-//	016 -> 
+	011 -> 080
+	012 -> 118
+	014 -> 037
 	017 -> 064
 	018 -> 007
-//	019 -> 
-//	020 -> 
-//	022 -> 
-//	023 -> 
-//	024 -> 
+	019 -> 065
+	020 -> 042
+	022 -> 106
+	023 -> 033
+	023 -> 089
+	024 -> 051
 	025 -> 006
-//	026 -> 
-//	027 -> 
+	026 -> 087
+	027 -> 127
 	028 -> 017
-//	029 -> 
-//	030 -> 
-//	031 -> 
+	030 -> 050
+	031 -> 122
 	032 -> 040
-//	033 -> 
+	033 -> 072
 	034 -> 101
 	034 -> 022
 	034 -> 132
-//	035 -> 
-//	036 -> 
-//	037 -> 
-//	038 -> 
-//	039 -> 
+	036 -> 046
+	036 -> 108
+	037 -> 123
+	038 -> 056
+	039 -> 056
 	040 -> 060
-//	041 -> 
-//	042 -> 
-//	043 -> 
-//	044 -> 
-//	045 -> 
-//	046 -> 
-//	047 -> 
-//	048 -> 
+	041 -> 090
+	042 -> 070
+	042 -> 052
+	043 -> 026
+	043 -> 038
+	044 -> 086
+	045 -> 074
+	047 -> 083
+	048 -> 130
 	049 -> 135
-//	050 -> 
-//	051 -> 
-//	052 -> 
-//	053 -> 
-//	054 -> 
-//	055 -> 
-//	056 -> 
-//	057 -> 
-//	058 -> 
-//	059 -> 
-	060 -> 017 [color = "blue" fontcolor = "blue" label = "juggle"]
-	060 -> 028
-//	061 -> 
-//	062 -> 
-//	063 -> 
+	050 -> 097
+	050 -> 082
+	051 -> 077
+	051 -> 088
+	052 -> 102
+	053 -> 121
+	054 -> 120
+	054 -> 012
+	055 -> 124
+	056 -> 045
+	057 -> 131
+	058 -> 091
+	059 -> 048
+	060 -> 017 [color = "purple" fontcolor = "purple" label = "juggle"]
+	060 -> 028 [color = "purple" fontcolor = "purple" label = "can't juggle"]
+	061 -> 092
+	062 -> 011
 	064 -> 034
-//	065 -> 
+	065 -> 110
+	065 -> 067
 	066 -> 113
-//	067 -> 
-//	068 -> 
-//	069 -> 
-//	070 -> 
-//	071 -> 
-//	072 -> 
-//	073 -> 
-//	074 -> 
-//	075 -> 
-//	076 -> 
-//	077 -> 
+	069 -> 107
+	070 -> 031
+	071 -> 058
+	073 -> 085
+	073 -> 062
+	074 -> 104 [color = "purple" fontcolor = "purple" label = "ace"]
+	074 -> 063 [color = "purple" fontcolor = "purple" label = "other cards"]
+	075 -> 054
+	076 -> 117
+	077 -> 004
 	078 -> 103
-//	079 -> 
-//	080 -> 
-//	081 -> 
-//	082 -> 
-//	083 -> 
-//	084 -> 
-//	085 -> 
-//	086 -> 
-//	087 -> 
-//	088 -> 
-//	089 -> 
-//	090 -> 
-//	091 -> 
-//	092 -> 
-//	093 -> 
-//	094 -> 
-//	095 -> 
-//	096 -> 
-//	097 -> 
-//	098 -> 
-//	099 -> 
-//	100 -> 
+	079 -> 133
+	080 -> 095
+	081 -> 044
+	082 -> 039
+	083 -> 115
+	085 -> 010
+	086 -> 128
+	087 -> 085
+	087 -> 015 [dir = both]
+	087 -> 073
+	089 -> 126
+	091 -> 096
+	092 -> 023
+	093 -> 041
+	094 -> 027
+	095 -> 119
+	096 -> 057
+	097 -> 043
+	098 -> 109
+	099 -> 116
+	099 -> 076
 	101 -> 066
-//	102 -> 
+	102 -> 069
 	103 -> 112
-//	104 -> 
-//	105 -> 
-//	106 -> 
-//	107 -> 
-//	108 -> 
-//	109 -> 
-//	110 -> 
-//	111 -> 
+	105 -> 098
+	105 -> 071
+	106 -> 100
+	107 -> 111 [color = "purple" fontcolor = "purple" label = "even"]
+	107 -> 129 [color = "purple" fontcolor = "purple" label = "odd"]
+	108 -> 081
+	110 -> 005
+	111 -> 013
 	112 -> 049
 	112 -> 055
 	113 -> 078
 	113 -> 036
 	114 -> 025
 	114 -> 006
-//	115 -> 
-//	116 -> 
-//	117 -> 
-//	118 -> 
-//	119 -> 
-//	120 -> 
-//	121 -> 
-//	122 -> 
-//	123 -> 
-//	124 -> 
+	115 -> 059
+	116 -> 094
+	118 -> 099
+	119 -> 134 [color = "purple" fontcolor = "purple" label = "Mon,Wed,Fri"]
+	119 -> 024 [color = "purple" fontcolor = "purple" label = "Tue,Thu,Sat,Sun"]
+	120 -> 029
+	121 -> 079
+	122 -> 105
+	123 -> 061
+	123 -> 009
+	124 -> 030
 	125 -> 008
-//	126 -> 
-//	127 -> 
-//	128 -> 
-//	129 -> 
-//	130 -> 
-//	131 -> 
-//	132 -> 
-//	133 -> 
-//	134 -> 
+	126 -> 084
+	127 -> 093
+	127 -> 020
+	128 -> 035
+	129 -> 053
+	130 -> 075
+	130 -> 014
+	132 -> 019
+	133 -> 016
+	133 -> 068
 	135 -> 021
 }
