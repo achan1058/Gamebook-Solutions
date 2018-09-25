@@ -1,4 +1,4 @@
-digraph "Give Yourself Goosebumps: Under the Magician's Spell" {
+digraph {
 	// graph defaults
 	rankdir=LR
 	mclimit=50
@@ -12,21 +12,10 @@ digraph "Give Yourself Goosebumps: Under the Magician's Spell" {
 
 	// a box for a graph label
 	// note that you can override the defaults set above
-	title [label = "Give Yourself Goosebumps: Under the Magician's Spell 07\n\n \
-		Light Green Fill: Benefits\l \
-		Pink Fill: Penalties\l \
-		Red Fill: Death\l \
-		Blue Text: Key Items/Events\l \
-		Red Text: Lost Items\l \
-		Purple Text: Shops\l \
-		Blue Line: Forced Items/Events\l \
-		Purple Line: Dice Related Events\l \
-		Grey Text: Riddle Answer\l \
-		Grey Line: Hidden Option\l \
-		Gold Outline: Recommended Path\l \
-		backpack\l\l \
-		Comments:\l \
-		none\l \
+	title [label = "Give Yourself Goosebumps 07:\l Under the Magician's Spell\l\n \
+		Purple Line: External Events\l \
+		Gold Fill: Good Endings\l \
+		Red Fill: Bad Endings\l \
 		"
 		shape = "box"
 		margin = 0.1]
