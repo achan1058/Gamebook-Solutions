@@ -1,4 +1,4 @@
-digraph "Fighting Fantasy: Title" {
+digraph {
 	// graph defaults
 	rankdir=LR
 	mclimit=50
