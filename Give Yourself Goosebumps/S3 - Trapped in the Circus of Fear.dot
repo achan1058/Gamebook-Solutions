@@ -12,7 +12,7 @@ digraph "Fighting Fantasy: Title" {
 
 	// a box for a graph label
 	// note that you can override the defaults set above
-	title [label = "Give Yourself Goosebumps: Trapped in the Circus of Fear S3\n\n \
+	title [label = "Give Yourself Goosebumps S3: Trapped in the Circus of Fear\n\n \
 		Take 3 items:\l\l \
 		camera\l \
 		dictonary\l \
