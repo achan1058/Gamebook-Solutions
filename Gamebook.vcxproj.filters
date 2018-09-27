@@ -31,6 +31,9 @@
     <Filter Include="A Chooseable-Path Adventure">
       <UniqueIdentifier>{5492adb3-1889-45d1-9fb7-fbf28d98800a}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Temp">
+      <UniqueIdentifier>{cc5b250e-f266-4649-a47a-036ebb4deca4}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <CustomBuild Include="template.dot">
@@ -105,17 +108,20 @@
     <CustomBuild Include="Fighting Fantasy\Night Dragon.dot">
       <Filter>Fighting Fantasy</Filter>
     </CustomBuild>
-    <CustomBuild Include="Give Yourself Goosebumps\S3 - Trapped in the Circus of Fear.dot">
-      <Filter>Give Yourself Goosebumps</Filter>
-    </CustomBuild>
-    <CustomBuild Include="Give Yourself Goosebumps\07 - Under the Magician%27s Spell.dot">
-      <Filter>Give Yourself Goosebumps</Filter>
-    </CustomBuild>
     <CustomBuild Include="A Chooseable-Path Adventure\Romeo and or Juliet.dot">
       <Filter>A Chooseable-Path Adventure</Filter>
     </CustomBuild>
     <CustomBuild Include="A Chooseable-Path Adventure\To Be or Not To Be.dot">
       <Filter>A Chooseable-Path Adventure</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Give Yourself Goosebumps\04 - The Deadly Experiments of Dr. Eeek.dot">
+      <Filter>Temp</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Give Yourself Goosebumps\07 - Under the Magician%27s Spell.dot">
+      <Filter>Temp</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Give Yourself Goosebumps\S3 - Trapped in the Circus of Fear.dot">
+      <Filter>Temp</Filter>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
