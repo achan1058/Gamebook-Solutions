@@ -230,6 +230,9 @@
     <CustomBuild Include="Give Yourself Goosebumps\04 - The Deadly Experiments of Dr. Eeek.dot">
       <FileType>Document</FileType>
     </CustomBuild>
+    <CustomBuild Include="Give Yourself Goosebumps\16 - Secret Agent Grandma.dot">
+      <FileType>Document</FileType>
+    </CustomBuild>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Gamebook.cpp" />

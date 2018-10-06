@@ -81,9 +81,6 @@
     <CustomBuild Include="Tin Man Games\old\Zombocalypse Now.dot">
       <Filter>backup</Filter>
     </CustomBuild>
-    <CustomBuild Include="Fighting Fantasy\Knights of Doom.dot">
-      <Filter>Fighting Fantasy</Filter>
-    </CustomBuild>
     <CustomBuild Include="..\Old\Fighting Fantasy\Blood of the Zombie.dot">
       <Filter>backup</Filter>
     </CustomBuild>
@@ -102,18 +99,6 @@
     <CustomBuild Include="..\Old\Fighting Fantasy\Stormslayer.dot">
       <Filter>backup</Filter>
     </CustomBuild>
-    <CustomBuild Include="Fighting Fantasy\Deathmoor.dot">
-      <Filter>Fighting Fantasy</Filter>
-    </CustomBuild>
-    <CustomBuild Include="Fighting Fantasy\Night Dragon.dot">
-      <Filter>Fighting Fantasy</Filter>
-    </CustomBuild>
-    <CustomBuild Include="A Chooseable-Path Adventure\Romeo and or Juliet.dot">
-      <Filter>A Chooseable-Path Adventure</Filter>
-    </CustomBuild>
-    <CustomBuild Include="A Chooseable-Path Adventure\To Be or Not To Be.dot">
-      <Filter>A Chooseable-Path Adventure</Filter>
-    </CustomBuild>
     <CustomBuild Include="Give Yourself Goosebumps\04 - The Deadly Experiments of Dr. Eeek.dot">
       <Filter>Temp</Filter>
     </CustomBuild>
@@ -121,6 +106,24 @@
       <Filter>Temp</Filter>
     </CustomBuild>
     <CustomBuild Include="Give Yourself Goosebumps\S3 - Trapped in the Circus of Fear.dot">
+      <Filter>Temp</Filter>
+    </CustomBuild>
+    <CustomBuild Include="A Chooseable-Path Adventure\Romeo and or Juliet.dot">
+      <Filter>Temp</Filter>
+    </CustomBuild>
+    <CustomBuild Include="A Chooseable-Path Adventure\To Be or Not To Be.dot">
+      <Filter>Temp</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Fighting Fantasy\Deathmoor.dot">
+      <Filter>Temp</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Fighting Fantasy\Knights of Doom.dot">
+      <Filter>Temp</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Fighting Fantasy\Night Dragon.dot">
+      <Filter>Temp</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Give Yourself Goosebumps\16 - Secret Agent Grandma.dot">
       <Filter>Temp</Filter>
     </CustomBuild>
   </ItemGroup>
