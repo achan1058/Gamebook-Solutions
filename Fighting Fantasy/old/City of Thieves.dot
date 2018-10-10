@@ -49,7 +49,7 @@ digraph "Fighting Fantasy: City of Thieves 05/05/06" {
 		Pink Line: Stat Test Passed\l \
 		Brown Line: Stat Test Failed\l \
 		Green Line: Combat Events\l \
-		Gold/Yellow Fill: Required Nodes\l \
+		Gold Fill: Required Nodes\l \
 		Light Blue Fill: Recommended Nodes\l \
 		Gold Outline: Recommended Path\l \
 		Green Box: Combat\l \

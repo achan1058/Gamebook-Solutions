@@ -38,7 +38,7 @@ digraph "Fighting Fantasy: Bloodbones --/26/07" {
 		Brown Line: Stat Test Failed\l \
 		Grey Line: Hidden Option\l \
 		Red Line: Possible Error\l \
-		Gold/Yellow Fill: Required Nodes\l \
+		Gold Fill: Required Nodes\l \
 		Light Blue Fill: Recommended Nodes\l \
 		Gold Outline: Recommended Path\l \
 		Green Box: Combat\l \

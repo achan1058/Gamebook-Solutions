@@ -26,7 +26,7 @@ digraph "Fighting Fantasy: Crypt of the Sorcerer" {
 		Magenta Line: Combat Related Events\l \
 		Grey Text: Riddle Answer\l \
 		Grey Line: Hidden Option\l \
-		Gold/Yellow Fill: Required Nodes\l \
+		Gold Fill: Required Nodes\l \
 		Light Blue Fill: Recommended Nodes\l \
 		Gold Outline: Recommended Path\l \
 		Green Box: Combat\l \

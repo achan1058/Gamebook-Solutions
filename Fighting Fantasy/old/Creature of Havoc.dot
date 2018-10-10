@@ -27,7 +27,7 @@ digraph "Fighting Fantasy: Creature of Havoc" {
 		Magenta Line: Combat Related Events\l \
 		Grey Line: Hidden Option\l \
 		Red Line: Possible Error\l \
-		Gold/Yellow Fill: Required Nodes\l \
+		Gold Fill: Required Nodes\l \
 		Light Blue Fill: Recommended Nodes\l \
 		Gold Outline: Recommended Path\l \
 		Green Box: Combat\l \

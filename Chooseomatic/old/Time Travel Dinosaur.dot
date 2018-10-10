@@ -15,7 +15,7 @@ digraph "Chooseomatic: Time Travel Dinosaur" {
 	title [label = "Chooseomatic: Time Travel Dinosaur\n\n \
 		Red Fill: Death\l \
 		Red Line: Possible Error\l \
-		Gold/Yellow Fill: Required Nodes\l \
+		Gold Fill: Required Nodes\l \
 		Gold Outline: Recommended Path\l \
 		backpack\l\l \
 		Comments:\l \
