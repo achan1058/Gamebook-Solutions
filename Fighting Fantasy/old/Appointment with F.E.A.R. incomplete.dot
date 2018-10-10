@@ -116,7 +116,7 @@ digraph "Fighting Fantasy: Appointment with F.E.A.R." {
 	subgraph Combat {
 		style = "filled" color = "palegreen2"
 		subgraph cluster_MONSTER {
-			label = "? MONSTER\n 0/0 0/0"
+			label = "MONSTER\n 0/0 0/0"
 			mon1 [label = "\N\n text"]
 			mon2 [shape = "rect" fontcolor = "blue" label = "\N\n text"]
 			mon3 [label = "\N\n text"]
