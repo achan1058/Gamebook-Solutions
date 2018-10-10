@@ -78,9 +78,6 @@
     <CustomBuild Include="Chooseomatic\old\Time Travel Dinosaur.dot">
       <Filter>backup</Filter>
     </CustomBuild>
-    <CustomBuild Include="Tin Man Games\old\Zombocalypse Now.dot">
-      <Filter>backup</Filter>
-    </CustomBuild>
     <CustomBuild Include="..\Old\Fighting Fantasy\Blood of the Zombie.dot">
       <Filter>backup</Filter>
     </CustomBuild>
