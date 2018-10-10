@@ -80,7 +80,7 @@ digraph "Fighting Fantasy: Appointment with F.E.A.R." {
 	}
 
 	subgraph Required2 {
-		node [style = "filled" color = "#FFF700" fillcolor = "#FFF700" fontcolor = "blue" shape = "rect"]
+		node [style = "filled" color = "gold2" fillcolor = "gold2" fontcolor = "blue" shape = "rect"]
 		req2
 	}
 

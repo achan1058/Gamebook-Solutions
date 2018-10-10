@@ -67,12 +67,31 @@ digraph {
 		mondam5
 		mon5
 		ending [fontcolor = "black" shape = "octagon"]
+		036
+		173
+		326
+		240
+		371
+		015
+		348
+		057
+		373
+		126
+		060
+		180
+		282
+		090
+		394
+		053
+		262
+		314
 		400 [fontcolor = "black" shape = "octagon"]
 	}
 
 	subgraph Required2 {
-		node [style = "filled" color = "#FFF700" fillcolor = "#FFF700" fontcolor = "blue" shape = "rect"]
+		node [style = "filled" color = "gold2" fillcolor = "gold2" fontcolor = "blue" shape = "rect"]
 		req2
+		277
 	}
 
 	subgraph Recommended {
@@ -94,6 +113,9 @@ digraph {
 	subgraph Optional {
 		node [style = "filled" color = "paleturquoise1" fillcolor = "paleturquoise1" fontcolor = "blue" shape = "rect"]
 		opt
+		070
+		149
+		309
 	}
 
 	subgraph Combat {
@@ -357,7 +379,7 @@ digraph {
 		135 [label = "\N\n +4ST"]
 		184 [label = "\N\n +4ST"]
 		187 [shape = "rect" fontcolor = "blue" label = "\N\n shield\n +1SK"]
-		233 [shape = "rect" fontcolor = "blue" label = "\N\n boots of speed\n +1SK"]
+		233 [label = "\N\n +1SK"]
 		261 [label = "\N\n +all ST"]
 		313 [label = "\N\n +1LK"]
 		321 [shape = "rect" fontcolor = "blue" label = "\N\n breastplate\n +1SK"]
@@ -437,7 +459,6 @@ digraph {
 		309 [label = "\N\n info" tooltip = "hunckback is a liar"]
 		314 [label = "\N\n set 3: 176"]
 		326 [label = "\N\n gold ring"]
-		341 [label = "\N\n glass balls"]
 		344 [label = "\N\n info" tooltip = "trust not the word of axe"]
 		348 [label = "\N\n gold ring\n info" tooltip = "don't drink from fountains"]
 		371 [label = "\N\n iron key"]

@@ -73,7 +73,7 @@ digraph "Fighting Fantasy: Crypt of the Sorcerer" {
 	}
 	
 	subgraph Required2 {
-		node [style = "filled" color = "#FFF700" fillcolor = "#FFF700" fontcolor = "blue" shape = "rect"]
+		node [style = "filled" color = "gold2" fillcolor = "gold2" fontcolor = "blue" shape = "rect"]
 		333
 	}
 

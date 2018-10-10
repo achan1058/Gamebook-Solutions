@@ -103,7 +103,7 @@ digraph "Fighting Fantasy: City of Thieves 05/05/06" {
 	}
 
 	subgraph Required2 {
-		node [style = "filled" color = "#FFF700" fillcolor = "#FFF700" fontcolor = "blue" shape = "rect"]
+		node [style = "filled" color = "gold2" fillcolor = "gold2" fontcolor = "blue" shape = "rect"]
 		042
 		111
 		191
