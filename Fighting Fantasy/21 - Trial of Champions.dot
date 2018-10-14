@@ -29,6 +29,7 @@ digraph {
 		Gold Fill: Required Nodes\l \
 		Gold Outline: Recommended Path\l \
 		Green Box: Combat\l \
+		SK/ST/LK/AT/AR/TM/CW/CL: Skill/Stamina/Luck/Attack Strength/Attack Round/Time/Consecutive Win Round/Consecutive Lose Round\l \
 		*: Special Combat Rules\l \
 		+: -1DMG without hammer\l \
 		@grub eggs: -1ST per reference\l\l \
