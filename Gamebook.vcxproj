@@ -244,8 +244,11 @@
     </CustomBuild>
     <CustomBuild Include="Fighting Fantasy\21 - Trial of Champions.dot">
       <FileType>Document</FileType>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuild>
+    <CustomBuild Include="Fighting Fantasy\03- The Forest of Doom.dot">
+      <FileType>Document</FileType>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>

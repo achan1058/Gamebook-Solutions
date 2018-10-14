@@ -126,6 +126,9 @@
     <CustomBuild Include="Fighting Fantasy\21 - Trial of Champions.dot">
       <Filter>Temp</Filter>
     </CustomBuild>
+    <CustomBuild Include="Fighting Fantasy\03- The Forest of Doom.dot">
+      <Filter>Temp</Filter>
+    </CustomBuild>
   </ItemGroup>
   <ItemGroup>
     <Text Include="vertex.txt">
