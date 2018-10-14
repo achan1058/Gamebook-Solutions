@@ -1,0 +1,1612 @@
+digraph "Fighting Fantasy: House of Hell" {
+	// graph defaults
+	rankdir=LR
+	mclimit=20
+	nodesep=.3 // changes horizontal separation of nodes
+	ranksep=.4 // changes vertical separation of nodes
+	node [height=.7
+		width=.7
+		shape=ellipse]
+	edge[weight=5]
+
+	// a box for a graph label
+	// note that you can override the defaults set above
+	myTitle [label = "House of Hell: Title\n\n \
+		Light Green Fill: Benefits\l \
+		Pink Fill: Damage\l \
+		Red Fill: Death\l \
+		Blue Text: Items/Events\l \
+		Blue Line: Forced Items/Events\l \
+		Light Blue Line: Optional Items/Events\l \
+		Purple Line: Dice Related Events\l \
+		Pink Line: Stat Test Passed\l \
+		Brown Line: Stat Test Failed\l \
+		Grey Line: Hidden Option\l \
+		Red Line: Possible Error\l \
+		Gold Fill: Required Nodes\l \
+		Light Blue Fill: Recommended Nodes\l \
+		Gold Outline: Recommended Path\l \
+		Green Box: Combat\l \
+		SK: Skill\l \
+		ST: Stamina\l \
+		LK: Luck\l \
+		FR: Fear\l \
+		AT: Attack Strength\l \
+		AR: Attack Round\l \
+		*: Positive Status\l \
+		**: Special Combat Rules\l \
+		***: Negative Status\l \
+		?: Chance of this happening, depending on instructions in text\l \
+		+: Combat penalty (could be offset by skills or items)\l\l \
+		Starts with:\l \
+		Initial Skill: 1d6+6 \l \
+		Initial Stamina: 2d6+12\l \
+		Initial Luck: 1d6+6\l \
+		Provisions: 10 meals (+4ST)\l \
+		sword\l \
+		leather armor\l \
+		lantern\l \
+		tinderbox\l \
+		2d6+6 gold\l \
+		backpack\l\l \
+		Comments:\l \
+		none\l"
+		color = "gray"
+		shape = "box"
+		width = "6"]
+
+	subgraph Required {
+		node [style = "filled" color = "gold" fillcolor = "gold" fontcolor = "blue" shape = "rect"]
+		295
+		035
+		003
+		010
+		400 [fontcolor = "black" shape = "octagon"]
+	}
+
+	subgraph Optional {
+		node [style = "filled" color = "cadetblue1" fillcolor = "cadetblue1" fontcolor = "blue" shape = "rect"]
+	}
+
+	subgraph Required2 {
+		node [style = "filled" color = "gold2" fillcolor = "gold2" fontcolor = "blue" shape = "rect"]
+	}
+
+	subgraph Recommended {
+		node [penwidth=3 color = "gold"]
+		001
+		357
+		008
+		277
+		394
+		309
+		395
+		196
+		028
+		224
+		005
+		023
+		128
+		158
+		373
+		399
+		220
+
+		350
+		257
+		358.2
+		358
+		117
+		341
+		161
+		385
+		Return
+		026
+		287
+		086
+		110
+		193
+		377
+		083
+		233
+		374
+		272
+		175
+		103
+		163
+		226
+		243
+		312
+		261
+		380
+		070
+		329
+		335
+		139
+		246
+		170
+		019
+		321
+		088.2
+		295
+		159
+		132
+		353.1
+		353
+		292
+		303
+		085
+		145
+		064
+		375
+		392
+		397
+		006
+		367
+		210
+		230
+		198
+		093
+		393
+		320
+		310
+		276
+		237
+		174
+		048
+		035
+		293
+		113
+		324
+		147
+		003
+		160
+		294
+		010
+		204
+		349
+		131
+		058
+		323
+		296
+		318
+		351
+		336
+		181
+		109
+		400
+	}
+
+	subgraph Combat {
+		style = "filled" color = "palegreen2"
+		
+		subgraph cluster_HUNCHBACK {
+			label = "HUNCHBACK\n 7/7"
+			399 [shape = "rect" fontcolor = "blue" label = "\N\n hunchback"]
+		}
+		
+		subgraph cluster_ZOMBIE {
+			label = "ZOMBIE\n 7/6"
+			236 [style = "filled" color = "pink" label = "\N\n +2FR\n -2ST"]
+		}
+		
+		subgraph cluster_INVISIBLE_ENEMY {
+			label = "INVISIBLE ENEMY\n 10/4"
+			142 [style = "filled" color = "pink" label = "\N\n +1FR"]
+		}
+		
+		subgraph cluster_WHITE_HAIRED_MAN {
+			label = "WHITE-HAIRED MAN\n 7/9"
+			154 [style = "filled" color = "pink" label = "\N\n +1FR"]
+			162
+			313
+			034
+			022
+			271
+		}
+		
+		subgraph cluster_ZOMBIE2 {
+			label = "2 ZOMBIE\n 7/6\n 6/6"
+			020
+		}
+		
+		subgraph cluster_SKELETON {
+			label = "2 SKELETON\n 6/6\n 7/6"
+			041 [style = "filled" color = "pink" label = "\N\n +2FR"]
+			043 [style = "filled" color = "pink" label = "\N\n +2FR"]
+		}
+		
+		subgraph cluster_GREAT_DANE {
+			label = "2 GREAT DANE\n 7/6\n 6/6"
+			170
+		}
+
+		subgraph cluster_FIRE_SPRITE {
+			label = "2 FIRE SPRITE**\n 7/4\n 7/3"
+			009
+		}
+		
+		subgraph cluster_BATS {
+			label = "BATS\n 4/4"
+			343
+		}
+
+		subgraph cluster_THE_MASTERS_SERVENT {
+			label = "THE MASTER'S SERVENT\n 8/9"
+			017
+		}
+
+		subgraph cluster_MAN {
+			label = "2 MAN\n 7/8\n 8/9"
+			215
+		}
+
+		subgraph cluster_FRANKLINS {
+			label = "FRANKLINS\n 8/8"
+			336 [label = "\N\n +3AT?"]
+		}
+
+		subgraph cluster_HELL_DEMON {
+			label = "HELL DEMON\n 14/12"
+			109 [label = "\N\n +6AT"]
+		}
+
+		subgraph cluster_THE_EARL_OF_DRUMER {
+			label = "THE EARL OF DRUMER\n 9/10"
+			030 [label = "\N\n +3AT?"]
+		}
+		
+		subgraph cluster_GHOUL {
+			label = "GHOUL**\n 8/7"
+			126 [shape = "rect" fontcolor = "blue" style = "filled" color = "pink" label = "\N\n +2FR\n knife: 3SK"]
+			186
+		}
+		
+		subgraph cluster_GREAT_DANE2 {
+			label = "GREAT DANE\n 7/5"
+			014
+		}
+		
+		subgraph cluster_GREAT_DANE3 {
+			label = "2 GREAT DANE\n 6/6\n 6/5"
+			078
+		}
+
+		subgraph cluster_MAN_IN_WHITE {
+			label = "MAN IN WHITE\n 7/9"
+			127
+		}
+		
+		subgraph cluster_DEVIL_WORSHIPPER {
+			label = "DEVIL-WORSHIPPER\n 8/7"
+			087
+		}
+		
+		subgraph cluster_LEADER {
+			label = "LEADER\n 8/9"
+			143
+		}
+		
+		subgraph cluster_HUNCHBACK2 {
+			label = "HUNCHBACK\n 7/7"
+			183 [label = "\N\n -2ESK"]
+			056
+			302
+			164
+			072
+			138
+		}
+		
+		subgraph cluster_HUNCHBACK3 {
+			label = "HUNCHBACK\n 7/7"
+			191
+		}
+	}
+
+	subgraph Death {
+		node [style = "filled" color = "red"]
+		007
+		052
+		067
+		082
+		171
+		172
+		180
+		182
+		201
+		219
+		245
+		254
+		274
+		301
+		326
+		328
+		331
+		362
+		365
+		396
+	}
+
+	subgraph Boost {
+		node [style = "filled" color = "greenyellow"]
+		010 [shape = "rect" fontcolor = "blue" label = "\N\n +2LK\n iron key: 27"]
+		035 [shape = "rect" fontcolor = "blue" label = "\N\n +3LK\n kris knife"]
+		070 [label = "\N\n -1FR"]
+		156 [shape = "rect" fontcolor = "blue" label = "\N\n +2LK\n pentacle: 66"]
+		208 [label = "\N\n +1LK"]
+		226 [label = "\N\n +4ST\n +1LK"]
+		227 [shape = "rect" fontcolor = "blue" label = "\N\n +0~7ST\n -1SK?\n -2FR?\n cheese?\n white wine?\n fish?\n red wine?"]
+		261 [label = "\N\n +4ST"]
+		292 [shape = "rect" fontcolor = "blue" label = "\N\n +3ST\n brandy"]
+		338 [label = "\N\n +4ST\n +1LK"]
+		372 [label = "\N\n +2ST"]
+		383 [label = "\N\n +2ST?"]
+		394 [label = "\N\n -1FR"]
+	}
+
+	subgraph Damage {
+		node [style = "filled" color = "pink"]
+		027 [label = "\N\n +3FR"]
+		038 [label = "\N\n -1ST?"]
+		053 [label = "\N\n +1FR\n -2ST"]
+		057 [label = "\N\n -1ST?"]
+		063 [label = "\N\n +1FR"]
+		069 [label = "\N\n +1FR"]
+		076 [label = "\N\n -1ST?"]
+		077 [label = "\N\n +1FR"]
+		098 [label = "\N\n +3FR"]
+		100 [label = "\N\n +1FR"]
+		101 [label = "\N\n +1FR"]
+		104 [label = "\N\n -4ST"]
+		106 [label = "\N\n -2ST"]
+		111 [label = "\N\n +1FR"]
+		113 [label = "\N\n +1FR"]
+		120 [label = "\N\n +1FR"]
+		124 [label = "\N\n +2FR"]
+		128 [label = "\N\n -2ST"]
+		134 [label = "\N\n +2FR"]
+		136 [label = "\N\n -1LK\n -2ST?"]
+		139 [label = "\N\n +2FR"]
+		148 [label = "\N\n -1~3ST\n -2SK?\n -1LK?"]
+		150 [label = "\N\n +1FR\n -1ST"]
+		151 [label = "\N\n +1FR"]
+		152 [label = "\N\n +1FR"]
+		168 [label = "\N\n +2FR"]
+		181 [label = "\N\n +3FR"]
+		199 [label = "\N\n -3ST"]
+		217 [label = "\N\n +1FR"]
+		222 [label = "\N\n +3FR"]
+		231 [label = "\N\n +2FR"]
+		250 [label = "\N\n +1FR"]
+		256 [label = "\N\n -1SK\n -3ST"]
+		262 [label = "\N\n -2ST"]
+		267 [label = "\N\n -4ST"]
+		290 [label = "\N\n +1FR"]
+		332 [label = "\N\n +1FR"]
+		333 [label = "\N\n -1ST?"]
+		352 [label = "\N\n -1ST?"]
+		354 [label = "\N\n +3FR"]
+		360 [label = "\N\n -2ST"]
+		366 [label = "\N\n -1ST"]
+		370 [label = "\N\n -1ST"]
+		371 [label = "\N\n +2FR"]
+		380 [label = "\N\n +1FR"]
+		384 [label = "\N\n +2FR"]
+		386 [label = "\N\n -2ST"]
+		391 [label = "\N\n -2ST"]
+		393 [label = "\N\n +1FR"]
+		397 [label = "\N\n +1FR\n -1LK\n -1SK?"]
+		398 [label = "\N\n -3ST"]
+	}
+
+	subgraph Key_Item {
+		node [fontcolor = "blue" shape = "rect"]
+		003 [label = "\N\n golden key"]
+		050 [label = "\N\n wood: 3SK"]
+		081 [label = "\N\n letter opener: 3SK"]
+		083 [label = "\N\n meat-knife: 3SK\n garlic"]
+		093 [label = "\N\n Murder"]
+		110 [label = "\N\n Mordana: 88"]
+		192 [label = "\N\n brandy\n dagger: 2SK"]
+		242 [label = "\N\n ruby ring"]
+		273 [label = "\N\n golden key"]
+		295 [label = "\N\n secret door: -10"]
+	}
+
+	subgraph Azazel {
+		node [style = "filled" color = "green" fontcolor="white" fixedsize = true label = "To\n 358"]
+		358 [label = "\N"]
+		358.1
+		358.2
+		Return [label = "Return\n to Text" fixedsize = false]
+	}
+
+	subgraph Mordana {
+		node [label = "088"]
+		088.1
+		088.2
+		088.3
+	}
+
+	subgraph Drawing_Room {
+		node [style = "filled" color = "purple" fontcolor="white" fixedsize = true label = "To\n 353"]
+		353 [label = "\N"]
+		353.1
+		353.2
+		Return2 [label = "Return\n to Text" fixedsize = false]
+	}
+
+	subgraph Drawing_Room_Trap {
+		node [style = "filled" color = "brown" fontcolor="white" fixedsize = true label = "To\n 392"]
+		392 [label = "\N"]
+		392.1
+	}
+
+	subgraph Study_Secret {
+		node [style = "filled" color = "skyblue1" fixedsize = true label = "To\n 241"]
+		241 [label = "\N"]
+		241.1
+	}
+
+	subgraph Study {
+		node [style = "filled" color = "blue" fontcolor="white" fixedsize = true label = "To\n 195"]
+		195 [label = "\N\n +1FR" fixedsize = false]
+		195.1
+		195.2
+		Return3 [label = "Return\n to Text" fixedsize = false]
+	}
+
+	subgraph Torture {
+		235 [label = "\N\n +0~5PT"]
+		194 [label = "\N\n +0~5PT"]
+		130 [label = "\N\n +0~5PT"]
+		297 [label = "\N\n +0~5PT"]
+		141 [label = "\N\n +0~5PT"]
+	}
+
+	{
+		rank = same
+		001
+		358
+		353
+		195
+	}
+	/*
+	{
+		rank = same
+		061
+		165
+	}
+	*/
+	myTitle -> 001
+	001 -> 357
+	001 -> 275
+	001 -> 289
+	002 -> 200
+	002 -> 272
+	003 -> 160
+	004 -> 396
+	004 -> 201
+	005 -> 023
+	005 -> 059
+	006 -> 367
+	006 -> 025
+	007
+	008 -> 277
+	008 -> 304
+	008 -> 238
+	009 -> 218 [color = "green" fontcolor = "green" label = "flee"]
+	009 -> 375
+	010 -> 204
+	011 -> 385
+	012 -> 133
+	012 -> 293
+	013 -> 372
+	013 -> 107
+	014 -> 094
+	015 -> 212 [color = "blue" fontcolor = "blue" label = "key"]
+	015 -> 047
+	016 -> 381
+	017 -> 131
+	018 -> 191 [color = "blue" fontcolor = "blue" label = "weapon"]
+	018 -> 093 [color = "blue" fontcolor = "blue" label = "brandy"]
+	018 -> 347
+	019 -> 388
+	019 -> 321
+	019 -> 283
+	020 -> 270
+	020 -> 090
+	021 -> 259
+	021 -> 118
+	022 -> 271
+	023 -> 045
+	023 -> 128
+	024 -> 349
+	024 -> 294
+	024 -> 216
+	025 -> 116
+	026 -> 298
+	026 -> 287
+	027 -> 231
+	027 -> 121
+	028 -> 224
+	028 -> 074
+	028 -> 319
+	029 -> 254
+	030 -> 288
+	031 [label = "\N***"]
+	031 -> 078
+	032 -> 326
+	033 -> 358.1 -> 229
+	033 -> 229
+	034 -> 177 [color = "pink" fontcolor = "pink" label = "SK"]
+	034 -> 022 [color = "brown"]
+	035 -> 293
+	035 -> 012
+	036 -> 305
+	036 -> 366
+	037 -> 277
+	037 -> 391
+	037 -> 250
+	038 -> 352
+	039 -> 054
+	040 -> 086
+	040 -> 193
+	041 -> 338
+	041 -> 243
+	042 -> 316
+	042 -> 217
+	043 -> 368
+	044 -> 227
+	044 -> 036
+	045 -> 173
+	046 -> 361 [color = "blue" fontcolor = "blue" label = "garlic"]
+	046 -> 135 [color = "blue" fontcolor = "blue" label = "ruby ring"]
+	046 -> 032
+	047 -> 200
+	047 -> 123
+	047 -> 272
+	048 -> 035
+	049 -> 195.1
+	049 -> 307
+	049 -> 217
+	050 -> 183
+	050 -> 263
+	//051 -> 061
+	051 -> 276
+	052
+	053 -> 002
+	054 -> Return3
+	055 -> 159
+	056 -> 072 [color = "green" fontcolor = "green" label = "3AR"]
+	057 -> 333
+	058 -> 118
+	058 -> 323
+	059 -> 079
+	059 -> 023
+	059 -> 063
+	060 -> 007
+	061 -> 051 [dir = both color = "grey:black" fontcolor = "grey" label = "secret door"]
+	061 -> 165 [dir = both]
+	061 -> 356
+	061 -> 293
+	062 -> 156
+	062 -> 384
+	063 -> 158
+	064 -> 375
+	065 -> 159
+	066 -> 232
+	067
+	068 -> 306
+	068 -> 357
+	069 -> 291
+	069 -> 120
+	070 -> 329
+	071 -> 214
+	071 -> 334
+	072 -> 138 [color = "blue" fontcolor = "blue" label = "hunchback"]
+	072 -> 164
+	073 -> 257
+	073 -> 346
+	074 -> 173
+	075 -> 378
+	075 -> 213
+	076 -> 315
+	077 -> 040
+	078 -> 383
+	079 -> 106 [color = "brown"]
+	079 -> 128 [color = "pink" fontcolor = "pink" label = "ISK"]
+	080 -> 187
+	080 -> 314
+	081 -> 385
+	082
+	083 -> 362
+	083 -> 255
+	083 -> 233
+	084 -> 036
+	085 -> 009
+	085 -> 145
+	086 -> 013
+	086 -> 110
+	086 -> 193
+	087 -> 178
+	088.1 -> 065
+	088.2 -> 295
+	088.3 -> 055
+	089 -> 305
+	089 -> 044
+	089 -> 366
+	090 -> 135 [color = "blue" fontcolor = "blue" label = "ruby ring"]
+	090 -> 326
+	091 -> 112
+	091 -> 393
+	092 -> 216
+	092 -> 349
+	093 -> 393
+	093 -> 166
+	094 -> 078
+	094 -> 240 [color = "pink" fontcolor = "pink" label = "LK"]
+	094 -> 031 [color = "brown"]
+	095 -> 008
+	096 -> 173
+	097 -> 316
+	097 -> 217
+	098 -> 374
+	099 -> 082
+	099 -> 067
+	100 -> 131
+	100 -> 160
+	101 -> 002
+	102 -> 216
+	102 -> 024
+	103 -> 163
+	103 -> 041
+	103 -> 243
+	104 -> 180
+	105 -> 378
+	105 -> 213
+	106 -> 158
+	107 -> 168
+	108 -> 021
+	108 -> 049
+	109 -> 400
+	110 -> 193
+	111 -> 309
+	112 -> 004
+	112 -> 016
+	113 -> 131
+	113 -> 160
+	113 -> 324
+	114 -> 077
+	114 -> 040
+	115 -> 028
+	116 -> 091
+	116 -> 166
+	117 -> 081
+	117 -> 341
+	117 -> 371
+	118 -> 327
+	118 -> 126
+	118 -> 148
+	119 -> 192
+	119 -> 303
+	120 -> 291
+	121 -> 175
+	122 -> 314
+	122 -> 080
+	122 -> 328
+	123 -> 386
+	123 -> 337
+	123 -> 002
+	124 -> 382
+	125 -> 239
+	125 -> 272
+	126 -> 029
+	126 -> 186 [dir = both color = "green:black" fontcolor = "green" label = "2L"]
+	127 -> 359 [color = "green" fontcolor = "green" label = "EST<=2"]
+	127 -> 366
+	128 -> 106
+	128 -> 158
+	129 -> 232
+	130 -> 297
+	131 -> 211
+	131 -> 058
+	132 -> 353.1
+	132 -> 285
+	132 -> 222
+	133 -> 099
+	134 -> 378
+	135 -> 326
+	136 -> 317
+	137 -> 345
+	137 -> 275
+	137 -> 357
+	138 -> 198
+	138 -> 164
+	139 -> 246
+	139 -> 159
+	140 -> 332
+	140 -> 287
+	141 -> 280
+	142 -> 257
+	143 -> 301
+	144 -> 071
+	144 -> 278
+	145 -> 169
+	145 -> 064
+	146 -> 133
+	146 -> 293
+	147 -> 184
+	147 -> 003
+	148 -> 254
+	149 -> 385
+	150 -> 101 [color = "pink" fontcolor = "pink" label = "LK"]
+	150 -> 053 [color = "brown"]
+	151 -> 391
+	151 -> 277
+	152 -> 236
+	153 -> 208
+	153 -> 268
+	154 -> 162 [color = "green" fontcolor = "green" label = "EST<=5"]
+	155 -> 231
+	155 -> 027
+	156 -> 286
+	156 -> 054
+	157 -> 248
+	158 -> 179
+	158 -> 373
+	159 -> 132
+	160 -> 092
+	160 -> 294
+	160 -> 349
+	161 [label = "\N*"]
+	161 -> 385
+	162 -> 271
+	162 -> 313
+	162 -> 378
+	163 -> 226
+	163 -> 043
+	163 -> 243
+	164 -> 116
+	//165 -> 061
+	165 -> 356
+	165 -> 293
+	166 -> 221
+	166 -> 209
+	166 -> 091
+	167 -> 380
+	168 -> 124
+	168 -> 382
+	169 -> 009
+	170 -> 159
+	170 -> 019
+	171
+	172
+	173 -> 136
+	173 -> 360
+	174 -> 048
+	174 -> 293
+	175 -> 312
+	175 -> 335
+	175 -> 103
+	175 -> 132
+	176 -> 004
+	177 -> 075
+	177 -> 105
+	178 -> 366
+	179 -> 399
+	179 -> 045
+	180
+	181 -> 109 [color = "blue" fontcolor = "blue" label = "kris knife"]
+	181 -> 052
+	182
+	183 -> 056
+	184 -> 017
+	184 -> 215
+	185 -> 379 [color = "pink" fontcolor = "pink" label = "LK"]
+	185 -> 206 [color = "brown"]
+	185 -> 316
+	//186 -> 126
+	187 -> 365
+	187 -> 066 [color = "grey" fontcolor = "grey" label = "pentacle"]
+	188 -> 133
+	188 -> 293
+	189 -> 020
+	190 -> 207
+	191 -> 284 [color = "green" fontcolor = "green" label = "EST<=5"]
+	192 -> 303
+	192 -> 218
+	193 -> 132
+	193 -> 377
+	193 -> 233
+	194 -> 130
+	195.1 -> 353.2
+	195.2 -> 247
+	195.1 -> 241
+	195.2 -> 241
+	195 -> 062
+	195 -> 054
+	196 -> 028
+	197 -> 236
+	198 -> 018
+	198 -> 093 [color = "blue" fontcolor = "blue" label = "brandy"]
+	199 -> 290
+	200 -> 069
+	200 -> 389
+	201
+	202 -> 278
+	203 -> 376 [color = "pink" fontcolor = "pink" label = "LK"]
+	203 -> 369 [color = "brown"]
+	204 -> 092
+	204 -> 349
+	205 -> 118
+	206 -> 318
+	207 -> 095
+	207 -> 267
+	208 -> 087
+	209 -> 322
+	209 -> 266
+	209 -> 363
+	209 -> 091
+	210 -> 230 [color = "blue" fontcolor = "blue" label = "hunchback"]
+	210 -> 393
+	210 -> 166
+	211 -> 058
+	212 -> 047
+	213 -> 134
+	213 -> 378
+	214 -> 245
+	214 -> 202
+	215 -> 160 [color = "green" fontcolor = "green" label = "flee"]
+	215 -> 273
+	216 -> 398
+	216 -> 089
+	217 -> 370
+	217 -> 320
+	217 -> 343
+	218 -> Return2
+	219
+	220 -> 350
+	220 -> 234
+	221 -> 344
+	221 -> 209
+	221 -> 091
+	222 -> 353.1
+	222 -> 285
+	222 -> 108
+	223 -> 133
+	223 -> 293
+	224 -> 005
+	225 -> 241.1
+	225 -> 054
+	226 -> 243
+	226 -> 043
+	227 -> 172 [color = "blue" fontcolor = "blue" label = "cheese/\n white wine"]
+	227 -> 084 [color = "blue" fontcolor = "blue" label = "fish/\n red wine"]
+	227 -> 036
+	228 -> 032
+	228 -> 046
+	229 -> 140
+	229 -> 332
+	230 -> 198
+	230 -> 302
+	231 -> 171 [color = "brown"]
+	231 -> 348 [color = "pink" fontcolor = "pink" label = "SK"]
+	232 -> 342
+	232 -> 144
+	233 -> 098
+	233 -> 374
+	234 -> 258
+	234 -> 308
+	234 -> 325
+	235 -> 194
+	236 -> 114
+	237 -> 223
+	237 -> 188
+	237 -> 174 [color = "blue" fontcolor = "blue" label = "Murder"]
+	237 -> 146
+	238 -> 277
+	239 -> 369
+	239 -> 281
+	240 -> 060
+	241 -> 209
+	242 -> 290
+	243 -> 312
+	243 -> 335
+	243 -> 132
+	244 -> 115
+	244 -> 196
+	244 -> 096
+	245
+	246 -> 159
+	246 -> 170
+	247 -> 217
+	247 -> 307
+	247 -> 316
+	248 -> 393
+	249 -> 236
+	250 -> 277
+	251 -> 097
+	251 -> 042
+	252 -> 200
+	252 -> 123
+	252 -> 015
+	252 -> 272
+	253 -> 293
+	253 -> 165
+	254
+	255 -> 200
+	255 -> 123
+	255 -> 233
+	256 -> 385
+	257 -> 358.2 -> 026
+	257 -> 298
+	257 -> 287
+	258 -> 132
+	258 -> 282
+	259 -> 049
+	259 -> 118
+	260 -> 113
+	260 -> 316
+	261 -> 380
+	262 -> 241
+	263 -> 367
+	263 -> 056
+	264 -> 314
+	264 -> 080
+	264 -> 328
+	265 -> 248
+	265 -> 293
+	266 -> 182 [color = "cyan3" fontcolor = "cyan3" label = "knife"]
+	266 -> 143
+	267 -> 173
+	268 -> 208
+	268 -> 127
+	269 -> 173
+	270 -> 102
+	271 -> 378
+	271 -> 213
+	272 -> 155
+	272 -> 175
+	273 -> 131
+	273 -> 160
+	274
+	275 -> 357
+	276 -> 253
+	276 -> 237
+	277 -> 394
+	277 -> 111
+	278 -> 342
+	278 -> 060
+	279 -> 073
+	279 -> 142
+	280 -> 265 [color = "purple" fontcolor = "purple" label = "PT>=12"]
+	280 -> 157 [color = "purple" fontcolor = "purple" label = "PT=8~11"]
+	280 -> 176 [color = "purple" fontcolor = "purple" label = "PT<8"]
+	281 -> 369
+	281 -> 203
+	282 -> 377
+	282 -> 098
+	282 -> 374
+	283 -> 088.3 [color = "grey" fontcolor = "grey" label = "Mordana"]
+	283 -> 159
+	284 -> 393
+	284 -> 166
+	285 -> 353.1
+	285 -> 108
+	286 -> 225
+	286 -> 311
+	287 -> 299
+	287 -> 086
+	287 -> 193
+	288 -> 104
+	289 -> 345
+	289 -> 137
+	290 -> 002
+	290 -> 150
+	291 -> 326
+	291 -> 228
+	292 -> 192
+	292 -> 303
+	292 -> 218
+	293 -> 113
+	293 -> 260
+	293 -> 316
+	294 -> 010 [color = "blue" fontcolor = "blue" label = "golden key"]
+	294 -> 204
+	295 -> 159
+	296 -> 318
+	296 -> 185
+	297 -> 141
+	298 -> 390
+	298 -> 287
+	299 -> 249
+	299 -> 197
+	299 -> 152
+	300 -> 075
+	300 -> 105
+	301
+	302 -> 393
+	302 -> 166
+	303 -> 085
+	303 -> 364
+	304 -> 151
+	304 -> 037
+	304 -> 250
+	305 -> 127
+	305 -> 153
+	306 -> 190 [color = "pink" fontcolor = "pink" label = "LK"]
+	306 -> 357 [color = "brown:black"]
+	306 -> 275 [color = "brown:black"]
+	307 -> 217
+	307 -> 316
+	308 -> 350
+	309 -> 269
+	309 -> 395
+	//310 -> 320
+	310 -> 276
+	311 -> 054
+	312 -> 261
+	312 -> 167
+	313 -> 034
+	313 -> 300
+	313 -> 271
+	314 -> 129 [color = "pink" fontcolor = "pink" label = "LK"]
+	314 -> 187 [color = "brown"]
+	315 -> 235
+	316 -> 205
+	316 -> 118
+	317 -> 287
+	317 -> 033
+	318 -> 030
+	318 -> 351
+	319 -> 074
+	320 -> 293
+	320 -> 330
+	320 -> 310 [dir = both color = "grey:black" fontcolor = "grey" label = "secret door"]
+	321 -> 088.2 [color = "grey" fontcolor = "grey" label = "Mordana"]
+	321 -> 159
+	322 -> 143
+	322 -> 091
+	323 -> 296 [color = "grey" fontcolor = "grey" label = "iron key"]
+	323 -> 118
+	324 -> 147
+	324 -> 100
+	325 -> 350
+	326
+	327 -> 148
+	327 -> 126
+	328
+	329 -> 335
+	329 -> 132
+	330 -> 165
+	330 -> 356
+	330 -> 061
+	331
+	332 -> 073
+	332 -> 279
+	333 -> 076
+	334 -> 278
+	335 -> 159
+	335 -> 139
+	335 -> 354
+	336 -> 181 [color = "green" fontcolor = "green" label = "EST<=6"]
+	337 -> 242
+	337 -> 199
+	338 -> 243
+	339 -> 154
+	339 -> 125
+	339 -> 252
+	340 -> 263
+	341 -> 149
+	341 -> 274
+	341 -> 256
+	341 -> 161
+	341 -> 081
+	341 -> 371
+	342 -> 060
+	342 -> 014
+	343 -> 293
+	343 -> 330
+	344 -> 209
+	344 -> 091
+	345 -> 207
+	345 -> 068
+	346 -> 257
+	346 -> 132
+	347 -> 091
+	348 -> 121
+	349 -> 131
+	350 -> 332
+	350 -> 257
+	351 -> 336
+	351 -> 030
+	352 -> 057
+	353.1 -> 392
+	353.2 -> 392
+	353.1 -> 195.2
+	353.2 -> 251
+	353 -> 119
+	353 -> 218
+	353 -> 292
+	354 -> 159
+	354 -> 246
+	355 -> 050 [color = "pink" fontcolor = "pink" label = "LK"]
+	355 -> 340 [color = "brown"]
+	355 -> 263
+	356 -> 387
+	356 -> 293
+	357 -> 008
+	358 -> 117
+	358 -> 011
+	359 -> 208
+	360 -> 317
+	361 -> 189
+	361 -> 270
+	361 -> 090
+	362
+	363 -> 143
+	363 -> 091
+	364 -> 218
+	364 -> 085
+	365
+	366 -> 264
+	367 -> 210
+	368 -> 243
+	369 -> 262
+	369 -> 252
+	369 -> 272
+	370 -> 293
+	371 -> 385
+	372 -> 168
+	373 -> 350
+	373 -> 399
+	374 -> 339
+	374 -> 272
+	375 -> 392.1
+	375 -> 218
+	376 -> 262
+	376 -> 369
+	377 -> 083
+	377 -> 255
+	377 -> 233
+	378 -> 125
+	378 -> 272
+	379 -> 318
+	380 -> 070
+	380 -> 329
+	381 -> 038
+	382 -> 110
+	382 -> 193
+	383 -> 060
+	384 -> 331 [color = "brown"]
+	384 -> 039 [color = "pink" fontcolor = "pink" label = "SK"]
+	385 -> Return
+	386 -> 290
+	387 -> 122
+	387 -> 219
+	388 -> 088.1 [color = "grey" fontcolor = "grey" label = "Mordana"]
+	388 -> 159
+	389 -> 272
+	390 -> 287
+	391 -> 277
+	392 -> 397
+	393 -> 370
+	393 -> 320
+	393 -> 343
+	394 -> 309
+	395 -> 196
+	395 -> 115
+	395 -> 244
+	396
+	397 -> 006
+	397 -> 355
+	398 -> 264
+	399 -> 220 [color = "green" fontcolor = "green" label = "EST<=4"]
+	400
+
+
+
+	
+
+	001 [fontsize=20]
+	002 [fontsize=20]
+	003 [fontsize=20]
+	004 [fontsize=20]
+	005 [fontsize=20]
+	006 [fontsize=20]
+	007 [fontsize=20]
+	008 [fontsize=20]
+	009 [fontsize=20]
+	010 [fontsize=20]
+	011 [fontsize=20]
+	012 [fontsize=20]
+	013 [fontsize=20]
+	014 [fontsize=20]
+	015 [fontsize=20]
+	016 [fontsize=20]
+	017 [fontsize=20]
+	018 [fontsize=20]
+	019 [fontsize=20]
+	020 [fontsize=20]
+	021 [fontsize=20]
+	022 [fontsize=20]
+	023 [fontsize=20]
+	024 [fontsize=20]
+	025 [fontsize=20]
+	026 [fontsize=20]
+	027 [fontsize=20]
+	028 [fontsize=20]
+	029 [fontsize=20]
+	030 [fontsize=20]
+	031 [fontsize=20]
+	032 [fontsize=20]
+	033 [fontsize=20]
+	034 [fontsize=20]
+	035 [fontsize=20]
+	036 [fontsize=20]
+	037 [fontsize=20]
+	038 [fontsize=20]
+	039 [fontsize=20]
+	040 [fontsize=20]
+	041 [fontsize=20]
+	042 [fontsize=20]
+	043 [fontsize=20]
+	044 [fontsize=20]
+	045 [fontsize=20]
+	046 [fontsize=20]
+	047 [fontsize=20]
+	048 [fontsize=20]
+	049 [fontsize=20]
+	050 [fontsize=20]
+	051 [fontsize=20]
+	052 [fontsize=20]
+	053 [fontsize=20]
+	054 [fontsize=20]
+	055 [fontsize=20]
+	056 [fontsize=20]
+	057 [fontsize=20]
+	058 [fontsize=20]
+	059 [fontsize=20]
+	060 [fontsize=20]
+	061 [fontsize=20]
+	062 [fontsize=20]
+	063 [fontsize=20]
+	064 [fontsize=20]
+	065 [fontsize=20]
+	066 [fontsize=20]
+	067 [fontsize=20]
+	068 [fontsize=20]
+	069 [fontsize=20]
+	070 [fontsize=20]
+	071 [fontsize=20]
+	072 [fontsize=20]
+	073 [fontsize=20]
+	074 [fontsize=20]
+	075 [fontsize=20]
+	076 [fontsize=20]
+	077 [fontsize=20]
+	078 [fontsize=20]
+	079 [fontsize=20]
+	080 [fontsize=20]
+	081 [fontsize=20]
+	082 [fontsize=20]
+	083 [fontsize=20]
+	084 [fontsize=20]
+	085 [fontsize=20]
+	086 [fontsize=20]
+	087 [fontsize=20]
+	088 [fontsize=20]
+	089 [fontsize=20]
+	090 [fontsize=20]
+	091 [fontsize=20]
+	092 [fontsize=20]
+	093 [fontsize=20]
+	094 [fontsize=20]
+	095 [fontsize=20]
+	096 [fontsize=20]
+	097 [fontsize=20]
+	098 [fontsize=20]
+	099 [fontsize=20]
+	100 [fontsize=20]
+	101 [fontsize=20]
+	102 [fontsize=20]
+	103 [fontsize=20]
+	104 [fontsize=20]
+	105 [fontsize=20]
+	106 [fontsize=20]
+	107 [fontsize=20]
+	108 [fontsize=20]
+	109 [fontsize=20]
+	110 [fontsize=20]
+	111 [fontsize=20]
+	112 [fontsize=20]
+	113 [fontsize=20]
+	114 [fontsize=20]
+	115 [fontsize=20]
+	116 [fontsize=20]
+	117 [fontsize=20]
+	118 [fontsize=20]
+	119 [fontsize=20]
+	120 [fontsize=20]
+	121 [fontsize=20]
+	122 [fontsize=20]
+	123 [fontsize=20]
+	124 [fontsize=20]
+	125 [fontsize=20]
+	126 [fontsize=20]
+	127 [fontsize=20]
+	128 [fontsize=20]
+	129 [fontsize=20]
+	130 [fontsize=20]
+	131 [fontsize=20]
+	132 [fontsize=20]
+	133 [fontsize=20]
+	134 [fontsize=20]
+	135 [fontsize=20]
+	136 [fontsize=20]
+	137 [fontsize=20]
+	138 [fontsize=20]
+	139 [fontsize=20]
+	140 [fontsize=20]
+	141 [fontsize=20]
+	142 [fontsize=20]
+	143 [fontsize=20]
+	144 [fontsize=20]
+	145 [fontsize=20]
+	146 [fontsize=20]
+	147 [fontsize=20]
+	148 [fontsize=20]
+	149 [fontsize=20]
+	150 [fontsize=20]
+	151 [fontsize=20]
+	152 [fontsize=20]
+	153 [fontsize=20]
+	154 [fontsize=20]
+	155 [fontsize=20]
+	156 [fontsize=20]
+	157 [fontsize=20]
+	158 [fontsize=20]
+	159 [fontsize=20]
+	160 [fontsize=20]
+	161 [fontsize=20]
+	162 [fontsize=20]
+	163 [fontsize=20]
+	164 [fontsize=20]
+	165 [fontsize=20]
+	166 [fontsize=20]
+	167 [fontsize=20]
+	168 [fontsize=20]
+	169 [fontsize=20]
+	170 [fontsize=20]
+	171 [fontsize=20]
+	172 [fontsize=20]
+	173 [fontsize=20]
+	174 [fontsize=20]
+	175 [fontsize=20]
+	176 [fontsize=20]
+	177 [fontsize=20]
+	178 [fontsize=20]
+	179 [fontsize=20]
+	180 [fontsize=20]
+	181 [fontsize=20]
+	182 [fontsize=20]
+	183 [fontsize=20]
+	184 [fontsize=20]
+	185 [fontsize=20]
+	186 [fontsize=20]
+	187 [fontsize=20]
+	188 [fontsize=20]
+	189 [fontsize=20]
+	190 [fontsize=20]
+	191 [fontsize=20]
+	192 [fontsize=20]
+	193 [fontsize=20]
+	194 [fontsize=20]
+	195 [fontsize=20]
+	196 [fontsize=20]
+	197 [fontsize=20]
+	198 [fontsize=20]
+	199 [fontsize=20]
+	200 [fontsize=20]
+	201 [fontsize=20]
+	202 [fontsize=20]
+	203 [fontsize=20]
+	204 [fontsize=20]
+	205 [fontsize=20]
+	206 [fontsize=20]
+	207 [fontsize=20]
+	208 [fontsize=20]
+	209 [fontsize=20]
+	210 [fontsize=20]
+	211 [fontsize=20]
+	212 [fontsize=20]
+	213 [fontsize=20]
+	214 [fontsize=20]
+	215 [fontsize=20]
+	216 [fontsize=20]
+	217 [fontsize=20]
+	218 [fontsize=20]
+	219 [fontsize=20]
+	220 [fontsize=20]
+	221 [fontsize=20]
+	222 [fontsize=20]
+	223 [fontsize=20]
+	224 [fontsize=20]
+	225 [fontsize=20]
+	226 [fontsize=20]
+	227 [fontsize=20]
+	228 [fontsize=20]
+	229 [fontsize=20]
+	230 [fontsize=20]
+	231 [fontsize=20]
+	232 [fontsize=20]
+	233 [fontsize=20]
+	234 [fontsize=20]
+	235 [fontsize=20]
+	236 [fontsize=20]
+	237 [fontsize=20]
+	238 [fontsize=20]
+	239 [fontsize=20]
+	240 [fontsize=20]
+	241 [fontsize=20]
+	242 [fontsize=20]
+	243 [fontsize=20]
+	244 [fontsize=20]
+	245 [fontsize=20]
+	246 [fontsize=20]
+	247 [fontsize=20]
+	248 [fontsize=20]
+	249 [fontsize=20]
+	250 [fontsize=20]
+	251 [fontsize=20]
+	252 [fontsize=20]
+	253 [fontsize=20]
+	254 [fontsize=20]
+	255 [fontsize=20]
+	256 [fontsize=20]
+	257 [fontsize=20]
+	258 [fontsize=20]
+	259 [fontsize=20]
+	260 [fontsize=20]
+	261 [fontsize=20]
+	262 [fontsize=20]
+	263 [fontsize=20]
+	264 [fontsize=20]
+	265 [fontsize=20]
+	266 [fontsize=20]
+	267 [fontsize=20]
+	268 [fontsize=20]
+	269 [fontsize=20]
+	270 [fontsize=20]
+	271 [fontsize=20]
+	272 [fontsize=20]
+	273 [fontsize=20]
+	274 [fontsize=20]
+	275 [fontsize=20]
+	276 [fontsize=20]
+	277 [fontsize=20]
+	278 [fontsize=20]
+	279 [fontsize=20]
+	280 [fontsize=20]
+	281 [fontsize=20]
+	282 [fontsize=20]
+	283 [fontsize=20]
+	284 [fontsize=20]
+	285 [fontsize=20]
+	286 [fontsize=20]
+	287 [fontsize=20]
+	288 [fontsize=20]
+	289 [fontsize=20]
+	290 [fontsize=20]
+	291 [fontsize=20]
+	292 [fontsize=20]
+	293 [fontsize=20]
+	294 [fontsize=20]
+	295 [fontsize=20]
+	296 [fontsize=20]
+	297 [fontsize=20]
+	298 [fontsize=20]
+	299 [fontsize=20]
+	300 [fontsize=20]
+	301 [fontsize=20]
+	302 [fontsize=20]
+	303 [fontsize=20]
+	304 [fontsize=20]
+	305 [fontsize=20]
+	306 [fontsize=20]
+	307 [fontsize=20]
+	308 [fontsize=20]
+	309 [fontsize=20]
+	310 [fontsize=20]
+	311 [fontsize=20]
+	312 [fontsize=20]
+	313 [fontsize=20]
+	314 [fontsize=20]
+	315 [fontsize=20]
+	316 [fontsize=20]
+	317 [fontsize=20]
+	318 [fontsize=20]
+	319 [fontsize=20]
+	320 [fontsize=20]
+	321 [fontsize=20]
+	322 [fontsize=20]
+	323 [fontsize=20]
+	324 [fontsize=20]
+	325 [fontsize=20]
+	326 [fontsize=20]
+	327 [fontsize=20]
+	328 [fontsize=20]
+	329 [fontsize=20]
+	330 [fontsize=20]
+	331 [fontsize=20]
+	332 [fontsize=20]
+	333 [fontsize=20]
+	334 [fontsize=20]
+	335 [fontsize=20]
+	336 [fontsize=20]
+	337 [fontsize=20]
+	338 [fontsize=20]
+	339 [fontsize=20]
+	340 [fontsize=20]
+	341 [fontsize=20]
+	342 [fontsize=20]
+	343 [fontsize=20]
+	344 [fontsize=20]
+	345 [fontsize=20]
+	346 [fontsize=20]
+	347 [fontsize=20]
+	348 [fontsize=20]
+	349 [fontsize=20]
+	350 [fontsize=20]
+	351 [fontsize=20]
+	352 [fontsize=20]
+	353 [fontsize=20]
+	354 [fontsize=20]
+	355 [fontsize=20]
+	356 [fontsize=20]
+	357 [fontsize=20]
+	358 [fontsize=20]
+	359 [fontsize=20]
+	360 [fontsize=20]
+	361 [fontsize=20]
+	362 [fontsize=20]
+	363 [fontsize=20]
+	364 [fontsize=20]
+	365 [fontsize=20]
+	366 [fontsize=20]
+	367 [fontsize=20]
+	368 [fontsize=20]
+	369 [fontsize=20]
+	370 [fontsize=20]
+	371 [fontsize=20]
+	372 [fontsize=20]
+	373 [fontsize=20]
+	374 [fontsize=20]
+	375 [fontsize=20]
+	376 [fontsize=20]
+	377 [fontsize=20]
+	378 [fontsize=20]
+	379 [fontsize=20]
+	380 [fontsize=20]
+	381 [fontsize=20]
+	382 [fontsize=20]
+	383 [fontsize=20]
+	384 [fontsize=20]
+	385 [fontsize=20]
+	386 [fontsize=20]
+	387 [fontsize=20]
+	388 [fontsize=20]
+	389 [fontsize=20]
+	390 [fontsize=20]
+	391 [fontsize=20]
+	392 [fontsize=20]
+	393 [fontsize=20]
+	394 [fontsize=20]
+	395 [fontsize=20]
+	396 [fontsize=20]
+	397 [fontsize=20]
+	398 [fontsize=20]
+	399 [fontsize=20]
+	400 [fontsize=20]
+}

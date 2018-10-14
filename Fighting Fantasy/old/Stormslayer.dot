@@ -1,0 +1,2158 @@
+digraph "Fighting Fantasy: Stormslayer" {
+	// graph defaults
+	rankdir=LR
+	mclimit=20
+	nodesep=.3 // changes horizontal separation of nodes
+	ranksep=.4 // changes vertical separation of nodes
+	node [height=.7
+		width=.7
+		shape=ellipse]
+	edge[weight=5]
+
+	shop1 [label = "Chalannabrad Shop\n\n \
+		provision: 1g/meal\l \
+		rope: 3g\l \
+		crossbow & 6 quarrels: 12g\l \
+		chainmail armor: 8g\l \
+		warhammer: 10g\l \
+		sun talisman: 6g\l \
+		wyrmskin cloak: 12g\l \
+		seven league boots: 10g\l \
+		luck potion: 6g\l \
+		stamina potion: 4g\l \
+		skill potion: 5g\l"
+		color = "gray"
+		shape = "box"]
+
+	shop2 [label = "Crystal Practical Shop\n \
+		High:-1g\n\n \
+		provision: 1g/meal\l \
+		crossbow & 6 quarrels: 12g\l \
+		breastplate: 10g\l \
+		luck potion: 6g\l \
+		stamina potion: 4g\l \
+		skill potion: 5g\l"
+		color = "gray"
+		shape = "box"]
+
+	shop3 [label = "Crystal Unusual Shop\n \
+		High:+1g\n\n \
+		glowstones: 6g\l \
+		crystal mace: 15g\l \
+		luck sprite: 10\l \
+		wyrmskin cloak: 12g\l \
+		blunderbuss: 12g\l \
+		blackpowder and shot: 2g/shot\l \
+		giant strength potion: 7g\l \
+		levitation potion: 7g\l \
+		healing elixir: 7g\l"
+		color = "gray"
+		shape = "box"]
+
+	shop4 [label = "Brokk's Shop\n\n \
+		Drawf Ale: 3g\l \
+		Trollbreath Beer: 4g\l \
+		Skullbuster Spirit: 4\l \
+		Cadwallader's Old Battleaxe Cider: 5g\l \
+		Wyvern's Wing: 5g\l \
+		Brokk's Blistering Brew: 6g\l"
+		color = "gray"
+		shape = "box"]
+
+	// a box for a graph label
+	// note that you can override the defaults set above
+	myTitle [label = "Fighting Fantasy: Stormslayer\n\n \
+		Light Green Fill: Benefits\l \
+		Pink Fill: Damage\l \
+		Red Fill: Death\l \
+		Blue Text: Items/Events\l \
+		Blue Line: Forced Items/Events\l \
+		Light Blue Line: Optional Items/Events\l \
+		Purple Line: Dice Related Events\l \
+		Pink Line: Stat Test Passed\l \
+		Brown Line: Stat Test Failed\l \
+		Grey Line: Hidden Option\l \
+		Red Line: Possible Error\l \
+		Gold Fill: Required Nodes\l \
+		Light Blue Fill: Recommended Nodes\l \
+		Gold Outline: Recommended Path\l \
+		Green Box: Combat\l \
+		SK/ST/LK/TM: Skill/Stamina/Luck/Time\l \
+		AT: Attack Strength\l \
+		AR: Attack Round\l \
+		*: Negative Status\l \
+		**: Special Combat Rules\l \
+		?: Chance of this happening, depending on instructions in text\l \
+		^: Damage can be reduced by items\l \
+		+: Combat penalty (could be offset by skills or items)\l\l \
+		Starts with:\l \
+		Initial Skill: 1d6+6 \l \
+		Initial Stamina: 2d6+12\l \
+		Initial Luck: 1d6+6\l \
+		Provisions: 10 meals (+4ST)\l \
+		Wyrmbiter\l \
+		leather armor\l \
+		lantern\l \
+		tinderbox\l \
+		2d6+12 gold\l \
+		backpack\l\l \
+		Two of:\l \
+		Dragon Tattoo\l \
+		Hunting Horn\l \
+		Sabretooth Fang\l \
+		Sun Talisman\l \
+		One of:\l \
+		Stormday~Seaday\l \
+		Comments:\l \
+		recover 1 stamina per day\l \
+		Wyrmbiter has +2 attack and 3 damage vs dragons, drakes, wyrms, wyverns\l \
+		Bow and crossbow can be used before battle, deals 2 damage on successful skill test.\l \
+		Chainmail reduces damage by 1 on a roll of 1-3.\l \
+		Breastplate reduces damage by 1 on a roll of 1-4.\l \
+		Wyrmskin cloak reduces damage by 1 on a roll of 1-2.\l \
+		Glowstones is lantern.\l \
+		Crystal mace does 3 damage on a roll of 4-6.\l \
+		Luck sprite passes your next 3 LK tests.\l \
+		Blunderbuss can be used before battle, deals 3 damage on roll of 1-3.\l \
+		Potion of Giant Strength gives +2AT and +1DMG for next battle.\l \
+		Healing elixir restores 6ST and 2SK.\l \
+		Small healing elixir restores 6ST and 2SK.\l \
+		319 penalty ignored by wyrmskin, fire potion, tattoo.\l \
+		344 penalty ignored by fire potion, tattoo.\l \
+		Wyrmskin, fire potion, tattoo can reduce special fire damage by 1ST, 1ST, 2ST resp.\l \
+		Cider restores 3ST and gives +1AT next fight.\l \
+		Warhammer does 3 damage on a roll of 5-6.\l \
+		Brokk has a stat of 10/8, and can help you fight battles.\l \
+		Rust Golem is on your side vs Earth Elemental.\l \
+		Healing salve restores half initial stamina.\l"
+		color = "gray"
+		shape = "box"
+		width = "6"]
+
+	subgraph Required {
+		node [style = "filled" color = "gold" fillcolor = "gold" fontcolor = "blue" shape = "rect"]
+		key3
+		boo5
+		dam5
+		monboo5
+		mondam5
+		mon5
+		400 [fontcolor = "black" shape = "octagon"]
+	}
+
+	subgraph Optional {
+		node [style = "filled" color = "cadetblue1" fillcolor = "cadetblue1" fontcolor = "blue" shape = "rect"]
+		opt
+	}
+
+	subgraph Required2 {
+		node [style = "filled" color = "gold2" fillcolor = "gold2" fontcolor = "blue" shape = "rect"]
+		req2
+	}
+
+	subgraph Recommended {
+		node [penwidth=3 color = "gold"]
+		txt2
+		key2 [shape = "rect" fontcolor = "blue"]
+		boo3 [style = "filled" fillcolor = "greenyellow"]
+		boo4 [style = "filled" fillcolor = "greenyellow"]
+		dam3 [style = "filled" fillcolor = "pink"]
+		dam4 [style = "filled" fillcolor = "pink"]
+		monboo3 [style = "filled" fillcolor = "greenyellow"]
+		monboo4 [style = "filled" fillcolor = "greenyellow"]
+		mondam3 [style = "filled" fillcolor = "pink"]
+		mondam4 [style = "filled" fillcolor = "pink"]
+		mon3
+		mon4
+	}
+
+	subgraph Combat {
+		style = "filled" color = "palegreen2"
+		
+		subgraph cluster_CAPTIVE_MANTICORE {
+			label = "CAPTIVE MANTICORE\n 9/10"
+			003
+		}
+
+		subgraph cluster_ICE_ELEMENTAL {
+			label = "ICE ELEMENTAL**\n 8/9\n Fire:-1/2"
+			100
+			043 [label = "\N\n -1EDMG"]
+		}
+
+		subgraph cluster_FOG_ELEMENTAL {
+			label = "FOG ELEMENTAL\n 7/10"
+			332
+		}
+
+		subgraph cluster_GREAT_EEL {
+			label = "2 GREAT EEL\n 9/10 8/9"
+			147 [label = "\N\n prospero only first"]
+		}
+
+		subgraph cluster_SKELETON_CREW {
+			label = "SKELETON CREW\n 6/12"
+			163
+		}
+
+		subgraph cluster_HAMMERHEAD {
+			label = "2 HAMMERHEAD\n 7/8\n 7/7"
+			317
+		}
+		
+		subgraph cluster_WHALE_WORM {
+			label = "WHALE-WORM\n 6/6"
+			031 [shape = "rect" fontcolor = "blue" label = "\N\n dragon shield"]
+		}
+
+		subgraph cluster_ABYSSAL_HORROR {
+			label = "ABYSSAL HORROR**\n 10/12"
+			242
+		}
+
+		subgraph cluster_LEVIATHAN {
+			label = "LEVIATHAN\n 10/20"
+			358 [style = "filled" color = "greenyellow" label = "\N\n +1LK"]
+		}
+
+		subgraph cluster_NAIAD {
+			label = "3 NAIAD\n 8/7 7/7 6/6\n Sea:+1/1"
+			361 [shape = "rect" fontcolor = "blue" label = "\N\n Shell of the Seas: 12"]
+		}
+
+		subgraph cluster_REEF_DWELLERS {
+			label = "REEF DWELLERS\n 7/10"
+			046
+		}
+
+		subgraph cluster_EERIESIDE_BEAST {
+			label = "EERIESIDE BEAST\n 9/12"
+			195
+		}
+
+		subgraph cluster_HATCHLING {
+			label = "2 HATCHLING\n 7/7 6/7"
+			246
+		}
+
+		subgraph cluster_TORRENT {
+			label = "TORRENT**\n 8/10\n Sea:+1/2"
+			372 [style = "filled" color = "pink" label = "\N\n -2LK"]
+		}
+
+		subgraph cluster_HOBGOBLIN {
+			label = "HOBGOBLIN CHIEF\n 3 HOBGOBLIN BANDIT**\n 7/7 6/6 6/6 7/6"
+			232 [label = "\N\n +2day"]
+		}
+
+		subgraph cluster_BLISTERWING {
+			label = "BLISTERWING\n 6/6"
+			169 [label = "\N\n -1AT"]
+		}
+
+		subgraph cluster_MAGMA_BEAST {
+			label = "2 MAGMA BEAST\n 8/9 7/8\n Fire:+0/2"
+			191 [label = "\N**"]
+			231
+		}
+
+		subgraph cluster_FIRE_ELEMENTAL {
+			label = "FIRE ELEMENTAL\n 12/16"
+			214
+		}
+
+		subgraph cluster_FIREWYRM {
+			label = "FIREWYRM**\n 9/11"
+			274
+		}
+
+		subgraph cluster_BONE_FIRE {
+			label = "2 BONE-FIRE\n 7/6 6/6\n Fire:+0/2"
+			125
+		}
+
+		subgraph cluster_SALAMANDER {
+			label = "4 SALAMANDER**\n 6/6 6/5\n 5/6 6/7\n Fire:**"
+			295
+		}
+
+		subgraph cluster_VARICK_OATHBREAKER {
+			label = "SCARRED RUFFIAN\n BRUTAL BRIGAND\n HIRED THUG\n LUMBERING LOUT\n VARICK OATHBREAKER\n 7/7 6/6\n 7/6 6/7\n 8/10"
+			329
+		}
+
+		subgraph cluster_GUBBINS_GOLEM {
+			label = "GUBBINS GOLEM\n 8/10"
+			066 [style = "filled" color = "pink" label = "\N\n -1LK"]
+		}
+
+		subgraph cluster_BLIZZARD_WING {
+			label = "BLIZZARD-WING\n 6/7 6/6"
+			089 [style = "filled" color = "greenyellow" shape = "rect" fontcolor = "blue" label = "\N\n -1AT?\n +1LK\n Susagep"]
+		}
+
+		subgraph cluster_FERROVORE {
+			label = "FERROVORE\n 7/9"
+			227
+		}
+
+		subgraph cluster_ROCK_GRUB {
+			label = "ROCK GRUB\n 7/10"
+			027
+		}
+		
+		subgraph cluster_IRON_EATER {
+			label = "IRON EATER**\n 4/5"
+			327
+		}
+
+		subgraph cluster_GRANNIT {
+			label = "2~6 GRANNIT\n 4/3\n ...\n 4/3"
+			366 [style = "filled" color = "pink" label = "\N\n -2~6ST"]
+			383
+		}
+		
+		subgraph cluster_GIANT_BAT {
+			label = "2 GIANT BAT**\n 5/7 5/6"
+			171
+		}
+		
+		subgraph cluster_EARTH_ELEMENTAL {
+			label = "EARTH ELEMENTAL**\n 14/22\n Earth:+1/2"
+			244
+			061 [label = "\N\n +1DMG?"]
+			081 [style = "filled" color = "greenyellow" label = "\N\n +6ST\n +2AT"]
+			subgraph cluster_RUST_GOLEM {
+				label = "RUST GOLEM\n 10/12" color = "black" fillcolor = "palegreen2"
+				092 [style = "filled" color = "greenyellow" label = "\N\n +1LK?"]
+			}
+		}
+		
+		subgraph cluster_BOULDER_BEAST {
+			label = "2 BOULDER BEAST**\n 8/11 8/10\n Earth:+0/1"
+			293 [shape = "rect" fontcolor = "blue" style = "filled" color = "greenyellow" label = "\N\n +1LK\n +1DMG?\n Arkholith"]
+		}
+		
+		subgraph cluster_MARSH_WRAITH {
+			label = "2 MARSH_WRAITH\n 7/5 7/5"
+			211 [label = "\N\n -1DMG"]
+		}
+		
+		subgraph cluster_SWAMP_RATS {
+			label = "SWAMP RATS\n 5/10"
+			345.1
+		}
+		
+		subgraph cluster_SWAMP_GOBLIN {
+			label = "SWAMP GOBLIN**\n 6/5 5/5"
+			345.2
+		}
+		
+		subgraph cluster_SPIT_TOAD {
+			label = "SPIT TOAD\n 6/5 5/5"
+			345.4 [style = "filled" color = "pink" label = "\N\n -2ST?"]
+		}
+		
+		subgraph cluster_FUNGOIDS {
+			label = "FUNGOIDS\n 6/9"
+			345.5 [style = "filled" color = "pink" label = "\N\n -1SK?"]
+		}
+		
+		subgraph cluster_YETI {
+			label = "YETI**\n 10/12"
+			261 [label = "\N\n -1AT^"]
+		}
+		
+		subgraph cluster_HUNTRESS {
+			label = "SABRETOOTH-CAT\n HUNTRESS\n 11/9 10/8"
+			389 [shape = "rect" fontcolor = "blue" style = "filled" color = "pink" label = "\N\n -1AT^\n -1LK\n -2ST?\n hunting horn\n bow & 6 arrows\n 7g"]
+		}
+		
+		subgraph cluster_KHADDAN_KHAN {
+			label = "KHADDAN KHAN\n 10/12"
+			019
+		}
+		
+		subgraph cluster_UNDINE {
+			label = "UNDINE\n 7/7\n Sea:+1/1\n Fire:-1/1"
+			182 [label = "\N\n -1EDMG"]
+		}
+		
+		subgraph cluster_WEATHERCOCK {
+			label = "WEATHERCOCK\n 7/6"
+			051
+		}
+		
+		subgraph cluster_STEAM_GOLEM {
+			label = "STEAM GOLEM\n 8/10"
+			067 [shape = "rect" fontcolor = "blue" label = "\N\n Rennaps"]
+		}
+		
+		subgraph cluster_FULGURITE {
+			label = "3 FULGURITE\n 6/4 5/5 6/5"
+			311 [shape = "rect" fontcolor = "blue" label = "\N\n Fulgurite: 26"]
+		}
+		
+		subgraph cluster_BLACK_WYVERN {
+			label = "BLACK WYVERN\n 9/10"
+			255
+		}
+
+		subgraph cluster_STEAM_GOLEM2 {
+			label = "STEAM GOLEM\n 8/10"
+			354
+		}
+
+		subgraph cluster_EARTH_DEMON {
+			label = "EARTH DEMON**\n 10/12\n Earth:+1/2"
+			035 [style = "filled" color = "pink" label = "\N\n -2ST\n -1DMG"]
+			071
+			106 [style = "filled" color = "greenyellow" label = "\N\n -6EST"]
+		}
+		
+		subgraph cluster_AAKOR {
+			label = "3 AAKOR\n 7/8 7/7 6/7"
+			322 [shape = "rect" fontcolor = "blue" label = "\N\n Detnuh"]
+		}
+
+		subgraph cluster_HORSEMAN {
+			label = "2 HORSEMAN\n 8/7 7/7"
+			264
+		}
+		
+		subgraph cluster_DUST_DEVIL {
+			label = "DUST DEVIL\n 7/6\n Wind:+1/2"
+			283 [label = "\N\n -1DMG"]
+		}
+		
+		subgraph cluster_AAKOR2 {
+			label = "2 AAKOR\n 7/7 6/7"
+			129 [shape = "rect" fontcolor = "blue" label = "\N\n -Detnuh"]
+		}
+		
+		subgraph cluster_BIRDMAN {
+			label = "BIRDMAN\n 9/8"
+			058 [style = "filled" color = "pink" label = "\N\n -2~6ST"]
+		}
+		
+		subgraph cluster_SANDSTORM {
+			label = "SANDSTORM**\n 8/10\n Wind:+1/2"
+			173
+		}
+		
+		subgraph cluster_BIRDMAN2 {
+			label = "BIRDMAN\n 8/8"
+			178
+		}
+		
+		subgraph cluster_VULTURE {
+			label = "3 VULTURE\n 7/6 6/6\n 6/5"
+			248
+		}
+		
+		subgraph cluster_BIRDMAN3 {
+			label = "2 BIRDMAN\n 7/8 8/7"
+			099
+		}
+		
+		subgraph cluster_AAKOR3 {
+			label = "4 AAKOR\n 7/7 6/7\n 6/6 7/6"
+			131 [shape = "rect" fontcolor = "blue" label = "\N\n -Detnuh"]
+		}
+		
+		subgraph cluster_MOONCALF {
+			label = "MOONCALF 8/9"
+			095
+		}
+		
+		subgraph cluster_TREMOR_WORM {
+			label = "TREMOR WORM 7/9"
+			346
+		}
+		
+		subgraph cluster_GIANT {
+			label = "GIANT**\n 9/11"
+			176
+		}
+		
+		subgraph cluster_STORMDRAKE {
+			label = "STORMDRAKE**\n 11/14\n Storm:+1/2"
+			363
+		}
+		
+		subgraph cluster_DETRITUS {
+			label = "DETRITUS\n 8/8"
+			320
+		}
+		
+		subgraph cluster_SYLPH {
+			label = "3 SYLPH\n 7/4 6/5 6/4\n Wind/Storm:+1/1"
+			118
+		}
+		
+		subgraph cluster_FETCH {
+			label = "FETCH**\n 11/6"
+			154
+		}
+		
+		subgraph cluster_TECHNO_HOMUNCULUS {
+			label = "TECHNO-HOMUNCULUS\n 9/6"
+			243 [shape = "rect" fontcolor = "blue" label = "\N\n +1DM\n fire"]
+		}
+		
+		subgraph cluster_BRASS_MONKEY {
+			label = "2 BRASS MONKEY\n 7/8 7/8"
+			236 [label = "\N\n -1~2AT\n +1DM"]
+		}
+		
+		subgraph cluster_FIRE_SPRITE {
+			label = "2 FIRE SPRITE\n 7/4 7/4\n Fire:+1/1"
+			139 [shape = "rect" fontcolor = "blue" label = "\N\n +1DM\n fire"]
+		}
+		
+		subgraph cluster_FULGURITE2 {
+			label = "6 FULGURITE\n 6/5 6/4\n 5/5 6/5\n 5/4 6/5"
+			110
+		}
+		
+		subgraph cluster_GREATER_AIR_ELEMENTAL {
+			label = "GREATER AIR ELEMENTAL\n 15/20"
+			044 [shape = "rect" fontcolor = "blue" label = "\N\n Demlaceb"]
+		}
+		
+		subgraph cluster_JUGGERNAUT {
+			label = "JUGGERNAUT\n 11/16"
+			362 [label = "\N\n -2~6ST\n -0~2SK"]
+			331
+			262
+			241
+			172 [style = "filled" color = "greenyellow" label = "\N\n +1LK"]
+			370 [style = "filled" color = "pink" label = "\N\n +2ESK\n -1LK"]
+			subgraph cluster_DREADNAUT {
+				label = "DREADNAUT\n 10/12" color = "black" fillcolor = "palegreen2"
+				280 [style = "filled" color = "greenyellow" label = "\N\n +1LK?"]
+			}
+		}
+		
+		subgraph cluster_AUTOMATON {
+			label = "HYDROTOMATON\n PNEUMATOMATON\n 7/7 8/6\n Wind:+0/0 1/1\n Sea:+1/1 0/0"
+			137
+		}
+		
+		subgraph cluster_HUMAN_TORCH {
+			label = "HUMAN TORCH\n 10/9\n Fire:+1/1"
+			112
+		}
+		
+		subgraph cluster_COLOSSUS {
+			label = "COLOSSUS\n 9/12\n Earth:+1/2"
+			008 [label = "\N\n +1DMG?"]
+		}
+		
+		subgraph cluster_DELUGE {
+			label = "DELUGE\n 11/11\n Sea:+1/2"
+			206 [label = "\N*"]
+		}
+		
+		subgraph cluster_MAELSTROM {
+			label = "MAELSTROM\n 12/10"
+			284 [style = "filled" color = "pink" label = "\N\n -3ST"]
+		}
+
+		
+		
+		subgraph cluster_BALTHAZAR_STURM {
+			label = "BALTHAZAR STURM**\n 10/9\n Storm:+1/0"
+			397
+		}
+
+		subgraph cluster_MONSTER {
+			label = "MONSTER\n 0/0 0/0"
+			mon1 [label = "\N\n text"]
+			mon2 [shape = "rect" fontcolor = "blue" label = "\N\n text"]
+			mon3 [label = "\N\n text"]
+			mon4 [shape = "rect" fontcolor = "blue" label = "\N\n text"]
+			mon5 [shape = "rect" fontcolor = "blue" label = "\N\n text"]
+			monboo1 [style = "filled" color = "greenyellow" label = "\N\n text"]
+			monboo2 [shape = "rect" style = "filled" color = "greenyellow" fontcolor = "blue" label = "\N\n text"]
+			monboo3 [label = "\N\n text"]
+			monboo4 [shape = "rect" fontcolor = "blue" label = "\N\n text"]
+			monboo5 [shape = "rect" fontcolor = "blue" label = "\N\n text"]
+			mondam1 [style = "filled" color = "pink" label = "\N\n text"]
+			mondam2 [shape = "rect" style = "filled" color = "pink" fontcolor = "blue" label = "\N\n text"]
+			mondam3 [label = "\N\n text"]
+			mondam4 [shape = "rect" fontcolor = "blue" label = "\N\n text"]
+			mondam5 [shape = "rect" fontcolor = "blue" label = "\N\n text"]
+		}
+	}
+
+	subgraph Death {
+		node [style = "filled" color = "red"]
+		023
+		096
+		201
+		279
+		349
+		373
+	}
+
+	subgraph Boost {
+		node [style = "filled" color = "greenyellow"]
+		007 [shape = "rect" fontcolor = "blue" label = "\N\n +1LK\n Zephyrus"]
+		015 [shape = "rect" fontcolor = "blue" label = "\N\n +1LK\n +3DM\n -Notamotua"]
+		017 [shape = "rect" fontcolor = "blue" label = "\N\n +1LK\n coral crown\n\n silver necklace: 6g\n bag of gems: 12g\n 1d6+6g/\n doubloons: 2d6+12g/\n ruby ring: 5g\n large diamond: 15g\n 2d6+6g"]
+		026 [shape = "rect" fontcolor = "blue" label = "\N\n +1LK\n how to stop Fulgurite"]
+		032 [shape = "rect" fontcolor = "blue" label = "\N\n +1LK\n Mortsleam"]
+		093 [shape = "rect" fontcolor = "blue" label = "\N\n +1LK\n 4 meals"]
+		123 [label = "\N\n +1LK"]
+		132 [label = "\N\n +1~6ST"]
+		150 [shape = "rect" fontcolor = "blue" label = "\N\n +2LK\n 4 meals\n cider\n 10g"]
+		161 [label = "\N\n +?ST\n +?SK\n +2LK\n +1day"]
+		165 [label = "\N\n +1ST\n +1day"]
+		200 [shape = "rect" fontcolor = "blue" label = "\N\n +1LK\n -Retsnom"]
+		234 [shape = "rect" fontcolor = "blue" label = "\N\n +1LK\n 8g\n 3 meals\n spanner"]
+		237 [shape = "rect" fontcolor = "blue" label = "\N\n +1LK\n Mortsleam"]
+		239 [label = "\N\n +1LK"]
+		244 [label = "\N\n +1LK\n -3ESK\n -8EST"]
+		268 [label = "\N\n +1LK"]
+		288 [label = "\N\n +2DM\n +1LK"]
+		291 [shape = "rect" fontcolor = "blue" label = "\N\n +1LK\n Naromroc"]
+		304 [label = "\N\n +1LK?\n +1TM"]
+		314 [shape = "rect" fontcolor = "blue" label = "\N\n +1LK\n warhammer\n 8~18g\n Fire Crystal: A, S"]
+		355 [label = "\N\n +1LK"]
+		381 [shape = "rect" fontcolor = "blue" label = "\N\n +1LK\n Shell of the Seas: 12"]
+		371 [shape = "rect" fontcolor = "blue" label = "\N\n +1LK\n 8g\n large ruby: 4g\n small healing elixir"]
+		393 [label = "\N\n +1SK"]
+
+		boo1 [label = "\N\n text"]
+		boo2 [shape = "rect" fontcolor = "blue" label = "\N\n text"]
+		boo3 [label = "\N\n text"]
+		boo4 [shape = "rect" fontcolor = "blue" label = "\N\n text"]
+		boo5 [shape = "rect" fontcolor = "blue" label = "\N\n text"]
+	}
+
+	subgraph Damage {
+		node [style = "filled" color = "pink"]
+		011 [label = "\N\n -1ST?"]
+		016 [label = "\N\n -1LK"]
+		021 [label = "\N\n -1LK\n -2~12ST^"]
+		024 [label = "\N\n -1LK\n -2~7ST"]
+		035 [label = "\N\n -1LK\n +1DM?\n -1SK?\n -2ST?"]
+		038 [shape = "rect" fontcolor = "blue" label = "\N\n -2~7ST\n -? meals"]
+		047 [label = "\N\n -1SK\n -1LK"]
+		052 [label = "\N\n -1LK"]
+		072 [label = "\N\n -1LK"]
+		074 [label = "\N\n -2~7ST"]
+		087 [label = "\N*\n -2ST"]
+		088 [label = "\N\n -1LK\n +1day"]
+		090 [label = "\N\n -0~2SK?\n -3~8ST?\n -1LK?"]
+		107 [label = "\N\n -3LK\n -3~8ST"]
+		114 [label = "\N\n +1TM"]
+		134 [label = "\N\n -1SK\n -3ST"]
+		135 [label = "\N\n -1SK?\n -3~8ST\n +3DM"]
+		136 [label = "\N\n -2~7ST"]
+		144 [label = "\N\n +1TM"]
+		152 [label = "\N\n -2~7ST"]
+		162 [label = "\N\n -1LK"]
+		164 [label = "\N\n -1SK?\n -2ST?"]
+		167 [label = "\N\n -3ST"]
+		170 [label = "\N\n -2ST\n +1DM"]
+		174 [label = "\N\n +1TM"]
+		183 [label = "\N\n -3ST^"]
+		186 [label = "\N\n -1SK\n -4ST"]
+		192 [label = "\N\n -1~3ST?\n +1DM?"]
+		194 [label = "\N\n -4ST"]
+		197 [label = "\N\n -1LK\n -4ST?"]
+		199 [label = "\N\n -2ST"]
+		203 [label = "\N\n -4~5ST^\n -1LK"]
+		204 [label = "\N\n +1TM"]
+		205 [label = "\N\n -1LK\n -2ST"]
+		207 [label = "\N\n -1~6ST"]
+		212 [shape = "rect" fontcolor = "blue" label = "\N\n -2~7ST\n -? meals"]
+		216 [label = "\N\n -4~14ST"]
+		218 [label = "\N*\n -2ST"]
+		224 [label = "\N\n +1TM"]
+		225 [label = "\N\n -3~8ST\n -1SK?\n -1LK?"]
+		226 [label = "\N\n -3~16ST\n -0~4SK"]
+		253 [label = "\N\n -2~8ST"]
+		254 [label = "\N\n +1TM"]
+		271 [label = "\N\n -1LK"]
+		278 [label = "\N\n -2ST^\n -1LK?"]
+		294 [label = "\N\n -6ST^"]
+		301 [label = "\N\n -2LK\n -3~8ST"]
+		305 [label = "\N\n -1LK\n -2~6ST"]
+		330 [label = "\N\n -1LK"]
+		334 [label = "\N\n -1LK"]
+		343 [label = "\N\n -2ST^\n +1day"]
+		367 [label = "\N\n -2ST"]
+		379 [label = "\N*\n -1SK"]
+		384 [label = "\N\n -0~4ST^\n -1LK"]
+		388 [label = "\N\n -3ST\n +1LK\n +2day?"]
+
+
+
+
+		dam1 [label = "\N\n text"]
+		dam2 [shape = "rect" fontcolor = "blue" label = "\N\n text"]
+		dam3 [label = "\N\n text"]
+		dam4 [shape = "rect" fontcolor = "blue" label = "\N\n text"]
+		dam5 [shape = "rect" fontcolor = "blue" label = "\N\n text"]
+	}
+
+	subgraph Boots {
+		node [style = "filled" color = "skyblue1" fixedsize = true label = "To\n 002"]
+		002 [fontcolor = "blue" shape = "rect" fixedsize = false]
+		002.1
+		002.2
+		002.3
+		002.4
+	}
+
+	// Key areas
+	subgraph Encounter {
+		node [style = "filled" color = "magenta"]
+		345 [label = "\N"]
+		345.1 [label = "\N"]
+		345.2 [label = "\N"]
+		345.3 [label = "\N"]
+		345.4 [label = "\N"]
+		345.5 [label = "\N"]
+		345.6 [label = "\N"]
+		345.7 [label = "To\n 345" fixedsize = true]
+		345 -> 345.1 [color = "purple" fontcolor = "purple" label = "1"]
+		345 -> 345.2 [color = "purple" fontcolor = "purple" label = "2"]
+		345 -> 345.3 [color = "purple" fontcolor = "purple" label = "3"]
+		345 -> 345.4 [color = "purple" fontcolor = "purple" label = "4"]
+		345 -> 345.5 [color = "purple" fontcolor = "purple" label = "5"]
+		345 -> 345.6 [color = "purple" fontcolor = "purple" label = "6"]
+		345.1 -> Return
+		345.2 -> Return
+		345.3 -> Return
+		345.4 -> Return
+		345.5 -> Return
+		345.6 -> Return
+
+		Return [label = "Return\n to Text" fixedsize = false]
+	}
+
+	subgraph Key_Item {
+		node [fontcolor = "blue" shape = "rect"]
+		002 [label = "\N\n -seven league boots"]
+		012 [label = "\N\n Oceanus"]
+		030 [label = "\N\n -Brokk"]
+		039 [label = "\N\n info"]
+		041 [label = "\N\n Crystal Practical Shop"]
+		045 [label = "\N\n -Backpack"]
+		055 [label = "\N\n Vulcanus"]
+		069 [label = "\N\n -half treasure\n +1day"]
+		070 [label = "\N\n Crystal Unusual Shop"]
+		077 [label = "\N\n Brokk: -50"]
+		098 [label = "\N\n Brokk's Shop\n +1day"]
+		116 [label = "\N\n Retsnom"]
+		124 [label = "\N\n Enihcam"]
+		130 [label = "\N\n Damage ship info"]
+		151 [label = "\N\n underwater breathing potion"]
+		153 [label = "\N\n seven league boots"]
+		155 [label = "\N\n Fire Crystal: I"]
+		181 [label = "\N\n breathing helmet"]
+		202 [label = "\N\n Backpack: 2"]
+		215 [label = "\N\n Activate: 270\n Deactivate: 072"]
+		221 [label = "\N\n prospero"]
+		223 [label = "\N\n Noollab"]
+		228 [label = "\N\n rope\n 3~8g"]
+		229 [label = "\N\n info"]
+		251 [label = "\N\n Fire Crystal: L"]
+		257 [label = "\N\n Golden Key: 17"]
+		269 [label = "\N\n Fire Crystal: F"]
+		270 [label = "\N\n Notamotua"]
+		277 [label = "\N\n 2 meals\n 5g\n sabretooth"]
+		289 [label = "\N\n Blurprints: 13"]
+		300 [label = "\N\n Fire Crystal: H"]
+		306 [label = "\N\n giant strength potion"]
+		308 [label = "\N\n -Brokk"]
+		326 [label = "\N\n levitation"]
+		356 [label = "\N\n fire potion"]
+		359 [label = "\N\n only 2 items + wyrm\n no food\n +1day"]
+		365 [label = "\N\n Knarc"]
+		374 [label = "\N\n healing salve\n hunting horn"]
+		376 [label = "\N\n underwater breathing potion"]
+		377 [label = "\N\n Spark: 6"]
+		378 [label = "\N\n 3 of:\n bag of gems: 8g\n warhammer\n rope\n bow & 6 arrows\n golden bracelet: 5g\n levitation"]
+	}
+
+	subgraph Day {
+		004 [label = "\N\n +2day"]
+		022 [label = "\N\n +3day"]
+		036 [label = "\N\n +3day"]
+		111 [label = "\N\n +1day"]
+		115 [label = "\N\n +2day"]
+		127 [label = "\N\n +1day"]
+		142 [label = "\N\n +1day"]
+		143 [label = "\N\n +2day"]
+		157 [label = "\N\n +3day"]
+		263 [label = "\N\n +1day"]
+		286 [label = "\N\n +2day"]
+		296 [label = "\N\n +2day"]
+		309 [label = "\N\n +1day"]
+		357 [label = "\N\n +1day"]
+		360 [label = "\N\n +2day"]
+		375 [label = "\N\n +1day"]
+		394 [label = "\N\n +1day"]
+	}
+
+	subgraph Ship_Damage {
+		063 [label = "\N\n +1DM"]
+		101 [label = "\N\n +1DM"]
+		275 [label = "\N\n +1DM"]
+		390 [label = "\N\n +1DM"]
+		156 [label = "\N\n +2DM?"]
+	}
+	
+	subgraph Water {
+		node [style = "filled" color = "blue" fontcolor = "white"]
+		064 [shape = "rect" label = "\N\n Eelsea"]
+		050 [shape = "rect" label = "\N\n Eelsea"]
+		050.2 [label = "To\n 050\n +2day"]
+		050.3 [label = "To\n 050\n +3day"]
+		050.4 [label = "To\n 050\n +4day"]
+	}
+	
+	subgraph Earth {
+		node [style = "filled" color = "brown" fontcolor = "white"]
+		250 [shape = "rect" label = "\N\n Witchtooth"]
+		250.1 [label = "To\n 250\n +2day"]
+		250.2 [label = "To\n 250\n +1day"]
+		250.4 [label = "To\n 250\n +2day"]
+	}
+	
+	subgraph Fire {
+		node [style = "filled" color = "orange"]
+		189 [shape = "rect" label = "\N\n Pyre"]
+		189.1 [label = "To\n 189\n +1day"]
+		189.3 [label = "To\n 189\n +1day"]
+		189.4 [label = "To\n 189\n +2day"]
+	}
+	
+	subgraph Air {
+		node [style = "filled" color = "palegreen2"]
+		083 [shape = "rect" label = "\N\n Howling"]
+		083.1 [label = "To\n 083\n +2day"]
+		083.2 [label = "To\n 083\n +2day"]
+		083.3 [label = "To\n 083\n +3day"]
+	}
+	
+	subgraph Storm {
+		node [style = "filled" color = "yellow" fixedsize = true label = "To\n 350"]
+		350 [label = "\N"]
+		350.2
+		350.3
+		350.4
+	}
+	
+	subgraph Endgame {
+		node [style = "filled" color = blue label = "" height = 0 width = 0]
+		168.1
+		207.1
+		128.1
+		107.1 [color = black]
+		149.1
+	}
+	
+	// Key areas
+	subgraph Top_Deck {
+		node [style = "filled" color = "green" fontcolor="white" fixedsize = true label = "To\n 258"]
+		258 [label = "\N"]
+		258.1
+	}
+	
+	subgraph Bottom_Deck {
+		node [style = "filled" color = "purple" fontcolor="white" fixedsize = true label = "To\n 054"]
+		054 [label = "\N"]
+		054.1
+		054.2
+		054.3
+	}
+	
+	subgraph Bottom_Deck {
+		node [style = "filled" color = "magenta" fontcolor="white" fixedsize = true label = "To\n 126"]
+		126 [label = "\N"]
+		126.1
+		126.2
+	}
+	
+	subgraph Downstairs {
+		node [style = "filled" color = "black" fontcolor="white" fixedsize = true label = "To\n 160"]
+		160 [label = "\N"]
+		160.1
+	}
+	
+	subgraph Upstairs {
+		node [style = "filled" color = "cyan" fixedsize = true label = "To\n 220"]
+		220 [label = "\N"]
+		220.1
+	}
+
+	mon1 -> mon2 -> mon3 -> mon4 -> mon5
+	boo1 -> boo2 -> boo3 -> boo4 -> boo5
+	dam1 -> dam2 -> dam3 -> dam4 -> dam5
+	txt1 -> key1 -> txt2 -> key2 -> key3
+	monboo1 -> monboo2 -> monboo3 -> monboo4 -> monboo5
+	mondam1 -> mondam2 -> mondam3 -> mondam4 -> mondam5
+
+	myTitle -> z000 [penwidth = 3 arrowhead=none]
+	z000 -> z001 [penwidth = 3]
+	z001 -> z002 [color = "purple" fontcolor = "purple" label = "1-3"]
+	z001 -> z003 [color = "purple" fontcolor = "purple" label = "4-6"]
+	z002 -> z004 [color = "pink" fontcolor = "pink" label = "LK"]
+	z002 -> z005 [color = "brown"]
+	z003 -> z006 [dir = "both"]
+	z004 -> z007 [color = "blue" fontcolor = "blue" label = "req"]
+	z004 -> z008 [color = "cyan3" fontcolor = "cyan3" label = "-opt"]
+	z005 -> z009 [color = "grey" fontcolor = "grey" label = "info"]
+	z009 -> z010 [color = "crimson" fontcolor = "crimson" label = "error(?)"]
+	{
+		rank = same
+		z003
+		z006
+	}
+
+	{
+		rank = same
+		064
+		250
+		189
+		083
+	}
+	
+	{
+		rank = same
+		041
+		070
+	}
+	
+	{
+		rank = same
+		160
+		220
+	}
+	
+	{
+		rank = same
+		151
+		221
+	}
+	
+	{
+		rank = same
+		391
+		014
+	}
+	
+	myTitle -> 001
+	001 -> 016
+	001 -> 037
+	001 -> 059
+	002 -> 064
+	002 -> 250
+	002 -> 189
+	002 -> 083
+	003 -> 059
+	004 -> 085
+	004 -> 052
+	005 -> 027
+	005 -> 310
+	006 -> 146
+	006 -> 046
+	007 -> 159
+	008 -> 029 [color = "green" fontcolor = "green" label = "EST<=3"]
+	009 -> 080 [color = "invis" fontcolor = "pink" label = "LK"]
+	009 -> 038 [color = "brown"]
+	009 -> 080 [color = "blue:pink" fontcolor = "blue" label = "rope"]
+	010 -> 002.3 [color = "cyan3" fontcolor = "cyan3" label = "boots"]
+	010 -> 360
+	010 -> 343
+	010 -> 036
+	010 -> 350.3
+	011 -> 093
+	011 -> 189.4
+	//012 -> 318
+	013 -> 131 [color = "blue" fontcolor = "blue" label = "Detnuh"]
+	013 -> 095 [color = "blue" fontcolor = "blue" label = "Moonsday"]
+	013 -> 040
+	014 -> 039 [dir=both color = "grey:black" fontcolor = "grey" label = "Blueprints"]
+	014 -> 302
+	014 -> 054
+	014 -> 126
+	014 -> 258
+	015 -> 126.1
+	016 -> 037
+	016 -> 059
+	017 -> 163
+	//018 -> 068
+	019 -> 048 [color = "green" fontcolor = "green" label = "EST<=4"]
+	//020 -> 335
+	020 -> 365
+	021 -> 245
+	022 -> 041
+	022 -> 070
+	023
+	024 -> 065
+	025 -> 124
+	025 -> 145
+	//026 -> 335
+	026 -> 365
+	027 -> 075
+	027 -> 049
+	028 -> 400
+	029 -> 113 [color = "grey" fontcolor = "grey" label = "Vulcanus"]
+	029 -> 206
+	//030 -> 080
+	031 -> 179
+	032 -> 386
+	033 -> 021
+	033 -> 245
+	034 -> 047
+	034 -> 082 [color = "cyan3" fontcolor = "cyan3" label = "mace/\n warhammer"]
+	034 -> 063 [color = "cyan3" fontcolor = "cyan3" label = "spanner"]
+	034 -> 126.1
+	035 -> 051
+	035 -> 071 [color = "green:purple" fontcolor = "green" label = "lift"]
+	036 -> 161
+	036 -> 083.3
+	037 -> 003 [color = "pink" fontcolor = "pink" label = "SK\n Stormday:+2"]
+	037 -> 074 [color = "brown"]
+	038 -> 080
+	//039 -> 014
+	040 -> 050.4
+	041 -> 070 [dir = both]
+	041 -> 189.1
+	042 -> 010 [color = "pink" fontcolor = "pink" label = "3dST"]
+	042 -> 023 [color = "brown"]
+	//043 -> 100
+	044 -> 126.1
+	045 -> 394
+	046 -> 146 [color = "green" fontcolor = "green" label = "AR=3\n flee"]
+	046 -> 076
+	047 -> 082 [color = "cyan3" fontcolor = "cyan3" label = "mace/\n warhammer"]
+	047 -> 063 [color = "cyan3" fontcolor = "cyan3" label = "spanner"]
+	047 -> 126.1
+	048 -> 065 [color = "pink" fontcolor = "pink" label = "LK"]
+	048 -> 024 [color = "brown"]
+	049 -> 068
+	050 -> 091
+	050 -> 121
+	051 -> 094
+	052 -> 083.1
+	053 [label = "\N*"]
+	053 -> 033
+	053 -> 245
+	054 -> 086
+	054 -> 184
+	//054 -> 391
+	055 -> 114
+	056 -> 276 [color = "grey" fontcolor = "grey" label = "Zephyrus"]
+	056 -> 104 [color = "blue" fontcolor = "blue" label = "Susagep"]
+	056 -> 028 [color = "grey" fontcolor = "grey" label = "Backpack"]
+	056 -> 349
+	057 -> 077 [color = "cyan3" fontcolor = "cyan3" label = "-10g"]
+	057 -> 098
+	058 -> 166
+	059 -> 100 [color = "pink" fontcolor = "pink" label = "LK"]
+	059 -> 087 [color = "brown"]
+	//060 -> 335
+	060 -> 365
+	061 -> 010
+	062 -> 286
+	062 -> 111
+	063 -> 047
+	063 -> 082 [color = "cyan3" fontcolor = "cyan3" label = "mace/\n warhammer"]
+	063 -> 126.1
+	064 -> 091
+	064 -> 121
+	064 -> 252
+	065 -> 142
+	066 -> 083.2
+	067 -> 117
+	068 -> 018 [dir=both color = "grey:black" fontcolor = "grey" label = "Brokk"]
+	068 -> 186
+	068 -> 310
+	069 -> 238 [color = "grey" fontcolor = "grey" label = "Zephyrus"]
+	069 -> 350
+	069 -> 157
+	069 -> 022
+	069 -> 004
+	//070 -> 041
+	070 -> 189.1
+	071 -> 106
+	//071 -> 035
+	072 -> 054.3
+	073 -> 053
+	//073 -> 141
+	074 -> 003
+	075 -> 025 [color = "grey" fontcolor = "grey" label = "Brokk"]
+	075 -> 145
+	076 -> 116 [color = "pink" fontcolor = "pink" label = "3dST"]
+	076 -> 096 [color = "brown"]
+	077 -> 098
+	078 -> 113 [color = "grey" fontcolor = "grey" label = "Vulcanus"]
+	078 -> 206
+	079 -> 119
+	079 -> 099
+	080 -> 030 [dir=both color = "grey:black" fontcolor = "grey" label = "Brokk"]
+	080 -> 152
+	080 -> 387
+	081 -> 061
+	082 -> 135 [color = "pink" fontcolor = "pink" label = "3dST"]
+	082 -> 044 [color = "brown"]
+	083 -> 123 [color = "blue" fontcolor = "blue" label = "horn"]
+	083 -> 173
+	083 -> 203
+	084 -> 080
+	085 -> 150 [color = "pink" fontcolor = "pink" label = "SK&LK"]
+	085 -> 180 [color = "brown"]
+	086 -> 118
+	086 -> 101
+	086 -> 054.1
+	086 -> 133
+	087 -> 100
+	088 -> 002.1 [color = "cyan3" fontcolor = "cyan3" label = "seven league boots"]
+	088 -> 157
+	088 -> 022
+	088 -> 004
+	088 -> 350
+	089 -> 250.2
+	090 -> 045 [color = "blue" fontcolor = "blue" label = "Backpack"]
+	090 -> 394
+	091 -> 121
+	091 -> 252
+	092 -> 081 [color = "cyan3" fontcolor = "cyan3" label = "Giant Strength Potion"]
+	092 -> 061
+	092 -> 042
+	092 -> 010 [color = "green" fontcolor = "green" label = "win"]
+	093 -> 050.4
+	094 -> 134
+	094 -> 164
+	095 -> 040
+	096
+	097 -> 015 [color = "blue" fontcolor = "blue" label = "Notamotua"]
+	097 -> 390 [color = "grey" fontcolor = "grey" label = "Blueprints"]
+	097 -> 047
+	097 -> 082 [color = "cyan3" fontcolor = "cyan3" label = "mace/\n warhammer"]
+	097 -> 063 [color = "cyan3" fontcolor = "cyan3" label = "spanner"]
+	097 -> 034
+	098 -> 190
+	099 -> 166
+	100 -> 043 [color = "blue:black" fontcolor = "blue" label = "sun talisman" dir=both]
+	100 -> 062
+	101 -> 133
+	101 -> 054.1
+	102 -> 397
+	103 -> 073
+	103 -> 141
+	104 -> 400
+	105 -> 038
+	106 -> 051 [color = "green" fontcolor = "green" label = "win"]
+	106 -> 035
+	107.1 -> 107
+	107 -> 014
+	108 -> 007 [color = "blue" fontcolor = "blue" label = "riddle"]
+	108 -> 090
+	108 -> 159
+	109 -> 169
+	109 -> 219
+	110 -> 097
+	111 -> 158
+	111 -> 127
+	112 -> 267 [color = "green" fontcolor = "green" label = "EST<=3"]
+	113 -> 397 [color = "blue" fontcolor = "blue" label = "Demlaceb"]
+	113 -> 102 [color = "grey" fontcolor = "grey" label = "Arkholith"]
+	113 -> 284
+	114 -> 174
+	114 -> 144
+	115 -> 176
+	115 -> 210
+	115 -> 194
+	116 -> 146
+	117 -> 220
+	117 -> 160
+	118 -> 101
+	118 -> 133
+	118 -> 054.1
+	119 -> 166 [color = "pink" fontcolor = "pink" label = "LK"]
+	119 -> 136 [color = "brown"]
+	120 -> 222 [color = "pink" fontcolor = "pink" label = "LK"]
+	120 -> 282 [color = "brown"]
+	121 -> 151
+	121 -> 181
+	121 -> 221
+	122 -> 084 [color = "pink" fontcolor = "pink" label = "LK"]
+	122 -> 105 [color = "brown"]
+	123 -> 223
+	124 -> 080
+	125 -> 103
+	126 -> 110
+	126 -> 380
+	//126 -> 391
+	127 -> 286
+	128.1 -> 128 [color = "blue" fontcolor = "blue" label = "Susagep"]
+	128 -> 363 [color = "blue" fontcolor = "blue" label = "Stormday/\n Mortsleam"]
+	128 -> 014
+	129 -> 099
+	129 -> 058
+	//130 -> 335
+	130 -> 365
+	131 -> 040
+	132 -> 171
+	133 -> 154
+	133 -> 170
+	133 -> 054.1
+	134 -> 247
+	135 -> 126.1
+	136 -> 166
+	137 -> 368
+	138 -> 310
+	139 -> 258.1
+	//140 -> 190
+	141 -> 312
+	141 -> 073 [dir = both]
+	142 -> 182
+	142 -> 035
+	142 -> 322
+	143 -> 329 [color = "invis" fontcolor = "pink" label = "LK"]
+	143 -> 216 [color = "brown"]
+	143 -> 329 [color = "blue:pink" fontcolor = "blue" label = "sabretooth"]
+	144 -> 174
+	145 -> 068 [color = "pink" fontcolor = "pink" label = "LK"]
+	145 -> 167 [color = "brown"]
+	146 -> 031
+	146 -> 179
+	147 -> 359
+	148 -> 129 [color = "blue" fontcolor = "blue" label = "Detnuh"]
+	148 -> 099
+	148 -> 058
+	149.1 -> 149 [color = "blue" fontcolor = "blue" label = "Noollab"]
+	149 -> 363 [color = "blue" fontcolor = "blue" label = "Stormday/\n Mortsleam"]
+	149 -> 014
+	150 -> 083.1
+	151 -> 252 [color = "cyan3" fontcolor = "cyan3" label = "-7g"]
+	151 -> 181 [dir = both]
+	151 -> 221 [dir = both]
+	152 -> 171
+	153 -> 002
+	153 -> 193
+	154 -> 054.1
+	155 -> 125
+	156 -> 137 [color = "purple" fontcolor = "purple" label = "DM>=12"]
+	156 -> 368 [color = "purple" fontcolor = "purple" label = "DM<12"]
+	157 -> 313
+	157 -> 250.1
+	158 -> 307
+	158 -> 175
+	159 -> 394
+	160 -> 335
+	160 -> 285
+	160 -> 188
+	161 -> 083.3
+	162 -> 192
+	162 -> 139
+	162 -> 258.1
+	163 -> 006
+	164 -> 247 [color = "pink" fontcolor = "pink" label = "3dST"]
+	164 -> 134 [color = "brown"]
+	165 -> 109
+	166 -> 256 [color = "blue" fontcolor = "blue" label = "rope/\n -levitation"]
+	166 -> 196
+	167 -> 068
+	168.1 -> 168 [color = "grey" fontcolor = "grey" label = "Zephyrus"]
+	168 -> 363 [color = "blue" fontcolor = "blue" label = "Stormday/\n Mortsleam"]
+	168 -> 014
+	169 -> 199
+	169 -> 219
+	170 -> 054.1
+	171 -> 201 [color = "green:pink" fontcolor = "green" label = "2 conc loss" dir = both]
+	171 -> 201 [color = "invis" fontcolor = "pink" label = "SK"]
+	171 -> 273 [color = "black:green" fontcolor = "green" label = "flee"]
+	172 -> 156
+	173 -> 223
+	174 -> 204
+	174 -> 224
+	175 -> 235
+	175 -> 264
+	175 -> 205
+	176 -> 250.4
+	177 -> 017 [color = "grey" fontcolor = "grey" label = "Golden Key"]
+	177 -> 163
+	178 -> 079
+	179 -> 120 [color = "grey" fontcolor = "grey" label = "Spark"]
+	179 -> 242
+	179 -> 282
+	180 -> 355 [color = "blue" fontcolor = "blue" label = "Naromroc"]
+	180 -> 372
+	181 -> 252
+	//181 -> 151
+	181 -> 221 [dir = both]
+	182 -> 212 [color = "purple" fontcolor = "purple" label = "6"]
+	182 -> 051
+	183 -> 261
+	184 -> 198
+	184 -> 215
+	184 -> 229
+	184 -> 259
+	184 -> 054.2
+	185 -> 155
+	185 -> 125
+	186 -> 310
+	187 -> 397 [color = "blue" fontcolor = "blue" label = "Demlaceb"]
+	187 -> 102 [color = "grey" fontcolor = "grey" label = "Arkholith"]
+	187 -> 284
+	188 -> 202
+	188 -> 255
+	//188 -> 285
+	188 -> 220.1
+	188 -> 398
+	189 -> 165 [color = "cyan3" fontcolor = "cyan3" label = "-6g"]
+	189 -> 232
+	190 -> 140 [dir=both color = "grey:black" fontcolor = "grey" label = "Brokk"]
+	190 -> 005
+	190 -> 290
+	191 -> 251
+	//192 -> 213
+	192 -> 258.1 [color = "blue" fontcolor = "blue" label = "warhammer"]
+	193 -> 064
+	193 -> 157
+	193 -> 022
+	193 -> 004
+	194 -> 176
+	194 -> 210
+	195 -> 386
+	196 -> 256 [color = "pink" fontcolor = "pink" label = "SK&LK"]
+	196 -> 226 [color = "brown:black"]
+	197 -> 117 [color = "pink" fontcolor = "pink" label = "LK"]
+	197 -> 067 [color = "brown"]
+	198 -> 243
+	198 -> 259
+	198 -> 054.2
+	199 -> 219
+	200 -> 222
+	//201 -> 171
+	202 -> 233 [color = "pink" fontcolor = "pink" label = "LK"]
+	202 -> 255 [color = "brown"]
+	203 -> 263
+	204 -> 224
+	205 -> 019
+	206 -> 187 [color = "green" fontcolor = "green" label = "EST<=3"]
+	207.1 -> 207 [color = "blue" fontcolor = "blue" label = "-levitation"]
+	207 -> 014
+	208 -> 079
+	208 -> 148
+	209 -> 289
+	209 -> 239
+	210 -> 291 [color = "invis" fontcolor = "pink" label = "4dST"]
+	210 -> 305 [color = "brown"]
+	210 -> 291 [color = "blue:pink" fontcolor = "blue" label = "-giant strength"]
+	211 -> 369
+	212 -> 035
+	212 -> 322
+	213 -> 192 [dir=both]
+	213 -> 162
+	213 -> 139
+	213 -> 258.1
+	214 -> 114
+	215 -> 243
+	215 -> 259
+	215 -> 054.2
+	216 -> 329
+	217 -> 177
+	217 -> 163
+	218 -> 346
+	219 -> 319
+	219 -> 249
+	220 -> 253
+	220 -> 281
+	221 -> 252 [color = "cyan3" fontcolor = "cyan3" label = "-10g"]
+	//221 -> 151
+	//221 -> 181
+	222 -> 301
+	222 -> 321
+	223 -> 263
+	224 -> 254
+	224 -> 304
+	225 -> 141
+	//226 -> 196
+	226 -> 394
+	227 -> 327 [dir = both]
+	//227 -> 399
+	228 -> 148
+	229 -> 243
+	229 -> 259
+	229 -> 054.2
+	230 -> 078 [color = "grey" fontcolor = "grey" label = "Oceanus"]
+	230 -> 008
+	231 -> 251
+	232 -> 109
+	233 -> 255
+	233 -> 285
+	233 -> 220.1
+	233 -> 398
+	234 -> 083.2
+	235 -> 142 [color = "pink" fontcolor = "pink" label = "LK"]
+	235 -> 264 [color = "brown"]
+	//236 -> 258
+	//237 -> 207 [color = "blue" fontcolor = "blue" label = "-levitation"]
+	237 -> 207.1 [color = "blue" dir = none]
+	//237 -> 168 [color = "grey" fontcolor = "grey" label = "Zephyrus"]
+	237 -> 168.1 [color = "grey" dir = none]
+	//237 -> 128 [color = "blue" fontcolor = "blue" label = "Susagep"]
+	237 -> 128.1 [color = "blue" dir = none]
+	//237 -> 149 [color = "blue" fontcolor = "blue" label = "Noollab"]
+	237 -> 149.1 [color = "blue" dir = none]
+	//237 -> 107
+	237 -> 107.1 [dir = none]
+	238 -> 363
+	239 -> 289
+	239 -> 160.1
+	239 -> 398
+	//240 -> 290
+	241 -> 172 [color = "grey" fontcolor = "grey" label = "Deactivate"]
+	241 -> 370 [color = "grey" fontcolor = "grey" label = "Activate"]
+	//241 -> 262
+	242 -> 222
+	243 -> 054.2
+	//244 -> 316
+	245 -> 055 [color = "grey" fontcolor = "grey" label = "Filash"]
+	245 -> 214
+	246 -> 032
+	247 -> 067
+	247 -> 197
+	248 -> 228 [color = "green" fontcolor = "green" label = "2 kill"]
+	249 -> 269
+	249 -> 319
+	250 -> 190
+	250 -> 057
+	251 -> 344
+	251 -> 274
+	252 -> 272 [color = "blue" fontcolor = "blue" label = "prospero seacharmer"]
+	252 -> 292 [color = "cyan3" fontcolor = "cyan3" label = "hunting horn"]
+	252 -> 332
+	253 -> 281
+	254 -> 304
+	255 -> 285 [color = "green" fontcolor = "green" label = "flee"]
+	256 -> 108
+	256 -> 090
+	257 -> 217
+	257 -> 006
+	258 -> 236 [dir=both]
+	258 -> 213
+	//258 -> 391
+	259 -> 275
+	259 -> 288
+	//260 -> 310
+	261 -> 374
+	262 -> 241 [dir=both color = "blue:black" fontcolor = "blue" label = "2CW\n Deactivate?"]
+	262 -> 156
+	263 -> 303
+	263 -> 283
+	264 -> 277 [color = "green" fontcolor = "green" label = "AR<=12"]
+	264 -> 205 [color = "green" fontcolor = "green" label = "AR>12"]
+	265 -> 185 [color = "pink" fontcolor = "pink" label = "3dST"]
+	265 -> 225 [color = "brown"]
+	266 -> 115
+	266 -> 309
+	266 -> 083
+	266 -> 013
+	267 -> 078 [color = "grey" fontcolor = "grey" label = "Oceanus"]
+	267 -> 008
+	//268 -> 207 [color = "blue" fontcolor = "blue" label = "-levitation"]
+	268 -> 207.1 [color = "blue" dir = none]
+	//268 -> 168 [color = "grey" fontcolor = "grey" label = "Zephyrus"]
+	268 -> 168.1 [color = "grey" dir = none]
+	//268 -> 128 [color = "blue" fontcolor = "blue" label = "Susagep"]
+	268 -> 128.1 [color = "blue" dir = none]
+	//268 -> 149 [color = "blue" fontcolor = "blue" label = "Noollab"]
+	268 -> 149.1 [color = "blue" dir = none]
+	//268 -> 107
+	268 -> 107.1 [dir = none]
+	269 -> 319
+	270 -> 054.3
+	271 -> 050.3
+	272 -> 359 [color = "pink" fontcolor = "pink" label = "LK"]
+	272 -> 147 [color = "brown"]
+	273 -> 316
+	273 -> 293
+	274 -> 294 [color = "green" fontcolor = "green" label = "flee"]
+	274 -> 314
+	275 -> 054.2
+	276 -> 400
+	277 -> 142
+	278 -> 340
+	278 -> 250.2
+	279
+	280 -> 156 [color = "green" fontcolor = "green" label = "win"]
+	280 -> 262
+	281 -> 311
+	281 -> 398
+	281 -> 160.1
+	282 [label = "\N*"]
+	282 -> 200 [color = "blue" fontcolor = "blue" label = "Retsnom"]
+	282 -> 242
+	283 -> 208
+	283 -> 333
+	284 -> 397 [color = "green" fontcolor = "green" label = "EST<=3"]
+	285 -> 335
+	285 -> 188 [dir = both]
+	285 -> 220.1
+	285 -> 398
+	286 -> 306
+	286 -> 326
+	286 -> 356
+	286 -> 376
+	286 -> 395
+	287 -> 257
+	287 -> 217
+	287 -> 006
+	288 -> 054.2
+	289 -> 160.1
+	289 -> 398
+	290 -> 240 [dir=both color = "grey:black" fontcolor = "grey" label = "Brokk"]
+	290 -> 308
+	290 -> 005
+	291 -> 250.4
+	292 -> 359 [color = "pink" fontcolor = "pink" label = "LK"]
+	292 -> 147 [color = "brown"]
+	293 -> 010
+	294 -> 344
+	295 -> 339
+	296 -> 286
+	297 -> 261
+	//298 -> 207 [color = "blue" fontcolor = "blue" label = "-levitation"]
+	298 -> 207.1 [color = "blue" dir = none]
+	//298 -> 168 [color = "grey" fontcolor = "grey" label = "Zephyrus"]
+	298 -> 168.1 [color = "grey" dir = none]
+	//298 -> 128 [color = "blue" fontcolor = "blue" label = "Susagep"]
+	298 -> 128.1 [color = "blue" dir = none]
+	//298 -> 149 [color = "blue" fontcolor = "blue" label = "Noollab"]
+	298 -> 149.1 [color = "blue" dir = none]
+	//298 -> 107
+	298 -> 107.1 [dir = none]
+	299 -> 185
+	300 -> 245
+	301 -> 358 [color = "blue" fontcolor = "blue" label = "Retsnom"]
+	301 -> 318
+	302 -> 320 [color = "blue" fontcolor = "blue" label = "Stormday"]
+	302 -> 336
+	303 -> 208
+	303 -> 178
+	304 -> 388 [color = "purple" fontcolor = "purple" label = "TM=4"]
+	304 -> 323 [color = "purple" fontcolor = "purple" label = "TM=5"]
+	304 -> 353 [color = "purple" fontcolor = "purple" label = "TM=6"]
+	304 -> 373 [color = "purple" fontcolor = "purple" label = "TM=7"]
+	305 -> 250.4
+	306 -> 193
+	307 -> 348
+	307 -> 328
+	308 -> 122 [color = "invis" fontcolor = "pink" label = "3dST"]
+	308 -> 138 [color = "invis" fontcolor = "pink" label = "3dST"]
+	308 -> 122 [color = "pink:purple" fontcolor = "purple"  label = "odd"]
+	308 -> 138 [color = "pink:purple" fontcolor = "purple"  label = "even"]
+	309 -> 346 [color = "pink" fontcolor = "pink" label = "LK"]
+	309 -> 218 [color = "brown"]
+	310 -> 260 [dir=both color = "grey:black" fontcolor = "grey" label = "Brokk"]
+	310 -> 399
+	310 -> 227
+	310 -> 327
+	311 -> 351
+	312 -> 191
+	312 -> 231
+	313 -> 357 [color = "pink" fontcolor = "pink" label = "SK\n Sabretooth:-2"]
+	313 -> 195 [color = "brown"]
+	314 -> 344
+	315 -> 337
+	315 -> 006
+	316 -> 244 [color = "blue:black" fontcolor = "blue" label = "Enihcam" dir = both]
+	316 -> 092 [color = "cyan3" fontcolor = "cyan3" label = "Spark"]
+	316 -> 081 [color = "cyan3" fontcolor = "cyan3" label = "Giant Strength Potion"]
+	316 -> 061
+	316 -> 042
+	317 -> 287
+	317 -> 217
+	317 -> 006
+	318 -> 012 [dir=both color = "grey:black" fontcolor = "grey" label = "Shell of the Seas"]
+	318 -> 069
+	318 -> 088
+	319 [label = "\N*"]
+	319 -> 339
+	319 -> 295
+	320 -> 336
+	321 -> 341
+	321 -> 361
+	322 -> 051 [color = "green" fontcolor = "green" label = "1 kill"]
+	323 -> 388 [color = "pink" fontcolor = "pink" label = "3dST"]
+	323 -> 373 [color = "brown"]
+	324 -> 266 [color = "blue" fontcolor = "blue" label = "Knarc"]
+	324 -> 296
+	325 -> 270 [color = "grey" fontcolor = "grey" label = "Activate"]
+	325 -> 072 [color = "grey" fontcolor = "grey" label = "Deactivate"]
+	325 -> 054.3
+	326 -> 193
+	327 -> 383 [color = "blue" fontcolor = "blue" label = "rope"]
+	327 -> 347
+	//327 -> 227
+	//327 -> 399
+	328 -> 175 [color = "pink" fontcolor = "pink" label = "SK"]
+	328 -> 348 [color = "brown"]
+	329 -> 371
+	//330 -> 207 [color = "blue" fontcolor = "blue" label = "-levitation"]
+	330 -> 207.1 [color = "blue" dir = none]
+	//330 -> 168 [color = "grey" fontcolor = "grey" label = "Zephyrus"]
+	330 -> 168.1 [color = "grey" dir = none]
+	//330 -> 128 [color = "blue" fontcolor = "blue" label = "Susagep"]
+	330 -> 128.1 [color = "blue" dir = none]
+	//330 -> 149 [color = "blue" fontcolor = "blue" label = "Noollab"]
+	330 -> 149.1 [color = "blue" dir = none]
+	//330 -> 107
+	330 -> 107.1 [dir = none]
+	331 -> 280 [color = "blue" fontcolor = "blue" label = "Notamotua"]
+	331 -> 262
+	332 -> 359 [color = "pink" fontcolor = "pink" label = "LK"]
+	332 -> 147 [color = "brown"]
+	333 -> 248
+	333 -> 148
+	334 -> 083.2
+	335 -> 026 [dir=both color = "grey:black" fontcolor = "grey" label = "Fulgurite"]
+	335 -> 020 [dir=both color = "grey:black" fontcolor = "grey" label = "Backpack"]
+	335 -> 060 [dir=both color = "grey:black" fontcolor = "grey" label = "Spark"]
+	335 -> 130 [dir=both color = "grey:black" fontcolor = "grey" label = "Blueprints"]
+	335 -> 365
+	336 -> 385
+	336 -> 054.3
+	337 -> 217
+	337 -> 317
+	337 -> 006
+	338 -> 297 [color = "pink" fontcolor = "pink" label = "LK"]
+	338 -> 183 [color = "brown"]
+	339 -> 299 [color = "blue" fontcolor = "blue" label = "rope"]
+	339 -> 367 [color = "blue" fontcolor = "blue" label = "-levitation"]
+	339 -> 265
+	340 -> 089 [color = "blue" fontcolor = "blue" label = "bow/\n crossbow/\n blunderbuss/\n -levitation"]
+	340 -> 250.2
+	341 -> 381 [color = "invis" fontcolor = "pink" label = "LK"]
+	341 -> 361 [color = "brown"]
+	341 -> 381 [color = "blue:pink" fontcolor = "blue" label = "coral crown"]
+	342 -> 014
+	343 -> 352
+	343 -> 389
+	344 [label = "\N*"]
+	344 -> 245
+	344 -> 364
+	345.7 -> 050.3
+	346 -> 011
+	347 -> 383 [color = "pink" fontcolor = "pink" label = "SK"]
+	347 -> 366 [color = "brown"]
+	348 -> 019
+	349
+	350 -> 330 [color = "purple" fontcolor = "purple" label = "1 location"]
+	350 -> 298 [color = "purple" fontcolor = "purple" label = "2 location"]
+	350 -> 268 [color = "purple" fontcolor = "purple" label = "3 location"]
+	350 -> 237 [color = "purple" fontcolor = "purple" label = "4 location"]
+	351 -> 377
+	351 -> 392
+	351 -> 160.1
+	351 -> 398
+	352 -> 382
+	352 -> 189.3
+	353 -> 388 [color = "pink" fontcolor = "pink" label = "LK"]
+	353 -> 373 [color = "brown"]
+	354 -> 324
+	355 -> 083.1
+	356 -> 193
+	357 -> 378
+	357 -> 246
+	358 -> 318
+	359 -> 315
+	359 -> 379
+	359 -> 393
+	360 -> 211
+	360 -> 345.7
+	361 -> 358 [color = "blue" fontcolor = "blue" label = "Retsnom"]
+	361 -> 318
+	362 -> 331
+	363 -> 342 [color = "blue" fontcolor = "blue" label = "hunting horn"]
+	363 -> 014
+	364 -> 384
+	364 -> 245
+	365 -> 398
+	365 -> 220.1
+	366 -> 080
+	367 -> 185
+	368 -> 230 [color = "grey" fontcolor = "grey" label = "Zephyrus"]
+	368 -> 112
+	369 -> 271
+	369 -> 050.3
+	370 -> 262
+	371 -> 050.2
+	372 -> 083.1
+	373
+	374 -> 189.3
+	375 -> 396
+	375 -> 083.2
+	376 -> 193
+	377 -> 392
+	377 -> 160.1
+	377 -> 398
+	378 -> 246
+	379 -> 315
+	380 -> 362 [color = "purple" fontcolor = "purple" label = "DM>=6"]
+	380 -> 331 [color = "purple" fontcolor = "purple" label = "DM<6"]
+	381 -> 358 [color = "blue" fontcolor = "blue" label = "Retsnom"]
+	381 -> 318
+	382 -> 297 [color = "blue" fontcolor = "blue" label = "sabretooth"]
+	382 -> 338
+	383 -> 080
+	384 -> 279 [color = "blue" fontcolor = "blue" label = "rope"]
+	384 -> 300
+	385 -> 325 [color = "grey" fontcolor = "grey" label = "-Spark"]
+	385 -> 054.3
+	386 -> 250.1
+	387 -> 132
+	387 -> 171
+	388 -> 002.2 [color = "cyan3" fontcolor = "cyan3" label = "boots"]
+	388 -> 143
+	388 -> 278
+	388 -> 375
+	388 -> 350.2
+	389 -> 189.3
+	390 -> 047
+	390 -> 082 [color = "cyan3" fontcolor = "cyan3" label = "mace/\n warhammer"]
+	390 -> 063 [color = "cyan3" fontcolor = "cyan3" label = "spanner"]
+	390 -> 126.1
+	391 -> 258 [dir=both]
+	391 -> 126 [dir=both]
+	391 -> 054 [dir=both]
+	391 -> 302
+	392 -> 209
+	392 -> 160.1
+	392 -> 398
+	393 -> 315
+	394 -> 002.4 [color = "cyan3" fontcolor = "cyan3" label = "boots"]
+	394 -> 013
+	394 -> 115
+	394 -> 309
+	394 -> 350.4
+	395 -> 153
+	395 -> 193
+	396 -> 234 [color = "grey" fontcolor = "grey" label = "-Oceanus"]
+	396 -> 066 [color = "grey" fontcolor = "grey" label = "-Spark"]
+	396 -> 334
+	397 -> 056 [color = "green" fontcolor = "green" label = "EST<=2"]
+	398 -> 324 [color = "blue" fontcolor = "blue" label = "Rennaps"]
+	398 -> 354
+	399 -> 009
+	399 -> 327 [dir = both]
+	399 -> 227 [dir = both]
+	400
+
+
+
+
+	001 [fontsize=20]
+	002 [fontsize=20]
+	003 [fontsize=20]
+	004 [fontsize=20]
+	005 [fontsize=20]
+	006 [fontsize=20]
+	007 [fontsize=20]
+	008 [fontsize=20]
+	009 [fontsize=20]
+	010 [fontsize=20]
+	011 [fontsize=20]
+	012 [fontsize=20]
+	013 [fontsize=20]
+	014 [fontsize=20]
+	015 [fontsize=20]
+	016 [fontsize=20]
+	017 [fontsize=20]
+	018 [fontsize=20]
+	019 [fontsize=20]
+	020 [fontsize=20]
+	021 [fontsize=20]
+	022 [fontsize=20]
+	023 [fontsize=20]
+	024 [fontsize=20]
+	025 [fontsize=20]
+	026 [fontsize=20]
+	027 [fontsize=20]
+	028 [fontsize=20]
+	029 [fontsize=20]
+	030 [fontsize=20]
+	031 [fontsize=20]
+	032 [fontsize=20]
+	033 [fontsize=20]
+	034 [fontsize=20]
+	035 [fontsize=20]
+	036 [fontsize=20]
+	037 [fontsize=20]
+	038 [fontsize=20]
+	039 [fontsize=20]
+	040 [fontsize=20]
+	041 [fontsize=20]
+	042 [fontsize=20]
+	043 [fontsize=20]
+	044 [fontsize=20]
+	045 [fontsize=20]
+	046 [fontsize=20]
+	047 [fontsize=20]
+	048 [fontsize=20]
+	049 [fontsize=20]
+	050 [fontsize=20]
+	051 [fontsize=20]
+	052 [fontsize=20]
+	053 [fontsize=20]
+	054 [fontsize=20]
+	055 [fontsize=20]
+	056 [fontsize=20]
+	057 [fontsize=20]
+	058 [fontsize=20]
+	059 [fontsize=20]
+	060 [fontsize=20]
+	061 [fontsize=20]
+	062 [fontsize=20]
+	063 [fontsize=20]
+	064 [fontsize=20]
+	065 [fontsize=20]
+	066 [fontsize=20]
+	067 [fontsize=20]
+	068 [fontsize=20]
+	069 [fontsize=20]
+	070 [fontsize=20]
+	071 [fontsize=20]
+	072 [fontsize=20]
+	073 [fontsize=20]
+	074 [fontsize=20]
+	075 [fontsize=20]
+	076 [fontsize=20]
+	077 [fontsize=20]
+	078 [fontsize=20]
+	079 [fontsize=20]
+	080 [fontsize=20]
+	081 [fontsize=20]
+	082 [fontsize=20]
+	083 [fontsize=20]
+	084 [fontsize=20]
+	085 [fontsize=20]
+	086 [fontsize=20]
+	087 [fontsize=20]
+	088 [fontsize=20]
+	089 [fontsize=20]
+	090 [fontsize=20]
+	091 [fontsize=20]
+	092 [fontsize=20]
+	093 [fontsize=20]
+	094 [fontsize=20]
+	095 [fontsize=20]
+	096 [fontsize=20]
+	097 [fontsize=20]
+	098 [fontsize=20]
+	099 [fontsize=20]
+	100 [fontsize=20]
+	101 [fontsize=20]
+	102 [fontsize=20]
+	103 [fontsize=20]
+	104 [fontsize=20]
+	105 [fontsize=20]
+	106 [fontsize=20]
+	107 [fontsize=20]
+	108 [fontsize=20]
+	109 [fontsize=20]
+	110 [fontsize=20]
+	111 [fontsize=20]
+	112 [fontsize=20]
+	113 [fontsize=20]
+	114 [fontsize=20]
+	115 [fontsize=20]
+	116 [fontsize=20]
+	117 [fontsize=20]
+	118 [fontsize=20]
+	119 [fontsize=20]
+	120 [fontsize=20]
+	121 [fontsize=20]
+	122 [fontsize=20]
+	123 [fontsize=20]
+	124 [fontsize=20]
+	125 [fontsize=20]
+	126 [fontsize=20]
+	127 [fontsize=20]
+	128 [fontsize=20]
+	129 [fontsize=20]
+	130 [fontsize=20]
+	131 [fontsize=20]
+	132 [fontsize=20]
+	133 [fontsize=20]
+	134 [fontsize=20]
+	135 [fontsize=20]
+	136 [fontsize=20]
+	137 [fontsize=20]
+	138 [fontsize=20]
+	139 [fontsize=20]
+	140 [fontsize=20]
+	141 [fontsize=20]
+	142 [fontsize=20]
+	143 [fontsize=20]
+	144 [fontsize=20]
+	145 [fontsize=20]
+	146 [fontsize=20]
+	147 [fontsize=20]
+	148 [fontsize=20]
+	149 [fontsize=20]
+	150 [fontsize=20]
+	151 [fontsize=20]
+	152 [fontsize=20]
+	153 [fontsize=20]
+	154 [fontsize=20]
+	155 [fontsize=20]
+	156 [fontsize=20]
+	157 [fontsize=20]
+	158 [fontsize=20]
+	159 [fontsize=20]
+	160 [fontsize=20]
+	161 [fontsize=20]
+	162 [fontsize=20]
+	163 [fontsize=20]
+	164 [fontsize=20]
+	165 [fontsize=20]
+	166 [fontsize=20]
+	167 [fontsize=20]
+	168 [fontsize=20]
+	169 [fontsize=20]
+	170 [fontsize=20]
+	171 [fontsize=20]
+	172 [fontsize=20]
+	173 [fontsize=20]
+	174 [fontsize=20]
+	175 [fontsize=20]
+	176 [fontsize=20]
+	177 [fontsize=20]
+	178 [fontsize=20]
+	179 [fontsize=20]
+	180 [fontsize=20]
+	181 [fontsize=20]
+	182 [fontsize=20]
+	183 [fontsize=20]
+	184 [fontsize=20]
+	185 [fontsize=20]
+	186 [fontsize=20]
+	187 [fontsize=20]
+	188 [fontsize=20]
+	189 [fontsize=20]
+	190 [fontsize=20]
+	191 [fontsize=20]
+	192 [fontsize=20]
+	193 [fontsize=20]
+	194 [fontsize=20]
+	195 [fontsize=20]
+	196 [fontsize=20]
+	197 [fontsize=20]
+	198 [fontsize=20]
+	199 [fontsize=20]
+	200 [fontsize=20]
+	201 [fontsize=20]
+	202 [fontsize=20]
+	203 [fontsize=20]
+	204 [fontsize=20]
+	205 [fontsize=20]
+	206 [fontsize=20]
+	207 [fontsize=20]
+	208 [fontsize=20]
+	209 [fontsize=20]
+	210 [fontsize=20]
+	211 [fontsize=20]
+	212 [fontsize=20]
+	213 [fontsize=20]
+	214 [fontsize=20]
+	215 [fontsize=20]
+	216 [fontsize=20]
+	217 [fontsize=20]
+	218 [fontsize=20]
+	219 [fontsize=20]
+	220 [fontsize=20]
+	221 [fontsize=20]
+	222 [fontsize=20]
+	223 [fontsize=20]
+	224 [fontsize=20]
+	225 [fontsize=20]
+	226 [fontsize=20]
+	227 [fontsize=20]
+	228 [fontsize=20]
+	229 [fontsize=20]
+	230 [fontsize=20]
+	231 [fontsize=20]
+	232 [fontsize=20]
+	233 [fontsize=20]
+	234 [fontsize=20]
+	235 [fontsize=20]
+	236 [fontsize=20]
+	237 [fontsize=20]
+	238 [fontsize=20]
+	239 [fontsize=20]
+	240 [fontsize=20]
+	241 [fontsize=20]
+	242 [fontsize=20]
+	243 [fontsize=20]
+	244 [fontsize=20]
+	245 [fontsize=20]
+	246 [fontsize=20]
+	247 [fontsize=20]
+	248 [fontsize=20]
+	249 [fontsize=20]
+	250 [fontsize=20]
+	251 [fontsize=20]
+	252 [fontsize=20]
+	253 [fontsize=20]
+	254 [fontsize=20]
+	255 [fontsize=20]
+	256 [fontsize=20]
+	257 [fontsize=20]
+	258 [fontsize=20]
+	259 [fontsize=20]
+	260 [fontsize=20]
+	261 [fontsize=20]
+	262 [fontsize=20]
+	263 [fontsize=20]
+	264 [fontsize=20]
+	265 [fontsize=20]
+	266 [fontsize=20]
+	267 [fontsize=20]
+	268 [fontsize=20]
+	269 [fontsize=20]
+	270 [fontsize=20]
+	271 [fontsize=20]
+	272 [fontsize=20]
+	273 [fontsize=20]
+	274 [fontsize=20]
+	275 [fontsize=20]
+	276 [fontsize=20]
+	277 [fontsize=20]
+	278 [fontsize=20]
+	279 [fontsize=20]
+	280 [fontsize=20]
+	281 [fontsize=20]
+	282 [fontsize=20]
+	283 [fontsize=20]
+	284 [fontsize=20]
+	285 [fontsize=20]
+	286 [fontsize=20]
+	287 [fontsize=20]
+	288 [fontsize=20]
+	289 [fontsize=20]
+	290 [fontsize=20]
+	291 [fontsize=20]
+	292 [fontsize=20]
+	293 [fontsize=20]
+	294 [fontsize=20]
+	295 [fontsize=20]
+	296 [fontsize=20]
+	297 [fontsize=20]
+	298 [fontsize=20]
+	299 [fontsize=20]
+	300 [fontsize=20]
+	301 [fontsize=20]
+	302 [fontsize=20]
+	303 [fontsize=20]
+	304 [fontsize=20]
+	305 [fontsize=20]
+	306 [fontsize=20]
+	307 [fontsize=20]
+	308 [fontsize=20]
+	309 [fontsize=20]
+	310 [fontsize=20]
+	311 [fontsize=20]
+	312 [fontsize=20]
+	313 [fontsize=20]
+	314 [fontsize=20]
+	315 [fontsize=20]
+	316 [fontsize=20]
+	317 [fontsize=20]
+	318 [fontsize=20]
+	319 [fontsize=20]
+	320 [fontsize=20]
+	321 [fontsize=20]
+	322 [fontsize=20]
+	323 [fontsize=20]
+	324 [fontsize=20]
+	325 [fontsize=20]
+	326 [fontsize=20]
+	327 [fontsize=20]
+	328 [fontsize=20]
+	329 [fontsize=20]
+	330 [fontsize=20]
+	331 [fontsize=20]
+	332 [fontsize=20]
+	333 [fontsize=20]
+	334 [fontsize=20]
+	335 [fontsize=20]
+	336 [fontsize=20]
+	337 [fontsize=20]
+	338 [fontsize=20]
+	339 [fontsize=20]
+	340 [fontsize=20]
+	341 [fontsize=20]
+	342 [fontsize=20]
+	343 [fontsize=20]
+	344 [fontsize=20]
+	345 [fontsize=20]
+	346 [fontsize=20]
+	347 [fontsize=20]
+	348 [fontsize=20]
+	349 [fontsize=20]
+	350 [fontsize=20]
+	351 [fontsize=20]
+	352 [fontsize=20]
+	353 [fontsize=20]
+	354 [fontsize=20]
+	355 [fontsize=20]
+	356 [fontsize=20]
+	357 [fontsize=20]
+	358 [fontsize=20]
+	359 [fontsize=20]
+	360 [fontsize=20]
+	361 [fontsize=20]
+	362 [fontsize=20]
+	363 [fontsize=20]
+	364 [fontsize=20]
+	365 [fontsize=20]
+	366 [fontsize=20]
+	367 [fontsize=20]
+	368 [fontsize=20]
+	369 [fontsize=20]
+	370 [fontsize=20]
+	371 [fontsize=20]
+	372 [fontsize=20]
+	373 [fontsize=20]
+	374 [fontsize=20]
+	375 [fontsize=20]
+	376 [fontsize=20]
+	377 [fontsize=20]
+	378 [fontsize=20]
+	379 [fontsize=20]
+	380 [fontsize=20]
+	381 [fontsize=20]
+	382 [fontsize=20]
+	383 [fontsize=20]
+	384 [fontsize=20]
+	385 [fontsize=20]
+	386 [fontsize=20]
+	387 [fontsize=20]
+	388 [fontsize=20]
+	389 [fontsize=20]
+	390 [fontsize=20]
+	391 [fontsize=20]
+	392 [fontsize=20]
+	393 [fontsize=20]
+	394 [fontsize=20]
+	395 [fontsize=20]
+	396 [fontsize=20]
+	397 [fontsize=20]
+	398 [fontsize=20]
+	399 [fontsize=20]
+	400 [fontsize=20]
+
+}
