@@ -78,24 +78,6 @@
     <CustomBuild Include="Chooseomatic\old\Time Travel Dinosaur.dot">
       <Filter>backup</Filter>
     </CustomBuild>
-    <CustomBuild Include="..\Old\Fighting Fantasy\Blood of the Zombie.dot">
-      <Filter>backup</Filter>
-    </CustomBuild>
-    <CustomBuild Include="..\Old\Fighting Fantasy\backup\FF12.dot">
-      <Filter>backup</Filter>
-    </CustomBuild>
-    <CustomBuild Include="..\Old\Fighting Fantasy\backup\ff64.dot">
-      <Filter>backup</Filter>
-    </CustomBuild>
-    <CustomBuild Include="..\Old\Fighting Fantasy\House of Hell.dot">
-      <Filter>backup</Filter>
-    </CustomBuild>
-    <CustomBuild Include="..\Old\Fighting Fantasy\Howl of the Werewolf.dot">
-      <Filter>backup</Filter>
-    </CustomBuild>
-    <CustomBuild Include="..\Old\Fighting Fantasy\Stormslayer.dot">
-      <Filter>backup</Filter>
-    </CustomBuild>
     <CustomBuild Include="Give Yourself Goosebumps\04 - The Deadly Experiments of Dr. Eeek.dot">
       <Filter>Temp</Filter>
     </CustomBuild>
@@ -129,6 +111,21 @@
     <CustomBuild Include="Fighting Fantasy\03- The Forest of Doom.dot">
       <Filter>Temp</Filter>
     </CustomBuild>
+    <CustomBuild Include="Fighting Fantasy\old\FF12.dot">
+      <Filter>backup</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Fighting Fantasy\old\ff64.dot">
+      <Filter>backup</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Fighting Fantasy\old\House of Hell.dot">
+      <Filter>backup</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Fighting Fantasy\old\Howl of the Werewolf.dot">
+      <Filter>backup</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Fighting Fantasy\old\Stormslayer.dot">
+      <Filter>backup</Filter>
+    </CustomBuild>
   </ItemGroup>
   <ItemGroup>
     <Text Include="vertex.txt">
@@ -140,6 +137,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include=".gitignore" />
+    <None Include="Fighting Fantasy\old\Blood of the Zombie.dot">
+      <Filter>backup</Filter>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Gamebook.cpp">
