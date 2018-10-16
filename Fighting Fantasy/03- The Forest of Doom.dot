@@ -211,6 +211,123 @@ digraph {
 			107
 		}
 		
+		subgraph cluster_WILD_HILL_MAN {
+			label = "Wild Hill Man\n 7/5\n 6/4"
+			043
+		}
+		
+		subgraph cluster_GREMLIN {
+			label = "Gremlin\n 5/3"
+			165 [label = "\N\n -3AT"]
+		}
+		
+		subgraph cluster_GREMLIN2 {
+			label = "Gremlin\n 4/3\n 3/2"
+			049 [label = "\N\n -3AT"]
+		}
+		
+		subgraph cluster_GREMLIN3 {
+			label = "Gremlin\n 5/5"
+			071 [label = "\N\n -3AT"]
+		}
+		
+		subgraph cluster_GREMLIN4 {
+			label = "Gremlin\n 4/4"
+			193 [label = "\N\n -3AT"]
+		}
+		
+		subgraph cluster_BARBARIAN {
+			label = "Barbarian\n 9/7"
+			128
+		}
+		
+		subgraph cluster_BLOOD_EEL {
+			label = "Blood Eel\n 5/4"
+			186
+		}
+		
+		subgraph cluster_VAMPIRE_BAT {
+			label = "Vampire Bat\n 5/5\n 6/5\n 5/7"
+			079
+		}
+		
+		subgraph cluster_TREEMAN {
+			label = "Treeman\n 8/8\n 8/8"
+			123
+		}
+		
+		subgraph cluster_HUNTING_DOG_MASKED_MAN {
+			label = "Hunting Dog\n MaskedMan\n 7/6\n 6/6 5/6\n 6/5 8/7"
+			096
+			276
+		}
+		
+		subgraph cluster_PYGMY {
+			label = "Pygmy\n 5/5 5/6"
+			377
+		}
+		
+		subgraph cluster_KILLER_BEES {
+			label = "Killer Bees\n 7/3\n 8/4\n 7/4"
+			007
+		}
+		
+		subgraph cluster_WOLF {
+			label = "Wolf\n 7/7\n 8/7\n 7/9"
+			330
+		}
+		
+		subgraph cluster_BOULDER_BEAST {
+			label = "Boulder Beast\n 8/11"
+			084
+		}
+		
+		subgraph cluster_GIANT_SPIDER {
+			label = "Giant Spider\n 7/8"
+			298
+		}
+		
+		subgraph cluster_CAVE_TROLL {
+			label = "Cave Troll\n 8/9"
+			310
+		}
+		
+		subgraph cluster_HOBGOBLIN {
+			label = "Hobgoblin\n 6/6\n 5/7"
+			317
+		}
+		
+		subgraph cluster_STING_WORM {
+			label = "Sting Worm\n 8/7"
+			015
+		}
+		
+		subgraph cluster_ORC {
+			label = "Orc\n 5/5\n 5/6"
+			029
+		}
+		
+		subgraph cluster_BEAR {
+			label = "Bear\n 7/8"
+			241
+		}
+		
+		subgraph cluster_GOBLIN {
+			label = "Goblin\n 5/4"
+			009
+			117
+		}
+		
+		subgraph cluster_OGRE {
+			label = "Ogre\n 8/12"
+			290
+		}
+		
+		subgraph cluster_APE_MAN {
+			label = "Ape Man\n 8/7"
+			352 [label = "\N\n -2AT"]
+		}
+		
 		cbt
 	}
 
@@ -235,16 +352,25 @@ digraph {
 		034 [label = "\N\n +all SK/\n +all LK/\n +all ST"]
 		068 [label = "\N\n +3ST"]
 		070 [label = "\N\n +2SK"]
+		091 [shape = "rect" fontcolor = "blue" label = "\N\n eye of amber\n +1LK"]
+		106 [shape = "rect" fontcolor = "blue" label = "\N\n gold ring: 15g\n +2LK"]
 		166 [label = "\N\n +2LK"]
 		174 [shape = "rect" fontcolor = "blue" label = "\N\n gold ring: 10g\n +1LK"]
+		179 [label = "\N\n +1AT"]
 		184 [label = "\N\n +4ST"]
+		219 [shape = "rect" fontcolor = "blue" label = "\N\n silver dart: 5g\n +1LK"]
+		232 [shape = "rect" fontcolor = "blue" label = "\N\n hammer handle\n +1LK"]
 		235 [label = "\N\n +1LK"]
 		248 [shape = "rect" fontcolor = "blue" label = "\N\n shield+\n +1LK"]
+		257 [label = "\N\n +1LK\n +4ST"]
+		262 [label = "\N\n +1AT"]
 		269 [label = "\N\n +4ST"]
 		283 [label = "\N\n +4ST"]
+		302 [label = "\N\n +1AT"]
 		308 [color = "greenyellow:pink" label = "\N\n SK&harr;LK"]
 		341 [shape = "rect" fontcolor = "blue" label = "\N\n 5 gold\n dragon's tooth\n strength potion\n +1LK"]
 		374 [label = "\N\n +1AT"]
+		383 [shape = "rect" fontcolor = "blue" label = "\N\n whistle\n +2ST"]
 		387 [shape = "rect" fontcolor = "blue" label = "\N\n 1 gold\n +1LK"]
 		388 [label = "\N\n +1LK?"]
 		389 [shape = "rect" fontcolor = "blue" label = "\N\n 8 gold\n +1LK"]
@@ -258,26 +384,40 @@ digraph {
 		dam3 [label = "\N\n text"]
 		dam4 [shape = "rect" fontcolor = "blue" label = "\N\n text"]
 		dam5 [shape = "rect" fontcolor = "blue" label = "\N\n text"]
+		004 [label = "\N\n -4ST"]
 		013 [label = "\N\n -3LK"]
 		019 [label = "\N\n -1ST"]
+		022 [label = "\N\n -2SK\n -1d6ST"]
+		030 [label = "\N\n -2ST"]
 		032 [shape = "rect" fontcolor = "crimson" label = "\N\n -2 items\n -10 gold\n -1LK"]
 		035 [label = "\N\n -4ST"]
+		042 [label = "\N\n -1LK"]
 		044 [label = "\N\n -2ST"]
+		045 [label = "\N\n -2ST"]
+		046 [label = "\N\n -2LK"]
+		048 [label = "\N\n -1d6ST"]
 		083 [label = "\N\n -2ST"]
+		108 [label = "\N\n -3ST"]
 		129 [shape = "rect" fontcolor = "crimson" label = "\N\n -10 gold\n -2LK"]
 		130 [label = "\N\n -1LK?"]
 		133 [label = "\N\n -2AT"]
 		134 [label = "\N\n -1LK"]
 		141 [label = "\N\n -1LK"]
 		143 [label = "\N\n -2ST"]
+		156 [label = "\N\n -3ST"]
+		159 [label = "\N\n -3ST"]
 		163 [label = "\N\n -3ST"]
+		169 [label = "\N\n -2SK\n -1d6ST"]
 		222 [label = "\N\n -1d6ST"]
 		237 [label = "\N\n -2LK"]
 		250 [label = "\N\n -2ST"]
 		259 [label = "\N\n -3~5ST"]
+		275 [label = "\N\n -1ST"]
+		277 [label = "\N\n -1ST"]
 		278 [label = "\N\n -1LK\n -2~4ST"]
 		328 [shape = "rect" fontcolor = "crimson" label = "\N\n -1 food\n -4ST"]
 		345 [label = "\N\n -4ST"]
+		372 [label = "\N\n -?ST"]
 		395 [label = "\N\n -3ST?"]
 	}
 
@@ -287,19 +427,42 @@ digraph {
 		key1 [label = "\N\n text"]
 		key2 [label = "\N\n text"]
 		key3 [label = "\N\n text"]
+		012 [label = "\N\n -10 gold\n -2 items" fontcolor = "crimson"]
 		014 [label = "\N\n -3 gold\n -1 item" fontcolor = "crimson"]
-		036 [label = "\N\n -all gold/\n -2 item2" fontcolor = "crimson"]
+		036 [label = "\N\n -all gold/\n -2 items" fontcolor = "crimson"]
+		050 [label = "\N\n silver key"]
+		053 [label = "\N\n -all gold" fontcolor = "crimson"]
 		058 [label = "\N\n 25 gold\n hammer head"]
+		074 [label = "\N\n 5 gold\n brass bell"]
 		078 [label = "\N\n dust of levitation"]
+		101 [label = "\N\n 5 gold\n brass bell"]
 		111 [label = "\N\n 5 gold"]
+		116 [label = "\N\n gold collar: 15g"]
+		145 [label = "\N\n -all food" fontcolor = "crimson"]
+		146 [label = "\N\n boulderbeast"]
+		176 [label = "\N\n hammer handle"]
+		178 [label = "\N\n -1 food" fontcolor = "crimson"]
+		194 [label = "\N\n belladonna"]
 		202 [label = "\N\n 2 gold studs: 2x5g"]
+		205 [label = "\N\n 6 gold"]
+		217 [label = "\N\n 4 gold"]
+		218 [label = "\N\n -5 gold/\n -1 items" fontcolor = "crimson"]
 		223 [label = "\N\n 5 gold"]
+		242 [label = "\N\n gold ignot?: 28g/\n -1 item?"]
+		273 [label = "\N\n gold medallion: 9g"]
 		279 [label = "\N\n -5 item2/gold" fontcolor = "crimson"]
+		287 [label = "\N\n 5 gold\n brass bell"]
+		297 [label = "\N\n info" tooltip = "goblin in crypt north in forest"]
+		299 [label = "\N\n -all food" fontcolor = "crimson"]
+		301 [label = "\N\n 3 gold\n brass flute"]
 		311 [label = "\N\n 2 gold"]
 		312 [label = "\N\n 25 gold\n hammer head"]
 		322 [label = "\N\n gold medallion: 5g"]
+		343 [label = "\N\n info" tooltip = "go north"]
+		353 [label = "\N\n -all food" fontcolor = "crimson"]
 		354 [label = "\N\n dust of levitation"]
 		370 [label = "\N\n -1 item" fontcolor = "crimson"]
+		371 [label = "\N\n 3 gold"]
 	}
 	
 	subgraph Shop {
@@ -337,183 +500,230 @@ digraph {
 	001 -> 054
 	003 -> 322 [color = "blue" fontcolor = "blue" label = "ring of light"]
 	003 -> 120
-//	004 -> 
+	004 -> 049
+	004 -> 093
 	005 -> 333
 	005 -> 249
 	006 -> 148
-//	007 -> 
-//	008 -> 
-//	009 -> 
-//	010 -> 
-//	011 -> 
-//	012 -> 
+	007 -> 023
+	008 -> 317
+	008 -> 392
+	009 -> 176
+	010 -> 290
+	011 -> 353
+	012 -> 271
+	012 -> 067
 	013 -> 149
 	014 -> 255
-//	015 -> 
+	015 -> 217
 	016 -> 211 [color = "blue" fontcolor = "blue" label = "anti-poison"]
 	016 -> 345
-//	017 -> 
+	017 -> 089 [color = "cyan3" fontcolor = "cyan3" label = "-1g"]
+	017 -> 256
+	017 -> 238
 	018 -> 198
 	019 -> 018
-//	020 -> 
-//	021 -> 
-//	022 -> 
-//	023 -> 
-//	024 -> 
-//	025 -> 
-//	026 -> 
-//	027 -> 
+	020 -> 277
+	021 -> 226
+	022 -> 358
+	023 -> 339
+	024 -> 377
+	024 -> 092
+	025 -> 369
+	025 -> 056
+	026 -> 091
+	026 -> 220
+	027 -> 329
 	028 -> 052 [color = "blue" fontcolor = "blue" label = "armband of strength"]
 	028 -> 266
-//	029 -> 
-//	030 -> 
-//	031 -> 
+	029 -> 383
+	029 -> 254 [color = "magenta" fontcolor = "magenta" label = "flee"]
+	030 -> 225
+	031 -> 362
 	032 -> 150
 	033 -> 390
 	034 -> 231
 	035 -> 132
 	036 -> 187
-//	037 -> 
-//	038 -> 
-//	039 -> 
-//	040 -> 
-//	041 -> 
-//	042 -> 
-//	043 -> 
+	037 -> 226
+	037 -> 336
+	038 -> 315
+	038 -> 220
+	039 -> 287
+	040 -> 274
+	041 -> 239
+	042 -> 342
+	043 -> 050
+	043 -> 188 [color = "magenta" fontcolor = "magenta" label = "flee"]
 	044 -> 293
-//	045 -> 
-//	046 -> 
-//	047 -> 
-//	048 -> 
-//	049 -> 
-//	050 -> 
+	045 -> 165
+	046 -> 012
+	047 -> 026
+	047 -> 220
+	048 -> 288
+	049 -> 371
+	050 -> 188
 	051 -> 199
 	051 -> 397
 	052 -> 078
-//	053 -> 
+	053 -> 092
 	054 -> 399
 	054 -> 261
-//	055 -> 
-//	056 -> 
+	055 -> 168
+	055 -> 313
+	055 -> 359
+	056 -> 233
+	056 -> 163
 	057 -> 132 [color = "green" fontcolor = "green" label = "LK"]
 	057 -> 035 [color = "brown"]
 	058 -> 112
 	059 -> 171
 	060 -> 183 [color = "green" fontcolor = "green" label = "LK"]
 	060 -> 044 [color = "brown"]
-//	061 -> 
-//	062 -> 
-//	063 -> 
-//	064 -> 
-//	065 -> 
-//	066 -> 
-//	067 -> 
+	061 -> 398
+	061 -> 151
+	062 -> 208
+	063 -> 178
+	064 -> 142
+	065 -> 330
+	066 -> 325
+	067 -> 113
 	068 -> 059
 	069 -> 264
 	069 -> 143
 	069 -> 269
 	069 -> 016
 	070 -> 334
-//	071 -> 
-//	072 -> 
+	071 -> 273
+	072 -> 138
 	073 -> 327 [color = "green" fontcolor = "green" label = "SK&LK"]
 	073 -> 112 [color = "brown"]
-//	074 -> 
-//	075 -> 
+	074 -> 025
+	075 -> 330
 	076 -> 206
-//	077 -> 
+	077 -> 377
+	077 -> 092
 	078 -> 349
-//	079 -> 
+	079 -> 386
 	080 -> 293
-//	081 -> 
+	081 -> 049 [color = "green" fontcolor = "green" label = "LK"]
+	081 -> 004 [color = "brown"]
 	082 -> 235 [color = "blue" fontcolor = "blue" label = "stillness potion"]
 	082 -> 013
 	083 -> 139
-//	084 -> 
-//	085 -> 
-//	086 -> 
-//	087 -> 
+	084 -> 146
+	084 -> 245 [color = "magenta" fontcolor = "magenta" label = ">3AR\n flee"]
+	085 -> 009
+	085 -> 359
+	086 -> 208
+	087 -> 090
 	088 -> 212
 	088 -> 107
-//	089 -> 
-//	090 -> 
-//	091 -> 
-//	092 -> 
-//	093 -> 
+	089 -> 256
+	089 -> 281
+	089 -> 238
+	090 -> 210 [color = "green" fontcolor = "green" label = "LK"]
+	090 -> 348 [color = "brown" fontcolor = "brown" label = "-3ST"]
+	091 -> 220
+	092 -> 299
+	092 -> 007
+	092 -> 100 [color = "cyan3" fontcolor = "cyan3" label = "insect control"]
+	093 -> 061
+	093 -> 270
 	094 -> 136
 	094 -> 144
 	095 -> 173 [color = "blue" fontcolor = "blue" label = "dust of levitation"]
 	095 -> 368
-//	096 -> 
+	096 -> 062
 	097 -> 328
 	097 -> 118
 	001 -> 098 [dir = back color = "green" fontcolor = "green" label = "LK"]
 	099 -> 209
 	099 -> 349
-//	100 -> 
-//	101 -> 
-//	102 -> 
+	100 -> 339
+	101 -> 025
+	102 -> 105
 	103 -> 057
 	103 -> 360
 	104 -> 311
-//	105 -> 
-//	106 -> 
+	105 -> 384
+	105 -> 394
+	106 -> 288
 	107 -> 152
-//	108 -> 
-//	109 -> 
-//	110 -> 
+	108 -> 226
+	109 -> 124
+	109 -> 072
+	109 -> 309
+	110 -> 257
+	110 -> 031
 	111 -> 150
 	112 -> 103
 	113 -> 324
 	113 -> 149
-//	114 -> 
-//	115 -> 
-//	116 -> 
-//	117 -> 
+	114 -> 350 [color = "blue" fontcolor = "blue" label = "fire capsules"]
+	114 -> 123
+	115 -> 382
+	115 -> 277
+	116 -> 314
+	117 -> 232
 	118 -> 174
-//	119 -> 
+	119 -> 090
+	119 -> 216
 	120 -> 094 [color = "blue" fontcolor = "blue" label = "rope of climbing"]
 	120 -> 380
-//	121 -> 
-//	122 -> 
-//	123 -> 
-//	124 -> 
-//	125 -> 
-//	126 -> 
-//	127 -> 
-//	128 -> 
+	121 -> 061
+	121 -> 081
+	122 -> 135
+	122 -> 362
+	123 -> 027
+	123 -> 234 [color = "magenta" fontcolor = "magenta" label = "flee"]
+	124 -> 180
+	125 -> 337
+	125 -> 015
+	126 -> 365 [color = "blue" fontcolor = "blue" label = "nose filters"]
+	126 -> 022
+	127 -> 298
+	128 -> 272
 	129 -> 349
 	130 -> 153
 	130 -> 355
-//	131 -> 
+	131 -> 325
 	132 -> 258 [color = "blue" fontcolor = "blue" label = "flute"]
 	132 -> 167
 	133 -> 374
 	133 -> 360
 	134 -> 283
 	134 -> 303
-//	135 -> 
+	135 -> 284
+	135 -> 151
 	136 -> 069
-//	137 -> 
-//	138 -> 
+	137 -> 055 [color = "blue" fontcolor = "blue" label = "glove of missile dexterity"]
+	137 -> 010
+	138 -> 064 [color = "blue" fontcolor = "blue" label = "plant control"]
+	138 -> 159
 	139 -> 198
-//	140 -> 
+	140 -> 025
+	140 -> 267
 	141 -> 347
 	141 -> 059
-//	142 -> 
+	142 -> 366
+	142 -> 178
+	142 -> 251
 	143 -> 080
 	144 -> 213
 	144 -> 387
-//	145 -> 
-//	146 -> 
-//	147 -> 
+	145 -> 285
+	146 -> 245
+	147 -> 038
+	147 -> 220
 	148 -> 097
 	148 -> 020
 	149 -> 130
 	149 -> 306
 	150 -> 357
 	150 -> 171
-//	151 -> 
+	151 -> 071
+	151 -> 296
 	152 -> 333
 	152 -> 005
 	152 -> 249
@@ -522,35 +732,45 @@ digraph {
 	154 -> 231
 	155 -> 083 [color = "blue" fontcolor = "blue" label = "belladonna"]
 	155 -> 259
-//	156 -> 
-//	157 -> 
-//	158 -> 
-//	159 -> 
-//	160 -> 
+	156 -> 109
+	157 -> 125
+	157 -> 337
+	158 -> 047 [color = "green" fontcolor = "green" label = "LK"]
+	158 -> 353 [color = "brown"]
+	159 -> 142
+	160 -> 343 [color = "cyan3" fontcolor = "cyan3" label = "-1g"]
+	160 -> 008
+	160 -> 239
 	161 -> 185
 	161 -> 341
 	162 -> 285
 	163 -> 375
 	164 -> 144
-//	165 -> 
+	165 -> 242
 	166 -> 390
 	167 -> 305
-//	168 -> 
-//	169 -> 
+	168 -> 117
+	168 -> 358
+	169 -> 085
+	169 -> 358
 	170 -> 223 [color = "blue" fontcolor = "blue" label = "eye of amber"]
 	170 -> 346
 	171 -> 190
-//	172 -> 
+	172 -> 089 [color = "cyan3" fontcolor = "cyan3" label = "-1g"]
+	172 -> 256
+	172 -> 281
 	173 -> 058 [color = "blue" fontcolor = "blue" label = "holy water"]
 	173 -> 227
 	174 -> 323
-//	175 -> 
-//	176 -> 
+	175 -> 372
+	175 -> 106
+	176 -> 358
 	177 -> 289
 	177 -> 160
-//	178 -> 
-//	179 -> 
-//	180 -> 
+	178 -> 298
+	179 -> 115
+	180 -> 105
+	180 -> 361
 	181 -> 162
 	182 -> 070 [color = "green" fontcolor = "green" label = "SK"]
 	182 -> 334 [color = "brown"]
@@ -558,23 +778,29 @@ digraph {
 	184 -> 390
 	185 -> 250
 	185 -> 149
-//	186 -> 
+	186 -> 131
 	187 -> 286
 	187 -> 203
 	187 -> 006
-//	188 -> 
+	188 -> 359
+	188 -> 221
 	189 -> 269
 	189 -> 293
 	190 -> 265
 	190 -> 318
 	191 -> 184 [color = "blue" fontcolor = "blue" label = "brass bell"]
 	191 -> 243
-//	192 -> 
-//	193 -> 
-//	194 -> 
-//	195 -> 
-//	196 -> 
-//	197 -> 
+	192 -> 012
+	192 -> 046
+	193 -> 110
+	194 -> 208
+	195 -> 352
+	195 -> 156
+	196 -> 376
+	196 -> 039 [color = "cyan3" fontcolor = "cyan3" label = "net of entanglement"]
+	196 -> 025
+	197 -> 024 [color = "blue" fontcolor = "blue" label = "anti-poison"]
+	197 -> 053
 	198 -> 278
 	198 -> 087
 	199 -> 134 [color = "cyan3" fontcolor = "cyan3" label = "-1g"]
@@ -588,14 +814,17 @@ digraph {
 	203 -> 373
 	204 -> 400 [color = "blue" fontcolor = "blue" label = "hammer head\n hammer handle"]
 	204 -> 381
-//	205 -> 
+	205 -> 092
 	206 -> 253
 	206 -> 187
-//	207 -> 
-//	208 -> 
+	207 -> 302
+	207 -> 109
+	208 -> 099
+	208 -> 291
 	209 -> 028
 	209 -> 349
-//	210 -> 
+	210 -> 043
+	210 -> 188
 	211 -> 293
 	212 -> 321
 	212 -> 107 [color = "magenta" fontcolor = "magenta" label = "flee"]
@@ -603,41 +832,55 @@ digraph {
 	214 -> 069
 	215 -> 248
 	215 -> 201
-//	216 -> 
-//	217 -> 
-//	218 -> 
-//	219 -> 
-//	220 -> 
-//	221 -> 
+	216 -> 278
+	217 -> 262
+	217 -> 337
+	218 -> 274
+	219 -> 300
+	220 -> 275
+	220 -> 115
+	221 -> 378
+	221 -> 199
 	222 -> 293
 	223 -> 150
 	224 -> 332
-//	225 -> 
-//	226 -> 
+	225 -> 135
+	225 -> 362
+	226 -> 029
+	226 -> 254
 	227 -> 312 [color = "magenta" fontcolor = "magenta" label = "win"]
 	227 -> 002 [color = "magenta" fontcolor = "magenta" label = "lose/\n lose 4 AR"]
 	228 -> 255
-//	229 -> 
-//	230 -> 
+	229 -> 165 [color = "green" fontcolor = "green" label = "LK"]
+	229 -> 045 [color = "brown"]
+	230 -> 137
+	230 -> 290
+	230 -> 358
 	231 -> 224
 	231 -> 332 [color = "magenta" fontcolor = "magenta" label = "flee"]
-//	232 -> 
-//	233 -> 
-//	234 -> 
+	232 -> 263
+	232 -> 358
+	233 -> 017
+	233 -> 238
+	234 -> 382
 	235 -> 149
 	236 -> 170
 	236 -> 150
 	237 -> 214 [color = "blue" fontcolor = "blue" label = "healing potion"]
 	237 -> 304
-//	238 -> 
-//	239 -> 
-//	240 -> 
-//	241 -> 
-//	242 -> 
+	238 -> 221
+	239 -> 037
+	239 -> 226
+	240 -> 338 [color = "blue" fontcolor = "blue" label = "nose filters"]
+	240 -> 169
+	241 -> 219
+	242 -> 121
 	243 -> 166 [color = "cyan3" fontcolor = "cyan3" label = "-1g"]
 	243 -> 033
 	244 -> 198
-//	245 -> 
+	245 -> 163
+	245 -> 233
+	245 -> 393
 	246 -> 204
 	247 -> 003
 	247 -> 144
@@ -645,54 +888,69 @@ digraph {
 	248 -> 088
 	249 -> 164
 	250 -> 082
-//	251 -> 
-//	252 -> 
+	251 -> 063 [color = "green" fontcolor = "green" label = "SK"]
+	251 -> 260 [color = "brown" fontcolor = "brown" label = "-4ST"]
+	252 -> 309
+	252 -> 072
 	253 -> 344
 	253 -> 187
-//	254 -> 
+	254 -> 241
+	254 -> 300
 	255 -> 182
 	255 -> 334
-//	256 -> 
-//	257 -> 
+	256 -> 122 [color = "green" fontcolor = "green" label = "LK"]
+	256 -> 295 [color = "brown"]
+	257 -> 031
 	258 -> 305
 	259 -> 244 [color = "green" fontcolor = "green" label = "LK"]
 	259 -> 019 [color = "brown"]
-//	260 -> 
+	260 -> 178
 	261 -> 177
-//	262 -> 
-//	263 -> 
+	262 -> 337
+	263 -> 126
+	263 -> 358
 	264 -> 367
 	264 -> 189
 	264 -> 282
 	265 -> 356
 	266 -> 354 [color = "green" fontcolor = "green" label = "SKx3"]
 	266 -> 129 [color = "brown"]
-//	267 -> 
-//	268 -> 
+	267 -> 196
+	267 -> 025
+	268 -> 119
 	269 -> 293
-//	270 -> 
-//	271 -> 
-//	272 -> 
-//	273 -> 
-//	274 -> 
-//	275 -> 
-//	276 -> 
-//	277 -> 
+	270 -> 229
+	270 -> 121
+	271 -> 297 [color = "cyan3" fontcolor = "cyan3" label = "-5g/\n -item"]
+	271 -> 067
+	272 -> 394
+	273 -> 296
+	274 -> 195
+	274 -> 109
+	275 -> 179
+	275 -> 115
+	276 -> 062
+	277 -> 234 [color = "magenta" fontcolor = "magenta" label = "flee"]
+	277 -> 114
 	278 -> 319
 	279 -> 246
 	280 -> 306
-//	281 -> 
+	281 -> 163
+	281 -> 393
 	282 -> 016
 	282 -> 293
 	283 -> 303
-//	284 -> 
+	284 -> 081
+	284 -> 270
 	285 -> 388
 	286 -> 373
-//	287 -> 
-//	288 -> 
+	287 -> 025
+	288 -> 084
+	288 -> 245
 	289 -> 076
 	289 -> 147
-//	290 -> 
+	290 -> 385
+	290 -> 358 [color = "magenta" fontcolor = "magenta" label = "flee"]
 	291 -> 335
 	291 -> 145
 	292 -> 095
@@ -700,15 +958,21 @@ digraph {
 	293 -> 215
 	293 -> 389
 	293 -> 088
-//	294 -> 
-//	295 -> 
-//	296 -> 
-//	297 -> 
-//	298 -> 
-//	299 -> 
-//	300 -> 
-//	301 -> 
-//	302 -> 
+	294 -> 106
+	294 -> 175
+	294 -> 288
+	295 -> 225 [color = "blue" fontcolor = "blue" label = "helmet"]
+	295 -> 030
+	296 -> 398
+	296 -> 284
+	297 -> 067
+	298 -> 140
+	299 -> 065
+	299 -> 075
+	300 -> 138
+	300 -> 331
+	301 -> 157
+	302 -> 109
 	303 -> 247
 	304 -> 069 [color = "blue" fontcolor = "blue" label = "-5 food"]
 	305 -> 374
@@ -716,21 +980,28 @@ digraph {
 	305 -> 360
 	306 -> 391
 	306 -> 112
-//	307 -> 
+	307 -> 192
+	307 -> 271
 	308 -> 148
-//	309 -> 
-//	310 -> 
+	309 -> 077 [color = "green" fontcolor = "green" label = "LKx2"]
+	309 -> 197 [color = "brown"]
+	310 -> 101
 	311 -> 204
 	312 -> 112
-//	313 -> 
-//	314 -> 
-//	315 -> 
+	313 -> 240
+	313 -> 085
+	313 -> 358
+	314 -> 294
+	314 -> 288
+	315 -> 042
+	315 -> 342
 	316 -> 198
-//	317 -> 
+	317 -> 301
+	317 -> 041 [color = "magenta" fontcolor = "magenta" label = "flee"]
 	318 -> 231
 	319 -> 228 [color = "blue" fontcolor = "blue" label = "boots of leaping"]
 	319 -> 014
-//	320 -> 
+	320 -> 362
 	321 -> 107
 	322 -> 094 [color = "blue" fontcolor = "blue" label = "rope of climbing"]
 	322 -> 380
@@ -740,86 +1011,111 @@ digraph {
 	324 -> 250
 	324 -> 161
 	324 -> 149
-//	325 -> 
-//	326 -> 
+	325 -> 268 [color = "blue" fontcolor = "blue" label = "garlic buds"]
+	325 -> 079
+	326 -> 145
 	327 -> 351
 	327 -> 112
 	328 -> 118
-//	329 -> 
-//	330 -> 
-//	331 -> 
+	329 -> 180
+	329 -> 252
+	330 -> 116
+	331 -> 124
+	331 -> 309
 	332 -> 103
 	334 -> 113
 	334 -> 051
 	335 -> 181
 	335 -> 326
-//	336 -> 
-//	337 -> 
-//	338 -> 
-//	339 -> 
+	336 -> 021 [color = "blue" fontcolor = "blue" label = "anti-poison"]
+	336 -> 108
+	337 -> 230
+	337 -> 358
+	338 -> 085
+	338 -> 358
+	339 -> 065
+	339 -> 075
 	340 -> 141
 	340 -> 347
 	340 -> 059
 	341 -> 149
-//	342 -> 
-//	343 -> 
+	342 -> 158 [color = "blue" fontcolor = "blue" label = "headband of concentration"]
+	342 -> 011
+	343 -> 008
+	343 -> 239
 	344 -> 036
 	345 -> 293
 	346 -> 032
 	346 -> 111
 	347 -> 363
-//	348 -> 
+	348 -> 043
+	348 -> 188
 	349 -> 291
 	349 -> 102
-//	350 -> 
+	350 -> 329
 	351 -> 292
 	351 -> 112
-//	352 -> 
-//	353 -> 
+	352 -> 207
+	352 -> 156 [color = "magenta" fontcolor = "magenta" label = "flee"]
+	353 -> 026
+	353 -> 220
 	354 -> 349
 	355 -> 340
 	356 -> 034
 	356 -> 395
 	356 -> 231
 	357 -> 306
-//	358 -> 
-//	359 -> 
+	358 -> 040 [color = "green" fontcolor = "green" label = "LK"]
+	358 -> 218 [color = "brown"]
+	359 -> 172
+	359 -> 281
 	360 -> 279
 	360 -> 104
-//	361 -> 
-//	362 -> 
+	361 -> 396
+	361 -> 086
+	362 -> 281
+	362 -> 238
 	363 -> 068
 	363 -> 059
-//	364 -> 
-//	365 -> 
-//	366 -> 
+	364 -> 276
+	364 -> 194
+	365 -> 358
+	366 -> 127 [color = "cyan3" fontcolor = "cyan3" label = "-3g"]
+	366 -> 178
 	367 -> 060 [color = "blue" fontcolor = "blue" label = "nose filters"]
 	367 -> 222
 	368 -> 112
 	369 -> 191
 	369 -> 390
 	370 -> 231
-//	371 -> 
-//	372 -> 
+	371 -> 093
+	372 -> 048 [color = "green" fontcolor = "green" label = "SK"]
+	372 -> 288 [color = "brown"]
 	373 -> 308
 	373 -> 148
 	374 -> 133
 	374 -> 360
 	375 -> 150
 	375 -> 236
-//	376 -> 
-//	377 -> 
-//	378 -> 
+	376 -> 074 [color = "green" fontcolor = "green" label = "LK"]
+	376 -> 310 [color = "brown"]
+	377 -> 205
+	377 -> 092 [color = "magenta" fontcolor = "magenta" label = "flee"]
+	378 -> 307
+	378 -> 067
 	379 -> 073
 	379 -> 112
 	380 -> 237
 	380 -> 144
 	381 -> 098
-//	382 -> 
-//	383 -> 
-//	384 -> 
-//	385 -> 
-//	386 -> 
+	382 -> 097
+	383 -> 254
+	384 -> 128
+	384 -> 394
+	385 -> 168
+	385 -> 313
+	385 -> 358
+	386 -> 119
 	387 -> 340
 	388 -> 155 [color = "magenta" fontcolor = "magenta" label = "lose AR"]
 	388 -> 316
@@ -829,14 +1125,16 @@ digraph {
 	390 -> 280
 	391 -> 200 [color = "blue" fontcolor = "blue" label = "silver key"]
 	391 -> 379
-//	392 -> 
+	392 -> 157
 	393 -> 369
-//	394 -> 
+	394 -> 066
+	394 -> 186
 	395 -> 154 [color = "green" fontcolor = "green" label = "LK"]
 	395 -> 370 [color = "brown"]
-//	396 -> 
+	396 -> 364
+	396 -> 096
 	397 -> 163
 	397 -> 393
-//	398 -> 
-//	400 -> 
+	398 -> 320
+	398 -> 193
 }
