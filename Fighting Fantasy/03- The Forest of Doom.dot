@@ -47,15 +47,12 @@ digraph {
 		Green Line: Stat Test Passed\l \
 		Brown Line: Stat Test Failed\l \
 		Magenta Line: Combat Related Events\l \
-		Grey Text: Riddle Answer\l \
-		Grey Line: Hidden Option\l \
-		Orange Line: Spells\l \
 		Red Line: Possible Error\l \
 		Gold Fill: Required Nodes\l \
 		Light Blue Fill: Recommended Nodes\l \
 		Gold Outline: Recommended Path\l \
 		Green Box: Combat\l \
-		SK/ST/LK/AT/AR/TM/CW/CL: Skill/Stamina/Luck/Attack Strength/Attack Round/Time/Consecutive Win Round/Consecutive Lose Round\l \
+		SK/ST/LK/AT/AR/: Skill/Stamina/Luck/Attack Strength/Attack Round/\l \
 		?: Chance of this happening, depending on instructions in text\l \
 		*: Special Combat Rules\l \
 		-: Negative Status\l \
@@ -72,10 +69,13 @@ digraph {
 		leather armor\l \
 		lantern\l \
 		tinderbox\l \
-		2d6+6 gold\l \
+		30 gold\l \
 		backpack\l\l \
 		Comments:\l \
 		shield+: -1EDMG on 4~6\l \
+		Gold for info is not strictly necessary, but we start with enough gold to get them.\l \
+		When you are asked to pay gold or item, pay gold.\l \
+		Skip strength potion since there's no more combat or luck test after.\l \
 		none\l \
 		"
 		shape = "box"
@@ -83,63 +83,99 @@ digraph {
 
 	subgraph Required {
 		node [style = "filled" color = "gold" fillcolor = "gold" fontcolor = "blue" shape = "rect"]
-		key3
-		boo5
-		dam5
-		monboo5
-		mondam5
-		mon5
-		ending [fontcolor = "black" shape = "octagon"]
+		058
+		078
+		232
 		400 [fontcolor = "black" shape = "octagon"]
 	}
 
 	subgraph Required2 {
 		node [style = "filled" color = "gold2" fillcolor = "gold2" fontcolor = "blue" shape = "rect"]
-		req2
+		176
+		312
+		354
 	}
 
 	subgraph Recommended {
 		node [penwidth = 3 color = "gold"]
-		txt2
-		key2 [shape = "rect" fontcolor = "blue"]
-		boo3 [style = "filled" fillcolor = "greenyellow"]
-		boo4 [style = "filled" fillcolor = "greenyellow"]
-		dam3 [style = "filled" fillcolor = "pink"]
-		dam4 [style = "filled" fillcolor = "pink"]
-		monboo3 [style = "filled" fillcolor = "greenyellow"]
-		monboo4 [style = "filled" fillcolor = "greenyellow"]
-		mondam3 [style = "filled" fillcolor = "pink"]
-		mondam4 [style = "filled" fillcolor = "pink"]
-		mon3
-		mon4
+		001
+		261 [shape = "rect" style = "filled" fillcolor = "paleturquoise1" fontcolor = "purple"]
+		177
+		160
+		343 [style = "filled" fillcolor = "paleturquoise1" shape = "rect" fontcolor = "blue"]
+		008
+		392
+		157
+		337
+		230
+		137
+		055
+		168
+		117
+		232
+		358
+		040
+		274
+		109
+		124
+		180
+		361
+		086
+		208
+		099
+		209
+		028
+		052
+		078
+		349
+		102
+		105
+		394
+		066
+		325
+		268
+		119
+		090
+		210
+		043
+		050 [style = "filled" fillcolor = "paleturquoise1" shape = "rect" fontcolor = "blue"]
+		188
+		221
+		378
+		307
+		271
+		297 [style = "filled" fillcolor = "paleturquoise1" shape = "rect" fontcolor = "blue"]
+		067
+		113
+		149
+		306
+		391
+		200
+		351
+		292
+		095
+		173
+		058
+		112
+		103
+		360
+		279 [shape = "rect" fontcolor = "crimson"]
+		246
+		204
+		400
 	}
 	
 	subgraph Optional {
 		node [style = "filled" color = "paleturquoise1" fillcolor = "paleturquoise1" fontcolor = "blue" shape = "rect"]
-		opt
+		050
+		261
+		297
+		343
 	}
 
 	subgraph Combat {
 		style = "filled" color = "palegreen2"
-		subgraph cluster_MONSTER {
-			label = "MONSTER\n 0/0 0/0"
-			mon1 [label = "\N\n text"]
-			mon2 [shape = "rect" fontcolor = "blue" label = "\N\n text"]
-			mon3 [label = "\N\n text"]
-			mon4 [shape = "rect" fontcolor = "blue" label = "\N\n text"]
-			mon5 [shape = "rect" fontcolor = "blue" label = "\N\n text"]
-			monboo1 [style = "filled" color = "greenyellow" label = "\N\n text"]
-			monboo2 [shape = "rect" style = "filled" color = "greenyellow" fontcolor = "blue" label = "\N\n text"]
-			monboo3 [label = "\N\n text"]
-			monboo4 [shape = "rect" fontcolor = "blue" label = "\N\n text"]
-			monboo5 [shape = "rect" fontcolor = "blue" label = "\N\n text"]
-			mondam1 [style = "filled" color = "pink" label = "\N\n text"]
-			mondam2 [shape = "rect" style = "filled" color = "pink" fontcolor = "blue" label = "\N\n text"]
-			mondam3 [label = "\N\n text"]
-			mondam4 [shape = "rect" fontcolor = "blue" label = "\N\n text"]
-			mondam5 [shape = "rect" fontcolor = "blue" label = "\N\n text"]
-		}
-		
+
 		subgraph cluster_SHAPE_CHANGER {
 			label = "Shape Changer\n 10/10"
 			203
@@ -315,6 +351,10 @@ digraph {
 		subgraph cluster_GOBLIN {
 			label = "Goblin\n 5/4"
 			009
+		}
+		
+		subgraph cluster_GOBLIN2 {
+			label = "Goblin\n 5/4"
 			117
 		}
 		
@@ -327,13 +367,10 @@ digraph {
 			label = "Ape Man\n 8/7"
 			352 [label = "\N\n -2AT"]
 		}
-		
-		cbt
 	}
 
 	subgraph Death {
 		node [style = "filled" color = "red"]
-		ddt
 		002
 		098
 		304 [label = "\N\n -2SK"]
@@ -343,12 +380,6 @@ digraph {
 
 	subgraph Boost {
 		node [style = "filled" color = "greenyellow"]
-		bst
-		boo1 [label = "\N\n text"]
-		boo2 [shape = "rect" fontcolor = "blue" label = "\N\n text"]
-		boo3 [label = "\N\n text"]
-		boo4 [shape = "rect" fontcolor = "blue" label = "\N\n text"]
-		boo5 [shape = "rect" fontcolor = "blue" label = "\N\n text"]
 		034 [label = "\N\n +all SK/\n +all LK/\n +all ST"]
 		068 [label = "\N\n +3ST"]
 		070 [label = "\N\n +2SK"]
@@ -368,7 +399,7 @@ digraph {
 		283 [label = "\N\n +4ST"]
 		302 [label = "\N\n +1AT"]
 		308 [color = "greenyellow:pink" label = "\N\n SK&harr;LK"]
-		341 [shape = "rect" fontcolor = "blue" label = "\N\n 5 gold\n dragon's tooth\n strength potion\n +1LK"]
+		341 [shape = "rect" fontcolor = "blue" label = "\N\n 5 gold\n strength potion\n +1LK"]
 		374 [label = "\N\n +1AT"]
 		383 [shape = "rect" fontcolor = "blue" label = "\N\n whistle\n +2ST"]
 		387 [shape = "rect" fontcolor = "blue" label = "\N\n 1 gold\n +1LK"]
@@ -378,12 +409,6 @@ digraph {
 
 	subgraph Damage {
 		node [style = "filled" color = "pink"]
-		ddg
-		dam1 [label = "\N\n text"]
-		dam2 [shape = "rect" fontcolor = "blue" label = "\N\n text"]
-		dam3 [label = "\N\n text"]
-		dam4 [shape = "rect" fontcolor = "blue" label = "\N\n text"]
-		dam5 [shape = "rect" fontcolor = "blue" label = "\N\n text"]
 		004 [label = "\N\n -4ST"]
 		013 [label = "\N\n -3LK"]
 		019 [label = "\N\n -1ST"]
@@ -423,10 +448,6 @@ digraph {
 
 	subgraph Key_Item {
 		node [fontcolor = "blue" shape = "rect"]
-		kky
-		key1 [label = "\N\n text"]
-		key2 [label = "\N\n text"]
-		key3 [label = "\N\n text"]
 		012 [label = "\N\n -10 gold\n -2 items" fontcolor = "crimson"]
 		014 [label = "\N\n -3 gold\n -1 item" fontcolor = "crimson"]
 		036 [label = "\N\n -all gold/\n -2 items" fontcolor = "crimson"]
@@ -446,11 +467,11 @@ digraph {
 		202 [label = "\N\n 2 gold studs: 2x5g"]
 		205 [label = "\N\n 6 gold"]
 		217 [label = "\N\n 4 gold"]
-		218 [label = "\N\n -5 gold/\n -1 items" fontcolor = "crimson"]
+		218 [label = "\N\n -5 gold/\n -1 item" fontcolor = "crimson"]
 		223 [label = "\N\n 5 gold"]
 		242 [label = "\N\n gold ignot?: 28g/\n -1 item?"]
 		273 [label = "\N\n gold medallion: 9g"]
-		279 [label = "\N\n -5 item2/gold" fontcolor = "crimson"]
+		279 [label = "\N\n -5 items/gold" fontcolor = "crimson"]
 		287 [label = "\N\n 5 gold\n brass bell"]
 		297 [label = "\N\n info" tooltip = "goblin in crypt north in forest"]
 		299 [label = "\N\n -all food" fontcolor = "crimson"]
@@ -467,36 +488,11 @@ digraph {
 	
 	subgraph Shop {
 		node [fontcolor = "purple" shape = "rect"]
-		shp
-		shop1 [label = "\N\n text"]
 		261 [label = "\N\n Yaztromo"]
 	}
 
-	mon1 -> mon2 -> mon3 -> mon4 -> mon5 [penwidth = 3]
-	boo1 -> boo2 -> boo3 -> boo4 -> boo5 [penwidth = 3]
-	dam1 -> dam2 -> dam3 -> dam4 -> dam5
-	txt1 -> key1 -> txt2 -> key2 -> key3
-	monboo1 -> monboo2 -> monboo3 -> monboo4 -> monboo5
-	mondam1 -> mondam2 -> mondam3 -> mondam4 -> mondam5
-
-	myTitle -> z001 [penwidth = 3]
-	z001 -> z002 [color = "purple" fontcolor = "purple" label = "1-3"]
-	z001 -> z003 [color = "purple" fontcolor = "purple" label = "4-6"]
-	z002 -> z004 [color = "green" fontcolor = "green" label = "LK"]
-	z002 -> z005 [color = "brown"]
-	z003 -> z006 [dir = "both"]
-	z004 -> z007 [color = "blue" fontcolor = "blue" label = "req"]
-	z004 -> z008 [color = "cyan3" fontcolor = "cyan3" label = "-opt"]
-	z005 -> z009 [color = "grey" fontcolor = "grey" label = "info"]
-	z009 -> z010 [color = "crimson" fontcolor = "crimson" label = "error(?)"]
-	z010 -> z011 [color = "magenta" fontcolor = "magenta" label = "escape"]
-	{
-		rank = same
-		z003
-		z006
-	}
-	title -> 001
-	001 -> 261
+	title -> 001 [penwidth = 3]
+	001 -> 261 [penwidth = 3]
 	001 -> 054
 	003 -> 322 [color = "blue" fontcolor = "blue" label = "ring of light"]
 	003 -> 120
@@ -507,7 +503,7 @@ digraph {
 	006 -> 148
 	007 -> 023
 	008 -> 317
-	008 -> 392
+	008 -> 392 [penwidth = 3]
 	009 -> 176
 	010 -> 290
 	011 -> 353
@@ -534,7 +530,7 @@ digraph {
 	026 -> 091
 	026 -> 220
 	027 -> 329
-	028 -> 052 [color = "blue" fontcolor = "blue" label = "armband of strength"]
+	028 -> 052 [penwidth = 3 color = "blue" fontcolor = "blue" label = "armband of strength"]
 	028 -> 266
 	029 -> 383
 	029 -> 254 [color = "magenta" fontcolor = "magenta" label = "flee"]
@@ -550,10 +546,10 @@ digraph {
 	038 -> 315
 	038 -> 220
 	039 -> 287
-	040 -> 274
+	040 -> 274 [penwidth = 3]
 	041 -> 239
 	042 -> 342
-	043 -> 050
+	043 -> 050 [penwidth = 3]
 	043 -> 188 [color = "magenta" fontcolor = "magenta" label = "flee"]
 	044 -> 293
 	045 -> 165
@@ -562,21 +558,21 @@ digraph {
 	047 -> 220
 	048 -> 288
 	049 -> 371
-	050 -> 188
+	050 -> 188 [penwidth = 3]
 	051 -> 199
 	051 -> 397
-	052 -> 078
+	052 -> 078 [penwidth = 3]
 	053 -> 092
 	054 -> 399
 	054 -> 261
-	055 -> 168
+	055 -> 168 [penwidth = 3]
 	055 -> 313
-	055 -> 359
+	055 -> 358
 	056 -> 233
 	056 -> 163
 	057 -> 132 [color = "green" fontcolor = "green" label = "LK"]
 	057 -> 035 [color = "brown"]
-	058 -> 112
+	058 -> 112 [penwidth = 3]
 	059 -> 171
 	060 -> 183 [color = "green" fontcolor = "green" label = "LK"]
 	060 -> 044 [color = "brown"]
@@ -586,8 +582,8 @@ digraph {
 	063 -> 178
 	064 -> 142
 	065 -> 330
-	066 -> 325
-	067 -> 113
+	066 -> 325 [penwidth = 3]
+	067 -> 113 [penwidth = 3]
 	068 -> 059
 	069 -> 264
 	069 -> 143
@@ -603,7 +599,7 @@ digraph {
 	076 -> 206
 	077 -> 377
 	077 -> 092
-	078 -> 349
+	078 -> 349 [penwidth = 3]
 	079 -> 386
 	080 -> 293
 	081 -> 049 [color = "green" fontcolor = "green" label = "LK"]
@@ -614,15 +610,15 @@ digraph {
 	084 -> 146
 	084 -> 245 [color = "magenta" fontcolor = "magenta" label = ">3AR\n flee"]
 	085 -> 009
-	085 -> 359
-	086 -> 208
+	085 -> 358
+	086 -> 208 [penwidth = 3]
 	087 -> 090
 	088 -> 212
 	088 -> 107
 	089 -> 256
 	089 -> 281
 	089 -> 238
-	090 -> 210 [color = "green" fontcolor = "green" label = "LK"]
+	090 -> 210 [penwidth = 3 color = "green" fontcolor = "green" label = "LK"]
 	090 -> 348 [color = "brown" fontcolor = "brown" label = "-3ST"]
 	091 -> 220
 	092 -> 299
@@ -632,42 +628,42 @@ digraph {
 	093 -> 270
 	094 -> 136
 	094 -> 144
-	095 -> 173 [color = "blue" fontcolor = "blue" label = "dust of levitation"]
+	095 -> 173 [penwidth = 3 color = "blue" fontcolor = "blue" label = "dust of levitation"]
 	095 -> 368
 	096 -> 062
 	097 -> 328
 	097 -> 118
 	001 -> 098 [dir = back color = "green" fontcolor = "green" label = "LK"]
-	099 -> 209
+	099 -> 209 [penwidth = 3]
 	099 -> 349
 	100 -> 339
 	101 -> 025
-	102 -> 105
+	102 -> 105 [penwidth = 3]
 	103 -> 057
-	103 -> 360
+	103 -> 360 [penwidth = 3]
 	104 -> 311
 	105 -> 384
-	105 -> 394
+	105 -> 394 [penwidth = 3]
 	106 -> 288
 	107 -> 152
 	108 -> 226
-	109 -> 124
+	109 -> 124 [penwidth = 3]
 	109 -> 072
 	109 -> 309
 	110 -> 257
 	110 -> 031
 	111 -> 150
-	112 -> 103
+	112 -> 103 [penwidth = 3]
 	113 -> 324
-	113 -> 149
+	113 -> 149 [penwidth = 3]
 	114 -> 350 [color = "blue" fontcolor = "blue" label = "fire capsules"]
 	114 -> 123
 	115 -> 382
 	115 -> 277
 	116 -> 314
-	117 -> 232
+	117 -> 232 [penwidth = 3]
 	118 -> 174
-	119 -> 090
+	119 -> 090 [penwidth = 3]
 	119 -> 216
 	120 -> 094 [color = "blue" fontcolor = "blue" label = "rope of climbing"]
 	120 -> 380
@@ -677,7 +673,7 @@ digraph {
 	122 -> 362
 	123 -> 027
 	123 -> 234 [color = "magenta" fontcolor = "magenta" label = "flee"]
-	124 -> 180
+	124 -> 180 [penwidth = 3]
 	125 -> 337
 	125 -> 015
 	126 -> 365 [color = "blue" fontcolor = "blue" label = "nose filters"]
@@ -697,7 +693,7 @@ digraph {
 	135 -> 284
 	135 -> 151
 	136 -> 069
-	137 -> 055 [color = "blue" fontcolor = "blue" label = "glove of missile dexterity"]
+	137 -> 055 [penwidth = 3 color = "blue" fontcolor = "blue" label = "glove of missile dexterity"]
 	137 -> 010
 	138 -> 064 [color = "blue" fontcolor = "blue" label = "plant control"]
 	138 -> 159
@@ -719,7 +715,7 @@ digraph {
 	148 -> 097
 	148 -> 020
 	149 -> 130
-	149 -> 306
+	149 -> 306 [penwidth = 3]
 	150 -> 357
 	150 -> 171
 	151 -> 071
@@ -728,17 +724,17 @@ digraph {
 	152 -> 005
 	152 -> 249
 	153 -> 202
-	153 -> 355 [color = "magenta" fontcolor = "magenta" label = "escape"]
+	153 -> 355 [color = "magenta" fontcolor = "magenta" label = "flee"]
 	154 -> 231
 	155 -> 083 [color = "blue" fontcolor = "blue" label = "belladonna"]
 	155 -> 259
 	156 -> 109
 	157 -> 125
-	157 -> 337
+	157 -> 337 [penwidth = 3]
 	158 -> 047 [color = "green" fontcolor = "green" label = "LK"]
 	158 -> 353 [color = "brown"]
 	159 -> 142
-	160 -> 343 [color = "cyan3" fontcolor = "cyan3" label = "-1g"]
+	160 -> 343 [penwidth = 3 color = "cyan3" fontcolor = "cyan3" label = "-1g"]
 	160 -> 008
 	160 -> 239
 	161 -> 185
@@ -749,7 +745,7 @@ digraph {
 	165 -> 242
 	166 -> 390
 	167 -> 305
-	168 -> 117
+	168 -> 117 [penwidth = 3]
 	168 -> 358
 	169 -> 085
 	169 -> 358
@@ -759,18 +755,18 @@ digraph {
 	172 -> 089 [color = "cyan3" fontcolor = "cyan3" label = "-1g"]
 	172 -> 256
 	172 -> 281
-	173 -> 058 [color = "blue" fontcolor = "blue" label = "holy water"]
+	173 -> 058 [penwidth = 3 color = "blue" fontcolor = "blue" label = "holy water"]
 	173 -> 227
 	174 -> 323
 	175 -> 372
 	175 -> 106
 	176 -> 358
 	177 -> 289
-	177 -> 160
+	177 -> 160 [penwidth = 3]
 	178 -> 298
 	179 -> 115
 	180 -> 105
-	180 -> 361
+	180 -> 361 [penwidth = 3]
 	181 -> 162
 	182 -> 070 [color = "green" fontcolor = "green" label = "SK"]
 	182 -> 334 [color = "brown"]
@@ -783,7 +779,7 @@ digraph {
 	187 -> 203
 	187 -> 006
 	188 -> 359
-	188 -> 221
+	188 -> 221 [penwidth = 3]
 	189 -> 269
 	189 -> 293
 	190 -> 265
@@ -806,24 +802,24 @@ digraph {
 	199 -> 134 [color = "cyan3" fontcolor = "cyan3" label = "-1g"]
 	199 -> 283
 	199 -> 303
-	200 -> 351
+	200 -> 351 [penwidth = 3]
 	200 -> 112
 	201 -> 389
 	201 -> 088
 	202 -> 355
 	203 -> 373
-	204 -> 400 [color = "blue" fontcolor = "blue" label = "hammer head\n hammer handle"]
+	204 -> 400 [penwidth = 3 color = "blue" fontcolor = "blue" label = "hammer head\n hammer handle"]
 	204 -> 381
 	205 -> 092
 	206 -> 253
 	206 -> 187
 	207 -> 302
 	207 -> 109
-	208 -> 099
+	208 -> 099 [penwidth = 3]
 	208 -> 291
-	209 -> 028
+	209 -> 028 [penwidth = 3]
 	209 -> 349
-	210 -> 043
+	210 -> 043 [penwidth = 3]
 	210 -> 188
 	211 -> 293
 	212 -> 321
@@ -839,7 +835,7 @@ digraph {
 	219 -> 300
 	220 -> 275
 	220 -> 115
-	221 -> 378
+	221 -> 378 [penwidth = 3]
 	221 -> 199
 	222 -> 293
 	223 -> 150
@@ -853,13 +849,13 @@ digraph {
 	228 -> 255
 	229 -> 165 [color = "green" fontcolor = "green" label = "LK"]
 	229 -> 045 [color = "brown"]
-	230 -> 137
+	230 -> 137 [penwidth = 3]
 	230 -> 290
 	230 -> 358
 	231 -> 224
 	231 -> 332 [color = "magenta" fontcolor = "magenta" label = "flee"]
 	232 -> 263
-	232 -> 358
+	232 -> 358 [penwidth = 3]
 	233 -> 017
 	233 -> 238
 	234 -> 382
@@ -881,7 +877,7 @@ digraph {
 	245 -> 163
 	245 -> 233
 	245 -> 393
-	246 -> 204
+	246 -> 204 [penwidth = 3]
 	247 -> 003
 	247 -> 144
 	248 -> 389
@@ -905,7 +901,7 @@ digraph {
 	259 -> 244 [color = "green" fontcolor = "green" label = "LK"]
 	259 -> 019 [color = "brown"]
 	260 -> 178
-	261 -> 177
+	261 -> 177 [penwidth = 3]
 	262 -> 337
 	263 -> 126
 	263 -> 358
@@ -917,23 +913,23 @@ digraph {
 	266 -> 129 [color = "brown"]
 	267 -> 196
 	267 -> 025
-	268 -> 119
+	268 -> 119 [penwidth = 3]
 	269 -> 293
 	270 -> 229
 	270 -> 121
-	271 -> 297 [color = "cyan3" fontcolor = "cyan3" label = "-5g/\n -item"]
+	271 -> 297 [penwidth = 3 color = "cyan3" fontcolor = "cyan3" label = "-5g/\n -item"]
 	271 -> 067
 	272 -> 394
 	273 -> 296
 	274 -> 195
-	274 -> 109
+	274 -> 109 [penwidth = 3]
 	275 -> 179
 	275 -> 115
 	276 -> 062
 	277 -> 234 [color = "magenta" fontcolor = "magenta" label = "flee"]
 	277 -> 114
 	278 -> 319
-	279 -> 246
+	279 -> 246 [penwidth = 3]
 	280 -> 306
 	281 -> 163
 	281 -> 393
@@ -953,7 +949,7 @@ digraph {
 	290 -> 358 [color = "magenta" fontcolor = "magenta" label = "flee"]
 	291 -> 335
 	291 -> 145
-	292 -> 095
+	292 -> 095 [penwidth = 3]
 	292 -> 112
 	293 -> 215
 	293 -> 389
@@ -965,7 +961,7 @@ digraph {
 	295 -> 030
 	296 -> 398
 	296 -> 284
-	297 -> 067
+	297 -> 067 [penwidth = 3]
 	298 -> 140
 	299 -> 065
 	299 -> 075
@@ -978,10 +974,10 @@ digraph {
 	305 -> 374
 	305 -> 133
 	305 -> 360
-	306 -> 391
+	306 -> 391 [penwidth = 3]
 	306 -> 112
 	307 -> 192
-	307 -> 271
+	307 -> 271 [penwidth = 3]
 	308 -> 148
 	309 -> 077 [color = "green" fontcolor = "green" label = "LKx2"]
 	309 -> 197 [color = "brown"]
@@ -1011,7 +1007,7 @@ digraph {
 	324 -> 250
 	324 -> 161
 	324 -> 149
-	325 -> 268 [color = "blue" fontcolor = "blue" label = "garlic buds"]
+	325 -> 268 [penwidth = 3 color = "blue" fontcolor = "blue" label = "garlic buds"]
 	325 -> 079
 	326 -> 145
 	327 -> 351
@@ -1029,7 +1025,7 @@ digraph {
 	335 -> 326
 	336 -> 021 [color = "blue" fontcolor = "blue" label = "anti-poison"]
 	336 -> 108
-	337 -> 230
+	337 -> 230 [penwidth = 3]
 	337 -> 358
 	338 -> 085
 	338 -> 358
@@ -1041,7 +1037,7 @@ digraph {
 	341 -> 149
 	342 -> 158 [color = "blue" fontcolor = "blue" label = "headband of concentration"]
 	342 -> 011
-	343 -> 008
+	343 -> 008 [penwidth = 3]
 	343 -> 239
 	344 -> 036
 	345 -> 293
@@ -1051,9 +1047,9 @@ digraph {
 	348 -> 043
 	348 -> 188
 	349 -> 291
-	349 -> 102
+	349 -> 102 [penwidth = 3]
 	350 -> 329
-	351 -> 292
+	351 -> 292 [penwidth = 3]
 	351 -> 112
 	352 -> 207
 	352 -> 156 [color = "magenta" fontcolor = "magenta" label = "flee"]
@@ -1065,14 +1061,14 @@ digraph {
 	356 -> 395
 	356 -> 231
 	357 -> 306
-	358 -> 040 [color = "green" fontcolor = "green" label = "LK"]
+	358 -> 040 [penwidth = 3 color = "green" fontcolor = "green" label = "LK"]
 	358 -> 218 [color = "brown"]
 	359 -> 172
 	359 -> 281
-	360 -> 279
+	360 -> 279 [penwidth = 3]
 	360 -> 104
 	361 -> 396
-	361 -> 086
+	361 -> 086 [penwidth = 3]
 	362 -> 281
 	362 -> 238
 	363 -> 068
@@ -1101,7 +1097,7 @@ digraph {
 	376 -> 310 [color = "brown"]
 	377 -> 205
 	377 -> 092 [color = "magenta" fontcolor = "magenta" label = "flee"]
-	378 -> 307
+	378 -> 307 [penwidth = 3]
 	378 -> 067
 	379 -> 073
 	379 -> 112
@@ -1123,11 +1119,11 @@ digraph {
 	389 -> 088
 	390 -> 190
 	390 -> 280
-	391 -> 200 [color = "blue" fontcolor = "blue" label = "silver key"]
+	391 -> 200 [penwidth = 3 color = "blue" fontcolor = "blue" label = "silver key"]
 	391 -> 379
-	392 -> 157
+	392 -> 157 [penwidth = 3]
 	393 -> 369
-	394 -> 066
+	394 -> 066 [penwidth = 3]
 	394 -> 186
 	395 -> 154 [color = "green" fontcolor = "green" label = "LK"]
 	395 -> 370 [color = "brown"]
