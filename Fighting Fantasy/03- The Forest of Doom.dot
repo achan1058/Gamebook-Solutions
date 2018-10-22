@@ -14,20 +14,19 @@ digraph {
 		node [fontcolor = "purple" shape = "rect" margin = 0.1]
 		shop261 [label = "\261\n Yaztromo\n \
 			3g: healing potion\l \
-			3g: plant control\l \
+			2g: plant control\l \
 			3g: stillness potion\l \
 			2g: insect control\l \
 			2g: anti-poison\l \
 			3g: holy water\l \
 			3g: ring of light\l \
-			2g: boots of leaping\l \
-			3g: rope of climbing\l \
-			3g: net of entanglement\l \
-			3g: armband of strength\l \
-			2g: glove of missile dexterity\l \
-			2g: rod of water-finding\l \
+			2g: leaping boots \l \
+			3g: rope\l \
+			3g: net\l \
+			3g: armband\l \
+			2g: missile glove\l \
 			2g: garlic buds\l \
-			3g: headband of concentration\l \
+			3g: headband\l \
 			3g: fire capsules\l \
 			3g: nose filters\l"]
 	}
@@ -58,7 +57,8 @@ digraph {
 		-: Negative Status\l \
 		+: Positive Status\l \
 		^: Damage can be reduced by items\l \
-		@: Take 2 items\l\l \
+		shield+: -1EDMG on 4~6\l \
+		+1AT@: Apply to next 2 combat\l\l \
 		Starts with:\l \
 		Initial Skill: 1d6+6\l \
 		Initial Stamina: 2d6+12\l \
@@ -72,7 +72,8 @@ digraph {
 		30 gold\l \
 		backpack\l\l \
 		Comments:\l \
-		shield+: -1EDMG on 4~6\l \
+		Buy missile glove, armband, garlic buds, holy water\l \
+		Skip strength potion since there's no more combat or luck test after.\l \
 		Gold for info is not strictly necessary, but we start with enough gold to get them.\l \
 		When you are asked to pay gold or item, pay gold.\l \
 		Skip strength potion since there's no more combat or luck test after.\l \
@@ -384,24 +385,24 @@ digraph {
 		068 [label = "\N\n +3ST"]
 		070 [label = "\N\n +2SK"]
 		091 [shape = "rect" fontcolor = "blue" label = "\N\n eye of amber\n +1LK"]
-		106 [shape = "rect" fontcolor = "blue" label = "\N\n gold ring: 15g\n +2LK"]
+		106 [shape = "rect" fontcolor = "blue" label = "\N\n loot: 15g\n +2LK"]
 		166 [label = "\N\n +2LK"]
-		174 [shape = "rect" fontcolor = "blue" label = "\N\n gold ring: 10g\n +1LK"]
-		179 [label = "\N\n +1AT"]
+		174 [shape = "rect" fontcolor = "blue" label = "\N\n loot: 10g\n +1LK"]
+		179 [shape = "rect" fontcolor = "blue" label = "\N\n helmet\n +1AT"]
 		184 [label = "\N\n +4ST"]
-		219 [shape = "rect" fontcolor = "blue" label = "\N\n silver dart: 5g\n +1LK"]
+		219 [shape = "rect" fontcolor = "blue" label = "\N\n loot: 5g\n +1LK"]
 		232 [shape = "rect" fontcolor = "blue" label = "\N\n hammer handle\n +1LK"]
 		235 [label = "\N\n +1LK"]
 		248 [shape = "rect" fontcolor = "blue" label = "\N\n shield+\n +1LK"]
 		257 [label = "\N\n +1LK\n +4ST"]
-		262 [label = "\N\n +1AT"]
+		262 [label = "\N\n +1AT@"]
 		269 [label = "\N\n +4ST"]
 		283 [label = "\N\n +4ST"]
 		302 [label = "\N\n +1AT"]
 		308 [color = "greenyellow:pink" label = "\N\n SK&harr;LK"]
 		341 [shape = "rect" fontcolor = "blue" label = "\N\n 5 gold\n strength potion\n +1LK"]
 		374 [label = "\N\n +1AT"]
-		383 [shape = "rect" fontcolor = "blue" label = "\N\n whistle\n +2ST"]
+		383 [shape = "rect" fontcolor = "blue" label = "\N\n 2 gold\n +2ST"]
 		387 [shape = "rect" fontcolor = "blue" label = "\N\n 1 gold\n +1LK"]
 		388 [label = "\N\n +1LK?"]
 		389 [shape = "rect" fontcolor = "blue" label = "\N\n 8 gold\n +1LK"]
@@ -436,10 +437,10 @@ digraph {
 		222 [label = "\N\n -1d6ST"]
 		237 [label = "\N\n -2LK"]
 		250 [label = "\N\n -2ST"]
-		259 [label = "\N\n -3~5ST"]
+		259 [label = "\N\n -3ST"]
 		275 [label = "\N\n -1ST"]
 		277 [label = "\N\n -1ST"]
-		278 [label = "\N\n -1LK\n -2~4ST"]
+		278 [label = "\N\n -1LK\n -2ST"]
 		328 [shape = "rect" fontcolor = "crimson" label = "\N\n -1 food\n -4ST"]
 		345 [label = "\N\n -4ST"]
 		372 [label = "\N\n -?ST"]
@@ -458,27 +459,26 @@ digraph {
 		078 [label = "\N\n dust of levitation"]
 		101 [label = "\N\n 5 gold\n brass bell"]
 		111 [label = "\N\n 5 gold"]
-		116 [label = "\N\n gold collar: 15g"]
+		116 [label = "\N\n loot: 15g"]
 		145 [label = "\N\n -all food" fontcolor = "crimson"]
-		146 [label = "\N\n boulderbeast"]
 		176 [label = "\N\n hammer handle"]
 		178 [label = "\N\n -1 food" fontcolor = "crimson"]
 		194 [label = "\N\n belladonna"]
-		202 [label = "\N\n 2 gold studs: 2x5g"]
+		202 [label = "\N\n 2 loot: 10g"]
 		205 [label = "\N\n 6 gold"]
 		217 [label = "\N\n 4 gold"]
 		218 [label = "\N\n -5 gold/\n -1 item" fontcolor = "crimson"]
 		223 [label = "\N\n 5 gold"]
-		242 [label = "\N\n gold ignot?: 28g/\n -1 item?"]
-		273 [label = "\N\n gold medallion: 9g"]
+		242 [label = "\N\n loot?: 28g/\n -1 item?"]
+		273 [label = "\N\n loot: 9g"]
 		279 [label = "\N\n -5 items/gold" fontcolor = "crimson"]
 		287 [label = "\N\n 5 gold\n brass bell"]
 		297 [label = "\N\n info" tooltip = "goblin in crypt north in forest"]
 		299 [label = "\N\n -all food" fontcolor = "crimson"]
-		301 [label = "\N\n 3 gold\n brass flute"]
+		301 [label = "\N\n 3 gold\n flute"]
 		311 [label = "\N\n 2 gold"]
 		312 [label = "\N\n 25 gold\n hammer head"]
-		322 [label = "\N\n gold medallion: 5g"]
+		322 [label = "\N\n loot: 5g"]
 		343 [label = "\N\n info" tooltip = "go north"]
 		353 [label = "\N\n -all food" fontcolor = "crimson"]
 		354 [label = "\N\n dust of levitation"]
@@ -530,7 +530,7 @@ digraph {
 	026 -> 091
 	026 -> 220
 	027 -> 329
-	028 -> 052 [penwidth = 3 color = "blue" fontcolor = "blue" label = "armband of strength"]
+	028 -> 052 [penwidth = 3 color = "blue" fontcolor = "blue" label = "armband"]
 	028 -> 266
 	029 -> 383
 	029 -> 254 [color = "magenta" fontcolor = "magenta" label = "flee"]
@@ -665,7 +665,7 @@ digraph {
 	118 -> 174
 	119 -> 090 [penwidth = 3]
 	119 -> 216
-	120 -> 094 [color = "blue" fontcolor = "blue" label = "rope of climbing"]
+	120 -> 094 [color = "blue" fontcolor = "blue" label = "rope"]
 	120 -> 380
 	121 -> 061
 	121 -> 081
@@ -686,14 +686,13 @@ digraph {
 	131 -> 325
 	132 -> 258 [color = "blue" fontcolor = "blue" label = "flute"]
 	132 -> 167
-	133 -> 374
 	133 -> 360
 	134 -> 283
 	134 -> 303
 	135 -> 284
 	135 -> 151
 	136 -> 069
-	137 -> 055 [penwidth = 3 color = "blue" fontcolor = "blue" label = "glove of missile dexterity"]
+	137 -> 055 [penwidth = 3 color = "blue" fontcolor = "blue" label = "missile glove"]
 	137 -> 010
 	138 -> 064 [color = "blue" fontcolor = "blue" label = "plant control"]
 	138 -> 159
@@ -793,7 +792,7 @@ digraph {
 	195 -> 352
 	195 -> 156
 	196 -> 376
-	196 -> 039 [color = "cyan3" fontcolor = "cyan3" label = "net of entanglement"]
+	196 -> 039 [color = "cyan3" fontcolor = "cyan3" label = "net"]
 	196 -> 025
 	197 -> 024 [color = "blue" fontcolor = "blue" label = "anti-poison"]
 	197 -> 053
@@ -845,7 +844,7 @@ digraph {
 	226 -> 029
 	226 -> 254
 	227 -> 312 [color = "magenta" fontcolor = "magenta" label = "win"]
-	227 -> 002 [color = "magenta" fontcolor = "magenta" label = "lose/\n lose 4 AR"]
+	227 -> 002 [color = "magenta" fontcolor = "magenta" label = "lose 4 AR"]
 	228 -> 255
 	229 -> 165 [color = "green" fontcolor = "green" label = "LK"]
 	229 -> 045 [color = "brown"]
@@ -899,7 +898,7 @@ digraph {
 	257 -> 031
 	258 -> 305
 	259 -> 244 [color = "green" fontcolor = "green" label = "LK"]
-	259 -> 019 [color = "brown"]
+	259 -> 019 [color = "brown" fontcolor = "brown" label = "-2ST"]
 	260 -> 178
 	261 -> 177 [penwidth = 3]
 	262 -> 337
@@ -928,7 +927,8 @@ digraph {
 	276 -> 062
 	277 -> 234 [color = "magenta" fontcolor = "magenta" label = "flee"]
 	277 -> 114
-	278 -> 319
+	278 -> 319 [color = "green:brown" fontcolor = "green" label = "LK"]
+	278 -> 319 [color = "invis" fontcolor = "brown" label = "-2ST"]
 	279 -> 246 [penwidth = 3]
 	280 -> 306
 	281 -> 163
@@ -1035,7 +1035,7 @@ digraph {
 	340 -> 347
 	340 -> 059
 	341 -> 149
-	342 -> 158 [color = "blue" fontcolor = "blue" label = "headband of concentration"]
+	342 -> 158 [color = "blue" fontcolor = "blue" label = "headband"]
 	342 -> 011
 	343 -> 008 [penwidth = 3]
 	343 -> 239
@@ -1089,7 +1089,7 @@ digraph {
 	372 -> 288 [color = "brown"]
 	373 -> 308
 	373 -> 148
-	374 -> 133
+	374 -> 133 [dir = both]
 	374 -> 360
 	375 -> 150
 	375 -> 236
@@ -1133,4 +1133,308 @@ digraph {
 	397 -> 393
 	398 -> 320
 	398 -> 193
+	
+	002 [fontsize=25]
+	003 [fontsize=25]
+	004 [fontsize=25]
+	005 [fontsize=25]
+	007 [fontsize=25]
+	012 [fontsize=25]
+	013 [fontsize=25]
+	014 [fontsize=25]
+	016 [fontsize=25]
+	017 [fontsize=25]
+	018 [fontsize=25]
+	019 [fontsize=25]
+	023 [fontsize=25]
+	024 [fontsize=25]
+	025 [fontsize=25]
+	028 [fontsize=25]
+	030 [fontsize=25]
+	031 [fontsize=25]
+	032 [fontsize=25]
+	033 [fontsize=25]
+	034 [fontsize=25]
+	035 [fontsize=25]
+	039 [fontsize=25]
+	043 [fontsize=25]
+	044 [fontsize=25]
+	045 [fontsize=25]
+	046 [fontsize=25]
+	048 [fontsize=25]
+	049 [fontsize=25]
+	050 [fontsize=25]
+	051 [fontsize=25]
+	052 [fontsize=25]
+	053 [fontsize=25]
+	056 [fontsize=25]
+	057 [fontsize=25]
+	058 [fontsize=25]
+	059 [fontsize=25]
+	060 [fontsize=25]
+	061 [fontsize=25]
+	062 [fontsize=25]
+	063 [fontsize=25]
+	064 [fontsize=25]
+	065 [fontsize=25]
+	066 [fontsize=25]
+	067 [fontsize=25]
+	068 [fontsize=25]
+	069 [fontsize=25]
+	070 [fontsize=25]
+	071 [fontsize=25]
+	072 [fontsize=25]
+	073 [fontsize=25]
+	074 [fontsize=25]
+	075 [fontsize=25]
+	077 [fontsize=25]
+	078 [fontsize=25]
+	079 [fontsize=25]
+	080 [fontsize=25]
+	081 [fontsize=25]
+	082 [fontsize=25]
+	083 [fontsize=25]
+	084 [fontsize=25]
+	086 [fontsize=25]
+	087 [fontsize=25]
+	088 [fontsize=25]
+	089 [fontsize=25]
+	090 [fontsize=25]
+	092 [fontsize=25]
+	093 [fontsize=25]
+	094 [fontsize=25]
+	095 [fontsize=25]
+	096 [fontsize=25]
+	098 [fontsize=25]
+	099 [fontsize=25]
+	100 [fontsize=25]
+	101 [fontsize=25]
+	102 [fontsize=25]
+	103 [fontsize=25]
+	104 [fontsize=25]
+	105 [fontsize=25]
+	106 [fontsize=25]
+	107 [fontsize=25]
+	109 [fontsize=25]
+	110 [fontsize=25]
+	111 [fontsize=25]
+	112 [fontsize=25]
+	113 [fontsize=25]
+	116 [fontsize=25]
+	119 [fontsize=25]
+	120 [fontsize=25]
+	121 [fontsize=25]
+	122 [fontsize=25]
+	124 [fontsize=25]
+	127 [fontsize=25]
+	128 [fontsize=25]
+	129 [fontsize=25]
+	130 [fontsize=25]
+	131 [fontsize=25]
+	132 [fontsize=25]
+	133 [fontsize=25]
+	134 [fontsize=25]
+	135 [fontsize=25]
+	136 [fontsize=25]
+	138 [fontsize=25]
+	139 [fontsize=25]
+	140 [fontsize=25]
+	141 [fontsize=25]
+	142 [fontsize=25]
+	143 [fontsize=25]
+	144 [fontsize=25]
+	145 [fontsize=25]
+	146 [fontsize=25]
+	149 [fontsize=25]
+	150 [fontsize=25]
+	151 [fontsize=25]
+	152 [fontsize=25]
+	153 [fontsize=25]
+	154 [fontsize=25]
+	155 [fontsize=25]
+	159 [fontsize=25]
+	161 [fontsize=25]
+	162 [fontsize=25]
+	163 [fontsize=25]
+	164 [fontsize=25]
+	165 [fontsize=25]
+	166 [fontsize=25]
+	167 [fontsize=25]
+	170 [fontsize=25]
+	171 [fontsize=25]
+	172 [fontsize=25]
+	173 [fontsize=25]
+	175 [fontsize=25]
+	178 [fontsize=25]
+	180 [fontsize=25]
+	181 [fontsize=25]
+	182 [fontsize=25]
+	183 [fontsize=25]
+	184 [fontsize=25]
+	185 [fontsize=25]
+	186 [fontsize=25]
+	188 [fontsize=25]
+	189 [fontsize=25]
+	190 [fontsize=25]
+	191 [fontsize=25]
+	192 [fontsize=25]
+	193 [fontsize=25]
+	194 [fontsize=25]
+	196 [fontsize=25]
+	197 [fontsize=25]
+	198 [fontsize=25]
+	199 [fontsize=25]
+	200 [fontsize=25]
+	201 [fontsize=25]
+	202 [fontsize=25]
+	204 [fontsize=25]
+	205 [fontsize=25]
+	207 [fontsize=25]
+	208 [fontsize=25]
+	209 [fontsize=25]
+	210 [fontsize=25]
+	211 [fontsize=25]
+	212 [fontsize=25]
+	213 [fontsize=25]
+	214 [fontsize=25]
+	215 [fontsize=25]
+	216 [fontsize=25]
+	221 [fontsize=25]
+	222 [fontsize=25]
+	223 [fontsize=25]
+	224 [fontsize=25]
+	225 [fontsize=25]
+	227 [fontsize=25]
+	228 [fontsize=25]
+	229 [fontsize=25]
+	231 [fontsize=25]
+	233 [fontsize=25]
+	235 [fontsize=25]
+	236 [fontsize=25]
+	237 [fontsize=25]
+	238 [fontsize=25]
+	242 [fontsize=25]
+	243 [fontsize=25]
+	244 [fontsize=25]
+	245 [fontsize=25]
+	246 [fontsize=25]
+	247 [fontsize=25]
+	248 [fontsize=25]
+	249 [fontsize=25]
+	250 [fontsize=25]
+	251 [fontsize=25]
+	252 [fontsize=25]
+	255 [fontsize=25]
+	256 [fontsize=25]
+	257 [fontsize=25]
+	258 [fontsize=25]
+	259 [fontsize=25]
+	260 [fontsize=25]
+	264 [fontsize=25]
+	265 [fontsize=25]
+	266 [fontsize=25]
+	267 [fontsize=25]
+	268 [fontsize=25]
+	269 [fontsize=25]
+	270 [fontsize=25]
+	271 [fontsize=25]
+	272 [fontsize=25]
+	273 [fontsize=25]
+	276 [fontsize=25]
+	278 [fontsize=25]
+	279 [fontsize=25]
+	280 [fontsize=25]
+	281 [fontsize=25]
+	282 [fontsize=25]
+	283 [fontsize=25]
+	284 [fontsize=25]
+	285 [fontsize=25]
+	287 [fontsize=25]
+	288 [fontsize=25]
+	291 [fontsize=25]
+	292 [fontsize=25]
+	293 [fontsize=25]
+	294 [fontsize=25]
+	295 [fontsize=25]
+	296 [fontsize=25]
+	297 [fontsize=25]
+	298 [fontsize=25]
+	299 [fontsize=25]
+	302 [fontsize=25]
+	303 [fontsize=25]
+	304 [fontsize=25]
+	305 [fontsize=25]
+	306 [fontsize=25]
+	307 [fontsize=25]
+	309 [fontsize=25]
+	310 [fontsize=25]
+	311 [fontsize=25]
+	312 [fontsize=25]
+	314 [fontsize=25]
+	316 [fontsize=25]
+	318 [fontsize=25]
+	319 [fontsize=25]
+	320 [fontsize=25]
+	321 [fontsize=25]
+	322 [fontsize=25]
+	323 [fontsize=25]
+	324 [fontsize=25]
+	325 [fontsize=25]
+	326 [fontsize=25]
+	327 [fontsize=25]
+	330 [fontsize=25]
+	331 [fontsize=25]
+	332 [fontsize=25]
+	333 [fontsize=25]
+	334 [fontsize=25]
+	335 [fontsize=25]
+	339 [fontsize=25]
+	340 [fontsize=25]
+	341 [fontsize=25]
+	345 [fontsize=25]
+	346 [fontsize=25]
+	347 [fontsize=25]
+	348 [fontsize=25]
+	349 [fontsize=25]
+	351 [fontsize=25]
+	352 [fontsize=25]
+	354 [fontsize=25]
+	355 [fontsize=25]
+	356 [fontsize=25]
+	357 [fontsize=25]
+	359 [fontsize=25]
+	360 [fontsize=25]
+	361 [fontsize=25]
+	362 [fontsize=25]
+	363 [fontsize=25]
+	364 [fontsize=25]
+	366 [fontsize=25]
+	367 [fontsize=25]
+	368 [fontsize=25]
+	369 [fontsize=25]
+	370 [fontsize=25]
+	371 [fontsize=25]
+	372 [fontsize=25]
+	374 [fontsize=25]
+	375 [fontsize=25]
+	376 [fontsize=25]
+	377 [fontsize=25]
+	378 [fontsize=25]
+	379 [fontsize=25]
+	380 [fontsize=25]
+	381 [fontsize=25]
+	384 [fontsize=25]
+	386 [fontsize=25]
+	387 [fontsize=25]
+	388 [fontsize=25]
+	389 [fontsize=25]
+	390 [fontsize=25]
+	391 [fontsize=25]
+	393 [fontsize=25]
+	394 [fontsize=25]
+	395 [fontsize=25]
+	396 [fontsize=25]
+	397 [fontsize=25]
+	398 [fontsize=25]
+	400 [fontsize=25]
 }
