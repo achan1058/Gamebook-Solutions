@@ -93,22 +93,10 @@
     <CustomBuild Include="A Chooseable-Path Adventure\To Be or Not To Be.dot">
       <Filter>Temp</Filter>
     </CustomBuild>
-    <CustomBuild Include="Fighting Fantasy\Deathmoor.dot">
-      <Filter>Temp</Filter>
-    </CustomBuild>
-    <CustomBuild Include="Fighting Fantasy\Knights of Doom.dot">
-      <Filter>Temp</Filter>
-    </CustomBuild>
-    <CustomBuild Include="Fighting Fantasy\Night Dragon.dot">
-      <Filter>Temp</Filter>
-    </CustomBuild>
     <CustomBuild Include="Give Yourself Goosebumps\16 - Secret Agent Grandma.dot">
       <Filter>Temp</Filter>
     </CustomBuild>
     <CustomBuild Include="Fighting Fantasy\21 - Trial of Champions.dot">
-      <Filter>Temp</Filter>
-    </CustomBuild>
-    <CustomBuild Include="Fighting Fantasy\03- The Forest of Doom.dot">
       <Filter>Temp</Filter>
     </CustomBuild>
     <CustomBuild Include="Fighting Fantasy\old\FF12.dot">
@@ -126,6 +114,24 @@
     <CustomBuild Include="Fighting Fantasy\old\Stormslayer.dot">
       <Filter>backup</Filter>
     </CustomBuild>
+    <CustomBuild Include="Fighting Fantasy\Island of the Lizard King.dot">
+      <Filter>Fighting Fantasy</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Fighting Fantasy\old\Night Dragon.dot">
+      <Filter>backup</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Fighting Fantasy\old\03- The Forest of Doom.dot">
+      <Filter>backup</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Fighting Fantasy\old\21 - Trial of Champions.dot">
+      <Filter>backup</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Fighting Fantasy\old\Blood of the Zombie.dot">
+      <Filter>backup</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Fighting Fantasy\old\Deathmoor.dot">
+      <Filter>backup</Filter>
+    </CustomBuild>
   </ItemGroup>
   <ItemGroup>
     <Text Include="vertex.txt">
@@ -137,9 +143,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include=".gitignore" />
-    <None Include="Fighting Fantasy\old\Blood of the Zombie.dot">
-      <Filter>backup</Filter>
-    </None>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Gamebook.cpp">
