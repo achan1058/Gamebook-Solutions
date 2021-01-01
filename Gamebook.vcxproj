@@ -204,6 +204,7 @@
     </CustomBuild>
     <CustomBuild Include="Fighting Fantasy\Island of the Lizard King.dot">
       <FileType>Document</FileType>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(FullPath).svg</Outputs>
     </CustomBuild>
     <CustomBuild Include="Fighting Fantasy\old\03- The Forest of Doom.dot">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
