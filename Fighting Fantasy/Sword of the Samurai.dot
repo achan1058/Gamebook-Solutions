@@ -23,7 +23,7 @@ digraph {
 		Red Fill: Death\l \
 		Blue Text: Key Items/Events\l \
 		Red Text: Lost Items\l \
-		Purple Text: Shops\l \
+		Grey Text: Allies\l \
 		Blue Line: Forced Items/Events\l \
 		Light Blue Text/Line: Optional Items/Events\l \
 		Purple Line: Dice Related Events\l \
@@ -189,11 +189,6 @@ digraph {
 			082
 		}
 		
-		subgraph cluster_UNKNOWN4 {
-			label = "Unknown 4"
-			090 [style = "filled" color = "pink" label = "\N\n -2ST"]
-		}
-		
 		subgraph cluster_SAMURAI_WARRIOR {
 			label = "Samurai Warrior\n 8/9"
 			092 [style = "filled" color = "pink" label = "\N\n -3ST?"]
@@ -214,19 +209,9 @@ digraph {
 			097 [label = "\N\n +1EDG"]
 		}
 		
-		subgraph cluster_UNKNOWN5 {
-			label = "Unknown 5"
-			102 [style = "filled" color = "pink" label = "\N\n -1LK"]
-		}
-		
 		subgraph cluster_SAMURAI {
 			label = "Samurai\n 6/7 8/8 7/6"
 			116 [shape = "rect" fontcolor = "darkorange" label = "\N\n Karumijutsu -1EAT"]
-		}
-		
-		subgraph cluster_UNKNOWN6 {
-			label = "Unknown 6"
-			118 [style = "filled" color = "pink" label = "\N\n -1SK"]
 		}
 		
 		subgraph cluster_SAMURAI2 {
@@ -292,10 +277,6 @@ digraph {
 		subgraph cluster_SABRE_TOOTHED_TIGER {
 			label = "Sabre-Toothed Tiger\n 10/12"
 			214
-		}
-		
-		subgraph cluster_SABRE_TOOTHED_TIGER2 {
-			label = "Sabre-Toothed Tiger\n 10/12"
 			224 [shape = "rect" fontcolor = "darkorange" label = "\N\n 3 Kyujutsu"]
 		}
 		
@@ -356,6 +337,9 @@ digraph {
 		
 		subgraph cluster_DAI_ONI {
 			label = "Dai-Oni\n 10/10"
+			090 [style = "filled" color = "pink" label = "\N\n -2ST"]
+			102 [style = "filled" color = "pink" label = "\N\n -1LK"]
+			118 [style = "filled" color = "pink" label = "\N\n -1SK"]
 			292
 		}
 		
@@ -441,7 +425,7 @@ digraph {
 		
 		subgraph cluster_DAI_ONI2 {
 			label = "Dai-Oni\n 10/10"
-			394
+			394 [shape = "rect" fontcolor = "grey" label = "\N\n -ki-rin"]
 		}
 		
 		subgraph cluster_BLACK_ELK {
@@ -535,7 +519,7 @@ digraph {
 		049 [label = "\N\n -7ST"]
 		053 [label = "\N\n -8ST"]
 		060 [label = "\N\n -2ST"]
-		063 [shape = "rect" fontcolor = "blue" label = "\N\n -Singing Death\n -2SK\n -4ST\n -2LK"]
+		063 [label = "\N\n -2SK\n -4ST\n -2LK"]
 		064 [label = "\N\n -1HR"]
 		067 [label = "\N\n -4ST"]
 		077 [label = "\N\n -1HR"]
@@ -548,7 +532,7 @@ digraph {
 		156 [label = "\N\n -4ST"]
 		160 [label = "\N\n -2ST"]
 		166 [label = "\N\n -4ST"]
-		210 [shape = "rect" fontcolor = "blue" label = "\N\n befuddlement helmet\n -SK"]
+		210 [shape = "rect" fontcolor = "blue" label = "\N\n helmet\n -1SK"]
 		218 [label = "\N\n -1HR"]
 		221 [label = "\N\n -2HR"]
 		244 [label = "\N\n -1HR"]
@@ -579,25 +563,19 @@ digraph {
 	subgraph Key_Item {
 		node [fontcolor = "blue" shape = "rect"]
 		kky
-		012 [label = "\N\n Tatsu"]
 		062 [label = "\N\n 15 gold"]
 		088 [label = "\N\n katana"]
-		096 [label = "\N\n Eleanor"]
+		112 [label = "\N\n forest"]
 		164 [label = "\N\n -2 arrows"]
 		182 [label = "\N\n war-fan"]
-		186 [label = "\N\n Golden Company"]
 		192 [label = "\N\n horn"]
 		206 [label = "\N\n harmony"]
 		216 [label = "\N\n -1 willow-leaf\n -1 armor-piercer\n -1 bowel-raker"]
 		226 [label = "\N\n -1 willow-leaf"]
-		234 [label = "\N\n Tiger"]
 		238 [label = "\N\n 6 gold"]
 		251 [label = "\N\n brass key\n pagoda map"]
-		290 [label = "\N\n Serpent rod"]
 		313 [label = "\N\n -armor*"]
-		340 [label = "\N\n Ki-Rin"]
-		348 [label = "\N\n Phoenix"]
-		361 [label = "\N\n Phoenix ruby"]
+		361 [label = "\N\n phoenix ruby"]
 		384 [label = "\N\n 15 gold"]
 		391 [label = "\N\n antler\n 2 food"]
 		392 [label = "\N\n 1 sword, no bow, no arrow"]
@@ -608,12 +586,47 @@ digraph {
 	
 	subgraph Key_Word {
 		node [fontcolor = "grey" shape = "rect"]
+		012 [label = "\N\n tatsu"]
+		022 [label = "\N\n -Eleanor"]
+		096 [label = "\N\n Eleanor"]
+		146 [label = "\N\n -ki-rin"]
+		162 [label = "\N\n -Eleanor"]
+		172 [label = "\N\n -tiger"]
+		184 [label = "\N\n -golden company"]
+		186 [label = "\N\n golden company"]
+		194 [label = "\N\n -phoenix"]
+		198 [label = "\N\n -golden company"]
+		208 [label = "\N\n -tatsu"]
+		228 [label = "\N\n -serpent"]
+		234 [label = "\N\n tiger"]
+		278 [label = "\N\n -ki-rin"]
+		290 [label = "\N\n serpent"]
+		294 [label = "\N\n -tatsu"]
+		304 [label = "\N\n -golden company"]
+		320 [label = "\N\n -phoenix"]
+		330 [label = "\N\n -Eleanor"]
+		340 [label = "\N\n ki-rin"]
+		348 [label = "\N\n phoenix"]
+		382 [label = "\N\n -ki-rin"]
 		wwd
 		wrd1 [label = "\N\n text"]
 		wrd2 [label = "\N\n text"]
 		wrd3 [label = "\N\n text"]
 	}
 	
+	subgraph Hub {
+		node [style = "filled" color = "black" fontcolor = "white" label = "To\n008"];
+		008 [label = "008"];
+		008.030
+		008.068
+		008.066
+		008.078
+		008.098
+		008.110
+		008.126
+		008.138
+	}
+
 	subgraph Shop {
 		node [fontcolor = "purple" shape = "rect"]
 		shp
@@ -669,7 +682,7 @@ digraph {
 	010 -> 034
 	010 -> 024
 	011 -> 015
-	012 -> 008
+	012 -> 008.030
 	013 -> 031 [color = "magenta" fontcolor = "magenta" label = "EST&le;4"]
 	014 -> 046 [color = "darkorange" fontcolor = "darkorange" label = "Kyujutsu"]
 	014 -> 064
@@ -686,7 +699,7 @@ digraph {
 	020 -> 282 [color = "green" fontcolor = "green" label = "LK"]
 	020 -> 296 [color = "brown"]
 	021 -> 049
-	022 -> 394 [color = "blue" fontcolor = "blue" label = "-Ki-Rin"]
+	022 -> 394 [color = "blue"]
 	022 -> 292
 	023 -> 195
 	024 -> 314 [color = "blue" fontcolor = "blue" label = "Tsietsin's men"]
@@ -698,7 +711,7 @@ digraph {
 	027 -> 400
 	028 -> 316
 	029 -> 043
-	030 -> 144 [color = "blue" fontcolor = "blue" label = "forest of shadow tatsu"]
+	030 -> 144 [color = "blue" fontcolor = "blue" label = "forest"]
 	030 -> 156
 	031 -> 041
 	032 -> 058 [color = "magenta" fontcolor = "magenta" label = "win AR"]
@@ -706,7 +719,7 @@ digraph {
 	034 -> 056
 	035 -> 173
 	035 -> 183
-	036 -> 008
+	036 -> 008.078
 	037 -> 089
 	037 -> 101
 	038 -> 050
@@ -724,7 +737,7 @@ digraph {
 	047 -> 199
 	048 -> 086 [color = "blue" fontcolor = "blue" label = "horn"]
 	048 -> 096 [color = "blue" fontcolor = "blue" label = "knowledge potion"]
-	048 -> 114 [color = "blue" fontcolor = "blue" label = "befuddlement helmet"]
+	048 -> 114 [color = "blue" fontcolor = "blue" label = "helmet"]
 	048 -> 130
 	049 -> 395
 	050 -> 062
@@ -743,7 +756,7 @@ digraph {
 	059 -> 135
 	059 -> 147 [color = "darkorange" fontcolor = "darkorange" label = "Karumijutsu"]
 	060 -> 070
-	060 -> 008
+	060 -> 008.126
 	062 -> 182
 	062 -> 196
 	062 -> 210
@@ -758,7 +771,7 @@ digraph {
 	068 -> 214 [color = "cyan3" fontcolor = "cyan3" label = "phoenix ruby"]
 	068 -> 224 [color = "darkorange" fontcolor = "darkorange" label = "Kyujutsu"]
 	068 -> 234 [color = "cyan3" fontcolor = "cyan3" label = "horn"]
-	068 -> 008
+	068 -> 008.068
 	069 -> 025
 	071 -> 215
 	071 -> 203
@@ -790,25 +803,23 @@ digraph {
 	085 -> 045 [color = "green" fontcolor = "green" label = "LK"]
 	085 -> 057 [color = "brown"]
 	086 -> 070
-	086 -> 008
+	086 -> 008.126
 	087 -> 008
 	088 -> 108
 	088 -> 122
-	090 -> 292
 	092 -> 072
 	093 -> 347 [color = "magenta" fontcolor = "magenta" label = "win 1, no damage"]
 	093 -> 365
 	094 -> 260
 	095 -> 161
 	095 -> 243
-	096 -> 008
+	096 -> 008.126
 	097 -> 031 [color = "magenta" fontcolor = "magenta" label = "EST&le;4"]
 	098 -> 246
 	098 -> 258
 	100 -> 158
 	101 -> 163
 	101 -> 179
-	102 -> 292
 	103 -> 273
 	104 -> 024
 	105 -> 263
@@ -823,11 +834,10 @@ digraph {
 	111 -> 179
 	112 -> 002
 	114 -> 070
-	114 -> 008
+	114 -> 008.126
 	115 -> 069 [color = "green" fontcolor = "green" label = "LK"]
 	115 -> 057 [color = "brown"]
 	116 -> 154
-	118 -> 292
 	120 -> 316
 	121 -> 189 [color = "green" fontcolor = "green" label = "HR&ge;6"]
 	121 -> 131 [color = "brown"]
@@ -848,7 +858,7 @@ digraph {
 	129 -> 255
 	129 -> 277
 	130 -> 060
-	130 -> 008
+	130 -> 008.126
 	131 -> 199
 	132 -> 142
 	133 -> 115
@@ -862,13 +872,13 @@ digraph {
 	137 -> 379
 	137 -> 349
 	138 -> 254
-	138 -> 146 [color = "blue" fontcolor = "blue" label = "-Ki-Rin"]
-	138 -> 172 [color = "blue" fontcolor = "blue" label = "-Saber-toothed Tiger"]
-	138 -> 162 [color = "blue" fontcolor = "blue" label = "-Eleanor"]
-	138 -> 184 [color = "blue" fontcolor = "blue" label = "-Golden Company"]
-	138 -> 194 [color = "blue" fontcolor = "blue" label = "-Phoenix"]
-	138 -> 208 [color = "blue" fontcolor = "blue" label = "-Tatsu"]
-	138 -> 228 [color = "blue" fontcolor = "blue" label = "-Serpent rod"]
+	138 -> 146 [color = "blue"]
+	138 -> 172 [color = "blue"]
+	138 -> 162 [color = "blue"]
+	138 -> 184 [color = "blue"]
+	138 -> 194 [color = "blue"]
+	138 -> 208 [color = "blue"]
+	138 -> 228 [color = "blue"]
 	139 -> 151
 	140 -> 226 [color = "green" fontcolor = "green" label = "SK"]
 	140 -> 240 [color = "brown"]
@@ -880,12 +890,12 @@ digraph {
 	144 -> 166
 	145 -> 085
 	146 -> 254
-	146 -> 172 [color = "blue" fontcolor = "blue" label = "-Saber-toothed Tiger"]
-	146 -> 162 [color = "blue" fontcolor = "blue" label = "-Eleanor"]
-	146 -> 184 [color = "blue" fontcolor = "blue" label = "-Golden Company"]
-	146 -> 194 [color = "blue" fontcolor = "blue" label = "-Phoenix"]
-	146 -> 208 [color = "blue" fontcolor = "blue" label = "-Tatsu"]
-	146 -> 228 [color = "blue" fontcolor = "blue" label = "-Serpent rod"]
+	146 -> 172 [color = "blue"]
+	146 -> 162 [color = "blue" dir = "both"]
+	146 -> 184 [color = "blue" dir = "both"]
+	146 -> 194 [color = "blue" dir = "both"]
+	146 -> 208 [color = "blue" dir = "both"]
+	146 -> 228 [color = "blue"]
 	147 -> 163
 	147 -> 179
 	148 -> 256
@@ -901,20 +911,19 @@ digraph {
 	154 -> 176
 	155 -> 145
 	155 -> 133
-	156 -> 008
+	156 -> 008.030
 	158 -> 302
 	159 -> 283 [color = "green" fontcolor = "green" label = "LK-1"]
 	159 -> 323 [color = "brown"]
 	160 -> 180
 	160 -> 204
 	162 -> 254
-	162 -> 146 [color = "blue" fontcolor = "blue" label = "-Ki-Rin"]
-	162 -> 194 [color = "blue" fontcolor = "blue" label = "-Phoenix"]
-	162 -> 228 [color = "blue" fontcolor = "blue" label = "-Serpent rod"]
+	162 -> 194 [color = "blue" dir = "both"]
+	162 -> 228 [color = "blue"]
 	163 -> 179
 	163 -> 195
 	164 -> 242
-	166 -> 008
+	166 -> 008.030
 	167 -> 141
 	167 -> 127
 	168 -> 386
@@ -923,9 +932,9 @@ digraph {
 	170 -> 244 [color = "brown"]
 	171 -> 395
 	172 -> 266
-	172 -> 278 [color = "blue" fontcolor = "blue" label = "-Ki-Rin"]
-	172 -> 304 [color = "blue" fontcolor = "blue" label = "-Golden Company"]
-	172 -> 294 [color = "blue" fontcolor = "blue" label = "-Tatsu"]
+	172 -> 278 [color = "blue"]
+	172 -> 304 [color = "blue"]
+	172 -> 294 [color = "blue"]
 	173 -> 225 [color = "green" fontcolor = "green" label = "LK"]
 	173 -> 257 [color = "brown"]
 	174 -> 212
@@ -946,12 +955,11 @@ digraph {
 	183 -> 255
 	183 -> 277
 	184 -> 254
-	184 -> 208 [color = "blue" fontcolor = "blue" label = "-Tatsu"]
-	184 -> 172 [color = "blue" fontcolor = "blue" label = "-Saber-toothed Tiger"]
-	184 -> 146 [color = "blue" fontcolor = "blue" label = "-Ki-Rin"]
+	184 -> 208 [color = "blue" dir = "both"]
+	184 -> 172 [color = "blue"]
 	185 -> 055
 	185 -> 075
-	186 -> 008
+	186 -> 008.110
 	187 -> 153
 	188 -> 220 [color = "blue" fontcolor = "blue" label = "jade amulet"]
 	188 -> 270
@@ -964,21 +972,19 @@ digraph {
 	193 -> 213
 	193 -> 201
 	194 -> 254
-	194 -> 146 [color = "blue" fontcolor = "blue" label = "-Ki-Rin"]
-	194 -> 162 [color = "blue" fontcolor = "blue" label = "-Eleanor"]
-	194 -> 228 [color = "blue" fontcolor = "blue" label = "-Serpent rod"]
+	194 -> 228 [color = "blue"]
 	195 -> 209
 	196 -> 182
 	196 -> 210
 	196 -> 222
 	197 -> 265
 	197 -> 259
-	198 -> 394 [color = "blue" fontcolor = "blue" label = "-Ki-Rin"]
+	198 -> 394 [color = "blue"]
 	198 -> 292
 	199 -> 235 [color = "green" fontcolor = "green" label = "LK"]
 	199 -> 047 [color = "brown" fontcolor = "brown" label = "ST"]
 	199 -> 400
-	200 -> 008
+	200 -> 008.110
 	201 -> 233
 	201 -> 159
 	202 -> 154
@@ -990,9 +996,7 @@ digraph {
 	207 -> 223 [color = "blue" fontcolor = "blue" label = "willow-leaf"]
 	207 -> 239 [color = "blue" fontcolor = "blue" label = "bowel-raker"]
 	208 -> 254
-	208 -> 146 [color = "blue" fontcolor = "blue" label = "-Ki-Rin"]
-	208 -> 184 [color = "blue" fontcolor = "blue" label = "-Golden Company"]
-	208 -> 172 [color = "blue" fontcolor = "blue" label = "-Saber-toothed Tiger"]
+	208 -> 172 [color = "blue"]
 	209 -> 221
 	209 -> 241
 	210 -> 196
@@ -1006,7 +1010,7 @@ digraph {
 	213 -> 159
 	213 -> 245
 	213 -> 315
-	214 -> 008
+	214 -> 008.068
 	215 -> 191
 	215 -> 175
 	216 -> 176
@@ -1019,7 +1023,7 @@ digraph {
 	222 -> 386
 	223 -> 253
 	223 -> 195
-	224 -> 008
+	224 -> 008.068
 	225 -> 245
 	226 -> 216 [color = "green" fontcolor = "green" label = "LK"]
 	226 -> 202 [color = "brown"]
@@ -1027,15 +1031,15 @@ digraph {
 	227 -> 201
 	227 -> 193
 	228 -> 266
-	228 -> 278 [color = "blue" fontcolor = "blue" label = "-Ki-Rin"]
-	228 -> 320 [color = "blue" fontcolor = "blue" label = "-Phoenix"]
-	228 -> 330 [color = "blue" fontcolor = "blue" label = "-Eleanor"]
+	228 -> 278 [color = "blue"]
+	228 -> 320 [color = "blue"]
+	228 -> 330 [color = "blue"]
 	230 -> 354
 	232 -> 230
 	233 -> 357 [color = "darkorange" fontcolor = "darkorange" label = "Iaijutsu"]
 	233 -> 171 [color = "green" fontcolor = "green" label = "SK"]
 	233 -> 117 [color = "brown"]
-	234 -> 008
+	234 -> 008.068
 	235 -> 400
 	236 -> 158
 	237 -> 227
@@ -1065,7 +1069,7 @@ digraph {
 	256 -> 218
 	257 -> 067 [color = "blue" fontcolor = "blue" label = "armor"]
 	257 -> 039
-	258 -> 290 [color = "blue" fontcolor = "blue" label = "serpent with antler"]
+	258 -> 290 [color = "blue" fontcolor = "blue" label = "antler"]
 	258 -> 318 [color = "blue" fontcolor = "blue" label = "horn"]
 	258 -> 328 [color = "blue" fontcolor = "blue" label = "phoenix ruby"]
 	258 -> 246
@@ -1085,7 +1089,7 @@ digraph {
 	269 -> 195
 	270 -> 076
 	271 -> 375
-	272 -> 008
+	272 -> 008.098
 	273 -> 329
 	273 -> 385
 	274 -> 212
@@ -1093,10 +1097,10 @@ digraph {
 	276 -> 288
 	276 -> 300
 	278 -> 266
-	278 -> 294 [color = "blue" fontcolor = "blue" label = "-Tatsu"]
-	278 -> 304 [color = "blue" fontcolor = "blue" label = "-Golden Company"]
-	278 -> 320 [color = "blue" fontcolor = "blue" label = "-Phoenix"]
-	278 -> 330 [color = "blue" fontcolor = "blue" label = "-Eleanor"]
+	278 -> 294 [color = "blue"]
+	278 -> 304 [color = "blue" dir = "both"]
+	278 -> 320 [color = "blue"]
+	278 -> 330 [color = "blue" dir = "both"]
 	279 -> 229
 	279 -> 181
 	280 -> 158
@@ -1117,18 +1121,18 @@ digraph {
 	288 -> 106 [color = "green" fontcolor = "green" label = "LK"]
 	288 -> 120 [color = "brown"]
 	289 -> 301
-	290 -> 008
+	290 -> 008.098
 	291 -> 247
 	291 -> 081
-	292 -> 090 [color = "purple" fontcolor = "purple" label = "1-2"]
-	292 -> 102 [color = "purple" fontcolor = "purple" label = "3-4"]
-	292 -> 118 [color = "purple" fontcolor = "purple" label = "5-6"]
+	292 -> 090 [color = "purple:black" fontcolor = "purple" label = "1-2" dir = "both"]
+	292 -> 102 [color = "purple:black" fontcolor = "purple" label = "3-4" dir = "both"]
+	292 -> 118 [color = "purple:black" fontcolor = "purple" label = "5-6" dir = "both"]
 	292 -> 074
 	293 -> 195
 	293 -> 331
 	294 -> 364
-	294 -> 382 [color = "blue" fontcolor = "blue" label = "-Ki-Rin"]
-	294 -> 198 [color = "blue" fontcolor = "blue" label = "-Golden Company"]
+	294 -> 382 [color = "blue"]
+	294 -> 198 [color = "blue"]
 	295 -> 017
 	296 -> 370
 	296 -> 380
@@ -1142,8 +1146,7 @@ digraph {
 	302 -> 310
 	303 -> 287
 	304 -> 266
-	304 -> 294 [color = "blue" fontcolor = "blue" label = "-Tatsu"]
-	304 -> 278 [color = "blue" fontcolor = "blue" label = "-Ki-Rin"]
+	304 -> 294 [color = "blue"]
 	305 -> 295
 	306 -> 316
 	307 -> 347 [color = "magenta" fontcolor = "magenta" label = "win 1, no damage"]
@@ -1169,8 +1172,8 @@ digraph {
 	319 -> 011
 	319 -> 155
 	320 -> 364
-	320 -> 382 [color = "blue" fontcolor = "blue" label = "-Ki-Rin"]
-	320 -> 022 [color = "blue" fontcolor = "blue" label = "-Eleanor"]
+	320 -> 382 [color = "blue"]
+	320 -> 022 [color = "blue"]
 	321 -> 291 [color = "magenta" fontcolor = "magenta" label = "win 3 AR"]
 	322 -> 122
 	323 -> 311
@@ -1183,8 +1186,7 @@ digraph {
 	329 -> 271
 	329 -> 375
 	330 -> 266
-	330 -> 320 [color = "blue" fontcolor = "blue" label = "-Phoenix"]
-	330 -> 278 [color = "blue" fontcolor = "blue" label = "-Ki-Rin"]
+	330 -> 320 [color = "blue"]
 	331 -> 037
 	331 -> 065
 	333 -> 335
@@ -1196,7 +1198,7 @@ digraph {
 	337 -> 355
 	338 -> 386 [color = "green" fontcolor = "green" label = "LK"]
 	338 -> 306 [color = "brown"]
-	340 -> 008
+	340 -> 008.066
 	341 -> 291 [color = "magenta" fontcolor = "magenta" label = "win 3 AR"]
 	343 -> 371
 	344 -> 088
@@ -1204,11 +1206,11 @@ digraph {
 	346 -> 364
 	347 -> 179
 	347 -> 163
-	348 -> 008
+	348 -> 008.078
 	350 -> 374
 	350 -> 388
 	351 -> 179
-	352 -> 008
+	352 -> 008.066
 	354 -> 366
 	355 -> 295
 	356 -> 132
@@ -1248,8 +1250,8 @@ digraph {
 	380 -> 342
 	381 -> 227
 	382 -> 364
-	382 -> 022 [color = "blue" fontcolor = "blue" label = "-Eleanor"]
-	382 -> 198 [color = "blue" fontcolor = "blue" label = "-Golden Company"]
+	382 -> 022 [color = "blue"]
+	382 -> 198 [color = "blue"]
 	383 -> 359
 	383 -> 343
 	384 -> 182
@@ -1265,7 +1267,7 @@ digraph {
 	388 -> 338
 	388 -> 398
 	389 -> 195
-	390 -> 008
+	390 -> 008.078
 	391 -> 381
 	392 -> 018
 	392 -> 004
