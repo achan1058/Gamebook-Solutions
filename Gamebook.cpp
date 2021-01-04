@@ -4,7 +4,7 @@ using namespace std;
 
 int main() {
 	string s;
-	//cin >> s;
+	cin >> s;
 	int total = 0;
 	for (char c : s) {
 		if (isalpha(c))

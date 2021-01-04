@@ -78,27 +78,6 @@
     <CustomBuild Include="Chooseomatic\old\Time Travel Dinosaur.dot">
       <Filter>backup</Filter>
     </CustomBuild>
-    <CustomBuild Include="Give Yourself Goosebumps\04 - The Deadly Experiments of Dr. Eeek.dot">
-      <Filter>Temp</Filter>
-    </CustomBuild>
-    <CustomBuild Include="Give Yourself Goosebumps\07 - Under the Magician%27s Spell.dot">
-      <Filter>Temp</Filter>
-    </CustomBuild>
-    <CustomBuild Include="Give Yourself Goosebumps\S3 - Trapped in the Circus of Fear.dot">
-      <Filter>Temp</Filter>
-    </CustomBuild>
-    <CustomBuild Include="A Chooseable-Path Adventure\Romeo and or Juliet.dot">
-      <Filter>Temp</Filter>
-    </CustomBuild>
-    <CustomBuild Include="A Chooseable-Path Adventure\To Be or Not To Be.dot">
-      <Filter>Temp</Filter>
-    </CustomBuild>
-    <CustomBuild Include="Give Yourself Goosebumps\16 - Secret Agent Grandma.dot">
-      <Filter>Temp</Filter>
-    </CustomBuild>
-    <CustomBuild Include="Fighting Fantasy\21 - Trial of Champions.dot">
-      <Filter>Temp</Filter>
-    </CustomBuild>
     <CustomBuild Include="Fighting Fantasy\old\FF12.dot">
       <Filter>backup</Filter>
     </CustomBuild>
@@ -114,12 +93,6 @@
     <CustomBuild Include="Fighting Fantasy\old\Stormslayer.dot">
       <Filter>backup</Filter>
     </CustomBuild>
-    <CustomBuild Include="Fighting Fantasy\Island of the Lizard King.dot">
-      <Filter>Fighting Fantasy</Filter>
-    </CustomBuild>
-    <CustomBuild Include="Fighting Fantasy\old\Night Dragon.dot">
-      <Filter>backup</Filter>
-    </CustomBuild>
     <CustomBuild Include="Fighting Fantasy\old\03- The Forest of Doom.dot">
       <Filter>backup</Filter>
     </CustomBuild>
@@ -131,6 +104,51 @@
     </CustomBuild>
     <CustomBuild Include="Fighting Fantasy\old\Deathmoor.dot">
       <Filter>backup</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Give Yourself Goosebumps\04 - The Deadly Experiments of Dr. Eeek.dot">
+      <Filter>backup</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Give Yourself Goosebumps\07 - Under the Magician%27s Spell.dot">
+      <Filter>backup</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Give Yourself Goosebumps\16 - Secret Agent Grandma.dot">
+      <Filter>backup</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Fighting Fantasy\21 - Trial of Champions.dot">
+      <Filter>backup</Filter>
+    </CustomBuild>
+    <CustomBuild Include="A Chooseable-Path Adventure\Romeo and or Juliet.dot">
+      <Filter>backup</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Give Yourself Goosebumps\S3 - Trapped in the Circus of Fear.dot">
+      <Filter>backup</Filter>
+    </CustomBuild>
+    <CustomBuild Include="A Chooseable-Path Adventure\To Be or Not To Be.dot">
+      <Filter>backup</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Fighting Fantasy\City of Thieves.dot">
+      <Filter>Temp</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Fighting Fantasy\Crypt of the Sorcerer.dot">
+      <Filter>Temp</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Fighting Fantasy\Forest of Doom.dot">
+      <Filter>Temp</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Fighting Fantasy\Island of the Lizard King.dot">
+      <Filter>Temp</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Fighting Fantasy\Magehunter.dot">
+      <Filter>Temp</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Fighting Fantasy\Night of the Necromancer.dot">
+      <Filter>Temp</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Fighting Fantasy\Stormslayer.dot">
+      <Filter>Temp</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Fighting Fantasy\Sword of the Samurai.dot">
+      <Filter>Temp</Filter>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>

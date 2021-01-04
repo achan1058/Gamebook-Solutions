@@ -190,6 +190,7 @@ digraph {
 	z005 -> z009 [color = "grey" fontcolor = "grey" label = "info"]
 	z009 -> z010 [color = "crimson" fontcolor = "crimson" label = "error(?)"]
 	z010 -> z011 [color = "magenta" fontcolor = "magenta" label = "escape"]
+	z011 -> z012 [color = "darkorange" fontcolor = "darkorange" label = "spell"]
 	{
 		rank = same
 		z003
