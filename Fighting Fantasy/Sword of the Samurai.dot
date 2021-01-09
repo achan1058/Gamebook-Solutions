@@ -10,14 +10,9 @@ digraph {
 		margin=0]
 	edge[weight=5]
 	
-	subgraph ShopMenu {
-		node [fontcolor = "purple" shape = "rect" margin = 0.1]
-		menu
-	}
-
 	// a box for a graph label
 	// note that you can override the defaults set above
-	title [label = "Fighting Fantasy --: Title\n\n \
+	title [label = "Fighting Fantasy --: Sword of the Samurai\n\n \
 		Light Green Fill: Benefits\l \
 		Pink Fill: Penalties\l \
 		Red Fill: Death\l \
@@ -30,15 +25,14 @@ digraph {
 		Green Line: Stat Test Passed\l \
 		Brown Line: Stat Test Failed\l \
 		Magenta Line: Combat Related Events\l \
-		Grey Text: Riddle Answer\l \
-		Grey Line: Hidden Option\l \
-		Orange Line: Spells\l \
+		Grey Line: Riddle Answer\l \
+		Orange Line: Skills\l \
 		Red Line: Possible Error\l \
 		Gold Fill: Required Nodes\l \
 		Light Blue Fill: Recommended Nodes\l \
 		Gold Outline: Recommended Path\l \
 		Green Box: Combat\l \
-		SK/ST/LK/AT/AR/TM/CW/CL: Skill/Stamina/Luck/Attack Strength/Attack Round/Time/Consecutive Win Round/Consecutive Lose Round\l \
+		SK/ST/LK/HR/AT/AR/TM/CW/CL: Skill/Stamina/Luck/Honor/Attack Strength/Attack Round/Time/Consecutive Win Round/Consecutive Lose Round\l \
 		?: Chance of this happening, depending on instructions in text\l \
 		*: Special Combat Rules\l \
 		-: Negative Status\l \
@@ -58,6 +52,8 @@ digraph {
 		2d6+6 gold\l \
 		backpack\l\l \
 		Comments:\l \
+		healing liquid: +5ST\l \
+		none\l \
 		none\l \
 		"
 		shape = "box"
@@ -72,7 +68,6 @@ digraph {
 		monboo5
 		mondam5
 		mon5
-		ending [fontcolor = "black" shape = "octagon"]
 		400 [fontcolor = "black" shape = "octagon"]
 	}
 
@@ -104,7 +99,7 @@ digraph {
 	}
 
 	subgraph Combat {
-		style = "filled" color = "palegreen2"
+		style = "filled" color = "palegreen"
 		subgraph cluster_MONSTER {
 			label = "MONSTER\n 0/0 0/0"
 			mon1 [label = "\N\n text"]
@@ -127,11 +122,13 @@ digraph {
 		subgraph cluster_KAPPA {
 			label = "Kappa\n 8/14 8/12 7/13"
 			013
+			097 [label = "\N\n +1EDG"]
 		}
 		
 		subgraph cluster_ROKURO_KUBI {
 			label = "Rokuro-Kubi\n 7/8"
-			015
+			015 [style = "filled" color = "pink" label = "\N\n -2ST"]
+			187 [style = "filled" color = "pink" label = "\N\n -2ST"]
 		}
 		
 		subgraph cluster_TATSU {
@@ -144,11 +141,6 @@ digraph {
 			027
 		}
 		
-		subgraph cluster_UNKNOWN1 {
-			label = "Unknown 1"
-			032 [label = "\N\n -2AT"]
-		}
-
 		subgraph cluster_SAMURAI_HORSEMAN {
 			label = "Samurai Horseman\n 8/9"
 			044 [style = "filled" color = "pink" label = "\N\n -3ST"]
@@ -159,14 +151,10 @@ digraph {
 			045
 		}
 		
-		subgraph cluster_UNKNOWN2 {
-			label = "Unknown 2"
-			047 [style = "filled" color = "pink" label = "\N\n -1SK\n -1LK"]
-		}
-
 		subgraph cluster_MUKADE {
-			label = "Mukade 7/20"
-			050 [shape = "rect" fontcolor = "darkorange" label = "\N\n 2 Kyujutsu"]
+			label = "Mukade\n 7/20"
+			050 [shape = "rect" fontcolor = "darkorange" label = "\N\n 2 kyujutsu"]
+			378 [shape = "rect" fontcolor = "darkorange" label = "\N\n 2 kyujutsu"]
 		}
 		
 		subgraph cluster_SHADOWS {
@@ -179,24 +167,23 @@ digraph {
 			079
 		}
 		
-		subgraph cluster_UNKNOWN3 {
-			label = "Unknown 3"
-			080 [shape = "rect" fontcolor = "darkorange" label = "\N\n 2 Kyujutsu"]
-		}
-		
 		subgraph cluster_UNDEAD_SAMURAI {
 			label = "Undead Samurai\n 9/11"
+			032 [label = "\N\n -2AT"]
 			082
 		}
 		
 		subgraph cluster_SAMURAI_WARRIOR {
 			label = "Samurai Warrior\n 8/9"
+			080 [shape = "rect" fontcolor = "darkorange" label = "\N\n 2 kyujutsu\n armor-piercer"]
 			092 [style = "filled" color = "pink" label = "\N\n -3ST?"]
 		}
 		
 		subgraph cluster_CHARCOAL_BURNER {
 			label = "Charcoal-Burner\n 6/10 7/9"
 			093
+			281
+			307
 		}
 		
 		subgraph cluster_SHADOW_DEMON {
@@ -204,14 +191,11 @@ digraph {
 			094
 		}
 		
-		subgraph cluster_KAPPA2 {
-			label = "Kappa\n 8/14 8/12 7/13"
-			097 [label = "\N\n +1EDG"]
-		}
-		
 		subgraph cluster_SAMURAI {
 			label = "Samurai\n 6/7 8/8 7/6"
-			116 [shape = "rect" fontcolor = "darkorange" label = "\N\n Karumijutsu -1EAT"]
+			116 [shape = "rect" fontcolor = "darkorange" label = "\N\n karumijutsu -1EAT"]
+			202 [shape = "rect" fontcolor = "darkorange" label = "\N\n karumijutsu -1EAT"]
+			240 [shape = "rect" fontcolor = "darkorange" label = "\N\n karumijutsu -1EAT"]
 		}
 		
 		subgraph cluster_SAMURAI2 {
@@ -222,15 +206,12 @@ digraph {
 		subgraph cluster_GUARD {
 			label = "Guard\n 7/9"
 			132
+			344 [label = "\N\n -2AT"]
 		}
 		
 		subgraph cluster_ROKURO_KUBI3 {
 			label = "Rokuro-Kubi\n 11/17"
 			133
-		}
-		
-		subgraph cluster_ROKURO_KUBI4 {
-			label = "Rokuro-Kubi\n 11/17"
 			145
 		}
 		
@@ -249,19 +230,10 @@ digraph {
 			178 [style = "filled" color = "pink" label = "\N\n -3ST"]
 		}
 		
-		subgraph cluster_ROKURO_KUBI5 {
-			label = "Rokuro-Kubi\n 7/8"
-			187 [style = "filled" color = "pink" label = "\N\n -2ST"]
-		}
-		
 		subgraph cluster_IKIRU2 {
 			label = "Ikiru*\n 12/12"
 			199
-		}
-		
-		subgraph cluster_SAMURAI3 {
-			label = "Samurai\n 6/7 8/8 7/6"
-			202 [shape = "rect" fontcolor = "darkorange" label = "\N\n Karumijutsu -1EAT"]
+			047 [style = "filled" color = "pink" label = "\N\n -1SK\n -1LK"]
 		}
 		
 		subgraph cluster_ROKURO_KUBI6 {
@@ -277,17 +249,13 @@ digraph {
 		subgraph cluster_SABRE_TOOTHED_TIGER {
 			label = "Sabre-Toothed Tiger\n 10/12"
 			214
-			224 [shape = "rect" fontcolor = "darkorange" label = "\N\n 3 Kyujutsu"]
+			224 [shape = "rect" fontcolor = "darkorange" label = "\N\n 3 kyujutsu"]
 		}
 		
 		subgraph cluster_TSIETSIN_S_BODYGUARD {
 			label = "Tsietsin's Bodyguard\n 9/8"
 			230
-		}
-		
-		subgraph cluster_SAMURAI4 {
-			label = "Samurai\n 6/7 8/8 7/6"
-			240 [shape = "rect" fontcolor = "darkorange" label = "\N\n Karumijutsu -1EAT"]
+			336
 		}
 		
 		subgraph cluster_GREAT_SERPENT {
@@ -308,6 +276,8 @@ digraph {
 		subgraph cluster_GROUNDHOG {
 			label = "Groundhog\n 8/22"
 			265
+			337
+			375
 		}
 		
 		subgraph cluster_MANTIS_DEMON {
@@ -321,13 +291,9 @@ digraph {
 		}
 		
 		subgraph cluster_GINSEI_THE_RONIN {
-			label = "Ginsei the Ronin\n 9/14"
-			275
-		}
-		
-		subgraph cluster_CHARCOAL_BURNER2 {
-			label = "Charcoal-Burner\n 6/10 7/9"
-			281
+			label = "Ginsei the Ronin\n 10/16"
+			275 [label = "\N\n -1ESK\n -2EST"]
+			301
 		}
 		
 		subgraph cluster_GAOLER {
@@ -344,8 +310,6 @@ digraph {
 		}
 		
 		subgraph cluster_GINSEI_THE_RONIN2 {
-			label = "Ginsei the Ronin\n 10/16"
-			301
 		}
 		
 		subgraph cluster_SAMURAI5 {
@@ -361,26 +325,7 @@ digraph {
 		subgraph cluster_SILVER_SAMURAI {
 			label = "Silver Samurai\n 10/12"
 			321 [style = "filled" color = "pink" label = "\N\n -2HR"]
-		}
-		
-		subgraph cluster_TSIETSIN_S_BODYGUARD2 {
-			label = "Tsietsin's Bodyguard\n 9/8"
-			336
-		}
-		
-		subgraph cluster_GROUNDHOG2 {
-			label = "Groundhog\n 8/22"
-			337
-		}
-		
-		subgraph cluster_SILVER_SAMURAI2 {
-			label = "Silver Samurai\n 10/12"
 			341
-		}
-		
-		subgraph cluster_GUARD2 {
-			label = "Guard\n 7/9"
-			344 [label = "\N\n -2AT"]
 		}
 		
 		subgraph cluster_SKELETON {
@@ -413,16 +358,6 @@ digraph {
 			372
 		}
 		
-		subgraph cluster_GROUNDHOG3 {
-			label = "Groundhog\n 8/22"
-			375
-		}
-		
-		subgraph cluster_MUKADE2 {
-			label = "Mukade 7/20"
-			378 [shape = "rect" fontcolor = "darkorange" label = "\N\n 2 Kyujutsu"]
-		}
-		
 		subgraph cluster_DAI_ONI2 {
 			label = "Dai-Oni\n 10/10"
 			394 [shape = "rect" fontcolor = "grey" label = "\N\n -ki-rin"]
@@ -438,7 +373,6 @@ digraph {
 
 	subgraph Death {
 		node [style = "filled" color = "red"]
-		ddt
 		018
 		033
 		039
@@ -477,28 +411,28 @@ digraph {
 	subgraph Boost {
 		node [style = "filled" color = "greenyellow"]
 		bst
-		007 [label = "\N\n -2ST\n +1HR"]
+		007 [color = "greenyellow:pink" label = "\N\n -2ST\n +1HR"]
 		009 [label = "\N\n +1LK"]
-		023 [label = "\N\n -5ST\n +1HR"]
+		023 [color = "greenyellow:pink" label = "\N\n -5ST\n +1HR"]
 		052 [shape = "rect" fontcolor = "blue" label = "\N\n jade talisman\n +2LK"]
 		074 [label = "\N\n +1SK?\n +2ST?\n +1LK?"]
 		150 [label = "\N\n +2LK"]
 		152 [label = "\N\n +2SK\n +4ST\n +2LK"]
 		153 [label = "\N\n +1LK"]
 		163 [label = "\N\n +1HR"]
-		176 [shape = "rect" fontcolor = "blue" label = "\N\n headband\n +1LK\n +1HR"]
+		176 [label = "\N\n +1LK\n +1HR"]
 		190 [label = "\N\n +1HR"]
-		196 [shape = "rect" fontcolor = "blue" label = "\N\n healing liquid: +5ST\n +3ST"]
+		196 [shape = "rect" fontcolor = "blue" label = "\N\n healing liquid\n +3ST"]
 		211 [label = "\N\n +2ST"]
 		243 [shape = "rect" fontcolor = "blue" label = "\N\n knowledge water\n +1LK"]
 		267 [label = "\N\n +1SK"]
 		305 [shape = "rect" fontcolor = "blue" label = "\N\n armor\n +1SK"]
-		322 [shape = "rect" fontcolor = "blue" label = "\N\n feather arrow\n armor\n 100 gold\n +1SK\n +1HR"]
+		322 [shape = "rect" fontcolor = "blue" label = "\N\n feather arrow\n armor\n +1SK\n +1HR"]
 		345 [label = "\N\n +1LK"]
 		350 [label = "\N\n +1HR"]
 		355 [shape = "rect" fontcolor = "blue" label = "\N\n armor\n +1SK"]
 		356 [shape = "rect" fontcolor = "blue" label = "\N\n all equipment\n all arrows\n +1LK"]
-		366 [shape = "rect" fontcolor = "blue" label = "\N\n feather arrow\n armor\n 100 gold\n +1LK\n +1HR"]
+		366 [shape = "rect" fontcolor = "blue" label = "\N\n feather arrow\n armor\n +1LK\n +1HR"]
 		371 [label = "\N\n +2ST"]
 		389 [label = "\N\n +1HR"]
 		boo1 [label = "\N\n text"]
@@ -528,7 +462,7 @@ digraph {
 		120 [label = "\N\n -1HR"]
 		131 [label = "\N\n -1SK\n -4ST\n -1LK"]
 		139 [label = "\N\n -2ST"]
-		140 [shape = "rect" fontcolor = "blue" label = "\N\n -willow-leaf arrow\n -1HR"]
+		140 [shape = "rect" fontcolor = "blue" label = "\N\n -1 willow-leaf\n -1HR"]
 		156 [label = "\N\n -4ST"]
 		160 [label = "\N\n -2ST"]
 		166 [label = "\N\n -4ST"]
@@ -563,20 +497,18 @@ digraph {
 	subgraph Key_Item {
 		node [fontcolor = "blue" shape = "rect"]
 		kky
-		062 [label = "\N\n 15 gold"]
+		034 [label = "\N\n Tsietsin"]
 		088 [label = "\N\n katana"]
-		112 [label = "\N\n forest"]
+		112 [label = "\N\n forest"] 
 		164 [label = "\N\n -2 arrows"]
 		182 [label = "\N\n war-fan"]
 		192 [label = "\N\n horn"]
 		206 [label = "\N\n harmony"]
 		216 [label = "\N\n -1 willow-leaf\n -1 armor-piercer\n -1 bowel-raker"]
 		226 [label = "\N\n -1 willow-leaf"]
-		238 [label = "\N\n 6 gold"]
-		251 [label = "\N\n brass key\n pagoda map"]
+		251 [label = "\N\n pagoda map"]
 		313 [label = "\N\n -armor*"]
 		361 [label = "\N\n phoenix ruby"]
-		384 [label = "\N\n 15 gold"]
 		391 [label = "\N\n antler\n 2 food"]
 		392 [label = "\N\n 1 sword, no bow, no arrow"]
 		key1 [label = "\N\n text"]
@@ -624,13 +556,6 @@ digraph {
 		008.098
 		008.110
 		008.126
-		008.138
-	}
-
-	subgraph Shop {
-		node [fontcolor = "purple" shape = "rect"]
-		shp
-		shop1 [label = "\N\n text"]
 	}
 
 	mon1 -> mon2 -> mon3 -> mon4 -> mon5 [penwidth = 3]
@@ -684,16 +609,16 @@ digraph {
 	011 -> 015
 	012 -> 008.030
 	013 -> 031 [color = "magenta" fontcolor = "magenta" label = "EST&le;4"]
-	014 -> 046 [color = "darkorange" fontcolor = "darkorange" label = "Kyujutsu"]
+	014 -> 046 [color = "darkorange" fontcolor = "darkorange" label = "kyujutsu"]
 	014 -> 064
 	014 -> 084
 	014 -> 100
 	015 -> 153
 	016 -> 050
-	017 -> 107 [color = "blue" fontcolor = "blue" label = "map (pagoda)"]
-	017 -> 285
+	017 -> 107 [color = "blue:black" fontcolor = "blue" label = "pagoda map" dir = "both"]
+	017 -> 285 [dir = "both"]
 	017 -> 125
-	017 -> 249
+	017 -> 249 [dir = "both"]
 	019 -> 052 [color = "grey" fontcolor = "grey" label = "riddle"]
 	019 -> 026
 	020 -> 282 [color = "green" fontcolor = "green" label = "LK"]
@@ -702,7 +627,7 @@ digraph {
 	022 -> 394 [color = "blue"]
 	022 -> 292
 	023 -> 195
-	024 -> 314 [color = "blue" fontcolor = "blue" label = "Tsietsin's men"]
+	024 -> 314 [color = "blue" fontcolor = "blue" label = "Tsietsin"]
 	024 -> 326
 	025 -> 353 [color = "brown"]
 	025 -> 313 [color = "green" fontcolor = "green" label = "ST>12"]
@@ -725,7 +650,7 @@ digraph {
 	038 -> 050
 	040 -> 370
 	040 -> 380
-	041 -> 035 [color = "darkorange" fontcolor = "darkorange" label = "Karumijutsu"]
+	041 -> 035 [color = "darkorange" fontcolor = "darkorange" label = "karumijutsu"]
 	041 -> 129
 	042 -> 082
 	043 -> 059
@@ -734,9 +659,8 @@ digraph {
 	045 -> 009
 	046 -> 236 [color = "green" fontcolor = "green" label = "SK"]
 	046 -> 248 [color = "brown"]
-	047 -> 199
 	048 -> 086 [color = "blue" fontcolor = "blue" label = "horn"]
-	048 -> 096 [color = "blue" fontcolor = "blue" label = "knowledge potion"]
+	048 -> 096 [color = "blue" fontcolor = "blue" label = "knowledge water"]
 	048 -> 114 [color = "blue" fontcolor = "blue" label = "helmet"]
 	048 -> 130
 	049 -> 395
@@ -747,14 +671,14 @@ digraph {
 	054 -> 206
 	054 -> 188
 	054 -> 150
-	056 -> 080 [color = "darkorange" fontcolor = "darkorange" label = "Kyujutsu"]
+	056 -> 080 [color = "darkorange" fontcolor = "darkorange" label = "kyujutsu"]
 	056 -> 092
-	058 -> 134 [color = "darkorange" fontcolor = "darkorange" label = "Kyujutsu"]
+	058 -> 134 [color = "darkorange" fontcolor = "darkorange" label = "kyujutsu"]
 	058 -> 242
 	059 -> 111
-	059 -> 123 [color = "darkorange" fontcolor = "darkorange" label = "Kyujutsu"]
+	059 -> 123 [color = "darkorange" fontcolor = "darkorange" label = "kyujutsu"]
 	059 -> 135
-	059 -> 147 [color = "darkorange" fontcolor = "darkorange" label = "Karumijutsu"]
+	059 -> 147 [color = "darkorange" fontcolor = "darkorange" label = "karumijutsu"]
 	060 -> 070
 	060 -> 008.126
 	062 -> 182
@@ -769,7 +693,7 @@ digraph {
 	066 -> 352 [color = "brown"]
 	067 -> 335
 	068 -> 214 [color = "cyan3" fontcolor = "cyan3" label = "phoenix ruby"]
-	068 -> 224 [color = "darkorange" fontcolor = "darkorange" label = "Kyujutsu"]
+	068 -> 224 [color = "darkorange" fontcolor = "darkorange" label = "kyujutsu"]
 	068 -> 234 [color = "cyan3" fontcolor = "cyan3" label = "horn"]
 	068 -> 008.068
 	069 -> 025
@@ -778,10 +702,10 @@ digraph {
 	072 -> 104
 	072 -> 116
 	072 -> 128
-	072 -> 140 [color = "darkorange" fontcolor = "darkorange" label = "Kyujutsu"]
+	072 -> 140 [color = "darkorange" fontcolor = "darkorange" label = "kyujutsu"]
 	073 -> 049
 	073 -> 105
-	073 -> 021 [color = "darkorange" fontcolor = "darkorange" label = "Kyujutsu, Humming-Bulb"]
+	073 -> 021 [color = "darkorange" fontcolor = "darkorange" label = "kyujutsu, Humming-Bulb"]
 	074 -> 206
 	074 -> 188
 	074 -> 150
@@ -798,7 +722,7 @@ digraph {
 	082 -> 032 [color = "magenta" fontcolor = "magenta" label = "EST&le;5"]
 	083 -> 097 [color = "green" fontcolor = "green" label = "LK-1"]
 	083 -> 061 [color = "brown"]
-	084 -> 252 [color = "darkorange" fontcolor = "darkorange" label = "Iaijutsu"]
+	084 -> 252 [color = "darkorange" fontcolor = "darkorange" label = "iaijutsu"]
 	084 -> 268
 	085 -> 045 [color = "green" fontcolor = "green" label = "LK"]
 	085 -> 057 [color = "brown"]
@@ -825,7 +749,6 @@ digraph {
 	105 -> 263
 	106 -> 124
 	107 -> 317
-	107 -> 017
 	108 -> 158
 	108 -> 168
 	110 -> 186 [color = "blue" fontcolor = "blue" label = "war-fan"]
@@ -868,7 +791,7 @@ digraph {
 	135 -> 307 [color = "brown"]
 	136 -> 148
 	136 -> 160
-	136 -> 170 [color = "darkorange" fontcolor = "darkorange" label = "Kyujutsu"]
+	136 -> 170 [color = "darkorange" fontcolor = "darkorange" label = "kyujutsu"]
 	137 -> 379
 	137 -> 349
 	138 -> 254
@@ -948,14 +871,11 @@ digraph {
 	179 -> 005
 	181 -> 169 [color = "green" fontcolor = "green" label = "LK"]
 	181 -> 157 [color = "brown"]
-	182 -> 210
-	182 -> 196
 	182 -> 222
 	183 -> 231
 	183 -> 255
 	183 -> 277
 	184 -> 254
-	184 -> 208 [color = "blue" dir = "both"]
 	184 -> 172 [color = "blue"]
 	185 -> 055
 	185 -> 075
@@ -974,15 +894,15 @@ digraph {
 	194 -> 254
 	194 -> 228 [color = "blue"]
 	195 -> 209
-	196 -> 182
-	196 -> 210
+	196 -> 182 [dir = "both"]
+	196 -> 210 [dir = "both"]
 	196 -> 222
 	197 -> 265
 	197 -> 259
 	198 -> 394 [color = "blue"]
 	198 -> 292
 	199 -> 235 [color = "green" fontcolor = "green" label = "LK"]
-	199 -> 047 [color = "brown" fontcolor = "brown" label = "ST"]
+	199 -> 047 [color = "brown:black" fontcolor = "brown" label = "ST" dir = "both"]
 	199 -> 400
 	200 -> 008.110
 	201 -> 233
@@ -997,10 +917,10 @@ digraph {
 	207 -> 239 [color = "blue" fontcolor = "blue" label = "bowel-raker"]
 	208 -> 254
 	208 -> 172 [color = "blue"]
+	208 -> 184 [color = "blue" dir = "both"]
 	209 -> 221
 	209 -> 241
-	210 -> 196
-	210 -> 182
+	210 -> 182 [dir = "both"]
 	210 -> 222
 	211 -> 008
 	212 -> 312
@@ -1036,7 +956,7 @@ digraph {
 	228 -> 330 [color = "blue"]
 	230 -> 354
 	232 -> 230
-	233 -> 357 [color = "darkorange" fontcolor = "darkorange" label = "Iaijutsu"]
+	233 -> 357 [color = "darkorange" fontcolor = "darkorange" label = "iaijutsu"]
 	233 -> 171 [color = "green" fontcolor = "green" label = "SK"]
 	233 -> 117 [color = "brown"]
 	234 -> 008.068
@@ -1047,17 +967,16 @@ digraph {
 	239 -> 269
 	239 -> 281
 	240 -> 154
-	241 -> 275 [color = "darkorange" fontcolor = "darkorange" label = "Iaijutsu"]
-	241 -> 289 [color = "darkorange" fontcolor = "darkorange" label = "Kyujutsu"]
+	241 -> 275 [color = "darkorange" fontcolor = "darkorange" label = "iaijutsu"]
+	241 -> 289 [color = "darkorange" fontcolor = "darkorange" label = "kyujutsu"]
 	241 -> 301
-	242 -> 262 [color = "darkorange" fontcolor = "darkorange" label = "Karumijutsu"]
+	242 -> 262 [color = "darkorange" fontcolor = "darkorange" label = "karumijutsu"]
 	242 -> 358
 	243 -> 008
 	244 -> 316
 	245 -> 263
 	246 -> 272
 	248 -> 316
-	249 -> 017
 	249 -> 033
 	250 -> 276
 	250 -> 264
@@ -1109,11 +1028,10 @@ digraph {
 	282 -> 308 [color = "magenta" fontcolor = "magenta" label = "AR&le;4"]
 	282 -> 332
 	283 -> 297
-	284 -> 046 [color = "darkorange" fontcolor = "darkorange" label = "Kyujutsu"]
+	284 -> 046 [color = "darkorange" fontcolor = "darkorange" label = "kyujutsu"]
 	284 -> 064
 	284 -> 084
 	284 -> 100
-	285 -> 017
 	285 -> 309
 	286 -> 211
 	287 -> 267
@@ -1136,7 +1054,7 @@ digraph {
 	295 -> 017
 	296 -> 370
 	296 -> 380
-	297 -> 035 [color = "darkorange" fontcolor = "darkorange" label = "Karumijutsu"]
+	297 -> 035 [color = "darkorange" fontcolor = "darkorange" label = "karumijutsu"]
 	297 -> 013
 	297 -> 003
 	298 -> 121
@@ -1162,7 +1080,7 @@ digraph {
 	313 -> 363
 	314 -> 338
 	314 -> 350
-	315 -> 021 [color = "darkorange" fontcolor = "darkorange" label = "Kyujutsu, Humming-Bulb"]
+	315 -> 021 [color = "darkorange" fontcolor = "darkorange" label = "kyujutsu, Humming-Bulb"]
 	315 -> 053
 	316 -> 020
 	316 -> 040
@@ -1258,11 +1176,11 @@ digraph {
 	384 -> 196
 	384 -> 210
 	384 -> 222
-	385 -> 197 [color = "darkorange" fontcolor = "darkorange" label = "Karumijutsu"]
+	385 -> 197 [color = "darkorange" fontcolor = "darkorange" label = "karumijutsu"]
 	385 -> 337
 	386 -> 112
 	387 -> 113
-	388 -> 284 [color = "darkorange" fontcolor = "darkorange" label = "Karumijutsu"]
+	388 -> 284 [color = "darkorange" fontcolor = "darkorange" label = "karumijutsu"]
 	388 -> 374
 	388 -> 338
 	388 -> 398
@@ -1274,7 +1192,7 @@ digraph {
 	393 -> 335
 	393 -> 325
 	394 -> 054
-	395 -> 035 [color = "darkorange" fontcolor = "darkorange" label = "Karumijutsu"]
+	395 -> 035 [color = "darkorange" fontcolor = "darkorange" label = "karumijutsu"]
 	395 -> 013
 	395 -> 003
 	396 -> 316

@@ -126,25 +126,7 @@
     <CustomBuild Include="A Chooseable-Path Adventure\To Be or Not To Be.dot">
       <Filter>backup</Filter>
     </CustomBuild>
-    <CustomBuild Include="Fighting Fantasy\City of Thieves.dot">
-      <Filter>Temp</Filter>
-    </CustomBuild>
-    <CustomBuild Include="Fighting Fantasy\Crypt of the Sorcerer.dot">
-      <Filter>Temp</Filter>
-    </CustomBuild>
-    <CustomBuild Include="Fighting Fantasy\Forest of Doom.dot">
-      <Filter>Temp</Filter>
-    </CustomBuild>
     <CustomBuild Include="Fighting Fantasy\Island of the Lizard King.dot">
-      <Filter>Temp</Filter>
-    </CustomBuild>
-    <CustomBuild Include="Fighting Fantasy\Magehunter.dot">
-      <Filter>Temp</Filter>
-    </CustomBuild>
-    <CustomBuild Include="Fighting Fantasy\Night of the Necromancer.dot">
-      <Filter>Temp</Filter>
-    </CustomBuild>
-    <CustomBuild Include="Fighting Fantasy\Stormslayer.dot">
       <Filter>Temp</Filter>
     </CustomBuild>
     <CustomBuild Include="Fighting Fantasy\Sword of the Samurai.dot">

@@ -103,7 +103,7 @@ digraph {
 	}
 
 	subgraph Combat {
-		style = "filled" color = "palegreen2"
+		style = "filled" color = "palegreen"
 		subgraph cluster_MONSTER {
 			label = "MONSTER\n 0/0 0/0"
 			mon1 [label = "\N\n text"]

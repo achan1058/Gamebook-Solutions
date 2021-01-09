@@ -254,24 +254,6 @@
       <FileType>Document</FileType>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
     </CustomBuild>
-    <CustomBuild Include="Fighting Fantasy\Magehunter.dot">
-      <FileType>Document</FileType>
-    </CustomBuild>
-    <CustomBuild Include="Fighting Fantasy\Forest of Doom.dot">
-      <FileType>Document</FileType>
-    </CustomBuild>
-    <CustomBuild Include="Fighting Fantasy\Stormslayer.dot">
-      <FileType>Document</FileType>
-    </CustomBuild>
-    <CustomBuild Include="Fighting Fantasy\Crypt of the Sorcerer.dot">
-      <FileType>Document</FileType>
-    </CustomBuild>
-    <CustomBuild Include="Fighting Fantasy\Night of the Necromancer.dot">
-      <FileType>Document</FileType>
-    </CustomBuild>
-    <CustomBuild Include="Fighting Fantasy\City of Thieves.dot">
-      <FileType>Document</FileType>
-    </CustomBuild>
     <CustomBuild Include="Fighting Fantasy\Sword of the Samurai.dot">
       <FileType>Document</FileType>
     </CustomBuild>
