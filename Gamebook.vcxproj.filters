@@ -114,9 +114,6 @@
     <CustomBuild Include="Give Yourself Goosebumps\16 - Secret Agent Grandma.dot">
       <Filter>backup</Filter>
     </CustomBuild>
-    <CustomBuild Include="Fighting Fantasy\21 - Trial of Champions.dot">
-      <Filter>backup</Filter>
-    </CustomBuild>
     <CustomBuild Include="A Chooseable-Path Adventure\Romeo and or Juliet.dot">
       <Filter>backup</Filter>
     </CustomBuild>
@@ -143,6 +140,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include=".gitignore" />
+    <None Include="Fighting Fantasy\The Forest of Doom.dot">
+      <Filter>Fighting Fantasy</Filter>
+    </None>
+    <None Include="Fighting Fantasy\Freeway Fighter.dot">
+      <Filter>Fighting Fantasy</Filter>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Gamebook.cpp">
