@@ -58,7 +58,7 @@ digraph {
 		2d6+6 gold\l \
 		backpack\l\l \
 		Comments:\l \
-		none\l \
+		Order: item/gold/SK/ST/LK\l \
 		"
 		shape = "box"
 		margin = 0.1]
@@ -104,8 +104,8 @@ digraph {
 
 	subgraph Combat {
 		style = "filled" color = "palegreen"
-		subgraph cluster_MONSTER {
-			label = "MONSTER\n 0/0 0/0"
+		subgraph cluster_00 {
+			label = "Monster\n 0/0\n 0/0"
 			mon1 [label = "\N\n text"]
 			mon2 [shape = "rect" fontcolor = "blue" label = "\N\n text"]
 			mon3 [label = "\N\n text"]
@@ -156,6 +156,7 @@ digraph {
 		key1 [label = "\N\n text"]
 		key2 [label = "\N\n text"]
 		key3 [label = "\N\n text"]
+		key4 [fontcolor = "crimson" label = "\N\n -text"]
 	}
 	
 	subgraph Key_Word {
@@ -174,8 +175,8 @@ digraph {
 
 	mon1 -> mon2 -> mon3 -> mon4 -> mon5 [penwidth = 3]
 	boo1 -> boo2 -> boo3 -> boo4 -> boo5 [penwidth = 3]
-	dam1 -> dam2 -> dam3 -> dam4 -> dam5
-	txt1 -> key1 -> wrd1 -> txt2 -> key2 -> wrd2 -> key3 -> wrd3
+	txt1 -> key1 -> txt2 -> key2 -> key3 -> key4
+	wrd1 -> wrd2 -> wrd3
 	monboo1 -> monboo2 -> monboo3 -> monboo4 -> monboo5
 	mondam1 -> mondam2 -> mondam3 -> mondam4 -> mondam5
 
