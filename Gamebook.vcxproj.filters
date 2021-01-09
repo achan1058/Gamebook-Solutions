@@ -126,11 +126,11 @@
     <CustomBuild Include="A Chooseable-Path Adventure\To Be or Not To Be.dot">
       <Filter>backup</Filter>
     </CustomBuild>
-    <CustomBuild Include="Fighting Fantasy\Island of the Lizard King.dot">
-      <Filter>Temp</Filter>
+    <CustomBuild Include="Fighting Fantasy\old\Island of the Lizard King.dot">
+      <Filter>backup</Filter>
     </CustomBuild>
-    <CustomBuild Include="Fighting Fantasy\Sword of the Samurai.dot">
-      <Filter>Temp</Filter>
+    <CustomBuild Include="Fighting Fantasy\old\Sword of the Samurai.dot">
+      <Filter>backup</Filter>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
