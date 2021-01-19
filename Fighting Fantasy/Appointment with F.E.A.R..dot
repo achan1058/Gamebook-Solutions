@@ -1,0 +1,1294 @@
+digraph {
+	// graph defaults
+	rankdir=LR
+	mclimit=50
+	nodesep=.3 // changes horizontal separation of nodes
+	ranksep=.4 // changes vertical separation of nodes
+	node [height=.7
+		width=.7
+		shape=ellipse
+		margin=0]
+	edge[weight=5]
+	
+	subgraph ShopMenu {
+		node [fontcolor = "purple" shape = "rect" margin = 0.1]
+		menu
+	}
+
+	// a box for a graph label
+	// note that you can override the defaults set above
+	title [label = "Fighting Fantasy --: Title\n\n \
+		Light Green Fill: Benefits\l \
+		Pink Fill: Penalties\l \
+		Red Fill: Death\l \
+		Blue Text: Key Items/Events\l \
+		Red Text: Lost Items\l \
+		Purple Text: Shops\l \
+		Blue Line: Forced Items/Events\l \
+		Light Blue Text/Line: Optional Items/Events\l \
+		Purple Line: Dice Related Events\l \
+		Green Line: Stat Test Passed\l \
+		Brown Line: Stat Test Failed\l \
+		Magenta Line: Combat Related Events\l \
+		Grey Text: Riddle Answer\l \
+		Grey Line: Hidden Option\l \
+		Orange Line: Spells\l \
+		Red Line: Possible Error\l \
+		Gold Fill: Required Nodes\l \
+		Light Blue Fill: Recommended Nodes\l \
+		Gold Outline: Recommended Path\l \
+		Green Box: Combat\l \
+		SK/ST/LK/AT/AR/TM/CW/CL: Skill/Stamina/Luck/Attack Strength/Attack Round/Time/Consecutive Win Round/Consecutive Lose Round\l \
+		?: Chance of this happening, depending on instructions in text\l \
+		*: Special Combat Rules\l \
+		-: Negative Status\l \
+		+: Positive Status\l \
+		^: Damage can be reduced by items\l \
+		@: Take 2 items\l\l \
+		Starts with:\l \
+		Initial Skill: 1d6+6\l \
+		Initial Stamina: 2d6+12\l \
+		Initial Luck: 1d6+6\l\l \
+		skill/stamina/luck potion: +all SK/ST/LK&1ILK\l \
+		10 meal: +4ST\l \
+		sword\l \
+		leather armor\l \
+		lantern\l \
+		tinderbox\l \
+		2d6+6 gold\l \
+		backpack\l\l \
+		Comments:\l \
+		Order: item/gold/SK/ST/LK\l \
+		"
+		shape = "box"
+		margin = 0.1]
+
+	subgraph Required {
+		node [style = "filled" color = "gold" fillcolor = "gold" fontcolor = "blue" shape = "rect"]
+		key3
+		wrd3 [fontcolor = "grey"]
+		boo5
+		dam5
+		monboo5
+		mondam5
+		mon5
+		440 [fontcolor = "black" shape = "octagon"]
+	}
+
+	subgraph Required2 {
+		node [style = "filled" color = "gold2" fillcolor = "gold2" fontcolor = "blue" shape = "rect"]
+		req2
+	}
+
+	subgraph Recommended {
+		node [penwidth = 3 color = "gold"]
+		txt2
+		key2 [shape = "rect" fontcolor = "blue"]
+		wrd2 [shape = "rect" fontcolor = "grey"]
+		boo3 [style = "filled" fillcolor = "greenyellow"]
+		boo4 [style = "filled" fillcolor = "greenyellow"]
+		dam3 [style = "filled" fillcolor = "pink"]
+		dam4 [style = "filled" fillcolor = "pink"]
+		monboo3 [style = "filled" fillcolor = "greenyellow"]
+		monboo4 [style = "filled" fillcolor = "greenyellow"]
+		mondam3 [style = "filled" fillcolor = "pink"]
+		mondam4 [style = "filled" fillcolor = "pink"]
+		mon3
+		mon4
+	}
+	
+	subgraph Optional {
+		node [style = "filled" color = "paleturquoise1" fillcolor = "paleturquoise1" fontcolor = "blue" shape = "rect"]
+		opt
+	}
+
+	subgraph Combat {
+		style = "filled" color = "palegreen"
+		subgraph cluster_00 {
+			label = "Monster\n 0/0\n 0/0"
+			mon1 [label = "\N\n text"]
+			mon2 [shape = "rect" fontcolor = "blue" label = "\N\n text"]
+			mon3 [label = "\N\n text"]
+			mon4 [shape = "rect" fontcolor = "blue" label = "\N\n text"]
+			mon5 [shape = "rect" fontcolor = "blue" label = "\N\n text"]
+			monboo1 [style = "filled" color = "greenyellow" label = "\N\n text"]
+			monboo2 [shape = "rect" style = "filled" color = "greenyellow" fontcolor = "blue" label = "\N\n text"]
+			monboo3 [label = "\N\n text"]
+			monboo4 [shape = "rect" fontcolor = "blue" label = "\N\n text"]
+			monboo5 [shape = "rect" fontcolor = "blue" label = "\N\n text"]
+			mondam1 [style = "filled" color = "pink" label = "\N\n text"]
+			mondam2 [shape = "rect" style = "filled" color = "pink" fontcolor = "blue" label = "\N\n text"]
+			mondam3 [label = "\N\n text"]
+			mondam4 [shape = "rect" fontcolor = "blue" label = "\N\n text"]
+			mondam5 [shape = "rect" fontcolor = "blue" label = "\N\n text"]
+		}
+		
+		subgraph cluster_01 {
+			label = "Chainsaw Bronski\n 8/8"
+			003
+		}
+		
+		subgraph cluster_02 {
+			label = "Assassin\n 7/6"
+			007
+		}
+		
+		subgraph cluster_03 {
+			label = "Illya Karpov\n 8/8"
+			022
+		}
+
+		subgraph cluster_04 {
+			label = "Unknown*"
+			031 [style = "filled" color = "pink" label = "\N\n -2~3ST\n -1LK?\n -1HP?"]
+		}
+		
+		subgraph cluster_05 {
+			label = "Sidney Knox\n 7/6"
+			033
+		}
+		
+		subgraph cluster_06 {
+			label = "Assassin\n 9/8"
+			057
+		}
+		
+		subgraph cluster_07 {
+			label = "Four-Armed Beast 8/6\n Tiger Man 9/5\n Dr Macabre 7/7"
+			078 [style = "filled" color = "greenyellow" label = "\N\n +3HP"]
+		}
+		
+		subgraph cluster_08 {
+			label = "Radiation Dog*\n 7/5\n 6/5\n 7/6\n 7/7"
+			082
+		}
+		
+		subgraph cluster_09 {
+			label = "The Tormentor\n 8/9"
+			084
+		}
+		
+		subgraph cluster_10 {
+			label = "The Titanium Cyborg\n 18/20"
+			087
+		}
+		
+		subgraph cluster_11 {
+			label = "Scarlet Prankster\n 9/8"
+			090
+		}
+
+		subgraph cluster_12 {
+			label = "Mummy\n 10/10"
+			109
+		}
+		
+		subgraph cluster_13 {
+			label = "Radiation Dog*\n 7/5\n 6/5\n 7/6\n 7/7"
+			120
+		}
+		
+		subgraph cluster_14 {
+			label = "Fire Warrior*\n 7/6\n 6/6\n 7/5\n 7/5"
+			133
+		}
+		
+		subgraph cluster_15 {
+			label = "Bodyguard\n Daddy Rich\n 8/9\n 7/8\n 9/8"
+			139 [style = "filled" color = "greenyellow" label = "\N\n +3HP"]
+		}
+		
+		subgraph cluster_16 {
+			label = "Titanium Cyborg\n 9/10"
+			159
+		}
+		
+		subgraph cluster_17 {
+			label = "Creature of Carnage\n 12/14"
+			163
+		}
+		
+		subgraph cluster_18 {
+			label = "Pickpocket\n 7/6"
+			166
+		}
+		
+		subgraph cluster_19 {
+			label = "Tiger Cat\n 9/8"
+			168
+		}
+		
+		subgraph cluster_20 {
+			label = "Assassin\n 9/8"
+			177
+		}
+		
+		subgraph cluster_21 {
+			label = "Assassin\n 9/8"
+			194
+		}
+		
+		subgraph cluster_22 {
+			label = "The Serpent*\n 8/8"
+			196
+		}
+		
+		subgraph cluster_23 {
+			label = "Scarlet Prankster\n 9/8"
+			198
+		}
+		
+		subgraph cluster_24 {
+			label = "Radiation Dog*\n 7/5\n 6/5"
+			213
+		}
+		
+		subgraph cluster_25 {
+			label = "Assassin\n 9/8"
+			236
+		}
+		
+		subgraph cluster_26 {
+			label = "Alchemist\n 8/6\n 7/7\n 7/6"
+			243
+		}
+		
+		subgraph cluster_27 {
+			label = "The Serpent*\n 8/8"
+			250
+		}
+		
+		subgraph cluster_28 {
+			label = "The Devastator\n 14/12"
+			262
+		}
+		
+		subgraph cluster_29 {
+			label = "Fountain Creature\n 10/11"
+			272
+		}
+		
+		subgraph cluster_30 {
+			label = "Tiger Cat\n 9/8"
+			278
+		}
+		
+		subgraph cluster_31 {
+			label = "Android\n 9/11"
+			282
+		}
+		
+		subgraph cluster_32 {
+			label = "Ripper Shark\n 10/8"
+			294
+		}
+		
+		subgraph cluster_33 {
+			label = "Lion\n 8/9\n 7/8"
+			297
+		}
+		
+		subgraph cluster_34 {
+			label = "Titanium Cyborg\n 18/20"
+			298
+		}
+		
+		subgraph cluster_35 {
+			label = "Creature of Carnage\n 12/14"
+			315
+		}
+		
+		subgraph cluster_36 {
+			label = "Fountain Creature\n 10/11"
+			326
+		}
+		
+		subgraph cluster_37 {
+			label = "Unknown*"
+			328 [label = "\N\n -instant kill"]
+		}
+		
+		subgraph cluster_38 {
+			label = "Unknown"
+			332 [label = "\N\n -3ESK*"]
+		}
+		
+		subgraph cluster_39 {
+			label = "Unknown"
+			352 [style = "filled" color = "pink" label = "\N\n -0~4ST?\n -6EST?"]
+		}
+		
+		subgraph cluster_40 {
+			label = "Alchemist\n 7/7\n 7/6"
+			354
+		}
+		
+		subgraph cluster_41 {
+			label = "Unknown\n 7/6"
+			359
+		}
+		
+		subgraph cluster_42 {
+			label = "The Ringmaster\n 8/6"
+			360
+		}
+		
+		subgraph cluster_43 {
+			label = "The Reincarnation\n 10/12"
+			373
+		}
+		
+		subgraph cluster_44 {
+			label = "The Devastator\n 14/12"
+			378
+		}
+		
+		subgraph cluster_45 {
+			label = "Mantrapper\n 8/7"
+			396
+		}
+		
+		subgraph cluster_46 {
+			label = "Radiation Dog*\n 7/5"
+			401
+		}
+		
+		subgraph cluster_47 {
+			label = "Fountain Creature\n 10/11"
+			404
+		}
+		
+		subgraph cluster_48 {
+			label = "Titanium Cyborg\n 9/10"
+			411
+		}
+		
+		subgraph cluster_49 {
+			label = "Tiger Cat\n 9/8"
+			413
+		}
+		
+		subgraph cluster_50 {
+			label = "Sidney Knox*\n 7/6"
+			419
+		}
+		
+		subgraph cluster_51 {
+			label = "Unknown"
+			422 [label = "\N\n -4EST"]
+		}
+		
+		subgraph cluster_52 {
+			label = "Ice Queen\n 7/8"
+			436
+		}
+		
+		subgraph cluster_53 {
+			label = "Alchemist*\n 8/6"
+			437 [label = "\N\n -2AT"]
+		}
+		
+		cbt
+	}
+
+	subgraph Death {
+		node [style = "filled" color = "red"]
+		008
+		032
+		048
+		059
+		136
+		173
+		184
+		230
+		274
+		277
+		292
+		335
+		376
+		384
+		390
+		392
+		414
+		ddt
+	}
+
+	subgraph Boost {
+		node [style = "filled" color = "greenyellow"]
+		002 [shape = "rect" fontcolor = "blue" label = "\N\n executive jet\n egyption crate\n +4HP"]
+		010 [label = "\N\n +6ST"]
+		011 [label = "\N\n +2HP"]
+		016 [shape = "rect" fontcolor = "blue" label = "\N\n Sidney Knox: -40\n +1LK\n +3HP"]
+		018 [label = "\N\n +6ST"]
+		035 [shape = "rect" fontcolor = "blue" label = "\N\n 27th monday\n +2HP"]
+		037 [label = "\N\n +1HP"]
+		038 [shape = "rect" fontcolor = "blue" label = "\N\n Sidney Knox: -40\n +6ST\n +1LK"]
+		063 [label = "\N\n +1ST"]
+		064 [shape = "rect" fontcolor = "blue" label = "\N\n Ice Queen: -20\n +1LK"]
+		074 [label = "\N\n +3HP"]
+		079 [label = "\N\n +2LK"]
+		093 [label = "\N\n +1LK\n +1HP"]
+		103 [label = "\N\n +6ST?"]
+		113 [shape = "rect" fontcolor = "blue" label = "\N\n home appliances\n +6ST\n +1LK"]
+		116 [shape = "rect" fontcolor = "blue" label = "\N\n circuit jammer\n parker airport\n +4HP"]
+		119 [label = "\N\n +3HP"]
+		122 [label = "\N\n +6ST"]
+		124 [shape = "rect" fontcolor = "blue" label = "\N\n Mantrapper: +60\n +1LK\n +2HP"]
+		126 [shape = "rect" fontcolor = "blue" label = "\N\n president: +100\n +1LK"]
+		131 [label = "\N\n +5HP"]
+		137 [shape = "rect" fontcolor = "blue" label = "\N\n fear opposite 35\n +2HP"]
+		138 [label = "\N\n +2HP"]
+		142 [shape = "rect" fontcolor = "blue" label = "\N\n fear clancey bay\n +3HP"]
+		175 [shape = "rect" fontcolor = "blue" label = "\N\n circuit jammer\n +5HP"]
+		186 [shape = "rect" fontcolor = "blue" label = "\N\n circuit jammer\n +4HP"]
+		203 [color = "greenyellow:pink" label = "\N\n -2ST\n +2HP?"]
+		227 [shape = "rect" fontcolor = "blue" label = "\N\n info: beast king zoo\n +4HP"]
+		231 [label = "\N\n +2HP"]
+		238 [shape = "rect" fontcolor = "blue" label = "\N\n lion's cage: +50\n +1LK\n +3HP"]
+		241 [label = "\N\n +4HP"]
+		258 [shape = "rect" fontcolor = "blue" label = "\N\n fear tomorrow\n +6HP"]
+		267 [label = "\N\n +1HP"]
+		281 [shape = "rect" fontcolor = "blue" label = "\N\n Mustapha Kareem: x2\n +1LK"]
+		284 [color = "greenyellow:pink" label = "\N\n &plusmn;?HP?"]
+		285 [label = "\N\n +2HP"]
+		293 [label = "\N\n +6ST"]
+		295 [label = "\N\n +1HP"]
+		300 [shape = "rect" fontcolor = "blue" label = "\N\n Poisoner: -30\n +6ST\n +1LK"]
+		304 [shape = "rect" fontcolor = "blue" label = "\N\n circuit jammer\n +4HP"]
+		307 [color = "greenyellow:pink" label = "\N\n -4ST?\n &plusmn;2HP"]
+		311 [label = "\N\n +6ST"]
+		333 [shape = "rect" fontcolor = "blue" label = "\N\n fear 9am\n +3HP"]
+		336 [label = "\N\n +4HP"]
+		337 [label = "\N\n +6ST"]
+		338 [label = "\N\n -2HP"]
+		350 [label = "\N\n +?HP"]
+		358 [shape = "rect" fontcolor = "blue" label = "\N\n circuit jammer\n +4HP"]
+		364 [shape = "rect" fontcolor = "blue" label = "\N\n fear 11am\n +5HP"]
+		371 [label = "\N\n +3HP"]
+		380 [label = "\N\n +?HP"]
+		389 [color = "greenyellow:pink" label = "\N\n -4ST\n +2HP"]
+		393 [label = "\N\n +1HP"]
+		400 [label = "\N\n +1HP"]
+		431 [label = "\N\n +2HP"]
+		432 [shape = "rect" fontcolor = "blue" label = "\N\n illya karpov\n president: +100\n +2LK\n +2HP"]
+		433 [shape = "rect" fontcolor = "blue" label = "\N\n Ice Queen: -20\n +1LK\n +3HP"]
+		438 [label = "\N\n +6ST"]
+		bst
+		boo1 [label = "\N\n text"]
+		boo2 [shape = "rect" fontcolor = "blue" label = "\N\n text"]
+		boo3 [label = "\N\n text"]
+		boo4 [shape = "rect" fontcolor = "blue" label = "\N\n text"]
+		boo5 [shape = "rect" fontcolor = "blue" label = "\N\n text"]
+	}
+
+	subgraph Damage {
+		node [style = "filled" color = "pink"]
+		005 [label = "\N\n -1SK?\n -2ST"]
+		028 [label = "\N\n -1SK\n -2ST"]
+		099 [label = "\N\n -1ST"]
+		170 [label = "\N\n -4ST??"]
+		180 [label = "\N\n -2ST??"]
+		182 [shape = "rect" fontcolor = "blue" label = "\N\n fear 3ave\n -2ST?\n -1LK"]
+		183 [label = "\N\n -2ST"]
+		200 [label = "\N\n -4ST"]
+		204 [label = "\N\n -1SK\n -3ST"]
+		244 [label = "\N\n -1HP"]
+		261 [label = "\N\n -?ST"]
+		269 [label = "\N\n -1SK?\n -2HP"]
+		275 [shape = "rect" fontcolor = "blue" label = "\N\n fear submarine\n -2ST"]
+		279 [label = "\N\n -2ST"]
+		283 [label = "\N\n -2ST??"]
+		314 [label = "\N\n -2HP"]
+		316 [label = "\N\n -1HP?"]
+		363 [label = "\N\n -?HP"]
+		367 [label = "\N\n -?HP"]
+		383 [label = "\N\n -2HP"]
+		426 [label = "\N\n -2SK"]
+		427 [shape = "rect" fontcolor = "blue" label = "\N\n fear chinese laundry\n +6HP"]
+		ddg
+		dam1 [label = "\N\n text"]
+		dam2 [shape = "rect" fontcolor = "blue" label = "\N\n text"]
+		dam3 [label = "\N\n text"]
+		dam4 [shape = "rect" fontcolor = "blue" label = "\N\n text"]
+		dam5 [shape = "rect" fontcolor = "blue" label = "\N\n text"]
+	}
+
+	subgraph Key_Item {
+		node [fontcolor = "blue" shape = "rect"]
+		kky
+		013 [label = "\N\n merchandise 28th"]
+		020 [label = "\N\n map: 12 street, 2 ave"]
+		081 [label = "\N\n gold watch"]
+		092 [label = "\N\n password: quicksilver"]
+		140 [label = "\N\n circuit jammer"]
+		197 [label = "\N\n captain menagerie:444-5666\n lion cage: +50"]
+		217 [label = "\N\n fear 5th ave"]
+		329 [label = "\N\n fear address 176\n phenolic acid"]
+		key1 [label = "\N\n text"]
+		key2 [label = "\N\n text"]
+		key3 [label = "\N\n text"]
+		key4 [fontcolor = "crimson" label = "\N\n -text"]
+	}
+	
+	subgraph Key_Word {
+		node [fontcolor = "grey" shape = "rect"]
+		wwd
+		083 [label = "\N\n Ice Queen: -20"]
+		088 [label = "\N\n Alchemists: Cleveland Bank, 4am, 128th street 10 ave"]
+		100 [label = "\N\n ocean behemoth"]
+		108 [label = "\N\n Daddy Rich: 113, 58th street"]
+		127 [label = "\N\n Scarlet Prankster: -50"]
+		152 [label = "\N\n Brain Child: Timothy Grant 100th street"]
+		167 [label = "\N\n Smoke: -20"]
+		222 [label = "\N\n Tiger Cat: pussy cat"]
+		246 [label = "\N\n fear 209th street"]
+		264 [label = "\N\n president: +100"]
+		280 [label = "\N\n Tormentor: Richard Storm, Ice Queen: Sylvia Frost, Dr Macabre: Marcus Buletta, rob chemist"]
+		312 [label = "\N\n President Titan City, KMarcus Buletta and Rat-face Flanagan know how attempt on life made"]
+		386 [label = "\N\n Richard Storm, Susan: 555-9999"]
+		wrd1 [label = "\N\n text"]
+		wrd2 [label = "\N\n text"]
+		wrd3 [label = "\N\n text"]
+	}
+	
+	subgraph Shop {
+		node [fontcolor = "purple" shape = "rect"]
+		shp
+		shop1 [label = "\N\n text"]
+	}
+
+	mon1 -> mon2 -> mon3 -> mon4 -> mon5 [penwidth = 3]
+	boo1 -> boo2 -> boo3 -> boo4 -> boo5 [penwidth = 3]
+	txt1 -> key1 -> txt2 -> key2 -> key3 -> key4
+	wrd1 -> wrd2 -> wrd3
+	monboo1 -> monboo2 -> monboo3 -> monboo4 -> monboo5
+	mondam1 -> mondam2 -> mondam3 -> mondam4 -> mondam5
+
+	myTitle -> z001 [penwidth = 3]
+	z001 -> z002 [color = "purple" fontcolor = "purple" label = "1-3"]
+	z001 -> z003 [color = "purple" fontcolor = "purple" label = "4-6"]
+	z002 -> z004 [color = "green" fontcolor = "green" label = "LK"]
+	z002 -> z005 [color = "brown"]
+	z003 -> z006 [dir = "both"]
+	z004 -> z007 [color = "blue" fontcolor = "blue" label = "req"]
+	z004 -> z008 [color = "cyan3" fontcolor = "cyan3" label = "-opt"]
+	z005 -> z009 [color = "grey" fontcolor = "grey" label = "info"]
+	z009 -> z010 [color = "crimson" fontcolor = "crimson" label = "error(?)"]
+	z010 -> z011 [color = "magenta" fontcolor = "magenta" label = "escape"]
+	z011 -> z012 [color = "darkorange" fontcolor = "darkorange" label = "spell"]
+	{
+		rank = same
+		z003
+		z006
+	}
+	title -> 001
+	001 -> 263
+	001 -> 289
+	001 -> 228
+	001 -> 341
+	002 -> 276
+	003 -> 093
+	004 -> 399
+	004 -> 310
+	004 -> 223
+	005 -> 060
+	006 -> 298
+	007 -> 359 [color = "magenta" fontcolor = "magenta" label = "2AR"]
+	009 -> 165
+	009 -> 341
+	009 -> 228
+	010 -> 201
+	010 -> 185
+	011 -> 162
+	012 -> 436
+	013 -> 380
+	014 -> 351
+	014 -> 368
+	015 -> 187
+	015 -> 174
+	015 -> 357
+	016 -> 428
+	017 -> 181
+	018 -> 369
+	018 -> 185
+	019 -> 440
+	020 -> 086
+	021 -> 100
+	021 -> 007
+	022 -> 364
+	023 -> 366
+	023 -> 244
+	024 -> 402 [color = "darkorange" fontcolor = "darkorange" label = "ETS"]
+	024 -> 209 [color = "darkorange" fontcolor = "darkorange" label = "psi-powers"]
+	024 -> 344 [color = "darkorange" fontcolor = "darkorange" label = "energy blast"]
+	024 -> 232
+	025 -> 107
+	026 -> 158
+	026 -> 113
+	027 -> 368
+	028 -> 372 [color = "darkorange" fontcolor = "darkorange" label = "psi-powers"]
+	029 -> 287 [color = "darkorange" fontcolor = "darkorange" label = "psi-powers"]
+	029 -> 203 [color = "darkorange" fontcolor = "darkorange" label = "energy blast"]
+	029 -> 011 [color = "darkorange" fontcolor = "darkorange" label = "super strength"]
+	029 -> 153
+	030 -> ave030
+	030 -> 368
+	031 -> dog
+	033 -> 140
+	034 -> 066
+	034 -> 403
+	034 -> 257
+	035 -> 010
+	036 -> 073
+	037 -> 103
+	038 -> 215
+	039 -> 370
+	039 -> 317
+	040 -> 021
+	040 -> 311
+	041 -> 246 [color = "darkorange" fontcolor = "darkorange" label = "psi-powers"]
+	041 -> 414 [color = "darkorange" fontcolor = "darkorange" label = "super strength"]
+	041 -> 331
+	042 -> 301
+	043 -> 407
+	043 -> 169
+	043 -> 079
+	044 -> 199
+	044 -> 110
+	045 -> 148
+	046 -> date046
+	046 -> 220
+	047 -> 034
+	049 -> 285
+	050 -> ave050
+	050 -> 368
+	051 -> 035 [color = "darkorange" fontcolor = "darkorange" label = "super strength"]
+	051 -> 285
+	052 -> 436
+	053 -> 013
+	053 -> 380
+	054 -> 405 [color = "green" fontcolor = "green" label = "LK"]
+	054 -> 091 [color = "brown"]
+	055 -> 294
+	056 -> 079
+	057 -> 400 [color = "darkorange" fontcolor = "darkorange" label = "energy blast+hit"]
+	057 -> 258
+	058 -> 154
+	058 -> 208
+	060 -> 072
+	060 -> 098
+	061 -> 184
+	061 -> 314
+	062 -> 186 [color = "darkorange" fontcolor = "darkorange" label = "ETS"]
+	062 -> 116 [color = "darkorange" fontcolor = "darkorange" label = "super strength"]
+	062 -> 282 [color = "darkorange" fontcolor = "darkorange" label = "psi-powers"]
+	062 -> 304 [color = "darkorange" fontcolor = "darkorange" label = "energy blast"]
+	063 -> 341
+	064 -> 438
+	065 -> 138
+	066 -> 303
+	067 -> rain067
+	067 -> 111
+	068 -> 351
+	068 -> 368
+	069 -> 119
+	070 -> ave070
+	070 -> 368
+	071 -> 126
+	071 -> 393
+	072 -> 299 [color = "darkorange" fontcolor = "darkorange" label = "ETS"]
+	072 -> 180 [color = "darkorange" fontcolor = "darkorange" label = "energy blast"]
+	072 -> 146 [color = "darkorange" fontcolor = "darkorange" label = "psi-powers"]
+	072 -> 055 [color = "darkorange" fontcolor = "darkorange" label = "super strength"]
+	073 -> 181
+	074 -> 103
+	075 -> 021
+	075 -> 114
+	076 -> 425
+	076 -> 021
+	076 -> 114
+	077 -> clue129
+	077 -> 097
+	078 -> 226
+	079 -> 245
+	079 -> 134
+	080 -> 033
+	081 -> 227
+	082 -> 031 [color = "magenta" fontcolor = "magenta" label = "lose AR"]
+	082 -> 193
+	083 -> 060
+	084 -> 346
+	084 -> 376 [color = "magenta" fontcolor = "magenta" label = "AR>10"]
+	085 -> 332 [color = "darkorange" fontcolor = "darkorange" label = "ETS"]
+	085 -> 422 [color = "darkorange" fontcolor = "darkorange" label = "psi-powers"]
+	085 -> 352 [color = "darkorange" fontcolor = "darkorange" label = "energy blast"]
+	085 -> 373 [color = "darkorange" fontcolor = "darkorange" label = "super strength"]
+	086 -> 015
+	086 -> 202
+	087 -> 411 [color = "blue" fontcolor = "blue" label = "circuit jammer"]
+	087 -> 136 [color = "magenta" fontcolor = "magenta" label = "AR>3"]
+	089 -> 018
+	090 -> 074
+	091 -> 073
+	092 -> 433
+	093 -> 067
+	094 -> 313
+	094 -> 160
+	094 -> 264
+	095 -> 018
+	096 -> 027
+	096 -> 164
+	097 -> 389 [color = "darkorange" fontcolor = "darkorange" label = "psi-powers"]
+	097 -> 307 [color = "darkorange" fontcolor = "darkorange" label = "energy blast"]
+	097 -> 338 [color = "darkorange" fontcolor = "darkorange" label = "super strength"]
+	097 -> 231 [color = "darkorange" fontcolor = "darkorange" label = "ETS"]
+	097 -> 077 [color = "grey" fontcolor = "grey" label = "Ice Queen"]
+	098 -> 410
+	098 -> 118 [color = "grey" fontcolor = "grey" label = "Alchemist"]
+	099 -> 063
+	099 -> 305
+	100 -> 157
+	101 -> 024
+	102 -> 023
+	102 -> 229
+	103 -> 202
+	103 -> 327
+	103 -> 043
+	104 -> 318
+	104 -> 211
+	104 -> 054
+	105 -> 401 [color = "green" fontcolor = "green" label = "LK"]
+	105 -> 213 [color = "brown"]
+	106 -> 086
+	107 -> 342
+	107 -> 097
+	109 -> 002 [color = "magenta" fontcolor = "magenta" label = "EST&le;4"]
+	110 -> 199
+	111 -> 429
+	111 -> 301
+	112 -> 420
+	112 -> 323
+	112 -> 259
+	113 -> 215
+	114 -> 315 [color = "darkorange" fontcolor = "darkorange" label = "super strength"]
+	114 -> 384 [color = "darkorange" fontcolor = "darkorange" label = "psi-powers"]
+	114 -> 022 [color = "darkorange" fontcolor = "darkorange" label = "energy blast"]
+	114 -> 163 [color = "darkorange" fontcolor = "darkorange" label = "ETS"]
+	115 -> timedate115
+	115 -> 220
+	116 -> 075
+	117 -> 079
+	118 -> 437
+	118 -> 309
+	119 -> 319
+	120 -> 350
+	121 -> 236 [color = "darkorange" fontcolor = "darkorange" label = "super strength"]
+	121 -> 057 [color = "darkorange" fontcolor = "darkorange" label = "energy blast"]
+	121 -> 177 [color = "darkorange" fontcolor = "darkorange" label = "psi-powers"]
+	121 -> 194 [color = "darkorange" fontcolor = "darkorange" label = "ETS"]
+	122 -> 021
+	122 -> 425
+	123 -> 018
+	124 -> 067
+	125 -> poisoner125
+	125 -> 412
+	125 -> 097
+	126 -> 435
+	128 -> 172 [color = "darkorange" fontcolor = "darkorange" label = "super strength"]
+	128 -> 210 [color = "darkorange" fontcolor = "darkorange" label = "ETS"]
+	128 -> 243
+	129 -> 436 [color = "darkorange" fontcolor = "darkorange" label = "super strength"]
+	129 -> 182 [color = "darkorange" fontcolor = "darkorange" label = "ETS"]
+	129 -> 052 [color = "darkorange" fontcolor = "darkorange" label = "psi-powers"]
+	129 -> 012 [color = "darkorange" fontcolor = "darkorange" label = "energy blast"]
+	130 -> 298
+	131 -> 040
+	132 -> 082
+	132 -> 120
+	133 -> 380
+	134 -> 219
+	134 -> 085
+	135 -> 240
+	135 -> 270 [color = "grey" fontcolor = "grey" label = "Mustapha Kareem"]
+	137 -> 398
+	138 -> clue138
+	138 -> 071
+	139 -> 073
+	140 -> 125
+	141 -> 051 [color = "grey" fontcolor = "grey" label = "Susan"]
+	142 -> 226
+	143 -> 439
+	143 -> 090
+	143 -> 212
+	144 -> 295 [color = "darkorange" fontcolor = "darkorange" label = "ETS"]
+	144 -> 339
+	145 -> 368
+	146 -> 294
+	147 -> 068 [color = "darkorange" fontcolor = "darkorange" label = "super strength"]
+	147 -> 188 [color = "darkorange" fontcolor = "darkorange" label = "psi-powers"]
+	147 -> 014
+	148 -> 158
+	148 -> 038
+	149 -> 341
+	149 -> 228
+	150 -> 227
+	151 -> 428
+	151 -> 414 [color = "darkorange" fontcolor = "darkorange" label = "super strength"]
+	153 -> 162
+	154 -> 311
+	154 -> falsealarm
+	155 -> 243
+	156 -> 380
+	157 -> 311
+	158 -> 416
+	158 -> 135
+	159 -> 440
+	160 -> 424
+	160 -> 008
+	161 -> 408
+	161 -> 148
+	162 -> 015
+	162 -> 225
+	163 -> 353
+	163 -> 131 [color = "magenta" fontcolor = "magenta" label = "win"]
+	164 -> 368
+	165 -> 036
+	165 -> 054
+	165 -> 181
+	166 -> 296
+	167 -> 398
+	168 -> 124
+	169 -> 322
+	169 -> 288
+	169 -> 250
+	170 -> 314 [color = "magenta" fontcolor = "magenta" label = "escape"]
+	170 -> 431
+	171 -> 371 [color = "darkorange" fontcolor = "darkorange" label = "energy blast"]
+	171 -> 139
+	172 -> 336
+	174 -> 248 [color = "darkorange" fontcolor = "darkorange" label = "super strength"]
+	174 -> 271 [color = "darkorange" fontcolor = "darkorange" label = "ETS"]
+	174 -> 143 [color = "darkorange" fontcolor = "darkorange" label = "psi-powers\n energy blast"]
+	175 -> 125
+	176 -> 049 [color = "green" fontcolor = "green" label = "SK-1"]
+	176 -> 260 [color = "brown"]
+	177 -> 258
+	178 -> 133
+	179 -> 266
+	179 -> 044
+	180 -> 123 [color = "green" fontcolor = "green" label = "SK"]
+	180 -> 255 [color = "brown"]
+	181 -> 284
+	181 -> 410
+	182 -> 241
+	183 -> 275
+	183 -> 060
+	185 -> 166 [color = "green" fontcolor = "green" label = "SK"]
+	185 -> 106 [color = "brown"]
+	186 -> 075
+	187 -> 224 [color = "green" fontcolor = "green" label = "SK"]
+	187 -> 415 [color = "brown"]
+	188 -> 298
+	189 -> 327
+	190 -> 134
+	190 -> 395
+	191 -> 418 [color = "darkorange" fontcolor = "darkorange" label = "ETS"]
+	191 -> 009 [color = "darkorange" fontcolor = "darkorange" label = "psi-powers"]
+	191 -> 149
+	192 -> 262
+	192 -> 319
+	193 -> 120 [color = "blue" fontcolor = "blue" label = "dogs left"]
+	193 -> 350
+	194 -> 258
+	195 -> 348 [color = "darkorange" fontcolor = "darkorange" label = "psi-powers"]
+	195 -> 233
+	195 -> 073
+	196 -> 432
+	197 -> 018
+	198 -> 333
+	199 -> 368
+	200 -> 301
+	201 -> 272 [color = "darkorange" fontcolor = "darkorange" label = "super strength"]
+	201 -> 326 [color = "darkorange" fontcolor = "darkorange" label = "psi-powers"]
+	201 -> 367 [color = "darkorange" fontcolor = "darkorange" label = "energy blast"]
+	201 -> 404 [color = "darkorange" fontcolor = "darkorange" label = "ETS"]
+	202 -> 151
+	202 -> 041
+	202 -> 428
+	203 -> 153 [color = "brown"]
+	203 -> 162 [color = "green" fontcolor = "green" label = "SK"]
+	204 -> 033
+	204 -> 125
+	205 -> 398
+	206 -> 381
+	206 -> 130
+	207 -> 092 [color = "darkorange" fontcolor = "darkorange" label = "ETS"]
+	207 -> 297
+	208 -> 274 [color = "darkorange" fontcolor = "darkorange" label = "psi-powers"]
+	208 -> 427 [color = "darkorange" fontcolor = "darkorange" label = "ETS"]
+	208 -> 392 [color = "darkorange" fontcolor = "darkorange" label = "super strength"]
+	209 -> 286
+	210 -> 406
+	210 -> 243
+	211 -> 195
+	211 -> 233
+	211 -> 073
+	212 -> 187
+	212 -> 103
+	213 -> 031 [color = "magenta" fontcolor = "magenta" label = "lose AR"]
+	213 -> 247
+	214 -> 351
+	214 -> 147
+	215 -> 175 [color = "grey" fontcolor = "grey" label = "Sidney Knox"]
+	215 -> 343
+	215 -> 377
+	216 -> 308
+	216 -> 176
+	217 -> 124
+	218 -> 337
+	218 -> 043
+	219 -> 230
+	219 -> 279
+	220 -> 292
+	221 -> 368
+	223 -> 408
+	223 -> 365
+	224 -> 103
+	225 -> 201
+	225 -> 435
+	226 -> 134
+	226 -> 122
+	227 -> 107
+	228 -> 112
+	228 -> 386
+	229 -> 398
+	231 -> 362
+	231 -> 347
+	231 -> queen231
+	232 -> 316
+	233 -> 073
+	234 -> 103
+	235 -> 025
+	236 -> 258
+	237 -> 132 [color = "purple" fontcolor = "purple" label = "1-4"]
+	237 -> 375 [color = "purple" fontcolor = "purple" label = "5-6"]
+	238 -> 071
+	239 -> 076
+	240 -> 276
+	241 -> 362
+	242 -> 378 [color = "darkorange" fontcolor = "darkorange" label = "super strength"]
+	242 -> 421 [color = "darkorange" fontcolor = "darkorange" label = "ETS"]
+	242 -> 192 [color = "darkorange" fontcolor = "darkorange" label = "psi-powers"]
+	242 -> 363 [color = "darkorange" fontcolor = "darkorange" label = "energy blast"]
+	242 -> 319
+	243 -> 336
+	244 -> 398
+	245 -> 190
+	245 -> 094
+	245 -> 134
+	246 -> 428
+	246 -> 331
+	247 -> 120
+	248 -> 198 [color = "grey" fontcolor = "grey" label = "Scarlet Prankster"]
+	248 -> 143
+	249 -> 292
+	250 -> 432
+	251 -> 181
+	252 -> 390 [color = "darkorange" fontcolor = "darkorange" label = "super strength"]
+	252 -> 059 [color = "darkorange" fontcolor = "darkorange" label = "psi-powers"]
+	252 -> 145 [color = "darkorange" fontcolor = "darkorange" label = "ETS"]
+	252 -> 006 [color = "darkorange" fontcolor = "darkorange" label = "energy blast"]
+	253 -> 161
+	253 -> 345
+	254 -> 125
+	255 -> 294
+	256 -> 024
+	256 -> 101
+	257 -> 303
+	258 -> 311
+	259 -> 183 [color = "darkorange" fontcolor = "darkorange" label = "energy blast"]
+	259 -> 005
+	259 -> 060
+	260 -> 010
+	261 -> 053
+	262 -> 119
+	263 -> 099
+	263 -> 191
+	264 -> 226
+	265 -> 138
+	266 -> 334
+	266 -> 206
+	267 -> 398
+	268 -> poisoner268
+	268 -> 107
+	269 -> 018
+	270 -> 170 [color = "darkorange" fontcolor = "darkorange" label = "energy blast"]
+	270 -> 109 [color = "darkorange" fontcolor = "darkorange" label = "super strength"]
+	270 -> 061
+	271 -> 143
+	272 -> 065 [color = "magenta" fontcolor = "magenta" label = "win 4 AR"]
+	273 -> 034
+	275 -> 060
+	276 -> 242
+	276 -> 038
+	278 -> 413 [color = "darkorange" fontcolor = "darkorange" label = "psi-powers"]
+	278 -> 168 [color = "darkorange" fontcolor = "darkorange" label = "ETS"]
+	278 -> 124
+	279 -> 076
+	281 -> 086
+	282 -> 335 [color = "magenta" fontcolor = "magenta" label = ">2 AR"]
+	283 -> 261 [color = "green" fontcolor = "green" label = "SK"]
+	283 -> 200 [color = "brown"]
+	284 -> 328 [color = "darkorange" fontcolor = "darkorange" label = "ETS"]
+	284 -> 306 [color = "darkorange" fontcolor = "darkorange" label = "energy blast"]
+	284 -> 105 [color = "darkorange" fontcolor = "darkorange" label = "psi-powers"]
+	284 -> 237 [color = "darkorange" fontcolor = "darkorange" label = "super strength"]
+	285 -> 010
+	286 -> 316
+	287 -> 162
+	288 -> 322
+	288 -> 117
+	289 -> 434
+	289 -> 104
+	290 -> meetingtime290
+	290 -> 368
+	291 -> 408
+	291 -> 365
+	293 -> 369
+	293 -> rain293
+	294 -> 095 [color = "magenta" fontcolor = "magenta" label = "lose 4 AR"]
+	294 -> 197
+	295 -> 018
+	296 -> 423 [color = "blue" fontcolor = "blue" label = "+cigarette"]
+	296 -> 281 [color = "blue" fontcolor = "blue" label = "+cassette"]
+	296 -> 020 [color = "blue" fontcolor = "blue" label = "+map"]
+	297 -> 433
+	298 -> 159 [color = "blue" fontcolor = "blue" label = "circuit jammer"]
+	298 -> 136 [color = "magenta" fontcolor = "magenta" label = "AR>3"]
+	299 -> 294
+	300 -> 327
+	301 -> 015
+	301 -> 218
+	302 -> 368
+	303 -> 029
+	304 -> 075
+	305 -> 165
+	305 -> 228
+	305 -> 341
+	306 -> 237
+	307 -> 362
+	308 -> 010
+	309 -> 128 [color = "green" fontcolor = "green" label = "LK"]
+	309 -> 155 [color = "brown"]
+	310 -> 383
+	310 -> 045
+	310 -> 321 [color = "darkorange" fontcolor = "darkorange" label = "psi-powers"]
+	310 -> 360 [color = "grey" fontcolor = "grey" label = "lion cage"]
+	311 -> 349
+	311 -> 070
+	311 -> 290
+	313 -> 325 [color = "darkorange" fontcolor = "darkorange" label = "ETS"]
+	313 -> 173 [color = "darkorange" fontcolor = "darkorange" label = "psi-powers"]
+	313 -> 078 [color = "darkorange" fontcolor = "darkorange" label = "super strength"]
+	313 -> 142 [color = "darkorange" fontcolor = "darkorange" label = "energy blast"]
+	314 -> 276
+	315 -> 131
+	316 -> 438
+	316 -> 064
+	317 -> 417
+	317 -> 252
+	317 -> 096
+	318 -> 233
+	318 -> 195
+	318 -> 073
+	319 -> 134
+	319 -> 245
+	320 -> 150
+	320 -> 025
+	321 -> 383
+	321 -> 148
+	322 -> 288
+	322 -> 117
+	323 -> 060
+	324 -> 075
+	325 -> 078
+	326 -> 065 [color = "magenta" fontcolor = "magenta" label = "win 4 AR"]
+	327 -> 365
+	327 -> 408
+	327 -> 004
+	328 -> 237
+	329 -> 015
+	329 -> 202
+	330 -> 249
+	331 -> mslug331
+	331 -> 428
+	332 -> 373
+	333 -> 103
+	334 -> 044
+	334 -> 368
+	336 -> 372
+	337 -> 079
+	338 -> 362
+	339 -> 269
+	339 -> 426
+	339 -> 089
+	340 -> 262 [color = "brown"]
+	340 -> 069 [color = "green" fontcolor = "green" label = "SK"]
+	341 -> 102
+	341 -> 023
+	341 -> 167
+	342 -> 379 [color = "darkorange" fontcolor = "darkorange" label = "super strength"]
+	342 -> 058
+	343 -> 033 [color = "darkorange" fontcolor = "darkorange" label = "super strength"]
+	343 -> 204 [color = "darkorange" fontcolor = "darkorange" label = "energy blast"]
+	343 -> 419 [color = "darkorange" fontcolor = "darkorange" label = "psi-powers"]
+	343 -> 080 [color = "darkorange" fontcolor = "darkorange" label = "ETS"]
+	344 -> 286
+	345 -> 408
+	345 -> 148
+	346 -> 035
+	347 -> 362
+	348 -> 073
+	349 -> 394
+	349 -> 046
+	349 -> 115
+	350 -> 293
+	350 -> 397
+	351 -> 302
+	352 -> 373
+	352 -> 239 [color = "magenta" fontcolor = "magenta" label = "win"]
+	353 -> 040
+	354 -> 336
+	355 -> 133 [color = "darkorange" fontcolor = "darkorange" label = "super strength"]
+	355 -> 178 [color = "darkorange" fontcolor = "darkorange" label = "psi-powers"]
+	355 -> 156 [color = "darkorange" fontcolor = "darkorange" label = "ETS"]
+	355 -> 283 [color = "darkorange" fontcolor = "darkorange" label = "energy blast"]
+	356 -> 075
+	357 -> 388 [color = "brown"]
+	357 -> 234 [color = "green" fontcolor = "green" label = "SK"]
+	358 -> 125
+	359 -> 374
+	360 -> 207 [color = "magenta" fontcolor = "magenta" label = "AR>1"]
+	361 -> 107
+	362 -> 114
+	362 -> 342
+	363 -> 048
+	364 -> 040
+	365 -> 345
+	365 -> 253
+	366 -> 205 [color = "darkorange" fontcolor = "darkorange" label = "ETS"]
+	366 -> 137 [color = "darkorange" fontcolor = "darkorange" label = "super strength"]
+	366 -> 267
+	367 -> 265
+	368 -> 292
+	369 -> 003
+	369 -> 278
+	370 -> 221
+	370 -> 368
+	371 -> 073
+	372 -> 072
+	372 -> 410
+	373 -> 239
+	374 -> 311
+	375 -> 120
+	377 -> 254
+	377 -> 343
+	378 -> 119
+	379 -> 032
+	379 -> 154
+	380 -> 301
+	380 -> 409
+	381 -> 368
+	382 -> 320 [color = "darkorange" fontcolor = "darkorange" label = "energy blast"]
+	382 -> 081 [color = "darkorange" fontcolor = "darkorange" label = "psi-powers"]
+	382 -> 025 [color = "darkorange" fontcolor = "darkorange" label = "super strength"]
+	382 -> 235 [color = "darkorange" fontcolor = "darkorange" label = "ETS"]
+	383 -> 148
+	385 -> 276
+	386 -> 112
+	386 -> 341
+	387 -> 356
+	387 -> 324
+	388 -> 103
+	389 -> 362
+	389 -> 347
+	391 -> 277
+	391 -> 396
+	393 -> 435
+	394 -> date394
+	394 -> 220
+	395 -> 226
+	396 -> 016
+	397 -> 256
+	398 -> 256
+	398 -> 144
+	399 -> 223
+	399 -> 291
+	400 -> 311
+	401 -> 031 [color = "magenta" fontcolor = "magenta" label = "lose AR"]
+	401 -> 247
+	402 -> 286
+	403 -> 029
+	404 -> 065 [color = "magenta" fontcolor = "magenta" label = "win 4 AR"]
+	405 -> 251
+	405 -> 017
+	405 -> danny405
+	406 -> 372
+	407 -> 196 [color = "green" fontcolor = "green" label = "LK"]
+	407 -> 056 [color = "brown"]
+	408 -> 158
+	408 -> 026
+	409 -> 185
+	409 -> 301
+	410 -> 141 [color = "grey" fontcolor = "grey" label = "Susan"]
+	410 -> 084 [color = "darkorange" fontcolor = "darkorange" label = "super strength"]
+	410 -> 216 [color = "darkorange" fontcolor = "darkorange" label = "psi-powers"]
+	410 -> 176
+	411 -> 019
+	412 -> 361
+	412 -> 268
+	412 -> 382 [color = "grey" fontcolor = "grey" label = "Poisoner"]
+	413 -> 217
+	415 -> 103
+	416 -> 385
+	416 -> 240
+	417 -> 368
+	418 -> 341
+	418 -> 165
+	419 -> 358 [color = "magenta" fontcolor = "magenta" label = "win"]
+	419 -> 033
+	420 -> 083
+	420 -> 323
+	420 -> 259
+	421 -> 340 [color = "blue" fontcolor = "blue" label = "phenolic acid"]
+	421 -> 262
+	421 -> 319
+	422 -> 373
+	423 -> 329 [color = "darkorange" fontcolor = "darkorange" label = "ETS"]
+	423 -> 086
+	424 -> 226
+	425 -> 387
+	425 -> 062
+	426 -> 269
+	426 -> 089
+	427 -> 311
+	428 -> 189
+	428 -> 300
+	429 -> 042
+	429 -> 355
+	430 -> 087 [color = "darkorange" fontcolor = "darkorange" label = "super strength"]
+	430 -> 330 [color = "darkorange" fontcolor = "darkorange" label = "energy blast"]
+	430 -> 249
+	431 -> 276
+	432 -> 079
+	433 -> 148
+	434 -> 181
+	435 -> 015
+	435 -> 202
+	436 -> 241
+	437 -> 028 [color = "brown" fontcolor = "brown" label = "LK"]
+	437 -> 354
+	438 -> 201
+	438 -> 369
+	439 -> 037
+}
