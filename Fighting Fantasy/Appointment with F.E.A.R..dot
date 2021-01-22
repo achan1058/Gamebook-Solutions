@@ -415,12 +415,12 @@ digraph {
 
 	subgraph Boost {
 		node [style = "filled" color = "greenyellow"]
-		002 [shape = "rect" fontcolor = "blue" label = "\N\n executive jet\n egyption crate\n +4HP"]
+		002 [shape = "rect" fontcolor = "blue" label = "\N\n FEAR info\n +4HP" tooltip = "executive jet"]
 		010 [label = "\N\n +6ST"]
 		011 [label = "\N\n +2HP"]
 		016 [shape = "rect" fontcolor = "blue" label = "\N\n Sidney Knox: -40\n +1LK\n +3HP"]
 		018 [label = "\N\n +6ST"]
-		035 [shape = "rect" fontcolor = "blue" label = "\N\n 27th monday\n +2HP"]
+		035 [shape = "rect" fontcolor = "blue" label = "\N\n FEAR date: 27\n +2HP"]
 		037 [label = "\N\n +1HP"]
 		038 [shape = "rect" fontcolor = "blue" label = "\N\n Sidney Knox: -40\n +6ST\n +1LK"]
 		063 [label = "\N\n +1ST"]
@@ -430,7 +430,7 @@ digraph {
 		093 [label = "\N\n +1LK\n +1HP"]
 		103 [label = "\N\n +6ST?"]
 		113 [shape = "rect" fontcolor = "blue" label = "\N\n home appliances\n +6ST\n +1LK"]
-		116 [shape = "rect" fontcolor = "blue" label = "\N\n circuit jammer\n parker airport\n +4HP"]
+		116 [shape = "rect" fontcolor = "blue" label = "\N\n circuit jammer\n FEAR info\n +4HP" tooltip = "Parker Airport"]
 		119 [label = "\N\n +3HP"]
 		122 [label = "\N\n +6ST"]
 		124 [shape = "rect" fontcolor = "blue" label = "\N\n Mantrapper: +60\n +1LK\n +2HP"]
@@ -438,15 +438,15 @@ digraph {
 		131 [label = "\N\n +5HP"]
 		137 [shape = "rect" fontcolor = "blue" label = "\N\n fear opposite 35\n +2HP"]
 		138 [label = "\N\n +2HP"]
-		142 [shape = "rect" fontcolor = "blue" label = "\N\n fear clancey bay\n +3HP"]
+		142 [shape = "rect" fontcolor = "blue" label = "\N\n FEAR info\n +3HP" tooltip = "Clancey Bay"]
 		175 [shape = "rect" fontcolor = "blue" label = "\N\n circuit jammer\n +5HP"]
 		186 [shape = "rect" fontcolor = "blue" label = "\N\n circuit jammer\n +4HP"]
 		203 [color = "greenyellow:pink" label = "\N\n -2ST\n +2HP?"]
-		227 [shape = "rect" fontcolor = "blue" label = "\N\n info: beast king zoo\n +4HP"]
+		227 [label = "\N\n +4HP"]
 		231 [label = "\N\n +2HP"]
 		238 [shape = "rect" fontcolor = "blue" label = "\N\n lion's cage: +50\n +1LK\n +3HP"]
 		241 [label = "\N\n +4HP"]
-		258 [shape = "rect" fontcolor = "blue" label = "\N\n fear tomorrow\n +6HP"]
+		258 [label = "\N\n +6HP"]
 		267 [label = "\N\n +1HP"]
 		281 [shape = "rect" fontcolor = "blue" label = "\N\n Mustapha Kareem: x2\n +1LK"]
 		284 [color = "greenyellow:pink" label = "\N\n &plusmn;?HP?"]
@@ -457,20 +457,20 @@ digraph {
 		304 [shape = "rect" fontcolor = "blue" label = "\N\n circuit jammer\n +4HP"]
 		307 [color = "greenyellow:pink" label = "\N\n -4ST?\n &plusmn;2HP"]
 		311 [label = "\N\n +6ST"]
-		333 [shape = "rect" fontcolor = "blue" label = "\N\n fear 9am\n +3HP"]
+		333 [shape = "rect" fontcolor = "blue" label = "\N\n FEAR time: 9\n +3HP"]
 		336 [label = "\N\n +4HP"]
 		337 [label = "\N\n +6ST"]
-		338 [label = "\N\n -2HP"]
 		350 [label = "\N\n +?HP"]
 		358 [shape = "rect" fontcolor = "blue" label = "\N\n circuit jammer\n +4HP"]
-		364 [shape = "rect" fontcolor = "blue" label = "\N\n fear 11am\n +5HP"]
+		364 [shape = "rect" fontcolor = "blue" label = "\N\n FEAR time: 11\n +5HP"]
 		371 [label = "\N\n +3HP"]
 		380 [label = "\N\n +?HP"]
 		389 [color = "greenyellow:pink" label = "\N\n -4ST\n +2HP"]
 		393 [label = "\N\n +1HP"]
 		400 [label = "\N\n +1HP"]
+		427 [shape = "rect" fontcolor = "blue" label = "\N\n FEAR info\n +6HP" tooltip = "chinese laundry"]
 		431 [label = "\N\n +2HP"]
-		432 [shape = "rect" fontcolor = "blue" label = "\N\n illya karpov\n president: +100\n +2LK\n +2HP"]
+		432 [shape = "rect" fontcolor = "blue" label = "\N\n president: +100\n +2LK\n +2HP"]
 		433 [shape = "rect" fontcolor = "blue" label = "\N\n Ice Queen: -20\n +1LK\n +3HP"]
 		438 [label = "\N\n +6ST"]
 		bst
@@ -484,27 +484,28 @@ digraph {
 	subgraph Damage {
 		node [style = "filled" color = "pink"]
 		005 [label = "\N\n -1SK?\n -2ST"]
+		009 [shape = "rect" fontcolor = "blue" label = "\N\n FEAR info\n -2ST" tooltip = "pawnshop"]
 		028 [label = "\N\n -1SK\n -2ST"]
 		099 [label = "\N\n -1ST"]
 		170 [label = "\N\n -4ST??"]
 		180 [label = "\N\n -2ST??"]
-		182 [shape = "rect" fontcolor = "blue" label = "\N\n fear 3ave\n -2ST?\n -1LK"]
+		182 [shape = "rect" fontcolor = "blue" label = "\N\n FEAR ave: 3\n -2ST?\n -1LK"]
 		183 [label = "\N\n -2ST"]
 		200 [label = "\N\n -4ST"]
 		204 [label = "\N\n -1SK\n -3ST"]
 		244 [label = "\N\n -1HP"]
 		261 [label = "\N\n -?ST"]
 		269 [label = "\N\n -1SK?\n -2HP"]
-		275 [shape = "rect" fontcolor = "blue" label = "\N\n fear submarine\n -2ST"]
+		275 [shape = "rect" fontcolor = "blue" label = "\N\n FEAR info\n -2ST" tooltip = "submarine"]
 		279 [label = "\N\n -2ST"]
 		283 [label = "\N\n -2ST??"]
 		314 [label = "\N\n -2HP"]
 		316 [label = "\N\n -1HP?"]
+		338 [label = "\N\n -2HP"]
 		363 [label = "\N\n -?HP"]
 		367 [label = "\N\n -?HP"]
 		383 [label = "\N\n -2HP"]
 		426 [label = "\N\n -2SK"]
-		427 [shape = "rect" fontcolor = "blue" label = "\N\n fear chinese laundry\n +6HP"]
 		ddg
 		dam1 [label = "\N\n text"]
 		dam2 [shape = "rect" fontcolor = "blue" label = "\N\n text"]
@@ -516,14 +517,14 @@ digraph {
 	subgraph Key_Item {
 		node [fontcolor = "blue" shape = "rect"]
 		kky
-		013 [label = "\N\n merchandise 28th"]
-		020 [label = "\N\n map: 12 street, 2 ave"]
-		081 [label = "\N\n gold watch"]
-		092 [label = "\N\n password: quicksilver"]
+		013 [label = "\N\n FEAR date: 28"]
+		077 [label = "\N\n Ice Queen: 129"]
+		081 [label = "\N\n FEAR info" tooltip = "gold watch"]
+		092 [label = "\N\n FEAR info" tooltip = "quicksilver"]
 		140 [label = "\N\n circuit jammer"]
-		197 [label = "\N\n captain menagerie:444-5666\n lion cage: +50"]
-		217 [label = "\N\n fear 5th ave"]
-		329 [label = "\N\n fear address 176\n phenolic acid"]
+		197 [label = "\N\n lion cage: +50"]
+		217 [label = "\N\n FEAR ave: 5"]
+		329 [label = "\N\n FEAR address: 176\n phenolic acid"]
 		key1 [label = "\N\n text"]
 		key2 [label = "\N\n text"]
 		key3 [label = "\N\n text"]
@@ -534,14 +535,14 @@ digraph {
 		node [fontcolor = "grey" shape = "rect"]
 		wwd
 		083 [label = "\N\n Ice Queen: -20"]
-		088 [label = "\N\n Alchemists: Cleveland Bank, 4am, 128th street 10 ave"]
+		088 [label = "\N\n Alchemists: 128-10"]
 		100 [label = "\N\n ocean behemoth"]
-		108 [label = "\N\n Daddy Rich: 113, 58th street"]
+		108 [label = "\N\n Daddy Rich: 113+58"]
 		127 [label = "\N\n Scarlet Prankster: -50"]
-		152 [label = "\N\n Brain Child: Timothy Grant 100th street"]
+		152 [label = "\N\n Brain Child: 100"]
 		167 [label = "\N\n Smoke: -20"]
 		222 [label = "\N\n Tiger Cat: pussy cat"]
-		246 [label = "\N\n fear 209th street"]
+		246 [label = "\N\n FEAR street: 209"]
 		264 [label = "\N\n president: +100"]
 		280 [label = "\N\n Tormentor: Richard Storm, Ice Queen: Sylvia Frost, Dr Macabre: Marcus Buletta, rob chemist"]
 		312 [label = "\N\n President Titan City, KMarcus Buletta and Rat-face Flanagan know how attempt on life made"]
@@ -615,6 +616,7 @@ digraph {
 	020 -> 086
 	021 -> 100
 	021 -> 007
+	021 -> 121 [color = "grey" fontcolor = "grey" label = "president"]
 	022 -> 364
 	023 -> 366
 	023 -> 244
@@ -631,7 +633,7 @@ digraph {
 	029 -> 203 [color = "darkorange" fontcolor = "darkorange" label = "energy blast"]
 	029 -> 011 [color = "darkorange" fontcolor = "darkorange" label = "super strength"]
 	029 -> 153
-	030 -> ave030
+	030 -> 179 [color = "grey" fontcolor = "grey" label = "FEAR ave+address"]
 	030 -> 368
 	031 -> dog
 	033 -> 140
@@ -656,11 +658,10 @@ digraph {
 	044 -> 199
 	044 -> 110
 	045 -> 148
-	046 -> date046
 	046 -> 220
 	047 -> 034
 	049 -> 285
-	050 -> ave050
+	050 -> 214 [color = "grey" fontcolor = "grey" label = "FEAR street+ave"]
 	050 -> 368
 	051 -> 035 [color = "darkorange" fontcolor = "darkorange" label = "super strength"]
 	051 -> 285
@@ -687,12 +688,13 @@ digraph {
 	064 -> 438
 	065 -> 138
 	066 -> 303
-	067 -> rain067
+	067 -> 047 [color = "grey" fontcolor = "grey" label = "Smoke"]
 	067 -> 111
 	068 -> 351
 	068 -> 368
 	069 -> 119
-	070 -> ave070
+	070 -> 030 [color = "grey" fontcolor = "grey" label = "FEAR ave"]
+	070 -> 050 [color = "grey" fontcolor = "grey" label = "FEAR ave"]
 	070 -> 368
 	071 -> 126
 	071 -> 393
@@ -707,7 +709,6 @@ digraph {
 	076 -> 425
 	076 -> 021
 	076 -> 114
-	077 -> clue129
 	077 -> 097
 	078 -> 226
 	079 -> 245
@@ -774,7 +775,6 @@ digraph {
 	114 -> 384 [color = "darkorange" fontcolor = "darkorange" label = "psi-powers"]
 	114 -> 022 [color = "darkorange" fontcolor = "darkorange" label = "energy blast"]
 	114 -> 163 [color = "darkorange" fontcolor = "darkorange" label = "ETS"]
-	115 -> timedate115
 	115 -> 220
 	116 -> 075
 	117 -> 079
@@ -790,7 +790,6 @@ digraph {
 	122 -> 425
 	123 -> 018
 	124 -> 067
-	125 -> poisoner125
 	125 -> 412
 	125 -> 097
 	126 -> 435
@@ -811,7 +810,7 @@ digraph {
 	135 -> 240
 	135 -> 270 [color = "grey" fontcolor = "grey" label = "Mustapha Kareem"]
 	137 -> 398
-	138 -> clue138
+	138 -> 238 [color = "grey" fontcolor = "grey" label = "Brain Child"]
 	138 -> 071
 	139 -> 073
 	140 -> 125
@@ -836,7 +835,6 @@ digraph {
 	151 -> 414 [color = "darkorange" fontcolor = "darkorange" label = "super strength"]
 	153 -> 162
 	154 -> 311
-	154 -> falsealarm
 	155 -> 243
 	156 -> 380
 	157 -> 311
@@ -964,7 +962,7 @@ digraph {
 	229 -> 398
 	231 -> 362
 	231 -> 347
-	231 -> queen231
+	231 -> 129 [color = "grey" fontcolor = "grey" label = "Ice Queen"]
 	232 -> 316
 	233 -> 073
 	234 -> 103
@@ -1019,7 +1017,6 @@ digraph {
 	266 -> 334
 	266 -> 206
 	267 -> 398
-	268 -> poisoner268
 	268 -> 107
 	269 -> 018
 	270 -> 170 [color = "darkorange" fontcolor = "darkorange" label = "energy blast"]
@@ -1050,18 +1047,18 @@ digraph {
 	288 -> 117
 	289 -> 434
 	289 -> 104
-	290 -> meetingtime290
+	290 -> 039 [color = "grey" fontcolor = "grey" label = "FEAR date+time"]
 	290 -> 368
 	291 -> 408
 	291 -> 365
 	293 -> 369
-	293 -> rain293
+	293 -> 273 [color = "grey" fontcolor = "grey" label = "Smoke"]
 	294 -> 095 [color = "magenta" fontcolor = "magenta" label = "lose 4 AR"]
 	294 -> 197
 	295 -> 018
-	296 -> 423 [color = "blue" fontcolor = "blue" label = "+cigarette"]
-	296 -> 281 [color = "blue" fontcolor = "blue" label = "+cassette"]
-	296 -> 020 [color = "blue" fontcolor = "blue" label = "+map"]
+	296 -> 423
+	296 -> 281
+	296 -> 020
 	297 -> 433
 	298 -> 159 [color = "blue" fontcolor = "blue" label = "circuit jammer"]
 	298 -> 136 [color = "magenta" fontcolor = "magenta" label = "AR>3"]
@@ -1077,6 +1074,7 @@ digraph {
 	305 -> 341
 	306 -> 237
 	307 -> 362
+	307 -> 129 [color = "grey" fontcolor = "grey" label = "Ice Queen"]
 	308 -> 010
 	309 -> 128 [color = "green" fontcolor = "green" label = "LK"]
 	309 -> 155 [color = "brown"]
@@ -1120,7 +1118,7 @@ digraph {
 	329 -> 015
 	329 -> 202
 	330 -> 249
-	331 -> mslug331
+	331 -> 391 [color = "grey" fontcolor = "grey" label = "Mantrapper"]
 	331 -> 428
 	332 -> 373
 	333 -> 103
@@ -1129,6 +1127,7 @@ digraph {
 	336 -> 372
 	337 -> 079
 	338 -> 362
+	338 -> 129 [color = "grey" fontcolor = "grey" label = "Ice Queen"]
 	339 -> 269
 	339 -> 426
 	339 -> 089
@@ -1212,10 +1211,11 @@ digraph {
 	388 -> 103
 	389 -> 362
 	389 -> 347
+	389 -> 129 [color = "grey" fontcolor = "grey" label = "Ice Queen"]
 	391 -> 277
 	391 -> 396
 	393 -> 435
-	394 -> date394
+	394 -> 430 [color = "grey" fontcolor = "grey" label = "FEAR: date+time"]
 	394 -> 220
 	395 -> 226
 	396 -> 016
@@ -1232,7 +1232,7 @@ digraph {
 	404 -> 065 [color = "magenta" fontcolor = "magenta" label = "win 4 AR"]
 	405 -> 251
 	405 -> 017
-	405 -> danny405
+	405 -> 171 [color = "grey" fontcolor = "grey" label = "Daddy Rich"]
 	406 -> 372
 	407 -> 196 [color = "green" fontcolor = "green" label = "LK"]
 	407 -> 056 [color = "brown"]
