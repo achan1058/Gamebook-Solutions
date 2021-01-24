@@ -58,7 +58,7 @@ digraph {
 		2d6+6 gold\l \
 		backpack\l\l \
 		Comments:\l \
-		Order: item/gold/SK/ST/LK\l \
+		Order: item/gold/AT/SK/ST/LK\l \
 		"
 		shape = "box"
 		margin = 0.1]
