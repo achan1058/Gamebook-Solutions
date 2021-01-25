@@ -38,7 +38,7 @@ digraph {
 		Light Blue Fill: Recommended Nodes\l \
 		Gold Outline: Recommended Path\l \
 		Green Box: Combat\l \
-		SK/ST/LK/AT/AR/TM/CW/CL: Skill/Stamina/Luck/Attack Strength/Attack Round/Time/Consecutive Win Round/Consecutive Lose Round\l \
+		SK/ST/LK/FR/AM/AT/AR/TM/CW/CL: Skill/Stamina/Luck/Firepower/Armour/Attack Strength/Attack Round/Time/Consecutive Win Round/Consecutive Lose Round\l \
 		?: Chance of this happening, depending on instructions in text\l \
 		*: Special Combat Rules\l \
 		-: Negative Status\l \
@@ -58,7 +58,7 @@ digraph {
 		2d6+6 gold\l \
 		backpack\l\l \
 		Comments:\l \
-		Order: item/gold/SK/ST/LK\l \
+		Order: item/gold/AT/SK/ST/LK\l \
 		"
 		shape = "box"
 		margin = 0.1]
@@ -72,7 +72,7 @@ digraph {
 		monboo5
 		mondam5
 		mon5
-		ending [fontcolor = "black" shape = "octagon"]
+		380 [fontcolor = "black" shape = "octagon"]
 	}
 
 	subgraph Required2 {
@@ -122,17 +122,241 @@ digraph {
 			mondam4 [shape = "rect" fontcolor = "blue" label = "\N\n text"]
 			mondam5 [shape = "rect" fontcolor = "blue" label = "\N\n text"]
 		}
+
+		subgraph cluster_01 {
+			label = "Thug\n 7/20"
+			048
+		}
+		
+		subgraph cluster_02 {
+			label = "Wolf\n 8/7\n 8/8"
+			120
+		}
+		
+		subgraph cluster_03 {
+			label = "The Animal\n 11/16"
+			269 [label = "\N\n +1DG?\n +1EDG"]
+		}
+		
+		subgraph cluster_04 {
+			label = "Wild Dog\n 7/5"
+			350
+		}
+		
+		subgraph cluster_05 {
+			label = "Wild Dog\n 7/5"
+			374
+		}
+		
 		cbt
+	}
+	
+	subgraph Firearm {
+		style = "filled" color = "orange"
+
+		subgraph cluster_f01 {
+			label = "Biker\n 6/15 7/17"
+			006 [style = "filled" color = "pink" label = "\N\n -1SK?"]
+		}
+		
+		subgraph cluster_f02 {
+			label = "Highwarman\n 8/12"
+			012 [style = "filled" color = "pink" label = "\N\n -1AT\n -1SK?"]
+		}
+		
+		subgraph cluster_f03 {
+			label = "Doom Dog\n 7/13 8/14"
+			102 [style = "filled" color = "pink" label = "\N\n -1SK?"]
+		}
+		
+		subgraph cluster_f04 {
+			label = "Highwarman\n 8/12"
+			116 [style = "filled" color = "pink" label = "\N\n -2AT\n -1SK?\n -1d6ST"]
+		}
+		
+		subgraph cluster_f05 {
+			label = "Outlaw\n 9/12"
+			178 [style = "filled" color = "pink" label = "\N\n -2AT*\n -1SK?"]
+		}
+		
+		subgraph cluster_f06 {
+			label = "Doom Dog\n 7/13 8/14"
+			184 [style = "filled" color = "pink" label = "\N\n -1SK?"]
+		}
+		
+		subgraph cluster_f07 {
+			label = "Bandit\n 7/11"
+			193 [style = "filled" color = "pink" label = "\N\n +1AT\n -1SK?"]
+		}
+		
+		subgraph cluster_f08 {
+			label = "Highwarman\n 8/12"
+			227 [style = "filled" color = "pink" label = "\N\n -1AT\n -1SK?"]
+		}
+		
+		subgraph cluster_f09 {
+			label = "Duellist\n 9/9"
+			291
+		}
+		
+		subgraph cluster_f10 {
+			label = "Biker\n 7/13 5/14"
+			299 [style = "filled" color = "pink" label = "\N\n -1SK?\n -2ST"]
+		}
+		
+		subgraph cluster_f11 {
+			label = "Bandit\n 7/11"
+			368 [style = "filled" color = "pink" label = "\N\n +1AT\n -1SK?"]
+		}
+		
+		frm
+	}
+
+	subgraph Vehicle {
+		style = "filled" color = "violet"
+		
+		subgraph cluster_v01 {
+			label = "Motor Cycle\n 6/9"
+			017 [style = "filled" color = "pink" label = "\N\n -2AT\n -2AM"]
+		}
+		
+		subgraph cluster_v02 {
+			label = "Chariot\n 9/15"
+			049
+		}
+		
+		subgraph cluster_v03 {
+			label = "Yellow Ford\n 8/16"
+			063
+		}
+		
+		subgraph cluster_v04 {
+			label = "Helicopter\n 8/11"
+			083 [label = "\N\n -2ST"]
+		}
+		
+		subgraph cluster_v05 {
+			label = "Motor Cycle\n 6/9"
+			095
+		}
+		
+		subgraph cluster_v06 {
+			label = "Dune Buggy\n 7/10 8/11"
+			115
+		}
+		
+		subgraph cluster_v07 {
+			label = "Station-Wagon\n 10/19"
+			158
+		}
+		
+		subgraph cluster_v08 {
+			label = "Red Chevvy\n 8/15"
+			167
+		}
+		
+		subgraph cluster_v09 {
+			label = "Motor Bike and Sidecar\n 9/8"
+			220
+		}
+		
+		subgraph cluster_v10 {
+			label = "Motor Bike and Sidecar\n 9/8"
+			282
+		}
+		
+		subgraph cluster_v11 {
+			label = "Toyota 9/15\n E-Type Jaguar 10/12\n Commodore 8/13"
+			284
+		}
+		
+		subgraph cluster_v12 {
+			label = "Armoured Car\n 9/20"
+			290
+		}
+		
+		subgraph cluster_v13 {
+			label = "Yellow Ford\n 8/16"
+			294
+		}
+		
+		subgraph cluster_v14 {
+			label = "Toyota 9/15"
+			328
+		}
+		
+		subgraph cluster_v15 {
+			label = "Jeep 9/14"
+			331
+		}
+		
+		subgraph cluster_v16 {
+			label = "Armoured Car\n 9/20"
+			352 [label = "\N\n -2AT"]
+		}
+		
+		veh
 	}
 
 	subgraph Death {
 		node [style = "filled" color = "red"]
+		009
+		018
+		050
+		100
+		123
+		145
+		173
+		202
+		205
+		209
+		226
+		229
+		231
+		237
+		244
+		248
+		260
+		263
+		275
+		289
+		324
+		336
+		343
+		357
+		364
+		366
+		367
 		ddt
 	}
 
 	subgraph Boost {
 		node [style = "filled" color = "greenyellow"]
 		bst
+		004 [label = "\N\n +2ST"]
+		014 [label = "\N\n +3ST"]
+		016 [label = "\N\n +2ST"]
+		020 [label = "\N\n +1LK"]
+		021 [label = "\N\n +2AM"]
+		058 [shape = "rect" fontcolor = "blue" label = "\N\n grenade\n +2ST"]
+		090 [label = "\N\n +1SK\n +4ST"]
+		101 [label = "\N\n +1LK"]
+		110 [label = "\N\n +2ST"]
+		112 [shape = "rect" fontcolor = "blue" label = "\N\n petrol\n +2ST"]
+		141 [shape = "rect" fontcolor = "blue" label = "\N\n pete boost\n +1LK"]
+		169 [label = "\N\n +10AM"]
+		262 [label = "\N\n +1LK"]
+		276 [label = "\N\n +2ST"]
+		277 [shape = "rect" fontcolor = "blue" label = "\N\n bullet-proof vest\n +1SK\n +1LK"]
+		285 [label = "\N\n +1LK"]
+		297 [label = "\N\n +2ST"]
+		306 [shape = "rect" fontcolor = "blue" label = "\N\n petrol\n +1LK"]
+		314 [label = "\N\n +1LK"]
+		319 [label = "\N\n +4ST"]
+		327 [label = "\N\n +1ST"]
+		348 [label = "\N\n +1ST"]
+		359 [shape = "rect" fontcolor = "blue" label = "\N\n petrol\n +1LK"]
+		375 [shape = "rect" fontcolor = "blue" label = "\N\n magnum\n +1SK*"]
 		boo1 [label = "\N\n text"]
 		boo2 [shape = "rect" fontcolor = "blue" label = "\N\n text"]
 		boo3 [label = "\N\n text"]
@@ -143,6 +367,53 @@ digraph {
 	subgraph Damage {
 		node [style = "filled" color = "pink"]
 		ddg
+		002 [shape = "rect" fontcolor = "blue" label = "\N\n plastic tubing\n -1 med-kit\n -1SK\n -2ST"]
+		011 [shape = "rect" fontcolor = "blue" label = "\N\n -rockets\n -all canisters of oil\n -all iron spikes\n -2LK"]
+		029 [label = "\N\n -1d6ST"]
+		030 [label = "\N\n -1d6ST"]
+		033 [label = "\N\n -1ST"]
+		036 [label = "\N\n -1d6ST"]
+		037 [label = "\N\n -2d6AM"]
+		051 [label = "\N\n -1LK"]
+		060 [label = "\N\n -2d6AM"]
+		065 [label = "\N\n -2ST"]
+		072 [label = "\N\n -1d6ST"]
+		075 [label = "\N\n -1LK"]
+		080 [label = "\N\n -1LK"]
+		084 [label = "\N\n -1d6ST"]
+		086 [label = "\N\n -1d6+2ST"]
+		098 [label = "\N\n -2d6AM"]
+		105 [label = "\N\n -2d6AM"]
+		121 [label = "\N\n -2d6AM"]
+		129 [label = "\N\n -2d6AM"]
+		133 [label = "\N\n -2d6AM"]
+		139 [label = "\N\n -2AM"]
+		148 [label = "\N\n -1LK"]
+		152 [label = "\N\n -2AM"]
+		154 [label = "\N\n -2ST"]
+		155 [label = "\N\n -1LK"]
+		168 [label = "\N\n -2d6AM"]
+		186 [label = "\N\n -2d6AM"]
+		191 [label = "\N\n -3d6AM"]
+		195 [label = "\N\n -1d6ST"]
+		201 [label = "\N\n -2d6AM"]
+		212 [label = "\N\n -2AM"]
+		213 [label = "\N\n -2d6AM\n -1LK"]
+		233 [label = "\N\n -1LK"]
+		239 [label = "\N\n -1LK"]
+		241 [shape = "rect" fontcolor = "blue" label = "\N\n rat bite\n -1ST"]
+		245 [label = "\N\n -2ST"]
+		247 [label = "\N\n -2AM"]
+		256 [shape = "rect" fontcolor = "blue" label = "\N\n -1 med-kit\n -1ST"]
+		278 [label = "\N\n -1LK"]
+		279 [label = "\N\n -1d6ST"]
+		287 [label = "\N\n -2AM"]
+		295 [label = "\N\n -1d6+2AM"]
+		301 [label = "\N\n -1LK"]
+		315 [label = "\N\n -2d6AM"]
+		317 [label = "\N\n -1LK"]
+		342 [label = "\N\n -1d6AM"]
+		360 [label = "\N\n -2ST"]
 		dam1 [label = "\N\n text"]
 		dam2 [shape = "rect" fontcolor = "blue" label = "\N\n text"]
 		dam3 [label = "\N\n text"]
@@ -153,6 +424,22 @@ digraph {
 	subgraph Key_Item {
 		node [fontcolor = "blue" shape = "rect"]
 		kky
+		010 [label = "\N\n crowbar"]
+		038 [fontcolor = "crimson" label = "\N\n -1 med-kit"]
+		057 [label = "\N\n info" tooltip = "Joe's Garage has no patrol"]
+		097 [label = "\N\n throwing knife"]
+		122 [label = "\N\n 200 credits\n info" tooltip = "Rockville is bikers home"]
+		131 [label = "\N\n knuckle-dusters\n 150 credits"]
+		146 [label = "\N\n heavy chain"]
+		185 [label = "\N\n wire-cutters"]
+		188 [fontcolor = "crimson" label = "\N\n -petrol?"]
+		206 [label = "\N\n 200 credits\n info" tooltip = "Rockville is bikers home"]
+		208 [label = "\N\n info" tooltip = "watch out for landslides"]
+		240 [fontcolor = "crimson" label = "\N\n -200 credits"]
+		258 [fontcolor = "crimson" label = "\N\n -1 med-kit"]
+		274 [label = "\N\n info" tooltip = "Joe's Garage has no patrol"]
+		288 [label = "\N\n info" tooltip = "Joe's Garage has no patrol"]
+		369 [fontcolor = "crimson" label = "\N\n -200 credits"]
 		key1 [label = "\N\n text"]
 		key2 [label = "\N\n text"]
 		key3 [label = "\N\n text"]
@@ -198,404 +485,555 @@ digraph {
 		z006
 	}
 	title -> 001
-//	001 -> 
-//	002 -> 
-//	003 -> 
-//	004 -> 
-//	005 -> 
-//	006 -> 
-//	007 -> 
-//	008 -> 
-//	009 -> 
-//	010 -> 
-//	011 -> 
-//	012 -> 
-//	013 -> 
-//	014 -> 
-//	015 -> 
-//	016 -> 
-//	017 -> 
-//	018 -> 
-//	019 -> 
-//	020 -> 
-//	021 -> 
-//	022 -> 
-//	023 -> 
-//	024 -> 
-//	025 -> 
-//	026 -> 
-//	027 -> 
-//	028 -> 
-//	029 -> 
-//	030 -> 
-//	031 -> 
-//	032 -> 
-//	033 -> 
-//	034 -> 
-//	035 -> 
-//	036 -> 
-//	037 -> 
-//	038 -> 
-//	039 -> 
-//	040 -> 
-//	041 -> 
-//	042 -> 
-//	043 -> 
-//	044 -> 
-//	045 -> 
-//	046 -> 
-//	047 -> 
-//	048 -> 
-//	049 -> 
-//	050 -> 
-//	051 -> 
-//	052 -> 
-//	053 -> 
-//	054 -> 
-//	055 -> 
-//	056 -> 
-//	057 -> 
-//	058 -> 
-//	059 -> 
-//	060 -> 
-//	061 -> 
-//	062 -> 
-//	063 -> 
-//	064 -> 
-//	065 -> 
-//	066 -> 
-//	067 -> 
-//	068 -> 
-//	069 -> 
-//	070 -> 
-//	071 -> 
-//	072 -> 
-//	073 -> 
-//	074 -> 
-//	075 -> 
-//	076 -> 
-//	077 -> 
-//	078 -> 
-//	079 -> 
-//	080 -> 
-//	081 -> 
-//	082 -> 
-//	083 -> 
-//	084 -> 
-//	085 -> 
-//	086 -> 
-//	087 -> 
-//	088 -> 
-//	089 -> 
-//	090 -> 
-//	091 -> 
-//	092 -> 
-//	093 -> 
-//	094 -> 
-//	095 -> 
-//	096 -> 
-//	097 -> 
-//	098 -> 
-//	099 -> 
-//	100 -> 
-//	101 -> 
-//	102 -> 
-//	103 -> 
-//	104 -> 
-//	105 -> 
-//	106 -> 
-//	107 -> 
-//	108 -> 
-//	109 -> 
-//	110 -> 
-//	111 -> 
-//	112 -> 
-//	113 -> 
-//	114 -> 
-//	115 -> 
-//	116 -> 
-//	117 -> 
-//	118 -> 
-//	119 -> 
-//	120 -> 
-//	121 -> 
-//	122 -> 
-//	123 -> 
-//	124 -> 
-//	125 -> 
-//	126 -> 
-//	127 -> 
-//	128 -> 
-//	129 -> 
-//	130 -> 
-//	131 -> 
-//	132 -> 
-//	133 -> 
-//	134 -> 
-//	135 -> 
-//	136 -> 
-//	137 -> 
-//	138 -> 
-//	139 -> 
-//	140 -> 
-//	141 -> 
-//	142 -> 
-//	143 -> 
-//	144 -> 
-//	145 -> 
-//	146 -> 
-//	147 -> 
-//	148 -> 
-//	149 -> 
-//	150 -> 
-//	151 -> 
-//	152 -> 
-//	153 -> 
-//	154 -> 
-//	155 -> 
-//	156 -> 
-//	157 -> 
-//	158 -> 
-//	159 -> 
-//	160 -> 
-//	161 -> 
-//	162 -> 
-//	163 -> 
-//	164 -> 
-//	165 -> 
-//	166 -> 
-//	167 -> 
-//	168 -> 
-//	169 -> 
-//	170 -> 
-//	171 -> 
-//	172 -> 
-//	173 -> 
-//	174 -> 
-//	175 -> 
-//	176 -> 
-//	177 -> 
-//	178 -> 
-//	179 -> 
-//	180 -> 
-//	181 -> 
-//	182 -> 
-//	183 -> 
-//	184 -> 
-//	185 -> 
-//	186 -> 
-//	187 -> 
-//	188 -> 
-//	189 -> 
-//	190 -> 
-//	191 -> 
-//	192 -> 
-//	193 -> 
-//	194 -> 
-//	195 -> 
-//	196 -> 
-//	197 -> 
-//	198 -> 
-//	199 -> 
-//	200 -> 
-//	201 -> 
-//	202 -> 
-//	203 -> 
-//	204 -> 
-//	205 -> 
-//	206 -> 
-//	207 -> 
-//	208 -> 
-//	209 -> 
-//	210 -> 
-//	211 -> 
-//	212 -> 
-//	213 -> 
-//	214 -> 
-//	215 -> 
-//	216 -> 
-//	217 -> 
-//	218 -> 
-//	219 -> 
-//	220 -> 
-//	221 -> 
-//	222 -> 
-//	223 -> 
-//	224 -> 
-//	225 -> 
-//	226 -> 
-//	227 -> 
-//	228 -> 
-//	229 -> 
-//	230 -> 
-//	231 -> 
-//	232 -> 
-//	233 -> 
-//	234 -> 
-//	235 -> 
-//	236 -> 
-//	237 -> 
-//	238 -> 
-//	239 -> 
-//	240 -> 
-//	241 -> 
-//	242 -> 
-//	243 -> 
-//	244 -> 
-//	245 -> 
-//	246 -> 
-//	247 -> 
-//	248 -> 
-//	249 -> 
-//	250 -> 
-//	251 -> 
-//	252 -> 
-//	253 -> 
-//	254 -> 
-//	255 -> 
-//	256 -> 
-//	257 -> 
-//	258 -> 
-//	259 -> 
-//	260 -> 
-//	261 -> 
-//	262 -> 
-//	263 -> 
-//	264 -> 
-//	265 -> 
-//	266 -> 
-//	267 -> 
-//	268 -> 
-//	269 -> 
-//	270 -> 
-//	271 -> 
-//	272 -> 
-//	273 -> 
-//	274 -> 
-//	275 -> 
-//	276 -> 
-//	277 -> 
-//	278 -> 
-//	279 -> 
-//	280 -> 
-//	281 -> 
-//	282 -> 
-//	283 -> 
-//	284 -> 
-//	285 -> 
-//	286 -> 
-//	287 -> 
-//	288 -> 
-//	289 -> 
-//	290 -> 
-//	291 -> 
-//	292 -> 
-//	293 -> 
-//	294 -> 
-//	295 -> 
-//	296 -> 
-//	297 -> 
-//	298 -> 
-//	299 -> 
-//	300 -> 
-//	301 -> 
-//	302 -> 
-//	303 -> 
-//	304 -> 
-//	305 -> 
-//	306 -> 
-//	307 -> 
-//	308 -> 
-//	309 -> 
-//	310 -> 
-//	311 -> 
-//	312 -> 
-//	313 -> 
-//	314 -> 
-//	315 -> 
-//	316 -> 
-//	317 -> 
-//	318 -> 
-//	319 -> 
-//	320 -> 
-//	321 -> 
-//	322 -> 
-//	323 -> 
-//	324 -> 
-//	325 -> 
-//	326 -> 
-//	327 -> 
-//	328 -> 
-//	329 -> 
-//	330 -> 
-//	331 -> 
-//	332 -> 
-//	333 -> 
-//	334 -> 
-//	335 -> 
-//	336 -> 
-//	337 -> 
-//	338 -> 
-//	339 -> 
-//	340 -> 
-//	341 -> 
-//	342 -> 
-//	343 -> 
-//	344 -> 
-//	345 -> 
-//	346 -> 
-//	347 -> 
-//	348 -> 
-//	349 -> 
-//	350 -> 
-//	351 -> 
-//	352 -> 
-//	353 -> 
-//	354 -> 
-//	355 -> 
-//	356 -> 
-//	357 -> 
-//	358 -> 
-//	359 -> 
-//	360 -> 
-//	361 -> 
-//	362 -> 
-//	363 -> 
-//	364 -> 
-//	365 -> 
-//	366 -> 
-//	367 -> 
-//	368 -> 
-//	369 -> 
-//	370 -> 
-//	371 -> 
-//	372 -> 
-//	373 -> 
-//	374 -> 
-//	375 -> 
-//	376 -> 
-//	377 -> 
-//	378 -> 
-//	379 -> 
-//	380 -> 
-//	381 -> 
-//	382 -> 
-//	383 -> 
-//	384 -> 
-//	385 -> 
-//	386 -> 
-//	387 -> 
-//	388 -> 
-//	389 -> 
-//	390 -> 
-//	391 -> 
-//	392 -> 
-//	393 -> 
-//	394 -> 
-//	395 -> 
-//	396 -> 
-//	397 -> 
-//	398 -> 
-//	399 -> 
-//	400 -> 
+	001 -> 126
+	001 -> 034
+	002 -> 013
+	003 -> 354 [color = "green" fontcolor = "green" label = "LK"]
+	003 -> 247 [color = "brown"]
+	004 -> 254
+	005 -> 241
+	005 -> 218
+	006 -> 307
+	007 -> 319 [color = "green" fontcolor = "green" label = "LK"]
+	007 -> 136 [color = "brown"]
+	008 -> 340
+	010 -> 264
+	010 -> 359
+	011 -> 216
+	012 -> 131
+	013 -> 127 [color = "cyan3" fontcolor = "cyan3" label = "-iron spikes"]
+	013 -> 361 [color = "cyan3" fontcolor = "cyan3" label = "-canister of oil"]
+	013 -> 282
+	014 -> 260
+	014 -> 217
+	015 -> 169 [color = "cyan3" fontcolor = "cyan3" label = "-200 credits"]
+	015 -> 259
+	016 -> 026
+	016 -> 254
+	017 -> 103
+	019 -> 119
+	020 -> 111
+	021 -> 221
+	022 -> 311
+	022 -> 203
+	023 -> 137 [color = "green" fontcolor = "green" label = "SK"]
+	023 -> 342 [color = "brown"]
+	024 -> 300
+	024 -> 059
+	025 -> 100
+	026 -> 260
+	026 -> 217
+	027 -> 139
+	028 -> 141 [color = "cyan3" fontcolor = "cyan3" label = "-2 med-kit\n -100 credits"]
+	028 -> 088
+	029 -> 022
+	030 -> 074 [color = "green" fontcolor = "green" label = "SK+1d6 &ge; 1d6+7"]
+	030 -> 226 [color = "brown"]
+	031 -> 262
+	031 -> 353
+	032 -> 076 [color = "green" fontcolor = "green" label = "LK"]
+	032 -> 160 [color = "brown"]
+	033 -> 047
+	034 -> 302
+	034 -> 167
+	035 -> 379 [color = "green" fontcolor = "green" label = "SK+1d6 &ge; 1d6+8"]
+	035 -> 051 [color = "brown"]
+	036 -> 368
+	037 -> 261
+	038 -> 176
+	038 -> 374
+	039 -> 171 [color = "green" fontcolor = "green" label = "LK"]
+	039 -> 029 [color = "brown"]
+	040 -> 081 [color = "green" fontcolor = "green" label = "SK&ge;6"]
+	040 -> 296 [color = "brown"]
+	041 -> 165
+	041 -> 077
+	042 -> 161 [color = "green" fontcolor = "green" label = "SK"]
+	042 -> 186 [color = "brown"]
+	043 -> 175 [color = "green" fontcolor = "green" label = "LK"]
+	043 -> 201 [color = "brown"]
+	044 -> 273 [color = "blue" fontcolor = "blue" label = "knuckle-dusters"]
+	044 -> 214
+	045 -> 304 [color = "green" fontcolor = "green" label = "LK"]
+	045 -> 060 [color = "brown"]
+	046 -> 310 [color = "blue" fontcolor = "blue" label = "petrol"]
+	046 -> 364
+	047 -> 117
+	047 -> 023
+	048 -> 138 [color = "magenta" fontcolor = "magenta" label = "win"]
+	048 -> 100 [color = "magenta" fontcolor = "magenta" label = "lose"]
+	049 -> 091
+	051 -> 232
+	052 -> 164
+	052 -> 190
+	053 -> 078
+	053 -> 045
+	054 -> 104
+	054 -> 118
+	055 -> 110 [color = "purple" fontcolor = "purple" label = "1-3"]
+	055 -> 014 [color = "purple" fontcolor = "purple" label = "4-6"]
+	056 -> 198
+	057 -> 034
+	058 -> 150
+	059 -> 073 [color = "green" fontcolor = "green" label = "LK"]
+	059 -> 121 [color = "brown"]
+	060 -> 135
+	061 -> 272
+	062 -> 151
+	063 -> 334 [color = "magenta" fontcolor = "magenta" label = "AR>4"]
+	064 -> 242 [color = "green" fontcolor = "green" label = "LK"]
+	064 -> 313 [color = "brown"]
+	065 -> 207
+	066 -> 270
+	066 -> 159
+	067 -> 200 [color = "green" fontcolor = "green" label = "SK"]
+	067 -> 248 [color = "brown"]
+	068 -> 254
+	069 -> 090
+	070 -> 062 [color = "green" fontcolor = "green" label = "SK"]
+	070 -> 133 [color = "brown"]
+	071 -> 172 [color = "green" fontcolor = "green" label = "LK"]
+	071 -> 037 [color = "brown"]
+	072 -> 233
+	073 -> 207
+	073 -> 330
+	074 -> 275 [color = "blue" fontcolor = "blue" label = "rat bite"]
+	074 -> 380
+	075 -> 167
+	076 -> 198
+	077 -> 290 [color = "green" fontcolor = "green" label = "LK"]
+	077 -> 352 [color = "brown"]
+	078 -> 199 [color = "cyan3" fontcolor = "cyan3" label = "-rocket"]
+	078 -> 377
+	078 -> 045
+	079 -> 281
+	079 -> 150
+	080 -> 232
+	081 -> 218
+	081 -> 335
+	082 -> 039 [color = "green" fontcolor = "green" label = "LK"]
+	082 -> 244 [color = "brown"]
+	083 -> 305
+	084 -> 258
+	085 -> 107 [color = "green" fontcolor = "green" label = "ST&ge;10"]
+	085 -> 326 [color = "brown"]
+	086 -> 038 [color = "cyan3" fontcolor = "cyan3" label = "-med-kit"]
+	086 -> 256
+	087 -> 100
+	088 -> 177
+	088 -> 271
+	089 -> 034
+	090 -> 147 [color = "green" fontcolor = "green" label = "SK"]
+	090 -> 018 [color = "brown"]
+	091 -> 230
+	091 -> 301
+	092 -> 272
+	093 -> 268 [color = "green" fontcolor = "green" label = "LK"]
+	093 -> 178 [color = "brown"]
+	094 -> 328 [color = "blue" fontcolor = "blue" label = "iron spikes/\n oil spray"]
+	094 -> 284
+	095 -> 249
+	096 -> 180 [color = "blue" fontcolor = "blue" label = "can of petrol"]
+	096 -> 364
+	097 -> 215
+	098 -> 294
+	099 -> 021
+	099 -> 221
+	101 -> 303
+	102 -> 154
+	103 -> 206
+	103 -> 346
+	104 -> 306 [color = "blue" fontcolor = "blue" label = "plastic tubing"]
+	104 -> 187
+	105 -> 292
+	106 -> 047
+	107 -> 158
+	108 -> 089
+	109 -> 277 [color = "cyan3" fontcolor = "cyan3" label = "crowbar"]
+	109 -> 049
+	110 -> 254
+	111 -> 044
+	111 -> 156
+	111 -> 228
+	112 -> 252
+	112 -> 353
+	113 -> 158
+	114 -> 092
+	115 -> 194
+	116 -> 131
+	117 -> 189
+	118 -> 099 [color = "blue" fontcolor = "blue" label = "petrol"]
+	118 -> 364
+	119 -> 272
+	120 -> 286
+	121 -> 134
+	122 -> 346
+	124 -> 203
+	124 -> 344
+	125 -> 349 [color = "green" fontcolor = "green" label = "SK"]
+	125 -> 202 [color = "brown"]
+	126 -> 274
+	126 -> 155
+	127 -> 373 [color = "purple" fontcolor = "purple" label = "1-4"]
+	127 -> 220 [color = "purple" fontcolor = "purple" label = "5-6"]
+	128 -> 312 [color = "cyan3" fontcolor = "cyan3" label = "-iron spikes"]
+	128 -> 165 [color = "cyan3" fontcolor = "cyan3" label = "-oil spray"]
+	128 -> 077
+	129 -> 093
+	130 -> 314
+	130 -> 071
+	131 -> 022
+	132 -> 275 [color = "blue" fontcolor = "blue" label = "rat bite"]
+	132 -> 380
+	133 -> 151
+	134 -> 207
+	134 -> 330
+	135 -> 193 [color = "green" fontcolor = "green" label = "SK"]
+	135 -> 036 [color = "brown"]
+	136 -> 032
+	137 -> 281
+	137 -> 150
+	138 -> 075
+	138 -> 146
+	139 -> 008 [color = "green" fontcolor = "green" label = "SK"]
+	139 -> 287 [color = "brown"]
+	140 -> 023
+	141 -> 088
+	142 -> 299 [color = "green" fontcolor = "green" label = "LK"]
+	142 -> 025 [color = "brown"]
+	143 -> 096
+	144 -> 068 [color = "green" fontcolor = "green" label = "SK"]
+	144 -> 168 [color = "brown"]
+	146 -> 167
+	147 -> 235 [color = "green" fontcolor = "green" label = "LK"]
+	147 -> 279 [color = "brown"]
+	148 -> 354 [color = "green" fontcolor = "green" label = "LK"]
+	148 -> 247 [color = "brown"]
+	149 -> 225
+	149 -> 114
+	150 -> 046
+	150 -> 298
+	151 -> 179
+	151 -> 362
+	152 -> 139
+	153 -> 225
+	154 -> 245 [color = "purple" fontcolor = "purple" label = "1-2"]
+	154 -> 376 [color = "purple" fontcolor = "purple" label = "3-6"]
+	155 -> 219
+	155 -> 333
+	156 -> 207
+	157 -> 222 [color = "green" fontcolor = "green" label = "LK"]
+	157 -> 315 [color = "brown"]
+	158 -> 067 [color = "magenta" fontcolor = "magenta" label = "AR>3"]
+	159 -> 341
+	160 -> 293
+	160 -> 367
+	161 -> 128
+	162 -> 094 [color = "green" fontcolor = "green" label = "SK"]
+	162 -> 123 [color = "brown"]
+	163 -> 157
+	163 -> 045
+	164 -> 132 [color = "green" fontcolor = "green" label = "SK+1d6 &ge; 1d6+7"]
+	164 -> 205 [color = "brown"]
+	165 -> 234 [color = "purple" fontcolor = "purple" label = "1-5"]
+	165 -> 280 [color = "purple" fontcolor = "purple" label = "6"]
+	166 -> 253
+	166 -> 013
+	167 -> 188
+	168 -> 327
+	169 -> 259
+	170 -> 363 [color = "green" fontcolor = "green" label = "SK"]
+	170 -> 087 [color = "brown"]
+	171 -> 022
+	172 -> 351
+	174 -> 218
+	174 -> 335
+	175 -> 340
+	176 -> 108 [color = "green" fontcolor = "green" label = "SK"]
+	176 -> 350 [color = "brown"]
+	177 -> 046
+	178 -> 375
+	179 -> 142
+	179 -> 215
+	180 -> 243
+	181 -> 047
+	182 -> 227 [color = "green" fontcolor = "green" label = "LK"]
+	182 -> 116 [color = "brown"]
+	183 -> 043
+	183 -> 152
+	184 -> 069
+	185 -> 072
+	185 -> 246
+	186 -> 348
+	187 -> 118
+	188 -> 341
+	188 -> 066
+	189 -> 024
+	189 -> 207
+	190 -> 345 [color = "green" fontcolor = "green" label = "LK"]
+	190 -> 030 [color = "brown"]
+	191 -> 292
+	192 -> 100
+	193 -> 064
+	194 -> 257
+	194 -> 211
+	195 -> 182
+	195 -> 356
+	196 -> 351
+	197 -> 004
+	197 -> 321
+	197 -> 144
+	198 -> 085 [color = "blue" fontcolor = "blue" label = "wire-cutters"]
+	198 -> 255
+	199 -> 262
+	199 -> 353
+	200 -> 269
+	200 -> 102
+	201 -> 266
+	203 -> 372 [color = "cyan3" fontcolor = "cyan3" label = "-rocket"]
+	203 -> 317
+	203 -> 278
+	204 -> 207
+	206 -> 346
+	207 -> 028
+	207 -> 088
+	208 -> 196
+	210 -> 054 [color = "magenta" fontcolor = "magenta" label = "win race"]
+	210 -> 322 [color = "magenta" fontcolor = "magenta" label = "lose race"]
+	211 -> 011
+	211 -> 083
+	212 -> 283
+	212 -> 006
+	213 -> 294
+	214 -> 192 [color = "purple" fontcolor = "purple" label = "1-4"]
+	214 -> 347 [color = "purple" fontcolor = "purple" label = "5-6"]
+	215 -> 149
+	215 -> 010
+	216 -> 243
+	217 -> 285 [color = "green" fontcolor = "green" label = "SK"]
+	217 -> 050 [color = "brown"]
+	218 -> 052 [color = "green" fontcolor = "green" label = "SK"]
+	218 -> 324 [color = "brown"]
+	219 -> 288 [color = "green" fontcolor = "green" label = "LK"]
+	219 -> 236 [color = "brown"]
+	220 -> 143
+	221 -> 007 [color = "green" fontcolor = "green" label = "LK"]
+	221 -> 331 [color = "brown"]
+	222 -> 053
+	223 -> 104
+	223 -> 118
+	224 -> 207
+	225 -> 197 [color = "blue" fontcolor = "blue" label = "petrol"]
+	225 -> 364
+	227 -> 131
+	228 -> 273 [color = "blue" fontcolor = "blue" label = "knuckle-dusters"]
+	228 -> 214
+	230 -> 015
+	230 -> 259
+	232 -> 207
+	233 -> 185
+	233 -> 246
+	234 -> 047
+	235 -> 040
+	236 -> 333
+	238 -> 119
+	239 -> 232
+	240 -> 003 [color = "green" fontcolor = "green" label = "SK"]
+	240 -> 148 [color = "brown"]
+	241 -> 218
+	242 -> 119
+	243 -> 109
+	243 -> 049
+	245 -> 360 [color = "purple" fontcolor = "purple" label = "1-2"]
+	245 -> 376 [color = "purple" fontcolor = "purple" label = "3-6"]
+	246 -> 112
+	246 -> 353
+	247 -> 183
+	247 -> 027
+	249 -> 206
+	249 -> 163
+	250 -> 192 [color = "purple" fontcolor = "purple" label = "1-4"]
+	250 -> 347 [color = "purple" fontcolor = "purple" label = "5-6"]
+	251 -> 223 [color = "blue" fontcolor = "blue" label = "-spare wheel"]
+	251 -> 343
+	252 -> 185
+	252 -> 072
+	253 -> 002 [color = "blue" fontcolor = "blue" label = "-med-kit"]
+	253 -> 357
+	254 -> 129 [color = "purple" fontcolor = "purple" label = "1-3"]
+	254 -> 101 [color = "purple" fontcolor = "purple" label = "4-6"]
+	255 -> 339 [color = "green" fontcolor = "green" label = "LK"]
+	255 -> 145 [color = "brown"]
+	256 -> 034
+	257 -> 337
+	257 -> 009
+	258 -> 297
+	258 -> 144
+	259 -> 369 [color = "cyan3" fontcolor = "cyan3" label = "-200 credit"]
+	259 -> 291
+	261 -> 351
+	262 -> 112
+	262 -> 252
+	262 -> 353
+	264 -> 149
+	265 -> 104
+	265 -> 118
+	266 -> 139
+	267 -> 195
+	267 -> 022
+	268 -> 303
+	269 -> 355
+	270 -> 070 [color = "green" fontcolor = "green" label = "SK"]
+	270 -> 231 [color = "brown"]
+	271 -> 166
+	271 -> 013
+	272 -> 323 [color = "blue" fontcolor = "blue" label = "petrol"]
+	272 -> 364
+	273 -> 170 [color = "green" fontcolor = "green" label = "LK"]
+	273 -> 250 [color = "brown"]
+	274 -> 034
+	276 -> 128
+	277 -> 049
+	278 -> 311
+	279 -> 040
+	280 -> 077
+	281 -> 058
+	281 -> 150
+	282 -> 143
+	283 -> 100
+	284 -> 265
+	285 -> 254
+	286 -> 218
+	287 -> 340
+	288 -> 034
+	290 -> 106
+	291 -> 208 [color = "magenta" fontcolor = "magenta" label = "AR>1"]
+	292 -> 031 [color = "blue" fontcolor = "blue" label = "-rocket"]
+	292 -> 173
+	293 -> 056 [color = "blue" fontcolor = "blue" label = "knuckle-dusters"]
+	293 -> 125
+	294 -> 334 [color = "magenta" fontcolor = "magenta" label = "AR>4"]
+	295 -> 122 [color = "green" fontcolor = "green" label = "LK"]
+	295 -> 329 [color = "brown"]
+	296 -> 174 [color = "blue" fontcolor = "blue" label = "bullet-proof vest"]
+	296 -> 263
+	297 -> 026
+	297 -> 254
+	298 -> 271
+	299 -> 097
+	300 -> 240 [color = "cyan3" fontcolor = "cyan3" label = "-200 credits"]
+	300 -> 224
+	301 -> 251
+	301 -> 237
+	302 -> 209
+	302 -> 048
+	303 -> 140
+	303 -> 189
+	304 -> 238 [color = "green" fontcolor = "green" label = "LK"]
+	304 -> 370 [color = "brown"]
+	305 -> 216
+	306 -> 118
+	307 -> 206
+	307 -> 346
+	308 -> 286
+	309 -> 157
+	309 -> 045
+	310 -> 115
+	311 -> 229
+	311 -> 124
+	312 -> 181 [color = "green" fontcolor = "green" label = "LK"]
+	312 -> 041 [color = "brown"]
+	313 -> 019 [color = "blue" fontcolor = "blue" label = "-spare wheel"]
+	313 -> 336
+	314 -> 351
+	315 -> 053
+	316 -> 090
+	317 -> 017
+	317 -> 212
+	317 -> 295
+	318 -> 063 [color = "green" fontcolor = "green" label = "LK"]
+	318 -> 098 [color = "brown"]
+	319 -> 032
+	320 -> 031 [color = "cyan3" fontcolor = "cyan3" label = "-rocket"]
+	320 -> 173
+	321 -> 055
+	321 -> 332
+	322 -> 378
+	322 -> 162
+	323 -> 276
+	323 -> 042
+	325 -> 366
+	325 -> 082
+	326 -> 113 [color = "green" fontcolor = "green" label = "SK"]
+	326 -> 289 [color = "brown"]
+	327 -> 254
+	328 -> 265
+	329 -> 283
+	329 -> 006
+	330 -> 300
+	331 -> 007
+	332 -> 016 [color = "green" fontcolor = "green" label = "LK"]
+	332 -> 084 [color = "brown"]
+	333 -> 057 [color = "green" fontcolor = "green" label = "SK"]
+	333 -> 086 [color = "brown"]
+	334 -> 035
+	334 -> 239
+	335 -> 005 [color = "green" fontcolor = "green" label = "LK"]
+	335 -> 365 [color = "brown"]
+	337 -> 211
+	338 -> 320 [color = "green" fontcolor = "green" label = "LK"]
+	338 -> 105 [color = "brown"]
+	339 -> 107 [color = "green" fontcolor = "green" label = "ST&ge;10"]
+	339 -> 326 [color = "brown"]
+	340 -> 318 [color = "blue" fontcolor = "blue" label = "-iron skipes"]
+	340 -> 213 [color = "blue" fontcolor = "blue" label = "-oil spray"]
+	341 -> 267
+	341 -> 022
+	342 -> 079
+	344 -> 270
+	345 -> 074 [color = "green" fontcolor = "green" label = "SK+1d6 &ge; 1d6+7"]
+	345 -> 226 [color = "brown"]
+	346 -> 157
+	346 -> 045
+	347 -> 204 [color = "green" fontcolor = "green" label = "LK"]
+	347 -> 065 [color = "brown"]
+	348 -> 128
+	349 -> 198
+	350 -> 089
+	351 -> 210 [color = "blue" fontcolor = "blue" label = "supercharger"]
+	351 -> 358
+	352 -> 033
+	353 -> 371
+	354 -> 183
+	354 -> 027
+	355 -> 316 [color = "green" fontcolor = "green" label = "LK"]
+	355 -> 184 [color = "brown"]
+	356 -> 325
+	356 -> 012
+	358 -> 054 [color = "magenta" fontcolor = "magenta" label = "win race"]
+	358 -> 322 [color = "magenta" fontcolor = "magenta" label = "lose race"]
+	359 -> 149
+	360 -> 376
+	361 -> 096
+	362 -> 092
+	362 -> 153
+	363 -> 207
+	365 -> 308 [color = "green" fontcolor = "green" label = "SK"]
+	365 -> 120 [color = "brown"]
+	368 -> 064
+	369 -> 130
+	370 -> 019 [color = "blue" fontcolor = "blue" label = "-spare wheel"]
+	370 -> 336
+	371 -> 225
+	372 -> 095
+	372 -> 309
+	373 -> 096
+	374 -> 089
+	375 -> 303
+	376 -> 090
+	377 -> 338 [color = "green" fontcolor = "green" label = "SK"]
+	377 -> 191 [color = "brown"]
+	378 -> 301
+	379 -> 020
+	379 -> 080
 }
