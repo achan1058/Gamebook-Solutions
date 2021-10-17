@@ -34,6 +34,9 @@
     <Filter Include="Temp">
       <UniqueIdentifier>{cc5b250e-f266-4649-a47a-036ebb4deca4}</UniqueIdentifier>
     </Filter>
+    <Filter Include="semi-old">
+      <UniqueIdentifier>{40063906-861d-46cf-95c3-8522c2b62468}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <CustomBuild Include="template.dot">
@@ -129,20 +132,20 @@
     <CustomBuild Include="Fighting Fantasy\old\Sword of the Samurai.dot">
       <Filter>backup</Filter>
     </CustomBuild>
-    <CustomBuild Include="Fighting Fantasy\Temple of Terror.dot">
-      <Filter>Fighting Fantasy</Filter>
-    </CustomBuild>
-    <CustomBuild Include="Fighting Fantasy\The Forest of Doom.dot">
-      <Filter>Fighting Fantasy</Filter>
+    <CustomBuild Include="Fighting Fantasy\Appointment with F.E.A.R..dot">
+      <Filter>semi-old</Filter>
     </CustomBuild>
     <CustomBuild Include="Fighting Fantasy\Freeway Fighter.dot">
-      <Filter>Fighting Fantasy</Filter>
-    </CustomBuild>
-    <CustomBuild Include="Fighting Fantasy\Appointment with F.E.A.R..dot">
-      <Filter>Fighting Fantasy</Filter>
+      <Filter>semi-old</Filter>
     </CustomBuild>
     <CustomBuild Include="Fighting Fantasy\Island of the Undead.dot">
-      <Filter>Fighting Fantasy</Filter>
+      <Filter>semi-old</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Fighting Fantasy\Temple of Terror.dot">
+      <Filter>semi-old</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Fighting Fantasy\The Forest of Doom.dot">
+      <Filter>semi-old</Filter>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
@@ -155,6 +158,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include=".gitignore" />
+    <None Include="Fighting Fantasy\City of Thieves.dot">
+      <Filter>Fighting Fantasy</Filter>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Gamebook.cpp">
