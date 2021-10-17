@@ -262,6 +262,15 @@
     <CustomBuild Include="Fighting Fantasy\The Forest of Doom.dot">
       <FileType>Document</FileType>
     </CustomBuild>
+    <CustomBuild Include="Fighting Fantasy\Temple of Terror.dot">
+      <FileType>Document</FileType>
+    </CustomBuild>
+    <CustomBuild Include="Fighting Fantasy\Appointment with F.E.A.R..dot">
+      <FileType>Document</FileType>
+    </CustomBuild>
+    <CustomBuild Include="Fighting Fantasy\Island of the Undead.dot">
+      <FileType>Document</FileType>
+    </CustomBuild>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Gamebook.cpp" />

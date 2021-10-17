@@ -26,7 +26,7 @@ digraph {
 		Purple Text: Shops\l \
 		Blue Line: Forced Items/Events\l \
 		Light Blue Text/Line: Optional Items/Events\l \
-		Purple Line: Dice Related Events\l \
+		Purple Line: Dice Events\l \
 		Green Line: Stat Test Passed\l \
 		Brown Line: Stat Test Failed\l \
 		Magenta Line: Combat Related Events\l \
@@ -55,8 +55,8 @@ digraph {
 		leather armor\l \
 		lantern\l \
 		tinderbox\l \
-		2d6+6 gold\l \
-		backpack\l\l \
+		backpack\l \
+		2d6+6 gold\l\l \
 		Comments:\l \
 		Order: item/gold/SK/ST/LK\l \
 		"
@@ -436,7 +436,7 @@ digraph {
 		124 [shape = "rect" fontcolor = "blue" label = "\N\n Mantrapper: +60\n +1LK\n +2HP"]
 		126 [shape = "rect" fontcolor = "blue" label = "\N\n president: +100\n +1LK"]
 		131 [label = "\N\n +5HP"]
-		137 [shape = "rect" fontcolor = "blue" label = "\N\n fear opposite 35\n +2HP"]
+		137 [label = "\N\n +2HP"]
 		138 [label = "\N\n +2HP"]
 		142 [shape = "rect" fontcolor = "blue" label = "\N\n FEAR info\n +3HP" tooltip = "Clancey Bay"]
 		175 [shape = "rect" fontcolor = "blue" label = "\N\n circuit jammer\n +5HP"]
@@ -546,7 +546,7 @@ digraph {
 		264 [label = "\N\n president: +100"]
 		280 [label = "\N\n Tormentor: Richard Storm, Ice Queen: Sylvia Frost, Dr Macabre: Marcus Buletta, rob chemist"]
 		312 [label = "\N\n President Titan City, KMarcus Buletta and Rat-face Flanagan know how attempt on life made"]
-		386 [label = "\N\n Richard Storm, Susan: 555-9999"]
+		386 [label = "\N\n Susan: 555-9999"]
 		wrd1 [label = "\N\n text"]
 		wrd2 [label = "\N\n text"]
 		wrd3 [label = "\N\n text"]

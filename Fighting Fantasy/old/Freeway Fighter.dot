@@ -26,7 +26,7 @@ digraph {
 		Purple Text: Shops\l \
 		Blue Line: Forced Items/Events\l \
 		Light Blue Text/Line: Optional Items/Events\l \
-		Purple Line: Dice Related Events\l \
+		Purple Line: Dice Events\l \
 		Green Line: Stat Test Passed\l \
 		Brown Line: Stat Test Failed\l \
 		Magenta Line: Combat Related Events\l \
@@ -55,8 +55,8 @@ digraph {
 		leather armor\l \
 		lantern\l \
 		tinderbox\l \
-		2d6+6 gold\l \
-		backpack\l\l \
+		backpack\l \
+		2d6+6 gold\l\l \
 		Comments:\l \
 		Order: item/gold/AT/SK/ST/LK\l \
 		"
@@ -232,7 +232,7 @@ digraph {
 		
 		subgraph cluster_v04 {
 			label = "Helicopter\n 8/11"
-			083 [label = "\N\n -2ST"]
+			083 [label = "\N\n -2AT"]
 		}
 		
 		subgraph cluster_v05 {
@@ -303,7 +303,6 @@ digraph {
 		009
 		018
 		050
-		100
 		123
 		145
 		173
@@ -329,6 +328,22 @@ digraph {
 		367
 		ddt
 	}
+	
+	subgraph Death100 {
+		node [style = "filled" color = "red" label = "100"]
+		100.025
+		100.048
+		100.087
+		100.283
+	}
+
+	subgraph Death364 {
+		node [style = "filled" color = "red" label = "364"]
+		364.046
+		364.096
+		364.118
+		364.225
+	}
 
 	subgraph Boost {
 		node [style = "filled" color = "greenyellow"]
@@ -343,9 +358,9 @@ digraph {
 		101 [label = "\N\n +1LK"]
 		110 [label = "\N\n +2ST"]
 		112 [shape = "rect" fontcolor = "blue" label = "\N\n petrol\n +2ST"]
-		141 [shape = "rect" fontcolor = "blue" label = "\N\n pete boost\n +1LK"]
+		141 [shape = "rect" fontcolor = "blue" label = "\N\n supercharger\n +1LK"]
 		169 [label = "\N\n +10AM"]
-		262 [label = "\N\n +1LK"]
+		262 [shape = "rect" fontcolor = "blue" label = "\N\n Sinclair \n +1LK"]
 		276 [label = "\N\n +2ST"]
 		277 [shape = "rect" fontcolor = "blue" label = "\N\n bullet-proof vest\n +1SK\n +1LK"]
 		285 [label = "\N\n +1LK"]
@@ -368,7 +383,7 @@ digraph {
 		node [style = "filled" color = "pink"]
 		ddg
 		002 [shape = "rect" fontcolor = "blue" label = "\N\n plastic tubing\n -1 med-kit\n -1SK\n -2ST"]
-		011 [shape = "rect" fontcolor = "blue" label = "\N\n -rockets\n -all canisters of oil\n -all iron spikes\n -2LK"]
+		011 [shape = "rect" fontcolor = "blue" label = "\N\n -all rocket\n -all oil spray\n -all iron spikes\n -2LK"]
 		029 [label = "\N\n -1d6ST"]
 		030 [label = "\N\n -1d6ST"]
 		033 [label = "\N\n -1ST"]
@@ -428,9 +443,11 @@ digraph {
 		038 [fontcolor = "crimson" label = "\N\n -1 med-kit"]
 		057 [label = "\N\n info" tooltip = "Joe's Garage has no patrol"]
 		097 [label = "\N\n throwing knife"]
+		111 [label = "\N\n petrol"]
 		122 [label = "\N\n 200 credits\n info" tooltip = "Rockville is bikers home"]
 		131 [label = "\N\n knuckle-dusters\n 150 credits"]
 		146 [label = "\N\n heavy chain"]
+		166 [label = "\N\n spare wheel"]
 		185 [label = "\N\n wire-cutters"]
 		188 [fontcolor = "crimson" label = "\N\n -petrol?"]
 		206 [label = "\N\n 200 credits\n info" tooltip = "Rockville is bikers home"]
@@ -520,7 +537,7 @@ digraph {
 	023 -> 342 [color = "brown"]
 	024 -> 300
 	024 -> 059
-	025 -> 100
+	025 -> 100.025
 	026 -> 260
 	026 -> 217
 	027 -> 139
@@ -557,11 +574,11 @@ digraph {
 	045 -> 304 [color = "green" fontcolor = "green" label = "LK"]
 	045 -> 060 [color = "brown"]
 	046 -> 310 [color = "blue" fontcolor = "blue" label = "petrol"]
-	046 -> 364
+	046 -> 364.046
 	047 -> 117
 	047 -> 023
 	048 -> 138 [color = "magenta" fontcolor = "magenta" label = "win"]
-	048 -> 100 [color = "magenta" fontcolor = "magenta" label = "lose"]
+	048 -> 100.048 [color = "magenta" fontcolor = "magenta" label = "lose"]
 	049 -> 091
 	051 -> 232
 	052 -> 164
@@ -619,7 +636,7 @@ digraph {
 	085 -> 326 [color = "brown"]
 	086 -> 038 [color = "cyan3" fontcolor = "cyan3" label = "-med-kit"]
 	086 -> 256
-	087 -> 100
+	087 -> 100.087
 	088 -> 177
 	088 -> 271
 	089 -> 034
@@ -633,8 +650,8 @@ digraph {
 	094 -> 328 [color = "blue" fontcolor = "blue" label = "iron spikes/\n oil spray"]
 	094 -> 284
 	095 -> 249
-	096 -> 180 [color = "blue" fontcolor = "blue" label = "can of petrol"]
-	096 -> 364
+	096 -> 180 [color = "blue" fontcolor = "blue" label = "petrol"]
+	096 -> 364.096
 	097 -> 215
 	098 -> 294
 	099 -> 021
@@ -663,7 +680,7 @@ digraph {
 	116 -> 131
 	117 -> 189
 	118 -> 099 [color = "blue" fontcolor = "blue" label = "petrol"]
-	118 -> 364
+	118 -> 364.118
 	119 -> 272
 	120 -> 286
 	121 -> 134
@@ -773,7 +790,7 @@ digraph {
 	190 -> 345 [color = "green" fontcolor = "green" label = "LK"]
 	190 -> 030 [color = "brown"]
 	191 -> 292
-	192 -> 100
+	192 -> 100.087
 	193 -> 064
 	194 -> 257
 	194 -> 211
@@ -824,7 +841,7 @@ digraph {
 	223 -> 118
 	224 -> 207
 	225 -> 197 [color = "blue" fontcolor = "blue" label = "petrol"]
-	225 -> 364
+	225 -> 364.225
 	227 -> 131
 	228 -> 273 [color = "blue" fontcolor = "blue" label = "knuckle-dusters"]
 	228 -> 214
@@ -888,7 +905,7 @@ digraph {
 	271 -> 166
 	271 -> 013
 	272 -> 323 [color = "blue" fontcolor = "blue" label = "petrol"]
-	272 -> 364
+	272 -> 364.225
 	273 -> 170 [color = "green" fontcolor = "green" label = "LK"]
 	273 -> 250 [color = "brown"]
 	274 -> 034
@@ -900,7 +917,7 @@ digraph {
 	281 -> 058
 	281 -> 150
 	282 -> 143
-	283 -> 100
+	283 -> 100.283
 	284 -> 265
 	285 -> 254
 	286 -> 218
@@ -1003,6 +1020,7 @@ digraph {
 	351 -> 210 [color = "blue" fontcolor = "blue" label = "supercharger"]
 	351 -> 358
 	352 -> 033
+	353 -> 061
 	353 -> 371
 	354 -> 183
 	354 -> 027

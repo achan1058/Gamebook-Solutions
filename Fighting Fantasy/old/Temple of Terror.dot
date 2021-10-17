@@ -37,7 +37,7 @@ digraph {
 		Purple Text: Shops\l \
 		Blue Line: Forced Items/Events\l \
 		Light Blue Text/Line: Optional Items/Events\l \
-		Purple Line: Dice Related Events\l \
+		Purple Line: Dice Events\l \
 		Green Line: Stat Test Passed\l \
 		Brown Line: Stat Test Failed\l \
 		Magenta Line: Combat Related Events\l \
@@ -66,8 +66,8 @@ digraph {
 		leather armor\l \
 		lantern\l \
 		tinderbox\l \
-		2d6+6 gold\l \
-		backpack\l\l \
+		backpack\l \
+		2d6+6 gold\l\l \
 		Comments:\l \
 		Order: item/gold/SK/ST/LK\l \
 		"
@@ -256,7 +256,7 @@ digraph {
 		
 		subgraph cluster_25 {
 			label = "Skeleton Man\n 9/6\n 9/8"
-			346 [shape = "rect" fontcolor = "crimson" label = "\N\n -sandworm's tooth"]
+			346 [shape = "rect" fontcolor = "crimson" label = "\N\n -sandworm tooth"]
 		}
 		
 		subgraph cluster_26 {
@@ -335,12 +335,13 @@ digraph {
 		097 [shape = "rect" fontcolor = "blue" label = "\N\n helmet\n +1SK"]
 		112 [label = "\N\n +4ST"]
 		196 [shape = "rect" fontcolor = "purple" label = "\N\n Abjul\n +4ST"]
-		234 [shape = "rect" fontcolor = "blue" label = "\N\n sprite dust\n +1LK"]
+		234 [label = "\N\n +1LK"]
 		267 [label = "\N\n +2ST"]
 		269 [label = "\N\n +4ST"]
 		286 [label = "\N\n +4ST"]
 		300 [label = "\N\n +2SK\n +2LK"]
 		302 [shape = "rect" fontcolor = "blue" label = "\N\n ebony dragon\n +1LK"]
+		310 [label = "\N\n +1SK"]
 		350 [label = "\N\n +1LK"]
 		384 [label = "\N\n +1SK"]
 		386 [label = "\N\n +1LK"]
@@ -376,10 +377,10 @@ digraph {
 		121 [label = "\N\n -1SK\n -2ST"]
 		122 [label = "\N\n -1SK\n -6ST"]
 		124 [shape = "rect" fontcolor = "crimson" label = "\N\n -1 gold\n -1LK"]
-		127 [shape = "rect" fontcolor = "blue" label = "\N\n M medallion\n -1ST"]
+		127 [label = "\N\n -1ST"]
 		133 [shape = "rect" fontcolor = "crimson" label = "\N\n -helmet\n -1SK"]
 		154 [label = "\N\n -3SK\n -4LK"]
-		163 [shape = "rect" fontcolor = "blue" label = "\N\n sacrificial medallion\n -1LK"]
+		163 [shape = "rect" fontcolor = "blue" label = "\N\n medallion\n -1LK"]
 		167 [label = "\N\n -1SK\n -2ST"]
 		169 [label = "\N\n -1SK\n -2ST"]
 		177 [label = "\N\n -1ST"]
@@ -387,7 +388,7 @@ digraph {
 		179 [label = "\N\n -1d6ST"]
 		183 [shape = "rect" fontcolor = "crimson" label = "\N\n Letter E\n -4ST\n -1LK"]
 		184 [label = "\N\n -2ST"]
-		185 [shape = "rect" fontcolor = "crimson" label = "\N\n -pearlE\n -4ST"]
+		185 [shape = "rect" fontcolor = "crimson" label = "\N\n -pearl\n -4ST"]
 		189 [label = "\N\n -2ST"]
 		192 [label = "\N\n -4ST"]
 		195 [label = "\N\n -1ST"]
@@ -447,13 +448,13 @@ digraph {
 	subgraph Key_Item {
 		node [fontcolor = "blue" shape = "rect"]
 		kky
+		018 [label = "\N\n sandworm tooth"]
 		019 [label = "\N\n phoenix tapestry"]
 		029 [label = "\N\n silver dragon"]
 		033 [label = "\N\n iron key"]
 		041 [label = "\N\n sacrificial dagger"]
 		051 [fontcolor = "crimson" label = "\N\n -2 meals"]
 		060 [label = "\N\n bone dragon"]
-		069 [label = "\N\n emerald armband"]
 		089 [label = "\N\n telescope\n 3 silver buttons"]
 		092 [fontcolor = "crimson" label = "\N\n -all gold"]
 		099 [label = "\N\n water canister\n -silver button/\n -pearl"]
@@ -473,7 +474,7 @@ digraph {
 		278 [label = "\N\n 10 meals"]
 		284 [fontcolor = "crimson" label = "\N\n -1 item"]
 		306 [label = "\N\n info" tooltip = "golden skeleton, shadow of the stone"]
-		331 [fontcolor = "crimson" label = "\N\n -tooth"]
+		331 [fontcolor = "crimson" label = "\N\n -sandworm tooth"]
 		379 [fontcolor = "crimson" label = "\N\n -1 gold"]
 		key1 [label = "\N\n text"]
 		key2 [label = "\N\n text"]
@@ -557,10 +558,9 @@ digraph {
 	009 -> 279
 	010 -> 099
 	010 -> 257
-	011 -> 258 [color = "blue" fontcolor = "blue" label = "gold heart medallion"]
+	011 -> 258 [color = "blue" fontcolor = "blue" label = "medallion"]
 	011 -> 284 [color = "green" fontcolor = "green" label = "LK"]
 	011 -> 071 [color = "brown"]
-	012 -> 034
 	013 -> 165 [color = "magenta" fontcolor = "magenta" label = "AR<SK"]
 	014 -> 277
 	014 -> 156
@@ -597,16 +597,16 @@ digraph {
 	033 -> 125
 	033 -> 262
 	034 -> 180
-	034 -> 012
-	034 -> 058
-	034 -> 136
-	034 -> 194
-	034 -> 391
-	034 -> 223
-	034 -> 264
-	034 -> 301
-	034 -> 342
-	034 -> 367
+	034 -> 012 [dir = "both"]
+	034 -> 058 [dir = "both"]
+	034 -> 136 [dir = "both"]
+	034 -> 194 [dir = "both"]
+	034 -> 391 [dir = "both"]
+	034 -> 223 [dir = "both"]
+	034 -> 264 [dir = "both"]
+	034 -> 301 [dir = "both"]
+	034 -> 342 [dir = "both"]
+	034 -> 367 [dir = "both"]
 	035 -> 087
 	035 -> 126
 	035 -> 204
@@ -642,7 +642,6 @@ digraph {
 	055 -> 360 [color = "brown"]
 	056 -> 046
 	057 -> 307
-	058 -> 034
 	059 -> 280 [color = "green" fontcolor = "green" label = "SK"]
 	059 -> 253 [color = "brown"]
 	060 -> 021
@@ -668,7 +667,7 @@ digraph {
 	071 -> 188
 	072 -> 142
 	072 -> 039
-	073 -> 219 [color = "cyan3" fontcolor = "cyan3" label = "sandworm's tooth"]
+	073 -> 219 [color = "cyan3" fontcolor = "cyan3" label = "sandworm tooth"]
 	073 -> 282
 	074 -> 396 [color = "blue" fontcolor = "blue" label = "bracelet of mermaid scales"]
 	074 -> 013
@@ -746,7 +745,7 @@ digraph {
 	119 -> 073
 	120 -> 377
 	121 -> 198 [color = "blue" fontcolor = "blue" label = "brass handbell"]
-	121 -> 331 [color = "blue" fontcolor = "blue" label = "sandworm's tooth"]
+	121 -> 331 [color = "blue" fontcolor = "blue" label = "sandworm tooth"]
 	121 -> 022 [color = "blue" fontcolor = "blue" label = "mirror"]
 	122 -> 325
 	124 -> 238
@@ -762,7 +761,6 @@ digraph {
 	132 -> 104 [color = "green" fontcolor = "green" label = "SK-3"]
 	132 -> 254 [color = "brown"]
 	133 -> 307
-	136 -> 034
 	137 -> 186
 	137 -> 047
 	138 -> 262
@@ -776,7 +774,7 @@ digraph {
 	143 -> 338 [color = "brown"]
 	144 -> 152
 	145 -> 198 [color = "blue" fontcolor = "blue" label = "brass handbell"]
-	145 -> 331 [color = "blue" fontcolor = "blue" label = "sandworm's tooth"]
+	145 -> 331 [color = "blue" fontcolor = "blue" label = "sandworm tooth"]
 	145 -> 022 [color = "blue" fontcolor = "blue" label = "mirror"]
 	146 -> 102
 	147 -> 077
@@ -808,7 +806,7 @@ digraph {
 	162 -> 056
 	163 -> 298
 	164 -> 382
-	164 -> 054
+	164 -> 054 [color = "darkorange" fontcolor = "darkorange" label = "Jump"]
 	165 -> 052
 	165 -> 091
 	166 -> 238
@@ -846,7 +844,6 @@ digraph {
 	191 -> 249
 	191 -> 354
 	192 -> 377
-	194 -> 034
 	195 -> 341
 	196 -> 389
 	197 -> 315
@@ -890,7 +887,6 @@ digraph {
 	222 -> 014
 	222 -> 183
 	222 -> 020
-	223 -> 034
 	224 -> 348
 	224 -> 307
 	225 -> 190
@@ -914,7 +910,7 @@ digraph {
 	236 -> 182 [color = "green" fontcolor = "green" label = "LK"]
 	236 -> 299 [color = "brown"]
 	237 -> 371 [color = "darkorange" fontcolor = "darkorange" label = "Creature Sleep"]
-	237 -> 294 [color = "cyan3" fontcolor = "cyan3" label = "sandworm's tooth"]
+	237 -> 294 [color = "cyan3" fontcolor = "cyan3" label = "sandworm tooth"]
 	237 -> 211
 	238 -> 187 [color = "brown"]
 	238 -> 308 [color = "green" fontcolor = "green" label = "SK-1"]
@@ -964,7 +960,6 @@ digraph {
 	262 -> 218
 	263 -> 055
 	263 -> 202
-	264 -> 034
 	265 -> 148 [color = "blue" fontcolor = "blue" label = "DEATH"]
 	265 -> 304
 	266 -> 106
@@ -1017,7 +1012,7 @@ digraph {
 	292 -> 183
 	292 -> 020
 	293 -> 272
-	294 -> 346 [color = "cyan3" fontcolor = "cyan3" label = "-sandworm's tooth"]
+	294 -> 346 [color = "cyan3" fontcolor = "cyan3" label = "-sandworm tooth"]
 	294 -> 211
 	295 -> 157
 	296 -> 181
@@ -1026,7 +1021,6 @@ digraph {
 	298 -> 214 [color = "cyan3" fontcolor = "cyan3" label = "-1 gold"]
 	298 -> 268
 	300 -> 017
-	301 -> 034
 	302 -> 093
 	303 -> 196
 	303 -> 389
@@ -1095,7 +1089,6 @@ digraph {
 	340 -> 295
 	340 -> 157
 	341 -> 191
-	342 -> 034
 	343 -> 169
 	344 -> 101
 	344 -> 306
@@ -1128,7 +1121,6 @@ digraph {
 	365 -> 393
 	366 -> 343
 	366 -> 167
-	367 -> 034
 	369 -> 068
 	370 -> 046
 	371 -> 211
@@ -1161,7 +1153,6 @@ digraph {
 	390 -> 290
 	390 -> 150 [color = "cyan3" fontcolor = "cyan3" label = "crystal key"]
 	390 -> 239 [color = "darkorange" fontcolor = "darkorange" label = "Fire"]
-	391 -> 034
 	392 -> 174 [color = "green" fontcolor = "green" label = "SK"]
 	392 -> 374 [color = "brown"]
 	393 -> 060

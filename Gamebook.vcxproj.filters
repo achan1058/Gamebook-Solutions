@@ -129,6 +129,21 @@
     <CustomBuild Include="Fighting Fantasy\old\Sword of the Samurai.dot">
       <Filter>backup</Filter>
     </CustomBuild>
+    <CustomBuild Include="Fighting Fantasy\Temple of Terror.dot">
+      <Filter>Fighting Fantasy</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Fighting Fantasy\The Forest of Doom.dot">
+      <Filter>Fighting Fantasy</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Fighting Fantasy\Freeway Fighter.dot">
+      <Filter>Fighting Fantasy</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Fighting Fantasy\Appointment with F.E.A.R..dot">
+      <Filter>Fighting Fantasy</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Fighting Fantasy\Island of the Undead.dot">
+      <Filter>Fighting Fantasy</Filter>
+    </CustomBuild>
   </ItemGroup>
   <ItemGroup>
     <Text Include="vertex.txt">
@@ -140,12 +155,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include=".gitignore" />
-    <None Include="Fighting Fantasy\The Forest of Doom.dot">
-      <Filter>Fighting Fantasy</Filter>
-    </None>
-    <None Include="Fighting Fantasy\Freeway Fighter.dot">
-      <Filter>Fighting Fantasy</Filter>
-    </None>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Gamebook.cpp">
