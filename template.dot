@@ -26,7 +26,7 @@ digraph {
 		Purple Text: Shops\l \
 		Blue Line: Forced Items/Events\l \
 		Light Blue Text/Line: Optional Items/Events\l \
-		Purple Line: Dice Related Events\l \
+		Purple Line: Dice Events\l \
 		Green Line: Stat Test Passed\l \
 		Brown Line: Stat Test Failed\l \
 		Magenta Line: Combat Related Events\l \
@@ -55,8 +55,8 @@ digraph {
 		leather armor\l \
 		lantern\l \
 		tinderbox\l \
-		2d6+6 gold\l \
-		backpack\l\l \
+		backpack\l \
+		2d6+6 gold\l\l \
 		Comments:\l \
 		Order: item/gold/AT/SK/ST/LK\l \
 		"
