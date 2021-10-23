@@ -132,45 +132,45 @@ digraph {
 
 	subgraph Boost {
 		node [style = "filled" color = "greenyellow"]
-		bst
 		boo1 [label = "\N\n text"]
 		boo2 [shape = "rect" fontcolor = "blue" label = "\N\n text"]
 		boo3 [label = "\N\n text"]
 		boo4 [shape = "rect" fontcolor = "blue" label = "\N\n text"]
 		boo5 [shape = "rect" fontcolor = "blue" label = "\N\n text"]
+		bst
 	}
 
 	subgraph Damage {
 		node [style = "filled" color = "pink"]
-		ddg
 		dam1 [label = "\N\n text"]
 		dam2 [shape = "rect" fontcolor = "blue" label = "\N\n text"]
 		dam3 [label = "\N\n text"]
 		dam4 [shape = "rect" fontcolor = "blue" label = "\N\n text"]
 		dam5 [shape = "rect" fontcolor = "blue" label = "\N\n text"]
+		ddg
 	}
 
 	subgraph Key_Item {
 		node [fontcolor = "blue" shape = "rect"]
-		kky
 		key1 [label = "\N\n text"]
 		key2 [label = "\N\n text"]
 		key3 [label = "\N\n text"]
 		key4 [fontcolor = "crimson" label = "\N\n -text"]
+		kky
 	}
 	
 	subgraph Key_Word {
 		node [fontcolor = "grey" shape = "rect"]
-		wwd
 		wrd1 [label = "\N\n text"]
 		wrd2 [label = "\N\n text"]
 		wrd3 [label = "\N\n text"]
+		wwd
 	}
 	
 	subgraph Shop {
 		node [fontcolor = "purple" shape = "rect"]
-		shp
 		shop1 [label = "\N\n text"]
+		shp
 	}
 
 	mon1 -> mon2 -> mon3 -> mon4 -> mon5 [penwidth = 3]
