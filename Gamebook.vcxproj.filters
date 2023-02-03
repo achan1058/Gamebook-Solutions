@@ -147,6 +147,9 @@
     <CustomBuild Include="Fighting Fantasy\The Forest of Doom.dot">
       <Filter>semi-old</Filter>
     </CustomBuild>
+    <CustomBuild Include="Fighting Fantasy\City of Thieves.dot">
+      <Filter>Fighting Fantasy</Filter>
+    </CustomBuild>
   </ItemGroup>
   <ItemGroup>
     <Text Include="vertex.txt">
@@ -158,9 +161,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include=".gitignore" />
-    <None Include="Fighting Fantasy\City of Thieves.dot">
-      <Filter>Fighting Fantasy</Filter>
-    </None>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Gamebook.cpp">
