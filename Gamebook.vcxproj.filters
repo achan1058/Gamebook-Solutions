@@ -147,8 +147,11 @@
     <CustomBuild Include="Fighting Fantasy\The Forest of Doom.dot">
       <Filter>semi-old</Filter>
     </CustomBuild>
-    <CustomBuild Include="Fighting Fantasy\City of Thieves.dot">
+    <CustomBuild Include="Fighting Fantasy\Island of the Lizard King.dot">
       <Filter>Fighting Fantasy</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Fighting Fantasy\old\City of Thieves - 2.dot">
+      <Filter>semi-old</Filter>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>

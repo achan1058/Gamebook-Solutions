@@ -281,7 +281,11 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
     </CustomBuild>
-    <CustomBuild Include="Fighting Fantasy\City of Thieves.dot">
+    <CustomBuild Include="Fighting Fantasy\Island of the Lizard King.dot">
+      <FileType>Document</FileType>
+    </CustomBuild>
+    <CustomBuild Include="Fighting Fantasy\old\City of Thieves - 2.dot">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
       <FileType>Document</FileType>
     </CustomBuild>
   </ItemGroup>
