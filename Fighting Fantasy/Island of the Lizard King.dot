@@ -136,6 +136,7 @@ digraph {
 		subgraph cluster_03 {
 			label = "Hydra\n 9/9 9/9"
 			029
+			209
 		}
 		
 		subgraph cluster_04 {
@@ -151,16 +152,19 @@ digraph {
 		subgraph cluster_06 {
 			label = "Lizard Man\n 9/8 8/8"
 			043
+			163
 		}
 		
 		subgraph cluster_07 {
 			label = "Two-Headed Lizard Man\n 9/9"
 			045
+			360
 		}
 
 		subgraph cluster_08 {
 			label = "Razorjaw\n 6/5"
 			056
+			304 [style = "filled" color = "pink" label = "\N\n -2ST"]
 		}
 		
 		subgraph cluster_09 {
@@ -201,6 +205,7 @@ digraph {
 		subgraph cluster_16 {
 			label = "Cave Woman\n 5/5"
 			108
+			255 [style = "filled" color = "pink" label = "\N\n -3ST\n -2AT"]
 		}
 		
 		subgraph cluster_17 {
@@ -238,11 +243,6 @@ digraph {
 			160
 		}
 		
-		subgraph cluster_24 {
-			label = "Lizard Man\n 9/8 8/8"
-			163
-		}
-		
 		subgraph cluster_25 {
 			label = "Headhunter\n 7/5\n 6/6\n 6/7"
 			169
@@ -261,6 +261,7 @@ digraph {
 		subgraph cluster_28 {
 			label = "Sabre-Toothed Tiger\n 11/8"
 			190 [style = "filled" color = "pink" label = "\N\n -lose 1AR"]
+			205 [style = "filled" color = "pink" label = "\N\n -lose 1AR"]
 		}
 		
 		subgraph cluster_29 {
@@ -278,19 +279,11 @@ digraph {
 			204
 		}
 		
-		subgraph cluster_32 {
-			label = "Sabre-Toothed Tiger\n 11/8"
-			205 [style = "filled" color = "pink" label = "\N\n -lose 1AR"]
-		}
-		
-		subgraph cluster_33 {
-			label = "Hydra\n 9/9 9/9"
-			209
-		}
-		
 		subgraph cluster_34 {
 			label = "Spit Toad\n 5/6"
 			217 [style = "filled" color = "pink" label = "\N\n -2ST\n -3AT"]
+			248
+			396 [style = "filled" color = "pink" label = "\N\n -2SK\n -2ST\n -3AT"]
 		}
 
 		subgraph cluster_35 {
@@ -306,21 +299,12 @@ digraph {
 		subgraph cluster_37 {
 			label = "Lizard Man\n 9/8"
 			241
+			309
 		}
 		
-		subgraph cluster_38 {
-			label = "Spit Toad\n 5/6"
-			248
-		}
-
 		subgraph cluster_39 {
 			label = "Cyclops\n 10/10"
 			254
-		}
-		
-		subgraph cluster_40 {
-			label = "Cave Woman\n 5/5"
-			255 [style = "filled" color = "pink" label = "\N\n -3ST\n -2AT"]
 		}
 		
 		subgraph cluster_41 {
@@ -338,11 +322,6 @@ digraph {
 			296
 		}
 		
-		subgraph cluster_44 {
-			label = "Razorjaw\n 6/5"
-			304 [style = "filled" color = "pink" label = "\N\n -2ST"]
-		}
-		
 		subgraph cluster_45 {
 			label = "Ogre\n 8/8"
 			305
@@ -353,11 +332,6 @@ digraph {
 			308
 		}
 		
-		subgraph cluster_47 {
-			label = "Lizard Man\n 9/8"
-			309
-		}
-		
 		subgraph cluster_48 {
 			label = "Shape Changer\n 10/10"
 			318
@@ -366,6 +340,7 @@ digraph {
 		subgraph cluster_49 {
 			label = "Lizard Man\n 7/7"
 			319
+			347
 		}
 		
 		subgraph cluster_50 {
@@ -393,16 +368,6 @@ digraph {
 			344
 		}
 		
-		subgraph cluster_55 {
-			label = "Lizard Man\n 7/7"
-			347
-		}
-		
-		subgraph cluster_56 {
-			label = "Two-Headed Lizard Man\n 9/9"
-			360
-		}
-		
 		subgraph cluster_57 {
 			label = "Giant Dragonfly\n 8/4"
 			375
@@ -413,11 +378,6 @@ digraph {
 			389 [label = "\N\n -2AT"]
 		}
 		
-		subgraph cluster_34 {
-			label = "Spit Toad\n 5/6"
-			217 [style = "filled" color = "pink" label = "\N\n -2SK\n -2ST\n -3AT"]
-		}
-
 		cbt
 	}
 
@@ -461,10 +421,10 @@ digraph {
 		232 [label = "\N\n +3ST"]
 		275 [shape = "rect" fontcolor = "blue" label = "\N\n fire sword\n +2SK\n +2LK"]
 		332 [shape = "rect" fontcolor = "blue" label = "\N\n red powder\n +2LK"]
-		345 [shape = "rect" fontcolor = "blue" label = "\N\n Horn of Valhalla\n +2LK"]
+		345 [shape = "rect" fontcolor = "blue" label = "\N\n Valhalla Horn\n +2LK"]
 		367 [shape = "rect" fontcolor = "blue" label = "\N\n breastplate\n +1SK"]
 		381 [label = "\N\n +2ST"]
-		392 [shape = "rect" fontcolor = "blue" label = "\N\n fine sword\n +2SK\n +1LK"]
+		392 [label = "\N\n +2SK\n +1LK"]
 		393 [label = "\N\n +1LK"]
 		bst
 	}
@@ -526,13 +486,9 @@ digraph {
 		key2 [label = "\N\n text"]
 		key3 [label = "\N\n text"]
 		key4 [fontcolor = "crimson" label = "\N\n -text"]
-		003 [label = "\N\n drawves"]
-		012 [label = "\N\n hand-axe\n rope"]
-		023 [label = "\N\n water pail"]
-		031 [fontcolor = "crimson" label = "\N\n -spear?\n -axe?"]
-		032 [label = "\N\n 63 prisoners"]
+		012 [label = "\N\n hand-axe"]
+		031 [fontcolor = "crimson" label = "\N\n -spear?\n -hand-axe?"]
 		041 [label = "\N\n snuff-box\n gold nugget"]
-		051 [label = "\N\n water pail"]
 		064 [label = "\N\n test"]
 		066 [label = "\N\n spear"]
 		069 [fontcolor = "crimson" label = "\N\n -backpack\n -sword"]
@@ -540,31 +496,25 @@ digraph {
 		089 [label = "\N\n feather"]
 		090 [label = "\N\n picklock's wire"]
 		093 [label = "\N\n test"]
-		094 [label = "\N\n boots"]
+		094 [label = "\N\n red boots"]
 		098 [label = "\N\n test"]
 		104 [fontcolor = "crimson" label = "\N\n -all provisions"]
-		121 [label = "\N\n 14 slaves"]
-		124 [label = "\N\n snake venom"]
 		125 [label = "\N\n test"]
 		126 [fontcolor = "crimson" label = "\N\n -3 provisions"]
 		145 [label = "\N\n snake bite"]
 		149 [label = "\N\n map"]
 		155 [label = "\N\n test"]
-		161 [label = "\N\n cloak"]
 		189 [label = "\N\n iron keys"]
 		208 [fontcolor = "crimson" label = "\N\n -1 item"]
 		238 [label = "\N\n aniseed liquid"]
-		247 [label = "\N\n whistle"]
 		257 [fontcolor = "crimson" label = "\N\n -unlimited pouch"]
-		282 [label = "\N\n sack of food"]
-		292 [label = "\N\n Sog's helmet"]
+		292 [label = "\N\n Sog's helmet*"]
 		301 [fontcolor = "crimson" label = "\N\n -1 item"]
 		311 [label = "\N\n clumsiness potion"]
-		311 [label = "\N\n bone charm"]
+		323 [label = "\N\n bone charm*"]
 		330 [label = "\N\n monkey"]
 		358 [label = "\N\n test"]
 		368 [label = "\N\n iron keys"]
-		371 [label = "\N\n Grannit"]
 		398 [label = "\N\n iron bar"]
 		kky
 	}
@@ -636,7 +586,7 @@ digraph {
 	016 -> 313 [color = "brown"]
 	017 -> 303
 	018 -> 007
-	019 -> 392 [color = "blue" fontcolor = "blue" label = "red leather boots"]
+	019 -> 392 [color = "blue" fontcolor = "blue" label = "red boots"]
 	019 -> 246
 	020 -> 178
 	021 -> 092
@@ -644,11 +594,11 @@ digraph {
 	022 -> 153
 	023 -> 223
 	024 -> 211
-	024 -> 033
+	024 -> 033 [dir = "both"]
 	025 -> 085
-	026 -> 311
-	026 -> 094
-	026 -> 297
+	026 -> 311 [dir = "both"]
+	026 -> 094 [dir = "both"]
+	026 -> 297 [dir = "both"]
 	026 -> 222
 	027 -> 388 [color = "green" fontcolor = "green" label = "LK"]
 	027 -> 348 [color = "brown"]
@@ -659,20 +609,19 @@ digraph {
 	031 -> 390
 	032 -> 201
 	033 -> 340
-	033 -> 024
 	034 -> 321
 	035 -> 119
 	036 -> 111 [color = "blue" fontcolor = "blue" label = "fire sword"]
 	036 -> 346
 	037 -> 280
 	038 -> 051
-	039 -> 207 [color = "blue" fontcolor = "blue" label = "rattle-snake bite"]
+	039 -> 207 [color = "blue" fontcolor = "blue" label = "snake bite"]
 	039 -> 025
 	040 -> 253 [color = "green" fontcolor = "green" label = "LK"]
 	040 -> 107 [color = "brown"]
 	041 -> 325
 	042 -> 341
-	043 -> 284 [color = "magenta" fontcolor = "magenta" label = "kill 1 wound other 2x"]
+	043 -> 284 [color = "magenta" fontcolor = "magenta" label = "kill 1\n win 2AR"]
 	044 -> 274
 	045 -> 173
 	046 -> 149 [color = "cyan3" fontcolor = "cyan3" label = "-1 provision"]
@@ -748,8 +697,8 @@ digraph {
 	085 -> 112 [color = "purple" fontcolor = "purple" label = "5-6"]
 	086 -> 018
 	086 -> 295
-	087 -> 130 [color = "magenta" fontcolor = "magenta" label = "win 2 AR"]
-	088 -> 179 [color = "blue" fontcolor = "blue" label = "axe"]
+	087 -> 130 [color = "magenta" fontcolor = "magenta" label = "win 2AR"]
+	088 -> 179 [color = "blue" fontcolor = "blue" label = "hand-axe"]
 	088 -> 305
 	089 -> 269
 	090 -> 375
@@ -762,9 +711,7 @@ digraph {
 	093 -> 151
 	093 -> 183
 	093 -> 220
-	094 -> 311
-	094 -> 026
-	094 -> 297
+	094 -> 311 [dir = "both"]
 	094 -> 222
 	095 -> 133
 	096 -> 007
@@ -871,7 +818,7 @@ digraph {
 	153 -> 054
 	154 -> 038 [color = "green" fontcolor = "green" label = "LK"]
 	154 -> 319 [color = "brown"]
-	155 -> 214
+	155 -> 214 [color = "blue" fontcolor = "blue" label = "3 tests"]
 	155 -> 002
 	155 -> 151
 	155 -> 183
@@ -1000,7 +947,7 @@ digraph {
 	230 -> 197
 	231 -> 006
 	231 -> 353
-	232 -> 370
+	232 -> 370 [dir = "both"]
 	232 -> 071
 	233 -> 249
 	235 -> 272 [color = "blue" fontcolor = "blue" label = "spear"]
@@ -1039,7 +986,7 @@ digraph {
 	259 -> 297
 	261 -> 187
 	261 -> 113
-	262 -> 386 [color = "magenta" fontcolor = "magenta" label = "win 1 AR"]
+	262 -> 386 [color = "magenta" fontcolor = "magenta" label = "win 1AR"]
 	263 -> 233
 	264 -> 124 [color = "brown"]
 	264 -> 364 [color = "green" fontcolor = "green" label = "ST>9"]
@@ -1093,9 +1040,8 @@ digraph {
 	294 -> 227
 	295 -> 096
 	296 -> 153
-	297 -> 311
-	297 -> 026
-	297 -> 094
+	297 -> 311 [dir = "both"]
+	297 -> 094 [dir = "both"]
 	297 -> 222
 	298 -> 047
 	299 -> 268
@@ -1114,9 +1060,6 @@ digraph {
 	308 -> 341
 	309 -> 368
 	310 -> 378
-	311 -> 026
-	311 -> 094
-	311 -> 297
 	311 -> 222
 	312 -> 231
 	312 -> 353
@@ -1160,7 +1103,7 @@ digraph {
 	339 -> 092
 	339 -> 222
 	340 -> 061
-	341 -> 109 [color = "blue" fontcolor = "blue" label = "Horn of Valhalla"]
+	341 -> 109 [color = "blue" fontcolor = "blue" label = "Valhalla Horn"]
 	341 -> 254
 	342 -> 115 [color = "green" fontcolor = "green" label = "LK"]
 	342 -> 219 [color = "brown"]
@@ -1205,7 +1148,6 @@ digraph {
 	367 -> 008
 	368 -> 147
 	369 -> 168
-	370 -> 232
 	370 -> 071
 	371 -> 057
 	372 -> 227
