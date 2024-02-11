@@ -23,6 +23,7 @@ digraph {
 		Red Fill: Death\l \
 		Blue Text: Key Items/Events\l \
 		Red Text: Lost Items\l \
+		Orange Text: Codewords\l \
 		Purple Text: Shops\l \
 		Blue Line: Forced Items/Events\l \
 		Light Blue Text/Line: Optional Items/Events\l \
@@ -32,7 +33,7 @@ digraph {
 		Magenta Line: Combat Related Events\l \
 		Grey Text: Riddle Answer\l \
 		Grey Line: Hidden Option\l \
-		Orange Line: Spells\l \
+		Orange Line: Codewords/Spells\l \
 		Red Line: Possible Error\l \
 		Gold Fill: Required Nodes\l \
 		Light Blue Fill: Recommended Nodes\l \

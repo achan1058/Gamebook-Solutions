@@ -147,11 +147,17 @@
     <CustomBuild Include="Fighting Fantasy\The Forest of Doom.dot">
       <Filter>semi-old</Filter>
     </CustomBuild>
-    <CustomBuild Include="Fighting Fantasy\FF07 - Island of the Lizard King.dot">
-      <Filter>Fighting Fantasy</Filter>
-    </CustomBuild>
     <CustomBuild Include="Fighting Fantasy\old\City of Thieves - 2.dot">
       <Filter>semi-old</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Fighting Fantasy\FF01 - The Warlock of Firetop Mountain.dot">
+      <Filter>backup</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Fighting Fantasy\FF07 - Island of the Lizard King.dot">
+      <Filter>backup</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Fighting Fantasy\FF62 - Howl of the Werewolf.dot">
+      <Filter>backup</Filter>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>

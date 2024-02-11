@@ -17,28 +17,23 @@ digraph {
 
 	// a box for a graph label
 	// note that you can override the defaults set above
-	title [label = "Fighting Fantasy --: Title\n\n \
+	title [label = "Fighting Fantasy 07: Island of the Lizard King\n\n \
 		Light Green Fill: Benefits\l \
 		Pink Fill: Penalties\l \
 		Red Fill: Death\l \
 		Blue Text: Key Items/Events\l \
 		Red Text: Lost Items\l \
-		Purple Text: Shops\l \
 		Blue Line: Forced Items/Events\l \
 		Light Blue Text/Line: Optional Items/Events\l \
 		Purple Line: Dice Events\l \
 		Green Line: Stat Test Passed\l \
 		Brown Line: Stat Test Failed\l \
 		Magenta Line: Combat Related Events\l \
-		Grey Text: Riddle Answer\l \
-		Grey Line: Hidden Option\l \
-		Orange Line: Spells\l \
-		Red Line: Possible Error\l \
 		Gold Fill: Required Nodes\l \
 		Light Blue Fill: Recommended Nodes\l \
 		Gold Outline: Recommended Path\l \
 		Green Box: Combat\l \
-		SK/ST/LK/AT/AR/TM/CW/CL: Skill/Stamina/Luck/Attack Strength/Attack Round/Time/Consecutive Win Round/Consecutive Lose Round\l \
+		SK/ST/LK/AT/AR: Skill/Stamina/Luck/Attack Strength/Attack Round/Time\l \
 		?: Chance of this happening, depending on instructions in text\l \
 		*: Special Combat Rules\l \
 		-: Negative Status\l \
@@ -415,7 +410,7 @@ digraph {
 		174 [label = "\N\n +2ST"]
 		177 [label = "\N\n +1ST"]
 		184 [label = "\N\n +1LK"]
-		186 [shape = "rect" fontcolor = "crimson" label = "\N\n -1 provision\n +4ST"]
+		186 [shape = "rect" fontcolor = "crimson" label = "\N\n -1 meal\n +4ST"]
 		194 [label = "\N\n +1LK"]
 		230 [shape = "rect" fontcolor = "crimson" label = "\N\n -unlimited pouch\n +2LK"]
 		232 [label = "\N\n +3ST"]
@@ -438,7 +433,7 @@ digraph {
 		dam5 [shape = "rect" fontcolor = "blue" label = "\N\n text"]
 		013 [label = "\N\n -3ST"]
 		034 [shape = "rect" fontcolor = "crimson" label = "\N\n -1 item\n -1LK"]
-		037 [shape = "rect" fontcolor = "crimson" label = "\N\n -1 provision\n -1d6ST"]
+		037 [shape = "rect" fontcolor = "crimson" label = "\N\n -1 meal\n -1d6ST"]
 		039 [label = "\N\n -1ST"]
 		052 [label = "\N\n -1SK"]
 		055 [label = "\N\n -2ST"]
@@ -470,7 +465,7 @@ digraph {
 		297 [shape = "rect" fontcolor = "blue" label = "\N\n confusion ring\n -2SK"]
 		298 [shape = "rect" fontcolor = "crimson" label = "\N\n -1 item\n -1LK"]
 		310 [label = "\N\n -4ST"]
-		316 [shape = "rect" fontcolor = "crimson" label = "\N\n -all provision\n -1SK\n -3ST"]
+		316 [shape = "rect" fontcolor = "crimson" label = "\N\n -all meal\n -1SK\n -3ST"]
 		336 [label = "\N\n -1SK\n -3ST"]
 		343 [label = "\N\n -2LK"]
 		348 [label = "\N\n -2ST"]
@@ -499,9 +494,9 @@ digraph {
 		093 [label = "\N\n test"]
 		094 [label = "\N\n red boots"]
 		098 [label = "\N\n test"]
-		104 [fontcolor = "crimson" label = "\N\n -all provisions"]
+		104 [fontcolor = "crimson" label = "\N\n -all meal"]
 		125 [label = "\N\n test"]
-		126 [fontcolor = "crimson" label = "\N\n -3 provisions"]
+		126 [fontcolor = "crimson" label = "\N\n -3 meal"]
 		145 [label = "\N\n snake bite"]
 		155 [label = "\N\n test"]
 		189 [label = "\N\n iron keys"]
@@ -624,7 +619,7 @@ digraph {
 	043 -> 284 [color = "magenta" fontcolor = "magenta" label = "kill 1\n win 2AR"]
 	044 -> 274
 	045 -> 173
-	046 -> 149 [color = "cyan3" fontcolor = "cyan3" label = "-1 provision"]
+	046 -> 149 [color = "cyan3" fontcolor = "cyan3" label = "-1 meal"]
 	046 -> 069
 	047 -> 315
 	048 -> 056 [color = "blue" fontcolor = "blue" label = "Sog's helmet"]
@@ -751,7 +746,7 @@ digraph {
 	115 -> 170
 	116 -> 247
 	116 -> 027 [color = "magenta" fontcolor = "magenta" label = "escape 2 AR"]
-	117 -> 046 [color = "cyan3" fontcolor = "cyan3" label = "-1 provision"]
+	117 -> 046 [color = "cyan3" fontcolor = "cyan3" label = "-1 meal"]
 	117 -> 375
 	117 -> 349
 	118 -> 080
@@ -806,7 +801,7 @@ digraph {
 	147 -> 028
 	148 -> 080 [color = "green" fontcolor = "green" label = "LK"]
 	148 -> 013 [color = "brown"]
-	149 -> 090 [color = "cyan3" fontcolor = "cyan3" label = "-1 provision"]
+	149 -> 090 [color = "cyan3" fontcolor = "cyan3" label = "-1 meal"]
 	149 -> 375
 	150 -> 104 [color = "green" fontcolor = "green" label = "LK"]
 	150 -> 159 [color = "brown"]
@@ -889,7 +884,7 @@ digraph {
 	195 -> 008
 	196 -> 128
 	196 -> 222
-	197 -> 186 [color = "blue" fontcolor = "blue" label = "provision"]
+	197 -> 186 [color = "blue" fontcolor = "blue" label = "meal"]
 	197 -> 148
 	198 -> 267
 	198 -> 152
@@ -1010,7 +1005,7 @@ digraph {
 	275 -> 312
 	276 -> 243 [color = "cyan3" fontcolor = "cyan3" label = "-hand-axe"]
 	276 -> 327 [color = "cyan3" fontcolor = "cyan3" label = "-iron bar"]
-	276 -> 126 [color = "cyan3" fontcolor = "cyan3" label = "-provisions"]
+	276 -> 126 [color = "cyan3" fontcolor = "cyan3" label = "-meals??"]
 	276 -> 137
 	277 -> 233
 	278 -> 070
@@ -1082,7 +1077,7 @@ digraph {
 	325 -> 196
 	326 -> 168
 	327 -> 206 [color = "cyan3" fontcolor = "cyan3" label = "-hand-axe"]
-	327 -> 126 [color = "cyan3" fontcolor = "cyan3" label = "-provisions"]
+	327 -> 126 [color = "cyan3" fontcolor = "cyan3" label = "-meals??"]
 	327 -> 137
 	328 -> 338
 	329 -> 309 [color = "green" fontcolor = "green" label = "LK"]
