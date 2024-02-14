@@ -138,9 +138,6 @@
     <CustomBuild Include="Fighting Fantasy\Freeway Fighter.dot">
       <Filter>semi-old</Filter>
     </CustomBuild>
-    <CustomBuild Include="Fighting Fantasy\Island of the Undead.dot">
-      <Filter>semi-old</Filter>
-    </CustomBuild>
     <CustomBuild Include="Fighting Fantasy\Temple of Terror.dot">
       <Filter>semi-old</Filter>
     </CustomBuild>
@@ -158,6 +155,9 @@
     </CustomBuild>
     <CustomBuild Include="Fighting Fantasy\FF62 - Howl of the Werewolf.dot">
       <Filter>backup</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Fighting Fantasy\Island of the Undead.dot">
+      <Filter>Fighting Fantasy</Filter>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>

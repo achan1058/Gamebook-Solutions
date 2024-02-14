@@ -98,7 +98,10 @@
   </ItemGroup>
   <ItemGroup>
     <Text Include="edges.txt" />
-    <CustomBuild Include="Fighting Fantasy\FF62 - Howl of the Werewolf.dot" />
+    <CustomBuild Include="Fighting Fantasy\FF62 - Howl of the Werewolf.dot">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuild>
     <Text Include="vertex.txt" />
   </ItemGroup>
   <ItemGroup>
@@ -284,6 +287,8 @@
     </CustomBuild>
     <CustomBuild Include="Fighting Fantasy\FF07 - Island of the Lizard King.dot">
       <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
     </CustomBuild>
     <CustomBuild Include="Fighting Fantasy\old\City of Thieves - 2.dot">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
@@ -291,6 +296,8 @@
     </CustomBuild>
     <CustomBuild Include="Fighting Fantasy\FF01 - The Warlock of Firetop Mountain.dot">
       <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
