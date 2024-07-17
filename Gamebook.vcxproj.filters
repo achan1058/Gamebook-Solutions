@@ -156,9 +156,6 @@
     <CustomBuild Include="Fighting Fantasy\FF62 - Howl of the Werewolf.dot">
       <Filter>backup</Filter>
     </CustomBuild>
-    <CustomBuild Include="Fighting Fantasy\Island of the Undead.dot">
-      <Filter>Fighting Fantasy</Filter>
-    </CustomBuild>
   </ItemGroup>
   <ItemGroup>
     <Text Include="vertex.txt">
