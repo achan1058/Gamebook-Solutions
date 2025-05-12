@@ -9,6 +9,7 @@ digraph {
 		shape=ellipse
 		margin=0]
 	edge[weight=5]
+	stylesheet="../style.css"
 	
 	subgraph ShopMenu {
 		node [fontcolor = "purple" shape = "rect" margin = 0.1]
