@@ -297,6 +297,7 @@
     <CustomBuild Include="Fighting Fantasy\The Citidel of Chaos.dot">
       <FileType>Document</FileType>
     </CustomBuild>
+    <None Include="style.css" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Gamebook.cpp" />
