@@ -1,0 +1,118 @@
+/*color = "X" fontcolor = "X"*/
+.edge.pass > path {
+	stroke: green;
+}
+
+.edge.pass > polygon {
+	stroke: green;
+	fill: green;
+}
+
+.edge.pass > text {
+	fill: green;
+}
+
+.edge.fail > path {
+	stroke: brown;
+}
+
+.edge.fail > polygon {
+	stroke: brown;
+	fill: brown;
+}
+
+.edge.fail > text {
+	fill: brown;
+}
+
+.edge.skill > path {
+	stroke: darkorange;
+}
+
+.edge.skill > polygon {
+	stroke: darkorange;
+	fill: darkorange;
+}
+
+.edge.skill > text {
+	fill: darkorange;
+}
+
+.edge.req > path {
+	stroke: blue;
+}
+
+.edge.req > polygon {
+	stroke: blue;
+	fill: blue;
+}
+
+.edge.req > text {
+	fill: blue;
+}
+
+.edge.opt > path {
+	/*cyan3*/
+	stroke: #00cdcd;
+}
+
+.edge.opt > polygon {
+	stroke: #00cdcd;
+	fill: #00cdcd;
+}
+
+.edge.opt > text {
+	fill: #00cdcd;
+}
+
+.edge.cbt > path {
+	stroke: magenta;
+}
+
+.edge.cbt > polygon {
+	stroke: magenta;
+	fill: magenta;
+}
+
+.edge.cbt > text {
+	fill: magenta;
+}
+
+.edge.dice > path {
+	stroke: purple;
+}
+
+.edge.dice > polygon {
+	stroke: purple;
+	fill: purple;
+}
+
+.edge.dice > text {
+	fill: purple;
+}
+
+.edge.info > path {
+	stroke: grey;
+}
+
+.edge.info > polygon {
+	stroke: grey;
+	fill: grey;
+}
+
+.edge.info > text {
+	fill: grey;
+}
+
+.edge.err > path {
+	stroke: crimson;
+}
+
+.edge.err > polygon {
+	stroke: crimson;
+	fill: crimson;
+}
+
+.edge.err > text {
+	fill: crimson;
+}

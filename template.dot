@@ -182,17 +182,17 @@ digraph {
 	mondam1 -> mondam2 -> mondam3 -> mondam4 -> mondam5
 
 	myTitle -> z001 [penwidth = 3]
-	z001 -> z002 [color = "purple" fontcolor = "purple" label = "1-3"]
-	z001 -> z003 [color = "purple" fontcolor = "purple" label = "4-6"]
-	z002 -> z004 [color = "green" fontcolor = "green" label = "LK"]
-	z002 -> z005 [color = "brown"]
+	z001 -> z002 [class = "dice" label = "1-3"]
+	z001 -> z003 [class = "dice" label = "4-6"]
+	z002 -> z004 [class = "pass" label = "LK"]
+	z002 -> z005 [class = "fail"]
 	z003 -> z006 [dir = "both"]
-	z004 -> z007 [color = "blue" fontcolor = "blue" label = "req"]
-	z004 -> z008 [color = "cyan3" fontcolor = "cyan3" label = "-opt"]
-	z005 -> z009 [color = "grey" fontcolor = "grey" label = "info"]
-	z009 -> z010 [color = "crimson" fontcolor = "crimson" label = "error(?)"]
-	z010 -> z011 [color = "magenta" fontcolor = "magenta" label = "escape"]
-	z011 -> z012 [color = "darkorange" fontcolor = "darkorange" label = "spell"]
+	z004 -> z007 [class = "req" label = "req"]
+	z004 -> z008 [class = "opt" label = "-opt"]
+	z005 -> z009 [class = "info" label = "info"]
+	z009 -> z010 [class = "err" label = "error(?)"]
+	z010 -> z011 [class = "cbt" label = "escape"]
+	z011 -> z012 [class = "skill" label = "spell"]
 	{
 		rank = same
 		z003
