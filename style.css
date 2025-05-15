@@ -142,3 +142,17 @@
 	stroke: red;
 	fill: red;
 }
+
+.node.kky > text {
+	fill: blue;
+}
+
+.node.path > polygon {
+	stroke: gold;
+	stroke-width: 3;
+}
+
+.node.req > polygon {
+	stroke: gold;
+	fill: gold;
+}

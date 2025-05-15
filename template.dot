@@ -97,11 +97,20 @@ digraph {
 		mondam4 [style = "filled" fillcolor = "pink"]
 		mon3
 		mon4
+		ddt2 [style = "filled" fillcolor = "red"]
+		opt3 [shape = "rect" style = "filled" fillcolor = "paleturquoise1"]
+		monddt2 [style = "filled" fillcolor = "red"]
+		monopt3 [style = "filled" fillcolor = "paleturquoise1"]
 	}
 	
 	subgraph Optional {
 		node [style = "filled" color = "paleturquoise1" fillcolor = "paleturquoise1" fontcolor = "blue" shape = "rect"]
 		opt
+		monopt
+		opt2
+		monopt2
+		opt3
+		monopt3
 	}
 
 	subgraph Combat {
@@ -123,6 +132,11 @@ digraph {
 			mondam3 [label = "\N\n text"]
 			mondam4 [shape = "rect" fontcolor = "blue" label = "\N\n text"]
 			mondam5 [shape = "rect" fontcolor = "blue" label = "\N\n text"]
+			monopt
+			monddt [style = "filled" color = "red"]
+			monopt2
+			monddt2
+			monopt3
 		}
 		cbt
 	}
@@ -130,6 +144,9 @@ digraph {
 	subgraph Death {
 		node [style = "filled" color = "red"]
 		ddt
+		ddt2
+		monddt
+		monddt2
 	}
 
 	subgraph Boost {
@@ -139,6 +156,10 @@ digraph {
 		boo3 [label = "\N\n text"]
 		boo4 [shape = "rect" fontcolor = "blue" label = "\N\n text"]
 		boo5 [shape = "rect" fontcolor = "blue" label = "\N\n text"]
+		opt2 [shape = "rect" fontcolor = "blue"]
+		opt3 [shape = "rect" fontcolor = "blue"]
+		monopt2 [shape = "rect" fontcolor = "blue"]
+		monopt3 [shape = "rect" fontcolor = "blue"]
 		bst
 	}
 
@@ -158,6 +179,8 @@ digraph {
 		key2 [label = "\N\n text"]
 		key3 [label = "\N\n text"]
 		key4 [fontcolor = "crimson" label = "\N\n -text"]
+		opt
+		monopt
 		kky
 	}
 	
@@ -180,8 +203,10 @@ digraph {
 	dam1 -> dam2 -> dam3 -> dam4 -> dam5 [penwidth = 3]
 	txt1 -> key1 -> txt2 -> key2 -> key3 -> key4
 	wrd1 -> wrd2 -> wrd3
+	opt -> ddt -> opt2 -> ddt2 -> opt3
 	monboo1 -> monboo2 -> monboo3 -> monboo4 -> monboo5
 	mondam1 -> mondam2 -> mondam3 -> mondam4 -> mondam5
+	monopt -> monddt -> monopt2 -> monddt2 -> monopt3
 
 	myTitle -> z001 [penwidth = 3]
 	z001 -> z002 [class = "dice" label = "1-3"]
