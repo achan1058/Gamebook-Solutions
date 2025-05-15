@@ -25,16 +25,16 @@
 	fill: brown;
 }
 
-.edge.skill > path {
+.edge.skl > path {
 	stroke: darkorange;
 }
 
-.edge.skill > polygon {
+.edge.skl > polygon {
 	stroke: darkorange;
 	fill: darkorange;
 }
 
-.edge.skill > text {
+.edge.skl > text {
 	fill: darkorange;
 }
 
@@ -115,4 +115,30 @@
 
 .edge.err > text {
 	fill: crimson;
+}
+
+.node.opt > polygon {
+	stroke: #bbffff;
+	fill: #bbffff;
+}
+
+.node.optp > polygon {
+	stroke: gold;
+	stroke-width: 3;
+	fill: #bbffff;
+}
+
+.node.bst > polygon {
+	stroke: greenyellow;
+	fill: greenyellow;
+}
+
+.node.ddg > polygon {
+	stroke: pink;
+	fill: pink;
+}
+
+.node.ddt > polygon {
+	stroke: red;
+	fill: red;
 }
