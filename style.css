@@ -133,9 +133,29 @@
 	fill: greenyellow;
 }
 
+.node.bst > ellipse {
+	stroke: greenyellow;
+	fill: greenyellow;
+}
+
 .node.ddg > polygon {
 	stroke: pink;
 	fill: pink;
+}
+
+.node.ddg > ellipse {
+	stroke: pink;
+	fill: pink;
+}
+
+.node.ddt > polygon {
+	stroke: red;
+	fill: red;
+}
+
+.node.ddt > ellipse {
+	stroke-width: 0;
+	fill: red;
 }
 
 .node.ddt > polygon {
@@ -147,7 +167,16 @@
 	fill: blue;
 }
 
+.node.loss > text {
+	fill: crimson;
+}
+
 .node.path > polygon {
+	stroke: gold;
+	stroke-width: 3;
+}
+
+.node.path > ellipse {
 	stroke: gold;
 	stroke-width: 3;
 }
