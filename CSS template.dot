@@ -65,16 +65,6 @@ digraph {
 		shape = "box"
 		margin = 0.1]
 		
-	subgraph Optional {
-		node [shape = "rect" class = "opt"]
-		opt
-		monopt
-		opt2
-		monopt2
-		opt3
-		monopt3
-	}
-
 	subgraph Boost {
 		node [style = "filled" color = "greenyellow"]
 		boo1 [label = "\N\n text"]
@@ -90,7 +80,7 @@ digraph {
 	}
 	
 	subgraph Death {
-		node [class = "ddt"]
+		node [style = "filled" color = "red"]
 		ddt
 		ddt2
 		monddt
@@ -109,10 +99,9 @@ digraph {
 		dam2 [class = "ddg" label = "\N\n text"]
 		dam4 [class = "ddg" label = "\N\n text"]
 		dam5 [class = "ddg" label = "\N\n text"]
+		opt
 		opt2 [class = "bst"]
 		opt3 [class = "bst"]
-		opt
-		monopt
 		kky
 	}
 	
@@ -149,21 +138,56 @@ digraph {
 			mondam3 [class = "ddg" label = "\N\n text"]
 			mondam4 [shape = "rect" class = "ddg kky" label = "\N\n text"]
 			mondam5 [shape = "rect" class = "ddg kky" label = "\N\n text"]
-			monopt
-			monopt2 [shape = "rect" class = "bst kky"]
-			monopt3 [shape = "rect" class = "bst kky"]
+			monopt [shape = "rect" class = "bst kky"]
 			monddt
-			monopt2
+			monopt2 [shape = "rect" class = "bst kky"]
 			monddt2
-			monopt3
+			monopt3 [shape = "rect" class = "bst kky"]
 		}
 		cbt
 	}
+
+	subgraph Optional {
+		node [shape = "rect" class = "opt kky"]
+		opt [class = "opt kky"]
+		monopt [class = "opt kky"]
+		opt2 [class = "opt kky"]
+		monopt2 [class = "opt kky"]
+		opt3 [class = "opt kky"]
+		monopt3 [class = "opt kky"]
+	}
+	
+	subgraph Path {
+		node [class = "path" penwidth = 3 color = "gold"]
+		txt2
+		key2 [class = "path"]
+		wrd2 [class = "path"]
+		key3
+		wrd3
+		boo3 [class = "path"]
+		boo4 [class = "path bst"]
+		boo5
+		dam3 [class = "path"]
+		dam4 [class = "path ddg"]
+		dam5
+		monboo3 [class = "path bst"]
+		monboo4 [class = "path bst kky"]
+		monboo5
+		mondam3 [class = "path ddg"]
+		mondam4 [class = "path ddg kky"]
+		mondam5
+		mon3 [class = "path"]
+		mon4 [class = "path kky"]
+		ddt2 [class = "path"]
+		opt3 [class = "path opt kky"]
+		monddt2 [class = "path"]
+		monopt3 [class = "path opt kky"]
+	}
 	
 	subgraph Required {
-		node [class = "req kky"]
-		key3
-		wrd3 [fontcolor = "grey"]
+		node [shape = "rect" class = "req kky"]
+		key3 [class = "req kky"]
+		wrd3 [class = "req kky"]
 		boo5 [class = "req kky"]
 		dam5 [class = "req kky"]
 		monboo5 [class = "req kky"]
@@ -171,31 +195,10 @@ digraph {
 		mon5 [class = "req kky"]
 		ending [fontcolor = "black" shape = "octagon"]
 	}
-
+	
 	subgraph Required2 {
-		node [style = "filled" color = "gold2" fillcolor = "gold2" fontcolor = "blue" shape = "rect"]
-		req2
-	}
-
-	subgraph Path {
-		node [penwidth = 3 color = "gold"]
-		txt2
-		key2 [shape = "rect" fontcolor = "blue"]
-		wrd2 [shape = "rect" fontcolor = "grey"]
-		boo3 [style = "filled" fillcolor = "greenyellow"]
-		boo4 [style = "filled" fillcolor = "greenyellow"]
-		dam3 [style = "filled" fillcolor = "pink"]
-		dam4 [style = "filled" fillcolor = "pink"]
-		monboo3 [style = "filled" fillcolor = "greenyellow"]
-		monboo4 [style = "filled" fillcolor = "greenyellow"]
-		mondam3 [style = "filled" fillcolor = "pink"]
-		mondam4 [style = "filled" fillcolor = "pink"]
-		mon3
-		mon4
-		ddt2 [style = "filled" fillcolor = "red"]
-		opt3
-		monddt2 [style = "filled" fillcolor = "red"]
-		monopt3 [style = "filled" fillcolor = "paleturquoise1"]
+		node [shape = "rect" class = "req2 kky"]
+		req2 [class = "req2 kky"]
 	}
 	
 	mon1 -> mon2 -> mon3 -> mon4 -> mon5 [penwidth = 3]

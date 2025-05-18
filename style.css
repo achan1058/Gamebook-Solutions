@@ -167,6 +167,10 @@
 	fill: blue;
 }
 
+.node.info > text {
+	fill: grey;
+}
+
 .node.loss > text {
 	fill: crimson;
 }
@@ -184,4 +188,10 @@
 .node.req > polygon {
 	stroke: gold;
 	fill: gold;
+}
+
+.node.req2 > polygon {
+	/*gold2*/
+	stroke: #eec900;
+	fill: #eec900;
 }
