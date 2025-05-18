@@ -78,7 +78,8 @@ digraph {
 		monboo5
 		mondam5
 		mon5
-		400 [fontcolor = "black" shape = "octagon" label = "\N\n -levitation?"]
+		238
+		400 [fontcolor = "black" shape = "octagon"]
 	}
 
 	subgraph Required2 {
@@ -86,7 +87,7 @@ digraph {
 		req2
 	}
 
-	subgraph Recommended {
+	subgraph Path {
 		node [penwidth = 3 color = "gold"]
 		txt2
 		key2 [shape = "rect" fontcolor = "blue"]
@@ -101,10 +102,70 @@ digraph {
 		mondam4 [style = "filled" fillcolor = "pink"]
 		mon3
 		mon4
+		001
+		261
+		394
+		251
+		321
+		339
+		134 [class = "optp" shape = "rect"]
+		245
+		161
+		106
+		218
+		118
+		273
+		371
+		177
+		005
+		040
+		243
+		352
+		216
+		294
+		099
+		038
+		132
+		238
+		018
+
+
+
+		169
+		197
+		363
+		228
+		296
+		292
+		042
+		091
+		140
+		025
+		206
+		182
+		322
+		291
+		328
+		226
+		037
+		229
+		217
+		293
+		374
+		158
+		077
+		187
+		279
+		078
+		124
+		400
 	}
 	
 	subgraph Optional {
 		node [style = "filled" color = "paleturquoise1" fillcolor = "paleturquoise1" fontcolor = "blue" shape = "rect"]
+		091
+		134
+		180
 		opt
 	}
 
@@ -132,11 +193,15 @@ digraph {
 		subgraph cluster_01 {
 			label = "Gark\n 7/11"
 			016
+			152 [label = "\N\n -2ESK\n -6EST"]
+			262 [label = "\N\n clone"]
+			336
 		}
 		
 		subgraph cluster_02 {
 			label = "Clawbeast\n 9/14"
 			030
+			241 [shape = "rect" fontcolor = "darkorange" label = "\N\n -strength?\n -3AT?"]
 		}
 		
 		subgraph cluster_03 {
@@ -162,11 +227,13 @@ digraph {
 		subgraph cluster_07 {
 			label = "Ape-Dog 7/4\n Dog-Ape 6/6"
 			162
+			288
 		}
 		
 		subgraph cluster_08 {
 			label = "Golem\n 8/10"
 			190 [label = "\N\n clone"]
+			303 [label = "\N\n -1AT"]
 		}
 		
 		subgraph cluster_09 {
@@ -187,46 +254,25 @@ digraph {
 		subgraph cluster_12 {
 			label = "Wheelie\n 7/6\n 6/5"
 			220
+			346
 		}
 		
 		subgraph cluster_13 {
 			label = "Calacorn\n 9/8"
-			246 [fontcolor = "darkorange" label = "\N\n -weakness?\n -4AT?"]
-		}
-		
-		subgraph cluster_14 {
-			label = "Gark\n 7/11"
-			262 [label = "\N\n clone"]
+			246 [shape = "rect" fontcolor = "darkorange" label = "\N\n -weakness?\n -4EK?"]
 		}
 		
 		subgraph cluster_15 {
 			label = "Rhino-Man\n 8/9"
 			264 [label = "\N\n +1dAT"]
+			307 [style = "filled" color = "pink" label = "\N\n -4ESK\n-2EST\n -2ST"]
+			325
 		}
 		
 		subgraph cluster_16 {
 			label = "Black Elf\n 8/4"
-			275 [fontcolor = "darkorange" label = "\N\n -3EAT (weakness)\n clone (creature copy)"]
-		}
-		
-		subgraph cluster_17 {
-			label = "Ape-Dog 7/4\n Dog-Ape 6/6"
-			288
-		}
-		
-		subgraph cluster_18 {
-			label = "Golem 8/10"
-			303 [label = "\N\n -1AT"]
-		}
-		
-		subgraph cluster_19 {
-			label = "Rhino-Man\n 4/7"
-			307 [style = "filled" color = "pink" label = "\N\n -2ST"]
-		}
-		
-		subgraph cluster_20 {
-			label = "Rhino-Man\n 8/9"
-			325
+			275 [shape = "rect" fontcolor = "darkorange" label = "\N\n -3ESK (weakness)\n clone (creature copy)"]
+			399 [label = "\N\n -4ESK"]
 		}
 		
 		subgraph cluster_21 {
@@ -234,39 +280,16 @@ digraph {
 			330
 		}
 		
-		subgraph cluster_22 {
-			label = "Gark\n 7/11"
-			336
-		}
-		
 		subgraph cluster_23 {
 			label = "Balthus Dire\n 12/19"
-			337 [label = "\N\n -2EAT? ring"]
-		}
-		
-		subgraph cluster_24 {
-			label = "Wheelie\n 7/6\n 6/5"
-			346
-		}
-		
-		subgraph cluster_25 {
-			label = "Balthus Dire\n 12/19"
+			337 [shape = "rect" label = "\N\n -2ESK? (ring)"]
 			351
-		}
-		
-		subgraph cluster_26 {
-			label = "Balthus Dire\n 12/19"
 			353 [label = "\N\n +2AT"]
 		}
 		
 		subgraph cluster_27 {
 			label = "Hydra\n 10/17"
 			360 [fontcolor = "darkorange" label = "\N\n clone (creature copy)"]
-		}
-		
-		subgraph cluster_28 {
-			label = "Black Elf\n 8/4"
-			399 [label = "\N\n -4EAT"]
 		}
 		
 		cbt
@@ -291,11 +314,11 @@ digraph {
 		199
 		202
 		208
+		208.2 [label = "208"]
 		248
 		250
 		283
 		342
-		365 [shape = "rect" fontcolor = "blue" label = "\N\n 2 spells\n 50 gold\n breastplate (-2EAT)"]
 		369
 		376
 		ddt
@@ -332,13 +355,11 @@ digraph {
 		dam4 [shape = "rect" fontcolor = "blue" label = "\N\n text"]
 		dam5 [shape = "rect" fontcolor = "blue" label = "\N\n text"]
 		043 [label = "\N\n -1ST"]
-		062 [shape = "rect" fontcolor = "blue" label = "\N\n +10 gold?\n -1LK"]
 		067 [label = "\N\n -4ST"]
 		074 [label = "\N\n -4ST"]
 		085 [label = "\N\n -2ST"]
 		087 [label = "\N\n -2ST"]
 		088 [label = "\N\n -?ST"]
-		091 [shape = "rect" fontcolor = "blue" label = "\N\n golden fleece?\n -?LK"]
 		094 [label = "\N\n -1ST"]
 		097 [label = "\N*\n -1SK"]
 		121 [label = "\N\n -1ST"]
@@ -356,7 +377,6 @@ digraph {
 		254 [label = "\N\n -1SK\n -2ST"]
 		267 [label = "\N*\n -1LK"]
 		271 [label = "\N\n -1SK"]
-		278 [shape = "rect" fontcolor = "blue" label = "\N\n +? gold\n -?SK\n -?ST"]
 		282 [label = "\N\n -2ST"]
 		300 [label = "\N\n -0~6ST"]
 		305 [label = "\N\n -2ST"]
@@ -365,7 +385,6 @@ digraph {
 		333 [label = "\N\n -2ST"]
 		370 [label = "\N\n -2ST"]
 		378 [label = "\N\n -4ST"]
-		381 [shape = "rect" fontcolor = "blue" label = "\N\n ring?\n -1LK"]
 		383 [label = "\N\n -2ST"]
 		395 [label = "\N\n -2ST"]
 		ddg
@@ -379,9 +398,10 @@ digraph {
 		key4 [fontcolor = "crimson" label = "\N\n -text"]
 		015 [label = "\N\n throwing dagger*"]
 		018 [label = "\N\n info" tooltip = "dire weak to sunlight"]
-		034 [label = "\N\n green key"]
+		062 [class = "ddg" label = "\N\n +10 gold?\n -1LK"]
 		079 [label = "\N\n berries"]
 		089 [label = "\N\n spider-man"]
+		091 [class = "ddg" label = "\N\n golden fleece?\n -?LK"]
 		093 [label = "\N\n hogweed essence"]
 		102 [label = "\N\n charmed amulet"]
 		105 [label = "\N\n fire water"]
@@ -391,19 +411,21 @@ digraph {
 		160 [fontcolor = "crimson" label = "\N\n -gadget"]
 		171 [fontcolor = "crimson" label = "\N\n &plusmn;? gold\n -fool's gold?"]
 		180 [label = "\N\n 6 gold\n hairbrush"]
-		235 [label = "\N\n 8 gold\n healing ointment\n magik potion"]
+		235 [label = "\N\n 8 gold\n copper key\n healing ointment\n magik potion"]
 		238 [label = "\N\n combination: 217"]
-		241 [fontcolor = "darkorange" label = "\N\n -strength?\n -3AT?"]
 		242 [label = "\N\n drink\n wine"]
 		267 [label = "\N\n drink"]
 		272 [label = "\N\n 8 gold\n damaged pocket myriad"]
-		241 [fontcolor = "crimson" label = "\N\n -healing ointment"]
+		278 [class = "ddg" label = "\N\n +? gold\n -?SK\n -?ST"]
+		287 [fontcolor = "crimson" label = "\N\n -healing ointment"]
 		309 [label = "\N\n 20 gold"]
 		312 [fontcolor = "crimson" label = "\N\n -mirror"]
 		327 [fontcolor = "crimson" label = "\N\n -pocket myriad"]
 		334 [label = "\N\n drink"]
 		340 [fontcolor = "crimson" label = "\N\n -mirror"]
+		365 [class = "ddt" label = "\N\n 2 spells\n 50 gold\n breastplate (-2ESK)"]
 		368 [label = "\N\n 28 gold\n dagger"]
+		381 [class = "ddg" label = "\N\n ring?\n -1LK"]
 		387 [fontcolor = "crimson" label = "\N\n -mirror"]
 		391 [fontcolor = "crimson" label = "\N\n -3 gold"]
 		kky
@@ -425,6 +447,7 @@ digraph {
 
 	mon1 -> mon2 -> mon3 -> mon4 -> mon5 [penwidth = 3]
 	boo1 -> boo2 -> boo3 -> boo4 -> boo5 [penwidth = 3]
+	dam1 -> dam2 -> dam3 -> dam4 -> dam5 [penwidth = 3]
 	txt1 -> key1 -> txt2 -> key2 -> key3 -> key4
 	wrd1 -> wrd2 -> wrd3
 	monboo1 -> monboo2 -> monboo3 -> monboo4 -> monboo5
@@ -441,7 +464,7 @@ digraph {
 	z005 -> z009 [class = "info" label = "info"]
 	z009 -> z010 [class = "err" label = "error(?)"]
 	z010 -> z011 [class = "cbt" label = "escape"]
-	z011 -> z012 [class = "skill" label = "spell"]
+	z011 -> z012 [class = "skl" label = "spell"]
 	{
 		rank = same
 		z003
@@ -459,20 +482,20 @@ digraph {
 	003 -> 236 [class = "opt" label = "-small berries"]
 	003 -> 286
 	003 -> 366
-	004 -> 190 [class = "skill" label = "creature copy"]
+	004 -> 190 [class = "skl" label = "creature copy"]
 	004 -> 303
 	005 -> 040
 	005 -> 361
 	006 -> 367
-	007 -> 268 [class = "skill" label = "strength"]
-	007 -> 116
+	007 -> 268
+	007 -> 116 [class = "skl" label = "strength"]
 	008 -> 218
 	009 -> 031
 	010 -> 249
-	011 -> 036 [class = "skill" label = "fool's gold"]
-	011 -> 262 [class = "skill" label = "creature copy"]
-	011 -> 128 [class = "skill" label = "ESP"]
-	011 -> 152 [class = "skill" label = "weakness"]
+	011 -> 036 [class = "skl" label = "fool's gold"]
+	011 -> 262 [class = "skl" label = "creature copy"]
+	011 -> 128 [class = "skl" label = "ESP"]
+	011 -> 152 [class = "skl" label = "weakness"]
 	011 -> 016
 	012 -> 274
 	012 -> 335
@@ -487,22 +510,22 @@ digraph {
 	017 -> 093
 	018 -> 084
 	018 -> 031
-	019 -> 363 [class = "skill" label = "levitation"]
+	019 -> 363 [class = "skl" label = "levitation"]
 	019 -> 254
 	020 -> 288
-	020 -> 096 [class = "skill" label = "fool's gold"]
+	020 -> 096 [class = "skl" label = "fool's gold"]
 	021 -> 006
 	022 -> 188
 	023 -> 169
-	024 -> 372 [class = "skill" label = "shielding"]
+	024 -> 372 [class = "skl" label = "shielding"]
 	024 -> 219
 	025 -> 206
-	025 -> 133 [class = "skill" label = "strength"]
+	025 -> 133 [class = "skl" label = "strength"]
 	025 -> 239
-	026 -> 087 [class = "skill" label = "fire"]
-	026 -> 345 [class = "skill" label = "weakness"]
-	026 -> 101 [class = "skill" label = "creature copy"]
-	026 -> 304
+	026 -> 087 [class = "skl" label = "fire"]
+	026 -> 345 [class = "skl" label = "weakness"]
+	026 -> 101 [class = "skl" label = "creature copy"]
+	//026 -> 304
 	027 -> 206
 	028 -> 243
 	028 -> 002
@@ -531,7 +554,7 @@ digraph {
 	042 -> 064
 	042 -> 304
 	043 -> 014
-	044 -> 535
+	044 -> 353
 	044 -> 277
 	045 -> 166
 	045 -> 313
@@ -539,16 +562,16 @@ digraph {
 	045 -> 097
 	046 -> 195
 	046 -> 074
-	047 -> 008 [class = "skill" label = "creature copy"]
-	047 -> 173 [class = "skill" label = "illusion"]
-	047 -> 259 [class = "skill" label = "levitation"]
+	047 -> 008 [class = "skl" label = "creature copy"]
+	047 -> 173 [class = "skl" label = "illusion"]
+	047 -> 259 [class = "skl" label = "levitation"]
 	047 -> 209
 	048 -> 232
 	048 -> 199
 	049 -> 255
 	050 -> 164
-	051 -> 301 [class = "skill" label = "strength"]
-	051 -> 159 [class = "skill" label = "weakness"]
+	051 -> 301 [class = "skl" label = "strength"]
+	051 -> 159 [class = "skl" label = "weakness"]
 	051 -> 280
 	052 -> 385
 	052 -> 227
@@ -570,8 +593,8 @@ digraph {
 	058 -> 092
 	058 -> 156
 	059 -> 140
-	060 -> 033 [class = "skill" label = "levitation"]
-	060 -> 295 [class = "skill" label = "illusion"]
+	060 -> 033 [class = "skl" label = "levitation"]
+	060 -> 295 [class = "skl" label = "illusion"]
 	060 -> 213
 	061
 	062 -> 140
@@ -580,27 +603,28 @@ digraph {
 	064 -> 286
 	064 -> 003
 	064 -> 366
+	064 -> 258 [class = "err" label = "missing?"]
 	065
 	066 -> 270
-	067 -> 143 [class = "skill" label = "creature copy"]
+	067 -> 143 [class = "skl" label = "creature copy"]
 	067 -> 226
 	068 -> 207
 	068 -> 022
 	068 -> 354
 	069 -> 193
-	070 -> 307 [class = "skill" label = "weakness"]
-	070 -> 264 [class = "skill" label = "strength"]
+	070 -> 307 [class = "skl" label = "weakness"]
+	070 -> 264 [class = "skl" label = "strength"]
 	070 -> 325
 	071 -> 218 [class = "pass" label = "AT&ge;15\n 3 tries"]
 	072
 	073 -> 112
-	073 -> 282 [class = "skill" label = "fire"]
+	073 -> 282 [class = "skl" label = "fire"]
 	074 -> 377
 	075 -> 040
 	076 -> 191
-	077 -> 187 [class = "skill" label = "ESP"]
-	077 -> 046 [class = "skill" label = "fire"]
-	077 -> 349 [class = "skill" label = "creature copy"]
+	077 -> 187 [class = "skl" label = "ESP"]
+	077 -> 046 [class = "skl" label = "fire"]
+	077 -> 349 [class = "skl" label = "creature copy"]
 	077 -> 355
 	078 -> 324
 	078 -> 124
@@ -612,19 +636,19 @@ digraph {
 	082
 	083 -> 245
 	084 -> 234
-	085 -> 395 [class = "skill" label = "illusion"]
+	085 -> 395 [class = "skl" label = "illusion"]
 	085 -> 322
 	085 -> 248
 	086 -> 251
 	087 -> 064
 	088 -> 292 [class = "dice" label = "6"]
-	088 -> 170 [class = "skill" label = "strength"]
+	088 -> 170 [class = "skl" label = "strength"]
 	088 -> 064
 	088 -> 304
 	089 -> 237
 	090 -> 176
 	090 -> 021
-	090 -> 329 [class = "skill" label = "ESP"]
+	090 -> 329 [class = "skl" label = "ESP"]
 	091 -> 140
 	092 -> 156
 	093 -> 169
@@ -634,12 +658,12 @@ digraph {
 	097 -> 013
 	097 -> 281
 	098 -> 303
-	098 -> 004 [class = "skill" label = "fire"]
-	098 -> 190 [class = "skill" label = "creature copy"]
+	098 -> 004 [class = "skl" label = "fire"]
+	098 -> 190 [class = "skl" label = "creature copy"]
 	098 -> 237
 	099 -> 052
 	099 -> 038
-	100 -> 079 [class = "skill" label = "levitation"]
+	100 -> 079 [class = "skl" label = "levitation"]
 	100 -> 276
 	101 -> 062 [class = "cbt" label = "copy wins"]
 	101 -> 064 [class = "cbt" label = "copy loses"]
@@ -674,22 +698,22 @@ digraph {
 	120 -> 095
 	121 -> 257
 	122 -> 047
-	123 -> 211 [class = "skill" label = "fool's gold"]
-	123 -> 035 [class = "skill" label = "illusion"]
+	123 -> 211 [class = "skl" label = "fool's gold"]
+	123 -> 035 [class = "skl" label = "illusion"]
 	123 -> 283
 	124 -> 400
 	125 -> 209
 	126 -> 316
 	127 -> 053 [class = "req" label = "-berries"]
 	127 -> 387 [class = "req" label = "-silver mirror"]
-	127 -> 240 [class = "skill" label = "fire"]
+	127 -> 240 [class = "skl" label = "fire"]
 	127 -> 194
 	128 -> 336
-	128 -> 036 [class = "skill" label = "fool's gold"]
-	128 -> 262 [class = "skill" label = "creature copy"]
-	128 -> 152 [class = "skill" label = "weakness"]
+	128 -> 036 [class = "skl" label = "fool's gold"]
+	128 -> 262 [class = "skl" label = "creature copy"]
+	128 -> 152 [class = "skl" label = "weakness"]
 	129 -> 260
-	129 -> 370
+	129 -> 370 [dir = both]
 	129 -> 237
 	130 -> 333
 	131 -> 348
@@ -705,18 +729,18 @@ digraph {
 	136 -> 017
 	136 -> 167
 	136 -> 389
-	137 -> 383 [class = "skill" label = "stamina"]
+	137 -> 383 [class = "skl" label = "stamina"]
 	137 -> 014
-	138 -> 376 [class = "skill" label = "shielding"]
+	138 -> 376 [class = "skl" label = "shielding"]
 	138 -> 064
 	139 -> 346
-	139 -> 244 [class = "skill" label = "illusion"]
-	139 -> 028 [class = "skill" label = "fire"]
+	139 -> 244 [class = "skl" label = "illusion"]
+	139 -> 028 [class = "skl" label = "fire"]
 	140 -> 025
 	140 -> 104
 	141 -> 156
 	142 -> 234
-	143 -> 360 [class = "skill" label = "creature copy"]
+	143 -> 360 [class = "skl" label = "creature copy"]
 	143 -> 226
 	143 -> 184
 	144 -> 154
@@ -741,8 +765,8 @@ digraph {
 	154 -> 056
 	155 -> 065
 	156 -> 071
-	156 -> 284 [class = "skill" label = "levitation"]
-	156 -> 114 [class = "skill" label = "fire"]
+	156 -> 284 [class = "skl" label = "levitation"]
+	156 -> 114 [class = "skl" label = "fire"]
 	157 -> 199
 	157 -> 232
 	158 -> 077
@@ -754,7 +778,7 @@ digraph {
 	162 -> 001 [class = "cbt" label = "escape"]
 	163 -> 095
 	164
-	165 -> 398 [class = "skill" label = "strength"]
+	165 -> 398 [class = "skl" label = "strength"]
 	165 -> 202
 	166 -> 013 [class = "pass" label = "1 of 3 SK"]
 	166 -> 281 [class = "pass" label = "1 of 3 SK"]
@@ -765,8 +789,8 @@ digraph {
 	169 -> 197
 	169 -> 317
 	169 -> 151
-	170 -> 292
-	170 -> 064 [class = "dice" label = "4~6"]
+	170 -> 292 [class = "dice" label = "4~6"]
+	170 -> 064
 	170 -> 304
 	171 -> 365
 	171 -> 278
@@ -775,48 +799,48 @@ digraph {
 	172 -> 289
 	173 -> 218
 	174 -> 268
-	174 -> 116 [class = "skill" label = "strength"]
+	174 -> 116 [class = "skl" label = "strength"]
 	175 -> 110
 	175 -> 288
 	176 -> 127
 	176 -> 021
-	176 -> 329 [class = "skill" label = "ESP"]
+	176 -> 329 [class = "skl" label = "ESP"]
 	177 -> 005
 	177 -> 344
 	178 -> 017
 	178 -> 265
 	179 -> 378
 	179 -> 125
-	179 -> 341 [class = "skill" label = "shield"]
+	179 -> 341 [class = "skl" label = "shield"]
 	180 -> 099
 	181 -> 054 [class = "pass" label = "LK"]
 	181 -> 025 [class = "pass" label = "LK"]
-	182 -> 085 [class = "skill" label = "fire"]
-	182 -> 395 [class = "skill" label = "illusion"]
+	182 -> 085 [class = "skl" label = "fire"]
+	182 -> 395 [class = "skl" label = "illusion"]
 	182 -> 322
 	182 -> 248
 	183 -> 270
 	184
-	185 -> 013 [class = "skill" label = "fool's gold"]
+	185 -> 013 [class = "skl" label = "fool's gold"]
 	186 -> 015
 	186 -> 083
 	186 -> 245
-	187 -> 279 [class = "skill" label = "levitation"]
-	187 -> 314 [class = "skill" label = "illusion"]
+	187 -> 279 [class = "skl" label = "levitation"]
+	187 -> 314 [class = "skl" label = "illusion"]
 	187 -> 115
-	188 -> 301 [class = "skill" label = "strength"]
-	188 -> 159 [class = "skill" label = "weakness"]
+	188 -> 301 [class = "skl" label = "strength"]
+	188 -> 159 [class = "skl" label = "weakness"]
 	188 -> 051
-	189 -> 319 [class = "skill" label = "illusion"]
-	189 -> 130 [class = "skill" label = "shielding"]
-	189 -> 043 [class = "skill" label = "weakness"]
+	189 -> 319 [class = "skl" label = "illusion"]
+	189 -> 130 [class = "skl" label = "shielding"]
+	189 -> 043 [class = "skl" label = "weakness"]
 	189 -> 333
 	190 -> 147
 	191 -> 119
 	192 -> 029
-	193 -> 211 [class = "skill" label = "fool's gold"]
-	193 -> 123 [class = "skill" label = "ESP"]
-	193 -> 035 [class = "skill" label = "illusion"]
+	193 -> 211 [class = "skl" label = "fool's gold"]
+	193 -> 123 [class = "skl" label = "ESP"]
+	193 -> 035 [class = "skl" label = "illusion"]
 	193 -> 283
 	194
 	195 -> 377
@@ -834,17 +858,17 @@ digraph {
 	203 -> 016
 	203 -> 011
 	204 -> 073
-	205 -> 309 [class = "cbt" label = "short man alive"]
-	205 -> 368 [class = "cbt" label = "short man dies"]
+	205 -> 309 [class = "cbt" label = "ally lives"]
+	205 -> 368 [class = "cbt" label = "ally dies"]
 	206 -> 182
 	207 -> 188
 	208
 	209 -> 156
 	209 -> 362
-	210 -> 192 [class = "skill" label = "shielding"]
+	210 -> 192 [class = "skl" label = "shielding"]
 	210 -> 359
-	211 -> 123 [class = "skill" label = "ESP"]
-	211 -> 035 [class = "skill" label = "illusion"]
+	211 -> 123 [class = "skl" label = "ESP"]
+	211 -> 035 [class = "skl" label = "illusion"]
 	211 -> 283
 	212 -> 090
 	213 -> 235
@@ -854,11 +878,11 @@ digraph {
 	215 -> 041
 	216 -> 294
 	216 -> 391 [class = "opt" label = "-3 gold"]
-	216 -> 036 [class = "skill" label = "fool's gold"]
-	217 -> 293 [class = "skill" label = "shielding"]
+	216 -> 036 [class = "skl" label = "fool's gold"]
+	217 -> 293 [class = "skl" label = "shielding"]
 	217 -> 057
 	218 -> 118
-	218 -> 094 [class = "skill" label = "strength"]
+	218 -> 094 [class = "skl" label = "strength"]
 	219 -> 095
 	220 -> 243
 	220 -> 002
@@ -867,7 +891,7 @@ digraph {
 	222 -> 014
 	223 -> 138
 	224 -> 265
-	225 -> 015 [class = "skill" label = "fool's gold"]
+	225 -> 015 [class = "skl" label = "fool's gold"]
 	225 -> 245
 	226 -> 312 [class = "opt" label = "silver mirror"]
 	226 -> 037 [class = "opt" label = "golden fleece"]
@@ -875,12 +899,12 @@ digraph {
 	226 -> 184
 	227 -> 234
 	228 -> 088
-	228 -> 170 [class = "skill" label = "strength"]
+	228 -> 170 [class = "skl" label = "strength"]
 	228 -> 296 [class = "opt" label = "copper key"]
 	229 -> 217 [class = "info" label = "combination"]
 	229 -> 050
-	229 -> 164
-	230 -> 096 [class = "skill" label = "fool's gold"]
+	229 -> 164 [class = "skl" label = "strength"]
+	230 -> 096 [class = "skl" label = "fool's gold"]
 	230 -> 288
 	231 -> 196 [class = "pass" label = "LK"]
 	231 -> 243 [class = "fail"]
@@ -896,7 +920,7 @@ digraph {
 	238 -> 018
 	238 -> 375
 	238 -> 031
-	239 -> 379 [class = "skill" label = "levitation"]
+	239 -> 379 [class = "skl" label = "levitation"]
 	239 -> 082
 	240 -> 006
 	241 -> 077
@@ -912,7 +936,7 @@ digraph {
 	245 -> 047
 	246 -> 174
 	247 -> 234
-	248 -> 103 [class = "skill" label = "levitation"]
+	248 -> 103 [class = "skl" label = "levitation"]
 	249 -> 392 [class = "opt" label = "copper key"]
 	249 -> 231
 	249 -> 055
@@ -931,7 +955,7 @@ digraph {
 	257 -> 237
 	257 -> 357
 	257 -> 200
-	258 -> 140 [class = "skill" label = "illusion/spell"]
+	258 -> 140 [class = "skl" label = "illusion/spell"]
 	258 -> 366
 	259 -> 218
 	260 -> 034
@@ -962,9 +986,9 @@ digraph {
 	273 -> 049
 	274 -> 353
 	274 -> 277
-	275 -> 399 [class = "skill" label = "illusion"]
+	275 -> 399 [class = "skl" label = "illusion"]
 	275 -> 272
-	276 -> 165 [class = "skill" label = "strength"]
+	276 -> 165 [class = "skl" label = "strength"]
 	276 -> 202
 	277 -> 330 [class = "req" label = "-spider-man"]
 	277 -> 315 [class = "req" label = "-pocket myriad"]
@@ -984,26 +1008,26 @@ digraph {
 	282 -> 112
 	283
 	284 -> 071
-	284 -> 114 [class = "skill" label = "levitation"]
+	284 -> 114 [class = "skl" label = "levitation"]
 	285 -> 185
 	285 -> 023
 	286 -> 140
 	287 -> 160 [class = "opt" label = "-pocket myriad"]
 	287 -> 027 [class = "opt" label = "-gold"]
 	287 -> 025
-	288 -> 162 [class = "skill" label = "strength"]
-	288 -> 086 [class = "skill" label = "levitation"]
+	288 -> 162 [class = "skl" label = "strength"]
+	288 -> 086 [class = "skl" label = "levitation"]
 	288 -> 032
 	289 -> 340 [class = "req" label = "-silver mirror"]
 	289 -> 214 [class = "req" label = "-hogweed essence"]
 	289 -> 305 [class = "req" label = "-healing ointment"]
-	289 -> 304
+	//289 -> 304
 	290 -> 325
-	290 -> 307 [class = "skill" label = "weakness"]
-	290 -> 070 [class = "skill" label = "levitation"]
-	290 -> 264 [class = "skill" label = "strength"]
+	290 -> 307 [class = "skl" label = "weakness"]
+	290 -> 070 [class = "skl" label = "levitation"]
+	290 -> 264 [class = "skl" label = "strength"]
 	291 -> 328
-	292 -> 376 [class = "skill" label = "shielding"]
+	292 -> 376 [class = "skl" label = "shielding"]
 	292 -> 064
 	292 -> 042
 	293 -> 374
@@ -1016,14 +1040,14 @@ digraph {
 	298 -> 058
 	298 -> 141
 	299 -> 237
-	300 -> 244 [class = "skill" label = "illusion"]
+	300 -> 244 [class = "skl" label = "illusion"]
 	300 -> 346
 	301 -> 323
 	302 -> 169
 	303 -> 147
 	304 -> 172
-	304 -> 026
-	304 -> 289
+	304 -> 026 [dir = both]
+	304 -> 289 [dir = both]
 	304 -> 064
 	305 -> 064
 	306 -> 052
@@ -1032,9 +1056,9 @@ digraph {
 	308 -> 257
 	309 -> 015
 	309 -> 245
-	310 -> 181 [class = "skill" label = "creature copy"]
-	310 -> 250 [class = "skill" label = "illusion"]
-	310 -> 393 [class = "skill" label = "ESP"]
+	310 -> 181 [class = "skl" label = "creature copy"]
+	310 -> 250 [class = "skl" label = "illusion"]
+	310 -> 393 [class = "skl" label = "ESP"]
 	310 -> 104
 	311 -> 178
 	311 -> 061
@@ -1043,7 +1067,7 @@ digraph {
 	313 -> 281
 	314 -> 373
 	315 -> 191
-	316 -> 220 [class = "skill" label = "shielding"]
+	316 -> 220 [class = "skl" label = "shielding"]
 	316 -> 139 [class = "pass" label = "LK"]
 	316 -> 300 [class = "fail"]
 	317 -> 019
@@ -1052,12 +1076,12 @@ digraph {
 	318 -> 117
 	318 -> 277
 	319 -> 333
-	320 -> 332 [class = "skill" label = "illusion"]
-	320 -> 113 [class = "skill" label = "weakness"]
+	320 -> 332 [class = "skl" label = "illusion"]
+	320 -> 113 [class = "skl" label = "weakness"]
 	320 -> 351
 	321 -> 269
 	321 -> 339
-	322 -> 039 [class = "req" label = "spider jar"]
+	322 -> 039 [class = "req" label = "spider-man"]
 	322 -> 168 [class = "req" label = "charmed amulet"]
 	322 -> 291 [class = "req" label = "healing ointment"]
 	322 -> 248
@@ -1070,11 +1094,11 @@ digraph {
 	326 -> 031
 	327 -> 366
 	328 -> 067
-	328 -> 143 [class = "skill" label = "creature copy"]
+	328 -> 143 [class = "skl" label = "creature copy"]
 	328 -> 226
 	329 -> 021
 	329 -> 221
-	330 -> 208 [class = "cbt" label = "lose AR"]
+	330 -> 208.2 [class = "cbt" label = "lose AR"]
 	330 -> 119
 	331 -> 265
 	332 -> 080
@@ -1130,7 +1154,7 @@ digraph {
 	363 -> 064
 	363 -> 304
 	364 -> 174
-	365 -> 009 [class = "skill" label = "illusion"]
+	365 -> 009 [class = "skl" label = "illusion"]
 	365 -> 171
 	365 -> 278
 	365 -> 031
@@ -1140,7 +1164,7 @@ digraph {
 	368 -> 015
 	369
 	370 -> 260
-	370 -> 129
+	//370 -> 129
 	370 -> 237
 	371 -> 177
 	372 -> 095
@@ -1148,15 +1172,15 @@ digraph {
 	373 -> 256
 	373 -> 358
 	374 -> 030
-	374 -> 109 [class = "skill" label = "shielding"]
-	374 -> 158 [class = "skill" label = "weakness"]
+	374 -> 109 [class = "skl" label = "shielding"]
+	374 -> 158 [class = "skl" label = "weakness"]
 	375 -> 263
 	375 -> 135
 	375 -> 063
 	376
-	377 -> 332 [class = "skill" label = "illusion"]
-	377 -> 113 [class = "skill" label = "weakness"]
-	377 -> 320 [class = "skill" label = "ESP"]
+	377 -> 332 [class = "skl" label = "illusion"]
+	377 -> 113 [class = "skl" label = "weakness"]
+	377 -> 320 [class = "skl" label = "ESP"]
 	377 -> 355
 	378 -> 209
 	379 -> 206
@@ -1187,11 +1211,413 @@ digraph {
 	394 -> 251
 	395 -> 322
 	395 -> 248
-	395 -> 085
+	395 -> 085 [class = "skl" label = "fire"]
 	396 -> 183
 	397 -> 069
 	397 -> 193
 	398 -> 079
 	399 -> 272
 	400
+	/*
+	001 [fontsize=25]
+	002 [fontsize=25]
+	003 [fontsize=25]
+	004 [fontsize=25]
+	005 [fontsize=25]
+	006 [fontsize=25]
+	007 [fontsize=25]
+	008 [fontsize=25]
+	009 [fontsize=25]
+	010 [fontsize=25]
+	011 [fontsize=25]
+	012 [fontsize=25]
+	013 [fontsize=25]
+	014 [fontsize=25]
+	015 [fontsize=25]
+	016 [fontsize=25]
+	017 [fontsize=25]
+	018 [fontsize=25]
+	019 [fontsize=25]
+	020 [fontsize=25]
+	021 [fontsize=25]
+	022 [fontsize=25]
+	023 [fontsize=25]
+	024 [fontsize=25]
+	025 [fontsize=25]
+	026 [fontsize=25]
+	027 [fontsize=25]
+	028 [fontsize=25]
+	029 [fontsize=25]
+	030 [fontsize=25]
+	031 [fontsize=25]
+	032 [fontsize=25]
+	033 [fontsize=25]
+	034 [fontsize=25]
+	035 [fontsize=25]
+	036 [fontsize=25]
+	037 [fontsize=25]
+	038 [fontsize=25]
+	039 [fontsize=25]
+	040 [fontsize=25]
+	041 [fontsize=25]
+	042 [fontsize=25]
+	043 [fontsize=25]
+	044 [fontsize=25]
+	045 [fontsize=25]
+	046 [fontsize=25]
+	047 [fontsize=25]
+	048 [fontsize=25]
+	049 [fontsize=25]
+	050 [fontsize=25]
+	051 [fontsize=25]
+	052 [fontsize=25]
+	053 [fontsize=25]
+	054 [fontsize=25]
+	055 [fontsize=25]
+	056 [fontsize=25]
+	057 [fontsize=25]
+	058 [fontsize=25]
+	059 [fontsize=25]
+	060 [fontsize=25]
+	061 [fontsize=25]
+	062 [fontsize=25]
+	063 [fontsize=25]
+	064 [fontsize=25]
+	065 [fontsize=25]
+	066 [fontsize=25]
+	067 [fontsize=25]
+	068 [fontsize=25]
+	069 [fontsize=25]
+	070 [fontsize=25]
+	071 [fontsize=25]
+	072 [fontsize=25]
+	073 [fontsize=25]
+	074 [fontsize=25]
+	075 [fontsize=25]
+	076 [fontsize=25]
+	077 [fontsize=25]
+	078 [fontsize=25]
+	079 [fontsize=25]
+	080 [fontsize=25]
+	081 [fontsize=25]
+	082 [fontsize=25]
+	083 [fontsize=25]
+	084 [fontsize=25]
+	085 [fontsize=25]
+	086 [fontsize=25]
+	087 [fontsize=25]
+	088 [fontsize=25]
+	089 [fontsize=25]
+	090 [fontsize=25]
+	091 [fontsize=25]
+	092 [fontsize=25]
+	093 [fontsize=25]
+	094 [fontsize=25]
+	095 [fontsize=25]
+	096 [fontsize=25]
+	097 [fontsize=25]
+	098 [fontsize=25]
+	099 [fontsize=25]
+	100 [fontsize=25]
+	101 [fontsize=25]
+	102 [fontsize=25]
+	103 [fontsize=25]
+	104 [fontsize=25]
+	105 [fontsize=25]
+	106 [fontsize=25]
+	107 [fontsize=25]
+	108 [fontsize=25]
+	109 [fontsize=25]
+	110 [fontsize=25]
+	111 [fontsize=25]
+	112 [fontsize=25]
+	113 [fontsize=25]
+	114 [fontsize=25]
+	115 [fontsize=25]
+	116 [fontsize=25]
+	117 [fontsize=25]
+	118 [fontsize=25]
+	119 [fontsize=25]
+	120 [fontsize=25]
+	121 [fontsize=25]
+	122 [fontsize=25]
+	123 [fontsize=25]
+	124 [fontsize=25]
+	125 [fontsize=25]
+	126 [fontsize=25]
+	127 [fontsize=25]
+	128 [fontsize=25]
+	129 [fontsize=25]
+	130 [fontsize=25]
+	131 [fontsize=25]
+	132 [fontsize=25]
+	133 [fontsize=25]
+	134 [fontsize=25]
+	135 [fontsize=25]
+	136 [fontsize=25]
+	137 [fontsize=25]
+	138 [fontsize=25]
+	139 [fontsize=25]
+	140 [fontsize=25]
+	141 [fontsize=25]
+	142 [fontsize=25]
+	143 [fontsize=25]
+	144 [fontsize=25]
+	145 [fontsize=25]
+	146 [fontsize=25]
+	147 [fontsize=25]
+	148 [fontsize=25]
+	149 [fontsize=25]
+	150 [fontsize=25]
+	151 [fontsize=25]
+	152 [fontsize=25]
+	153 [fontsize=25]
+	154 [fontsize=25]
+	155 [fontsize=25]
+	156 [fontsize=25]
+	157 [fontsize=25]
+	158 [fontsize=25]
+	159 [fontsize=25]
+	160 [fontsize=25]
+	161 [fontsize=25]
+	162 [fontsize=25]
+	163 [fontsize=25]
+	164 [fontsize=25]
+	165 [fontsize=25]
+	166 [fontsize=25]
+	167 [fontsize=25]
+	168 [fontsize=25]
+	169 [fontsize=25]
+	170 [fontsize=25]
+	171 [fontsize=25]
+	172 [fontsize=25]
+	173 [fontsize=25]
+	174 [fontsize=25]
+	175 [fontsize=25]
+	176 [fontsize=25]
+	177 [fontsize=25]
+	178 [fontsize=25]
+	179 [fontsize=25]
+	180 [fontsize=25]
+	181 [fontsize=25]
+	182 [fontsize=25]
+	183 [fontsize=25]
+	184 [fontsize=25]
+	185 [fontsize=25]
+	186 [fontsize=25]
+	187 [fontsize=25]
+	188 [fontsize=25]
+	189 [fontsize=25]
+	190 [fontsize=25]
+	191 [fontsize=25]
+	192 [fontsize=25]
+	193 [fontsize=25]
+	194 [fontsize=25]
+	195 [fontsize=25]
+	196 [fontsize=25]
+	197 [fontsize=25]
+	198 [fontsize=25]
+	199 [fontsize=25]
+	200 [fontsize=25]
+	201 [fontsize=25]
+	202 [fontsize=25]
+	203 [fontsize=25]
+	204 [fontsize=25]
+	205 [fontsize=25]
+	206 [fontsize=25]
+	207 [fontsize=25]
+	208 [fontsize=25]
+	209 [fontsize=25]
+	210 [fontsize=25]
+	211 [fontsize=25]
+	212 [fontsize=25]
+	213 [fontsize=25]
+	214 [fontsize=25]
+	215 [fontsize=25]
+	216 [fontsize=25]
+	217 [fontsize=25]
+	218 [fontsize=25]
+	219 [fontsize=25]
+	220 [fontsize=25]
+	221 [fontsize=25]
+	222 [fontsize=25]
+	223 [fontsize=25]
+	224 [fontsize=25]
+	225 [fontsize=25]
+	226 [fontsize=25]
+	227 [fontsize=25]
+	228 [fontsize=25]
+	229 [fontsize=25]
+	230 [fontsize=25]
+	231 [fontsize=25]
+	232 [fontsize=25]
+	233 [fontsize=25]
+	234 [fontsize=25]
+	235 [fontsize=25]
+	236 [fontsize=25]
+	237 [fontsize=25]
+	238 [fontsize=25]
+	239 [fontsize=25]
+	240 [fontsize=25]
+	241 [fontsize=25]
+	242 [fontsize=25]
+	243 [fontsize=25]
+	244 [fontsize=25]
+	245 [fontsize=25]
+	246 [fontsize=25]
+	247 [fontsize=25]
+	248 [fontsize=25]
+	249 [fontsize=25]
+	250 [fontsize=25]
+	251 [fontsize=25]
+	252 [fontsize=25]
+	253 [fontsize=25]
+	254 [fontsize=25]
+	255 [fontsize=25]
+	256 [fontsize=25]
+	257 [fontsize=25]
+	258 [fontsize=25]
+	259 [fontsize=25]
+	260 [fontsize=25]
+	261 [fontsize=25]
+	262 [fontsize=25]
+	263 [fontsize=25]
+	264 [fontsize=25]
+	265 [fontsize=25]
+	266 [fontsize=25]
+	267 [fontsize=25]
+	268 [fontsize=25]
+	269 [fontsize=25]
+	270 [fontsize=25]
+	271 [fontsize=25]
+	272 [fontsize=25]
+	273 [fontsize=25]
+	274 [fontsize=25]
+	275 [fontsize=25]
+	276 [fontsize=25]
+	277 [fontsize=25]
+	278 [fontsize=25]
+	279 [fontsize=25]
+	280 [fontsize=25]
+	281 [fontsize=25]
+	282 [fontsize=25]
+	283 [fontsize=25]
+	284 [fontsize=25]
+	285 [fontsize=25]
+	286 [fontsize=25]
+	287 [fontsize=25]
+	288 [fontsize=25]
+	289 [fontsize=25]
+	290 [fontsize=25]
+	291 [fontsize=25]
+	292 [fontsize=25]
+	293 [fontsize=25]
+	294 [fontsize=25]
+	295 [fontsize=25]
+	296 [fontsize=25]
+	297 [fontsize=25]
+	298 [fontsize=25]
+	299 [fontsize=25]
+	300 [fontsize=25]
+	301 [fontsize=25]
+	302 [fontsize=25]
+	303 [fontsize=25]
+	304 [fontsize=25]
+	305 [fontsize=25]
+	306 [fontsize=25]
+	307 [fontsize=25]
+	308 [fontsize=25]
+	309 [fontsize=25]
+	310 [fontsize=25]
+	311 [fontsize=25]
+	312 [fontsize=25]
+	313 [fontsize=25]
+	314 [fontsize=25]
+	315 [fontsize=25]
+	316 [fontsize=25]
+	317 [fontsize=25]
+	318 [fontsize=25]
+	319 [fontsize=25]
+	320 [fontsize=25]
+	321 [fontsize=25]
+	322 [fontsize=25]
+	323 [fontsize=25]
+	324 [fontsize=25]
+	325 [fontsize=25]
+	326 [fontsize=25]
+	327 [fontsize=25]
+	328 [fontsize=25]
+	329 [fontsize=25]
+	330 [fontsize=25]
+	331 [fontsize=25]
+	332 [fontsize=25]
+	333 [fontsize=25]
+	334 [fontsize=25]
+	335 [fontsize=25]
+	336 [fontsize=25]
+	337 [fontsize=25]
+	338 [fontsize=25]
+	339 [fontsize=25]
+	340 [fontsize=25]
+	341 [fontsize=25]
+	342 [fontsize=25]
+	343 [fontsize=25]
+	344 [fontsize=25]
+	345 [fontsize=25]
+	346 [fontsize=25]
+	347 [fontsize=25]
+	348 [fontsize=25]
+	349 [fontsize=25]
+	350 [fontsize=25]
+	351 [fontsize=25]
+	352 [fontsize=25]
+	353 [fontsize=25]
+	354 [fontsize=25]
+	355 [fontsize=25]
+	356 [fontsize=25]
+	357 [fontsize=25]
+	358 [fontsize=25]
+	359 [fontsize=25]
+	360 [fontsize=25]
+	361 [fontsize=25]
+	362 [fontsize=25]
+	363 [fontsize=25]
+	364 [fontsize=25]
+	365 [fontsize=25]
+	366 [fontsize=25]
+	367 [fontsize=25]
+	368 [fontsize=25]
+	369 [fontsize=25]
+	370 [fontsize=25]
+	371 [fontsize=25]
+	372 [fontsize=25]
+	373 [fontsize=25]
+	374 [fontsize=25]
+	375 [fontsize=25]
+	376 [fontsize=25]
+	377 [fontsize=25]
+	378 [fontsize=25]
+	379 [fontsize=25]
+	380 [fontsize=25]
+	381 [fontsize=25]
+	382 [fontsize=25]
+	383 [fontsize=25]
+	384 [fontsize=25]
+	385 [fontsize=25]
+	386 [fontsize=25]
+	387 [fontsize=25]
+	388 [fontsize=25]
+	389 [fontsize=25]
+	390 [fontsize=25]
+	391 [fontsize=25]
+	392 [fontsize=25]
+	393 [fontsize=25]
+	394 [fontsize=25]
+	395 [fontsize=25]
+	396 [fontsize=25]
+	397 [fontsize=25]
+	398 [fontsize=25]
+	399 [fontsize=25]
+	400 [fontsize=25]
+	*/
 }
