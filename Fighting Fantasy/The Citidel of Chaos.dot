@@ -68,107 +68,157 @@ digraph {
 		"
 		shape = "box"
 		margin = 0.1]
-
-	subgraph Required {
-		node [style = "filled" color = "gold" fillcolor = "gold" fontcolor = "blue" shape = "rect"]
-		key3
-		wrd3 [fontcolor = "grey"]
-		boo5
-		dam5
-		monboo5
-		mondam5
-		mon5
-		238
-		400 [fontcolor = "black" shape = "octagon"]
+		
+	subgraph Boost {
+		node [style = "filled" color = "greenyellow"]
+		boo1 [label = "\N\n text"]
+		boo2 [shape = "rect" fontcolor = "blue" label = "\N\n text"]
+		boo3 [label = "\N\n text"]
+		boo4 [shape = "rect" fontcolor = "blue" label = "\N\n text"]
+		boo5 [shape = "rect" fontcolor = "blue" label = "\N\n text"]
+		021 [shape = "rect" fontcolor = "blue" label = "\N\n info\n +2LK" tooltip = "find fleece"]
+		027 [shape = "rect" fontcolor = "blue" label = "\N\n -all gold\n info\n +2LK" tooltip = "beware ganjees"]
+		066 [label = "\N\n +all SK\n +all ST\n +1LK"]
+		092 [label = "\N\n +2ST"]
+		120 [shape = "rect" fontcolor = "blue" label = "\N\n drink\n +2ST\n +3LK"]
+		253 [label = "\N\n +1SK\n +3ST\n +1LK"]
+		313 [label = "\N*\n silence\n +2ST"]
+		315 [label = "\N\n +4SK"]
+		317 [color = "greenyellow:pink" label = "\N\n +1LK\n -1ST"]
+		323 [shape = "rect" fontcolor = "blue" label = "\N*\n magic sword\n silver mirror\n +1AT"]
+		356 [label = "\N\n +2ST\n +1LK"]
+		385 [label = "\N\n +2ST"]
+		397 [label = "\N\n +2ST"]
+		bst
 	}
 
-	subgraph Required2 {
-		node [style = "filled" color = "gold2" fillcolor = "gold2" fontcolor = "blue" shape = "rect"]
-		req2
-	}
-
-	subgraph Path {
-		node [penwidth = 3 color = "gold"]
-		txt2
-		key2 [shape = "rect" fontcolor = "blue"]
-		wrd2 [shape = "rect" fontcolor = "grey"]
-		boo3 [style = "filled" fillcolor = "greenyellow"]
-		boo4 [style = "filled" fillcolor = "greenyellow"]
-		dam3 [style = "filled" fillcolor = "pink"]
-		dam4 [style = "filled" fillcolor = "pink"]
-		monboo3 [style = "filled" fillcolor = "greenyellow"]
-		monboo4 [style = "filled" fillcolor = "greenyellow"]
-		mondam3 [style = "filled" fillcolor = "pink"]
-		mondam4 [style = "filled" fillcolor = "pink"]
-		mon3
-		mon4
-		001
-		261
-		394
-		251
-		321
-		339
-		134 [class = "optp" shape = "rect"]
-		245
-		161
-		106
-		218
-		118
-		273
-		371
-		177
-		005
-		040
-		243
-		352
-		216
-		294
-		099
-		038
-		132
-		238
-		018
-
-
-
-		169
-		197
-		363
-		228
-		296
-		292
-		042
-		091
-		140
-		025
-		206
-		182
-		322
-		291
-		328
-		226
-		037
-		229
-		217
-		293
-		374
-		158
-		077
-		187
-		279
-		078
-		124
-		400
+	subgraph Damage {
+		node [style = "filled" color = "pink"]
+		dam1 [label = "\N\n text"]
+		dam2 [shape = "rect" fontcolor = "blue" label = "\N\n text"]
+		dam3 [label = "\N\n text"]
+		dam4 [shape = "rect" fontcolor = "blue" label = "\N\n text"]
+		dam5 [shape = "rect" fontcolor = "blue" label = "\N\n text"]
+		043 [label = "\N\n -1ST"]
+		067 [label = "\N\n -4ST"]
+		074 [label = "\N\n -4ST"]
+		085 [label = "\N\n -2ST"]
+		087 [label = "\N\n -2ST"]
+		088 [label = "\N\n -?ST"]
+		094 [label = "\N\n -1ST"]
+		097 [label = "\N*\n -1SK"]
+		121 [label = "\N\n -1ST"]
+		125 [label = "\N\n -5ST?\n -1LK"]
+		129 [label = "\N\n -1SK"]
+		150 [label = "\N\n -2ST"]
+		151 [label = "\N\n -2ST"]
+		163 [shape = "rect" fontcolor = "blue" label = "\N\n drink\n -1SK\n -2ST"]
+		170 [label = "\N\n -?ST"]
+		182 [label = "\N\n -1SK\n -2ST\n -1LK"]
+		224 [label = "\N\n -2ST"]
+		231 [label = "\N\n -?ST\n -?LK"]
+		233 [label = "\N\n -5ST"]
+		240 [label = "\N\n -2ST"]
+		254 [label = "\N\n -1SK\n -2ST"]
+		267 [label = "\N*\n -1LK"]
+		271 [label = "\N\n -1SK"]
+		282 [label = "\N\n -2ST"]
+		300 [label = "\N\n -0~6ST"]
+		305 [label = "\N\n -2ST"]
+		319 [label = "\N\n -2ST"]
+		331 [label = "\N\n -1SK\n -3ST"]
+		333 [label = "\N\n -2ST"]
+		370 [label = "\N\n -2ST"]
+		378 [label = "\N\n -4ST"]
+		383 [label = "\N\n -2ST"]
+		395 [label = "\N\n -2ST"]
+		ddg
 	}
 	
-	subgraph Optional {
-		node [style = "filled" color = "paleturquoise1" fillcolor = "paleturquoise1" fontcolor = "blue" shape = "rect"]
-		091
-		134
-		180
-		opt
+	subgraph Death {
+		node [style = "filled" color = "red"]
+		061
+		065
+		071
+		072
+		082
+		103
+		119
+		148
+		153
+		164
+		166 [label = "\N\n -0~4ST"]
+		181 [label = "\N\n -4ST"]
+		184
+		194
+		199
+		202
+		208
+		208.2 [label = "208"]
+		248
+		250
+		283
+		342
+		369
+		376
+		ddt
 	}
 
+	subgraph Key_Item {
+		node [fontcolor = "blue" shape = "rect"]
+		key1 [label = "\N\n info" tooltip = "info text"]
+		key2 [label = "\N\n text"]
+		key3 [label = "\N\n text"]
+		key4 [fontcolor = "crimson" label = "\N\n -text"]
+		015 [label = "\N\n throwing dagger*"]
+		018 [label = "\N\n info" tooltip = "dire weak to sunlight"]
+		062 [class = "ddg" label = "\N\n +10 gold?\n -1LK"]
+		079 [label = "\N\n berries"]
+		089 [label = "\N\n spider-man"]
+		091 [class = "ddg" label = "\N\n golden fleece?\n -?LK"]
+		093 [label = "\N\n hogweed essence"]
+		102 [label = "\N\n charmed amulet"]
+		105 [label = "\N\n fire water"]
+		134 [label = "\N\n password: scimitar"]
+		135 [label = "\N\n info" tooltip = "miks, needleknife, cannot use metal disguises"]
+		141 [label = "\N\n drink"]
+		160 [fontcolor = "crimson" label = "\N\n -gadget"]
+		171 [fontcolor = "crimson" label = "\N\n &plusmn;? gold\n -fool's gold?"]
+		180 [label = "\N\n 6 gold\n hairbrush"]
+		235 [label = "\N\n 8 gold\n copper key\n healing ointment\n magik potion"]
+		238 [label = "\N\n combination: 217"]
+		242 [label = "\N\n drink\n wine"]
+		267 [label = "\N\n drink"]
+		272 [label = "\N\n 8 gold\n damaged pocket myriad"]
+		278 [class = "ddg" label = "\N\n +? gold\n -?SK\n -?ST"]
+		287 [fontcolor = "crimson" label = "\N\n -healing ointment"]
+		309 [label = "\N\n 20 gold"]
+		312 [fontcolor = "crimson" label = "\N\n -mirror"]
+		327 [fontcolor = "crimson" label = "\N\n -pocket myriad"]
+		334 [label = "\N\n drink"]
+		340 [fontcolor = "crimson" label = "\N\n -mirror"]
+		365 [class = "ddt" label = "\N\n 2 spells\n 50 gold\n breastplate (-2ESK)"]
+		368 [label = "\N\n 28 gold\n dagger"]
+		381 [class = "ddg" label = "\N\n ring?\n -1LK"]
+		387 [fontcolor = "crimson" label = "\N\n -mirror"]
+		391 [fontcolor = "crimson" label = "\N\n -3 gold"]
+		kky
+	}
+	
+	subgraph Key_Word {
+		node [fontcolor = "grey" shape = "rect"]
+		wrd1 [label = "\N\n text"]
+		wrd2 [label = "\N\n text"]
+		wrd3 [label = "\N\n text"]
+		wwd
+	}
+	
+	subgraph Shop {
+		node [fontcolor = "purple" shape = "rect"]
+		shop1 [label = "\N\n text"]
+		shp
+	}
+	
 	subgraph Combat {
 		style = "filled" color = "palegreen"
 		subgraph cluster_00 {
@@ -294,155 +344,105 @@ digraph {
 		
 		cbt
 	}
-
-	subgraph Death {
-		node [style = "filled" color = "red"]
-		061
-		065
-		071
-		072
-		082
-		103
-		119
-		148
-		153
-		164
-		166 [label = "\N\n -0~4ST"]
-		181 [label = "\N\n -4ST"]
-		184
-		194
-		199
-		202
-		208
-		208.2 [label = "208"]
-		248
-		250
-		283
-		342
-		369
-		376
-		ddt
+	
+	subgraph Optional {
+		node [style = "filled" color = "paleturquoise1" fillcolor = "paleturquoise1" fontcolor = "blue" shape = "rect"]
+		091
+		134
+		180
+		opt
 	}
 
-	subgraph Boost {
-		node [style = "filled" color = "greenyellow"]
-		boo1 [label = "\N\n text"]
-		boo2 [shape = "rect" fontcolor = "blue" label = "\N\n text"]
-		boo3 [label = "\N\n text"]
-		boo4 [shape = "rect" fontcolor = "blue" label = "\N\n text"]
-		boo5 [shape = "rect" fontcolor = "blue" label = "\N\n text"]
-		021 [shape = "rect" fontcolor = "blue" label = "\N\n info\n +2LK" tooltip = "find fleece"]
-		027 [shape = "rect" fontcolor = "blue" label = "\N\n -all gold\n info\n +2LK" tooltip = "beware ganjees"]
-		066 [label = "\N\n +all SK\n +all ST\n +1LK"]
-		092 [label = "\N\n +2ST"]
-		120 [shape = "rect" fontcolor = "blue" label = "\N\n drink\n +2ST\n +3LK"]
-		253 [label = "\N\n +1SK\n +3ST\n +1LK"]
-		313 [label = "\N*\n silence\n +2ST"]
-		315 [label = "\N\n +4SK"]
-		317 [color = "greenyellow:pink" label = "\N\n +1LK\n -1ST"]
-		323 [shape = "rect" fontcolor = "blue" label = "\N*\n magic sword\n silver mirror\n +1AT"]
-		356 [label = "\N\n +2ST\n +1LK"]
-		385 [label = "\N\n +2ST"]
-		397 [label = "\N\n +2ST"]
-		bst
-	}
+	subgraph Path {
+		node [penwidth = 3 color = "gold"]
+		txt2
+		key2 [shape = "rect" fontcolor = "blue"]
+		wrd2 [shape = "rect" fontcolor = "grey"]
+		boo3 [style = "filled" fillcolor = "greenyellow"]
+		boo4 [style = "filled" fillcolor = "greenyellow"]
+		dam3 [style = "filled" fillcolor = "pink"]
+		dam4 [style = "filled" fillcolor = "pink"]
+		monboo3 [style = "filled" fillcolor = "greenyellow"]
+		monboo4 [style = "filled" fillcolor = "greenyellow"]
+		mondam3 [style = "filled" fillcolor = "pink"]
+		mondam4 [style = "filled" fillcolor = "pink"]
+		mon3
+		mon4
+		001
+		261
+		394
+		251
+		321
+		339
+		134 [class = "optp" shape = "rect"]
+		245
+		161
+		106
+		218
+		118
+		273
+		371
+		177
+		005
+		040
+		243
+		352
+		216
+		294
+		099
+		038
+		132
+		238
+		018
 
-	subgraph Damage {
-		node [style = "filled" color = "pink"]
-		dam1 [label = "\N\n text"]
-		dam2 [shape = "rect" fontcolor = "blue" label = "\N\n text"]
-		dam3 [label = "\N\n text"]
-		dam4 [shape = "rect" fontcolor = "blue" label = "\N\n text"]
-		dam5 [shape = "rect" fontcolor = "blue" label = "\N\n text"]
-		043 [label = "\N\n -1ST"]
-		067 [label = "\N\n -4ST"]
-		074 [label = "\N\n -4ST"]
-		085 [label = "\N\n -2ST"]
-		087 [label = "\N\n -2ST"]
-		088 [label = "\N\n -?ST"]
-		094 [label = "\N\n -1ST"]
-		097 [label = "\N*\n -1SK"]
-		121 [label = "\N\n -1ST"]
-		125 [label = "\N\n -5ST?\n -1LK"]
-		129 [label = "\N\n -1SK"]
-		150 [label = "\N\n -2ST"]
-		151 [label = "\N\n -2ST"]
-		163 [shape = "rect" fontcolor = "blue" label = "\N\n drink\n -1SK\n -2ST"]
-		170 [label = "\N\n -?ST"]
-		182 [label = "\N\n -1SK\n -2ST\n -1LK"]
-		224 [label = "\N\n -2ST"]
-		231 [label = "\N\n -?ST\n -?LK"]
-		233 [label = "\N\n -5ST"]
-		240 [label = "\N\n -2ST"]
-		254 [label = "\N\n -1SK\n -2ST"]
-		267 [label = "\N*\n -1LK"]
-		271 [label = "\N\n -1SK"]
-		282 [label = "\N\n -2ST"]
-		300 [label = "\N\n -0~6ST"]
-		305 [label = "\N\n -2ST"]
-		319 [label = "\N\n -2ST"]
-		331 [label = "\N\n -1SK\n -3ST"]
-		333 [label = "\N\n -2ST"]
-		370 [label = "\N\n -2ST"]
-		378 [label = "\N\n -4ST"]
-		383 [label = "\N\n -2ST"]
-		395 [label = "\N\n -2ST"]
-		ddg
-	}
 
-	subgraph Key_Item {
-		node [fontcolor = "blue" shape = "rect"]
-		key1 [label = "\N\n info" tooltip = "info text"]
-		key2 [label = "\N\n text"]
-		key3 [label = "\N\n text"]
-		key4 [fontcolor = "crimson" label = "\N\n -text"]
-		015 [label = "\N\n throwing dagger*"]
-		018 [label = "\N\n info" tooltip = "dire weak to sunlight"]
-		062 [class = "ddg" label = "\N\n +10 gold?\n -1LK"]
-		079 [label = "\N\n berries"]
-		089 [label = "\N\n spider-man"]
-		091 [class = "ddg" label = "\N\n golden fleece?\n -?LK"]
-		093 [label = "\N\n hogweed essence"]
-		102 [label = "\N\n charmed amulet"]
-		105 [label = "\N\n fire water"]
-		134 [label = "\N\n password: scimitar"]
-		135 [label = "\N\n info" tooltip = "miks, needleknife, cannot use metal disguises"]
-		141 [label = "\N\n drink"]
-		160 [fontcolor = "crimson" label = "\N\n -gadget"]
-		171 [fontcolor = "crimson" label = "\N\n &plusmn;? gold\n -fool's gold?"]
-		180 [label = "\N\n 6 gold\n hairbrush"]
-		235 [label = "\N\n 8 gold\n copper key\n healing ointment\n magik potion"]
-		238 [label = "\N\n combination: 217"]
-		242 [label = "\N\n drink\n wine"]
-		267 [label = "\N\n drink"]
-		272 [label = "\N\n 8 gold\n damaged pocket myriad"]
-		278 [class = "ddg" label = "\N\n +? gold\n -?SK\n -?ST"]
-		287 [fontcolor = "crimson" label = "\N\n -healing ointment"]
-		309 [label = "\N\n 20 gold"]
-		312 [fontcolor = "crimson" label = "\N\n -mirror"]
-		327 [fontcolor = "crimson" label = "\N\n -pocket myriad"]
-		334 [label = "\N\n drink"]
-		340 [fontcolor = "crimson" label = "\N\n -mirror"]
-		365 [class = "ddt" label = "\N\n 2 spells\n 50 gold\n breastplate (-2ESK)"]
-		368 [label = "\N\n 28 gold\n dagger"]
-		381 [class = "ddg" label = "\N\n ring?\n -1LK"]
-		387 [fontcolor = "crimson" label = "\N\n -mirror"]
-		391 [fontcolor = "crimson" label = "\N\n -3 gold"]
-		kky
+
+		169
+		197
+		363
+		228
+		296
+		292
+		042
+		091
+		140
+		025
+		206
+		182
+		322
+		291
+		328
+		226
+		037
+		229
+		217
+		293
+		374
+		158
+		077
+		187
+		279
+		078
+		124
+		400
 	}
 	
-	subgraph Key_Word {
-		node [fontcolor = "grey" shape = "rect"]
-		wrd1 [label = "\N\n text"]
-		wrd2 [label = "\N\n text"]
-		wrd3 [label = "\N\n text"]
-		wwd
+	subgraph Required {
+		node [style = "filled" color = "gold" fillcolor = "gold" fontcolor = "blue" shape = "rect"]
+		key3
+		wrd3 [fontcolor = "grey"]
+		boo5
+		dam5
+		monboo5
+		mondam5
+		mon5
+		238
+		400 [fontcolor = "black" shape = "octagon"]
 	}
-	
-	subgraph Shop {
-		node [fontcolor = "purple" shape = "rect"]
-		shop1 [label = "\N\n text"]
-		shp
+
+	subgraph Required2 {
+		node [style = "filled" color = "gold2" fillcolor = "gold2" fontcolor = "blue" shape = "rect"]
+		req2
 	}
 
 	mon1 -> mon2 -> mon3 -> mon4 -> mon5 [penwidth = 3]
