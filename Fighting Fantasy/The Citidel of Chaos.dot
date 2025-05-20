@@ -11,11 +11,6 @@ digraph {
 	edge[weight=5]
 	stylesheet="../style.css"
 	
-	subgraph ShopMenu {
-		node [fontcolor = "purple" shape = "rect" margin = 0.1]
-		menu
-	}
-
 	// a box for a graph label
 	// note that you can override the defaults set above
 	title [label = "Fighting Fantasy --: Title\n\n \
@@ -72,20 +67,16 @@ digraph {
 	subgraph Boost {
 		node [style = "filled" color = "greenyellow"]
 		boo1 [label = "\N\n text"]
-		boo2 [shape = "rect" fontcolor = "blue" label = "\N\n text"]
 		boo3 [label = "\N\n text"]
-		boo4 [shape = "rect" fontcolor = "blue" label = "\N\n text"]
-		boo5 [shape = "rect" fontcolor = "blue" label = "\N\n text"]
 		021 [shape = "rect" fontcolor = "blue" label = "\N\n info\n +2LK" tooltip = "find fleece"]
-		027 [shape = "rect" fontcolor = "blue" label = "\N\n -all gold\n info\n +2LK" tooltip = "beware ganjees"]
+		027 [shape = "rect" fontcolor = "crimson" label = "\N\n -all gold\n +1LK"]
 		066 [label = "\N\n +all SK\n +all ST\n +1LK"]
 		092 [label = "\N\n +2ST"]
 		120 [shape = "rect" fontcolor = "blue" label = "\N\n drink\n +2ST\n +3LK"]
 		253 [label = "\N\n +1SK\n +3ST\n +1LK"]
-		313 [label = "\N*\n silence\n +2ST"]
+		313 [label = "\N*\n +2ST"]
 		315 [label = "\N\n +4SK"]
 		317 [color = "greenyellow:pink" label = "\N\n +1LK\n -1ST"]
-		323 [shape = "rect" fontcolor = "blue" label = "\N*\n magic sword\n silver mirror\n +1AT"]
 		356 [label = "\N\n +2ST\n +1LK"]
 		385 [label = "\N\n +2ST"]
 		397 [label = "\N\n +2ST"]
@@ -95,10 +86,7 @@ digraph {
 	subgraph Damage {
 		node [style = "filled" color = "pink"]
 		dam1 [label = "\N\n text"]
-		dam2 [shape = "rect" fontcolor = "blue" label = "\N\n text"]
 		dam3 [label = "\N\n text"]
-		dam4 [shape = "rect" fontcolor = "blue" label = "\N\n text"]
-		dam5 [shape = "rect" fontcolor = "blue" label = "\N\n text"]
 		043 [label = "\N\n -1ST"]
 		067 [label = "\N\n -4ST"]
 		074 [label = "\N\n -4ST"]
@@ -120,7 +108,7 @@ digraph {
 		233 [label = "\N\n -5ST"]
 		240 [label = "\N\n -2ST"]
 		254 [label = "\N\n -1SK\n -2ST"]
-		267 [label = "\N*\n -1LK"]
+		267 [label = "\N\n -1LK"]
 		271 [label = "\N\n -1SK"]
 		282 [label = "\N\n -2ST"]
 		300 [label = "\N\n -0~6ST"]
@@ -162,6 +150,9 @@ digraph {
 		369
 		376
 		ddt
+		ddt2
+		monddt
+		monddt2
 	}
 
 	subgraph Key_Item {
@@ -170,6 +161,15 @@ digraph {
 		key2 [label = "\N\n text"]
 		key3 [label = "\N\n text"]
 		key4 [fontcolor = "crimson" label = "\N\n -text"]
+		boo2 [class = "bst" label = "\N\n text"]
+		boo4 [class = "bst" label = "\N\n text"]
+		boo5 [class = "bst" label = "\N\n text"]
+		dam2 [class = "ddg" label = "\N\n text"]
+		dam4 [class = "ddg" label = "\N\n text"]
+		dam5 [class = "ddg" label = "\N\n text"]
+		opt
+		opt2 [class = "bst"]
+		opt3 [class = "bst"]
 		015 [label = "\N\n throwing dagger*"]
 		018 [label = "\N\n info" tooltip = "dire weak to sunlight"]
 		062 [class = "ddg" label = "\N\n +10 gold?\n -1LK"]
@@ -181,20 +181,15 @@ digraph {
 		105 [label = "\N\n fire water"]
 		134 [label = "\N\n password: scimitar"]
 		135 [label = "\N\n info" tooltip = "miks, needleknife, cannot use metal disguises"]
-		141 [label = "\N\n drink"]
-		160 [fontcolor = "crimson" label = "\N\n -gadget"]
 		171 [fontcolor = "crimson" label = "\N\n &plusmn;? gold\n -fool's gold?"]
 		180 [label = "\N\n 6 gold\n hairbrush"]
 		235 [label = "\N\n 8 gold\n copper key\n healing ointment\n magik potion"]
-		238 [label = "\N\n combination: 217"]
 		242 [label = "\N\n drink\n wine"]
-		267 [label = "\N\n drink"]
-		272 [label = "\N\n 8 gold\n damaged pocket myriad"]
+		272 [label = "\N\n 8 gold\n pocket myriad"]
 		278 [class = "ddg" label = "\N\n +? gold\n -?SK\n -?ST"]
-		287 [fontcolor = "crimson" label = "\N\n -healing ointment"]
 		309 [label = "\N\n 20 gold"]
 		312 [fontcolor = "crimson" label = "\N\n -mirror"]
-		327 [fontcolor = "crimson" label = "\N\n -pocket myriad"]
+		323 [class = "bst" label = "\N*\n magic sword\n silver mirror\n +1AT"]
 		334 [label = "\N\n drink"]
 		340 [fontcolor = "crimson" label = "\N\n -mirror"]
 		365 [class = "ddt" label = "\N\n 2 spells\n 50 gold\n breastplate (-2ESK)"]
@@ -210,6 +205,7 @@ digraph {
 		wrd1 [label = "\N\n text"]
 		wrd2 [label = "\N\n text"]
 		wrd3 [label = "\N\n text"]
+		238 [label = "\N\n combination: 217"]
 		wwd
 	}
 	
@@ -224,22 +220,27 @@ digraph {
 		subgraph cluster_00 {
 			label = "Monster\n 0/0\n 0/0"
 			mon1 [label = "\N\n text"]
-			mon2 [shape = "rect" fontcolor = "blue" label = "\N\n text"]
+			mon2 [shape = "rect" class = "kky" label = "\N\n text"]
 			mon3 [label = "\N\n text"]
-			mon4 [shape = "rect" fontcolor = "blue" label = "\N\n text"]
-			mon5 [shape = "rect" fontcolor = "blue" label = "\N\n text"]
-			monboo1 [style = "filled" color = "greenyellow" label = "\N\n text"]
-			monboo2 [shape = "rect" style = "filled" color = "greenyellow" fontcolor = "blue" label = "\N\n text"]
-			monboo3 [label = "\N\n text"]
-			monboo4 [shape = "rect" fontcolor = "blue" label = "\N\n text"]
-			monboo5 [shape = "rect" fontcolor = "blue" label = "\N\n text"]
-			mondam1 [style = "filled" color = "pink" label = "\N\n text"]
-			mondam2 [shape = "rect" style = "filled" color = "pink" fontcolor = "blue" label = "\N\n text"]
-			mondam3 [label = "\N\n text"]
-			mondam4 [shape = "rect" fontcolor = "blue" label = "\N\n text"]
-			mondam5 [shape = "rect" fontcolor = "blue" label = "\N\n text"]
+			mon4 [shape = "rect" class = "kky" label = "\N\n text"]
+			mon5 [shape = "rect" class = "kky" label = "\N\n text"]
+			monboo1 [class = "bst" label = "\N\n text"]
+			monboo2 [shape = "rect" class = "bst kky" label = "\N\n text"]
+			monboo3 [class = "bst" label = "\N\n text"]
+			monboo4 [shape = "rect" class = "bst kky" label = "\N\n text"]
+			monboo5 [shape = "rect" class = "bst kky" label = "\N\n text"]
+			mondam1 [class = "ddg" label = "\N\n text"]
+			mondam2 [shape = "rect" class = "ddg kky" label = "\N\n text"]
+			mondam3 [class = "ddg" label = "\N\n text"]
+			mondam4 [shape = "rect" class = "ddg kky" label = "\N\n text"]
+			mondam5 [shape = "rect" class = "ddg kky" label = "\N\n text"]
+			monopt [shape = "rect" class = "bst kky"]
+			monddt
+			monopt2 [shape = "rect" class = "bst kky"]
+			monddt2
+			monopt3 [shape = "rect" class = "bst kky"]
 		}
-		
+
 		subgraph cluster_01 {
 			label = "Gark\n 7/11"
 			016
@@ -251,7 +252,7 @@ digraph {
 		subgraph cluster_02 {
 			label = "Clawbeast\n 9/14"
 			030
-			241 [shape = "rect" fontcolor = "darkorange" label = "\N\n -strength?\n -3AT?"]
+			241 [shape = "rect" class = "skl" label = "\N\n -strength?\n -3AT?"]
 		}
 		
 		subgraph cluster_03 {
@@ -261,7 +262,7 @@ digraph {
 		
 		subgraph cluster_04 {
 			label = "Sewer Snake\n 6/7"
-			073 [label = "\N\n +3AT?"]
+			073 [shape = "rect" class = "skl" label = "\N\n +3AT?\n (strength)"]
 		}
 		
 		subgraph cluster_05 {
@@ -309,19 +310,19 @@ digraph {
 		
 		subgraph cluster_13 {
 			label = "Calacorn\n 9/8"
-			246 [shape = "rect" fontcolor = "darkorange" label = "\N\n -weakness?\n -4EK?"]
+			246 [shape = "rect" class = "skl" label = "\N\n -4EK?\n (weakness)"]
 		}
 		
 		subgraph cluster_15 {
 			label = "Rhino-Man\n 8/9"
 			264 [label = "\N\n +1dAT"]
-			307 [style = "filled" color = "pink" label = "\N\n -4ESK\n-2EST\n -2ST"]
+			307 [class = "ddg" label = "\N\n -4ESK\n-2EST\n -2ST"]
 			325
 		}
 		
 		subgraph cluster_16 {
 			label = "Black Elf\n 8/4"
-			275 [shape = "rect" fontcolor = "darkorange" label = "\N\n -3ESK (weakness)\n clone (creature copy)"]
+			275 [shape = "rect" class = "skl" label = "\N\n -3ESK (weakness)\n clone (creature copy)"]
 			399 [label = "\N\n -4ESK"]
 		}
 		
@@ -332,49 +333,68 @@ digraph {
 		
 		subgraph cluster_23 {
 			label = "Balthus Dire\n 12/19"
-			337 [shape = "rect" label = "\N\n -2ESK? (ring)"]
+			337 [shape = "rect" class = "kky" label = "\N\n -2ESK? (ring)"]
 			351
 			353 [label = "\N\n +2AT"]
 		}
 		
 		subgraph cluster_27 {
 			label = "Hydra\n 10/17"
-			360 [fontcolor = "darkorange" label = "\N\n clone (creature copy)"]
+			360 [shape = "rect" class = "skl" label = "\N\n clone (creature copy)"]
 		}
-		
+
 		cbt
 	}
-	
-	subgraph Optional {
-		node [style = "filled" color = "paleturquoise1" fillcolor = "paleturquoise1" fontcolor = "blue" shape = "rect"]
-		091
-		134
-		180
-		opt
-	}
 
+	subgraph Optional {
+		node [shape = "rect" class = "opt kky"]
+		opt [class = "opt kky"]
+		monopt [class = "opt kky"]
+		opt2 [class = "opt kky"]
+		monopt2 [class = "opt kky"]
+		opt3 [class = "opt kky"]
+		monopt3 [class = "opt kky"]
+		091 [class = "opt kky"]
+		134 [class = "opt kky"]
+		180 [class = "opt kky"]
+		235 [class = "opt kky"]
+	}
+	
 	subgraph Path {
-		node [penwidth = 3 color = "gold"]
+		node [class = "path" penwidth = 3 color = "gold"]
 		txt2
-		key2 [shape = "rect" fontcolor = "blue"]
-		wrd2 [shape = "rect" fontcolor = "grey"]
-		boo3 [style = "filled" fillcolor = "greenyellow"]
-		boo4 [style = "filled" fillcolor = "greenyellow"]
-		dam3 [style = "filled" fillcolor = "pink"]
-		dam4 [style = "filled" fillcolor = "pink"]
-		monboo3 [style = "filled" fillcolor = "greenyellow"]
-		monboo4 [style = "filled" fillcolor = "greenyellow"]
-		mondam3 [style = "filled" fillcolor = "pink"]
-		mondam4 [style = "filled" fillcolor = "pink"]
-		mon3
-		mon4
+		key2 [class = "path"]
+		wrd2 [class = "path"]
+		key3
+		wrd3
+		boo3 [class = "path"]
+		boo4 [class = "path bst"]
+		boo5
+		dam3 [class = "path"]
+		dam4 [class = "path ddg"]
+		dam5
+		monboo3 [class = "path bst"]
+		monboo4 [class = "path bst kky"]
+		monboo5
+		mondam3 [class = "path ddg"]
+		mondam4 [class = "path ddg kky"]
+		mondam5
+		mon3 [class = "path"]
+		mon4 [class = "path kky"]
+		ddt2 [class = "path"]
+		opt3 [class = "path opt kky"]
+		monddt2 [class = "path"]
+		monopt3 [class = "path opt kky"]
 		001
 		261
 		394
 		251
 		321
 		339
-		134 [class = "optp" shape = "rect"]
+		134 [class = "opt path"]
+		060
+		213 [class = "path"]
+		235 [class = "opt path"]
 		245
 		161
 		106
@@ -387,28 +407,28 @@ digraph {
 		040
 		243
 		352
-		216
-		294
+		011
+		152
+		180 [class = "opt path"]
 		099
 		038
 		132
 		238
-		018
-
-
-
+		018 [class = "opt path"]
+		031
 		169
+		317 [class = "path"]
 		197
 		363
 		228
 		296
 		292
 		042
-		091
+		091 [class = "opt path"]
 		140
 		025
 		206
-		182
+		182 [class = "path"]
 		322
 		291
 		328
@@ -428,30 +448,32 @@ digraph {
 	}
 	
 	subgraph Required {
-		node [style = "filled" color = "gold" fillcolor = "gold" fontcolor = "blue" shape = "rect"]
-		key3
-		wrd3 [fontcolor = "grey"]
-		boo5
-		dam5
-		monboo5
-		mondam5
-		mon5
-		238
-		400 [fontcolor = "black" shape = "octagon"]
+		node [shape = "rect" class = "req kky"]
+		key3 [class = "req kky"]
+		wrd3 [class = "req kky"]
+		boo5 [class = "req kky"]
+		dam5 [class = "req kky"]
+		monboo5 [class = "req kky"]
+		mondam5 [class = "req kky"]
+		mon5 [class = "req kky"]
+		238 [class = "req info"]
+		400 [class = "req" shape = "octagon"]
 	}
-
+	
 	subgraph Required2 {
-		node [style = "filled" color = "gold2" fillcolor = "gold2" fontcolor = "blue" shape = "rect"]
-		req2
+		node [shape = "rect" class = "req2 kky"]
+		req2 [class = "req2 kky"]
 	}
-
+	
 	mon1 -> mon2 -> mon3 -> mon4 -> mon5 [penwidth = 3]
 	boo1 -> boo2 -> boo3 -> boo4 -> boo5 [penwidth = 3]
 	dam1 -> dam2 -> dam3 -> dam4 -> dam5 [penwidth = 3]
 	txt1 -> key1 -> txt2 -> key2 -> key3 -> key4
 	wrd1 -> wrd2 -> wrd3
+	opt -> ddt -> opt2 -> ddt2 -> opt3
 	monboo1 -> monboo2 -> monboo3 -> monboo4 -> monboo5
 	mondam1 -> mondam2 -> mondam3 -> mondam4 -> mondam5
+	monopt -> monddt -> monopt2 -> monddt2 -> monopt3
 
 	myTitle -> z001 [penwidth = 3]
 	z001 -> z002 [class = "dice" label = "1-3"]
@@ -471,8 +493,8 @@ digraph {
 		z006
 	}
 
-	title -> 001
-	001 -> 261
+	title -> 001 [penwidth = 3]
+	001 -> 261 [penwidth = 3]
 	001 -> 230
 	001 -> 020
 	002 -> 142
@@ -484,7 +506,7 @@ digraph {
 	003 -> 366
 	004 -> 190 [class = "skl" label = "creature copy"]
 	004 -> 303
-	005 -> 040
+	005 -> 040 [penwidth = 3]
 	005 -> 361
 	006 -> 367
 	007 -> 268
@@ -495,7 +517,7 @@ digraph {
 	011 -> 036 [class = "skl" label = "fool's gold"]
 	011 -> 262 [class = "skl" label = "creature copy"]
 	011 -> 128 [class = "skl" label = "ESP"]
-	011 -> 152 [class = "skl" label = "weakness"]
+	011 -> 152 [penwidth = 3 class = "skl" label = "weakness"]
 	011 -> 016
 	012 -> 274
 	012 -> 335
@@ -509,7 +531,7 @@ digraph {
 	016 -> 180
 	017 -> 093
 	018 -> 084
-	018 -> 031
+	018 -> 031 [penwidth = 3]
 	019 -> 363 [class = "skl" label = "levitation"]
 	019 -> 254
 	020 -> 288
@@ -519,7 +541,7 @@ digraph {
 	023 -> 169
 	024 -> 372 [class = "skl" label = "shielding"]
 	024 -> 219
-	025 -> 206
+	025 -> 206 [penwidth = 3]
 	025 -> 133 [class = "skl" label = "strength"]
 	025 -> 239
 	026 -> 087 [class = "skl" label = "fire"]
@@ -532,7 +554,7 @@ digraph {
 	029 -> 271
 	029 -> 131
 	030 -> 241
-	031 -> 169
+	031 -> 169 [penwidth = 3]
 	032 -> 251
 	033 -> 213
 	034 -> 089
@@ -540,16 +562,16 @@ digraph {
 	035 -> 364
 	035 -> 246
 	036 -> 234
-	037 -> 229
-	038 -> 132
+	037 -> 229 [penwidth = 3]
+	038 -> 132 [penwidth = 3]
 	038 -> 306
 	039 -> 208 [class = "cbt" label = "lose AR"]
 	039 -> 248
-	040 -> 243
+	040 -> 243 [penwidth = 3]
 	040 -> 002
 	041 -> 257
 	042 -> 138 [class = "opt" label = "-silver mirror"]
-	042 -> 091 [class = "opt" label = "-hairbrush"]
+	042 -> 091 [penwidth = 3 class = "opt" label = "-hairbrush"]
 	042 -> 223 [class = "opt" label = "-spider-man"]
 	042 -> 064
 	042 -> 304
@@ -579,8 +601,8 @@ digraph {
 	054 -> 287 [class = "opt" label = "-healing ointment"]
 	054 -> 160 [class = "opt" label = "-pocket myraid"]
 	054 -> 027 [class = "opt" label = "-gold"]
-	054 -> 104
-	055 -> 249
+	//054 -> 104
+	//055 -> 249
 	055 -> 010
 	056 -> 120
 	056 -> 163
@@ -588,14 +610,14 @@ digraph {
 	056 -> 095
 	057 -> 150 [class = "pass" label = "LK"]
 	057 -> 233 [class = "fail"]
-	058 -> 298
+	058 -> 298 [dir = both]
 	058 -> 267
 	058 -> 092
 	058 -> 156
 	059 -> 140
 	060 -> 033 [class = "skl" label = "levitation"]
 	060 -> 295 [class = "skl" label = "illusion"]
-	060 -> 213
+	060 -> 213 [penwidth = 3]
 	061
 	062 -> 140
 	063 -> 263
@@ -622,12 +644,12 @@ digraph {
 	074 -> 377
 	075 -> 040
 	076 -> 191
-	077 -> 187 [class = "skl" label = "ESP"]
+	077 -> 187 [penwidth = 3 class = "skl" label = "ESP"]
 	077 -> 046 [class = "skl" label = "fire"]
 	077 -> 349 [class = "skl" label = "creature copy"]
 	077 -> 355
 	078 -> 324
-	078 -> 124
+	078 -> 124 [penwidth = 3]
 	078 -> 277
 	079 -> 218
 	080 -> 199
@@ -649,7 +671,7 @@ digraph {
 	090 -> 176
 	090 -> 021
 	090 -> 329 [class = "skl" label = "ESP"]
-	091 -> 140
+	091 -> 140 [penwidth = 3]
 	092 -> 156
 	093 -> 169
 	094 -> 118
@@ -662,7 +684,7 @@ digraph {
 	098 -> 190 [class = "skl" label = "creature copy"]
 	098 -> 237
 	099 -> 052
-	099 -> 038
+	099 -> 038 [penwidth = 3]
 	100 -> 079 [class = "skl" label = "levitation"]
 	100 -> 276
 	101 -> 062 [class = "cbt" label = "copy wins"]
@@ -672,11 +694,11 @@ digraph {
 	102 -> 270
 	103
 	104 -> 266
-	104 -> 310
-	104 -> 054
+	104 -> 310 [dir = both]
+	104 -> 054 [dir = both]
 	104 -> 025
 	105 -> 095
-	106 -> 218
+	106 -> 218 [penwidth = 3]
 	107 -> 184
 	108 -> 073
 	109 -> 030
@@ -692,7 +714,7 @@ digraph {
 	115 -> 373
 	116 -> 210
 	117 -> 337
-	118 -> 273 [class = "req" label = "password"]
+	118 -> 273 [penwidth = 3 class = "req" label = "password"]
 	118 -> 198
 	119
 	120 -> 095
@@ -701,7 +723,7 @@ digraph {
 	123 -> 211 [class = "skl" label = "fool's gold"]
 	123 -> 035 [class = "skl" label = "illusion"]
 	123 -> 283
-	124 -> 400
+	124 -> 400 [penwidth = 3]
 	125 -> 209
 	126 -> 316
 	127 -> 053 [class = "req" label = "-berries"]
@@ -718,11 +740,11 @@ digraph {
 	130 -> 333
 	131 -> 348
 	132 -> 018
-	132 -> 238
+	132 -> 238 [penwidth = 3]
 	132 -> 375
 	133 -> 206 [class = "pass" label = "LK"]
 	133 -> 082 [class = "fail"]
-	134 -> 060
+	134 -> 060 [penwidth = 3]
 	134 -> 269
 	134 -> 245
 	135 -> 326
@@ -736,7 +758,7 @@ digraph {
 	139 -> 346
 	139 -> 244 [class = "skl" label = "illusion"]
 	139 -> 028 [class = "skl" label = "fire"]
-	140 -> 025
+	140 -> 025 [penwidth = 3]
 	140 -> 104
 	141 -> 156
 	142 -> 234
@@ -759,7 +781,7 @@ digraph {
 	150 -> 374
 	151 -> 019
 	151 -> 197
-	152 -> 180
+	152 -> 180 [penwidth = 3]
 	153
 	154 -> 275
 	154 -> 056
@@ -769,10 +791,10 @@ digraph {
 	156 -> 114 [class = "skl" label = "fire"]
 	157 -> 199
 	157 -> 232
-	158 -> 077
+	158 -> 077 [penwidth = 3]
 	159 -> 323
 	160 -> 206
-	161 -> 106
+	161 -> 106 [penwidth = 3]
 	161 -> 390
 	162 -> 032
 	162 -> 001 [class = "cbt" label = "escape"]
@@ -787,13 +809,13 @@ digraph {
 	168 -> 328
 	169 -> 019
 	169 -> 197
-	169 -> 317
+	169 -> 317 [penwidth = 3]
 	169 -> 151
 	170 -> 292 [class = "dice" label = "4~6"]
 	170 -> 064
 	170 -> 304
-	171 -> 365
-	171 -> 278
+	171 -> 365 [dir = both]
+	171 -> 278 [dir = both]
 	171 -> 031
 	172 -> 026
 	172 -> 289
@@ -805,27 +827,27 @@ digraph {
 	176 -> 127
 	176 -> 021
 	176 -> 329 [class = "skl" label = "ESP"]
-	177 -> 005
+	177 -> 005 [penwidth = 3]
 	177 -> 344
 	178 -> 017
 	178 -> 265
 	179 -> 378
 	179 -> 125
 	179 -> 341 [class = "skl" label = "shield"]
-	180 -> 099
+	180 -> 099 [penwidth = 3]
 	181 -> 054 [class = "pass" label = "LK"]
 	181 -> 025 [class = "pass" label = "LK"]
 	182 -> 085 [class = "skl" label = "fire"]
 	182 -> 395 [class = "skl" label = "illusion"]
-	182 -> 322
+	182 -> 322 [penwidth = 3]
 	182 -> 248
 	183 -> 270
 	184
-	185 -> 013 [class = "skl" label = "fool's gold"]
-	186 -> 015
+	185 -> 013
+	186 -> 015 [class = "skl" label = "fool's gold"]
 	186 -> 083
 	186 -> 245
-	187 -> 279 [class = "skl" label = "levitation"]
+	187 -> 279 [penwidth = 3 class = "skl" label = "levitation"]
 	187 -> 314 [class = "skl" label = "illusion"]
 	187 -> 115
 	188 -> 301 [class = "skl" label = "strength"]
@@ -847,7 +869,7 @@ digraph {
 	196 -> 045
 	196 -> 013
 	196 -> 281
-	197 -> 363
+	197 -> 363 [penwidth = 3]
 	198 -> 177 [class = "pass" label = "LK"]
 	198 -> 290 [class = "fail"]
 	199
@@ -860,7 +882,7 @@ digraph {
 	204 -> 073
 	205 -> 309 [class = "cbt" label = "ally lives"]
 	205 -> 368 [class = "cbt" label = "ally dies"]
-	206 -> 182
+	206 -> 182 [penwidth = 3]
 	207 -> 188
 	208
 	209 -> 156
@@ -871,7 +893,7 @@ digraph {
 	211 -> 035 [class = "skl" label = "illusion"]
 	211 -> 283
 	212 -> 090
-	213 -> 235
+	213 -> 235 [penwidth = 3]
 	213 -> 209 [class = "cbt" label = "escape"]
 	214 -> 062
 	215 -> 136
@@ -879,9 +901,9 @@ digraph {
 	216 -> 294
 	216 -> 391 [class = "opt" label = "-3 gold"]
 	216 -> 036 [class = "skl" label = "fool's gold"]
-	217 -> 293 [class = "skl" label = "shielding"]
+	217 -> 293 [penwidth = 3 class = "skl" label = "shielding"]
 	217 -> 057
-	218 -> 118
+	218 -> 118 [penwidth = 3]
 	218 -> 094 [class = "skl" label = "strength"]
 	219 -> 095
 	220 -> 243
@@ -894,14 +916,14 @@ digraph {
 	225 -> 015 [class = "skl" label = "fool's gold"]
 	225 -> 245
 	226 -> 312 [class = "opt" label = "silver mirror"]
-	226 -> 037 [class = "opt" label = "golden fleece"]
+	226 -> 037 [penwidth = 3 class = "opt" label = "golden fleece"]
 	226 -> 384 [class = "opt" label = "pocket myriad"]
 	226 -> 184
 	227 -> 234
 	228 -> 088
 	228 -> 170 [class = "skl" label = "strength"]
-	228 -> 296 [class = "opt" label = "copper key"]
-	229 -> 217 [class = "info" label = "combination"]
+	228 -> 296 [penwidth = 3 class = "opt" label = "copper key"]
+	229 -> 217 [penwidth = 3 class = "info" label = "combination"]
 	229 -> 050
 	229 -> 164 [class = "skl" label = "strength"]
 	230 -> 096 [class = "skl" label = "fool's gold"]
@@ -913,11 +935,11 @@ digraph {
 	233 -> 374
 	234 -> 397
 	234 -> 069
-	235 -> 245
+	235 -> 245 [penwidth = 3]
 	235 -> 269
 	236 -> 140
 	237 -> 169
-	238 -> 018
+	238 -> 018 [penwidth = 3]
 	238 -> 375
 	238 -> 031
 	239 -> 379 [class = "skl" label = "levitation"]
@@ -927,11 +949,11 @@ digraph {
 	242 -> 024
 	242 -> 105
 	242 -> 095
-	243 -> 352
+	243 -> 352 [penwidth = 3]
 	243 -> 002
 	244 -> 002
 	244 -> 243
-	245 -> 161
+	245 -> 161 [penwidth = 3]
 	245 -> 390
 	245 -> 047
 	246 -> 174
@@ -939,11 +961,11 @@ digraph {
 	248 -> 103 [class = "skl" label = "levitation"]
 	249 -> 392 [class = "opt" label = "copper key"]
 	249 -> 231
-	249 -> 055
+	249 -> 055 [dir = both]
 	250
 	251 -> 222
 	251 -> 179
-	251 -> 321
+	251 -> 321 [penwidth = 3]
 	252 -> 229
 	253 -> 013
 	253 -> 281
@@ -963,7 +985,7 @@ digraph {
 	260 -> 237
 	261 -> 081
 	261 -> 175
-	261 -> 394
+	261 -> 394 [penwidth = 3]
 	262 -> 180
 	263 -> 326
 	264 -> 177
@@ -981,7 +1003,7 @@ digraph {
 	271 -> 131
 	272 -> 242
 	272 -> 095
-	273 -> 371
+	273 -> 371 [penwidth = 3]
 	273 -> 255
 	273 -> 049
 	274 -> 353
@@ -990,16 +1012,16 @@ digraph {
 	275 -> 272
 	276 -> 165 [class = "skl" label = "strength"]
 	276 -> 202
-	277 -> 330 [class = "req" label = "-spider-man"]
-	277 -> 315 [class = "req" label = "-pocket myriad"]
-	277 -> 076 [class = "req" label = "-small berries"]
+	277 -> 330 [class = "req" label = "spider-man"]
+	277 -> 315 [class = "req" label = "pocket myriad"]
+	277 -> 076 [class = "req" label = "small berries"]
 	277 -> 119
-	278 -> 171
-	278 -> 365
+	//278 -> 171
+	278 -> 365 [dir = both]
 	278 -> 031
 	279 -> 044
 	279 -> 318
-	279 -> 078
+	279 -> 078 [penwidth = 3]
 	279 -> 335
 	280 -> 323
 	281 -> 382
@@ -1026,18 +1048,18 @@ digraph {
 	290 -> 307 [class = "skl" label = "weakness"]
 	290 -> 070 [class = "skl" label = "levitation"]
 	290 -> 264 [class = "skl" label = "strength"]
-	291 -> 328
+	291 -> 328 [penwidth = 3]
 	292 -> 376 [class = "skl" label = "shielding"]
 	292 -> 064
-	292 -> 042
-	293 -> 374
+	292 -> 042 [penwidth = 3]
+	293 -> 374 [penwidth = 3]
 	294 -> 099
 	295 -> 213
-	296 -> 292
+	296 -> 292 [penwidth = 3]
 	297 -> 002
 	297 -> 316
 	297 -> 075
-	298 -> 058
+	//298 -> 058
 	298 -> 141
 	299 -> 237
 	300 -> 244 [class = "skl" label = "illusion"]
@@ -1059,7 +1081,7 @@ digraph {
 	310 -> 181 [class = "skl" label = "creature copy"]
 	310 -> 250 [class = "skl" label = "illusion"]
 	310 -> 393 [class = "skl" label = "ESP"]
-	310 -> 104
+	//310 -> 104
 	311 -> 178
 	311 -> 061
 	312 -> 184
@@ -1071,7 +1093,7 @@ digraph {
 	316 -> 139 [class = "pass" label = "LK"]
 	316 -> 300 [class = "fail"]
 	317 -> 019
-	317 -> 197 
+	317 -> 197 [penwidth = 3]
 	318 -> 381
 	318 -> 117
 	318 -> 277
@@ -1080,10 +1102,10 @@ digraph {
 	320 -> 113 [class = "skl" label = "weakness"]
 	320 -> 351
 	321 -> 269
-	321 -> 339
+	321 -> 339 [penwidth = 3]
 	322 -> 039 [class = "req" label = "spider-man"]
 	322 -> 168 [class = "req" label = "charmed amulet"]
-	322 -> 291 [class = "req" label = "healing ointment"]
+	322 -> 291 [penwidth = 3 class = "req" label = "healing ointment"]
 	322 -> 248
 	323 -> 386
 	323 -> 144
@@ -1095,7 +1117,7 @@ digraph {
 	327 -> 366
 	328 -> 067
 	328 -> 143 [class = "skl" label = "creature copy"]
-	328 -> 226
+	328 -> 226 [penwidth = 3]
 	329 -> 021
 	329 -> 221
 	330 -> 208.2 [class = "cbt" label = "lose AR"]
@@ -1110,7 +1132,7 @@ digraph {
 	336 -> 180
 	337 -> 400
 	338 -> 090
-	339 -> 134
+	339 -> 134 [penwidth = 3]
 	339 -> 149
 	340 -> 064
 	341 -> 209
@@ -1133,7 +1155,7 @@ digraph {
 	352 -> 203
 	352 -> 016
 	352 -> 216
-	352 -> 011
+	352 -> 011 [penwidth = 3]
 	353 -> 400
 	354 -> 188
 	355 -> 351
@@ -1144,19 +1166,19 @@ digraph {
 	358 -> 148
 	358 -> 256
 	359 -> 029
-	360 -> 229 [class = "cbt" label = "wins"]
+	360 -> 229 [class = "cbt" label = "clone wins"]
 	360 -> 184
 	361 -> 297 [class = "pass" label = "LK"]
 	361 -> 126 [class = "fail"]
 	362 -> 058
 	362 -> 156
-	363 -> 228
+	363 -> 228 [penwidth = 3]
 	363 -> 064
 	363 -> 304
 	364 -> 174
 	365 -> 009 [class = "skl" label = "illusion"]
-	365 -> 171
-	365 -> 278
+	//365 -> 171
+	//365 -> 278
 	365 -> 031
 	366 -> 140
 	367 -> 308
@@ -1166,14 +1188,14 @@ digraph {
 	370 -> 260
 	//370 -> 129
 	370 -> 237
-	371 -> 177
+	371 -> 177 [penwidth = 3]
 	372 -> 095
 	373 -> 148
 	373 -> 256
 	373 -> 358
 	374 -> 030
 	374 -> 109 [class = "skl" label = "shielding"]
-	374 -> 158 [class = "skl" label = "weakness"]
+	374 -> 158 [penwidth = 3 class = "skl" label = "weakness"]
 	375 -> 263
 	375 -> 135
 	375 -> 063
@@ -1206,9 +1228,9 @@ digraph {
 	390 -> 122 [class = "fail"]
 	391 -> 099
 	392 -> 196
-	393 -> 027 [class = "req" label = "gold"]
+	393 -> 027 [class = "req" label = "-gold"]
 	393 -> 025
-	394 -> 251
+	394 -> 251 [penwidth = 3]
 	395 -> 322
 	395 -> 248
 	395 -> 085 [class = "skl" label = "fire"]

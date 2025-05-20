@@ -167,6 +167,14 @@
 	fill: blue;
 }
 
+.node.kky > text {
+	fill: blue;
+}
+
+.node.skl > text {
+	fill: orange;
+}
+
 .node.info > text {
 	fill: grey;
 }
@@ -175,7 +183,7 @@
 	fill: crimson;
 }
 
-.node.path > polygon {
+.node.path polygon {
 	stroke: gold;
 	stroke-width: 3;
 }
