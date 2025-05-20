@@ -51,6 +51,7 @@ digraph {
 		Initial Skill: 1d6+6\l \
 		Initial Stamina: 2d6+12\l \
 		Initial Luck: 1d6+6\l\l \
+		Initial Presence: 1d6/2+4\l\l \
 		skill/stamina/luck potion: +all SK/ST/LK&1ILK\l \
 		10 meal: +4ST\l \
 		sword\l \
@@ -60,59 +61,74 @@ digraph {
 		backpack\l \
 		2d6+6 gold\l\l \
 		Comments:\l \
-		Order: item/gold/AT/SK/ST/LK\l \
+		Presence can exceed initial value\l \
+		004*: Ignore next 2 spells\l \
+		Order: item/gold/AT/SK/ST/LK/PR\l \
 		"
 		shape = "box"
 		margin = 0.1]
-
-	subgraph Required {
-		node [style = "filled" color = "gold" fillcolor = "gold" fontcolor = "blue" shape = "rect"]
-		key3
-		wrd3 [fontcolor = "grey"]
-		boo5
-		dam5
-		monboo5
-		mondam5
-		mon5
-		ending [fontcolor = "black" shape = "octagon"]
+		
+	subgraph Boost {
+		node [style = "filled" color = "greenyellow"]
+		boo1 [label = "\N\n text"]
+		boo2 [shape = "rect" fontcolor = "blue" label = "\N\n text"]
+		boo3 [label = "\N\n text"]
+		boo4 [shape = "rect" fontcolor = "blue" label = "\N\n text"]
+		boo5 [shape = "rect" fontcolor = "blue" label = "\N\n text"]
+		opt2 [shape = "rect" fontcolor = "blue"]
+		opt3 [shape = "rect" fontcolor = "blue"]
+		monopt2 [shape = "rect" fontcolor = "blue"]
+		monopt3 [shape = "rect" fontcolor = "blue"]
+		004 [label = "\N*\n +1LK"]
+		010 [label = "\N\n +5ST\n +1PR"]
+		bst
 	}
 
-	subgraph Required2 {
-		node [style = "filled" color = "gold2" fillcolor = "gold2" fontcolor = "blue" shape = "rect"]
-		req2
+	subgraph Damage {
+		node [style = "filled" color = "pink"]
+		dam1 [label = "\N\n text"]
+		dam2 [shape = "rect" fontcolor = "blue" label = "\N\n text"]
+		dam3 [label = "\N\n text"]
+		dam4 [shape = "rect" fontcolor = "blue" label = "\N\n text"]
+		dam5 [shape = "rect" fontcolor = "blue" label = "\N\n text"]
+		ddg
 	}
 
-	subgraph Path {
-		node [penwidth = 3 color = "gold"]
-		txt2
-		key2 [shape = "rect" fontcolor = "blue"]
-		wrd2 [shape = "rect" fontcolor = "grey"]
-		boo3 [style = "filled" fillcolor = "greenyellow"]
-		boo4 [style = "filled" fillcolor = "greenyellow"]
-		dam3 [style = "filled" fillcolor = "pink"]
-		dam4 [style = "filled" fillcolor = "pink"]
-		monboo3 [style = "filled" fillcolor = "greenyellow"]
-		monboo4 [style = "filled" fillcolor = "greenyellow"]
-		mondam3 [style = "filled" fillcolor = "pink"]
-		mondam4 [style = "filled" fillcolor = "pink"]
-		mon3
-		mon4
-		ddt2 [style = "filled" fillcolor = "red"]
-		opt3 [shape = "rect" style = "filled" fillcolor = "paleturquoise1"]
-		monddt2 [style = "filled" fillcolor = "red"]
-		monopt3 [style = "filled" fillcolor = "paleturquoise1"]
+	subgraph Death {
+		node [style = "filled" color = "red"]
+		ddt
+		ddt2
+		monddt
+		monddt2
 	}
-	
-	subgraph Optional {
-		node [style = "filled" color = "paleturquoise1" fillcolor = "paleturquoise1" fontcolor = "blue" shape = "rect"]
+
+	subgraph Key_Item {
+		node [fontcolor = "blue" shape = "rect"]
+		key1 [label = "\N\n info" tooltip = "info text"]
+		key2 [label = "\N\n text"]
+		key3 [label = "\N\n text"]
+		key4 [fontcolor = "crimson" label = "\N\n -text"]
 		opt
 		monopt
-		opt2
-		monopt2
-		opt3
-		monopt3
+		006 [label = "\N\n -3ST?\n (green cream)"]
+		011 [label = "\N\n return from main passage\n -3ST"]
+		kky
 	}
-
+	
+	subgraph Key_Word {
+		node [fontcolor = "grey" shape = "rect"]
+		wrd1 [label = "\N\n text"]
+		wrd2 [label = "\N\n text"]
+		wrd3 [label = "\N\n text"]
+		wwd
+	}
+	
+	subgraph Shop {
+		node [fontcolor = "purple" shape = "rect"]
+		shop1 [label = "\N\n text"]
+		shp
+	}
+	
 	subgraph Combat {
 		style = "filled" color = "palegreen"
 		subgraph cluster_00 {
@@ -138,64 +154,67 @@ digraph {
 			monddt2
 			monopt3
 		}
+		
+		subgraph cluster_01 {
+			label = "Sea Zombie\n 6/7"
+			001
+		}
+
+		subgraph cluster_02 {
+			label = "Homunculus\n 8/5"
+			007 [label = "\N\n -1AT"]
+		}
+
 		cbt
 	}
 
-	subgraph Death {
-		node [style = "filled" color = "red"]
-		ddt
-		ddt2
-		monddt
-		monddt2
-	}
-
-	subgraph Boost {
-		node [style = "filled" color = "greenyellow"]
-		boo1 [label = "\N\n text"]
-		boo2 [shape = "rect" fontcolor = "blue" label = "\N\n text"]
-		boo3 [label = "\N\n text"]
-		boo4 [shape = "rect" fontcolor = "blue" label = "\N\n text"]
-		boo5 [shape = "rect" fontcolor = "blue" label = "\N\n text"]
-		opt2 [shape = "rect" fontcolor = "blue"]
-		opt3 [shape = "rect" fontcolor = "blue"]
-		monopt2 [shape = "rect" fontcolor = "blue"]
-		monopt3 [shape = "rect" fontcolor = "blue"]
-		bst
-	}
-
-	subgraph Damage {
-		node [style = "filled" color = "pink"]
-		dam1 [label = "\N\n text"]
-		dam2 [shape = "rect" fontcolor = "blue" label = "\N\n text"]
-		dam3 [label = "\N\n text"]
-		dam4 [shape = "rect" fontcolor = "blue" label = "\N\n text"]
-		dam5 [shape = "rect" fontcolor = "blue" label = "\N\n text"]
-		ddg
-	}
-
-	subgraph Key_Item {
-		node [fontcolor = "blue" shape = "rect"]
-		key1 [label = "\N\n info" tooltip = "info text"]
-		key2 [label = "\N\n text"]
-		key3 [label = "\N\n text"]
-		key4 [fontcolor = "crimson" label = "\N\n -text"]
+	subgraph Optional {
+		node [style = "filled" color = "paleturquoise1" fillcolor = "paleturquoise1" fontcolor = "blue" shape = "rect"]
 		opt
 		monopt
-		kky
+		opt2
+		monopt2
+		opt3
+		monopt3
+	}
+
+	subgraph Path {
+		node [penwidth = 3 color = "gold"]
+		txt2
+		key2 [shape = "rect" fontcolor = "blue"]
+		wrd2 [shape = "rect" fontcolor = "grey"]
+		boo3 [style = "filled" fillcolor = "greenyellow"]
+		boo4 [style = "filled" fillcolor = "greenyellow"]
+		dam3 [style = "filled" fillcolor = "pink"]
+		dam4 [style = "filled" fillcolor = "pink"]
+		monboo3 [style = "filled" fillcolor = "greenyellow"]
+		monboo4 [style = "filled" fillcolor = "greenyellow"]
+		mondam3 [style = "filled" fillcolor = "pink"]
+		mondam4 [style = "filled" fillcolor = "pink"]
+		mon3
+		mon4
+		ddt2 [style = "filled" fillcolor = "red"]
+		opt3 [shape = "rect" style = "filled" fillcolor = "paleturquoise1"]
+		monddt2 [style = "filled" fillcolor = "red"]
+		monopt3 [style = "filled" fillcolor = "paleturquoise1"]
+		005
 	}
 	
-	subgraph Key_Word {
-		node [fontcolor = "grey" shape = "rect"]
-		wrd1 [label = "\N\n text"]
-		wrd2 [label = "\N\n text"]
-		wrd3 [label = "\N\n text"]
-		wwd
+	subgraph Required {
+		node [style = "filled" color = "gold" fillcolor = "gold" fontcolor = "blue" shape = "rect"]
+		key3
+		wrd3 [fontcolor = "grey"]
+		boo5
+		dam5
+		monboo5
+		mondam5
+		mon5
+		ending [fontcolor = "black" shape = "octagon"]
 	}
-	
-	subgraph Shop {
-		node [fontcolor = "purple" shape = "rect"]
-		shop1 [label = "\N\n text"]
-		shp
+
+	subgraph Required2 {
+		node [style = "filled" color = "gold2" fillcolor = "gold2" fontcolor = "blue" shape = "rect"]
+		req2
 	}
 
 	mon1 -> mon2 -> mon3 -> mon4 -> mon5 [penwidth = 3]
@@ -227,17 +246,34 @@ digraph {
 	}
 
 	title -> 001
-//	001 -> 
-//	002 -> 
-//	003 -> 
-//	004 -> 
-//	005 -> 
-//	006 -> 
-//	007 -> 
-//	008 -> 
-//	009 -> 
-//	010 -> 
-//	011 -> 
+	001 -> 351
+	001 -> 057
+	001 -> 090
+	001 -> 186
+	001 -> 333
+	002 -> 015
+	002 -> 385
+	002 -> 056
+	002 -> 037
+	003 -> 116 [class = "opt" label = "-olive oil/\n -grog/\n -herbal liqueur"]
+	003 -> 302
+	004 -> 364
+	005
+	006 -> 315 [class = "req" label = "lung rot"]
+	006 -> 384
+	007 -> 184 [class = "cbt" label = ">3AR"]
+	007 -> 395
+	007 -> 262
+	008 -> rat_tail_fungus [class = "info" label = "plants of solani island"]
+	008 -> 345
+	009 -> 103 [class = "pass" label = "LK"]
+	009 -> 079 [class = "pass" label = "LK"]
+	009 -> 268 [class = "fail"]
+	010 -> 117 [class = "opt" label = "-blue potion"]
+	010 -> 242
+	010 -> 174 [class = "opt" label = "-spectrebane"]
+	011 -> 023
+	011 -> 340
 //	012 -> 
 //	013 -> 
 //	014 -> 

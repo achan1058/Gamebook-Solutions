@@ -126,6 +126,9 @@
     <CustomBuild Include="CSS template.dot">
       <Filter>Source Files</Filter>
     </CustomBuild>
+    <CustomBuild Include="Fighting Fantasy\FF51 - Island of the Undead.dot">
+      <Filter>Fighting Fantasy</Filter>
+    </CustomBuild>
   </ItemGroup>
   <ItemGroup>
     <Text Include="vertex.txt">
