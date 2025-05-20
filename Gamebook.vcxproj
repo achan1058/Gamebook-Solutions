@@ -214,7 +214,7 @@
       <FileType>Document</FileType>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
     </CustomBuild>
-    <CustomBuild Include="Fighting Fantasy\The Citidel of Chaos.dot">
+    <CustomBuild Include="Fighting Fantasy\The Citadel of Chaos.dot">
       <FileType>Document</FileType>
     </CustomBuild>
     <CustomBuild Include="Fighting Fantasy\old\Temple of Terror.dot">

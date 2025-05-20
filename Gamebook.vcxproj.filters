@@ -108,7 +108,7 @@
     <CustomBuild Include="Fighting Fantasy\old\Sword of the Samurai.dot">
       <Filter>backup</Filter>
     </CustomBuild>
-    <CustomBuild Include="Fighting Fantasy\The Citidel of Chaos.dot">
+    <CustomBuild Include="Fighting Fantasy\The Citadel of Chaos.dot">
       <Filter>Fighting Fantasy</Filter>
     </CustomBuild>
     <CustomBuild Include="Fighting Fantasy\old\Temple of Terror.dot">
