@@ -72,7 +72,7 @@ digraph {
 		herbal liqueur: Each half bottle restores 4ST\l \
 		pitcher plant liquid: Neutralize first fire attack/spell/trap\l \
 		stoneskin: Ignore first enemy hit each combat until opponent rolls 21+\l \
-		Parraine: 3 services: -disease\n 6DMG\n +8ST\l \
+		Parraine: 3 services: -disease, 6DMG, +8ST\l \
 		blade venom: +1DMG\l \
 		Order: item/gold/AT/SK/ST/LK/PR\l \
 		"
@@ -152,7 +152,6 @@ digraph {
 		370 [label = "\N\n -2~6ST\n (LK)"]
 		372 [label = "\N\n -3ST"]
 		377 [label = "\N\n -2ST?\n (SK)"]
-		379 [label = "\N\n -2~6ST"]
 		392 [label = "\N\n -1ST"]
 		ddg
 	}
@@ -570,7 +569,7 @@ digraph {
 		
 		subgraph cluster_46 {
 			label = "Squirting Octopus\n 7/9"
-			305 [shape = "rect" class = "kky" label = "\N\n -2AT?\n (!gunk)"]
+			305 [shape = "rect" class = "kky" label = "\N\n -2EAT?\n (!gunk)"]
 		}
 		
 		subgraph cluster_47 {
@@ -634,6 +633,24 @@ digraph {
 		}
 		
 		cbt
+	}
+	
+	subgraph Area_1 {
+		node [style = "filled" color = "blue" fontcolor = "white" fixedsize = true]
+		034
+		034.1 [label = "To\n 034"]
+		166
+		166.1 [label = "To\n 166"]
+		212
+		212.1 [label = "To\n 212"]
+		281
+		281.1 [label = "To\n 281"]
+		363
+		363.1 [label = "To\n 363"]
+		379 [label = "\N\n -2~6ST"]
+		379.1 [label = "To\n 379"]
+		387
+		387.1 [label = "To\n 387"]
 	}
 
 	subgraph Optional {
@@ -713,10 +730,17 @@ digraph {
 	z009 -> z010 [class = "err" label = "error(?)"]
 	z010 -> z011 [class = "cbt" label = "escape"]
 	z011 -> z012 [class = "skl" label = "spell"]
+
 	{
 		rank = same
 		z003
 		z006
+	}
+	
+	{
+		rank = same
+		015
+		385
 	}
 
 	title -> 001
@@ -748,7 +772,7 @@ digraph {
 	010 -> 174 [class = "opt" label = "-spectrebane"]
 	011 -> 023
 	011 -> 340
-	012 -> 379
+	012 -> 379.1
 	013 -> 110
 	014 -> 135 [class = "cbt" label = "lose &le;2AR"]
 	014 -> 190
@@ -762,7 +786,7 @@ digraph {
 	017 -> 120
 	018 -> 290 [class = "info" label = "green cream"]
 	018 -> 033
-	018 -> 281
+	018 -> 281.1
 	019 -> 048 [class = "opt" label = "-meal/\n -stamina potion/\n -herbal liqueur"]
 	019 -> 030
 	019 -> 076
@@ -874,7 +898,7 @@ digraph {
 	059 -> 102 [class = "cbt" label = "lose first AR"]
 	060 -> 130
 	061 -> 104
-	061 -> 281
+	061 -> 281.1
 	061 -> 255
 	061 -> 302
 	062 -> 275
@@ -890,7 +914,7 @@ digraph {
 	069 -> 162 [class = "cbt" label = "EAT=22"]
 	069 -> 188
 	070 -> 111 [class = "dice" label = "odd"]
-	070 -> 212 [class = "dice" label = "even"]
+	070 -> 212.1 [class = "dice" label = "even"]
 	071 -> 023
 	072 -> 058
 	073 -> 204 [class = "pass" label = "PR"]
@@ -899,19 +923,21 @@ digraph {
 	075 -> 036 [class = "info" label = "tiger eye"]
 	075 -> 320
 	075 -> 334
-	076 -> 015
+	//076 -> 015
+	015 -> 076 [dir = back]
 	076 -> 056
-	076 -> 037
+	//076 -> 037
+	037 -> 076 [dir = back]
 	077 -> 202 [class = "req" label = "treasure chest"]
 	077 -> 279 [class = "req" label = "bottle"]
-	077 -> 387
+	077 -> 387.1
 	078 -> 042
 	078 -> 328
 	078 -> 106
 	079 -> 211
 	079 -> 046
 	079 -> 310
-	080 -> 281
+	080 -> 281.1
 	080 -> 061
 	080 -> 302
 	081 -> 098
@@ -957,7 +983,7 @@ digraph {
 	096 -> 216 [class = "opt" label = "-gold chain"]
 	096 -> 201
 	096 -> 124
-	097 -> decode_symbol
+	097 -> 040 [class = "info" label = "puzzle"]
 	097 -> 356
 	098 -> 105 [class = "req" label = "blue potion"]
 	098 -> 224
@@ -972,7 +998,7 @@ digraph {
 	103 -> 115
 	103 -> 079
 	104 -> 230 [class = "pass" label = "LK"]
-	104 -> 281 [class = "fail"]
+	104 -> 281.1 [class = "fail"]
 	104 -> 255 [class = "fail"]
 	104 -> 302 [class = "fail"]
 	105 -> 364
@@ -992,7 +1018,7 @@ digraph {
 	110 -> 377
 	110 -> 013
 	110 -> 337
-	111 -> 212
+	111 -> 212.1
 	112 -> 231 [class = "pass" label = "-olive oil & SK/\n -ethereal oil & SK/\n -lantern oil & SK/\n spikes and rods & SK"]
 	112 -> 189
 	113 -> 017
@@ -1011,7 +1037,7 @@ digraph {
 	120 -> 081 [class = "cbt" label = "lose AR"]
 	121 -> 240 [class = "info" label = "tiger eye/\n topaz"]
 	121 -> 378
-	122 -> 363
+	122 -> 363.1
 	122 -> 249
 	123
 	124 -> 158
@@ -1043,7 +1069,7 @@ digraph {
 	140 -> 157 [class = "pass" label = "SK"]
 	140 -> 182 [class = "fail"]
 	140 -> 058
-	141 -> 363
+	141 -> 363.1
 	141 -> 122
 	141 -> 249
 	142 -> 391 [class = "cbt" label = "win AR"]
@@ -1096,11 +1122,11 @@ digraph {
 	166 -> 186
 	166 -> 006
 	167 -> 322
-	168 -> 130
-	168 -> 189
+	168 -> 141
+	168 -> 363.1
 	169 -> 130
 	169 -> 189
-	170 -> 281 [class = "opt" label = "elemental"]
+	170 -> 281.1 [class = "opt" label = "elemental"]
 	170 -> 031
 	171 -> 341
 	171 -> 002
@@ -1163,7 +1189,7 @@ digraph {
 	201 -> 365
 	201 -> 124
 	202 -> 279 [class = "req" label = "bottle"]
-	202 -> 387
+	202 -> 387.1
 	203 -> 123
 	203 -> 335
 	203 -> 079
@@ -1173,7 +1199,7 @@ digraph {
 	205 -> 023 [class = "req" label = "!magic sword\n -4ST"]
 	205 -> 023 [class = "cbt" label = "flee\n -4ST"]
 	205 -> 227
-	206 -> 281
+	206 -> 281.1
 	206 -> 222
 	207 -> 359
 	207 -> 106
@@ -1204,7 +1230,7 @@ digraph {
 	219 -> 366
 	219 -> 049
 	220 -> 167
-	221 -> 387
+	221 -> 387.1
 	221 -> 152
 	222 -> 180
 	222 -> 398
@@ -1221,7 +1247,7 @@ digraph {
 	228 -> 291
 	228 -> 070
 	229 -> 375
-	230 -> 281
+	230 -> 281.1
 	230 -> 255
 	230 -> 302
 	231 -> 328
@@ -1242,7 +1268,7 @@ digraph {
 	241 -> 393
 	242 -> 127 [class = "pass" label = "PR-2"]
 	242 -> 319 [class = "fail"]
-	243 -> 281
+	243 -> 281.1
 	243 -> 180
 	243 -> 154
 	244 -> 099 [class = "info" label = "Master of Air"]
@@ -1263,7 +1289,7 @@ digraph {
 	253 -> 285
 	254 -> 153
 	255 -> 080 [class = "info" label = "gold key"]
-	255 -> 281
+	255 -> 281.1
 	255 -> 061
 	255 -> 302
 	256 -> 121
@@ -1309,12 +1335,12 @@ digraph {
 	274 -> 021
 	274 -> 245
 	275 -> 260
-	276 -> 363
+	276 -> 363.1
 	277 -> 385
 	277 -> 056
 	277 -> 037
 	278
-	279 -> 387
+	279 -> 387.1
 	280 -> 159 [class = "req" label = "bronze manikin"]
 	280 -> 194
 	281 -> 376 [class = "info" label="lighthouse beacon\n -meal"]
@@ -1352,14 +1378,14 @@ digraph {
 	296 -> 286
 	297 -> 106
 	297 -> 324
-	298 -> 166
+	298 -> 166.1
 	299 -> 029
 	299 -> 228
 	299 -> 291
 	299 -> 070
 	300 -> 172
 	301 -> 346
-	302 -> 281
+	302 -> 281.1
 	302 -> 392
 	302 -> 003
 	302 -> 193
@@ -1384,7 +1410,7 @@ digraph {
 	312 -> 054
 	312 -> 174 [class = "opt" label = "spectrebane"]
 	313 -> 398
-	313 -> 281
+	313 -> 281.1
 	313 -> 154
 	314 -> 023
 	315 -> 384
@@ -1393,7 +1419,7 @@ digraph {
 	317 -> 263
 	317 -> 366
 	317 -> 106
-	318 -> 166 [class = "cbt" label = "6AR vs ESK=8"]
+	318 -> 166.1 [class = "cbt" label = "6AR vs ESK=8"]
 	319 -> 257
 	320 -> 197
 	320 -> 075
@@ -1409,7 +1435,7 @@ digraph {
 	324 -> 106 [class = "fail" label = "3xSK"]
 	324 -> 106
 	325 -> 336
-	325 -> 281 [class = "opt" label = "elemental"]
+	325 -> 281.1 [class = "opt" label = "elemental"]
 	325 -> 031
 	326 -> 163
 	327
@@ -1432,7 +1458,7 @@ digraph {
 	334 -> 024
 	335 -> 109
 	335 -> 079
-	336 -> 281 [class = "opt" label = "elemental"]
+	336 -> 281.1 [class = "opt" label = "elemental"]
 	336 -> 031
 	336 -> 354
 	336 -> 325
@@ -1507,13 +1533,12 @@ digraph {
 	367 -> 343
 	367 -> 005
 	367 -> 052
-	368 -> 281
 	368 -> 325
 	368 -> 336
-	368 -> 281
+	368 -> 281.1
 	369 -> 103
 	369 -> 079
-	370 -> 034
+	370 -> 034.1
 	371 -> 339
 	371 -> 106
 	372 -> 241
@@ -1521,9 +1546,11 @@ digraph {
 	372 -> 027
 	372 -> 069
 	372 -> 084
-	373 -> 015
+	//373 -> 015
+	015 -> 373 [dir = back]
 	373 -> 056
-	373 -> 037
+	//373 -> 037
+	037 -> 373 [dir = back]
 	374 -> 276
 	374 -> 038
 	374 -> 059
@@ -1544,8 +1571,10 @@ digraph {
 	381 -> 023
 	381 -> 185
 	381 -> 252
-	382 -> 085
-	382 -> 097
+	//382 -> 085
+	085 -> 382 [dir = back]
+	//382 -> 097
+	097 -> 382 [dir = back]
 	382 -> 272
 	383 -> 058
 	383 -> 106
@@ -1564,15 +1593,14 @@ digraph {
 	388 -> 362
 	388 -> 044
 	388 -> 134
-	389 -> 034
-	389 -> 034
+	389 -> 034.1
 	390 -> 266 [class = "info" label = "axeplant"]
 	390 -> 124
 	391 -> 039
 	391 -> 025
 	391 -> 126 [class = "info" label = "brass orb"]
 	392 -> 264
-	392 -> 379
+	392 -> 379.1
 	393 -> 334
 	393 -> 201
 	394 -> 168
@@ -1587,7 +1615,7 @@ digraph {
 	397 -> 211
 	397 -> 310
 	398 -> 243
-	398 -> 281
+	398 -> 281.1
 	398 -> 180
 	398 -> 154
 	399 -> 015
