@@ -62,7 +62,18 @@ digraph {
 		2d6+6 gold\l\l \
 		Comments:\l \
 		Presence can exceed initial value\l \
-		004*: Ignore next 2 spells\l \
+		004+: Ignore next 2 spells\l \
+		032*: Enemy first round does 5ST daamge\l \
+		037-: -1AT next combat\l \
+		176-: -1AT next combat\l \
+		044*: Enemy first 2 rounds does 5ST daamge\l \
+		101*: EAT=21 means auto lost next round\l \
+		201*: 2 heads, can attack heads for 6 damage\l \
+		herbal liqueur: Each half bottle restores 4ST\l \
+		pitcher plant liquid: Neutralize first fire attack/spell/trap\l \
+		stoneskin: Ignore first enemy hit each combat until opponent rolls 21+\l \
+		Parraine: 3 services: -disease\n 6DMG\n +8ST\l \
+		blade venom: +1DMG\l \
 		Order: item/gold/AT/SK/ST/LK/PR\l \
 		"
 		shape = "box"
@@ -72,8 +83,19 @@ digraph {
 		node [style = "filled" color = "greenyellow"]
 		boo1 [label = "\N\n text"]
 		boo3 [label = "\N\n text"]
-		004 [label = "\N*\n +1LK"]
+		004 [label = "\N+\n +1LK"]
 		010 [label = "\N\n +5ST\n +1PR"]
+		053 [label = "\N\n +1LK\n +1PR"]
+		067 [label = "\N+\n +1LK"]
+		125 [color = "greenyellow:pink" label = "\N\n -2ST\n +1PR"]
+		132 [label = "\N+\n +2ST"]
+		150 [label = "\N\n +3ST\n +1PR"]
+		167 [label = "\N\n +1ILK\n +1LK\n +1PR"]
+		181 [label = "\N\n +1AT"]
+		188 [color = "greenyellow:pink" label = "\N\n -4ST\n +1LK"]
+		240 [label = "\N\n +2SK\n +4ST (can be above initial)"]
+		258 [label = "\N+\n +4ST"]
+		329 [label = "\N\n +1ILK\n +all LK"]
 		bst
 	}
 
@@ -81,12 +103,75 @@ digraph {
 		node [style = "filled" color = "pink"]
 		dam1 [label = "\N\n text"]
 		dam3 [label = "\N\n text"]
+		012 [label = "\N\n -2ST"]
+		025 [label = "\N\n -1d6ST"]
+		030 [label = "\N\n -1LK\n -1PR"]
+		033 [label = "\N\n -3ST"]
+		037 [label = "\N-\n -2ST"]
+		050 [label = "\N\n -4ST"]
+		054 [label = "\N\n -1d6ST"]
+		068 [label = "\N\n -1d6ST"]
+		071 [label = "\N\n -2ST"]
+		072 [label = "\N\n -4ST"]
+		075 [label = "\N\n -3ST?\n (SK)"]
+		081 [label = "\N\n -4ST"]
+		092 [label = "\N\n -3ST"]
+		093 [label = "\N\n -1d6ST"]
+		116 [label = "\N\n -1LK"]
+		122 [label = "\N\n -2ST"]
+		131 [label = "\N\n -1~4ST\n (SK)"]
+		152 [label = "\N\n -1AT?\n (LK)"]
+		158 [label = "\N\n -2ST?\n (SK)"]
+		160 [label = "\N\n -2ST?\n (SK)"]
+		176 [label = "\N-"]
+		194 [label = "\N\n -?ST"]
+		208 [label = "\N\n -3ST"]
+		217 [label = "\N\n -5ST"]
+		228 [label = "\N\n -3ST"]
+		229 [label = "\N\n -3ST"]
+		232 [label = "\N\n -1ST"]
+		233 [label = "\N\n -2ST"]
+		239 [label = "\N\n -1~4ST\n (SK)"]
+		248 [label = "\N\n -2ST"]
+		250 [label = "\N\n -?ST\n (?xSK)"]
+		272 [label = "\N\n -3ST"]
+		282 [label = "\N\n -4ST"]
+		288 [label = "\N\n -2ST"]
+		292 [label = "\N\n -2ST?\n (gems)"]
+		297 [label = "\N\n -1ST"]
+		301 [label = "\N\n -1d6ST"]
+		303 [label = "\N\n -3ST"]
+		315 [label = "\N\n -2ST per creature"]
+		319 [label = "\N\n -3ST"]
+		324 [label = "\N\n -0~6ST\n (1~3xSK)"]
+		330 [label = "\N\n -4ST"]
+		332 [label = "\N\n -1AT\n -2ST"]
+		335 [label = "\N\n -4ST"]
+		357 [label = "\N\n -1AT\n -2ST"]
+		364 [label = "\N\n -2ST?\n -1LK"]
+		370 [label = "\N\n -2~6ST\n (LK)"]
+		372 [label = "\N\n -3ST"]
+		377 [label = "\N\n -2ST?\n (SK)"]
+		379 [label = "\N\n -2~6ST"]
+		392 [label = "\N\n -1ST"]
 		ddg
 	}
 	
 	subgraph Death {
 		node [style = "filled" color = "red"]
 		005
+		022
+		027
+		119
+		123
+		139
+		162
+		165
+		225
+		278
+		310
+		327
+		350
 		ddt
 		ddt2
 		monddt
@@ -109,7 +194,97 @@ digraph {
 		opt2 [class = "bst"]
 		opt3 [class = "bst"]
 		006 [label = "\N\n -3ST?\n (green cream)"]
-		011 [label = "\N\n return from main passage\n -3ST"]
+		011 [class = "ddg" label = "\N\n return from main passage\n -3ST"]
+		013 [fontcolor = "crimson" label = "\N\n -meal\n info" tooltip = "earth elemental infused, air elemental can be ignored"]
+		016 [label = "\N\n lung rot"]
+		019 [label = "\N\n apprentice name vesperen"]
+		021 [class = "bst" label = "\N\n -disease\n +1IST\n +allST"]
+		026 [label = "\N\n -2AT\n (lantern)"]
+		028 [label = "\N\n info" tooltip = "lure monsters out of water in pool room, valuable things in alchemical laboratory, door trapped, study magical box creates food"]
+		038 [class = "ddg" label = "\N\n -3ST?\n (lantern)"]
+		045 [label = "\N\n lantern\n 2 herbal liqueur"]
+		047 [fontcolor = "crimson" class = "bst" label = "\N\n -5 gold?\n -gold chain?\n -gold key?\n -silver skeleton key?\n +4ST?"]
+		064 [fontcolor = "crimson" label = "\N\n -wooden pole"]
+		065 [fontcolor = "crimson" label = "\N\n -meal"]
+		066 [label = "\N\n black mark"]
+		070 [class = "bst" fontcolor = "crimson" label = "\N\n -2meal\n +10ST"]
+		082 [label = "\N\n use Molander"]
+		087 [class = "bst" label = "\N\n 1 gold\n rusty sword\n -meal\n +4ST"]
+		088 [label = "\N\n red glass globe"]
+		090 [class = "bst" fontcolor = "crimson" label = "\N\n -meal\n +4ST"]
+		094 [label = "\N\n pearl"]
+		100 [class = "bst" fontcolor = "crimson" label = "\N\n -magic stone\n +1LK\n +1PR"]
+		103 [class = "ddg" label = "\N\n -3~4ST\n (lung rot)"]
+		105 [fontcolor = "crimson" label = "\N\n -blue potion effect"]
+		107 [label = "\N\n info" tooltip = "healingmagic at shrine, south-western tip, go through marshes and swordplains"]
+		111 [class = "bst" label = "\N\n 2 meal\n +1LK"]
+		117 [label = "\N\n blue potion"]
+		118 [fontcolor = "crimson" label = "\N\n 2 gifts"]
+		129 [label = "\N\n info" tooltip = "apprentice did work for wizards, air spirit in circle, wizard in dungens below black tower"]
+		134 [class = "ddg" label = "\N\n return from main passage\n refight bone golem\n -5ST"]
+		140 [class = "ddg" label = "\N\n potion of luck (+1d6/2LK)"]
+		141 [class = "bst" fontcolor = "crimson" label = "\N\n -meal\n +4ST"]
+		143 [class = "bst" fontcolor = "crimson" label = "\N\n -meal\n +4ST"]
+		151 [label = "\N\n spikes and rods"]
+		161 [label = "\N\n info" tooltip = "avoid elementals"]
+		172 [label = "\N\n info" tooltip = "Master of Fire: Ziraphelis, brass orb: barrier smashed to ground"]
+		175 [label = "\N\n pitcher plant liquid?\n (glass bottle/\n -herbal liqueur?/\n -olive oil?)"]
+		180 [label = "\N\n 4 meal"]
+		182 [label = "\N\n only 1 investigate"]
+		197 [class = "bst" label = "\N\n 2 gold\n shield\n -meal\n +4ST"]
+		202 [label = "\N\n 6 gold\n glue?"]
+		203 [class = "bst" label = "\N\n +4ST\n +1AT 2 combats"]
+		206 [label = "\N\n -2EST"]
+		207 [label = "\N\n can return to 289"]
+		209 [class = "bst" fontcolor = "crimson" label = "\N\n -meal\n +4ST"]
+		210 [label = "\N\n -2AT\n (!lantern)"]
+		213 [label = "\N\n tomb dust: 015 after leaving apprentice"]
+		216 [label = "\N\n potion of stamina\n 3 meal"]
+		221 [class = "ddg" label = "\N\n chest?\n net?\n bottle?\n (ST) (ST-2) (ST-4)\n-2ST?\n (SK)"]
+		223 [class = "ddg" label = "\N\n tome dust\n -1LK\n -1PR"]
+		234 [fontcolor = "crimson" label = "\N\n fight together"]
+		235 [label = "\N\n -1AT"]
+		236 [label = "\N\n grog (+4ST, +1AT)\n 4 meal"]
+		237 [label = "\N\n blue potion text"]
+		238 [label = "\N\n stoneskin"]
+		243 [class = "bst" fontcolor = "crimson" label = "\N\n -meal\n +4ST"]
+		247 [label = "\N\n stone axe\n shield\n 5 meal"]
+		249 [class = "bst" fontcolor = "crimson" label = "\N\n -meal\n +4ST"]
+		251 [class = "bst" label = "\N\n Parraine\n +1PR"]
+		259 [label = "\N\n ethereal oil\n spectrebane?\n (tomb dust)"]
+		261 [label = "\N\n rope\n wooden pole\n 4 meal"]
+		266 [label = "\N\n blade venom?\n (pestle & mortar\n lantern or olive oil)\n (glass bottle)"]
+		267 [label = "\N\n rope"]
+		273 [label = "\N\n 0~4 acid?\n (bottles)"]
+		274 [class = "bst" fontcolor = "crimson" label = "\N\n -meal\n +8ST"]
+		276 [class = "bst" fontcolor = "crimson" label = "\N\n -meal\n +6ST"]
+		279 [label = "\N\n olive oil"]
+		283 [class = "bst" fontcolor = "crimson" label = "\N\n -meal\n +4ST"]
+		285 [label = "\N\n info" tooltip = "secret entrance cliff below tower, shantizair sought wizards"]
+		287 [label = "\N\n shield"]
+		293 [label = "\N\n info" tooltip = "don't take sword above fireplace, be careful of steps down next dungeon, traps in lab of master of waters, don't touch green globe or blue light screen"]
+		294 [class = "bst" fontcolor = "crimson" label = "\N\n -meal\n +4ST"]
+		298 [label = "\N\n -fishing net"]
+		300 [class = "ddg" fontcolor = "crimson" label = "\N\n -meal\n -1ST"]
+		306 [class = "bst" label = "\N\n decanter\n +all ST"]
+		308 [class = "ddg" label = "\N\n -2~3ST\n (ruby)"]
+		309 [label = "\N\n info" tooltip = "yellow wizard search for something, need to be allied, have to open tomb"]
+		311 [fontcolor = "cyan3" label = "\N\n stamina potion?\n (1olive oil?)\n (bottle)"]
+		313 [class = "bst" fontcolor = "crimson" label = "\N\n pestle & mortar\n flint\n -meal\n +4ST"]
+		317 [class = "bst" label = "\N\n +all meal\n +all ST"]
+		321 [class = "bst" fontcolor = "crimson" label = "\N\n -meal\n +4ST"]
+		322 [label = "\N\n -1AT\n (!lantern)"]
+		326 [class = "bst" label = "\N\n 5 actions\n +1PR"]
+		331 [label = "\N\n info" tooltip = "don't choose faceless at shrine"]
+		344 [fontcolor = "crimson" label = "\N\n -blue potion effect"]
+		347 [label = "\N\n 3 gold"]
+		359 [label = "\N\n ?meal\n (?bottle)"]
+		369 [label = "\N\n bronze manikin"]
+		373 [label = "\N\n 3 gold\n 2 meal\n potion bottle"]
+		382 [class = "ddg" label = "\N\n 7 gold\n magic sword (+1AT)\n shield\n -3ST"]
+		390 [class = "ddg" label = "\N\n -2ST?\n (lung rot)"]
+		393 [class = "bst" fontcolor = "crimson" label = "\N\n -meal\n +4ST"]
+		396 [class = "ddg" fontcolor = "crimson" label = "\N\n -2 meal\n -2ST"]
 		kky
 	}
 	
@@ -118,6 +293,21 @@ digraph {
 		wrd1 [label = "\N\n text"]
 		wrd2 [label = "\N\n text"]
 		wrd3 [label = "\N\n text"]
+		040 [label = "\N\n gold key: 040\n stamina potion\n info" tooltip = "kendris at monastry\n true name, crystal, shrine safeguard, honorton key to crypt"]
+		063 [label = "\N\n brass orb: 063"]
+		080 [label = "\N\n rat-tailed fungus: 311\n pitcher plant: 175\n axeplant: 266"]
+		091 [label = "\N\n Master of Waters: Molander"]
+		135 [label = "\N\n gold chain: 8 sections, 12 links each"]
+		145 [label = "\N\n glass bottle\n rope\n green cream: 145"]
+		157 [label = "\N\n blue potion: 237"]
+		170 [class = "bst" label = "\N\n sapphire: 50 facets\n topaz: 24 facets\n incantation of light: 100 speckles\n skeleton key\n +1LK\n +1PR"]
+		220 [label = "\N\n diamond: 280 carat"]
+		230 [label = "\N\n Master of Earth: Caltarelair\n Hermit: Ralsteen"]
+		245 [label = "\N\n ruby: 36 facets\n tiger eye"]
+		246 [label = "\N\n password: elementarae"]
+		314 [label = "\N\n runes: 256"]
+		360 [label = "\N\n fire ruby: 60 facets"]
+		386 [label = "\N\n Master of Air: Remishaz"]
 		wwd
 	}
 	
@@ -157,12 +347,292 @@ digraph {
 			label = "Sea Zombie\n 6/7"
 			001
 		}
-
+		
 		subgraph cluster_02 {
 			label = "Homunculus\n 8/5"
 			007 [label = "\N\n -1AT"]
 		}
 
+		subgraph cluster_03 {
+			label = "Stonewight\n 9/10"
+			014 [shape = "rect" class = "kky" label = "\N\n info" tooltip = "stone circle in woods, monks found something, hid some crystals, secret with hermit of woodland"]
+		}
+		
+		subgraph cluster_04 {
+			label = "Slimeworm\n 8/10"
+			029
+		}
+		
+		subgraph cluster_05 {
+			label = "Master of Waters\n 10/14"
+			032 [style = "filled" color = "greenyellow:pink" label = "\N*\n -1SK?\n +1PR"]
+		}
+		
+		subgraph cluster_06 {
+			label = "Master of Earth\n 10/14"
+			044 [label = "\N*"]
+		}
+		
+		subgraph cluster_07 {
+			label = "???\n 8/?"
+			059
+		}
+		
+		subgraph cluster_08 {
+			label = "???\n ?/?"
+			062 [class = "ddg" label = "\N\n -1AT\n -1ST"]
+		}
+		
+		subgraph cluster_09 {
+			label = "Swamp Alligator\n 8/10"
+			069 [class = "ddg" label = "\N\n -3ST"]
+		}
+
+		subgraph cluster_10 {
+			label = "Squirting Octopus\n 7/9"
+			077 [shape = "rect" class = "kky" label = "\N\n fishing net"]
+		}
+		
+		subgraph cluster_11 {
+			label = "Grupplers\n 7/10"
+			084 [class = "ddg" label = "\N\n -2ST"]
+		}
+
+		subgraph cluster_12 {
+			label = "Pneumozone\n 9/9"
+			101 [class = "ddg" label = "\N*\n -3ST"]
+		}
+		
+		subgraph cluster_13 {
+			label = "???\n ?/?"
+			102 [label = "\N\n -2AT"]
+		}
+		
+		subgraph cluster_14 {
+			label = "Master of Fire\n ?/?"
+			113 [label = "\N\n -1ESK"]
+		}
+		
+		subgraph cluster_15 {
+			label = "Greater Ghoul\n 9/11"
+			114
+		}
+		
+		subgraph cluster_16 {
+			label = "Master of Fire\n 11/?"
+			120
+		}
+		
+		subgraph cluster_17 {
+			label = "Great Moray Eel\n 8/11"
+			133 [label = "\N\n -2AT"]
+		}
+		
+		subgraph cluster_18 {
+			label = "Master of Fire\n ?/?"
+			136 [label = "\N\n -3EST"]
+		}
+		
+		subgraph cluster_19 {
+			label = "Barrow Guardian\n 9/12"
+			137 [shape = "rect" class = "loss" label = "\N*\n lung rot\n -?AT"]
+		}
+		
+		subgraph cluster_20 {
+			label = "Master of Fire\n 11/?"
+			142
+		}
+		
+		subgraph cluster_21 {
+			label = "Giant Roc\n 9/14"
+			155 [shape = "rect" class = "kky" label = "\N\n 3 gold\n 3 meal\n glass bottle\n -1AT"]
+		}
+		
+		subgraph cluster_22 {
+			label = "Bronze Manikin\n 8/19"
+			159 [label = "\N*\n -?ST/\n -1AT"]
+		}
+		
+		subgraph cluster_23 {
+			label = "Giant Skeleton\n 8/9 8/8"
+			164 [label = "\N*"]
+		}
+		
+		subgraph cluster_24 {
+			label = "Skeleton Warrior\n 8/6"
+			171 [label = "\N\n -1DMG?\n (!stone axe)"]
+		}
+		
+		subgraph cluster_25 {
+			label = "Shark-Kin\n 9/9"
+			173 [label = "\N\n -1AT"]
+		}
+		
+		subgraph cluster_26 {
+			label = "Barrow Spirit\n 10/8"
+			177
+		}
+		
+		subgraph cluster_27 {
+			label = "Homunculus\n ?/?"
+			184 [class = "ddg" label = "\N\n -3ST"]
+		}
+
+		subgraph cluster_28 {
+			label = "Mutant Amoeba\n 8/11"
+			189 [label = "\N\n -1DMG?\n (!sheild)\n -1AT?"]
+		}
+		
+		subgraph cluster_29 {
+			label = "Stonewight\n ?/?"
+			190 [class = "ddg" label = "\N\n -?SK"]
+		}
+		
+		subgraph cluster_30 {
+			label = "Master of Waters\n ?/?"
+			191 [class = "ddt" label = "\N\n -2ST\n -2AT round"]
+		}
+		
+		subgraph cluster_31 {
+			label = "Master of Fire\n ?/?"
+			199 [label = "\N\n -4EST\n (SK)"]
+		}
+		
+		subgraph cluster_32 {
+			label = "Hydra-Snake\n 8/11"
+			201 [label = "\N*\n -4EST\n (SK)"]
+		}
+		
+		subgraph cluster_33 {
+			label = "Earth Elemental\n 14/22"
+			205 [label = "\N*\n -1DMG\n +2EDMG"]
+		}
+		
+		subgraph cluster_34 {
+			label = "Zombie Monk\n 9/7"
+			222
+		}
+		
+		subgraph cluster_35 {
+			label = "Black Skeleton*\n 9/9"
+			224
+		}
+		
+		subgraph cluster_36 {
+			label = "Two-Headed Lizard Man\n 8/9 8/10"
+			226
+		}
+		
+		subgraph cluster_37 {
+			label = "Mutant Lizard Man\n 7/9\n 9/9"
+			241
+		}
+		
+		subgraph cluster_38 {
+			label = "Great Moray Eel\n 8/11"
+			254
+		}
+
+		subgraph cluster_39 {
+			label = "Dire Spectre*\n 11/19"
+			257 [class = "ddt"]
+		}
+		
+		subgraph cluster_40 {
+			label = "Master of Air\n 10/11"
+			265 [label = "\N*"]
+		}
+		
+		subgraph cluster_41 {
+			label = "Bronze Manikin\n 8/9"
+			268 [label = "\N*"]
+		}
+		
+		subgraph cluster_42 {
+			label = "Fire Elemental\n 9/12"
+			269 [label = "\N*"]
+		}
+		
+		subgraph cluster_43 {
+			label = "Master of Fire\n ?/?"
+			271 [label = "\N\n -4EST"]
+		}
+		
+		subgraph cluster_44 {
+			label = "Red Skeleton Group\n 8/10+PR/2"
+			275 [label = "\N\n -1DMG?\n (stone axe)"]
+		}
+		
+		subgraph cluster_45 {
+			label = "Master of Fire\n ?/?"
+			295 [label = "\N\n win AR"]
+		}
+		
+		subgraph cluster_46 {
+			label = "Squirting Octopus\n 7/9"
+			305 [shape = "rect" class = "kky" label = "\N\n -2AT?\n (!gunk)"]
+		}
+		
+		subgraph cluster_47 {
+			label = "Sea Zombie\n 8/9"
+			343 [class = "ddg" label = "\N\n -2ST"]
+		}
+		
+		subgraph cluster_48 {
+			label = "Bone Golem\n 8/9"
+			348 [label = "\N\n +1EDMG"]
+		}
+		
+		subgraph cluster_49 {
+			label = "Skeleton\n 6/6"
+			353 [label = "\N\n +1EDMG?\n (-stone axe)"]
+		}
+		
+		subgraph cluster_50 {
+			label = "Father Honorton\n 10/12"
+			354
+		}
+		
+		subgraph cluster_51 {
+			label = "Earth Elemental\n 14/22"
+			358 [class = "ddt" label = "\N\n -1DMG\n +2EDMG\n -1LK"]
+		}
+		
+		subgraph cluster_52 {
+			label = "Earth Elemental\n 10/14"
+			368
+		}
+		
+		subgraph cluster_53 {
+			label = "Master of Fire\n 11/17"
+			375
+		}
+		
+		subgraph cluster_54 {
+			label = "Elemental Vortex*\n 9/14"
+			378
+		}
+		
+		subgraph cluster_55 {
+			label = "Skeleton Group\n 9/10\n 7/9"
+			389
+		}
+		
+		subgraph cluster_56 {
+			label = "Master of Fire\n ?/?"
+			391 [label = "\N\n -4EST"]
+		}
+		
+		subgraph cluster_57 {
+			label = "Wizard's Apprentice*\n 8/9"
+			395
+		}
+		
+		subgraph cluster_58 {
+			label = "Skeletal Mutant\n 9/12"
+			397
+		}
+		
 		cbt
 	}
 
@@ -213,6 +683,7 @@ digraph {
 		mondam5 [class = "req kky"]
 		mon5 [class = "req kky"]
 		ending [fontcolor = "black" shape = "octagon"]
+		400 [fontcolor = "black" shape = "octagon"]
 	}
 	
 	subgraph Required2 {
@@ -267,7 +738,7 @@ digraph {
 	007 -> 184 [class = "cbt" label = ">3AR"]
 	007 -> 395
 	007 -> 262
-	008 -> rat_tail_fungus [class = "info" label = "plants of solani island"]
+	008 -> 311 [class = "info" label = "rat-failed fungus"]
 	008 -> 345
 	009 -> 103 [class = "pass" label = "LK"]
 	009 -> 079 [class = "pass" label = "LK"]
@@ -277,995 +748,854 @@ digraph {
 	010 -> 174 [class = "opt" label = "-spectrebane"]
 	011 -> 023
 	011 -> 340
-//	012 -> 
-//	013 -> 
-//	014 -> 
-//	015 -> 
-//	016 -> 
-//	017 -> 
-//	018 -> 
-//	019 -> 
-//	020 -> 
-//	021 -> 
-//	022 -> 
-//	023 -> 
-//	024 -> 
-//	025 -> 
-//	026 -> 
-//	027 -> 
-//	028 -> 
-//	029 -> 
-//	030 -> 
-//	031 -> 
-//	032 -> 
-//	033 -> 
-//	034 -> 
-//	035 -> 
-//	036 -> 
-//	037 -> 
-//	038 -> 
-//	039 -> 
-//	040 -> 
-//	041 -> 
-//	042 -> 
-//	043 -> 
-//	044 -> 
-//	045 -> 
-//	046 -> 
-//	047 -> 
-//	048 -> 
-//	049 -> 
-//	050 -> 
-//	051 -> 
-//	052 -> 
-//	053 -> 
-//	054 -> 
-//	055 -> 
-//	056 -> 
-//	057 -> 
-//	058 -> 
-//	059 -> 
-//	060 -> 
-//	061 -> 
-//	062 -> 
-//	063 -> 
-//	064 -> 
-//	065 -> 
-//	066 -> 
-//	067 -> 
-//	068 -> 
-//	069 -> 
-//	070 -> 
-//	071 -> 
-//	072 -> 
-//	073 -> 
-//	074 -> 
-//	075 -> 
-//	076 -> 
-//	077 -> 
-//	078 -> 
-//	079 -> 
-//	080 -> 
-//	081 -> 
-//	082 -> 
-//	083 -> 
-//	084 -> 
-//	085 -> 
-//	086 -> 
-//	087 -> 
-//	088 -> 
-//	089 -> 
-//	090 -> 
-//	091 -> 
-//	092 -> 
-//	093 -> 
-//	094 -> 
-//	095 -> 
-//	096 -> 
-//	097 -> 
-//	098 -> 
-//	099 -> 
-//	100 -> 
-//	101 -> 
-//	102 -> 
-//	103 -> 
-//	104 -> 
-//	105 -> 
-//	106 -> 
-//	107 -> 
-//	108 -> 
-//	109 -> 
-//	110 -> 
-//	111 -> 
-//	112 -> 
-//	113 -> 
-//	114 -> 
-//	115 -> 
-//	116 -> 
-//	117 -> 
-//	118 -> 
-//	119 -> 
-//	120 -> 
-//	121 -> 
-//	122 -> 
-//	123 -> 
-//	124 -> 
-//	125 -> 
-//	126 -> 
-//	127 -> 
-//	128 -> 
-//	129 -> 
-//	130 -> 
-//	131 -> 
-//	132 -> 
-//	133 -> 
-//	134 -> 
-//	135 -> 
-//	136 -> 
-//	137 -> 
-//	138 -> 
-//	139 -> 
-//	140 -> 
-//	141 -> 
-//	142 -> 
-//	143 -> 
-//	144 -> 
-//	145 -> 
-//	146 -> 
-//	147 -> 
-//	148 -> 
-//	149 -> 
-//	150 -> 
-//	151 -> 
-//	152 -> 
-//	153 -> 
-//	154 -> 
-//	155 -> 
-//	156 -> 
-//	157 -> 
-//	158 -> 
-//	159 -> 
-//	160 -> 
-//	161 -> 
-//	162 -> 
-//	163 -> 
-//	164 -> 
-//	165 -> 
-//	166 -> 
-//	167 -> 
-//	168 -> 
-//	169 -> 
-//	170 -> 
-//	171 -> 
-//	172 -> 
-//	173 -> 
-//	174 -> 
-//	175 -> 
-//	176 -> 
-//	177 -> 
-//	178 -> 
-//	179 -> 
-//	180 -> 
-//	181 -> 
-//	182 -> 
-//	183 -> 
-//	184 -> 
-//	185 -> 
-//	186 -> 
-//	187 -> 
-//	188 -> 
-//	189 -> 
-//	190 -> 
-//	191 -> 
-//	192 -> 
-//	193 -> 
-//	194 -> 
-//	195 -> 
-//	196 -> 
-//	197 -> 
-//	198 -> 
-//	199 -> 
-//	200 -> 
-//	201 -> 
-//	202 -> 
-//	203 -> 
-//	204 -> 
-//	205 -> 
-//	206 -> 
-//	207 -> 
-//	208 -> 
-//	209 -> 
-//	210 -> 
-//	211 -> 
-//	212 -> 
-//	213 -> 
-//	214 -> 
-//	215 -> 
-//	216 -> 
-//	217 -> 
-//	218 -> 
-//	219 -> 
-//	220 -> 
-//	221 -> 
-//	222 -> 
-//	223 -> 
-//	224 -> 
-//	225 -> 
-//	226 -> 
-//	227 -> 
-//	228 -> 
-//	229 -> 
-//	230 -> 
-//	231 -> 
-//	232 -> 
-//	233 -> 
-//	234 -> 
-//	235 -> 
-//	236 -> 
-//	237 -> 
-//	238 -> 
-//	239 -> 
-//	240 -> 
-//	241 -> 
-//	242 -> 
-//	243 -> 
-//	244 -> 
-//	245 -> 
-//	246 -> 
-//	247 -> 
-//	248 -> 
-//	249 -> 
-//	250 -> 
-//	251 -> 
-//	252 -> 
-//	253 -> 
-//	254 -> 
-//	255 -> 
-//	256 -> 
-//	257 -> 
-//	258 -> 
-//	259 -> 
-//	260 -> 
-//	261 -> 
-//	262 -> 
-//	263 -> 
-//	264 -> 
-//	265 -> 
-//	266 -> 
-//	267 -> 
-//	268 -> 
-//	269 -> 
-//	270 -> 
-//	271 -> 
-//	272 -> 
-//	273 -> 
-//	274 -> 
-//	275 -> 
-//	276 -> 
-//	277 -> 
-//	278 -> 
-//	279 -> 
-//	280 -> 
-//	281 -> 
-//	282 -> 
-//	283 -> 
-//	284 -> 
-//	285 -> 
-//	286 -> 
-//	287 -> 
-//	288 -> 
-//	289 -> 
-//	290 -> 
-//	291 -> 
-//	292 -> 
-//	293 -> 
-//	294 -> 
-//	295 -> 
-//	296 -> 
-//	297 -> 
-//	298 -> 
-//	299 -> 
-//	300 -> 
-//	301 -> 
-//	302 -> 
-//	303 -> 
-//	304 -> 
-//	305 -> 
-//	306 -> 
-//	307 -> 
-//	308 -> 
-//	309 -> 
-//	310 -> 
-//	311 -> 
-//	312 -> 
-//	313 -> 
-//	314 -> 
-//	315 -> 
-//	316 -> 
-//	317 -> 
-//	318 -> 
-//	319 -> 
-//	320 -> 
-//	321 -> 
-//	322 -> 
-//	323 -> 
-//	324 -> 
-//	325 -> 
-//	326 -> 
-//	327 -> 
-//	328 -> 
-//	329 -> 
-//	330 -> 
-//	331 -> 
-//	332 -> 
-//	333 -> 
-//	334 -> 
-//	335 -> 
-//	336 -> 
-//	337 -> 
-//	338 -> 
-//	339 -> 
-//	340 -> 
-//	341 -> 
-//	342 -> 
-//	343 -> 
-//	344 -> 
-//	345 -> 
-//	346 -> 
-//	347 -> 
-//	348 -> 
-//	349 -> 
-//	350 -> 
-//	351 -> 
-//	352 -> 
-//	353 -> 
-//	354 -> 
-//	355 -> 
-//	356 -> 
-//	357 -> 
-//	358 -> 
-//	359 -> 
-//	360 -> 
-//	361 -> 
-//	362 -> 
-//	363 -> 
-//	364 -> 
-//	365 -> 
-//	366 -> 
-//	367 -> 
-//	368 -> 
-//	369 -> 
-//	370 -> 
-//	371 -> 
-//	372 -> 
-//	373 -> 
-//	374 -> 
-//	375 -> 
-//	376 -> 
-//	377 -> 
-//	378 -> 
-//	379 -> 
-//	380 -> 
-//	381 -> 
-//	382 -> 
-//	383 -> 
-//	384 -> 
-//	385 -> 
-//	386 -> 
-//	387 -> 
-//	388 -> 
-//	389 -> 
-//	390 -> 
-//	391 -> 
-//	392 -> 
-//	393 -> 
-//	394 -> 
-//	395 -> 
-//	396 -> 
-//	397 -> 
-//	398 -> 
-//	399 -> 
-//	400 -> 
-//	401 -> 
-//	402 -> 
-//	403 -> 
-//	404 -> 
-//	405 -> 
-//	406 -> 
-//	407 -> 
-//	408 -> 
-//	409 -> 
-//	410 -> 
-//	411 -> 
-//	412 -> 
-//	413 -> 
-//	414 -> 
-//	415 -> 
-//	416 -> 
-//	417 -> 
-//	418 -> 
-//	419 -> 
-//	420 -> 
-//	421 -> 
-//	422 -> 
-//	423 -> 
-//	424 -> 
-//	425 -> 
-//	426 -> 
-//	427 -> 
-//	428 -> 
-//	429 -> 
-//	430 -> 
-//	431 -> 
-//	432 -> 
-//	433 -> 
-//	434 -> 
-//	435 -> 
-//	436 -> 
-//	437 -> 
-//	438 -> 
-//	439 -> 
-//	440 -> 
-//	441 -> 
-//	442 -> 
-//	443 -> 
-//	444 -> 
-//	445 -> 
-//	446 -> 
-//	447 -> 
-//	448 -> 
-//	449 -> 
-//	450 -> 
-//	451 -> 
-//	452 -> 
-//	453 -> 
-//	454 -> 
-//	455 -> 
-//	456 -> 
-//	457 -> 
-//	458 -> 
-//	459 -> 
-//	460 -> 
-//	461 -> 
-//	462 -> 
-//	463 -> 
-//	464 -> 
-//	465 -> 
-//	466 -> 
-//	467 -> 
-//	468 -> 
-//	469 -> 
-//	470 -> 
-//	471 -> 
-//	472 -> 
-//	473 -> 
-//	474 -> 
-//	475 -> 
-//	476 -> 
-//	477 -> 
-//	478 -> 
-//	479 -> 
-//	480 -> 
-//	481 -> 
-//	482 -> 
-//	483 -> 
-//	484 -> 
-//	485 -> 
-//	486 -> 
-//	487 -> 
-//	488 -> 
-//	489 -> 
-//	490 -> 
-//	491 -> 
-//	492 -> 
-//	493 -> 
-//	494 -> 
-//	495 -> 
-//	496 -> 
-//	497 -> 
-//	498 -> 
-//	499 -> 
-//	500 -> 
-//	501 -> 
-//	502 -> 
-//	503 -> 
-//	504 -> 
-//	505 -> 
-//	506 -> 
-//	507 -> 
-//	508 -> 
-//	509 -> 
-//	510 -> 
-//	511 -> 
-//	512 -> 
-//	513 -> 
-//	514 -> 
-//	515 -> 
-//	516 -> 
-//	517 -> 
-//	518 -> 
-//	519 -> 
-//	520 -> 
-//	521 -> 
-//	522 -> 
-//	523 -> 
-//	524 -> 
-//	525 -> 
-//	526 -> 
-//	527 -> 
-//	528 -> 
-//	529 -> 
-//	530 -> 
-//	531 -> 
-//	532 -> 
-//	533 -> 
-//	534 -> 
-//	535 -> 
-//	536 -> 
-//	537 -> 
-//	538 -> 
-//	539 -> 
-//	540 -> 
-//	541 -> 
-//	542 -> 
-//	543 -> 
-//	544 -> 
-//	545 -> 
-//	546 -> 
-//	547 -> 
-//	548 -> 
-//	549 -> 
-//	550 -> 
-//	551 -> 
-//	552 -> 
-//	553 -> 
-//	554 -> 
-//	555 -> 
-//	556 -> 
-//	557 -> 
-//	558 -> 
-//	559 -> 
-//	560 -> 
-//	561 -> 
-//	562 -> 
-//	563 -> 
-//	564 -> 
-//	565 -> 
-//	566 -> 
-//	567 -> 
-//	568 -> 
-//	569 -> 
-//	570 -> 
-//	571 -> 
-//	572 -> 
-//	573 -> 
-//	574 -> 
-//	575 -> 
-//	576 -> 
-//	577 -> 
-//	578 -> 
-//	579 -> 
-//	580 -> 
-//	581 -> 
-//	582 -> 
-//	583 -> 
-//	584 -> 
-//	585 -> 
-//	586 -> 
-//	587 -> 
-//	588 -> 
-//	589 -> 
-//	590 -> 
-//	591 -> 
-//	592 -> 
-//	593 -> 
-//	594 -> 
-//	595 -> 
-//	596 -> 
-//	597 -> 
-//	598 -> 
-//	599 -> 
-//	600 -> 
-//	601 -> 
-//	602 -> 
-//	603 -> 
-//	604 -> 
-//	605 -> 
-//	606 -> 
-//	607 -> 
-//	608 -> 
-//	609 -> 
-//	610 -> 
-//	611 -> 
-//	612 -> 
-//	613 -> 
-//	614 -> 
-//	615 -> 
-//	616 -> 
-//	617 -> 
-//	618 -> 
-//	619 -> 
-//	620 -> 
-//	621 -> 
-//	622 -> 
-//	623 -> 
-//	624 -> 
-//	625 -> 
-//	626 -> 
-//	627 -> 
-//	628 -> 
-//	629 -> 
-//	630 -> 
-//	631 -> 
-//	632 -> 
-//	633 -> 
-//	634 -> 
-//	635 -> 
-//	636 -> 
-//	637 -> 
-//	638 -> 
-//	639 -> 
-//	640 -> 
-//	641 -> 
-//	642 -> 
-//	643 -> 
-//	644 -> 
-//	645 -> 
-//	646 -> 
-//	647 -> 
-//	648 -> 
-//	649 -> 
-//	650 -> 
-//	651 -> 
-//	652 -> 
-//	653 -> 
-//	654 -> 
-//	655 -> 
-//	656 -> 
-//	657 -> 
-//	658 -> 
-//	659 -> 
-//	660 -> 
-//	661 -> 
-//	662 -> 
-//	663 -> 
-//	664 -> 
-//	665 -> 
-//	666 -> 
-//	667 -> 
-//	668 -> 
-//	669 -> 
-//	670 -> 
-//	671 -> 
-//	672 -> 
-//	673 -> 
-//	674 -> 
-//	675 -> 
-//	676 -> 
-//	677 -> 
-//	678 -> 
-//	679 -> 
-//	680 -> 
-//	681 -> 
-//	682 -> 
-//	683 -> 
-//	684 -> 
-//	685 -> 
-//	686 -> 
-//	687 -> 
-//	688 -> 
-//	689 -> 
-//	690 -> 
-//	691 -> 
-//	692 -> 
-//	693 -> 
-//	694 -> 
-//	695 -> 
-//	696 -> 
-//	697 -> 
-//	698 -> 
-//	699 -> 
-//	700 -> 
-//	701 -> 
-//	702 -> 
-//	703 -> 
-//	704 -> 
-//	705 -> 
-//	706 -> 
-//	707 -> 
-//	708 -> 
-//	709 -> 
-//	710 -> 
-//	711 -> 
-//	712 -> 
-//	713 -> 
-//	714 -> 
-//	715 -> 
-//	716 -> 
-//	717 -> 
-//	718 -> 
-//	719 -> 
-//	720 -> 
-//	721 -> 
-//	722 -> 
-//	723 -> 
-//	724 -> 
-//	725 -> 
-//	726 -> 
-//	727 -> 
-//	728 -> 
-//	729 -> 
-//	730 -> 
-//	731 -> 
-//	732 -> 
-//	733 -> 
-//	734 -> 
-//	735 -> 
-//	736 -> 
-//	737 -> 
-//	738 -> 
-//	739 -> 
-//	740 -> 
-//	741 -> 
-//	742 -> 
-//	743 -> 
-//	744 -> 
-//	745 -> 
-//	746 -> 
-//	747 -> 
-//	748 -> 
-//	749 -> 
-//	750 -> 
-//	751 -> 
-//	752 -> 
-//	753 -> 
-//	754 -> 
-//	755 -> 
-//	756 -> 
-//	757 -> 
-//	758 -> 
-//	759 -> 
-//	760 -> 
-//	761 -> 
-//	762 -> 
-//	763 -> 
-//	764 -> 
-//	765 -> 
-//	766 -> 
-//	767 -> 
-//	768 -> 
-//	769 -> 
-//	770 -> 
-//	771 -> 
-//	772 -> 
-//	773 -> 
-//	774 -> 
-//	775 -> 
-//	776 -> 
-//	777 -> 
-//	778 -> 
-//	779 -> 
-//	780 -> 
-//	781 -> 
-//	782 -> 
-//	783 -> 
-//	784 -> 
-//	785 -> 
-//	786 -> 
-//	787 -> 
-//	788 -> 
-//	789 -> 
-//	790 -> 
-//	791 -> 
-//	792 -> 
-//	793 -> 
-//	794 -> 
-//	795 -> 
-//	796 -> 
-//	797 -> 
-//	798 -> 
-//	799 -> 
-//	800 -> 
-//	801 -> 
-//	802 -> 
-//	803 -> 
-//	804 -> 
-//	805 -> 
-//	806 -> 
-//	807 -> 
-//	808 -> 
-//	809 -> 
-//	810 -> 
-//	811 -> 
-//	812 -> 
-//	813 -> 
-//	814 -> 
-//	815 -> 
-//	816 -> 
-//	817 -> 
-//	818 -> 
-//	819 -> 
-//	820 -> 
-//	821 -> 
-//	822 -> 
-//	823 -> 
-//	824 -> 
-//	825 -> 
-//	826 -> 
-//	827 -> 
-//	828 -> 
-//	829 -> 
-//	830 -> 
-//	831 -> 
-//	832 -> 
-//	833 -> 
-//	834 -> 
-//	835 -> 
-//	836 -> 
-//	837 -> 
-//	838 -> 
-//	839 -> 
-//	840 -> 
-//	841 -> 
-//	842 -> 
-//	843 -> 
-//	844 -> 
-//	845 -> 
-//	846 -> 
-//	847 -> 
-//	848 -> 
-//	849 -> 
-//	850 -> 
-//	851 -> 
-//	852 -> 
-//	853 -> 
-//	854 -> 
-//	855 -> 
-//	856 -> 
-//	857 -> 
-//	858 -> 
-//	859 -> 
-//	860 -> 
-//	861 -> 
-//	862 -> 
-//	863 -> 
-//	864 -> 
-//	865 -> 
-//	866 -> 
-//	867 -> 
-//	868 -> 
-//	869 -> 
-//	870 -> 
-//	871 -> 
-//	872 -> 
-//	873 -> 
-//	874 -> 
-//	875 -> 
-//	876 -> 
-//	877 -> 
-//	878 -> 
-//	879 -> 
-//	880 -> 
-//	881 -> 
-//	882 -> 
-//	883 -> 
-//	884 -> 
-//	885 -> 
-//	886 -> 
-//	887 -> 
-//	888 -> 
-//	889 -> 
-//	890 -> 
-//	891 -> 
-//	892 -> 
-//	893 -> 
-//	894 -> 
-//	895 -> 
-//	896 -> 
-//	897 -> 
-//	898 -> 
-//	899 -> 
-//	900 -> 
-//	901 -> 
-//	902 -> 
-//	903 -> 
-//	904 -> 
-//	905 -> 
-//	906 -> 
-//	907 -> 
-//	908 -> 
-//	909 -> 
-//	910 -> 
-//	911 -> 
-//	912 -> 
-//	913 -> 
-//	914 -> 
-//	915 -> 
-//	916 -> 
-//	917 -> 
-//	918 -> 
-//	919 -> 
-//	920 -> 
-//	921 -> 
-//	922 -> 
-//	923 -> 
-//	924 -> 
-//	925 -> 
-//	926 -> 
-//	927 -> 
-//	928 -> 
-//	929 -> 
-//	930 -> 
-//	931 -> 
-//	932 -> 
-//	933 -> 
-//	934 -> 
-//	935 -> 
-//	936 -> 
-//	937 -> 
-//	938 -> 
-//	939 -> 
-//	940 -> 
-//	941 -> 
-//	942 -> 
-//	943 -> 
-//	944 -> 
-//	945 -> 
-//	946 -> 
-//	947 -> 
-//	948 -> 
-//	949 -> 
-//	950 -> 
-//	951 -> 
-//	952 -> 
-//	953 -> 
-//	954 -> 
-//	955 -> 
-//	956 -> 
-//	957 -> 
-//	958 -> 
-//	959 -> 
-//	960 -> 
-//	961 -> 
-//	962 -> 
-//	963 -> 
-//	964 -> 
-//	965 -> 
-//	966 -> 
-//	967 -> 
-//	968 -> 
-//	969 -> 
-//	970 -> 
-//	971 -> 
-//	972 -> 
-//	973 -> 
-//	974 -> 
-//	975 -> 
-//	976 -> 
-//	977 -> 
-//	978 -> 
-//	979 -> 
-//	980 -> 
-//	981 -> 
-//	982 -> 
-//	983 -> 
-//	984 -> 
-//	985 -> 
-//	986 -> 
-//	987 -> 
-//	988 -> 
-//	989 -> 
-//	990 -> 
-//	991 -> 
-//	992 -> 
-//	993 -> 
-//	994 -> 
-//	995 -> 
-//	996 -> 
-//	997 -> 
-//	998 -> 
-//	999 -> 
-//	1000 -> 
+	012 -> 379
+	013 -> 110
+	014 -> 135 [class = "cbt" label = "lose &le;2AR"]
+	014 -> 190
+	015 -> 065
+	015 -> 385
+	015 -> 056
+	015 -> 037
+	016 -> 168
+	017 -> 131
+	017 -> 239
+	017 -> 120
+	018 -> 290 [class = "info" label = "green cream"]
+	018 -> 033
+	018 -> 281
+	019 -> 048 [class = "opt" label = "-meal/\n -stamina potion/\n -herbal liqueur"]
+	019 -> 030
+	019 -> 076
+	020 -> 276
+	021 -> 245
+	022
+	023 -> 215
+	023 -> 381
+	023 -> 322
+	023 -> 071
+	023 -> 340
+	023 -> maybe_main_passage_return
+	024 -> 399
+	024 -> 128
+	025 -> 364
+	026 -> 276
+	026 -> 038
+	026 -> 160
+	026 -> 059
+	027
+	028 -> 167
+	029 -> 376
+	029 -> 261
+	029 -> 291
+	029 -> 070
+	030 -> 076
+	031 -> 392
+	032 -> 317
+	032 -> 263
+	033 -> 206 [class = "pass" label = "PR"]
+	033 -> 222 [class = "fail"]
+	034 -> 333
+	034 -> 018
+	034 -> 057
+	034 -> 006
+	035 -> 148 [class = "pass" label = "PR"]
+	035 -> 341 [class = "fail"]
+	036 -> 247
+	036 -> 304
+	036 -> 238
+	036 -> 358
+	037 -> 385
+	037 -> 015
+	037 -> 056
+	038 -> 087
+	038 -> 276
+	038 -> 160
+	038 -> 059
+	039 -> 150 [class = "info" label = "fire ruby"]
+	039 -> 308
+	040 -> 356
+	041 -> 055
+	041 -> 201
+	041 -> 124
+	042 -> 060
+	042 -> 112
+	042 -> 130
+	042 -> 169
+	042 -> 189
+	043 -> 094 [class = "info" label = "Ralsteen"]
+	043 -> 073
+	044 -> 134 [class = "req" label = "!magic sword"]
+	044 -> 023
+	045 -> 313
+	045 -> 398
+	045 -> 154
+	046 -> 079 [class = "req" label = "-wooden pole/\n -stone axe"]
+	046 -> 268
+	047 -> 069
+	047 -> 084
+	047 -> 241 [class = "opt" label = "-gold/item"]
+	047 -> 214 [class = "opt" label = "-gold/item"]
+	048 -> 386
+	048 -> 293
+	048 -> 138
+	048 -> 161
+	048 -> 213
+	048 -> 246
+	048 -> 076
+	049 -> 133
+	049 -> 064
+	049 -> 083
+	049 -> 366
+	049 -> 106
+	050 -> 383
+	051 -> 207 [class = "req" label = "pearl"]
+	051 -> 176
+	051 -> 106
+	052 -> 085
+	052 -> 097
+	052 -> 114
+	053 -> 128
+	053 -> 024
+	054 -> 242
+	055 -> 139
+	055 -> 173
+	056 -> 144 [class = "pass" label = "SK(-2?)\n (!wooden pole)"]
+	056 -> 101 [class = "fail"]
+	057 -> 345
+	057 -> 008
+	058 -> 072
+	058 -> 088
+	058 -> 140
+	058 -> 259
+	058 -> 273
+	058 -> 284
+	058 -> 106
+	059 -> 137 [class = "cbt" label = "win first AR"]
+	059 -> 102 [class = "cbt" label = "lose first AR"]
+	060 -> 130
+	061 -> 104
+	061 -> 281
+	061 -> 255
+	061 -> 302
+	062 -> 275
+	063 -> 020
+	064 -> 049
+	065 -> 089 [class = "opt" label = "silver skeleton key"]
+	065 -> 385
+	065 -> 056
+	065 -> 037
+	066 -> 106
+	067 -> 260
+	068 -> 364
+	069 -> 162 [class = "cbt" label = "EAT=22"]
+	069 -> 188
+	070 -> 111 [class = "dice" label = "odd"]
+	070 -> 212 [class = "dice" label = "even"]
+	071 -> 023
+	072 -> 058
+	073 -> 204 [class = "pass" label = "PR"]
+	073 -> 118 [class = "fail"]
+	074 -> 017
+	075 -> 036 [class = "info" label = "tiger eye"]
+	075 -> 320
+	075 -> 334
+	076 -> 015
+	076 -> 056
+	076 -> 037
+	077 -> 202 [class = "req" label = "treasure chest"]
+	077 -> 279 [class = "req" label = "bottle"]
+	077 -> 387
+	078 -> 042
+	078 -> 328
+	078 -> 106
+	079 -> 211
+	079 -> 046
+	079 -> 310
+	080 -> 281
+	080 -> 061
+	080 -> 302
+	081 -> 098
+	081 -> 248
+	082 -> 383
+	083 -> 095 [class = "opt" label = "-meal/\n -slime"]
+	083 -> 254 [class = "opt" label = "-slime"]
+	083 -> 133
+	083 -> 366
+	083 -> 106
+	084 -> 147 [class = "pass" label = "LK"]
+	084 -> 327 [class = "fail"]
+	085 -> 145 [class = "pass" label = "SK"]
+	085 -> 396 [class = "fail"]
+	086 -> 098
+	086 -> 248
+	086 -> 199 [class = "opt" label = "-acid"]
+	086 -> 074 [class = "opt" label = "-elemental crystals"]
+	086 -> 136 [class = "opt" label = "-diamond"]
+	086 -> 187 [class = "opt" label = "-brass orb"]
+	086 -> 113 [class = "opt" label = "-red glass globe"]
+	087 -> 276
+	087 -> 160
+	087 -> 059
+	088 -> 108
+	088 -> 058
+	089 -> 178
+	089 -> 277
+	090 -> 333
+	090 -> 018
+	090 -> 057
+	090 -> 186
+	090 -> 006
+	091 -> 179
+	092 -> 316
+	092 -> 002
+	093 -> 364
+	094 -> 204
+	095 -> 254 [class = "opt" label = "-slime"]
+	095 -> 133
+	095 -> 366
+	095 -> 106
+	096 -> 216 [class = "opt" label = "-gold chain"]
+	096 -> 201
+	096 -> 124
+	097 -> decode_symbol
+	097 -> 356
+	098 -> 105 [class = "req" label = "blue potion"]
+	098 -> 224
+	099 -> 023
+	099 -> 314 [class = "opt" label = "-1SK&ISK/\n -1LK&ILK/\n -1PR&IPR"]
+	100 -> 014
+	100 -> 291
+	100 -> 261
+	100 -> 070
+	101 -> 144
+	102 -> 137
+	103 -> 115
+	103 -> 079
+	104 -> 230 [class = "pass" label = "LK"]
+	104 -> 281 [class = "fail"]
+	104 -> 255 [class = "fail"]
+	104 -> 302 [class = "fail"]
+	105 -> 364
+	106 -> 371
+	106 -> 352
+	106 -> 289
+	106 -> 078
+	106 -> 219
+	107 -> 394
+	108 -> 058
+	109 -> 123
+	109 -> 203
+	109 -> 335
+	109 -> 079
+	110 -> 357
+	110 -> 306
+	110 -> 377
+	110 -> 013
+	110 -> 337
+	111 -> 212
+	112 -> 231 [class = "pass" label = "-olive oil & SK/\n -ethereal oil & SK/\n -lantern oil & SK/\n spikes and rods & SK"]
+	112 -> 189
+	113 -> 017
+	114 -> 356
+	114 -> 022 [class = "cbt" label = "lose 3 AR"]
+	114 -> 236 [class = "cbt" label = "win"]
+	115 -> 009
+	115 -> 268
+	115 -> 369
+	115 -> 046
+	116 -> 392
+	117 -> 257
+	118 -> 204
+	119
+	120 -> 271 [class = "cbt" label = "win AR"]
+	120 -> 081 [class = "cbt" label = "lose AR"]
+	121 -> 240 [class = "info" label = "tiger eye/\n topaz"]
+	121 -> 378
+	122 -> 363
+	122 -> 249
+	123
+	124 -> 158
+	124 -> 210
+	124 -> 334
+	125 -> 151
+	125 -> 106
+	126 -> 093
+	126 -> 068
+	126 -> 004
+	127 -> 257
+	128 -> 226
+	128 -> 270
+	128 -> 024
+	129 -> 394
+	130 -> 112 [class = "req" label = "slime container"]
+	130 -> 189
+	131 -> 098
+	132 -> 383
+	133 -> 153
+	134 -> 023
+	135 -> 291
+	135 -> 261
+	135 -> 070
+	136 -> 017
+	137 -> 307
+	138 -> 048
+	139
+	140 -> 157 [class = "pass" label = "SK"]
+	140 -> 182 [class = "fail"]
+	140 -> 058
+	141 -> 363
+	141 -> 122
+	141 -> 249
+	142 -> 391 [class = "cbt" label = "win AR"]
+	142 -> 332 [class = "cbt" label = "lose AR"]
+	143 -> 195
+	143 -> 390
+	144 -> 381
+	144 -> 215
+	144 -> 071
+	144 -> 322
+	144 -> 340
+	145 -> 097
+	145 -> 114
+	145 -> 272
+	146 -> 349
+	146 -> 211
+	146 -> 310
+	147 -> 069
+	147 -> 372
+	148 -> 341 [class = "pass" label = "SK"]
+	148 -> 171 [class = "fail"]
+	148 -> 171
+	149 -> 010 [class = "info" label = "diamond"]
+	149 -> 217
+	150 -> 196
+	151 -> 125
+	151 -> 106
+	152 -> 305
+	152 -> 077
+	153 -> 350 [class = "info" label = "sapphire"]
+	153 -> 191
+	154 -> 255
+	154 -> 061
+	154 -> 302
+	155 -> 002
+	156 -> 394
+	157 -> 058
+	158 -> 210
+	159 -> 194
+	160 -> 269 [class = "req" label = "magic sword"]
+	160 -> 330
+	161 -> 048
+	162
+	163 -> 312 [class = "req" label = "ethereal oil"]
+	163 -> 278
+	164 -> 286
+	165
+	166 -> 018
+	166 -> 057
+	166 -> 186
+	166 -> 006
+	167 -> 322
+	168 -> 130
+	168 -> 189
+	169 -> 130
+	169 -> 189
+	170 -> 281 [class = "opt" label = "elemental"]
+	170 -> 031
+	171 -> 341
+	171 -> 002
+	172 -> 317
+	172 -> 366
+	172 -> 106
+	173 -> 253 [class = "pass" label = "PR"]
+	173 -> 347 [class = "fail"]
+	174 -> 117 [class = "opt" label = "blue potion"]
+	174 -> 054
+	175 -> 283
+	176 -> 106
+	177 -> 020 [class = "cbt" label = "flee\n -2ST"]
+	177 -> 361
+	178 -> 223
+	178 -> 353
+	178 -> 277
+	179 -> 322
+	179 -> 028 [class = "opt" label = "-1PR"]
+	179 -> 192 [class = "opt" label = "-1PR"]
+	180 -> 045
+	180 -> 398
+	180 -> 154
+	181 -> 245
+	182 -> 058
+	183 -> 394
+	184 -> 395
+	184 -> 262
+	185 -> 205
+	185 -> 252
+	185 -> 023
+	186 -> 389
+	186 -> 370
+	187 -> 017
+	188 -> 175 [class = "info" label = "pitcher plant"]
+	188 -> 283
+	189 -> 209
+	189 -> 231
+	190 -> 135
+	191 -> 235 [class = "req" label = "magic sword\n black mark"]
+	191 -> 032 [class = "req" label = "magic sword"]
+	192 -> 220 [class = "info" label = "sapphire\n topaz\n tiger eye\n ruby"]
+	192 -> 167
+	193 -> 325 [class = "pass" label = "SK-2"]
+	193 -> 336 [class = "pass" label = "SK-2"]
+	193 -> 392 [class = "fail"]
+	194 -> 355 [class = "pass" label = "SK-2"]
+	195 -> 274 [class = "opt" label = "glue\n potion/\n olive oil/\n grog/\n herbal liqueur"]
+	195 -> 390
+	196 -> 295 [class = "pass" label = "ESK=11"]
+	196 -> 229 [class = "fail"]
+	197 -> 075
+	197 -> 334
+	198 -> 103
+	198 -> 115
+	198 -> 079
+	199 -> 017
+	200 -> 256 [class = "info" label = "runes"]
+	200 -> 044
+	201 -> 365
+	201 -> 124
+	202 -> 279 [class = "req" label = "bottle"]
+	202 -> 387
+	203 -> 123
+	203 -> 335
+	203 -> 079
+	204 -> 394 [class = "opt" label = "herbal liqueur/\n gold key/\n grog/\n gold chain"]
+	204 -> 168
+	204 -> 016
+	205 -> 023 [class = "req" label = "!magic sword\n -4ST"]
+	205 -> 023 [class = "cbt" label = "flee\n -4ST"]
+	205 -> 227
+	206 -> 281
+	206 -> 222
+	207 -> 359
+	207 -> 106
+	208 -> 218
+	209 -> 231
+	210 -> 320
+	210 -> 075
+	210 -> 334
+	211 -> 335 [class = "opt" label = "lantern\n oil"]
+	211 -> 109
+	211 -> 079
+	212 -> 018
+	212 -> 057
+	212 -> 186
+	212 -> 333
+	213 -> 048
+	214 -> 258 [class = "pass" label = "PR"]
+	214 -> 241 [class = "fail"]
+	215 -> 348
+	215 -> 023
+	216 -> 285
+	217 -> 117 [class = "opt" label = "blue potion"]
+	217 -> 242
+	217 -> 174 [class = "opt" label = "lanternspectrebane"]
+	218 -> 232
+	218 -> 177
+	218 -> 020
+	219 -> 366
+	219 -> 049
+	220 -> 167
+	221 -> 387
+	221 -> 152
+	222 -> 180
+	222 -> 398
+	222 -> 154
+	223 -> 353
+	223 -> 277
+	224 -> 301 [class = "cbt" label = "EST&le;3"]
+	224 -> 346 [class = "cbt" label = "win"]
+	225
+	226 -> 380
+	227 -> 023
+	227 -> 252
+	228 -> 029
+	228 -> 291
+	228 -> 070
+	229 -> 375
+	230 -> 281
+	230 -> 255
+	230 -> 302
+	231 -> 328
+	231 -> 106
+	232 -> 177
+	232 -> 020
+	233 -> 125
+	233 -> 151
+	233 -> 106
+	234 -> 164
+	235 -> 032
+	236 -> 382
+	236 -> 356
+	237 -> return
+	238 -> 334
+	239 -> 248
+	240 -> 378
+	241 -> 393
+	242 -> 127 [class = "pass" label = "PR-2"]
+	242 -> 319 [class = "fail"]
+	243 -> 281
+	243 -> 180
+	243 -> 154
+	244 -> 099 [class = "info" label = "Master of Air"]
+	244 -> 265
+	245 -> 390
+	246 -> 048
+	247 -> 334
+	248 -> 224
+	249 -> 276
+	249 -> 026
+	250 -> 007
+	250 -> 288
+	251 -> 063
+	252 -> 110 [class = "info" label = "elementarae"]
+	252 -> 185
+	252 -> 023
+	253 -> 096 [class = "info" label = "gold chain"]
+	253 -> 285
+	254 -> 153
+	255 -> 080 [class = "info" label = "gold key"]
+	255 -> 281
+	255 -> 061
+	255 -> 302
+	256 -> 121
+	257 -> 400 [class = "cbt" label = "magic sword\n win"]
+	258 -> 241
+	258 -> 069
+	258 -> 084
+	259 -> 058
+	260 -> 086
+	260 -> 017
+	261 -> 376
+	261 -> 291
+	261 -> 070
+	262 -> 019 [class = "pass" label = "PR-2"]
+	262 -> 303 [class = "fail"]
+	263 -> 342
+	263 -> 317
+	263 -> 366
+	263 -> 106
+	264 -> 368 [class = "req" label = "magic sword"]
+	264 -> 012
+	265 -> 011 [class = "req" label = "!magic sword"]
+	265 -> 023
+	266 -> 124
+	267 -> 155
+	267 -> 002
+	268 -> 103
+	268 -> 079
+	269 -> 374 [class = "cbt" label = "flee\n -2ST"]
+	269 -> 287
+	270 -> 380 [class = "obt" label = "olive oil\n -lantern oil"]
+	270 -> 226
+	270 -> 024
+	271 -> 098
+	271 -> 248
+	272 -> 298 [class = "req" label = "fishing net"]
+	272 -> 318
+	272 -> 225
+	273 -> 058
+	274 -> 329
+	274 -> 309
+	274 -> 181
+	274 -> 021
+	274 -> 245
+	275 -> 260
+	276 -> 363
+	277 -> 385
+	277 -> 056
+	277 -> 037
+	278
+	279 -> 387
+	280 -> 159 [class = "req" label = "bronze manikin"]
+	280 -> 194
+	281 -> 376 [class = "info" label="lighthouse beacon\n -meal"]
+	281 -> 333
+	281 -> 057
+	281 -> 186
+	281 -> 006
+	282 -> 198
+	283 -> 041
+	283 -> 201
+	283 -> 124
+	284 -> 297
+	284 -> 058
+	285 -> 201
+	285 -> 124
+	286 -> 195
+	286 -> 143
+	286 -> 390
+	287 -> 276
+	287 -> 038
+	287 -> 059
+	288 -> 007
+	289 -> 051
+	289 -> 176
+	289 -> 106
+	290 -> 206 [class = "pass" label = "PR"]
+	290 -> 222 [class = "fail"]
+	291 -> 367
+	291 -> 070
+	292 -> 067 [class = "info" label = "sum / 2"]
+	292 -> 275
+	293 -> 048
+	294 -> 345
+	295 -> 375
+	296 -> 286
+	297 -> 106
+	297 -> 324
+	298 -> 166
+	299 -> 029
+	299 -> 228
+	299 -> 291
+	299 -> 070
+	300 -> 172
+	301 -> 346
+	302 -> 281
+	302 -> 392
+	302 -> 003
+	302 -> 193
+	303 -> 395
+	303 -> 019 [class = "pass" label = "PR"]
+	303 -> 395 [class = "fail"]
+	304 -> 247
+	304 -> 238
+	304 -> 358
+	304 -> 334
+	305 -> 077
+	306 -> 110
+	307 -> 020
+	307 -> 218 [class = "opt" label = "lantern"]
+	307 -> 208
+	308 -> 196
+	309 -> 245
+	310 -> 280 [class = "info" label = "diamond"]
+	311 -> 345
+	312 -> 149 [class = "opt" label = "acid"]
+	312 -> 117 [class = "opt" label = "blue potion"]
+	312 -> 054
+	312 -> 174 [class = "opt" label = "spectrebane"]
+	313 -> 398
+	313 -> 281
+	313 -> 154
+	314 -> 023
+	315 -> 384
+	316 -> 035
+	316 -> 002
+	317 -> 263
+	317 -> 366
+	317 -> 106
+	318 -> 166 [class = "cbt" label = "6AR vs ESK=8"]
+	319 -> 257
+	320 -> 197
+	320 -> 075
+	320 -> 334
+	321 -> 345
+	322 -> 371
+	322 -> 352
+	322 -> 289
+	322 -> 078
+	322 -> 219
+	323 -> 063
+	324 -> 058 [class = "pass" label = "SK"]
+	324 -> 106 [class = "fail" label = "3xSK"]
+	324 -> 106
+	325 -> 336
+	325 -> 281 [class = "opt" label = "elemental"]
+	325 -> 031
+	326 -> 163
+	327
+	328 -> 050 [class = "info" label = "sapphire"]
+	328 -> 082 [class = "info" label = "Molander"]
+	328 -> 132 [class = "info" label = "sapphire\n Molander"]
+	328 -> 165
+	328 -> 106
+	329 -> 245
+	330 -> 276
+	330 -> 038
+	330 -> 059
+	331 -> 168
+	332 -> 039
+	333 -> 299
+	333 -> 291
+	333 -> 070
+	334 -> 053 [class = "req" label = "Parraine"]
+	334 -> 128
+	334 -> 024
+	335 -> 109
+	335 -> 079
+	336 -> 281 [class = "opt" label = "elemental"]
+	336 -> 031
+	336 -> 354
+	336 -> 325
+	337 -> 185
+	337 -> 023
+	338 -> 234 [class = "pass" label = "PR"]
+	338 -> 296 [class = "fail"]
+	339 -> 066
+	339 -> 106
+	340 -> 265
+	340 -> 011
+	340 -> 244
+	341 -> 267
+	341 -> 155
+	341 -> 002
+	342 -> 300 [class = "info" label = "sapphire"]
+	342 -> 119
+	343 -> 005
+	343 -> 052
+	343 -> 272
+	344 -> 260
+	345 -> 321 [class = "dice" label = "1"]
+	345 -> 294 [class = "dice" label = "2-3"]
+	345 -> 043 [class = "dice" label = "4-6"]
+	346 -> 126 [class = "info" label = "brass orb"]
+	346 -> 142
+	346 -> 364
+	346 -> 025
+	347 -> 201
+	347 -> 124
+	348 -> 388
+	349 -> 360 [class = "info" label = "ruby"]
+	349 -> 282
+	350 -> 235 [class = "req" label = "magic sword\n black mark"]
+	350 -> 032 [class = "req" label = "magic sword"]
+	351 -> 221
+	351 -> 090
+	351 -> 333
+	352 -> 233
+	352 -> 106
+	353 -> 223
+	353 -> 277
+	354 -> 170
+	355 -> 344 [class = "opt" label = "blue potion"]
+	355 -> 062
+	355 -> 275
+	355 -> 292
+	356 -> 085
+	356 -> 097
+	356 -> 114
+	356 -> 272
+	357 -> 110
+	358 -> 334 [class = "cbt" label = "magic sword\n win"]
+	359 -> 106
+	360 -> 198
+	361 -> 251
+	361 -> 323
+	362 -> 200 [class = "info" label = "Master of Earth"]
+	362 -> 134
+	363 -> 351
+	363 -> 090
+	363 -> 186
+	363 -> 006
+	364 -> 039
+	365 -> 338
+	365 -> 164
+	365 -> 390
+	366 -> 397
+	366 -> 049
+	366 -> 106
+	366 -> final_dungeon [label = "final dungeon: 397"]
+	367 -> 343
+	367 -> 005
+	367 -> 052
+	368 -> 281
+	368 -> 325
+	368 -> 336
+	368 -> 281
+	369 -> 103
+	369 -> 079
+	370 -> 034
+	371 -> 339
+	371 -> 106
+	372 -> 241
+	372 -> 047
+	372 -> 027
+	372 -> 069
+	372 -> 084
+	373 -> 015
+	373 -> 056
+	373 -> 037
+	374 -> 276
+	374 -> 038
+	374 -> 059
+	375 -> 326
+	376 -> 100 [class = "info" label = "magic stone"]
+	376 -> 291
+	376 -> 261
+	376 -> 070
+	377 -> 110
+	378 -> 091
+	379 -> 333
+	379 -> 057
+	379 -> 186
+	379 -> 006
+	380 -> 092
+	380 -> 316
+	380 -> 002
+	381 -> 023
+	381 -> 185
+	381 -> 252
+	382 -> 085
+	382 -> 097
+	382 -> 272
+	383 -> 058
+	383 -> 106
+	384 -> 069
+	384 -> 372
+	384 -> 084
+	385 -> 250 [class = "pass" label = "?xSK"]
+	385 -> 015
+	385 -> 056
+	385 -> 037
+	386 -> 048
+	387 -> 090
+	387 -> 333
+	387 -> 057
+	387 -> 186
+	388 -> 362
+	388 -> 044
+	388 -> 134
+	389 -> 034
+	389 -> 034
+	390 -> 266 [class = "info" label = "axeplant"]
+	390 -> 124
+	391 -> 039
+	391 -> 025
+	391 -> 126 [class = "info" label = "brass orb"]
+	392 -> 264
+	392 -> 379
+	393 -> 334
+	393 -> 201
+	394 -> 168
+	394 -> 107
+	394 -> 129
+	394 -> 156
+	394 -> 183
+	394 -> 331
+	395 -> 373
+	396 -> 145
+	397 -> 146
+	397 -> 211
+	397 -> 310
+	398 -> 243
+	398 -> 281
+	398 -> 180
+	398 -> 154
+	399 -> 015
+	399 -> 385
+	399 -> 056
+	399 -> 037
+	400
+	400
 
 /*
 	001 [fontsize=25]
