@@ -54,18 +54,20 @@ digraph {
 		Initial Presence: 1d6/2+4\l\l \
 		skill/stamina/luck potion: +all SK/ST/LK&1ILK\l \
 		12 meal: +4ST\l \
-		sword\l \
-		leather armor\l \
-		lantern\l \
-		tinderbox\l \
+		knife\l \
+		leather jerkin\l \
+		waterskin\l \
 		backpack\l \
 		2d6+6 gold\l\l \
 		Comments:\l \
 		Presence can exceed initial value\l \
+		Knife does 1ST damage on roll of 1~4\l \
+		-1AT during combat without a shield\l \
 		004+: Ignore next 2 spells\l \
 		032*: Enemy first round does 5ST daamge\l \
 		037-: -1AT next combat\l \
 		176-: -1AT next combat\l \
+		315-: -2ST per creature encountered\l \
 		044*: Enemy first 2 rounds does 5ST daamge\l \
 		101*: EAT=21 means auto lost next round\l \
 		201*: 2 heads, can attack heads for 6 damage\l \
@@ -143,7 +145,7 @@ digraph {
 		297 [label = "\N\n -1ST"]
 		301 [label = "\N\n -1d6ST"]
 		303 [label = "\N\n -3ST"]
-		315 [label = "\N\n -2ST per creature"]
+		315 [label = "\N-"]
 		319 [label = "\N\n -3ST"]
 		324 [label = "\N\n -0~6ST\n (1~3xSK)"]
 		330 [label = "\N\n -4ST"]
@@ -294,16 +296,16 @@ digraph {
 		063 [label = "\N\n brass orb: 063"]
 		080 [label = "\N\n rat-tailed fungus: 311\n pitcher plant: 175\n axeplant: 266"]
 		091 [label = "\N\n Molander"]
-		135 [label = "\N\n gold chain: 8 sections, 12 links each"]
+		135 [label = "\N\n gold chain: 96"]
 		145 [label = "\N\n glass bottle\n rope\n green cream: 145"]
 		157 [label = "\N\n blue potion: 237"]
-		170 [class = "bst" label = "\N\n sapphire: 50 facets\n topaz: 24 facets\n incantation of light: 100 speckles\n skeleton key\n +1LK\n +1PR"]
-		220 [label = "\N\n diamond: 280 carat"]
+		170 [class = "bst" label = "\N\n sapphire: 50\n topaz: 24\n incantation of light: 100 speckles\n skeleton key\n +1LK\n +1PR"]
+		220 [label = "\N\n diamond: 280"]
 		230 [label = "\N\n Caltarelair\n Ralsteen"]
-		245 [label = "\N\n ruby: 36 facets\n tiger eye"]
+		245 [label = "\N\n ruby: 36\n tiger eye"]
 		246 [label = "\N\n password: elementarae"]
 		314 [label = "\N\n runes: 256"]
-		360 [label = "\N\n fire ruby: 60 facets"]
+		360 [label = "\N\n fire ruby: 60"]
 		386 [label = "\N\n Remishaz"]
 		wwd
 	}
@@ -652,6 +654,14 @@ digraph {
 	}
 	
 	subgraph Area_2 {
+		node [style = "filled" color = "magenta" fontcolor = "white" fixedsize = true label = "To\n 356"]
+		356 [label = "\N"]
+		356.1
+		356.2
+		356.3
+	}
+	
+	subgraph Area_3 {
 		node [style = "filled" color = "orange" fixedsize = true]
 		076
 		076.1 [label = "To\n 076"]
@@ -661,7 +671,7 @@ digraph {
 		373.1 [label = "To\n 373"]
 	}
 	
-	subgraph Area_3 {
+	subgraph Area_4 {
 		node [style = "filled" color = "orange" fixedsize = true label = "To\n 023"]
 		023 [label = "\N"]
 		023.1
@@ -670,7 +680,7 @@ digraph {
 		023.4
 	}
 	
-	subgraph Area_4 {
+	subgraph Area_5 {
 		node [style = "filled" color = "yellow" fixedsize = true label = "To\n 106"]
 		106 [label = "\N"]
 		106.1
@@ -680,7 +690,7 @@ digraph {
 		106.5
 	}
 
-	subgraph Area_5 {
+	subgraph Area_6 {
 		node [style = "filled" color = "purple" fontcolor = "white" fixedsize = true label = "To\n 079"]
 		079 [label = "\N"]
 		079.1
@@ -760,7 +770,7 @@ digraph {
 	z003 -> z006 [dir = "both"]
 	z004 -> z007 [class = "req" label = "req"]
 	z004 -> z008 [class = "opt" label = "-opt"]
-	z005 -> z009 [class = "info" label = "info"]
+	z005 -> z009 [class = "pwd" label = "password"]
 	z009 -> z010 [class = "err" label = "error(?)"]
 	z010 -> z011 [class = "cbt" label = "escape"]
 	z011 -> z012 [class = "skl" label = "spell"]
@@ -796,7 +806,7 @@ digraph {
 	007 -> 184 [class = "cbt" label = ">3AR"]
 	007 -> 395
 	007 -> 262
-	008 -> 311 [class = "info" label = "rat-failed fungus"]
+	008 -> 311 [class = "pwd" label = "rat-failed fungus"]
 	008 -> 345
 	009 -> 103 [class = "pass" label = "LK"]
 	009 -> 079.1 [class = "pass" label = "LK"]
@@ -817,7 +827,7 @@ digraph {
 	017 -> 131
 	017 -> 239
 	017 -> 120
-	018 -> 290 [class = "info" label = "green cream"]
+	018 -> 290 [class = "pwd" label = "green cream"]
 	018 -> 033
 	018 -> 281.1
 	019 -> 048 [class = "opt" label = "-meal/\n -stamina potion/\n -herbal liqueur"]
@@ -867,9 +877,9 @@ digraph {
 	038 -> 276
 	038 -> 160
 	038 -> 059
-	039 -> 150 [class = "info" label = "fire ruby"]
+	039 -> 150 [class = "pwd" label = "fire ruby"]
 	039 -> 308
-	040 -> 356
+	040 -> 356.2
 	041 -> 055
 	041 -> 201
 	041 -> 124
@@ -878,7 +888,7 @@ digraph {
 	042 -> 130
 	042 -> 169
 	042 -> 189
-	043 -> 094 [class = "info" label = "Ralsteen"]
+	043 -> 094 [class = "pwd" label = "Ralsteen"]
 	043 -> 073
 	044 -> 134 [class = "req" label = "!magic sword"]
 	044 -> 023.2
@@ -952,7 +962,7 @@ digraph {
 	073 -> 204 [class = "pass" label = "PR"]
 	073 -> 118 [class = "fail"]
 	074 -> 017
-	075 -> 036 [class = "info" label = "tiger eye"]
+	075 -> 036 [class = "pwd" label = "tiger eye"]
 	075 -> 320
 	075 -> 334
 	076 -> 015
@@ -1014,8 +1024,8 @@ digraph {
 	096 -> 216 [class = "opt" label = "-gold chain"]
 	096 -> 201
 	096 -> 124
-	097 -> 040 [class = "info" label = "puzzle"]
-	097 -> 356
+	097 -> 040 [class = "pwd" label = "puzzle"]
+	097 -> 356.2
 	098 -> 105 [class = "req" label = "blue potion"]
 	098 -> 224
 	099 -> 023.4
@@ -1053,7 +1063,7 @@ digraph {
 	112 -> 231 [class = "pass" label = "-olive oil & SK/\n -ethereal oil & SK/\n -lantern oil & SK/\n spikes and rods & SK"]
 	112 -> 189
 	113 -> 017
-	114 -> 356
+	114 -> 356.1
 	114 -> 022 [class = "cbt" label = "lose 3 AR"]
 	114 -> 236 [class = "cbt" label = "win"]
 	115 -> 009
@@ -1066,7 +1076,7 @@ digraph {
 	119
 	120 -> 271 [class = "cbt" label = "win AR"]
 	120 -> 081 [class = "cbt" label = "lose AR"]
-	121 -> 240 [class = "info" label = "tiger eye/\n topaz"]
+	121 -> 240 [class = "pwd" label = "tiger eye/\n topaz"]
 	121 -> 378
 	122 -> 363.1
 	122 -> 249
@@ -1119,18 +1129,19 @@ digraph {
 	146 -> 211
 	146 -> 310
 	147 -> 069
-	147 -> 372
+	//147 -> 372
+	372 -> 147 [dir = back]
 	148 -> 341 [class = "pass" label = "SK"]
 	148 -> 171 [class = "fail"]
 	148 -> 171
-	149 -> 010 [class = "info" label = "diamond"]
+	149 -> 010 [class = "pwd" label = "diamond"]
 	149 -> 217
 	150 -> 196
 	151 -> 125
 	151 -> 106.2
 	152 -> 305
 	152 -> 077
-	153 -> 350 [class = "info" label = "sapphire"]
+	153 -> 350 [class = "pwd" label = "sapphire"]
 	153 -> 191
 	154 -> 255
 	154 -> 061
@@ -1192,14 +1203,14 @@ digraph {
 	186 -> 389
 	186 -> 370
 	187 -> 017
-	188 -> 175 [class = "info" label = "pitcher plant"]
+	188 -> 175 [class = "pwd" label = "pitcher plant"]
 	188 -> 283
 	189 -> 209
 	189 -> 231
 	190 -> 135
 	191 -> 235 [class = "req" label = "magic sword\n black mark"]
 	191 -> 032 [class = "req" label = "magic sword"]
-	192 -> 220 [class = "info" label = "sapphire\n topaz\n tiger eye\n ruby"]
+	192 -> 220 [class = "pwd" label = "sapphire\n topaz\n tiger eye\n ruby"]
 	192 -> 167
 	193 -> 325 [class = "pass" label = "SK-2"]
 	193 -> 336 [class = "pass" label = "SK-2"]
@@ -1215,7 +1226,7 @@ digraph {
 	198 -> 115
 	198 -> 079.1
 	199 -> 017
-	200 -> 256 [class = "info" label = "runes"]
+	200 -> 256 [class = "pwd" label = "runes"]
 	200 -> 044
 	201 -> 365
 	201 -> 124
@@ -1291,7 +1302,7 @@ digraph {
 	234 -> 164
 	235 -> 032
 	236 -> 382
-	236 -> 356
+	236 -> 356.1
 	237 -> return
 	238 -> 334
 	239 -> 248
@@ -1302,7 +1313,7 @@ digraph {
 	243 -> 281.1
 	243 -> 180
 	243 -> 154
-	244 -> 099 [class = "info" label = "Remishaz"]
+	244 -> 099 [class = "pwd" label = "Remishaz"]
 	244 -> 265
 	245 -> 390
 	246 -> 048
@@ -1313,13 +1324,13 @@ digraph {
 	250 -> 007
 	250 -> 288
 	251 -> 063
-	252 -> 110 [class = "info" label = "elementarae"]
+	252 -> 110 [class = "pwd" label = "elementarae"]
 	252 -> 185
 	252 -> 023.1
-	253 -> 096 [class = "info" label = "gold chain"]
+	253 -> 096 [class = "pwd" label = "gold chain"]
 	253 -> 285
 	254 -> 153
-	255 -> 080 [class = "info" label = "gold key"]
+	255 -> 080 [class = "pwd" label = "gold key"]
 	255 -> 281.1
 	255 -> 061
 	255 -> 302
@@ -1374,7 +1385,7 @@ digraph {
 	279 -> 387.1
 	280 -> 159 [class = "req" label = "bronze manikin"]
 	280 -> 194
-	281 -> 376 [class = "info" label="lighthouse beacon\n -meal"]
+	281 -> 376 [class = "pwd" label="lighthouse beacon\n -meal"]
 	281 -> 333
 	281 -> 057
 	281 -> 186
@@ -1401,7 +1412,7 @@ digraph {
 	290 -> 222 [class = "fail"]
 	291 -> 367
 	291 -> 070
-	292 -> 067 [class = "info" label = "sum / 2"]
+	292 -> 067 [class = "pwd" label = "sapphire\n topaz\n tiger eye\n fire ruby"]
 	292 -> 275
 	293 -> 048
 	294 -> 345
@@ -1434,7 +1445,7 @@ digraph {
 	307 -> 208
 	308 -> 196
 	309 -> 245
-	310 -> 280 [class = "info" label = "diamond"]
+	310 -> 280 [class = "pwd" label = "diamond"]
 	311 -> 345
 	312 -> 149 [class = "opt" label = "acid"]
 	312 -> 117 [class = "opt" label = "blue potion"]
@@ -1470,9 +1481,9 @@ digraph {
 	325 -> 031
 	326 -> 163
 	327
-	328 -> 050 [class = "info" label = "sapphire"]
-	328 -> 082 [class = "info" label = "Molander"]
-	328 -> 132 [class = "info" label = "sapphire\n Molander"]
+	328 -> 050 [class = "pwd" label = "sapphire"]
+	328 -> 082 [class = "pwd" label = "Molander"]
+	328 -> 132 [class = "pwd" label = "sapphire\n Molander"]
 	328 -> 165
 	328 -> 106.4
 	329 -> 245
@@ -1505,7 +1516,7 @@ digraph {
 	341 -> 267
 	341 -> 155
 	341 -> 002
-	342 -> 300 [class = "info" label = "sapphire"]
+	342 -> 300 [class = "pwd" label = "sapphire"]
 	342 -> 119
 	343 -> 005
 	343 -> 052
@@ -1514,14 +1525,14 @@ digraph {
 	345 -> 321 [class = "dice" label = "1"]
 	345 -> 294 [class = "dice" label = "2-3"]
 	345 -> 043 [class = "dice" label = "4-6"]
-	346 -> 126 [class = "info" label = "brass orb"]
+	346 -> 126 [class = "pwd" label = "brass orb"]
 	346 -> 142
 	346 -> 364
 	346 -> 025
 	347 -> 201
 	347 -> 124
 	348 -> 388
-	349 -> 360 [class = "info" label = "ruby"]
+	349 -> 360 [class = "pwd" label = "ruby"]
 	349 -> 282
 	350 -> 235 [class = "req" label = "magic sword\n black mark"]
 	350 -> 032 [class = "req" label = "magic sword"]
@@ -1547,7 +1558,7 @@ digraph {
 	360 -> 198
 	361 -> 251
 	361 -> 323
-	362 -> 200 [class = "info" label = "Caltarelair"]
+	362 -> 200 [class = "pwd" label = "Caltarelair"]
 	362 -> 134
 	363 -> 351
 	363 -> 090
@@ -1584,7 +1595,7 @@ digraph {
 	374 -> 038
 	374 -> 059
 	375 -> 326
-	376 -> 100 [class = "info" label = "magic stone"]
+	376 -> 100 [class = "pwd" label = "magic stone"]
 	376 -> 291
 	376 -> 261
 	376 -> 070
@@ -1623,11 +1634,11 @@ digraph {
 	388 -> 044
 	388 -> 134
 	389 -> 034.1
-	390 -> 266 [class = "info" label = "axeplant"]
+	390 -> 266 [class = "pwd" label = "axeplant"]
 	390 -> 124
 	391 -> 039
 	391 -> 025
-	391 -> 126 [class = "info" label = "brass orb"]
+	391 -> 126 [class = "pwd" label = "brass orb"]
 	392 -> 264
 	392 -> 379.1
 	393 -> 334

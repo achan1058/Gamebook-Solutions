@@ -190,6 +190,7 @@ digraph {
 		309 [label = "\N\n 20 gold"]
 		312 [fontcolor = "crimson" label = "\N\n -mirror"]
 		323 [class = "bst" label = "\N*\n magic sword\n silver mirror\n +1AT"]
+		327 [fontcolor = "crimson" label = "\N\n -pocket myriad"]
 		334 [label = "\N\n drink"]
 		340 [fontcolor = "crimson" label = "\N\n -mirror"]
 		365 [class = "ddt" label = "\N\n 2 spells\n 50 gold\n breastplate (-2ESK)"]
@@ -456,7 +457,7 @@ digraph {
 		monboo5 [class = "req kky"]
 		mondam5 [class = "req kky"]
 		mon5 [class = "req kky"]
-		238 [class = "req info"]
+		238 [class = "req pwd"]
 		400 [class = "req" shape = "octagon"]
 	}
 	
@@ -483,7 +484,7 @@ digraph {
 	z003 -> z006 [dir = "both"]
 	z004 -> z007 [class = "req" label = "req"]
 	z004 -> z008 [class = "opt" label = "-opt"]
-	z005 -> z009 [class = "info" label = "info"]
+	z005 -> z009 [class = "pwd" label = "password"]
 	z009 -> z010 [class = "err" label = "error(?)"]
 	z010 -> z011 [class = "cbt" label = "escape"]
 	z011 -> z012 [class = "skl" label = "spell"]
@@ -923,7 +924,7 @@ digraph {
 	228 -> 088
 	228 -> 170 [class = "skl" label = "strength"]
 	228 -> 296 [penwidth = 3 class = "opt" label = "copper key"]
-	229 -> 217 [penwidth = 3 class = "info" label = "combination"]
+	229 -> 217 [penwidth = 3 class = "pwd" label = "combination"]
 	229 -> 050
 	229 -> 164 [class = "skl" label = "strength"]
 	230 -> 096 [class = "skl" label = "fool's gold"]

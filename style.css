@@ -91,16 +91,16 @@
 	fill: purple;
 }
 
-.edge.info > path {
+.edge.pwd > path {
 	stroke: grey;
 }
 
-.edge.info > polygon {
+.edge.pwd > polygon {
 	stroke: grey;
 	fill: grey;
 }
 
-.edge.info > text {
+.edge.pwd > text {
 	fill: grey;
 }
 
@@ -175,7 +175,7 @@
 	fill: orange;
 }
 
-.node.info > text {
+.node.pwd > text {
 	fill: grey;
 }
 
