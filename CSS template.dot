@@ -69,14 +69,14 @@ digraph {
 		node [style = "filled" color = "greenyellow"]
 		boo1 [label = "\N\n text"]
 		boo3 [label = "\N\n text"]
-		bst
+		bstt
 	}
 
 	subgraph Damage {
 		node [style = "filled" color = "pink"]
 		dam1 [label = "\N\n text"]
 		dam3 [label = "\N\n text"]
-		ddg
+		ddgg
 	}
 	
 	subgraph Death {
@@ -85,6 +85,7 @@ digraph {
 		ddt2
 		monddt
 		monddt2
+		ddtt
 	}
 
 	subgraph Key_Item {
@@ -102,7 +103,7 @@ digraph {
 		opt
 		opt2 [class = "bst"]
 		opt3 [class = "bst"]
-		kky
+		kkyy
 	}
 	
 	subgraph Key_Word {
@@ -110,13 +111,13 @@ digraph {
 		wrd1 [label = "\N\n text"]
 		wrd2 [label = "\N\n text"]
 		wrd3 [label = "\N\n text"]
-		wwd
+		wwdd
 	}
 	
 	subgraph Shop {
 		node [fontcolor = "purple" shape = "rect"]
 		shop1 [label = "\N\n text"]
-		shp
+		shpp
 	}
 	
 	subgraph Combat {
@@ -144,7 +145,7 @@ digraph {
 			monddt2
 			monopt3 [shape = "rect" class = "bst kky"]
 		}
-		cbt
+		cbtt
 	}
 
 	subgraph Optional {
@@ -155,6 +156,7 @@ digraph {
 		monopt2 [class = "opt kky"]
 		opt3 [class = "opt kky"]
 		monopt3 [class = "opt kky"]
+		optt
 	}
 	
 	subgraph Path {
@@ -182,6 +184,7 @@ digraph {
 		opt3 [class = "path opt kky"]
 		monddt2 [class = "path"]
 		monopt3 [class = "path opt kky"]
+		pptt
 	}
 	
 	subgraph Required {
