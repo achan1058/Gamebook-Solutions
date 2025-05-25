@@ -129,6 +129,9 @@
     <CustomBuild Include="Fighting Fantasy\FF51 - Island of the Undead.dot">
       <Filter>Fighting Fantasy</Filter>
     </CustomBuild>
+    <CustomBuild Include="Fighting Fantasy\FF42 - Black Vein Prophecy.dot">
+      <Filter>Fighting Fantasy</Filter>
+    </CustomBuild>
   </ItemGroup>
   <ItemGroup>
     <Text Include="vertex.txt">

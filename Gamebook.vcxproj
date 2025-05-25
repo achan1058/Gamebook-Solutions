@@ -242,6 +242,9 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</ExcludedFromBuild>
     </CustomBuild>
+    <CustomBuild Include="Fighting Fantasy\FF42 - Black Vein Prophecy.dot">
+      <FileType>Document</FileType>
+    </CustomBuild>
     <None Include="style.css" />
     <CustomBuild Include="CSS template.dot">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ExcludedFromBuild>
