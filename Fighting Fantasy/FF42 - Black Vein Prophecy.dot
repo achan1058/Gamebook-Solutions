@@ -76,7 +76,7 @@ digraph {
 		107 [label = "\N\n ISK=1d6+4"]
 		170 [label = "\N\n ILK=1d6+6"]
 		223 [label = "\N\n IST=2d6+12"]
-		244 [label = "\N\n +2LK"]
+		245 [label = "\N\n +2LK"]
 		286 [label = "\N\n +2ST"]
 		357 [label = "\N\n IST=2d6+12"]
 		375 [label = "\N\n +4ST"]
@@ -192,8 +192,9 @@ digraph {
 		opt3 [class = "bst"]
 		023 [class = "ddg" label = "\N\n bejewelled box\n -2ST"]
 		030 [label = "\N\n greatsword\n haversack\n 5 meal\n roll 1 dice"]
+		054 [label = "\N\n Merzei"]
 		058 [fontcolor = "crimson" label = "\N\n -all items\n knife"]
-		059 [class = "ddg" label = "\N\n clay figurine\n berries\n +2ST"]
+		059 [class = "bst" label = "\N\n clay effigy\n +2ST"]
 		065 [label = "\N\n silvery wound"]
 		079 [label = "\N\n soggy scroll"]
 		080 [label = "\N\n 1000 gold"]
@@ -206,15 +207,16 @@ digraph {
 		147 [label = "\N\n short sword\n shield"]
 		152 [label = "\N\n brooch: 343"]
 		154 [label = "\N\n bandit tattoo"]
+		155 [fontcolor = "crimson" label = "\N\n -Merzei"]
 		161 [label = "\N\n 25 gold"]
 		173 [fontcolor = "crimson" label = "\N\n -all items"]
 		187 [label = "\N\n brooch: 343"]
 		200 [label = "\N\n roll 2 dice"]
-		202 [label = "\N\n filthy clothes\n Chang whistle"]
+		202 [label = "\N\n Chang whistle"]
 		227 [class = "ddg" label = "\N\n dropped?\n -2ST"]
 		237 [class = "ddg" label = "\N\n -2ST\n -4AT?\n (weapon)"]
 		247 [class = "ddg" label = "\N\n shrivelled claw\n -2ST"]
-		252 [class = "ddg" label = "\N\n map\n -2ST"]
+		252 [class = "ddg" label = "\N\n battleplans\n -2ST"]
 		262 [label = "\N\n 3000 gold"]
 		269 [label = "\N\n meet merzei?"]
 		275 [label = "\N\n silken mask"]
@@ -230,7 +232,7 @@ digraph {
 		373 [label = "\N\n ears ring"]
 		376 [fontcolor = "crimson" label = "\N\n -brooch (Izkhao)"]
 		381 [class = "ddg" fontcolor = "crimson" label = "\N\n -all items\n -1SK"]
-		383 [label = "\N\n Merzei?"]
+		383 [label = "\N\n lead army"]
 		400 [label = "\N\n splinter"]
 		kkyy
 	}
@@ -413,7 +415,23 @@ digraph {
 		
 		cbtt
 	}
-
+	
+	subgraph Area_1 {
+		node [style = "filled" color = "orange" fixedsize = true label = "To\n 343"]
+		343 [label = "\N"]
+		343.1
+		343.2
+		343.3
+	}
+	
+	subgraph Area_2 {
+		node [style = "filled" color = "orange" fixedsize = true label = "To\n 106"]
+		106 [label = "\N"]
+		106.1
+		106.2
+		106.3
+	}
+	
 	subgraph Optional {
 		node [shape = "rect" class = "opt kky"]
 		opt [class = "opt kky"]
@@ -585,7 +603,7 @@ digraph {
 	052 -> 302
 	053 -> 202
 	054 -> 383
-	054 -> 106
+	054 -> 106.1
 	055 -> 147
 	055 -> 347
 	055 -> 265
@@ -681,14 +699,14 @@ digraph {
 	118 -> 016
 	119 -> 279
 	119 -> 349
-	119 -> 191 [class = "opt" label = "try to hire merc"]
+	119 -> 191
 	119 -> 261
 	120
 	121 -> 223
-	122 -> 083
-	122 -> 396
-	122 -> 246
-	122 -> 007
+	122 -> 083 [class = "skl" label = "Baopo"]
+	122 -> 396 [class = "opt" label = "Izkhao"]
+	122 -> 246 [class = "skl" label = "Tiaohe"]
+	122 -> 007 [class = "skl" label = "Shangsuo"]
 	123 -> 173
 	124 -> 033
 	125 -> 245
@@ -734,7 +752,7 @@ digraph {
 	150 -> 019
 	151 -> 229 [class = "pass" label = "LK"]
 	151 -> 188 [class = "fail"]
-	152 -> 343
+	152 -> 343.1
 	152 -> 045
 	153 -> 399
 	153 -> 059
@@ -777,7 +795,7 @@ digraph {
 	174
 	175 -> 236 [class = "pass" label = "LK"]
 	175 -> 340 [class = "fail"]
-	176 -> 284 [class = "req" label = "Mutation"]
+	176 -> 284 [class = "skl" label = "Biantai"]
 	176 -> 022
 	177 -> 010
 	177 -> 379
@@ -791,14 +809,14 @@ digraph {
 	183 -> 077
 	183 -> 327
 	184 -> 030
-	185 -> 176 [class = "req" label = "broken arrow shaft"]
+	185 -> 176 [class = "req" label = "snapped shaft"]
 	185 -> 296
 	186 -> 075
 	186 -> 270 [class = "skl" label = "Biantai"]
 	186 -> 333 [class = "opt" label = "Izkhao"]
 	186 -> 026 [class = "skl" label = "Shangsuo"]
 	186 -> 313 [class = "skl" label = "Baopo"]
-	187 -> 343
+	187 -> 343.2
 	187 -> 263
 	188 -> 359
 	188 -> 229
@@ -807,8 +825,8 @@ digraph {
 	190 -> 029
 	191 -> 370 [class = "opt" label = "1000 gold"]
 	191 -> 226
-	191 -> 106
-	192 -> 296
+	191 -> 106.2
+	192 -> 298
 	192 -> 008
 	193 -> 090
 	193 -> 013
@@ -862,7 +880,7 @@ digraph {
 	223 -> 184 [class = "fail"]
 	224 -> 169
 	225 -> 336
-	226 -> 106
+	226 -> 106.2
 	227 -> 035
 	228 -> 093
 	229 -> 359
@@ -872,7 +890,7 @@ digraph {
 	231 -> 181
 	232 -> 166
 	232 -> 014
-	232 -> 137
+	232 -> 317
 	233 -> 368 [class = "skl" label = "Biantai"]
 	233 -> 031 [class = "skl" label = "Baopo"]
 	233 -> 098 [class = "skl" label = "Tiaohe"]
@@ -903,10 +921,11 @@ digraph {
 	250
 	251 -> 202
 	252 -> 002
+	253 -> 301
 	253 -> 344
 	254 -> 321 [class = "req" label = "shield"]
 	254 -> 390
-	255 -> 106
+	255 -> 106.3
 	256 -> 042
 	257 -> 366
 	258 -> 394
@@ -937,7 +956,7 @@ digraph {
 	267 -> 168
 	267 -> 144
 	267 -> 388
-	268 -> 106
+	268 -> 106.1
 	269 -> 004
 	269 -> 062
 	270 -> 202 [class = "cbt" label = "flee after 2AR"]
@@ -979,7 +998,7 @@ digraph {
 	289 -> 033
 	290 -> 016
 	290 -> 063
-	291 -> 106
+	291 -> 106.1
 	292 -> 152 [class = "pass" label = "LK"]
 	292 -> 328 [class = "fail"]
 	293 -> 389
@@ -1025,7 +1044,7 @@ digraph {
 	318 -> 389
 	318 -> 151
 	319 -> 201 [class = "pass" label = "LK"]
-	319 -> 013 [class = "fail"]
+	319 -> 023 [class = "fail"]
 	320
 	321 -> 050
 	322
@@ -1033,7 +1052,7 @@ digraph {
 	323 -> 129 [class = "fail"]
 	324 -> 273 [class = "opt" label = "Chang whistle"]
 	324 -> 199
-	325 -> 343
+	325 -> 343.3
 	325 -> 037
 	326 -> 240
 	326 -> 029
@@ -1052,13 +1071,13 @@ digraph {
 	335
 	336 -> 095
 	336 -> 012
-	337 -> 256
+	337 -> 257
 	338 -> 115 [class = "pass" label = "LK"]
 	338 -> 099 [class = "fail"]
 	339
 	340 -> 078
 	341 -> 128
-	342 -> 106
+	342 -> 106.3
 	343 -> 277 [class = "pass" label = "LK"]
 	343 -> 006 [class = "fail"]
 	344 -> 373
@@ -1080,7 +1099,7 @@ digraph {
 	352 -> 130 [class = "fail"]
 	353
 	354 -> 067
-	355 -> 155 [class = "req" label = "Merzei peasane army"]
+	355 -> 155 [class = "req" label = "lead army"]
 	355 -> 208
 	356 -> 019
 	357 -> 030
@@ -1106,7 +1125,7 @@ digraph {
 	369 -> 109
 	369 -> 084
 	370 -> 068
-	370 -> 106
+	370 -> 106.2
 	371 -> 097
 	372 -> 298
 	372 -> 008
