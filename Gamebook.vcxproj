@@ -216,6 +216,8 @@
     </CustomBuild>
     <CustomBuild Include="Fighting Fantasy\FF02 - The Citadel of Chaos.dot">
       <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
     </CustomBuild>
     <CustomBuild Include="Fighting Fantasy\old\Temple of Terror.dot">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
@@ -239,12 +241,13 @@
     </CustomBuild>
     <CustomBuild Include="Fighting Fantasy\FF51 - Island of the Undead.dot">
       <FileType>Document</FileType>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
     </CustomBuild>
     <CustomBuild Include="Fighting Fantasy\FF42 - Black Vein Prophecy.dot">
       <FileType>Document</FileType>
     </CustomBuild>
+    <None Include="Fighting Fantasy\FF47 - The Crimson Tide.dot" />
     <None Include="style.css" />
     <CustomBuild Include="CSS template.dot">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ExcludedFromBuild>

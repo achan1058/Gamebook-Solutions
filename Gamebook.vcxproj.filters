@@ -146,6 +146,9 @@
     <None Include="style.css">
       <Filter>Source Files</Filter>
     </None>
+    <None Include="Fighting Fantasy\FF47 - The Crimson Tide.dot">
+      <Filter>Fighting Fantasy</Filter>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Gamebook.cpp">
