@@ -111,7 +111,7 @@ digraph {
 		wrd1 [label = "\N\n text"]
 		wrd2 [label = "\N\n text"]
 		wrd3 [label = "\N\n text"]
-		wwdd
+		wrdd
 	}
 	
 	subgraph Shop {
