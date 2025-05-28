@@ -135,6 +135,9 @@
     <CustomBuild Include="Fighting Fantasy\FF47 - The Crimson Tide.dot">
       <Filter>Fighting Fantasy</Filter>
     </CustomBuild>
+    <CustomBuild Include="Fighting Fantasy\FF23 - Masks of Mayhem.dot">
+      <Filter>Fighting Fantasy</Filter>
+    </CustomBuild>
   </ItemGroup>
   <ItemGroup>
     <Text Include="vertex.txt">

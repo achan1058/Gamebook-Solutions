@@ -250,6 +250,9 @@
     <CustomBuild Include="Fighting Fantasy\FF47 - The Crimson Tide.dot">
       <FileType>Document</FileType>
     </CustomBuild>
+    <CustomBuild Include="Fighting Fantasy\FF23 - Masks of Mayhem.dot">
+      <FileType>Document</FileType>
+    </CustomBuild>
     <None Include="style.css" />
     <CustomBuild Include="CSS template.dot">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ExcludedFromBuild>

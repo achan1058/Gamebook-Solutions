@@ -1,0 +1,2239 @@
+digraph {
+	// graph defaults
+	rankdir=LR
+	mclimit=50
+	nodesep=.3 // changes horizontal separation of nodes
+	ranksep=.4 // changes vertical separation of nodes
+	node [height=.7
+		width=.7
+		shape=ellipse
+		margin=0]
+	edge[weight=5]
+	stylesheet="../style.css"
+	
+	subgraph ShopMenu {
+		node [fontcolor = "purple" shape = "rect" margin = 0.1]
+		menu
+	}
+
+	// a box for a graph label
+	// note that you can override the defaults set above
+	title [label = "Fighting Fantasy --: Title\n\n \
+		Light Green Fill: Benefits\l \
+		Pink Fill: Penalties\l \
+		Red Fill: Death\l \
+		Blue Text: Key Items/Events\l \
+		Red Text: Lost Items\l \
+		Orange Text: Codewords\l \
+		Purple Text: Shops\l \
+		Blue Line: Forced Items/Events\l \
+		Light Blue Text/Line: Optional Items/Events\l \
+		Purple Line: Dice Events\l \
+		Green Line: Stat Test Passed\l \
+		Brown Line: Stat Test Failed\l \
+		Magenta Line: Combat Related Events\l \
+		Grey Text: Riddle Answer\l \
+		Grey Line: Hidden Option\l \
+		Orange Line: Codewords/Spells\l \
+		Red Line: Possible Error\l \
+		Gold Fill: Required Nodes\l \
+		Light Blue Fill: Recommended Nodes\l \
+		Gold Outline: Recommended Path\l \
+		Green Box: Combat\l \
+		SK/ST/LK/AT/AR/TM/CW/CL: Skill/Stamina/Luck/Attack Strength/Attack Round/Time/Consecutive Win Round/Consecutive Lose Round\l \
+		?: Chance of this happening, depending on instructions in text\l \
+		*: Special Combat Rules\l \
+		-: Negative Status\l \
+		+: Positive Status\l \
+		^: Damage can be reduced by items\l \
+		@: Take 2 items\l\l \
+		Starts with:\l \
+		Initial Skill: 1d6+6\l \
+		Initial Stamina: 2d6+12\l \
+		Initial Luck: 1d6+6\l\l \
+		skill/stamina/luck potion: +all SK/ST/LK&1ILK\l \
+		10 meal: +4ST\l \
+		sword\l \
+		leather armor\l \
+		lantern\l \
+		tinderbox\l \
+		backpack\l \
+		2d6+6 gold\l\l \
+		Comments:\l \
+		Order: item/gold/AT/SK/ST/LK\l \
+		"
+		shape = "box"
+		margin = 0.1]
+		
+	subgraph Boost {
+		node [style = "filled" color = "greenyellow"]
+		boo1 [label = "\N\n text"]
+		boo3 [label = "\N\n text"]
+		bstt
+	}
+
+	subgraph Damage {
+		node [style = "filled" color = "pink"]
+		dam1 [label = "\N\n text"]
+		dam3 [label = "\N\n text"]
+		ddgg
+	}
+	
+	subgraph Death {
+		node [style = "filled" color = "red"]
+		ddt
+		ddt2
+		monddt
+		monddt2
+		ddtt
+	}
+
+	subgraph Key_Item {
+		node [fontcolor = "blue" shape = "rect"]
+		key1 [label = "\N\n info" tooltip = "info text"]
+		key2 [label = "\N\n text"]
+		key3 [label = "\N\n text"]
+		key4 [fontcolor = "crimson" label = "\N\n -text"]
+		boo2 [class = "bst" label = "\N\n text"]
+		boo4 [class = "bst" label = "\N\n text"]
+		boo5 [class = "bst" label = "\N\n text"]
+		dam2 [class = "ddg" label = "\N\n text"]
+		dam4 [class = "ddg" label = "\N\n text"]
+		dam5 [class = "ddg" label = "\N\n text"]
+		opt
+		opt2 [class = "bst"]
+		opt3 [class = "bst"]
+		kkyy
+	}
+	
+	subgraph Key_Word {
+		node [fontcolor = "grey" shape = "rect"]
+		wrd1 [label = "\N\n text"]
+		wrd2 [label = "\N\n text"]
+		wrd3 [label = "\N\n text"]
+		wrdd
+	}
+	
+	subgraph Shop {
+		node [fontcolor = "purple" shape = "rect"]
+		shop1 [label = "\N\n text"]
+		shpp
+	}
+	
+	subgraph Combat {
+		style = "filled" color = "palegreen"
+		subgraph cluster_00 {
+			label = "Monster\n 0/0\n 0/0"
+			mon1 [label = "\N\n text"]
+			mon2 [shape = "rect" class = "kky" label = "\N\n text"]
+			mon3 [label = "\N\n text"]
+			mon4 [shape = "rect" class = "kky" label = "\N\n text"]
+			mon5 [shape = "rect" class = "kky" label = "\N\n text"]
+			monboo1 [class = "bst" label = "\N\n text"]
+			monboo2 [shape = "rect" class = "bst kky" label = "\N\n text"]
+			monboo3 [class = "bst" label = "\N\n text"]
+			monboo4 [shape = "rect" class = "bst kky" label = "\N\n text"]
+			monboo5 [shape = "rect" class = "bst kky" label = "\N\n text"]
+			mondam1 [class = "ddg" label = "\N\n text"]
+			mondam2 [shape = "rect" class = "ddg kky" label = "\N\n text"]
+			mondam3 [class = "ddg" label = "\N\n text"]
+			mondam4 [shape = "rect" class = "ddg kky" label = "\N\n text"]
+			mondam5 [shape = "rect" class = "ddg kky" label = "\N\n text"]
+			monopt [shape = "rect" class = "bst kky"]
+			monddt
+			monopt2 [shape = "rect" class = "bst kky"]
+			monddt2
+			monopt3 [shape = "rect" class = "bst kky"]
+		}
+		cbtt
+	}
+
+	subgraph Optional {
+		node [shape = "rect" class = "opt kky"]
+		opt [class = "opt kky"]
+		monopt [class = "opt kky"]
+		opt2 [class = "opt kky"]
+		monopt2 [class = "opt kky"]
+		opt3 [class = "opt kky"]
+		monopt3 [class = "opt kky"]
+		optt
+	}
+	
+	subgraph Path {
+		node [class = "path" penwidth = 3 color = "gold"]
+		txt2
+		key2 [class = "path"]
+		wrd2 [class = "path"]
+		key3
+		wrd3
+		boo3 [class = "path"]
+		boo4 [class = "path bst"]
+		boo5
+		dam3 [class = "path"]
+		dam4 [class = "path ddg"]
+		dam5
+		monboo3 [class = "path bst"]
+		monboo4 [class = "path bst kky"]
+		monboo5
+		mondam3 [class = "path ddg"]
+		mondam4 [class = "path ddg kky"]
+		mondam5
+		mon3 [class = "path"]
+		mon4 [class = "path kky"]
+		ddt2 [class = "path"]
+		opt3 [class = "path opt kky"]
+		monddt2 [class = "path"]
+		monopt3 [class = "path opt kky"]
+		pptt
+	}
+	
+	subgraph Required {
+		node [shape = "rect" class = "req kky"]
+		key3 [class = "req kky"]
+		wrd3 [class = "req kky"]
+		boo5 [class = "req kky"]
+		dam5 [class = "req kky"]
+		monboo5 [class = "req kky"]
+		mondam5 [class = "req kky"]
+		mon5 [class = "req kky"]
+		ending [fontcolor = "black" shape = "octagon"]
+	}
+	
+	subgraph Required2 {
+		node [shape = "rect" class = "req2 kky"]
+		req2 [class = "req2 kky"]
+	}
+	
+	mon1 -> mon2 -> mon3 -> mon4 -> mon5 [penwidth = 3]
+	boo1 -> boo2 -> boo3 -> boo4 -> boo5 [penwidth = 3]
+	dam1 -> dam2 -> dam3 -> dam4 -> dam5 [penwidth = 3]
+	txt1 -> key1 -> txt2 -> key2 -> key3 -> key4
+	wrd1 -> wrd2 -> wrd3
+	opt -> ddt -> opt2 -> ddt2 -> opt3
+	monboo1 -> monboo2 -> monboo3 -> monboo4 -> monboo5
+	mondam1 -> mondam2 -> mondam3 -> mondam4 -> mondam5
+	monopt -> monddt -> monopt2 -> monddt2 -> monopt3
+
+	myTitle -> z001 [penwidth = 3]
+	z001 -> z002 [class = "dice" label = "1-3"]
+	z001 -> z003 [class = "dice" label = "4-6"]
+	z002 -> z004 [class = "pass" label = "LK"]
+	z002 -> z005 [class = "fail"]
+	z003 -> z006 [dir = "both"]
+	z004 -> z007 [class = "req" label = "req"]
+	z004 -> z008 [class = "opt" label = "-opt"]
+	z005 -> z009 [class = "info" label = "info"]
+	z009 -> z010 [class = "err" label = "error(?)"]
+	z010 -> z011 [class = "cbt" label = "escape"]
+	z011 -> z012 [class = "skl" label = "spell"]
+	{
+		rank = same
+		z003
+		z006
+	}
+
+	title -> 001
+//	001 -> 
+//	002 -> 
+//	003 -> 
+//	004 -> 
+//	005 -> 
+//	006 -> 
+//	007 -> 
+//	008 -> 
+//	009 -> 
+//	010 -> 
+//	011 -> 
+//	012 -> 
+//	013 -> 
+//	014 -> 
+//	015 -> 
+//	016 -> 
+//	017 -> 
+//	018 -> 
+//	019 -> 
+//	020 -> 
+//	021 -> 
+//	022 -> 
+//	023 -> 
+//	024 -> 
+//	025 -> 
+//	026 -> 
+//	027 -> 
+//	028 -> 
+//	029 -> 
+//	030 -> 
+//	031 -> 
+//	032 -> 
+//	033 -> 
+//	034 -> 
+//	035 -> 
+//	036 -> 
+//	037 -> 
+//	038 -> 
+//	039 -> 
+//	040 -> 
+//	041 -> 
+//	042 -> 
+//	043 -> 
+//	044 -> 
+//	045 -> 
+//	046 -> 
+//	047 -> 
+//	048 -> 
+//	049 -> 
+//	050 -> 
+//	051 -> 
+//	052 -> 
+//	053 -> 
+//	054 -> 
+//	055 -> 
+//	056 -> 
+//	057 -> 
+//	058 -> 
+//	059 -> 
+//	060 -> 
+//	061 -> 
+//	062 -> 
+//	063 -> 
+//	064 -> 
+//	065 -> 
+//	066 -> 
+//	067 -> 
+//	068 -> 
+//	069 -> 
+//	070 -> 
+//	071 -> 
+//	072 -> 
+//	073 -> 
+//	074 -> 
+//	075 -> 
+//	076 -> 
+//	077 -> 
+//	078 -> 
+//	079 -> 
+//	080 -> 
+//	081 -> 
+//	082 -> 
+//	083 -> 
+//	084 -> 
+//	085 -> 
+//	086 -> 
+//	087 -> 
+//	088 -> 
+//	089 -> 
+//	090 -> 
+//	091 -> 
+//	092 -> 
+//	093 -> 
+//	094 -> 
+//	095 -> 
+//	096 -> 
+//	097 -> 
+//	098 -> 
+//	099 -> 
+//	100 -> 
+//	101 -> 
+//	102 -> 
+//	103 -> 
+//	104 -> 
+//	105 -> 
+//	106 -> 
+//	107 -> 
+//	108 -> 
+//	109 -> 
+//	110 -> 
+//	111 -> 
+//	112 -> 
+//	113 -> 
+//	114 -> 
+//	115 -> 
+//	116 -> 
+//	117 -> 
+//	118 -> 
+//	119 -> 
+//	120 -> 
+//	121 -> 
+//	122 -> 
+//	123 -> 
+//	124 -> 
+//	125 -> 
+//	126 -> 
+//	127 -> 
+//	128 -> 
+//	129 -> 
+//	130 -> 
+//	131 -> 
+//	132 -> 
+//	133 -> 
+//	134 -> 
+//	135 -> 
+//	136 -> 
+//	137 -> 
+//	138 -> 
+//	139 -> 
+//	140 -> 
+//	141 -> 
+//	142 -> 
+//	143 -> 
+//	144 -> 
+//	145 -> 
+//	146 -> 
+//	147 -> 
+//	148 -> 
+//	149 -> 
+//	150 -> 
+//	151 -> 
+//	152 -> 
+//	153 -> 
+//	154 -> 
+//	155 -> 
+//	156 -> 
+//	157 -> 
+//	158 -> 
+//	159 -> 
+//	160 -> 
+//	161 -> 
+//	162 -> 
+//	163 -> 
+//	164 -> 
+//	165 -> 
+//	166 -> 
+//	167 -> 
+//	168 -> 
+//	169 -> 
+//	170 -> 
+//	171 -> 
+//	172 -> 
+//	173 -> 
+//	174 -> 
+//	175 -> 
+//	176 -> 
+//	177 -> 
+//	178 -> 
+//	179 -> 
+//	180 -> 
+//	181 -> 
+//	182 -> 
+//	183 -> 
+//	184 -> 
+//	185 -> 
+//	186 -> 
+//	187 -> 
+//	188 -> 
+//	189 -> 
+//	190 -> 
+//	191 -> 
+//	192 -> 
+//	193 -> 
+//	194 -> 
+//	195 -> 
+//	196 -> 
+//	197 -> 
+//	198 -> 
+//	199 -> 
+//	200 -> 
+//	201 -> 
+//	202 -> 
+//	203 -> 
+//	204 -> 
+//	205 -> 
+//	206 -> 
+//	207 -> 
+//	208 -> 
+//	209 -> 
+//	210 -> 
+//	211 -> 
+//	212 -> 
+//	213 -> 
+//	214 -> 
+//	215 -> 
+//	216 -> 
+//	217 -> 
+//	218 -> 
+//	219 -> 
+//	220 -> 
+//	221 -> 
+//	222 -> 
+//	223 -> 
+//	224 -> 
+//	225 -> 
+//	226 -> 
+//	227 -> 
+//	228 -> 
+//	229 -> 
+//	230 -> 
+//	231 -> 
+//	232 -> 
+//	233 -> 
+//	234 -> 
+//	235 -> 
+//	236 -> 
+//	237 -> 
+//	238 -> 
+//	239 -> 
+//	240 -> 
+//	241 -> 
+//	242 -> 
+//	243 -> 
+//	244 -> 
+//	245 -> 
+//	246 -> 
+//	247 -> 
+//	248 -> 
+//	249 -> 
+//	250 -> 
+//	251 -> 
+//	252 -> 
+//	253 -> 
+//	254 -> 
+//	255 -> 
+//	256 -> 
+//	257 -> 
+//	258 -> 
+//	259 -> 
+//	260 -> 
+//	261 -> 
+//	262 -> 
+//	263 -> 
+//	264 -> 
+//	265 -> 
+//	266 -> 
+//	267 -> 
+//	268 -> 
+//	269 -> 
+//	270 -> 
+//	271 -> 
+//	272 -> 
+//	273 -> 
+//	274 -> 
+//	275 -> 
+//	276 -> 
+//	277 -> 
+//	278 -> 
+//	279 -> 
+//	280 -> 
+//	281 -> 
+//	282 -> 
+//	283 -> 
+//	284 -> 
+//	285 -> 
+//	286 -> 
+//	287 -> 
+//	288 -> 
+//	289 -> 
+//	290 -> 
+//	291 -> 
+//	292 -> 
+//	293 -> 
+//	294 -> 
+//	295 -> 
+//	296 -> 
+//	297 -> 
+//	298 -> 
+//	299 -> 
+//	300 -> 
+//	301 -> 
+//	302 -> 
+//	303 -> 
+//	304 -> 
+//	305 -> 
+//	306 -> 
+//	307 -> 
+//	308 -> 
+//	309 -> 
+//	310 -> 
+//	311 -> 
+//	312 -> 
+//	313 -> 
+//	314 -> 
+//	315 -> 
+//	316 -> 
+//	317 -> 
+//	318 -> 
+//	319 -> 
+//	320 -> 
+//	321 -> 
+//	322 -> 
+//	323 -> 
+//	324 -> 
+//	325 -> 
+//	326 -> 
+//	327 -> 
+//	328 -> 
+//	329 -> 
+//	330 -> 
+//	331 -> 
+//	332 -> 
+//	333 -> 
+//	334 -> 
+//	335 -> 
+//	336 -> 
+//	337 -> 
+//	338 -> 
+//	339 -> 
+//	340 -> 
+//	341 -> 
+//	342 -> 
+//	343 -> 
+//	344 -> 
+//	345 -> 
+//	346 -> 
+//	347 -> 
+//	348 -> 
+//	349 -> 
+//	350 -> 
+//	351 -> 
+//	352 -> 
+//	353 -> 
+//	354 -> 
+//	355 -> 
+//	356 -> 
+//	357 -> 
+//	358 -> 
+//	359 -> 
+//	360 -> 
+//	361 -> 
+//	362 -> 
+//	363 -> 
+//	364 -> 
+//	365 -> 
+//	366 -> 
+//	367 -> 
+//	368 -> 
+//	369 -> 
+//	370 -> 
+//	371 -> 
+//	372 -> 
+//	373 -> 
+//	374 -> 
+//	375 -> 
+//	376 -> 
+//	377 -> 
+//	378 -> 
+//	379 -> 
+//	380 -> 
+//	381 -> 
+//	382 -> 
+//	383 -> 
+//	384 -> 
+//	385 -> 
+//	386 -> 
+//	387 -> 
+//	388 -> 
+//	389 -> 
+//	390 -> 
+//	391 -> 
+//	392 -> 
+//	393 -> 
+//	394 -> 
+//	395 -> 
+//	396 -> 
+//	397 -> 
+//	398 -> 
+//	399 -> 
+//	400 -> 
+//	401 -> 
+//	402 -> 
+//	403 -> 
+//	404 -> 
+//	405 -> 
+//	406 -> 
+//	407 -> 
+//	408 -> 
+//	409 -> 
+//	410 -> 
+//	411 -> 
+//	412 -> 
+//	413 -> 
+//	414 -> 
+//	415 -> 
+//	416 -> 
+//	417 -> 
+//	418 -> 
+//	419 -> 
+//	420 -> 
+//	421 -> 
+//	422 -> 
+//	423 -> 
+//	424 -> 
+//	425 -> 
+//	426 -> 
+//	427 -> 
+//	428 -> 
+//	429 -> 
+//	430 -> 
+//	431 -> 
+//	432 -> 
+//	433 -> 
+//	434 -> 
+//	435 -> 
+//	436 -> 
+//	437 -> 
+//	438 -> 
+//	439 -> 
+//	440 -> 
+//	441 -> 
+//	442 -> 
+//	443 -> 
+//	444 -> 
+//	445 -> 
+//	446 -> 
+//	447 -> 
+//	448 -> 
+//	449 -> 
+//	450 -> 
+//	451 -> 
+//	452 -> 
+//	453 -> 
+//	454 -> 
+//	455 -> 
+//	456 -> 
+//	457 -> 
+//	458 -> 
+//	459 -> 
+//	460 -> 
+//	461 -> 
+//	462 -> 
+//	463 -> 
+//	464 -> 
+//	465 -> 
+//	466 -> 
+//	467 -> 
+//	468 -> 
+//	469 -> 
+//	470 -> 
+//	471 -> 
+//	472 -> 
+//	473 -> 
+//	474 -> 
+//	475 -> 
+//	476 -> 
+//	477 -> 
+//	478 -> 
+//	479 -> 
+//	480 -> 
+//	481 -> 
+//	482 -> 
+//	483 -> 
+//	484 -> 
+//	485 -> 
+//	486 -> 
+//	487 -> 
+//	488 -> 
+//	489 -> 
+//	490 -> 
+//	491 -> 
+//	492 -> 
+//	493 -> 
+//	494 -> 
+//	495 -> 
+//	496 -> 
+//	497 -> 
+//	498 -> 
+//	499 -> 
+//	500 -> 
+//	501 -> 
+//	502 -> 
+//	503 -> 
+//	504 -> 
+//	505 -> 
+//	506 -> 
+//	507 -> 
+//	508 -> 
+//	509 -> 
+//	510 -> 
+//	511 -> 
+//	512 -> 
+//	513 -> 
+//	514 -> 
+//	515 -> 
+//	516 -> 
+//	517 -> 
+//	518 -> 
+//	519 -> 
+//	520 -> 
+//	521 -> 
+//	522 -> 
+//	523 -> 
+//	524 -> 
+//	525 -> 
+//	526 -> 
+//	527 -> 
+//	528 -> 
+//	529 -> 
+//	530 -> 
+//	531 -> 
+//	532 -> 
+//	533 -> 
+//	534 -> 
+//	535 -> 
+//	536 -> 
+//	537 -> 
+//	538 -> 
+//	539 -> 
+//	540 -> 
+//	541 -> 
+//	542 -> 
+//	543 -> 
+//	544 -> 
+//	545 -> 
+//	546 -> 
+//	547 -> 
+//	548 -> 
+//	549 -> 
+//	550 -> 
+//	551 -> 
+//	552 -> 
+//	553 -> 
+//	554 -> 
+//	555 -> 
+//	556 -> 
+//	557 -> 
+//	558 -> 
+//	559 -> 
+//	560 -> 
+//	561 -> 
+//	562 -> 
+//	563 -> 
+//	564 -> 
+//	565 -> 
+//	566 -> 
+//	567 -> 
+//	568 -> 
+//	569 -> 
+//	570 -> 
+//	571 -> 
+//	572 -> 
+//	573 -> 
+//	574 -> 
+//	575 -> 
+//	576 -> 
+//	577 -> 
+//	578 -> 
+//	579 -> 
+//	580 -> 
+//	581 -> 
+//	582 -> 
+//	583 -> 
+//	584 -> 
+//	585 -> 
+//	586 -> 
+//	587 -> 
+//	588 -> 
+//	589 -> 
+//	590 -> 
+//	591 -> 
+//	592 -> 
+//	593 -> 
+//	594 -> 
+//	595 -> 
+//	596 -> 
+//	597 -> 
+//	598 -> 
+//	599 -> 
+//	600 -> 
+//	601 -> 
+//	602 -> 
+//	603 -> 
+//	604 -> 
+//	605 -> 
+//	606 -> 
+//	607 -> 
+//	608 -> 
+//	609 -> 
+//	610 -> 
+//	611 -> 
+//	612 -> 
+//	613 -> 
+//	614 -> 
+//	615 -> 
+//	616 -> 
+//	617 -> 
+//	618 -> 
+//	619 -> 
+//	620 -> 
+//	621 -> 
+//	622 -> 
+//	623 -> 
+//	624 -> 
+//	625 -> 
+//	626 -> 
+//	627 -> 
+//	628 -> 
+//	629 -> 
+//	630 -> 
+//	631 -> 
+//	632 -> 
+//	633 -> 
+//	634 -> 
+//	635 -> 
+//	636 -> 
+//	637 -> 
+//	638 -> 
+//	639 -> 
+//	640 -> 
+//	641 -> 
+//	642 -> 
+//	643 -> 
+//	644 -> 
+//	645 -> 
+//	646 -> 
+//	647 -> 
+//	648 -> 
+//	649 -> 
+//	650 -> 
+//	651 -> 
+//	652 -> 
+//	653 -> 
+//	654 -> 
+//	655 -> 
+//	656 -> 
+//	657 -> 
+//	658 -> 
+//	659 -> 
+//	660 -> 
+//	661 -> 
+//	662 -> 
+//	663 -> 
+//	664 -> 
+//	665 -> 
+//	666 -> 
+//	667 -> 
+//	668 -> 
+//	669 -> 
+//	670 -> 
+//	671 -> 
+//	672 -> 
+//	673 -> 
+//	674 -> 
+//	675 -> 
+//	676 -> 
+//	677 -> 
+//	678 -> 
+//	679 -> 
+//	680 -> 
+//	681 -> 
+//	682 -> 
+//	683 -> 
+//	684 -> 
+//	685 -> 
+//	686 -> 
+//	687 -> 
+//	688 -> 
+//	689 -> 
+//	690 -> 
+//	691 -> 
+//	692 -> 
+//	693 -> 
+//	694 -> 
+//	695 -> 
+//	696 -> 
+//	697 -> 
+//	698 -> 
+//	699 -> 
+//	700 -> 
+//	701 -> 
+//	702 -> 
+//	703 -> 
+//	704 -> 
+//	705 -> 
+//	706 -> 
+//	707 -> 
+//	708 -> 
+//	709 -> 
+//	710 -> 
+//	711 -> 
+//	712 -> 
+//	713 -> 
+//	714 -> 
+//	715 -> 
+//	716 -> 
+//	717 -> 
+//	718 -> 
+//	719 -> 
+//	720 -> 
+//	721 -> 
+//	722 -> 
+//	723 -> 
+//	724 -> 
+//	725 -> 
+//	726 -> 
+//	727 -> 
+//	728 -> 
+//	729 -> 
+//	730 -> 
+//	731 -> 
+//	732 -> 
+//	733 -> 
+//	734 -> 
+//	735 -> 
+//	736 -> 
+//	737 -> 
+//	738 -> 
+//	739 -> 
+//	740 -> 
+//	741 -> 
+//	742 -> 
+//	743 -> 
+//	744 -> 
+//	745 -> 
+//	746 -> 
+//	747 -> 
+//	748 -> 
+//	749 -> 
+//	750 -> 
+//	751 -> 
+//	752 -> 
+//	753 -> 
+//	754 -> 
+//	755 -> 
+//	756 -> 
+//	757 -> 
+//	758 -> 
+//	759 -> 
+//	760 -> 
+//	761 -> 
+//	762 -> 
+//	763 -> 
+//	764 -> 
+//	765 -> 
+//	766 -> 
+//	767 -> 
+//	768 -> 
+//	769 -> 
+//	770 -> 
+//	771 -> 
+//	772 -> 
+//	773 -> 
+//	774 -> 
+//	775 -> 
+//	776 -> 
+//	777 -> 
+//	778 -> 
+//	779 -> 
+//	780 -> 
+//	781 -> 
+//	782 -> 
+//	783 -> 
+//	784 -> 
+//	785 -> 
+//	786 -> 
+//	787 -> 
+//	788 -> 
+//	789 -> 
+//	790 -> 
+//	791 -> 
+//	792 -> 
+//	793 -> 
+//	794 -> 
+//	795 -> 
+//	796 -> 
+//	797 -> 
+//	798 -> 
+//	799 -> 
+//	800 -> 
+//	801 -> 
+//	802 -> 
+//	803 -> 
+//	804 -> 
+//	805 -> 
+//	806 -> 
+//	807 -> 
+//	808 -> 
+//	809 -> 
+//	810 -> 
+//	811 -> 
+//	812 -> 
+//	813 -> 
+//	814 -> 
+//	815 -> 
+//	816 -> 
+//	817 -> 
+//	818 -> 
+//	819 -> 
+//	820 -> 
+//	821 -> 
+//	822 -> 
+//	823 -> 
+//	824 -> 
+//	825 -> 
+//	826 -> 
+//	827 -> 
+//	828 -> 
+//	829 -> 
+//	830 -> 
+//	831 -> 
+//	832 -> 
+//	833 -> 
+//	834 -> 
+//	835 -> 
+//	836 -> 
+//	837 -> 
+//	838 -> 
+//	839 -> 
+//	840 -> 
+//	841 -> 
+//	842 -> 
+//	843 -> 
+//	844 -> 
+//	845 -> 
+//	846 -> 
+//	847 -> 
+//	848 -> 
+//	849 -> 
+//	850 -> 
+//	851 -> 
+//	852 -> 
+//	853 -> 
+//	854 -> 
+//	855 -> 
+//	856 -> 
+//	857 -> 
+//	858 -> 
+//	859 -> 
+//	860 -> 
+//	861 -> 
+//	862 -> 
+//	863 -> 
+//	864 -> 
+//	865 -> 
+//	866 -> 
+//	867 -> 
+//	868 -> 
+//	869 -> 
+//	870 -> 
+//	871 -> 
+//	872 -> 
+//	873 -> 
+//	874 -> 
+//	875 -> 
+//	876 -> 
+//	877 -> 
+//	878 -> 
+//	879 -> 
+//	880 -> 
+//	881 -> 
+//	882 -> 
+//	883 -> 
+//	884 -> 
+//	885 -> 
+//	886 -> 
+//	887 -> 
+//	888 -> 
+//	889 -> 
+//	890 -> 
+//	891 -> 
+//	892 -> 
+//	893 -> 
+//	894 -> 
+//	895 -> 
+//	896 -> 
+//	897 -> 
+//	898 -> 
+//	899 -> 
+//	900 -> 
+//	901 -> 
+//	902 -> 
+//	903 -> 
+//	904 -> 
+//	905 -> 
+//	906 -> 
+//	907 -> 
+//	908 -> 
+//	909 -> 
+//	910 -> 
+//	911 -> 
+//	912 -> 
+//	913 -> 
+//	914 -> 
+//	915 -> 
+//	916 -> 
+//	917 -> 
+//	918 -> 
+//	919 -> 
+//	920 -> 
+//	921 -> 
+//	922 -> 
+//	923 -> 
+//	924 -> 
+//	925 -> 
+//	926 -> 
+//	927 -> 
+//	928 -> 
+//	929 -> 
+//	930 -> 
+//	931 -> 
+//	932 -> 
+//	933 -> 
+//	934 -> 
+//	935 -> 
+//	936 -> 
+//	937 -> 
+//	938 -> 
+//	939 -> 
+//	940 -> 
+//	941 -> 
+//	942 -> 
+//	943 -> 
+//	944 -> 
+//	945 -> 
+//	946 -> 
+//	947 -> 
+//	948 -> 
+//	949 -> 
+//	950 -> 
+//	951 -> 
+//	952 -> 
+//	953 -> 
+//	954 -> 
+//	955 -> 
+//	956 -> 
+//	957 -> 
+//	958 -> 
+//	959 -> 
+//	960 -> 
+//	961 -> 
+//	962 -> 
+//	963 -> 
+//	964 -> 
+//	965 -> 
+//	966 -> 
+//	967 -> 
+//	968 -> 
+//	969 -> 
+//	970 -> 
+//	971 -> 
+//	972 -> 
+//	973 -> 
+//	974 -> 
+//	975 -> 
+//	976 -> 
+//	977 -> 
+//	978 -> 
+//	979 -> 
+//	980 -> 
+//	981 -> 
+//	982 -> 
+//	983 -> 
+//	984 -> 
+//	985 -> 
+//	986 -> 
+//	987 -> 
+//	988 -> 
+//	989 -> 
+//	990 -> 
+//	991 -> 
+//	992 -> 
+//	993 -> 
+//	994 -> 
+//	995 -> 
+//	996 -> 
+//	997 -> 
+//	998 -> 
+//	999 -> 
+//	1000 -> 
+
+/*
+	001 [fontsize=25]
+	002 [fontsize=25]
+	003 [fontsize=25]
+	004 [fontsize=25]
+	005 [fontsize=25]
+	006 [fontsize=25]
+	007 [fontsize=25]
+	008 [fontsize=25]
+	009 [fontsize=25]
+	010 [fontsize=25]
+	011 [fontsize=25]
+	012 [fontsize=25]
+	013 [fontsize=25]
+	014 [fontsize=25]
+	015 [fontsize=25]
+	016 [fontsize=25]
+	017 [fontsize=25]
+	018 [fontsize=25]
+	019 [fontsize=25]
+	020 [fontsize=25]
+	021 [fontsize=25]
+	022 [fontsize=25]
+	023 [fontsize=25]
+	024 [fontsize=25]
+	025 [fontsize=25]
+	026 [fontsize=25]
+	027 [fontsize=25]
+	028 [fontsize=25]
+	029 [fontsize=25]
+	030 [fontsize=25]
+	031 [fontsize=25]
+	032 [fontsize=25]
+	033 [fontsize=25]
+	034 [fontsize=25]
+	035 [fontsize=25]
+	036 [fontsize=25]
+	037 [fontsize=25]
+	038 [fontsize=25]
+	039 [fontsize=25]
+	040 [fontsize=25]
+	041 [fontsize=25]
+	042 [fontsize=25]
+	043 [fontsize=25]
+	044 [fontsize=25]
+	045 [fontsize=25]
+	046 [fontsize=25]
+	047 [fontsize=25]
+	048 [fontsize=25]
+	049 [fontsize=25]
+	050 [fontsize=25]
+	051 [fontsize=25]
+	052 [fontsize=25]
+	053 [fontsize=25]
+	054 [fontsize=25]
+	055 [fontsize=25]
+	056 [fontsize=25]
+	057 [fontsize=25]
+	058 [fontsize=25]
+	059 [fontsize=25]
+	060 [fontsize=25]
+	061 [fontsize=25]
+	062 [fontsize=25]
+	063 [fontsize=25]
+	064 [fontsize=25]
+	065 [fontsize=25]
+	066 [fontsize=25]
+	067 [fontsize=25]
+	068 [fontsize=25]
+	069 [fontsize=25]
+	070 [fontsize=25]
+	071 [fontsize=25]
+	072 [fontsize=25]
+	073 [fontsize=25]
+	074 [fontsize=25]
+	075 [fontsize=25]
+	076 [fontsize=25]
+	077 [fontsize=25]
+	078 [fontsize=25]
+	079 [fontsize=25]
+	080 [fontsize=25]
+	081 [fontsize=25]
+	082 [fontsize=25]
+	083 [fontsize=25]
+	084 [fontsize=25]
+	085 [fontsize=25]
+	086 [fontsize=25]
+	087 [fontsize=25]
+	088 [fontsize=25]
+	089 [fontsize=25]
+	090 [fontsize=25]
+	091 [fontsize=25]
+	092 [fontsize=25]
+	093 [fontsize=25]
+	094 [fontsize=25]
+	095 [fontsize=25]
+	096 [fontsize=25]
+	097 [fontsize=25]
+	098 [fontsize=25]
+	099 [fontsize=25]
+	100 [fontsize=25]
+	101 [fontsize=25]
+	102 [fontsize=25]
+	103 [fontsize=25]
+	104 [fontsize=25]
+	105 [fontsize=25]
+	106 [fontsize=25]
+	107 [fontsize=25]
+	108 [fontsize=25]
+	109 [fontsize=25]
+	110 [fontsize=25]
+	111 [fontsize=25]
+	112 [fontsize=25]
+	113 [fontsize=25]
+	114 [fontsize=25]
+	115 [fontsize=25]
+	116 [fontsize=25]
+	117 [fontsize=25]
+	118 [fontsize=25]
+	119 [fontsize=25]
+	120 [fontsize=25]
+	121 [fontsize=25]
+	122 [fontsize=25]
+	123 [fontsize=25]
+	124 [fontsize=25]
+	125 [fontsize=25]
+	126 [fontsize=25]
+	127 [fontsize=25]
+	128 [fontsize=25]
+	129 [fontsize=25]
+	130 [fontsize=25]
+	131 [fontsize=25]
+	132 [fontsize=25]
+	133 [fontsize=25]
+	134 [fontsize=25]
+	135 [fontsize=25]
+	136 [fontsize=25]
+	137 [fontsize=25]
+	138 [fontsize=25]
+	139 [fontsize=25]
+	140 [fontsize=25]
+	141 [fontsize=25]
+	142 [fontsize=25]
+	143 [fontsize=25]
+	144 [fontsize=25]
+	145 [fontsize=25]
+	146 [fontsize=25]
+	147 [fontsize=25]
+	148 [fontsize=25]
+	149 [fontsize=25]
+	150 [fontsize=25]
+	151 [fontsize=25]
+	152 [fontsize=25]
+	153 [fontsize=25]
+	154 [fontsize=25]
+	155 [fontsize=25]
+	156 [fontsize=25]
+	157 [fontsize=25]
+	158 [fontsize=25]
+	159 [fontsize=25]
+	160 [fontsize=25]
+	161 [fontsize=25]
+	162 [fontsize=25]
+	163 [fontsize=25]
+	164 [fontsize=25]
+	165 [fontsize=25]
+	166 [fontsize=25]
+	167 [fontsize=25]
+	168 [fontsize=25]
+	169 [fontsize=25]
+	170 [fontsize=25]
+	171 [fontsize=25]
+	172 [fontsize=25]
+	173 [fontsize=25]
+	174 [fontsize=25]
+	175 [fontsize=25]
+	176 [fontsize=25]
+	177 [fontsize=25]
+	178 [fontsize=25]
+	179 [fontsize=25]
+	180 [fontsize=25]
+	181 [fontsize=25]
+	182 [fontsize=25]
+	183 [fontsize=25]
+	184 [fontsize=25]
+	185 [fontsize=25]
+	186 [fontsize=25]
+	187 [fontsize=25]
+	188 [fontsize=25]
+	189 [fontsize=25]
+	190 [fontsize=25]
+	191 [fontsize=25]
+	192 [fontsize=25]
+	193 [fontsize=25]
+	194 [fontsize=25]
+	195 [fontsize=25]
+	196 [fontsize=25]
+	197 [fontsize=25]
+	198 [fontsize=25]
+	199 [fontsize=25]
+	200 [fontsize=25]
+	201 [fontsize=25]
+	202 [fontsize=25]
+	203 [fontsize=25]
+	204 [fontsize=25]
+	205 [fontsize=25]
+	206 [fontsize=25]
+	207 [fontsize=25]
+	208 [fontsize=25]
+	209 [fontsize=25]
+	210 [fontsize=25]
+	211 [fontsize=25]
+	212 [fontsize=25]
+	213 [fontsize=25]
+	214 [fontsize=25]
+	215 [fontsize=25]
+	216 [fontsize=25]
+	217 [fontsize=25]
+	218 [fontsize=25]
+	219 [fontsize=25]
+	220 [fontsize=25]
+	221 [fontsize=25]
+	222 [fontsize=25]
+	223 [fontsize=25]
+	224 [fontsize=25]
+	225 [fontsize=25]
+	226 [fontsize=25]
+	227 [fontsize=25]
+	228 [fontsize=25]
+	229 [fontsize=25]
+	230 [fontsize=25]
+	231 [fontsize=25]
+	232 [fontsize=25]
+	233 [fontsize=25]
+	234 [fontsize=25]
+	235 [fontsize=25]
+	236 [fontsize=25]
+	237 [fontsize=25]
+	238 [fontsize=25]
+	239 [fontsize=25]
+	240 [fontsize=25]
+	241 [fontsize=25]
+	242 [fontsize=25]
+	243 [fontsize=25]
+	244 [fontsize=25]
+	245 [fontsize=25]
+	246 [fontsize=25]
+	247 [fontsize=25]
+	248 [fontsize=25]
+	249 [fontsize=25]
+	250 [fontsize=25]
+	251 [fontsize=25]
+	252 [fontsize=25]
+	253 [fontsize=25]
+	254 [fontsize=25]
+	255 [fontsize=25]
+	256 [fontsize=25]
+	257 [fontsize=25]
+	258 [fontsize=25]
+	259 [fontsize=25]
+	260 [fontsize=25]
+	261 [fontsize=25]
+	262 [fontsize=25]
+	263 [fontsize=25]
+	264 [fontsize=25]
+	265 [fontsize=25]
+	266 [fontsize=25]
+	267 [fontsize=25]
+	268 [fontsize=25]
+	269 [fontsize=25]
+	270 [fontsize=25]
+	271 [fontsize=25]
+	272 [fontsize=25]
+	273 [fontsize=25]
+	274 [fontsize=25]
+	275 [fontsize=25]
+	276 [fontsize=25]
+	277 [fontsize=25]
+	278 [fontsize=25]
+	279 [fontsize=25]
+	280 [fontsize=25]
+	281 [fontsize=25]
+	282 [fontsize=25]
+	283 [fontsize=25]
+	284 [fontsize=25]
+	285 [fontsize=25]
+	286 [fontsize=25]
+	287 [fontsize=25]
+	288 [fontsize=25]
+	289 [fontsize=25]
+	290 [fontsize=25]
+	291 [fontsize=25]
+	292 [fontsize=25]
+	293 [fontsize=25]
+	294 [fontsize=25]
+	295 [fontsize=25]
+	296 [fontsize=25]
+	297 [fontsize=25]
+	298 [fontsize=25]
+	299 [fontsize=25]
+	300 [fontsize=25]
+	301 [fontsize=25]
+	302 [fontsize=25]
+	303 [fontsize=25]
+	304 [fontsize=25]
+	305 [fontsize=25]
+	306 [fontsize=25]
+	307 [fontsize=25]
+	308 [fontsize=25]
+	309 [fontsize=25]
+	310 [fontsize=25]
+	311 [fontsize=25]
+	312 [fontsize=25]
+	313 [fontsize=25]
+	314 [fontsize=25]
+	315 [fontsize=25]
+	316 [fontsize=25]
+	317 [fontsize=25]
+	318 [fontsize=25]
+	319 [fontsize=25]
+	320 [fontsize=25]
+	321 [fontsize=25]
+	322 [fontsize=25]
+	323 [fontsize=25]
+	324 [fontsize=25]
+	325 [fontsize=25]
+	326 [fontsize=25]
+	327 [fontsize=25]
+	328 [fontsize=25]
+	329 [fontsize=25]
+	330 [fontsize=25]
+	331 [fontsize=25]
+	332 [fontsize=25]
+	333 [fontsize=25]
+	334 [fontsize=25]
+	335 [fontsize=25]
+	336 [fontsize=25]
+	337 [fontsize=25]
+	338 [fontsize=25]
+	339 [fontsize=25]
+	340 [fontsize=25]
+	341 [fontsize=25]
+	342 [fontsize=25]
+	343 [fontsize=25]
+	344 [fontsize=25]
+	345 [fontsize=25]
+	346 [fontsize=25]
+	347 [fontsize=25]
+	348 [fontsize=25]
+	349 [fontsize=25]
+	350 [fontsize=25]
+	351 [fontsize=25]
+	352 [fontsize=25]
+	353 [fontsize=25]
+	354 [fontsize=25]
+	355 [fontsize=25]
+	356 [fontsize=25]
+	357 [fontsize=25]
+	358 [fontsize=25]
+	359 [fontsize=25]
+	360 [fontsize=25]
+	361 [fontsize=25]
+	362 [fontsize=25]
+	363 [fontsize=25]
+	364 [fontsize=25]
+	365 [fontsize=25]
+	366 [fontsize=25]
+	367 [fontsize=25]
+	368 [fontsize=25]
+	369 [fontsize=25]
+	370 [fontsize=25]
+	371 [fontsize=25]
+	372 [fontsize=25]
+	373 [fontsize=25]
+	374 [fontsize=25]
+	375 [fontsize=25]
+	376 [fontsize=25]
+	377 [fontsize=25]
+	378 [fontsize=25]
+	379 [fontsize=25]
+	380 [fontsize=25]
+	381 [fontsize=25]
+	382 [fontsize=25]
+	383 [fontsize=25]
+	384 [fontsize=25]
+	385 [fontsize=25]
+	386 [fontsize=25]
+	387 [fontsize=25]
+	388 [fontsize=25]
+	389 [fontsize=25]
+	390 [fontsize=25]
+	391 [fontsize=25]
+	392 [fontsize=25]
+	393 [fontsize=25]
+	394 [fontsize=25]
+	395 [fontsize=25]
+	396 [fontsize=25]
+	397 [fontsize=25]
+	398 [fontsize=25]
+	399 [fontsize=25]
+	400 [fontsize=25]
+	401 [fontsize=25]
+	402 [fontsize=25]
+	403 [fontsize=25]
+	404 [fontsize=25]
+	405 [fontsize=25]
+	406 [fontsize=25]
+	407 [fontsize=25]
+	408 [fontsize=25]
+	409 [fontsize=25]
+	410 [fontsize=25]
+	411 [fontsize=25]
+	412 [fontsize=25]
+	413 [fontsize=25]
+	414 [fontsize=25]
+	415 [fontsize=25]
+	416 [fontsize=25]
+	417 [fontsize=25]
+	418 [fontsize=25]
+	419 [fontsize=25]
+	420 [fontsize=25]
+	421 [fontsize=25]
+	422 [fontsize=25]
+	423 [fontsize=25]
+	424 [fontsize=25]
+	425 [fontsize=25]
+	426 [fontsize=25]
+	427 [fontsize=25]
+	428 [fontsize=25]
+	429 [fontsize=25]
+	430 [fontsize=25]
+	431 [fontsize=25]
+	432 [fontsize=25]
+	433 [fontsize=25]
+	434 [fontsize=25]
+	435 [fontsize=25]
+	436 [fontsize=25]
+	437 [fontsize=25]
+	438 [fontsize=25]
+	439 [fontsize=25]
+	440 [fontsize=25]
+	441 [fontsize=25]
+	442 [fontsize=25]
+	443 [fontsize=25]
+	444 [fontsize=25]
+	445 [fontsize=25]
+	446 [fontsize=25]
+	447 [fontsize=25]
+	448 [fontsize=25]
+	449 [fontsize=25]
+	450 [fontsize=25]
+	451 [fontsize=25]
+	452 [fontsize=25]
+	453 [fontsize=25]
+	454 [fontsize=25]
+	455 [fontsize=25]
+	456 [fontsize=25]
+	457 [fontsize=25]
+	458 [fontsize=25]
+	459 [fontsize=25]
+	460 [fontsize=25]
+	461 [fontsize=25]
+	462 [fontsize=25]
+	463 [fontsize=25]
+	464 [fontsize=25]
+	465 [fontsize=25]
+	466 [fontsize=25]
+	467 [fontsize=25]
+	468 [fontsize=25]
+	469 [fontsize=25]
+	470 [fontsize=25]
+	471 [fontsize=25]
+	472 [fontsize=25]
+	473 [fontsize=25]
+	474 [fontsize=25]
+	475 [fontsize=25]
+	476 [fontsize=25]
+	477 [fontsize=25]
+	478 [fontsize=25]
+	479 [fontsize=25]
+	480 [fontsize=25]
+	481 [fontsize=25]
+	482 [fontsize=25]
+	483 [fontsize=25]
+	484 [fontsize=25]
+	485 [fontsize=25]
+	486 [fontsize=25]
+	487 [fontsize=25]
+	488 [fontsize=25]
+	489 [fontsize=25]
+	490 [fontsize=25]
+	491 [fontsize=25]
+	492 [fontsize=25]
+	493 [fontsize=25]
+	494 [fontsize=25]
+	495 [fontsize=25]
+	496 [fontsize=25]
+	497 [fontsize=25]
+	498 [fontsize=25]
+	499 [fontsize=25]
+	500 [fontsize=25]
+	501 [fontsize=25]
+	502 [fontsize=25]
+	503 [fontsize=25]
+	504 [fontsize=25]
+	505 [fontsize=25]
+	506 [fontsize=25]
+	507 [fontsize=25]
+	508 [fontsize=25]
+	509 [fontsize=25]
+	510 [fontsize=25]
+	511 [fontsize=25]
+	512 [fontsize=25]
+	513 [fontsize=25]
+	514 [fontsize=25]
+	515 [fontsize=25]
+	516 [fontsize=25]
+	517 [fontsize=25]
+	518 [fontsize=25]
+	519 [fontsize=25]
+	520 [fontsize=25]
+	521 [fontsize=25]
+	522 [fontsize=25]
+	523 [fontsize=25]
+	524 [fontsize=25]
+	525 [fontsize=25]
+	526 [fontsize=25]
+	527 [fontsize=25]
+	528 [fontsize=25]
+	529 [fontsize=25]
+	530 [fontsize=25]
+	531 [fontsize=25]
+	532 [fontsize=25]
+	533 [fontsize=25]
+	534 [fontsize=25]
+	535 [fontsize=25]
+	536 [fontsize=25]
+	537 [fontsize=25]
+	538 [fontsize=25]
+	539 [fontsize=25]
+	540 [fontsize=25]
+	541 [fontsize=25]
+	542 [fontsize=25]
+	543 [fontsize=25]
+	544 [fontsize=25]
+	545 [fontsize=25]
+	546 [fontsize=25]
+	547 [fontsize=25]
+	548 [fontsize=25]
+	549 [fontsize=25]
+	550 [fontsize=25]
+	551 [fontsize=25]
+	552 [fontsize=25]
+	553 [fontsize=25]
+	554 [fontsize=25]
+	555 [fontsize=25]
+	556 [fontsize=25]
+	557 [fontsize=25]
+	558 [fontsize=25]
+	559 [fontsize=25]
+	560 [fontsize=25]
+	561 [fontsize=25]
+	562 [fontsize=25]
+	563 [fontsize=25]
+	564 [fontsize=25]
+	565 [fontsize=25]
+	566 [fontsize=25]
+	567 [fontsize=25]
+	568 [fontsize=25]
+	569 [fontsize=25]
+	570 [fontsize=25]
+	571 [fontsize=25]
+	572 [fontsize=25]
+	573 [fontsize=25]
+	574 [fontsize=25]
+	575 [fontsize=25]
+	576 [fontsize=25]
+	577 [fontsize=25]
+	578 [fontsize=25]
+	579 [fontsize=25]
+	580 [fontsize=25]
+	581 [fontsize=25]
+	582 [fontsize=25]
+	583 [fontsize=25]
+	584 [fontsize=25]
+	585 [fontsize=25]
+	586 [fontsize=25]
+	587 [fontsize=25]
+	588 [fontsize=25]
+	589 [fontsize=25]
+	590 [fontsize=25]
+	591 [fontsize=25]
+	592 [fontsize=25]
+	593 [fontsize=25]
+	594 [fontsize=25]
+	595 [fontsize=25]
+	596 [fontsize=25]
+	597 [fontsize=25]
+	598 [fontsize=25]
+	599 [fontsize=25]
+	600 [fontsize=25]
+	601 [fontsize=25]
+	602 [fontsize=25]
+	603 [fontsize=25]
+	604 [fontsize=25]
+	605 [fontsize=25]
+	606 [fontsize=25]
+	607 [fontsize=25]
+	608 [fontsize=25]
+	609 [fontsize=25]
+	610 [fontsize=25]
+	611 [fontsize=25]
+	612 [fontsize=25]
+	613 [fontsize=25]
+	614 [fontsize=25]
+	615 [fontsize=25]
+	616 [fontsize=25]
+	617 [fontsize=25]
+	618 [fontsize=25]
+	619 [fontsize=25]
+	620 [fontsize=25]
+	621 [fontsize=25]
+	622 [fontsize=25]
+	623 [fontsize=25]
+	624 [fontsize=25]
+	625 [fontsize=25]
+	626 [fontsize=25]
+	627 [fontsize=25]
+	628 [fontsize=25]
+	629 [fontsize=25]
+	630 [fontsize=25]
+	631 [fontsize=25]
+	632 [fontsize=25]
+	633 [fontsize=25]
+	634 [fontsize=25]
+	635 [fontsize=25]
+	636 [fontsize=25]
+	637 [fontsize=25]
+	638 [fontsize=25]
+	639 [fontsize=25]
+	640 [fontsize=25]
+	641 [fontsize=25]
+	642 [fontsize=25]
+	643 [fontsize=25]
+	644 [fontsize=25]
+	645 [fontsize=25]
+	646 [fontsize=25]
+	647 [fontsize=25]
+	648 [fontsize=25]
+	649 [fontsize=25]
+	650 [fontsize=25]
+	651 [fontsize=25]
+	652 [fontsize=25]
+	653 [fontsize=25]
+	654 [fontsize=25]
+	655 [fontsize=25]
+	656 [fontsize=25]
+	657 [fontsize=25]
+	658 [fontsize=25]
+	659 [fontsize=25]
+	660 [fontsize=25]
+	661 [fontsize=25]
+	662 [fontsize=25]
+	663 [fontsize=25]
+	664 [fontsize=25]
+	665 [fontsize=25]
+	666 [fontsize=25]
+	667 [fontsize=25]
+	668 [fontsize=25]
+	669 [fontsize=25]
+	670 [fontsize=25]
+	671 [fontsize=25]
+	672 [fontsize=25]
+	673 [fontsize=25]
+	674 [fontsize=25]
+	675 [fontsize=25]
+	676 [fontsize=25]
+	677 [fontsize=25]
+	678 [fontsize=25]
+	679 [fontsize=25]
+	680 [fontsize=25]
+	681 [fontsize=25]
+	682 [fontsize=25]
+	683 [fontsize=25]
+	684 [fontsize=25]
+	685 [fontsize=25]
+	686 [fontsize=25]
+	687 [fontsize=25]
+	688 [fontsize=25]
+	689 [fontsize=25]
+	690 [fontsize=25]
+	691 [fontsize=25]
+	692 [fontsize=25]
+	693 [fontsize=25]
+	694 [fontsize=25]
+	695 [fontsize=25]
+	696 [fontsize=25]
+	697 [fontsize=25]
+	698 [fontsize=25]
+	699 [fontsize=25]
+	700 [fontsize=25]
+	701 [fontsize=25]
+	702 [fontsize=25]
+	703 [fontsize=25]
+	704 [fontsize=25]
+	705 [fontsize=25]
+	706 [fontsize=25]
+	707 [fontsize=25]
+	708 [fontsize=25]
+	709 [fontsize=25]
+	710 [fontsize=25]
+	711 [fontsize=25]
+	712 [fontsize=25]
+	713 [fontsize=25]
+	714 [fontsize=25]
+	715 [fontsize=25]
+	716 [fontsize=25]
+	717 [fontsize=25]
+	718 [fontsize=25]
+	719 [fontsize=25]
+	720 [fontsize=25]
+	721 [fontsize=25]
+	722 [fontsize=25]
+	723 [fontsize=25]
+	724 [fontsize=25]
+	725 [fontsize=25]
+	726 [fontsize=25]
+	727 [fontsize=25]
+	728 [fontsize=25]
+	729 [fontsize=25]
+	730 [fontsize=25]
+	731 [fontsize=25]
+	732 [fontsize=25]
+	733 [fontsize=25]
+	734 [fontsize=25]
+	735 [fontsize=25]
+	736 [fontsize=25]
+	737 [fontsize=25]
+	738 [fontsize=25]
+	739 [fontsize=25]
+	740 [fontsize=25]
+	741 [fontsize=25]
+	742 [fontsize=25]
+	743 [fontsize=25]
+	744 [fontsize=25]
+	745 [fontsize=25]
+	746 [fontsize=25]
+	747 [fontsize=25]
+	748 [fontsize=25]
+	749 [fontsize=25]
+	750 [fontsize=25]
+	751 [fontsize=25]
+	752 [fontsize=25]
+	753 [fontsize=25]
+	754 [fontsize=25]
+	755 [fontsize=25]
+	756 [fontsize=25]
+	757 [fontsize=25]
+	758 [fontsize=25]
+	759 [fontsize=25]
+	760 [fontsize=25]
+	761 [fontsize=25]
+	762 [fontsize=25]
+	763 [fontsize=25]
+	764 [fontsize=25]
+	765 [fontsize=25]
+	766 [fontsize=25]
+	767 [fontsize=25]
+	768 [fontsize=25]
+	769 [fontsize=25]
+	770 [fontsize=25]
+	771 [fontsize=25]
+	772 [fontsize=25]
+	773 [fontsize=25]
+	774 [fontsize=25]
+	775 [fontsize=25]
+	776 [fontsize=25]
+	777 [fontsize=25]
+	778 [fontsize=25]
+	779 [fontsize=25]
+	780 [fontsize=25]
+	781 [fontsize=25]
+	782 [fontsize=25]
+	783 [fontsize=25]
+	784 [fontsize=25]
+	785 [fontsize=25]
+	786 [fontsize=25]
+	787 [fontsize=25]
+	788 [fontsize=25]
+	789 [fontsize=25]
+	790 [fontsize=25]
+	791 [fontsize=25]
+	792 [fontsize=25]
+	793 [fontsize=25]
+	794 [fontsize=25]
+	795 [fontsize=25]
+	796 [fontsize=25]
+	797 [fontsize=25]
+	798 [fontsize=25]
+	799 [fontsize=25]
+	800 [fontsize=25]
+	801 [fontsize=25]
+	802 [fontsize=25]
+	803 [fontsize=25]
+	804 [fontsize=25]
+	805 [fontsize=25]
+	806 [fontsize=25]
+	807 [fontsize=25]
+	808 [fontsize=25]
+	809 [fontsize=25]
+	810 [fontsize=25]
+	811 [fontsize=25]
+	812 [fontsize=25]
+	813 [fontsize=25]
+	814 [fontsize=25]
+	815 [fontsize=25]
+	816 [fontsize=25]
+	817 [fontsize=25]
+	818 [fontsize=25]
+	819 [fontsize=25]
+	820 [fontsize=25]
+	821 [fontsize=25]
+	822 [fontsize=25]
+	823 [fontsize=25]
+	824 [fontsize=25]
+	825 [fontsize=25]
+	826 [fontsize=25]
+	827 [fontsize=25]
+	828 [fontsize=25]
+	829 [fontsize=25]
+	830 [fontsize=25]
+	831 [fontsize=25]
+	832 [fontsize=25]
+	833 [fontsize=25]
+	834 [fontsize=25]
+	835 [fontsize=25]
+	836 [fontsize=25]
+	837 [fontsize=25]
+	838 [fontsize=25]
+	839 [fontsize=25]
+	840 [fontsize=25]
+	841 [fontsize=25]
+	842 [fontsize=25]
+	843 [fontsize=25]
+	844 [fontsize=25]
+	845 [fontsize=25]
+	846 [fontsize=25]
+	847 [fontsize=25]
+	848 [fontsize=25]
+	849 [fontsize=25]
+	850 [fontsize=25]
+	851 [fontsize=25]
+	852 [fontsize=25]
+	853 [fontsize=25]
+	854 [fontsize=25]
+	855 [fontsize=25]
+	856 [fontsize=25]
+	857 [fontsize=25]
+	858 [fontsize=25]
+	859 [fontsize=25]
+	860 [fontsize=25]
+	861 [fontsize=25]
+	862 [fontsize=25]
+	863 [fontsize=25]
+	864 [fontsize=25]
+	865 [fontsize=25]
+	866 [fontsize=25]
+	867 [fontsize=25]
+	868 [fontsize=25]
+	869 [fontsize=25]
+	870 [fontsize=25]
+	871 [fontsize=25]
+	872 [fontsize=25]
+	873 [fontsize=25]
+	874 [fontsize=25]
+	875 [fontsize=25]
+	876 [fontsize=25]
+	877 [fontsize=25]
+	878 [fontsize=25]
+	879 [fontsize=25]
+	880 [fontsize=25]
+	881 [fontsize=25]
+	882 [fontsize=25]
+	883 [fontsize=25]
+	884 [fontsize=25]
+	885 [fontsize=25]
+	886 [fontsize=25]
+	887 [fontsize=25]
+	888 [fontsize=25]
+	889 [fontsize=25]
+	890 [fontsize=25]
+	891 [fontsize=25]
+	892 [fontsize=25]
+	893 [fontsize=25]
+	894 [fontsize=25]
+	895 [fontsize=25]
+	896 [fontsize=25]
+	897 [fontsize=25]
+	898 [fontsize=25]
+	899 [fontsize=25]
+	900 [fontsize=25]
+	901 [fontsize=25]
+	902 [fontsize=25]
+	903 [fontsize=25]
+	904 [fontsize=25]
+	905 [fontsize=25]
+	906 [fontsize=25]
+	907 [fontsize=25]
+	908 [fontsize=25]
+	909 [fontsize=25]
+	910 [fontsize=25]
+	911 [fontsize=25]
+	912 [fontsize=25]
+	913 [fontsize=25]
+	914 [fontsize=25]
+	915 [fontsize=25]
+	916 [fontsize=25]
+	917 [fontsize=25]
+	918 [fontsize=25]
+	919 [fontsize=25]
+	920 [fontsize=25]
+	921 [fontsize=25]
+	922 [fontsize=25]
+	923 [fontsize=25]
+	924 [fontsize=25]
+	925 [fontsize=25]
+	926 [fontsize=25]
+	927 [fontsize=25]
+	928 [fontsize=25]
+	929 [fontsize=25]
+	930 [fontsize=25]
+	931 [fontsize=25]
+	932 [fontsize=25]
+	933 [fontsize=25]
+	934 [fontsize=25]
+	935 [fontsize=25]
+	936 [fontsize=25]
+	937 [fontsize=25]
+	938 [fontsize=25]
+	939 [fontsize=25]
+	940 [fontsize=25]
+	941 [fontsize=25]
+	942 [fontsize=25]
+	943 [fontsize=25]
+	944 [fontsize=25]
+	945 [fontsize=25]
+	946 [fontsize=25]
+	947 [fontsize=25]
+	948 [fontsize=25]
+	949 [fontsize=25]
+	950 [fontsize=25]
+	951 [fontsize=25]
+	952 [fontsize=25]
+	953 [fontsize=25]
+	954 [fontsize=25]
+	955 [fontsize=25]
+	956 [fontsize=25]
+	957 [fontsize=25]
+	958 [fontsize=25]
+	959 [fontsize=25]
+	960 [fontsize=25]
+	961 [fontsize=25]
+	962 [fontsize=25]
+	963 [fontsize=25]
+	964 [fontsize=25]
+	965 [fontsize=25]
+	966 [fontsize=25]
+	967 [fontsize=25]
+	968 [fontsize=25]
+	969 [fontsize=25]
+	970 [fontsize=25]
+	971 [fontsize=25]
+	972 [fontsize=25]
+	973 [fontsize=25]
+	974 [fontsize=25]
+	975 [fontsize=25]
+	976 [fontsize=25]
+	977 [fontsize=25]
+	978 [fontsize=25]
+	979 [fontsize=25]
+	980 [fontsize=25]
+	981 [fontsize=25]
+	982 [fontsize=25]
+	983 [fontsize=25]
+	984 [fontsize=25]
+	985 [fontsize=25]
+	986 [fontsize=25]
+	987 [fontsize=25]
+	988 [fontsize=25]
+	989 [fontsize=25]
+	990 [fontsize=25]
+	991 [fontsize=25]
+	992 [fontsize=25]
+	993 [fontsize=25]
+	994 [fontsize=25]
+	995 [fontsize=25]
+	996 [fontsize=25]
+	997 [fontsize=25]
+	998 [fontsize=25]
+	999 [fontsize=25]
+	1000 [fontsize=25]
+*/
+}
