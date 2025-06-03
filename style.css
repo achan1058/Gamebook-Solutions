@@ -117,18 +117,12 @@
 	fill: crimson;
 }
 
-.node.opt > polygon {
+.node.opt polygon {
 	stroke: #bbffff;
 	fill: #bbffff;
 }
 
-.node.optp > polygon {
-	stroke: gold;
-	stroke-width: 3;
-	fill: #bbffff;
-}
-
-.node.bst > polygon {
+.node.bst polygon {
 	stroke: greenyellow;
 	fill: greenyellow;
 }
@@ -138,7 +132,7 @@
 	fill: greenyellow;
 }
 
-.node.ddg > polygon {
+.node.ddg polygon {
 	stroke: pink;
 	fill: pink;
 }
@@ -148,7 +142,7 @@
 	fill: pink;
 }
 
-.node.ddt > polygon {
+.node.ddt polygon {
 	stroke: red;
 	fill: red;
 }
@@ -158,7 +152,7 @@
 	fill: red;
 }
 
-.node.ddt > polygon {
+.node.ddt polygon {
 	stroke: red;
 	fill: red;
 }
@@ -193,12 +187,12 @@
 	stroke-width: 3;
 }
 
-.node.req > polygon {
+.node.req polygon {
 	stroke: gold;
 	fill: gold;
 }
 
-.node.req2 > polygon {
+.node.req2 polygon {
 	/*gold2*/
 	stroke: #eec900;
 	fill: #eec900;
