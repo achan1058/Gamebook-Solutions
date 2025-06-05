@@ -189,33 +189,25 @@ digraph {
 		opt2 [class = "bst"]
 		opt3 [class = "bst"]
 		005 [fontcolor = "crimson" label = "\N\n -1 gold"]
-		032 [label = "\N\n Qadarnai spear (info)\n -1 communion ring"]
 		033 [label = "\N\n shadow cloak\n (-AL inc)"]
 		043 [label = "\N\n info" tooltip = "Iola knows charm"]
 		062 [label = "\N\n 10 gold\n 1 meal"]
 		092 [class = "bst" label = "\N\n 50 gold\n +2ST"]
-		093 [fontcolor = "crimson" label = "\N\n -1 communion ring"]
-		096 [fontcolor = "crimson" label = "\N\n -1 communion ring"]
-		101 [fontcolor = "crimson" label = "\N\n -1 communion ring"]
 		117 [label = "\N\n iron mace"]
-		126 [fontcolor = "crimson" label = "\N\n -1 communion ring"]
 		137 [fontcolor = "crimson" label = "\N\n -? gold"]
 		143 [label = "\N\n resolve potion\n (pass 2 PR)"]
 		145 [class = "ddg" label = "\N\n -3ST?\n (!item)"]
 		153 [label = "\N\n polished shield (-1ESK)"]
 		156 [fontcolor = "crimson" label = "\N\n -? gold"]
 		175 [fontcolor = "crimson" label = "\N\n -weapon"]
-		194 [label = "\N\n armoury key"]
 		203 [label = "\N\n halberd?\n (-weapon)"]
 		205 [label = "\N\n Morlak"]
-		224 [fontcolor = "crimson" label = "\N\n -Fays ring"]
 		225 [label = "\N\n resolve potion\n (pass 2 PR)"]
 		227 [label = "\N\n 25 gold"]
 		241 [label = "\N\n 25 gold"]
 		246 [label = "\N\n iron keys"]
 		247 [class = "ddg" label = "\N\n 10 gold\n iron key\n +4AL"]
 		248 [label = "\N\n ? gold"]
-		270 [fontcolor = "crimson" label = "\N\n -Fays ring"]
 		271 [fontcolor = "crimson" label = "\N\n Paz\n -1 meal"]
 		272 [label = "\N\n Qadarnai spear"]
 		291 [label = "\N\n 6 gold"]
@@ -225,7 +217,7 @@ digraph {
 		333 [label = "\N\n info" tooltip = "Qadarnai spear, disruption charm, finger of Lhyss"]
 		348 [label = "\N\n ages amulet"]
 		351 [label = "\N\n 7 gold"]
-		365 [class = "ddg" label = "\N\n 10 gold\n iron key\n +4AL"]
+		365 [class = "ddg" label = "\N\n 10 gold\n iron key\n +1AL"]
 		368 [label = "\N\n 25 gold\n whistle\n Lhyss elixir: 35"]
 		371 [label = "\N\n Paz?"]
 		386 [label = "\N\n Fays ring"]
@@ -285,7 +277,7 @@ digraph {
 		
 		subgraph cluster_02 {
 			label = "Lord Mortis\n 11/20"
-			006
+			028
 		}
 		
 		subgraph cluster_03 {
@@ -316,11 +308,13 @@ digraph {
 		subgraph cluster_08 {
 			label = "Skull Beast\n 9/10"
 			115 [label = "\N\n -1DG"]
+			182
 		}
 		
 		subgraph cluster_09 {
 			label = "Vampire\n Vampire\n Lady Lotmora*\n 5/5 5/5 9/11"
 			120 [label = "\N\n -2AT"]
+			150
 		}
 		
 		subgraph cluster_10 {
@@ -331,11 +325,7 @@ digraph {
 		subgraph cluster_11 {
 			label = "Undead Archer*\n 7/5\n 7/4\n 7/4"
 			147
-		}
-		
-		subgraph cluster_12 {
-			label = "Vampire\n Vampire\n Lady Lotmora*\n 5/5 5/5 9/11"
-			150
+			397
 		}
 		
 		subgraph cluster_13 {
@@ -346,11 +336,6 @@ digraph {
 		subgraph cluster_14 {
 			label = "Baracas*\n 10/15"
 			167
-		}
-		
-		subgraph cluster_16 {
-			label = "Skull Beast\n 9/10"
-			182
 		}
 		
 		subgraph cluster_17 {
@@ -381,6 +366,7 @@ digraph {
 		subgraph cluster_22 {
 			label = "Captain Jarmesh\n 8/4"
 			240
+			345
 		}
 		
 		subgraph cluster_23 {
@@ -435,7 +421,7 @@ digraph {
 		
 		subgraph cluster_33 {
 			label = "Vampire\n Vampire\n Lady Lotmora\n Kandogor*\n 7/9 6/8 11/18 7/7"
-			190
+			309
 		}
 		
 		subgraph cluster_34 {
@@ -451,11 +437,6 @@ digraph {
 		subgraph cluster_36 {
 			label = "Skull Beast\n ?/?"
 			342 [label = "\N\n win 2 AR"]
-		}
-		
-		subgraph cluster_37 {
-			label = "Captain Jarmesh\n 8/4"
-			345
 		}
 		
 		subgraph cluster_38 {
@@ -477,13 +458,7 @@ digraph {
 			label = "Chaos Pirate\n 6/6 7/5\n 8/7"
 			381
 		}
-		
-		subgraph cluster_42 {
-			label = "Undead Archer*\n 7/5\n 7/4\n 7/4"
-			397
-		}
-		
-		cbtt
+				cbtt
 	}
 	
 	subgraph Area_1 {
@@ -492,8 +467,72 @@ digraph {
 		253.2
 		253.3
 		253.4
-		253.5
-		253.6
+	}
+	
+	subgraph Area_2 {
+		node [style = "filled" color = "magenta" fontcolor = "white" fixedsize = true label = "To\n 051"]
+		051 [label = "\N"]
+		051.1
+		051.2
+		051.3
+		051.4
+	}
+	
+	subgraph Area_3 {
+		node [style = "filled" color = "magenta" fontcolor = "white" fixedsize = true label = "To\n 131"]
+		131 [label = "\N"]
+		131.1
+		131.2
+		131.3
+		131.4
+	}
+	
+	subgraph Area_4 {
+		node [style = "filled" color = "magenta" fontcolor = "white" fixedsize = true label = "To\n 171"]
+		171 [label = "\N"]
+		171.1
+		171.2
+		171.3
+		171.4
+	}
+	
+	subgraph Area_5 {
+		node [style = "filled" color = "magenta" fontcolor = "white" fixedsize = true label = "To\n 311"]
+		311 [label = "\N"]
+		311.1
+		311.2
+		311.3
+		311.4
+		311.5
+		311.6
+		311.7
+	}
+	
+	subgraph Area_6 {
+		node [style = "filled" color = "orange" fixedsize = true label = "To\n 251"]
+		251 [label = "\N"]
+		251.1
+		251.2
+		251.3
+		251.4
+	}
+	
+	subgraph Area_7 {
+		node [style = "filled" color = "orange" fixedsize = true label = "To\n 071"]
+		071 [label = "\N"]
+		071.1
+		071.2
+		071.3
+		071.4
+	}
+	
+	subgraph Area_8 {
+		node [style = "filled" color = "orange" fixedsize = true label = "To\n 291"]
+		291 [style = "filled" color = "orange"]
+		291.1
+		291.2
+		291.3
+		291.4
 	}
 	
 	subgraph Optional {
@@ -583,10 +622,11 @@ digraph {
 	title -> 001
 	001 -> 041
 	001 -> 021
-	002 -> 126 [class = "opt" label = "communing ring"]
+	002 -> 126 [class = "opt" label = "-communing ring"]
 	002 -> 228
 	003 -> 061
-	004 -> 250
+//	004 -> 250
+	250 -> 004 [dir = back]
 	005 -> 064
 	005 -> 135
 	005 -> 034
@@ -622,14 +662,14 @@ digraph {
 	020 -> 170
 	021 -> 181
 	021 -> 061
-	021 -> 101 [class = "opt" label = "communing ring"]
+	021 -> 101 [class = "opt" label = "-communing ring"]
 	022
 	023 -> 108
 	023 -> 129
 	024 -> 042
 	024 -> 379
 	025 -> 225 [class = "opt" label = "35 gold"]
-	025 -> 173 [class = "opt" label = "-item"]
+	025 -> 173
 	025 -> 200
 	025 -> 116
 	026 -> 186
@@ -683,7 +723,7 @@ digraph {
 	050 -> 182 [class = "req" label = "iron mace"]
 	050 -> 115
 	051 -> 091 [class = "req" label = "searched Keladon"]
-	051 -> 221
+	051 -> 211
 	052 -> 392 [class = "opt" label = "-2 meal"]
 	052 -> 192
 	053 -> 090 [class = "pass" label = "LK"]
@@ -702,11 +742,11 @@ digraph {
 	060 -> 120 [class = "fail"]
 	061 -> 201 [class = "pwd" label = "pirate"]
 	061 -> 141
-	062 -> 251
-	062 -> 071
-	062 -> 171
-	062 -> 131
-	062 -> 311
+	062 -> 251.1
+	062 -> 071.2
+	062 -> 171.4
+	062 -> 131.4
+	062 -> 311.5
 	063 -> 116
 	063 -> 162
 	063 -> 323
@@ -716,9 +756,9 @@ digraph {
 	065 -> 022 [class = "req" label = "Qadarnai spear"]
 	065 -> 353
 	066 -> 302
-	067 -> 051
-	067 -> 171
-	067 -> 311
+	067 -> 051.2
+	067 -> 171.2
+	067 -> 311.3
 	068 -> 042
 	068 -> 379
 	069 -> 279
@@ -726,9 +766,9 @@ digraph {
 	070
 	071 -> 251
 	071 -> 291
-	071 -> 171
-	071 -> 131
-	071 -> 311
+	071 -> 171.3
+	071 -> 131.3
+	071 -> 311.4
 	072 -> 132
 	073 -> 153 [class = "req" label = "Fays ring"]
 	073 -> 243
@@ -739,12 +779,12 @@ digraph {
 	077 -> 172
 	077 -> 376
 	077 -> 100
-	078 -> 051
-	078 -> 131
-	078 -> 311
+	078 -> 051.1
+	078 -> 131.1
+	078 -> 311.1
 	079 -> 348 [class = "req" label = "Paz"]
 	079 -> 398
-	080 -> 026
+	080 -> 025
 	080 -> 016
 	081 -> 021
 	082 -> 357 [class = "pass" label = "LK"]
@@ -757,11 +797,11 @@ digraph {
 	085 -> 030
 	085 -> 193
 	085 -> 329
-	086 -> 071
-	086 -> 291
-	086 -> 171
-	086 -> 131
-	086 -> 311
+	086 -> 071.1
+	086 -> 291.1
+	086 -> 171.1
+	086 -> 131.2
+	086 -> 311.2
 	087 -> 225 [class = "opt" label = "-35 gold"]
 	087 -> 200
 	087 -> 116
@@ -792,7 +832,7 @@ digraph {
 	104 -> 343
 	105 -> 333
 	105 -> 165
-	106 -> 320
+	106 -> 302
 	107 -> 046
 	107 -> 325
 	108 -> 269
@@ -859,7 +899,7 @@ digraph {
 	138 -> 166 [class = "fail"]
 	139 -> 110 [class = "req" label = "Qadarnai spear"]
 	139 -> 346 [class = "req" label = "puffball"]
-	139 -> 270 [class = "req" label = "Fays ring"]
+	139 -> 270 [class = "req" label = "-Fays ring"]
 	139 -> 155
 	140 -> 164 [class = "pass" label = "LK"]
 	140 -> 288 [class = "fail"]
@@ -871,9 +911,9 @@ digraph {
 	144 -> 042
 	144 -> 379
 	145 -> 234 [class = "req" label = "Qadarnai spear"]
-	145 -> 004 [class = "req" label = "Fays ring"]
+	145 -> 004 [class = "req" label = "-Fays ring"]
 	145 -> 338 [class = "req" label = "disruption charm"]
-	145 -> 250
+//	145 -> 250
 	146 -> 163
 	146 -> 396
 	147 -> 365
@@ -962,9 +1002,9 @@ digraph {
 	194 -> 354
 	195 -> 302
 	196 -> 216
-	197 -> 051
-	197 -> 171
-	197 -> 311
+	197 -> 051.2
+	197 -> 171.2
+	197 -> 311.3
 	198 -> 309 [class = "pass" label = "RS-2"]
 	198 -> 399 [class = "fail"]
 	199 -> 147 [class = "pass" label = "RS"]
@@ -998,7 +1038,7 @@ digraph {
 	214 -> 198
 	215 -> 058
 	216 -> 276 [class = "dice" label = "1"]
-	216 -> 316
+	216 -> 316 [weight = 10]
 	217 -> 329
 	218 -> 320
 	218 -> 300
@@ -1023,11 +1063,11 @@ digraph {
 	230 -> 176
 	230 -> 199
 	230 -> 140
-	231 -> 071
-	231 -> 291
-	231 -> 171
-	231 -> 131
-	231 -> 311
+	231 -> 071.1
+	231 -> 291.1
+	231 -> 171.1
+	231 -> 131.2
+	231 -> 311.2
 	232 -> 003
 	233 -> 172
 	233 -> 376
@@ -1036,7 +1076,8 @@ digraph {
 	234 -> 088 [class = "pass" label = "SK"]
 	235 -> 339
 	235 -> 298
-	236 -> 216
+//	236 -> 216
+	216 -> 236 [dir = back]
 	237 -> 117 [class = "pass" label = "RS"]
 	237 -> 322 [class = "fail"]
 	238 -> 303
@@ -1057,23 +1098,24 @@ digraph {
 	249 -> 185
 	249 -> 374
 	249 -> 149
-	250 -> 145
+	250 -> 145 [dir = both]
 	250 -> 400 [class = "cbt" label = "win"]
 	251 -> 331
 	251 -> 191
-	252 -> 032 [class = "opt" label = "-1 communion ring"]
+	252 -> 032 [class = "opt" label = "-communing ring"]
 	252 -> 003
 	066 -> 253.1 -> 069 
 	204 -> 253.2 -> 098
-	245 -> 253.3 -> 069
-	250 -> 253.4 -> 338
-	293 -> 253.5 -> 084
-	358 -> 253.6 -> 338
+	245 -> 253.1
+	250 -> 253.3 -> 338
+	293 -> 253.4 -> 084
+	358 -> 253.3
 	254 -> 194
-	255 -> 051
-	255 -> 131
-	255 -> 311
-	256 -> 216
+	255 -> 051.1
+	255 -> 131.1
+	255 -> 311.1
+//	256 -> 216
+	216 -> 256 [dir = back]
 	257 -> 326 [class = "req" label = "Qadarnai spear"]
 	257 -> 296
 	258 -> 366
@@ -1097,11 +1139,11 @@ digraph {
 	269 -> 359
 	269 -> 149
 	270 -> 366
-	271 -> 071
-	271 -> 291
-	271 -> 171
-	271 -> 131
-	271 -> 311
+	271 -> 071.1
+	271 -> 291.1
+	271 -> 171.1
+	271 -> 131.2
+	271 -> 311.2
 	272 -> 252
 	273 -> 235
 	273 -> 298
@@ -1140,7 +1182,7 @@ digraph {
 	293 -> 355 [class = "cbt" label = "AR&le;6"]
 	293 -> 104
 	293 -> 159 [class = "cbt" label = "flee"]
-	294 -> 054
+	294 -> 054 [class = "cbt" label = "EST&le;5"]
 	295
 	296 -> 386
 	297 -> 197
@@ -1164,13 +1206,13 @@ digraph {
 	309 -> 257
 	310 -> 050 [class = "req" label = "Morlak"]
 	310 -> 115
-	311 -> 391 [class = "req" label = "searched areas"]
+	311 -> 391 [class = "req" label = "searched Keladon"]
 	311 -> 383
 	312 -> 372
 	312 -> 272
 	313 -> 230
-	314 -> 090 [class = "pass" label = "LK"]
-	314 -> 059 [class = "fail"]
+	314 -> 090 [weight = 1 class = "pass" label = "LK"]
+	314 -> 059 [weight = 1 class = "fail"]
 	315 -> 396
 	315 -> 378
 	316 -> 165
@@ -1198,11 +1240,11 @@ digraph {
 	330 -> 290
 	331 -> 371
 	331 -> 191
-	331 -> 071
-	331 -> 291
-	331 -> 171
-	331 -> 131
-	331 -> 311
+	331 -> 071.1
+	331 -> 291.1
+	331 -> 171.1
+	331 -> 131.2
+	331 -> 311.2
 	332 -> 003
 	332 -> 112
 	333 -> 127
@@ -1229,20 +1271,20 @@ digraph {
 	348 -> 398
 	349 -> 324
 	350 -> 002
-	351 -> 071
-	351 -> 291
-	351 -> 171
-	351 -> 131
-	351 -> 311
+	351 -> 071.1
+	351 -> 291.1
+	351 -> 171.1
+	351 -> 131.2
+	351 -> 311.2
 	352 -> 212
 	353 -> 046
 	354 -> 114
 	354 -> 079
 	355 -> 163
 	355 -> 343
-	356 -> 051
-	356 -> 131
-	356 -> 311
+	356 -> 051.1
+	356 -> 131.1
+	356 -> 311.1
 	357 -> 030
 	358 -> 250
 	359 -> 060
@@ -1261,7 +1303,7 @@ digraph {
 	367 -> 229
 	367 -> 395
 	368 -> 382
-	368 -> 096 [class = "opt" label = "-1 communion ring"]
+	368 -> 096 [class = "opt" label = "-communing ring"]
 	369 -> 205
 	369 -> 116
 	369 -> 335
@@ -1291,7 +1333,7 @@ digraph {
 	383 -> 015
 	383 -> 045
 	383 -> 274
-	383 -> 224 [class = "req" label = "Fays ring"]
+	383 -> 224 [class = "opt" label = "-Fays ring"]
 	384 -> 286
 	384 -> 230
 	384 -> 128
@@ -1299,7 +1341,7 @@ digraph {
 	385 -> 377
 	386 -> 046
 	386 -> 325
-	386 -> 093 [class = "opt" label = "-1 communion ring"]
+	386 -> 093 [class = "opt" label = "-communing ring"]
 	387 -> 297
 	388 -> 144
 	389 -> 050 [class = "req" label = "Morlak"]
@@ -1315,7 +1357,7 @@ digraph {
 	395 -> 107
 	396 -> 358
 	397 -> 365
-	397 -> 247
+	397 -> 247 [class = "cbt" label = "AR>8"]
 	398 -> 186
 	399
 	400
