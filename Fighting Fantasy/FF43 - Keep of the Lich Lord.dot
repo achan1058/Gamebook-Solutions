@@ -65,6 +65,7 @@ digraph {
 		Healing herbs - +6ST.\l \
 		Polished shield - Undead suffers -1ESK.\l \
 		Qadarnai spear - Double damage vs undead.\l \
+		Lhyss elixir - Go to 035 when drunk.\l \
 		Chaos Shaman: -1ST/round\l \
 		Order: item/gold/AT/SK/ST/LK\l \
 		"
@@ -75,7 +76,7 @@ digraph {
 		node [style = "filled" color = "greenyellow"]
 		boo1 [label = "\N\n text"]
 		boo3 [label = "\N\n text"]
-		039 [color = "greenyellow:pink" label = "\N\n -2ST\n +1RS"]
+		078 [color = "greenyellow:pink" label = "\N\n -2ST\n +1RS"]
 		094 [label = "\N\n +3ST"]
 		100 [label = "\N\n +1LK?\n (first door)"]
 		108 [label = "\N\n +1RS"]
@@ -86,6 +87,7 @@ digraph {
 		226 [color = "greenyellow:pink" label = "\N\n +1LK\n +2AL"]
 		262 [label = "\N\n +1RS"]
 		267 [label = "\N\n +1LK"]
+		275 [label = "\N\n +1IFK\n +1FK"]
 		283 [label = "\N\n +1LK"]
 		302 [label = "\N\n -1AL"]
 		308 [label = "\N\n +6ST"]
@@ -223,7 +225,7 @@ digraph {
 		348 [label = "\N\n ages amulet"]
 		351 [label = "\N\n 7 gold"]
 		365 [class = "ddg" label = "\N\n 10 gold\n iron key\n +1AL"]
-		368 [label = "\N\n 25 gold\n whistle\n Lhyss elixir: 35"]
+		368 [label = "\N\n 25 gold\n whistle\n Lhyss elixir"]
 		386 [label = "\N\n Fays ring"]
 		392 [label = "\N\n -2 meal\n sword +1DG"]
 		398 [label = "\N\n 10 gold\n healing herbs"]
@@ -695,7 +697,7 @@ digraph {
 	035 -> 154 [class = "dice" label = "1-2"]
 	035 -> 308 [class = "dice" label = "3-4"]
 	035 -> 275 [class = "dice" label = "5-6"]
-	035 -> return035
+//	035 -> 368
 	036 -> 351
 	037 -> 067
 	037 -> 097
@@ -721,8 +723,7 @@ digraph {
 	047 -> 214
 	047 -> 244
 	048 -> 208 [class = "pass" label = "Qadarnai spear\n SK"]
-	048 -> 028 [class = "fail"]
-	048 -> 028
+	048 -> 028 [color = "brown:black"]
 	049 -> 068
 	050 -> 182 [class = "req" label = "iron mace"]
 	050 -> 115
@@ -930,7 +931,7 @@ digraph {
 	152 -> 192
 	153 -> 333
 	153 -> 165
-	154 -> return154
+	154 -> return
 	155
 	156 -> 034
 	156 -> 064
@@ -1154,7 +1155,7 @@ digraph {
 	273 -> 298
 	274 -> 007 [class = "pass" label = "LK"]
 	274 -> 394 [class = "fail"]
-	275 -> return275
+	275 -> return
 	276 -> 236 [class = "pass" label = "LK"]
 	276 -> 256 [class = "fail"]
 	277 -> 167
@@ -1207,7 +1208,7 @@ digraph {
 	305 -> 078
 	306 -> 324
 	307 -> 116
-	308 -> return308
+	308 -> return
 	309 -> 257
 	310 -> 050 [class = "req" label = "Morlak"]
 	310 -> 115
@@ -1307,6 +1308,7 @@ digraph {
 	366 -> 246
 	367 -> 229
 	367 -> 395
+	368 -> 035 [class = "pwd" label = "Lhyss elixir"]
 	368 -> 382
 	368 -> 096 [class = "opt" label = "-communing ring"]
 	369 -> 205
