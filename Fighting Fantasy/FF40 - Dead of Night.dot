@@ -91,6 +91,7 @@ digraph {
 		005 [label = "\N\n -4ST"]
 		010 [label = "\N\n -2dST"]
 		012 [label = "\N\n -1dST"]
+		016 [label = "\N\n +1EV"]
 		017 [label = "\N\n +2EV"]
 		036 [label = "\N\n -6ST"]
 		038 [label = "\N\n -2ST"]
@@ -117,6 +118,7 @@ digraph {
 		216 [label = "\N\n -1SK\n +1EV"]
 		219 [label = "\N\n -2ST"]
 		225 [label = "\N\n +2EV"]
+		243 [label = "\N\n -1ESK\n +1EV"]
 		256 [label = "\N\n -0~1dx2ST?\n (1dxSK)"]
 		264 [label = "\N\n -6ST"]
 		268 [label = "\N\n -2ST"]
@@ -127,6 +129,7 @@ digraph {
 		305 [label = "\N\n -1dST"]
 		319 [label = "\N\n -3ST"]
 		332 [label = "\N\n -2ST"]
+		341 [label = "\N\n +2EV"]
 		350 [label = "\N\n +1EV"]
 		355 [label = "\N\n -1SK\n -3ST"]
 		374 [label = "\N\n +2EV"]
@@ -189,7 +192,6 @@ digraph {
 		opt2 [class = "bst"]
 		opt3 [class = "bst"]
 		009 [class = "ddg" fontcolor = "crimson" label = "\N\n -sword (-1SK)\n -all gold"]
-		016 [class = "ddg" fontcolor = "crimson" label = "\N\n wraith-blood\n +1EV"]
 		025 [label = "\N\n holy amulet"]
 		027 [class = "bst" label = "\N\n -cross\n seal worm\n +1LK"]
 		032 [class = "bst" label = "\N\n info\n +2ST" tooltip = "death-on-the-marsh"]
@@ -206,11 +208,9 @@ digraph {
 		128 [label = "\N\n orc disguise"]
 		160 [label = "\N\n 2 gold"]
 		164 [fontcolor = "crimson" label = "\N\n -? holy water\n mouth sealed\n (even)"]
-		167 [label = "\N\n correct door"]
 		170 [label = "\N\n lantern"]
 		174 [class = "ddg" fontcolor = "crimson" label = "\N\n -talent\n +2EV"]
 		189 [label = "\N\n cloak"]
-		201 [label = "\N\n correct door"]
 		202 [fontcolor = "crimson" label = "\N\n -1 gold"]
 		213 [label = "\N\n red dial"]
 		218 [label = "\N\n Branner's ring"]
@@ -219,20 +219,16 @@ digraph {
 		241 [label = "\N\n info" tooltip = "cragrock peaks"]
 		257 [label = "\N\n 12 gold"]
 		261 [class = "bst" label = "\N\n 2 gold\n +1LK"]
-		279 [label = "\N\n correct door"]
 		286 [label = "\N\n -holy water?\n (!holy amulet)"]
 		293 [label = "\N\n destiny potion (+4LK)\n sword\n 5 gold"]
 		315 [label = "\N\n green dial"]
 		320 [fontcolor = "crimson" label = "\N\n -? gold"]
 		336 [fontcolor = "crimson" label = "\N\n -cross\n -holy water\n -Demon-Slaying sword\n -all meal"]
-		341 [class = "ddg" label = "\N\n friend\n +2EV"]
 		348 [label = "\N\n Demon-Slaying sword (+4AT)"]
 		351 [class = "ddg" label = "\N\n -2ST?\n (!eat meal)"]
-		365 [label = "\N\n correct door"]
 		369 [class = "ddg" fontcolor = "crimson" label = "\N\n -all equipment (-1SK)\n -2ST"]
 		371 [label = "\N\n +talent"]
 		375 [fontcolor = "crimson" label = "\N\n -cross"]
-		396 [label = "\N\n correct door"]
 		kkyy
 	}
 	
@@ -243,12 +239,6 @@ digraph {
 		wrd3 [label = "\N\n text"]
 		277 [label = "\N\n parchment: 150"]
 		wrdd
-	}
-	
-	subgraph Shop {
-		node [fontcolor = "purple" shape = "rect"]
-		shop1 [label = "\N\n text"]
-		shpp
 	}
 	
 	subgraph Combat {
@@ -285,6 +275,9 @@ digraph {
 		subgraph cluster_02 {
 			label = "Magrand\n 6/6"
 			048
+			235
+			243
+			372
 		}
 		
 		subgraph cluster_03 {
@@ -305,11 +298,13 @@ digraph {
 		subgraph cluster_06 {
 			label = "Abomination\n 6/13"
 			065
+			248 [label = "\N\n +4ESK"]
 		}
 		
 		subgraph cluster_07 {
 			label = "Moon Demon Mage\n 6/9"
 			104
+			387
 		}
 		
 		subgraph cluster_08 {
@@ -320,6 +315,7 @@ digraph {
 		subgraph cluster_09 {
 			label = "? Skeleton\n 7/6 ... 7/6"
 			117 [label = "\N\n -1d skeleton"]
+			211
 		}
 		
 		subgraph cluster_10 {
@@ -340,6 +336,7 @@ digraph {
 		subgraph cluster_13 {
 			label = "Spirit Demon\n 8/8"
 			161
+			298
 		}
 		
 		subgraph cluster_14 {
@@ -350,11 +347,6 @@ digraph {
 		subgraph cluster_15 {
 			label = "Orc\n 6/6 5/5 4/7"
 			179 [shape = "rect" class = "kky" label = "\N\n lantern"]
-		}
-		
-		subgraph cluster_16 {
-			label = "? Skeleton\n 7/6 ... 7/6"
-			211
 		}
 		
 		subgraph cluster_17 {
@@ -372,19 +364,8 @@ digraph {
 			232
 		}
 		
-		subgraph cluster_20 {
-			label = "Magrand\n 6/6"
-			235
-		}
-		
 		subgraph cluster_21 {
 			label = "Magrand\n 5/6"
-			243 [class = "ddg" label = "\N\n +1EV"]
-		}
-		
-		subgraph cluster_22 {
-			label = "Abomination\n 10/13"
-			248 [label = "\N\n -?EST"]
 		}
 		
 		subgraph cluster_23 {
@@ -400,11 +381,6 @@ digraph {
 		subgraph cluster_25 {
 			label = "Demonic Servent*\n 8/7 7/7"
 			263
-		}
-		
-		subgraph cluster_26 {
-			label = "Spirit Demon\n 8/8"
-			298
 		}
 		
 		subgraph cluster_27 {
@@ -447,16 +423,6 @@ digraph {
 			359
 		}
 		
-		subgraph cluster_35 {
-			label = "Magrand\n 6/6"
-			372
-		}
-		
-		subgraph cluster_36 {
-			label = "Moon Demon Mage\n 6/9"
-			387
-		}
-		
 		subgraph cluster_37 {
 			label = "Angry Villager\n 5/5 6/5"
 			390
@@ -469,7 +435,14 @@ digraph {
 		
 		cbtt
 	}
-
+	
+	subgraph Area_1 {
+		node [style = "filled" color = "yellow" fixedsize = true label = "To\n 389"]
+		389 [label = "\N"]
+		389.1
+		389.2
+	}
+	
 	subgraph Optional {
 		node [shape = "rect" class = "opt kky"]
 		opt [class = "opt kky"]
@@ -518,7 +491,7 @@ digraph {
 		monboo5 [class = "req kky"]
 		mondam5 [class = "req kky"]
 		mon5 [class = "req kky"]
-		400 [fontcolor = "black" shape = "octagon"]
+		400 [class = "req" shape = "octagon"]
 	}
 	
 	subgraph Required2 {
@@ -588,7 +561,7 @@ digraph {
 	016 -> 051
 	017 -> 381
 	018 -> 245
-	018 -> 288
+//	018 -> 288
 	019 -> 153
 	020 -> 388
 	021 -> 206 [class = "skl" label = "sense demon"]
@@ -614,9 +587,9 @@ digraph {
 	035 -> 002
 	035 -> 020
 	036 -> 300
-	036 -> 177
+//	036 -> 177
 	037 -> 245
-	037 -> 288
+//	037 -> 288
 	038 -> 338
 	039 -> 173
 	040 -> 130
@@ -628,9 +601,9 @@ digraph {
 	046 -> 331
 	046 -> 222 [class = "skl" label = "sense demon"]
 	046 -> 096 [class = "skl" label = "holy circle"]
-	047 -> 379
-	047 -> 068
-	047 -> 300
+	047 -> 379 [dir = both]
+//	047 -> 068
+//	047 -> 300
 	048 -> 293
 	049 -> 024
 	050 -> 359 [class = "pass" label = "SK"]
@@ -660,14 +633,14 @@ digraph {
 	064 -> 348
 	065 -> 248 [class = "cbt" label = "AR>2"]
 	066 -> 358
-	066 -> 344
-	066 -> 380
+	066 -> 344 [dir = both]
+	066 -> 380 [dir = both]
 	067 -> 244
 	067 -> 353
 	068 -> 300
-	068 -> 199
-	068 -> 316
-	068 -> 047
+	068 -> 199 [dir = both]
+	068 -> 316 [dir = both]
+	068 -> 047 [dir = both]
 	069 -> 059
 	069 -> 374
 	070
@@ -678,14 +651,14 @@ digraph {
 	072 -> 314
 	072 -> 145
 	073 -> 186
-	073 -> 141
+	073 -> 141 [dir = both]
 	074 -> 302
 	074 -> 183
 	075 -> 105
 	076 -> 112
 	076 -> 215
-	077 -> 398
-	078 -> 257
+//	077 -> 398
+	078 -> 257 [dir = both]
 	078 -> 240
 	079 -> 245
 	080 -> 263
@@ -735,7 +708,7 @@ digraph {
 	108 -> 280
 	109
 	110 -> 230
-	111 -> 398
+//	111 -> 398
 	112 -> 275 [class = "pass" label = "LK"]
 	112 -> 043 [class = "fail"]
 	113 -> 165 [class = "skl" label = "banish undead"]
@@ -760,12 +733,12 @@ digraph {
 	124 -> 363
 	124 -> 152
 	124 -> 047
-	124 -> 379
+//	124 -> 379
 	125 -> 130
 	126 -> 051
 	127 -> 228 [class = "skl" label = "heal"]
 	127 -> 366
-	128 -> 203
+	128 -> 203 [dir = both]
 	128 -> 157
 	129 -> 318 [class = "skl" label = "heal"]
 	129 -> 102
@@ -790,7 +763,7 @@ digraph {
 	140 -> 175
 	140 -> 100
 	141 -> 158
-	141 -> 073
+//	141 -> 073
 	142 -> 004
 	142 -> 249
 	142 -> 072
@@ -812,7 +785,7 @@ digraph {
 	151 -> 245
 	151 -> 288
 	152 -> 068
-	152 -> 316
+	152 -> 316 [dir = both]
 	153 -> 382
 	153 -> 335
 	153 -> 131
@@ -845,6 +818,7 @@ digraph {
 //	167 -> 330
 	167 -> 201
 //	167 -> 158
+	167 -> 386 [class = "pwd" label = "wrong door"]
 	168 -> 323
 	168 -> 385
 	169 -> 199
@@ -860,8 +834,8 @@ digraph {
 	175 -> 057 [class = "pass" label = "LK"]
 	175 -> 264 [class = "fail"]
 	176
-	177 -> 316
-	177 -> 036
+//	177 -> 316
+	177 -> 036 [dir = both]
 	177 -> 247
 	178 -> 187
 	179 -> 253
@@ -881,7 +855,7 @@ digraph {
 	185 -> 342
 	186 -> 197 [class = "pass" label = "LK"]
 	186 -> 246 [class = "fail"]
-	187 -> 389 [class = "opt" label = "2 gold"]
+	187 -> 389.1 [class = "opt" label = "-2 gold"]
 	187 -> 185
 	188 -> 006
 	188 -> 329
@@ -902,9 +876,9 @@ digraph {
 	197 -> 227
 	198 -> 387 [class = "skl" label = "speak demon"]
 	198 -> 104
-	199 -> 392
-	199 -> 308
-	199 -> 068
+	199 -> 392 [dir = both]
+	199 -> 308 [dir = both]
+//	199 -> 068
 	200 -> 249
 	200 -> 072
 	200 -> 136
@@ -914,10 +888,11 @@ digraph {
 	201 -> 396
 //	201 -> 179
 //	201 -> 187
+	201 -> 386 [class = "pwd" label = "wrong door"]
 	202 -> 015
 	202 -> 314
 	202 -> 145
-	203 -> 128
+//	203 -> 128
 	203 -> 157
 	204 -> 328 [class = "dice" label = "1-2"]
 	204 -> 182 [class = "dice" label = "3-6"]
@@ -930,7 +905,7 @@ digraph {
 	209 -> 203
 	209 -> 128
 	209 -> 157
-	210 -> 398
+//	210 -> 398
 	211 -> 129
 	212 -> 110 [class = "skl" label = "holy circle"]
 	212 -> 325 [class = "skl" label = "meditation"]
@@ -996,7 +971,7 @@ digraph {
 	245 -> 222 [class = "skl" label = "sense demon"]
 	245 -> 096 [class = "skl" label = "holy circle"]
 	246 -> 346
-	247 -> 300
+//	247 -> 300
 	247 -> 316
 	248 -> 054 [class = "cbt" label = "EAT&ge;AT+5"]
 	248 -> 285
@@ -1017,7 +992,7 @@ digraph {
 	255 -> 007
 	256 -> 109
 	256 -> 169
-	257 -> 078
+//	257 -> 078
 	257 -> 240
 	258
 	259 -> 395
@@ -1029,7 +1004,7 @@ digraph {
 	262 -> 390
 	263 -> 280
 	264 -> 153
-	265 -> 389 [class = "opt" label = "-2 gold"]
+	265 -> 389.2 [class = "opt" label = "-2 gold"]
 	265 -> 295
 	265 -> 071
 	266 -> 195
@@ -1061,8 +1036,9 @@ digraph {
 //	279 -> 037
 //	279 -> 056
 //	279 -> 327
+	279 -> 386 [class = "pwd" label = "wrong door"]
 	280 -> 364
-	280 -> 101
+	280 -> 101 [weight = 1]
 	281 -> 121 [class = "pass" label = "LK"]
 	281 -> 005 [class = "fail"]
 	282 -> 044
@@ -1070,7 +1046,7 @@ digraph {
 	283 -> 119
 	283 -> 302
 	283 -> 183
-	284 -> 398
+//	284 -> 398
 	285 -> 024
 	286 -> 359 [class = "req" label = "holy amulet"]
 	286 -> 359 [class = "pass" label = "SK"]
@@ -1078,8 +1054,8 @@ digraph {
 	287 -> 223
 	287 -> 229
 	288 -> 267
-	288 -> 018
-	288 -> 037
+	288 -> 018 [dir = both]
+	288 -> 037 [dir = both]
 	289 -> 353
 	289 -> 378
 	290 -> 203
@@ -1099,8 +1075,8 @@ digraph {
 	298 -> 310
 	299 -> 062
 	299 -> 291
-	300 -> 247
-	300 -> 047
+	300 -> 247 [dir = both]
+	300 -> 047 [dir = both]
 	301 -> 076
 	302 -> 369 [class = "dice" label = "chosen"]
 	302 -> 313 [class = "dice" label = "missedx3"]
@@ -1115,7 +1091,7 @@ digraph {
 	306 -> 075
 	307 -> 224
 	308 -> 256
-	308 -> 199
+//	308 -> 199
 	309 -> 377 [class = "skl" label = "speak demon"]
 	309 -> 093
 	310 -> 142
@@ -1131,9 +1107,9 @@ digraph {
 	314 -> 145
 	315 -> 030
 	315 -> 272
-	316 -> 177
-	316 -> 152
-	316 -> 068
+	316 -> 177 [dir = both]
+//	316 -> 152
+//	316 -> 068
 	317 -> 236
 	317 -> 381
 	318 -> 102
@@ -1175,8 +1151,8 @@ digraph {
 	342 -> 322
 	343
 	344 -> 099
-	344 -> 380
-	344 -> 066
+	344 -> 380 [dir = both]
+//	344 -> 066
 	345 -> 319
 	345 -> 298
 	346 -> 149 [class = "skl" label = "dark veil"]
@@ -1199,7 +1175,7 @@ digraph {
 	353 -> 045
 	354 -> 147 [class = "pass" label = "LK"]
 	354 -> 250 [class = "fail"]
-	355 -> 398
+//	355 -> 398
 	356 -> 305
 	356 -> 027
 	356 -> 164
@@ -1223,6 +1199,7 @@ digraph {
 //	365 -> 039
 //	365 -> 011
 	365 -> 167
+	365 -> 386 [class = "pwd" label = "wrong door"]
 	366
 	367 -> 179
 	368 -> 033 [class = "skl" label = "heal"]
@@ -1247,13 +1224,13 @@ digraph {
 	378 -> 244
 	378 -> 067
 	378 -> 353
-	379 -> 047
-	379 -> 124
+//	379 -> 047
+	379 -> 124 [dir = both]
 	379 -> 152
 	380 -> 146
 	380 -> 216
-	380 -> 344
-	380 -> 066
+//	380 -> 344
+//	380 -> 066
 	381 -> 291
 	381 -> 062
 	381 -> 370
@@ -1280,7 +1257,7 @@ digraph {
 	391 -> 024
 	392 -> 014
 	392 -> 120
-	392 -> 199
+//	392 -> 199
 	393 -> 015
 	393 -> 115
 	393 -> 314
@@ -1294,14 +1271,15 @@ digraph {
 //	396 -> 342
 //	396 -> 229
 //	396 -> 302
+	396 -> 386 [class = "pwd" label = "wrong door"]
 	397 -> 245
 	398 -> 278 [class = "skl" label = "dark veil"]
 	398 -> 400 [class = "cbt" label = "win"]
-	398 -> 111
-	398 -> 284
-	398 -> 077
-	398 -> 355
-	398 -> 210
+	398 -> 111 [dir = both]
+	398 -> 284 [dir = both]
+	398 -> 077 [dir = both]
+	398 -> 355 [dir = both]
+	398 -> 210 [dir = both]
 	398 -> 273
 	399 -> 009
 	400

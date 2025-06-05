@@ -743,8 +743,8 @@ digraph {
 		monboo5 [class = "req kky"]
 		mondam5 [class = "req kky"]
 		mon5 [class = "req kky"]
-		ending [fontcolor = "black" shape = "octagon"]
-		400 [fontcolor = "black" shape = "octagon"]
+		ending [class = "req" shape = "octagon"]
+		400 [class = "req" shape = "octagon"]
 	}
 	
 	subgraph Required2 {
