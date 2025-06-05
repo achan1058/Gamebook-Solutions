@@ -40,7 +40,7 @@ digraph {
 		Light Blue Fill: Recommended Nodes\l \
 		Gold Outline: Recommended Path\l \
 		Green Box: Combat\l \
-		SK/ST/LK/AT/AR/TM/CW/CL: Skill/Stamina/Luck/Attack Strength/Attack Round/Time/Consecutive Win Round/Consecutive Lose Round\l \
+		SK/ST/LK/AT/AR/RS/AL: Skill/Stamina/Luck/Attack Strength/Attack Round/Resolve/Alarm\l \
 		?: Chance of this happening, depending on instructions in text\l \
 		*: Special Combat Rules\l \
 		-: Negative Status\l \
@@ -60,6 +60,11 @@ digraph {
 		backpack\l \
 		2d6+6 gold\l\l \
 		Comments:\l \
+		Shadow cloak - Whenever asked to increase AL, the amount of increase is reduced by 1, down to a minimum of 1.\l \
+		Resolve potion - Automatically pass next 2 RS check, but no RS increase from passing such check.\l \
+		Healing herbs - +6ST.\l \
+		Polished shield - Undead suffers -1ESK.\l \
+		Qadarnai spear - Double damage vs undead.\l \
 		Chaos Shaman: -1ST/round\l \
 		Order: item/gold/AT/SK/ST/LK\l \
 		"
@@ -195,34 +200,33 @@ digraph {
 		092 [class = "bst" label = "\N\n 50 gold\n +2ST"]
 		117 [label = "\N\n iron mace"]
 		137 [fontcolor = "crimson" label = "\N\n -? gold"]
-		143 [label = "\N\n resolve potion\n (pass 2 PR)"]
+		143 [label = "\N+\n resolve potion"]
 		145 [class = "ddg" label = "\N\n -3ST?\n (!item)"]
-		153 [label = "\N\n polished shield (-1ESK)"]
+		153 [label = "\N\n polished shield"]
 		156 [fontcolor = "crimson" label = "\N\n -? gold"]
 		175 [fontcolor = "crimson" label = "\N\n -weapon"]
 		203 [label = "\N\n halberd?\n (-weapon)"]
 		205 [label = "\N\n Morlak"]
-		225 [label = "\N\n resolve potion\n (pass 2 PR)"]
+		225 [label = "\N+\n resolve potion"]
 		227 [label = "\N\n 25 gold"]
 		241 [label = "\N\n 25 gold"]
-		246 [label = "\N\n iron keys"]
+		246 [label = "\N\n iron key"]
 		247 [class = "ddg" label = "\N\n 10 gold\n iron key\n +4AL"]
 		248 [label = "\N\n ? gold"]
-		271 [fontcolor = "crimson" label = "\N\n Paz\n -1 meal"]
+		271 [label = "\N\n Paz\n -1 meal"]
 		272 [label = "\N\n Qadarnai spear"]
 		291 [label = "\N\n 6 gold"]
 		296 [label = "\N\n 10 gold\n Motris coin"]
-		307 [label = "\N\n resolve potion\n (pass 2 PR)"]
-		326 [label = "\N\n iron keys?\n (SK)"]
+		307 [label = "\N+\n resolve potion"]
+		326 [label = "\N\n iron key?\n (SK)"]
 		333 [label = "\N\n info" tooltip = "Qadarnai spear, disruption charm, finger of Lhyss"]
 		348 [label = "\N\n ages amulet"]
 		351 [label = "\N\n 7 gold"]
 		365 [class = "ddg" label = "\N\n 10 gold\n iron key\n +1AL"]
 		368 [label = "\N\n 25 gold\n whistle\n Lhyss elixir: 35"]
-		371 [label = "\N\n Paz?"]
 		386 [label = "\N\n Fays ring"]
 		392 [label = "\N\n -2 meal\n sword +1DG"]
-		398 [label = "\N\n 10 gold\n healing herbs (+6ST)"]
+		398 [label = "\N\n 10 gold\n healing herbs"]
 		kkyy
 	}
 	
@@ -953,7 +957,7 @@ digraph {
 	170 -> 220 [class = "fail"]
 	171 -> 091 [class = "req" label = "searched Keladon"]
 	171 -> 038
-	172 -> 376
+	172 -> 376 [dir = both]
 	172 -> 100
 	173 -> 130 [class = "req" label = "ages amulet"]
 	173 -> 087
@@ -1012,7 +1016,7 @@ digraph {
 	200 -> 116
 	200 -> 143
 	200 -> 323
-	200 -> 287
+	200 -> 287 [weight = 10]
 	201 -> 261
 	201 -> 161
 	202 -> 046
@@ -1072,7 +1076,8 @@ digraph {
 	233 -> 172
 	233 -> 376
 	233 -> 100
-	234 -> 250 [class = "fail"]
+//	234 -> 250 [class = "fail"]
+	250 -> 234 [dir = back class = "fail"]
 	234 -> 088 [class = "pass" label = "SK"]
 	235 -> 339
 	235 -> 298
@@ -1167,7 +1172,7 @@ digraph {
 	285 -> 139
 	285 -> 317
 	286
-	287 -> 299
+	287 -> 299 [weight = 10]
 	288 -> 349 [class = "cbt" label = "AR>4\n both alive"]
 	288 -> 306
 	289 -> 060
@@ -1317,7 +1322,7 @@ digraph {
 	374 -> 060
 	374 -> 170
 	375 -> 109
-	376 -> 172
+//	376 -> 172
 	376 -> 100
 	377 -> 076 [class = "pass" label = "AL-4"]
 	377 -> 315 [class = "fail"]
