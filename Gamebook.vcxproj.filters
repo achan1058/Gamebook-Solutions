@@ -141,6 +141,9 @@
     <CustomBuild Include="Fighting Fantasy\FF40 - Dead of Night.dot">
       <Filter>Fighting Fantasy</Filter>
     </CustomBuild>
+    <CustomBuild Include="Fighting Fantasy\FF43 - Keep of the Lich Lord.dot">
+      <Filter>Fighting Fantasy</Filter>
+    </CustomBuild>
   </ItemGroup>
   <ItemGroup>
     <Text Include="vertex.txt">

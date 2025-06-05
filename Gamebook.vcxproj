@@ -262,6 +262,9 @@
     <CustomBuild Include="Fighting Fantasy\FF40 - Dead of Night.dot">
       <FileType>Document</FileType>
     </CustomBuild>
+    <CustomBuild Include="Fighting Fantasy\FF43 - Keep of the Lich Lord.dot">
+      <FileType>Document</FileType>
+    </CustomBuild>
     <None Include="style.css" />
     <CustomBuild Include="CSS template.dot">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ExcludedFromBuild>
