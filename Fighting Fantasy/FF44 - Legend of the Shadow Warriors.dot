@@ -187,6 +187,7 @@ digraph {
 		056 [class = "bst" label = "\N\n 2 meal\n +1LK"]
 		059 [label = "\N\n 10 gold"]
 		070 [class = "ddg" fontcolor = "crimson" label = "\N\n -weapon\n -2ST"]
+		077 [label = "\N\n Dream Circus"]
 		083 [fontcolor = "crimson" label = "\N\n -metal rot"]
 		086 [fontcolor = "crimson" label = "\N\n -? gold"]
 		087 [class = "bst" label = "\N\n +2ST\n 1 of:\n sword\n 2 meals\n mongoose paperweight\n lantern & oil"]
@@ -226,11 +227,11 @@ digraph {
 		320 [label = "\N\n Rabbam ring\n -used manacles"]
 		325 [label = "\N\n circus journal"]
 		332 [label = "\N\n green leaf brooch"]
-		340 [class = "bst" label = "\N\n hermit\n +2ST"]
+		349 [class = "bst" label = "\N\n hermit\n +2ST"]
 		354 [label = "\N\n murder sphere\n (does 1dd damage)"]
 		355 [fontcolor = "crimson" label = "\N\n -rope"]
 		357 [fontcolor = "crimson" label = "\N\n -2ESK?\n -4EST?\n (-oil)"]
-		362 [label = "\N\n Korin??"]
+		362 [label = "\N\n Korin"]
 		370 [class = "bst" label = "\N\n civic pardon\n +1LK"]
 		373 [fontcolor = "crimson" label = "\N\n -bet gold"]
 		383 [fontcolor = "crimson" label = "\N\n -rope"]
@@ -244,7 +245,6 @@ digraph {
 		wrd3 [label = "\N\n text"]
 		016 [label = "\N\n mystical number"]
 		076 [class = "bst" label = "\N\n banish: 223\n +1LK"]
-		079 [label = "\N\n Assur-Na-Menes"]
 		121 [label = "\N\n Cerunnos"]
 		282 [label = "\N\n battle plains: 41"]
 		317 [label = "\N\n south gate: 272\n east gate: 60"]
@@ -655,7 +655,7 @@ digraph {
 	015 -> 056
 	016 -> 112
 	016 -> 366
-	017 -> 198
+	017 -> 197
 	018 -> 225
 	019 -> 390
 	019 -> 005
@@ -748,7 +748,7 @@ digraph {
 	065 -> 269
 	066 -> 188
 	066 -> 321 [class = "req" label = "visited east market"]
-	066 -> 282 [class = "pwd" label = "south gate"]
+	066 -> 272 [class = "pwd" label = "south gate"]
 	066 -> 060 [class = "pwd" label = "east gate"]
 	067 -> 077 [class = "opt" label = "-3 gold"]
 	067 -> 009
@@ -790,13 +790,13 @@ digraph {
 	081 -> 065
 	082 -> 188 [class = "req" label = "visited west market"]
 	082 -> 321
-	082 -> 282 [class = "pwd" label = "south gate"]
+	082 -> 272 [class = "pwd" label = "south gate"]
 	082 -> 060 [class = "pwd" label = "east gate"]
 	083 -> 331 [class = "pass" label = "SK"]
 	083 -> 305 [class = "fail"]
 	084 -> 184
 	084 -> 207
-	085 -> 225 [class = "pass" label = "win\n LK"]
+	085 -> 255 [class = "pass" label = "win\n LK"]
 	085 -> 315 [class = "fail" label = "win"]
 	086 -> 054 [class = "dice" label = "4-6"]
 	086 -> 043 [class = "dice" label = "1-3"]
@@ -817,7 +817,7 @@ digraph {
 	094 -> 162 [class = "dice" label = "1-2"]
 	095 -> 224
 	095 -> 050
-	096 -> 011
+	096 -> "shadow.096" -> 011
 	097 -> 323 [class = "pass" label = "LK"]
 	097 -> 241 [class = "fail"]
 	098 -> 132
@@ -867,8 +867,9 @@ digraph {
 	118 -> 289
 	118 -> 219
 	118 -> 137
-	119 -> 337
+	119 -> 377
 	119 -> 282
+	120 -> 267
 	120 -> 047
 	121 -> 019
 	122 -> 169
@@ -988,11 +989,11 @@ digraph {
 	174 -> 084
 	174 -> 031
 	175 -> 030
-	176 -> 383
+	176 -> 383 [class = "opt" label = "rope"]
 	176 -> 282
 	177 -> 220 [class = "opt" label = "chameleon cloat"]
 	177 -> 128 [class = "opt" label = "mind-snaring orb"]
-	177 -> 393 [class = "opt" label = "gold"]
+	177 -> 373 [class = "opt" label = "gold"]
 	177 -> 092
 	178 -> 064 [class = "pass" label = "LK"]
 	178 -> 342 [class = "fail"]
@@ -1077,7 +1078,7 @@ digraph {
 	213 -> 142
 	213 -> 285
 	214 -> 077 [class = "pass" label = "SK"]
-	214 -> 076 [class = "fail"]
+	214 -> 067 [class = "fail"]
 	215 -> 041 [class = "pwd" label = "mystical number\n battle plains"]
 	215 -> 229
 	216 -> 164
@@ -1368,7 +1369,7 @@ digraph {
 	354 -> 111
 	354 -> 037
 	355 -> 032
-	355 -> 078
+	355 -> 278
 	356 -> 180 [class = "pass" label = "LK"]
 	356 -> 154 [class = "fail"]
 	357 -> 135
@@ -1394,7 +1395,7 @@ digraph {
 	367 -> 025
 	367 -> 339
 	367 -> 142
-	368 -> 112 [class = "req" label = "copper key/\n -metal rock"]
+	368 -> 112 [class = "req" label = "copper key/\n -metal rot"]
 	368 -> 258
 	369
 	370 -> 272
