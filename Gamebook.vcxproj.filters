@@ -144,6 +144,9 @@
     <CustomBuild Include="Fighting Fantasy\FF43 - Keep of the Lich Lord.dot">
       <Filter>Fighting Fantasy</Filter>
     </CustomBuild>
+    <CustomBuild Include="Fighting Fantasy\FF44 - Legend of the Shadow Warriors.dot">
+      <Filter>Fighting Fantasy</Filter>
+    </CustomBuild>
   </ItemGroup>
   <ItemGroup>
     <Text Include="vertex.txt">

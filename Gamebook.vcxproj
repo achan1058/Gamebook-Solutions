@@ -261,8 +261,13 @@
     </CustomBuild>
     <CustomBuild Include="Fighting Fantasy\FF40 - Dead of Night.dot">
       <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
     </CustomBuild>
     <CustomBuild Include="Fighting Fantasy\FF43 - Keep of the Lich Lord.dot">
+      <FileType>Document</FileType>
+    </CustomBuild>
+    <CustomBuild Include="Fighting Fantasy\FF44 - Legend of the Shadow Warriors.dot">
       <FileType>Document</FileType>
     </CustomBuild>
     <None Include="style.css" />
