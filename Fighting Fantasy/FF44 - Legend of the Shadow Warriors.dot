@@ -371,7 +371,7 @@ digraph {
 		
 		subgraph cluster_17 {
 			label = "Pan-Terric Behemoth*\n 11/-"
-			152
+			152 [label = "\N\n -2ESK?/n (manacles)"]
 		}
 		
 		subgraph cluster_18 {

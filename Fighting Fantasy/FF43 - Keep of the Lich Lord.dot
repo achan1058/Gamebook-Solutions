@@ -196,7 +196,7 @@ digraph {
 		opt2 [class = "bst"]
 		opt3 [class = "bst"]
 		005 [fontcolor = "crimson" label = "\N\n -1 gold"]
-		033 [label = "\N\n shadow cloak\n (-AL inc)"]
+		033 [label = "\N\n shadow cloak"]
 		043 [label = "\N\n info" tooltip = "Iola knows charm"]
 		062 [label = "\N\n 10 gold\n 1 meal"]
 		092 [class = "bst" label = "\N\n 50 gold\n +2ST"]
@@ -321,6 +321,7 @@ digraph {
 			label = "Vampire\n Vampire\n Lady Lotmora*\n 5/5 5/5 9/11"
 			120 [label = "\N\n -2AT"]
 			150
+			363 [label = "\N\n +2ESK\n +5EST"]
 		}
 		
 		subgraph cluster_10 {
@@ -345,7 +346,7 @@ digraph {
 		}
 		
 		subgraph cluster_17 {
-			label = "Vampire\n Vampire\n Lady Lotmora*\n 7/9 6/8 11/18"
+			label = "2 Vampire\n Lady Lotmora*\n 7/9 6/8 11/18"
 			190
 		}
 		
@@ -426,7 +427,7 @@ digraph {
 		}
 		
 		subgraph cluster_33 {
-			label = "Vampire\n Vampire\n Lady Lotmora\n Kandogor*\n 7/9 6/8 11/18 7/7"
+			label = "2 Vampire\n Lady Lotmora\n Kandogor*\n 7/9 6/8 11/18 7/7"
 			309
 		}
 		
@@ -443,11 +444,6 @@ digraph {
 		subgraph cluster_36 {
 			label = "Skull Beast\n ?/?"
 			342 [label = "\N\n win 2 AR"]
-		}
-		
-		subgraph cluster_38 {
-			label = "Vampires\n ?/?"
-			363 [label = "\N\n +2ESK\n +5EST"]
 		}
 		
 		subgraph cluster_39 {
@@ -864,7 +860,7 @@ digraph {
 	118 -> 158 [class = "fail"]
 	119 -> 014
 	119 -> 187
-	120 -> 363 [class = "cbt" label = "AR>9"]
+	120 -> 363 [dir = both color = "magenta:black" fontcolor = "magenta" label = "AR>9"]
 	120 -> 386
 	121 -> 021
 	122 -> 049
@@ -928,7 +924,7 @@ digraph {
 	150 -> 363 [class = "cbt" label = "AR>9"]
 	150 -> 386
 	151 -> 231
-	152 -> 192
+//	152 -> 192
 	153 -> 333
 	153 -> 165
 	154 -> return
@@ -999,7 +995,7 @@ digraph {
 	190 -> 386
 	191 -> 036
 	191 -> 086
-	192 -> 152 [class = "cbt" label = "EAT&ge;18"]
+	192 -> 152 [dir = both color = "magenta:black" fontcolor = "magenta" label = "EAT&ge;18"]
 	192 -> 092
 	193 -> 057 [class = "pass" label = "RS"]
 	193 -> 082 [class = "fail"]
@@ -1302,7 +1298,7 @@ digraph {
 	361 -> 332
 	362 -> 302
 	362 -> 083
-	363 -> 120
+//	363 -> 120
 	364
 	365 -> 140
 	366 -> 246

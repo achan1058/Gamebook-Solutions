@@ -47,10 +47,11 @@ digraph {
 		+: Positive Status\l \
 		^: Damage can be reduced by items\l \
 		@: Take 2 items\l\l \
-		Starts with:\l \
+		Starting stats:\l \
 		Initial Skill: 1d6+6\l \
 		Initial Stamina: 2d6+12\l \
 		Initial Luck: 1d6+6\l\l \
+		Starting gear:\l \
 		skill/stamina/luck potion: +all SK/ST/LK&1ILK\l \
 		10 meal: +4ST\l \
 		sword\l \
@@ -106,12 +107,17 @@ digraph {
 		kkyy
 	}
 	
+	subgraph Key_Loss {
+		node [fontcolor = "crimson" shape = "rect"]
+		kkll
+	}
+
 	subgraph Key_Word {
 		node [fontcolor = "grey" shape = "rect"]
 		wrd1 [label = "\N\n text"]
 		wrd2 [label = "\N\n text"]
 		wrd3 [label = "\N\n text"]
-		wrdd
+		pwdd
 	}
 	
 	subgraph Shop {
@@ -145,6 +151,7 @@ digraph {
 			monddt2
 			monopt3 [shape = "rect" class = "bst kky"]
 		}
+
 		cbtt
 	}
 
@@ -222,7 +229,7 @@ digraph {
 	z003 -> z006 [dir = "both"]
 	z004 -> z007 [class = "req" label = "req"]
 	z004 -> z008 [class = "opt" label = "-opt"]
-	z005 -> z009 [class = "info" label = "info"]
+	z005 -> z009 [class = "pwd" label = "password"]
 	z009 -> z010 [class = "err" label = "error(?)"]
 	z010 -> z011 [class = "cbt" label = "escape"]
 	z011 -> z012 [class = "skl" label = "spell"]
