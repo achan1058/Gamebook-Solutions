@@ -1,9 +1,8 @@
 digraph {
-	// graph defaults
 	rankdir=LR
 	mclimit=50
-	nodesep=.3 // changes horizontal separation of nodes
-	ranksep=.4 // changes vertical separation of nodes
+	nodesep=.3
+	ranksep=.4
 	node [height=.7
 		width=.7
 		shape=ellipse
@@ -11,91 +10,75 @@ digraph {
 	edge[weight=5]
 	stylesheet="../style.css"
 	
-	subgraph ShopMenu {
-		node [fontcolor = "purple" shape = "rect" margin = 0.1]
-		menu
-	}
-
-	// a box for a graph label
-	// note that you can override the defaults set above
-	title [label = "Fighting Fantasy --: Title\n\n \
+	title [label = "Fighting Fantasy 26: Crypt of the Sorcerer\n\n \
 		Light Green Fill: Benefits\l \
 		Pink Fill: Penalties\l \
 		Red Fill: Death\l \
 		Blue Text: Key Items/Events\l \
-		Red Text: Lost Items\l \
-		Orange Text: Codewords\l \
-		Purple Text: Shops\l \
+		Red Text: Lost Items\Negative Eventsl \
 		Blue Line: Forced Items/Events\l \
 		Light Blue Text/Line: Optional Items/Events\l \
 		Purple Line: Dice Events\l \
 		Green Line: Stat Test Passed\l \
 		Brown Line: Stat Test Failed\l \
 		Magenta Line: Combat Related Events\l \
-		Grey Text: Riddle Answer\l \
+		Grey Text: Numeric Code\l \
 		Grey Line: Hidden Option\l \
-		Orange Line: Codewords/Spells\l \
-		Red Line: Possible Error\l \
 		Gold Fill: Required Nodes\l \
 		Light Blue Fill: Recommended Nodes\l \
 		Gold Outline: Recommended Path\l \
 		Green Box: Combat\l \
-		SK/ST/LK/AT/AR/TM/CW/CL: Skill/Stamina/Luck/Attack Strength/Attack Round/Time/Consecutive Win Round/Consecutive Lose Round\l \
-		?: Chance of this happening, depending on instructions in text\l \
-		*: Special Combat Rules\l \
-		-: Negative Status\l \
-		+: Positive Status\l \
-		^: Damage can be reduced by items\l \
-		@: Take 2 items\l\l \
-		Starting stats:\l \
+		SK/ST/LK/AT/AR: Skill/Stamina/Luck/Attack Strength/Attack Round\l \
+		?: Chance of this happening, depending on text condition\l \
+		*: Special Combat Rules\l\l \
+		Starting Stats:\l \
 		Initial Skill: 1d6+6\l \
 		Initial Stamina: 2d6+12\l \
 		Initial Luck: 1d6+6\l\l \
-		Starting gear:\l \
-		skill/stamina/luck potion: +all SK/ST/LK&1ILK\l \
-		10 meal: +4ST\l \
+		Starting Gear:\l \
 		sword\l \
-		leather armor\l \
-		lantern\l \
-		tinderbox\l \
-		backpack\l \
-		2d6+6 gold\l\l \
-		Comments:\l \
+		backpack\l\l \
+		Key Items:\l \
 		healing potion: +4ST\l \
-		cowardice helmet: Test SK before each combat. Death on failure.\l \
-		163-: Cannot use shield.\l \
-		238*: -2ST first round.\l \
-		Demonic Servant*: -1AK per AR lost.\l \
-		Iron-Eater*: -1AK per AR lost.\l \
-		Order: item/gold/AT/SK/ST/LK\l \
+		numb arm: Cannot use shield, specifically Defender.\l \
+		cowardice helmet: Test SK before each combat. Death on failure.\l\l \
+		Special Combat Rules:\l \
+		Demonic Servant: Destroyed if 2 consecutive AR wins.\l \
+		Iron-Eater: -1SK per AR lost.\l \
+		Rat Man (238): -2AT first round.\l\l \
+		Notes:\l \
+		Walkthrough assumes 12/24/12 stats.\l \
+		Maybe +SK items should go to AS instead? That, or a loaded die.\l \
+		We get armour to avoid a luck test later.\l \
+		We skip Chameleonite blood since it only skips a skill test at SK&ge;11.\l \
+		We rescue Budron for luck for dodging lightning and killing Razaak.\l \
+		Spend remaining luck on damaging Razaak to finish the fight quicker.\l \
 		"
 		shape = "box"
 		margin = 0.1]
 		
 	subgraph Boost {
 		node [style = "filled" color = "greenyellow"]
-		boo1 [label = "\N\n text"]
-		boo3 [label = "\N\n text"]
+		//boo1 [label = "\N\n text"]
+		//boo3 [label = "\N\n text"]
 		028 [label = "\N\n +2ST"]
 		032 [label = "\N\n +2ST"]
 		046 [label = "\N\n +2ST"]
-		048 [label = "\N\n +1d+2ST"]
-		049 [label = "\N\n +2ST"]
+		049 [label = "\N\n +1ST"]
 		103 [label = "\N\n +2ST"]
 		140 [label = "\N\n +2ST"]
-		244 [label = "\N\n +1LK"]
 		316 [label = "\N\n +2ST"]
 		322 [label = "\N\n +2ST"]
 		342 [label = "\N\n +1ST"]
 		361 [label = "\N\n +1LK"]
-		bstt
+		//bstt
 	}
 
 	subgraph Damage {
 		node [style = "filled" color = "pink"]
-		dam1 [label = "\N\n text"]
-		dam3 [label = "\N\n text"]
-		011 [label = "\N\n -2ST"]
+		//dam1 [label = "\N\n text"]
+		//dam3 [label = "\N\n text"]
+		012 [label = "\N\n -2ST"]
 		017 [label = "\N\n -1LK"]
 		042 [label = "\N\n -2SK\n -1ST"]
 		085 [label = "\N\n -1dST"]
@@ -107,7 +90,6 @@ digraph {
 		134 [label = "\N\n -3LK"]
 		158 [label = "\N\n -2ST"]
 		161 [label = "\N\n -1SK\n -6ST"]
-		163 [label = "\N-\n -2SK"]
 		170 [label = "\N\n -1SK\n -1d+3ST"]
 		182 [label = "\N\n -2SK\n -1LK"]
 		190 [label = "\N\n -1LK"]
@@ -115,6 +97,7 @@ digraph {
 		272 [label = "\N\n -1SK\n -4ST"]
 		296 [label = "\N*\n -1SK"]
 		305 [label = "\N\n -4ST"]
+		312 [label = "\N\n -1ST"]
 		314 [label = "\N\n -2ST"]
 		320 [label = "\N\n -1dST"]
 		335 [label = "\N\n -2ST"]
@@ -122,15 +105,15 @@ digraph {
 		350 [label = "\N\n -1LK"]
 		378 [label = "\N\n -2ST"]
 		394 [label = "\N\n -2LK"]
-		ddgg
+		//ddgg
 	}
 	
 	subgraph Death {
 		node [style = "filled" color = "red"]
-		ddt
-		ddt2
-		monddt
-		monddt2
+		//ddt
+		//ddt2
+		//monddt
+		//monddt2
 		003
 		004
 		013
@@ -177,11 +160,11 @@ digraph {
 		385
 		393
 		399
-		ddtt
 	}
 
 	subgraph Key_Item {
 		node [fontcolor = "blue" shape = "rect"]
+		/*
 		key1 [label = "\N\n info" tooltip = "info text"]
 		key2 [label = "\N\n text"]
 		key3 [label = "\N\n text"]
@@ -195,53 +178,58 @@ digraph {
 		opt
 		opt2 [class = "bst"]
 		opt3 [class = "bst"]
+		*/
 		001 [label = "\N\n 5 healing potion"]
 		023 [label = "\N\n knife"]
 		039 [label = "\N\n horseback"]
+		048 [class = "bst" label = "\N\n info\n +1d+2ST" tooltip = "beware boulder beast"]
 		050 [class = "bst" label = "\N\n paralysis rod\n rabbit\n +1LK"]
 		052 [class = "bst" label = "\N\n 10 gold\n knife\n holy water\n +1ST"]
 		065 [label = "\N\n 2 gold\n silver mirror"]
 		075 [label = "\N\n bronze talisman"]
 		116 [label = "\N\n 2 gold\n silver mirror"]
 		124 [label = "\N\n chameleonite blood"]
-		131 [class = "bst" label = "\N\n defender\n +1SK\n +1LK"]
+		131 [class = "bst" label = "\N\n Defender\n +1SK\n +1LK"]
 		144 [label = "\N\n bronze key"]
 		155 [label = "\N\n 2 gold\n silver mirror"]
 		157 [class = "bst" label = "\N\n =5 healing potion\n +2ST"]
+		163 [class = "ddg" label = "\N\n numb arm\n -2SK"]
 		175 [label = "\N\n 4 gold\n candle"]
 		197 [class = "ddg" label = "\N\n cowardice helmet\n -2LK"]
 		212 [label = "\N\n info" tooltip = "immediately escape after defeating Razaak"]
-		243 [label = "\N\n 6 gold\n rat skull"]
+		243 [label = "\N\n 6 gold\n knife\n rat skull"]
 		250 [label = "\N\n hunting horn\n lantern\n crossbow"]
 		254 [label = "\N\n polished stones"]
 		265 [label = "\N\n skull ring"]
 		268 [label = "\N\n info" tooltip = "western flatlands"]
+		282 [label = "\N\n 1 gold"]
 		328 [class = "bst" label = "\N\n armour\n +1SK"]
 		376 [class = "bst" label = "\N\n rested\n +1ST"]
 		341 [class = "bst" label = "\N\n =5 healing potion\n +2ST"]
 		352 [label = "\N\n sanity crystal"]
-		358 [class = "bst" label = "\N\n sword? (+2SK)\n (!sword)"]
+		358 [class = "bst" label = "\N\n +2SK\n (!sword)"]
 		367 [class = "bst" label = "\N\n globe smoke\n +1LK"]
 		379 [label = "\N\n ice ghost"]
 		380 [style = "filled" color = "greenyellow:pink" label = "\N\n armour\n +1SK\n -3LK"]
-		kkyy
+		//kkyy
 	}
 	
 	subgraph Key_Loss {
 		node [fontcolor = "crimson" shape = "rect"]
-		018 [label = "\N\n -all item\n -sword"]
+		018 [label = "\N\n -all item"]
 		092 [class = "bst" label = "\N\n -3 item\n +2ST"]
+		244 [class = "bst" label = "\N\n -healing potion\n +1LK"]
 		277 [label = "\N\n -1 item"]
 		346 [class = "ddg" label = "\N\n -1 healing potion\n -4ST"]
 		388 [class = "ddg" label = "\N\n -1 healing potion\n -2SK\n -6ST"]
-		kkll
+		//kkll
 	}
 
 	subgraph Key_Word {
 		node [fontcolor = "grey" shape = "rect"]
-		wrd1 [label = "\N\n text"]
-		wrd2 [label = "\N\n text"]
-		wrd3 [label = "\N\n text"]
+		//wrd1 [label = "\N\n text"]
+		//wrd2 [label = "\N\n text"]
+		//wrd3 [label = "\N\n text"]
 		074 [label = "\N\n identity tag: 283"]
 		198 [label = "\N\n war-hammer price: 35"]
 		208 [label = "\N\n moon ring: 123"]
@@ -255,17 +243,12 @@ digraph {
 		333 [label = "\N\n Tamal's age: 108"]
 		336 [label = "\N\n Hamakei: 66"]
 		360 [label = "\N\n silver rod: 37"]
-		pwdd
-	}
-	
-	subgraph Shop {
-		node [fontcolor = "purple" shape = "rect"]
-		shop1 [label = "\N\n text"]
-		shpp
+		//pwdd
 	}
 	
 	subgraph Combat {
 		style = "filled" color = "palegreen"
+		/*
 		subgraph cluster_00 {
 			label = "Monster\n 0/0\n 0/0"
 			mon1 [label = "\N\n text"]
@@ -289,10 +272,13 @@ digraph {
 			monddt2
 			monopt3 [shape = "rect" class = "bst kky"]
 		}
-
+		*/
 		subgraph cluster_01 {
 			label = "Goblin\n 5/5\n 5/6\n 6/5\n 6/6"
 			006
+			060
+			190
+			350
 		}
 		
 		subgraph cluster_02 {
@@ -303,16 +289,12 @@ digraph {
 		subgraph cluster_03 {
 			label = "Rad-Hulk\n 10/5\n 10/6"
 			020 [label = "\N\n -2AT"]
+			143
 		}
 		
 		subgraph cluster_04 {
 			label = "Wild Elf\n 7/6"
 			044
-		}
-		
-		subgraph cluster_05 {
-			label = "Goblin\n 5/5\n 5/6\n 6/5\n 6/6"
-			060
 		}
 		
 		subgraph cluster_06 {
@@ -328,6 +310,8 @@ digraph {
 		subgraph cluster_08 {
 			label = "Rat Man\n 5/6"
 			069
+			133
+			238 [label = "\N*"]
 		}
 		
 		subgraph cluster_09 {
@@ -343,6 +327,7 @@ digraph {
 		subgraph cluster_11 {
 			label = "Ape Man\n 8/7"
 			083
+			219 [label = "\N\n -2AT"]
 		}
 		
 		subgraph cluster_12 {
@@ -363,11 +348,7 @@ digraph {
 		subgraph cluster_15 {
 			label = "Dwarf\n 7/7"
 			126
-		}
-		
-		subgraph cluster_16 {
-			label = "Rat Man\n 5/6"
-			133
+			378
 		}
 		
 		subgraph cluster_17 {
@@ -378,11 +359,6 @@ digraph {
 		subgraph cluster_18 {
 			label = "Skeleton\n 6/5\n 6/6\n 5/6"
 			139
-		}
-		
-		subgraph cluster_19 {
-			label = "Rad-Hulk\n 10/5\n 10/6"
-			143
 		}
 		
 		subgraph cluster_20 {
@@ -410,29 +386,15 @@ digraph {
 			178
 		}
 		
-		subgraph cluster_25 {
-			label = "Goblin\n 5/5\n 5/6\n 6/5\n 6/6"
-			190
-		}
-		
 		subgraph cluster_26 {
 			label = "Wild Elf\n 6/5"
 			196
 		}
 		
-		subgraph cluster_27 {
-			label = "Ape Man\n 8/7"
-			219 [label = "\N\n -2AT"]
-		}
-		
 		subgraph cluster_28 {
 			label = "Wood Demon\n 9/10"
 			232
-		}
-		
-		subgraph cluster_29 {
-			label = "Rat Man\n 5/6"
-			238 [label = "\N*"]
+			260 [label = "\N\n -2AT"]
 		}
 		
 		subgraph cluster_30 {
@@ -450,11 +412,6 @@ digraph {
 			257
 		}
 		
-		subgraph cluster_33 {
-			label = "Wood Demon\n 9/10"
-			260 [label = "\N\n -2AT"]
-		}
-		
 		subgraph cluster_34 {
 			label = "Razzak\n 12/20"
 			271
@@ -468,48 +425,30 @@ digraph {
 		subgraph cluster_36 {
 			label = "Clay Golem*\n 8/9"
 			299
+			393
 		}
 		
 		subgraph cluster_37 {
 			label = "Zombie\n 6/6"
 			318
+			373 [label = "\N\n -1dEST"]
 		}
 		
 		subgraph cluster_38 {
 			label = "Hellcat\n 8/8"
 			340
-		}
-		
-		subgraph cluster_39 {
-			label = "Goblin\n 5/5\n 5/6\n 6/5\n 6/6"
-			350
-		}
-		
-		subgraph cluster_40 {
-			label = "Hellcat\n 8/8"
 			355
-		}
-		
-		subgraph cluster_41 {
-			label = "Zombie\n 6/6"
-			373 [label = "\N\n -?EST"]
 		}
 		
 		subgraph cluster_42 {
 			label = "Demonspawn\n 6/6"
 			377
 		}
-		
-		subgraph cluster_43 {
-			label = "Dwarf\n 7/7"
-			378
-		}
-		
-		cbtt
 	}
 
 	subgraph Optional {
 		node [shape = "rect" class = "opt kky"]
+		/*
 		opt [class = "opt kky"]
 		monopt [class = "opt kky"]
 		opt2 [class = "opt kky"]
@@ -517,10 +456,12 @@ digraph {
 		opt3 [class = "opt kky"]
 		monopt3 [class = "opt kky"]
 		optt
+		*/
 	}
 	
 	subgraph Path {
 		node [class = "path" penwidth = 3 color = "gold"]
+		/*
 		txt2
 		key2 [class = "path"]
 		wrd2 [class = "path"]
@@ -545,10 +486,12 @@ digraph {
 		monddt2 [class = "path"]
 		monopt3 [class = "path opt kky"]
 		pptt
+		*/
 	}
 	
 	subgraph Required {
 		node [shape = "rect" class = "req kky"]
+		/*
 		key3 [class = "req kky"]
 		wrd3 [class = "req kky"]
 		boo5 [class = "req kky"]
@@ -556,14 +499,15 @@ digraph {
 		monboo5 [class = "req kky"]
 		mondam5 [class = "req kky"]
 		mon5 [class = "req kky"]
-		ending [class = "req" shape = "octagon"]
+		*/
+		400 [class = "req" shape = "octagon"]
 	}
 	
 	subgraph Required2 {
 		node [shape = "rect" class = "req2 kky"]
-		req2 [class = "req2 kky"]
+		//req2 [class = "req2 kky"]
 	}
-	
+	/*
 	mon1 -> mon2 -> mon3 -> mon4 -> mon5 [penwidth = 3]
 	boo1 -> boo2 -> boo3 -> boo4 -> boo5 [penwidth = 3]
 	dam1 -> dam2 -> dam3 -> dam4 -> dam5 [penwidth = 3]
@@ -591,7 +535,7 @@ digraph {
 		z003
 		z006
 	}
-
+	*/
 	title -> 001
 	001 -> 255
 	001 -> 146
@@ -608,7 +552,7 @@ digraph {
 	009 -> 130
 	009 -> 169
 	010 -> 094
-	010 -> 265
+//	010 -> 265
 	010 -> 369
 	011 -> 257
 	011 -> 028
@@ -702,7 +646,7 @@ digraph {
 	065 -> 032
 	065 -> 203
 	065 -> 280
-	066 -> 271 [class = "req" label = "defender"]
+	066 -> 271 [class = "req" label = "Defender"]
 	066 -> 209
 	067 -> 183
 	067 -> 399
@@ -724,7 +668,7 @@ digraph {
 	078 -> 222
 	079 -> 019
 	080 -> 025
-	080 -> 367
+//	080 -> 367
 	080 -> 386
 	081 -> 093
 	082 -> 295
@@ -776,8 +720,8 @@ digraph {
 	108 -> 291
 	109 -> 399
 	110
-	111 -> 360
-	111 -> 175
+	111 -> 360 [dir = both]
+	111 -> 175 [dir = both]
 	111 -> 221
 	112 -> 383 [class = "fail"]
 	112 -> 323 [class = "pass" label = "SKx3"]
@@ -876,8 +820,8 @@ digraph {
 	173 -> 282
 	174
 	175 -> 268
-	175 -> 360
-	175 -> 111
+	175 -> 360 [dir = both]
+//	175 -> 111
 	175 -> 221
 	176 -> 030
 	177
@@ -1017,7 +961,7 @@ digraph {
 	263
 	264 -> 156
 	264 -> 199
-	265 -> 010
+	265 -> 010 [dir = both]
 	265 -> 094
 	265 -> 369
 	266 -> 040
@@ -1112,8 +1056,10 @@ digraph {
 	312 -> 161 [class = "fail"]
 	313 -> 007
 	313 -> 162
-	314 -> 010
-	314 -> 265
+//	314 -> 010
+	010 -> 314 [dir = back]
+//	314 -> 265
+	265 -> 314 [dir = back]
 	314 -> 369
 	315 -> 379 [class = "fail"]
 	315 -> 072 [class = "pass" label = "SKx3"]
@@ -1183,8 +1129,8 @@ digraph {
 	358 -> 029
 	359 -> 133 [class = "dice" label = "1-3"]
 	359 -> 069 [class = "dice" label = "4-6"]
-	360 -> 111
-	360 -> 175
+//	360 -> 111
+//	360 -> 175
 	360 -> 221
 	361 -> 180
 	362 -> 102
@@ -1196,6 +1142,7 @@ digraph {
 	365 -> 397 [class = "fail"]
 	366 -> 104
 	366 -> 040
+	367 -> 080 [dir = both]
 	367 -> 386
 	368 -> 147
 	369 -> 306
@@ -1219,7 +1166,7 @@ digraph {
 	380 -> 235
 	381 -> 186
 	381 -> 262
-	382 -> 187 [class = "opt" label = "5 gold"]
+	382 -> 187 [class = "opt" label = "-5 gold"]
 	382 -> 118
 	382 -> 153
 	383 -> 141
@@ -1248,606 +1195,6 @@ digraph {
 	398 -> 338
 	399
 	400
-//	401 -> 
-//	402 -> 
-//	403 -> 
-//	404 -> 
-//	405 -> 
-//	406 -> 
-//	407 -> 
-//	408 -> 
-//	409 -> 
-//	410 -> 
-//	411 -> 
-//	412 -> 
-//	413 -> 
-//	414 -> 
-//	415 -> 
-//	416 -> 
-//	417 -> 
-//	418 -> 
-//	419 -> 
-//	420 -> 
-//	421 -> 
-//	422 -> 
-//	423 -> 
-//	424 -> 
-//	425 -> 
-//	426 -> 
-//	427 -> 
-//	428 -> 
-//	429 -> 
-//	430 -> 
-//	431 -> 
-//	432 -> 
-//	433 -> 
-//	434 -> 
-//	435 -> 
-//	436 -> 
-//	437 -> 
-//	438 -> 
-//	439 -> 
-//	440 -> 
-//	441 -> 
-//	442 -> 
-//	443 -> 
-//	444 -> 
-//	445 -> 
-//	446 -> 
-//	447 -> 
-//	448 -> 
-//	449 -> 
-//	450 -> 
-//	451 -> 
-//	452 -> 
-//	453 -> 
-//	454 -> 
-//	455 -> 
-//	456 -> 
-//	457 -> 
-//	458 -> 
-//	459 -> 
-//	460 -> 
-//	461 -> 
-//	462 -> 
-//	463 -> 
-//	464 -> 
-//	465 -> 
-//	466 -> 
-//	467 -> 
-//	468 -> 
-//	469 -> 
-//	470 -> 
-//	471 -> 
-//	472 -> 
-//	473 -> 
-//	474 -> 
-//	475 -> 
-//	476 -> 
-//	477 -> 
-//	478 -> 
-//	479 -> 
-//	480 -> 
-//	481 -> 
-//	482 -> 
-//	483 -> 
-//	484 -> 
-//	485 -> 
-//	486 -> 
-//	487 -> 
-//	488 -> 
-//	489 -> 
-//	490 -> 
-//	491 -> 
-//	492 -> 
-//	493 -> 
-//	494 -> 
-//	495 -> 
-//	496 -> 
-//	497 -> 
-//	498 -> 
-//	499 -> 
-//	500 -> 
-//	501 -> 
-//	502 -> 
-//	503 -> 
-//	504 -> 
-//	505 -> 
-//	506 -> 
-//	507 -> 
-//	508 -> 
-//	509 -> 
-//	510 -> 
-//	511 -> 
-//	512 -> 
-//	513 -> 
-//	514 -> 
-//	515 -> 
-//	516 -> 
-//	517 -> 
-//	518 -> 
-//	519 -> 
-//	520 -> 
-//	521 -> 
-//	522 -> 
-//	523 -> 
-//	524 -> 
-//	525 -> 
-//	526 -> 
-//	527 -> 
-//	528 -> 
-//	529 -> 
-//	530 -> 
-//	531 -> 
-//	532 -> 
-//	533 -> 
-//	534 -> 
-//	535 -> 
-//	536 -> 
-//	537 -> 
-//	538 -> 
-//	539 -> 
-//	540 -> 
-//	541 -> 
-//	542 -> 
-//	543 -> 
-//	544 -> 
-//	545 -> 
-//	546 -> 
-//	547 -> 
-//	548 -> 
-//	549 -> 
-//	550 -> 
-//	551 -> 
-//	552 -> 
-//	553 -> 
-//	554 -> 
-//	555 -> 
-//	556 -> 
-//	557 -> 
-//	558 -> 
-//	559 -> 
-//	560 -> 
-//	561 -> 
-//	562 -> 
-//	563 -> 
-//	564 -> 
-//	565 -> 
-//	566 -> 
-//	567 -> 
-//	568 -> 
-//	569 -> 
-//	570 -> 
-//	571 -> 
-//	572 -> 
-//	573 -> 
-//	574 -> 
-//	575 -> 
-//	576 -> 
-//	577 -> 
-//	578 -> 
-//	579 -> 
-//	580 -> 
-//	581 -> 
-//	582 -> 
-//	583 -> 
-//	584 -> 
-//	585 -> 
-//	586 -> 
-//	587 -> 
-//	588 -> 
-//	589 -> 
-//	590 -> 
-//	591 -> 
-//	592 -> 
-//	593 -> 
-//	594 -> 
-//	595 -> 
-//	596 -> 
-//	597 -> 
-//	598 -> 
-//	599 -> 
-//	600 -> 
-//	601 -> 
-//	602 -> 
-//	603 -> 
-//	604 -> 
-//	605 -> 
-//	606 -> 
-//	607 -> 
-//	608 -> 
-//	609 -> 
-//	610 -> 
-//	611 -> 
-//	612 -> 
-//	613 -> 
-//	614 -> 
-//	615 -> 
-//	616 -> 
-//	617 -> 
-//	618 -> 
-//	619 -> 
-//	620 -> 
-//	621 -> 
-//	622 -> 
-//	623 -> 
-//	624 -> 
-//	625 -> 
-//	626 -> 
-//	627 -> 
-//	628 -> 
-//	629 -> 
-//	630 -> 
-//	631 -> 
-//	632 -> 
-//	633 -> 
-//	634 -> 
-//	635 -> 
-//	636 -> 
-//	637 -> 
-//	638 -> 
-//	639 -> 
-//	640 -> 
-//	641 -> 
-//	642 -> 
-//	643 -> 
-//	644 -> 
-//	645 -> 
-//	646 -> 
-//	647 -> 
-//	648 -> 
-//	649 -> 
-//	650 -> 
-//	651 -> 
-//	652 -> 
-//	653 -> 
-//	654 -> 
-//	655 -> 
-//	656 -> 
-//	657 -> 
-//	658 -> 
-//	659 -> 
-//	660 -> 
-//	661 -> 
-//	662 -> 
-//	663 -> 
-//	664 -> 
-//	665 -> 
-//	666 -> 
-//	667 -> 
-//	668 -> 
-//	669 -> 
-//	670 -> 
-//	671 -> 
-//	672 -> 
-//	673 -> 
-//	674 -> 
-//	675 -> 
-//	676 -> 
-//	677 -> 
-//	678 -> 
-//	679 -> 
-//	680 -> 
-//	681 -> 
-//	682 -> 
-//	683 -> 
-//	684 -> 
-//	685 -> 
-//	686 -> 
-//	687 -> 
-//	688 -> 
-//	689 -> 
-//	690 -> 
-//	691 -> 
-//	692 -> 
-//	693 -> 
-//	694 -> 
-//	695 -> 
-//	696 -> 
-//	697 -> 
-//	698 -> 
-//	699 -> 
-//	700 -> 
-//	701 -> 
-//	702 -> 
-//	703 -> 
-//	704 -> 
-//	705 -> 
-//	706 -> 
-//	707 -> 
-//	708 -> 
-//	709 -> 
-//	710 -> 
-//	711 -> 
-//	712 -> 
-//	713 -> 
-//	714 -> 
-//	715 -> 
-//	716 -> 
-//	717 -> 
-//	718 -> 
-//	719 -> 
-//	720 -> 
-//	721 -> 
-//	722 -> 
-//	723 -> 
-//	724 -> 
-//	725 -> 
-//	726 -> 
-//	727 -> 
-//	728 -> 
-//	729 -> 
-//	730 -> 
-//	731 -> 
-//	732 -> 
-//	733 -> 
-//	734 -> 
-//	735 -> 
-//	736 -> 
-//	737 -> 
-//	738 -> 
-//	739 -> 
-//	740 -> 
-//	741 -> 
-//	742 -> 
-//	743 -> 
-//	744 -> 
-//	745 -> 
-//	746 -> 
-//	747 -> 
-//	748 -> 
-//	749 -> 
-//	750 -> 
-//	751 -> 
-//	752 -> 
-//	753 -> 
-//	754 -> 
-//	755 -> 
-//	756 -> 
-//	757 -> 
-//	758 -> 
-//	759 -> 
-//	760 -> 
-//	761 -> 
-//	762 -> 
-//	763 -> 
-//	764 -> 
-//	765 -> 
-//	766 -> 
-//	767 -> 
-//	768 -> 
-//	769 -> 
-//	770 -> 
-//	771 -> 
-//	772 -> 
-//	773 -> 
-//	774 -> 
-//	775 -> 
-//	776 -> 
-//	777 -> 
-//	778 -> 
-//	779 -> 
-//	780 -> 
-//	781 -> 
-//	782 -> 
-//	783 -> 
-//	784 -> 
-//	785 -> 
-//	786 -> 
-//	787 -> 
-//	788 -> 
-//	789 -> 
-//	790 -> 
-//	791 -> 
-//	792 -> 
-//	793 -> 
-//	794 -> 
-//	795 -> 
-//	796 -> 
-//	797 -> 
-//	798 -> 
-//	799 -> 
-//	800 -> 
-//	801 -> 
-//	802 -> 
-//	803 -> 
-//	804 -> 
-//	805 -> 
-//	806 -> 
-//	807 -> 
-//	808 -> 
-//	809 -> 
-//	810 -> 
-//	811 -> 
-//	812 -> 
-//	813 -> 
-//	814 -> 
-//	815 -> 
-//	816 -> 
-//	817 -> 
-//	818 -> 
-//	819 -> 
-//	820 -> 
-//	821 -> 
-//	822 -> 
-//	823 -> 
-//	824 -> 
-//	825 -> 
-//	826 -> 
-//	827 -> 
-//	828 -> 
-//	829 -> 
-//	830 -> 
-//	831 -> 
-//	832 -> 
-//	833 -> 
-//	834 -> 
-//	835 -> 
-//	836 -> 
-//	837 -> 
-//	838 -> 
-//	839 -> 
-//	840 -> 
-//	841 -> 
-//	842 -> 
-//	843 -> 
-//	844 -> 
-//	845 -> 
-//	846 -> 
-//	847 -> 
-//	848 -> 
-//	849 -> 
-//	850 -> 
-//	851 -> 
-//	852 -> 
-//	853 -> 
-//	854 -> 
-//	855 -> 
-//	856 -> 
-//	857 -> 
-//	858 -> 
-//	859 -> 
-//	860 -> 
-//	861 -> 
-//	862 -> 
-//	863 -> 
-//	864 -> 
-//	865 -> 
-//	866 -> 
-//	867 -> 
-//	868 -> 
-//	869 -> 
-//	870 -> 
-//	871 -> 
-//	872 -> 
-//	873 -> 
-//	874 -> 
-//	875 -> 
-//	876 -> 
-//	877 -> 
-//	878 -> 
-//	879 -> 
-//	880 -> 
-//	881 -> 
-//	882 -> 
-//	883 -> 
-//	884 -> 
-//	885 -> 
-//	886 -> 
-//	887 -> 
-//	888 -> 
-//	889 -> 
-//	890 -> 
-//	891 -> 
-//	892 -> 
-//	893 -> 
-//	894 -> 
-//	895 -> 
-//	896 -> 
-//	897 -> 
-//	898 -> 
-//	899 -> 
-//	900 -> 
-//	901 -> 
-//	902 -> 
-//	903 -> 
-//	904 -> 
-//	905 -> 
-//	906 -> 
-//	907 -> 
-//	908 -> 
-//	909 -> 
-//	910 -> 
-//	911 -> 
-//	912 -> 
-//	913 -> 
-//	914 -> 
-//	915 -> 
-//	916 -> 
-//	917 -> 
-//	918 -> 
-//	919 -> 
-//	920 -> 
-//	921 -> 
-//	922 -> 
-//	923 -> 
-//	924 -> 
-//	925 -> 
-//	926 -> 
-//	927 -> 
-//	928 -> 
-//	929 -> 
-//	930 -> 
-//	931 -> 
-//	932 -> 
-//	933 -> 
-//	934 -> 
-//	935 -> 
-//	936 -> 
-//	937 -> 
-//	938 -> 
-//	939 -> 
-//	940 -> 
-//	941 -> 
-//	942 -> 
-//	943 -> 
-//	944 -> 
-//	945 -> 
-//	946 -> 
-//	947 -> 
-//	948 -> 
-//	949 -> 
-//	950 -> 
-//	951 -> 
-//	952 -> 
-//	953 -> 
-//	954 -> 
-//	955 -> 
-//	956 -> 
-//	957 -> 
-//	958 -> 
-//	959 -> 
-//	960 -> 
-//	961 -> 
-//	962 -> 
-//	963 -> 
-//	964 -> 
-//	965 -> 
-//	966 -> 
-//	967 -> 
-//	968 -> 
-//	969 -> 
-//	970 -> 
-//	971 -> 
-//	972 -> 
-//	973 -> 
-//	974 -> 
-//	975 -> 
-//	976 -> 
-//	977 -> 
-//	978 -> 
-//	979 -> 
-//	980 -> 
-//	981 -> 
-//	982 -> 
-//	983 -> 
-//	984 -> 
-//	985 -> 
-//	986 -> 
-//	987 -> 
-//	988 -> 
-//	989 -> 
-//	990 -> 
-//	991 -> 
-//	992 -> 
-//	993 -> 
-//	994 -> 
-//	995 -> 
-//	996 -> 
-//	997 -> 
-//	998 -> 
-//	999 -> 
-//	1000 -> 
 
 /*
 	001 [fontsize=25]
@@ -2250,605 +1597,5 @@ digraph {
 	398 [fontsize=25]
 	399 [fontsize=25]
 	400 [fontsize=25]
-	401 [fontsize=25]
-	402 [fontsize=25]
-	403 [fontsize=25]
-	404 [fontsize=25]
-	405 [fontsize=25]
-	406 [fontsize=25]
-	407 [fontsize=25]
-	408 [fontsize=25]
-	409 [fontsize=25]
-	410 [fontsize=25]
-	411 [fontsize=25]
-	412 [fontsize=25]
-	413 [fontsize=25]
-	414 [fontsize=25]
-	415 [fontsize=25]
-	416 [fontsize=25]
-	417 [fontsize=25]
-	418 [fontsize=25]
-	419 [fontsize=25]
-	420 [fontsize=25]
-	421 [fontsize=25]
-	422 [fontsize=25]
-	423 [fontsize=25]
-	424 [fontsize=25]
-	425 [fontsize=25]
-	426 [fontsize=25]
-	427 [fontsize=25]
-	428 [fontsize=25]
-	429 [fontsize=25]
-	430 [fontsize=25]
-	431 [fontsize=25]
-	432 [fontsize=25]
-	433 [fontsize=25]
-	434 [fontsize=25]
-	435 [fontsize=25]
-	436 [fontsize=25]
-	437 [fontsize=25]
-	438 [fontsize=25]
-	439 [fontsize=25]
-	440 [fontsize=25]
-	441 [fontsize=25]
-	442 [fontsize=25]
-	443 [fontsize=25]
-	444 [fontsize=25]
-	445 [fontsize=25]
-	446 [fontsize=25]
-	447 [fontsize=25]
-	448 [fontsize=25]
-	449 [fontsize=25]
-	450 [fontsize=25]
-	451 [fontsize=25]
-	452 [fontsize=25]
-	453 [fontsize=25]
-	454 [fontsize=25]
-	455 [fontsize=25]
-	456 [fontsize=25]
-	457 [fontsize=25]
-	458 [fontsize=25]
-	459 [fontsize=25]
-	460 [fontsize=25]
-	461 [fontsize=25]
-	462 [fontsize=25]
-	463 [fontsize=25]
-	464 [fontsize=25]
-	465 [fontsize=25]
-	466 [fontsize=25]
-	467 [fontsize=25]
-	468 [fontsize=25]
-	469 [fontsize=25]
-	470 [fontsize=25]
-	471 [fontsize=25]
-	472 [fontsize=25]
-	473 [fontsize=25]
-	474 [fontsize=25]
-	475 [fontsize=25]
-	476 [fontsize=25]
-	477 [fontsize=25]
-	478 [fontsize=25]
-	479 [fontsize=25]
-	480 [fontsize=25]
-	481 [fontsize=25]
-	482 [fontsize=25]
-	483 [fontsize=25]
-	484 [fontsize=25]
-	485 [fontsize=25]
-	486 [fontsize=25]
-	487 [fontsize=25]
-	488 [fontsize=25]
-	489 [fontsize=25]
-	490 [fontsize=25]
-	491 [fontsize=25]
-	492 [fontsize=25]
-	493 [fontsize=25]
-	494 [fontsize=25]
-	495 [fontsize=25]
-	496 [fontsize=25]
-	497 [fontsize=25]
-	498 [fontsize=25]
-	499 [fontsize=25]
-	500 [fontsize=25]
-	501 [fontsize=25]
-	502 [fontsize=25]
-	503 [fontsize=25]
-	504 [fontsize=25]
-	505 [fontsize=25]
-	506 [fontsize=25]
-	507 [fontsize=25]
-	508 [fontsize=25]
-	509 [fontsize=25]
-	510 [fontsize=25]
-	511 [fontsize=25]
-	512 [fontsize=25]
-	513 [fontsize=25]
-	514 [fontsize=25]
-	515 [fontsize=25]
-	516 [fontsize=25]
-	517 [fontsize=25]
-	518 [fontsize=25]
-	519 [fontsize=25]
-	520 [fontsize=25]
-	521 [fontsize=25]
-	522 [fontsize=25]
-	523 [fontsize=25]
-	524 [fontsize=25]
-	525 [fontsize=25]
-	526 [fontsize=25]
-	527 [fontsize=25]
-	528 [fontsize=25]
-	529 [fontsize=25]
-	530 [fontsize=25]
-	531 [fontsize=25]
-	532 [fontsize=25]
-	533 [fontsize=25]
-	534 [fontsize=25]
-	535 [fontsize=25]
-	536 [fontsize=25]
-	537 [fontsize=25]
-	538 [fontsize=25]
-	539 [fontsize=25]
-	540 [fontsize=25]
-	541 [fontsize=25]
-	542 [fontsize=25]
-	543 [fontsize=25]
-	544 [fontsize=25]
-	545 [fontsize=25]
-	546 [fontsize=25]
-	547 [fontsize=25]
-	548 [fontsize=25]
-	549 [fontsize=25]
-	550 [fontsize=25]
-	551 [fontsize=25]
-	552 [fontsize=25]
-	553 [fontsize=25]
-	554 [fontsize=25]
-	555 [fontsize=25]
-	556 [fontsize=25]
-	557 [fontsize=25]
-	558 [fontsize=25]
-	559 [fontsize=25]
-	560 [fontsize=25]
-	561 [fontsize=25]
-	562 [fontsize=25]
-	563 [fontsize=25]
-	564 [fontsize=25]
-	565 [fontsize=25]
-	566 [fontsize=25]
-	567 [fontsize=25]
-	568 [fontsize=25]
-	569 [fontsize=25]
-	570 [fontsize=25]
-	571 [fontsize=25]
-	572 [fontsize=25]
-	573 [fontsize=25]
-	574 [fontsize=25]
-	575 [fontsize=25]
-	576 [fontsize=25]
-	577 [fontsize=25]
-	578 [fontsize=25]
-	579 [fontsize=25]
-	580 [fontsize=25]
-	581 [fontsize=25]
-	582 [fontsize=25]
-	583 [fontsize=25]
-	584 [fontsize=25]
-	585 [fontsize=25]
-	586 [fontsize=25]
-	587 [fontsize=25]
-	588 [fontsize=25]
-	589 [fontsize=25]
-	590 [fontsize=25]
-	591 [fontsize=25]
-	592 [fontsize=25]
-	593 [fontsize=25]
-	594 [fontsize=25]
-	595 [fontsize=25]
-	596 [fontsize=25]
-	597 [fontsize=25]
-	598 [fontsize=25]
-	599 [fontsize=25]
-	600 [fontsize=25]
-	601 [fontsize=25]
-	602 [fontsize=25]
-	603 [fontsize=25]
-	604 [fontsize=25]
-	605 [fontsize=25]
-	606 [fontsize=25]
-	607 [fontsize=25]
-	608 [fontsize=25]
-	609 [fontsize=25]
-	610 [fontsize=25]
-	611 [fontsize=25]
-	612 [fontsize=25]
-	613 [fontsize=25]
-	614 [fontsize=25]
-	615 [fontsize=25]
-	616 [fontsize=25]
-	617 [fontsize=25]
-	618 [fontsize=25]
-	619 [fontsize=25]
-	620 [fontsize=25]
-	621 [fontsize=25]
-	622 [fontsize=25]
-	623 [fontsize=25]
-	624 [fontsize=25]
-	625 [fontsize=25]
-	626 [fontsize=25]
-	627 [fontsize=25]
-	628 [fontsize=25]
-	629 [fontsize=25]
-	630 [fontsize=25]
-	631 [fontsize=25]
-	632 [fontsize=25]
-	633 [fontsize=25]
-	634 [fontsize=25]
-	635 [fontsize=25]
-	636 [fontsize=25]
-	637 [fontsize=25]
-	638 [fontsize=25]
-	639 [fontsize=25]
-	640 [fontsize=25]
-	641 [fontsize=25]
-	642 [fontsize=25]
-	643 [fontsize=25]
-	644 [fontsize=25]
-	645 [fontsize=25]
-	646 [fontsize=25]
-	647 [fontsize=25]
-	648 [fontsize=25]
-	649 [fontsize=25]
-	650 [fontsize=25]
-	651 [fontsize=25]
-	652 [fontsize=25]
-	653 [fontsize=25]
-	654 [fontsize=25]
-	655 [fontsize=25]
-	656 [fontsize=25]
-	657 [fontsize=25]
-	658 [fontsize=25]
-	659 [fontsize=25]
-	660 [fontsize=25]
-	661 [fontsize=25]
-	662 [fontsize=25]
-	663 [fontsize=25]
-	664 [fontsize=25]
-	665 [fontsize=25]
-	666 [fontsize=25]
-	667 [fontsize=25]
-	668 [fontsize=25]
-	669 [fontsize=25]
-	670 [fontsize=25]
-	671 [fontsize=25]
-	672 [fontsize=25]
-	673 [fontsize=25]
-	674 [fontsize=25]
-	675 [fontsize=25]
-	676 [fontsize=25]
-	677 [fontsize=25]
-	678 [fontsize=25]
-	679 [fontsize=25]
-	680 [fontsize=25]
-	681 [fontsize=25]
-	682 [fontsize=25]
-	683 [fontsize=25]
-	684 [fontsize=25]
-	685 [fontsize=25]
-	686 [fontsize=25]
-	687 [fontsize=25]
-	688 [fontsize=25]
-	689 [fontsize=25]
-	690 [fontsize=25]
-	691 [fontsize=25]
-	692 [fontsize=25]
-	693 [fontsize=25]
-	694 [fontsize=25]
-	695 [fontsize=25]
-	696 [fontsize=25]
-	697 [fontsize=25]
-	698 [fontsize=25]
-	699 [fontsize=25]
-	700 [fontsize=25]
-	701 [fontsize=25]
-	702 [fontsize=25]
-	703 [fontsize=25]
-	704 [fontsize=25]
-	705 [fontsize=25]
-	706 [fontsize=25]
-	707 [fontsize=25]
-	708 [fontsize=25]
-	709 [fontsize=25]
-	710 [fontsize=25]
-	711 [fontsize=25]
-	712 [fontsize=25]
-	713 [fontsize=25]
-	714 [fontsize=25]
-	715 [fontsize=25]
-	716 [fontsize=25]
-	717 [fontsize=25]
-	718 [fontsize=25]
-	719 [fontsize=25]
-	720 [fontsize=25]
-	721 [fontsize=25]
-	722 [fontsize=25]
-	723 [fontsize=25]
-	724 [fontsize=25]
-	725 [fontsize=25]
-	726 [fontsize=25]
-	727 [fontsize=25]
-	728 [fontsize=25]
-	729 [fontsize=25]
-	730 [fontsize=25]
-	731 [fontsize=25]
-	732 [fontsize=25]
-	733 [fontsize=25]
-	734 [fontsize=25]
-	735 [fontsize=25]
-	736 [fontsize=25]
-	737 [fontsize=25]
-	738 [fontsize=25]
-	739 [fontsize=25]
-	740 [fontsize=25]
-	741 [fontsize=25]
-	742 [fontsize=25]
-	743 [fontsize=25]
-	744 [fontsize=25]
-	745 [fontsize=25]
-	746 [fontsize=25]
-	747 [fontsize=25]
-	748 [fontsize=25]
-	749 [fontsize=25]
-	750 [fontsize=25]
-	751 [fontsize=25]
-	752 [fontsize=25]
-	753 [fontsize=25]
-	754 [fontsize=25]
-	755 [fontsize=25]
-	756 [fontsize=25]
-	757 [fontsize=25]
-	758 [fontsize=25]
-	759 [fontsize=25]
-	760 [fontsize=25]
-	761 [fontsize=25]
-	762 [fontsize=25]
-	763 [fontsize=25]
-	764 [fontsize=25]
-	765 [fontsize=25]
-	766 [fontsize=25]
-	767 [fontsize=25]
-	768 [fontsize=25]
-	769 [fontsize=25]
-	770 [fontsize=25]
-	771 [fontsize=25]
-	772 [fontsize=25]
-	773 [fontsize=25]
-	774 [fontsize=25]
-	775 [fontsize=25]
-	776 [fontsize=25]
-	777 [fontsize=25]
-	778 [fontsize=25]
-	779 [fontsize=25]
-	780 [fontsize=25]
-	781 [fontsize=25]
-	782 [fontsize=25]
-	783 [fontsize=25]
-	784 [fontsize=25]
-	785 [fontsize=25]
-	786 [fontsize=25]
-	787 [fontsize=25]
-	788 [fontsize=25]
-	789 [fontsize=25]
-	790 [fontsize=25]
-	791 [fontsize=25]
-	792 [fontsize=25]
-	793 [fontsize=25]
-	794 [fontsize=25]
-	795 [fontsize=25]
-	796 [fontsize=25]
-	797 [fontsize=25]
-	798 [fontsize=25]
-	799 [fontsize=25]
-	800 [fontsize=25]
-	801 [fontsize=25]
-	802 [fontsize=25]
-	803 [fontsize=25]
-	804 [fontsize=25]
-	805 [fontsize=25]
-	806 [fontsize=25]
-	807 [fontsize=25]
-	808 [fontsize=25]
-	809 [fontsize=25]
-	810 [fontsize=25]
-	811 [fontsize=25]
-	812 [fontsize=25]
-	813 [fontsize=25]
-	814 [fontsize=25]
-	815 [fontsize=25]
-	816 [fontsize=25]
-	817 [fontsize=25]
-	818 [fontsize=25]
-	819 [fontsize=25]
-	820 [fontsize=25]
-	821 [fontsize=25]
-	822 [fontsize=25]
-	823 [fontsize=25]
-	824 [fontsize=25]
-	825 [fontsize=25]
-	826 [fontsize=25]
-	827 [fontsize=25]
-	828 [fontsize=25]
-	829 [fontsize=25]
-	830 [fontsize=25]
-	831 [fontsize=25]
-	832 [fontsize=25]
-	833 [fontsize=25]
-	834 [fontsize=25]
-	835 [fontsize=25]
-	836 [fontsize=25]
-	837 [fontsize=25]
-	838 [fontsize=25]
-	839 [fontsize=25]
-	840 [fontsize=25]
-	841 [fontsize=25]
-	842 [fontsize=25]
-	843 [fontsize=25]
-	844 [fontsize=25]
-	845 [fontsize=25]
-	846 [fontsize=25]
-	847 [fontsize=25]
-	848 [fontsize=25]
-	849 [fontsize=25]
-	850 [fontsize=25]
-	851 [fontsize=25]
-	852 [fontsize=25]
-	853 [fontsize=25]
-	854 [fontsize=25]
-	855 [fontsize=25]
-	856 [fontsize=25]
-	857 [fontsize=25]
-	858 [fontsize=25]
-	859 [fontsize=25]
-	860 [fontsize=25]
-	861 [fontsize=25]
-	862 [fontsize=25]
-	863 [fontsize=25]
-	864 [fontsize=25]
-	865 [fontsize=25]
-	866 [fontsize=25]
-	867 [fontsize=25]
-	868 [fontsize=25]
-	869 [fontsize=25]
-	870 [fontsize=25]
-	871 [fontsize=25]
-	872 [fontsize=25]
-	873 [fontsize=25]
-	874 [fontsize=25]
-	875 [fontsize=25]
-	876 [fontsize=25]
-	877 [fontsize=25]
-	878 [fontsize=25]
-	879 [fontsize=25]
-	880 [fontsize=25]
-	881 [fontsize=25]
-	882 [fontsize=25]
-	883 [fontsize=25]
-	884 [fontsize=25]
-	885 [fontsize=25]
-	886 [fontsize=25]
-	887 [fontsize=25]
-	888 [fontsize=25]
-	889 [fontsize=25]
-	890 [fontsize=25]
-	891 [fontsize=25]
-	892 [fontsize=25]
-	893 [fontsize=25]
-	894 [fontsize=25]
-	895 [fontsize=25]
-	896 [fontsize=25]
-	897 [fontsize=25]
-	898 [fontsize=25]
-	899 [fontsize=25]
-	900 [fontsize=25]
-	901 [fontsize=25]
-	902 [fontsize=25]
-	903 [fontsize=25]
-	904 [fontsize=25]
-	905 [fontsize=25]
-	906 [fontsize=25]
-	907 [fontsize=25]
-	908 [fontsize=25]
-	909 [fontsize=25]
-	910 [fontsize=25]
-	911 [fontsize=25]
-	912 [fontsize=25]
-	913 [fontsize=25]
-	914 [fontsize=25]
-	915 [fontsize=25]
-	916 [fontsize=25]
-	917 [fontsize=25]
-	918 [fontsize=25]
-	919 [fontsize=25]
-	920 [fontsize=25]
-	921 [fontsize=25]
-	922 [fontsize=25]
-	923 [fontsize=25]
-	924 [fontsize=25]
-	925 [fontsize=25]
-	926 [fontsize=25]
-	927 [fontsize=25]
-	928 [fontsize=25]
-	929 [fontsize=25]
-	930 [fontsize=25]
-	931 [fontsize=25]
-	932 [fontsize=25]
-	933 [fontsize=25]
-	934 [fontsize=25]
-	935 [fontsize=25]
-	936 [fontsize=25]
-	937 [fontsize=25]
-	938 [fontsize=25]
-	939 [fontsize=25]
-	940 [fontsize=25]
-	941 [fontsize=25]
-	942 [fontsize=25]
-	943 [fontsize=25]
-	944 [fontsize=25]
-	945 [fontsize=25]
-	946 [fontsize=25]
-	947 [fontsize=25]
-	948 [fontsize=25]
-	949 [fontsize=25]
-	950 [fontsize=25]
-	951 [fontsize=25]
-	952 [fontsize=25]
-	953 [fontsize=25]
-	954 [fontsize=25]
-	955 [fontsize=25]
-	956 [fontsize=25]
-	957 [fontsize=25]
-	958 [fontsize=25]
-	959 [fontsize=25]
-	960 [fontsize=25]
-	961 [fontsize=25]
-	962 [fontsize=25]
-	963 [fontsize=25]
-	964 [fontsize=25]
-	965 [fontsize=25]
-	966 [fontsize=25]
-	967 [fontsize=25]
-	968 [fontsize=25]
-	969 [fontsize=25]
-	970 [fontsize=25]
-	971 [fontsize=25]
-	972 [fontsize=25]
-	973 [fontsize=25]
-	974 [fontsize=25]
-	975 [fontsize=25]
-	976 [fontsize=25]
-	977 [fontsize=25]
-	978 [fontsize=25]
-	979 [fontsize=25]
-	980 [fontsize=25]
-	981 [fontsize=25]
-	982 [fontsize=25]
-	983 [fontsize=25]
-	984 [fontsize=25]
-	985 [fontsize=25]
-	986 [fontsize=25]
-	987 [fontsize=25]
-	988 [fontsize=25]
-	989 [fontsize=25]
-	990 [fontsize=25]
-	991 [fontsize=25]
-	992 [fontsize=25]
-	993 [fontsize=25]
-	994 [fontsize=25]
-	995 [fontsize=25]
-	996 [fontsize=25]
-	997 [fontsize=25]
-	998 [fontsize=25]
-	999 [fontsize=25]
-	1000 [fontsize=25]
 */
 }
