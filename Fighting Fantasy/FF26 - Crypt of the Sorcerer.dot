@@ -187,6 +187,7 @@ digraph {
 		052 [class = "bst" label = "\N\n 10 gold\n knife\n holy water\n +1ST"]
 		065 [label = "\N\n 2 gold\n silver mirror"]
 		075 [label = "\N\n bronze talisman"]
+		102 [label = "\N\n gold ring"]
 		116 [label = "\N\n 2 gold\n silver mirror"]
 		124 [label = "\N\n chameleonite blood"]
 		131 [class = "bst" label = "\N\n Defender\n +1SK\n +1LK"]
@@ -197,6 +198,7 @@ digraph {
 		175 [label = "\N\n 4 gold\n candle"]
 		197 [class = "ddg" label = "\N\n cowardice helmet\n -2LK"]
 		212 [label = "\N\n info" tooltip = "immediately escape after defeating Razaak"]
+		239 [label = "\N\n +2AT?\n (horseback)"]
 		243 [label = "\N\n 6 gold\n knife\n rat skull"]
 		250 [label = "\N\n hunting horn\n lantern\n crossbow"]
 		254 [label = "\N\n polished stones"]
@@ -208,7 +210,7 @@ digraph {
 		341 [class = "bst" label = "\N\n =5 healing potion\n +2ST"]
 		352 [label = "\N\n sanity crystal"]
 		358 [class = "bst" label = "\N\n +2SK\n (!sword)"]
-		367 [class = "bst" label = "\N\n globe smoke\n +1LK"]
+		367 [class = "bst" label = "\N\n inhaled smoke\n +1LK"]
 		379 [label = "\N\n ice ghost"]
 		380 [style = "filled" color = "greenyellow:pink" label = "\N\n armour\n +1SK\n -3LK"]
 		//kkyy
@@ -399,7 +401,7 @@ digraph {
 		
 		subgraph cluster_30 {
 			label = "Chameleonite\n 7/7\n 6/6\n 7/6"
-			239 [shape = "rect" label = "\N\n +2AT?\n (horseback)"]
+			239
 		}
 		
 		subgraph cluster_31 {
@@ -487,6 +489,73 @@ digraph {
 		monopt3 [class = "path opt kky"]
 		pptt
 		*/
+
+		/*
+		369
+		306
+		324
+
+
+
+		178 [class = "path"]
+		230
+		358 [class = "path bst"]
+		131
+		029
+		205
+		299 [class = "path"]
+		362
+		102
+		339
+		165 [class = "path"]
+		289
+		304
+		127
+		258
+		048 [class = "path bst"]
+		382
+		118
+		173 [class = "path"]
+		282 [class = "path"]
+		241
+		367
+
+
+
+		211
+		386
+		067
+		183
+		308
+		103 [class = "path"]
+		327
+		148
+		237
+		377 [class = "path"]
+
+
+		
+
+		074
+		199
+		026
+		183
+		189
+		364
+		035
+		119
+		005
+		108
+		184
+		276
+		326
+		351
+		066
+		271 [class = "path"]
+		081
+		233
+		400
+		*/
 	}
 	
 	subgraph Required {
@@ -499,6 +568,16 @@ digraph {
 		monboo5 [class = "req kky"]
 		mondam5 [class = "req kky"]
 		mon5 [class = "req kky"]
+		*/
+
+		/*
+		074 [class = "req pwd"]
+		102 [class = "req kky"]
+		131 [class = "req kky"]
+		211 [class = "req pwd"]
+		237 [class = "req pwd"]
+		306 [class = "req pwd"]
+		367 [class = "req kky"]
 		*/
 		400 [class = "req" shape = "octagon"]
 	}
@@ -1077,7 +1156,7 @@ digraph {
 	324 -> 376
 	324 -> 391
 	325
-	326 -> 351 [class = "req" label = "globe smoke"]
+	326 -> 351 [class = "req" label = "inhaled smoke"]
 	326 -> 259
 	327 -> 148
 	328 -> 235
@@ -1196,7 +1275,6 @@ digraph {
 	399
 	400
 
-/*
 	001 [fontsize=25]
 	002 [fontsize=25]
 	003 [fontsize=25]
@@ -1597,5 +1675,4 @@ digraph {
 	398 [fontsize=25]
 	399 [fontsize=25]
 	400 [fontsize=25]
-*/
 }
