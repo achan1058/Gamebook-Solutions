@@ -1,9 +1,8 @@
 digraph {
-	// graph defaults
 	rankdir=LR
 	mclimit=50
-	nodesep=.3 // changes horizontal separation of nodes
-	ranksep=.4 // changes vertical separation of nodes
+	nodesep=.3
+	ranksep=.4
 	node [height=.7
 		width=.7
 		shape=ellipse
@@ -16,15 +15,13 @@ digraph {
 		menu
 	}
 
-	// a box for a graph label
-	// note that you can override the defaults set above
 	title [label = "Fighting Fantasy --: Title\n\n \
 		Light Green Fill: Benefits\l \
 		Pink Fill: Penalties\l \
 		Red Fill: Death\l \
 		Blue Text: Key Items/Events\l \
-		Red Text: Lost Items\l \
-		Orange Text: Codewords\l \
+		Red Text: Lost Items\Negative Eventsl \
+		Orange Text: Codewords/Spells\l \
 		Purple Text: Shops\l \
 		Blue Line: Forced Items/Events\l \
 		Light Blue Text/Line: Optional Items/Events\l \
@@ -32,7 +29,7 @@ digraph {
 		Green Line: Stat Test Passed\l \
 		Brown Line: Stat Test Failed\l \
 		Magenta Line: Combat Related Events\l \
-		Grey Text: Riddle Answer\l \
+		Grey Text: Riddle/Numeric Code\l \
 		Grey Line: Hidden Option\l \
 		Orange Line: Codewords/Spells\l \
 		Red Line: Possible Error\l \
@@ -47,11 +44,11 @@ digraph {
 		+: Positive Status\l \
 		^: Damage can be reduced by items\l \
 		@: Take 2 items\l\l \
-		Starting stats:\l \
+		Starting Stats:\l \
 		Initial Skill: 1d6+6\l \
 		Initial Stamina: 2d6+12\l \
 		Initial Luck: 1d6+6\l\l \
-		Starting gear:\l \
+		Starting Gear:\l \
 		skill/stamina/luck potion: +all SK/ST/LK&1ILK\l \
 		10 meal: +4ST\l \
 		sword\l \
@@ -60,8 +57,12 @@ digraph {
 		tinderbox\l \
 		backpack\l \
 		2d6+6 gold\l\l \
-		Comments:\l \
-		Order: item/gold/AT/SK/ST/LK\l \
+		Key Items:\l \
+		comment\l\l \
+		Special Combat Rules:\l \
+		rules\l\l \
+		Notes:\l \
+		Order: meal/gold/item/AT/SK/ST/LK\l \
 		"
 		shape = "box"
 		margin = 0.1]
