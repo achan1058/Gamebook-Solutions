@@ -150,6 +150,9 @@
     <CustomBuild Include="Fighting Fantasy\FF26 - Crypt of the Sorcerer.dot">
       <Filter>Fighting Fantasy</Filter>
     </CustomBuild>
+    <CustomBuild Include="Fighting Fantasy\FF45 - Spectral Stalkers.dot">
+      <Filter>Fighting Fantasy</Filter>
+    </CustomBuild>
   </ItemGroup>
   <ItemGroup>
     <Text Include="vertex.txt">

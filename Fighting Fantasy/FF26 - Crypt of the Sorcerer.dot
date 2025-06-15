@@ -10,7 +10,7 @@ digraph {
 	edge[weight=5]
 	stylesheet="../style.css"
 	
-	title [label = "Fighting Fantasy 26: Crypt of the Sorcerer\n\n \
+	title [label = "Fighting Fantasy #26: Crypt of the Sorcerer\n\n \
 		Light Green Fill: Benefits\l \
 		Pink Fill: Penalties\l \
 		Red Fill: Death\l \
