@@ -755,7 +755,7 @@ digraph {
 	141 -> 013
 	141 -> 131
 	142 -> 190
-	143 -> 212 [class = "pass" label = "3dST"]
+	143 -> 212 [class = "pass" label = "3dST-1"]
 	143 -> 372 [class = "fail"]
 	144 -> 245
 	145 -> 253

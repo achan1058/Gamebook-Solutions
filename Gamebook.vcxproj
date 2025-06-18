@@ -276,8 +276,15 @@
     </CustomBuild>
     <CustomBuild Include="Fighting Fantasy\FF26 - Crypt of the Sorcerer.dot">
       <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
     </CustomBuild>
     <CustomBuild Include="Fighting Fantasy\FF45 - Spectral Stalkers.dot">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuild>
+    <CustomBuild Include="Fighting Fantasy\FF28 - Phantoms of Fear.dot">
       <FileType>Document</FileType>
     </CustomBuild>
     <None Include="style.css" />
