@@ -39,9 +39,6 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <CustomBuild Include="template.dot">
-      <Filter>Source Files</Filter>
-    </CustomBuild>
     <CustomBuild Include="Fighting Fantasy\old\Appointment with F.E.A.R. incomplete.dot">
       <Filter>backup</Filter>
     </CustomBuild>
