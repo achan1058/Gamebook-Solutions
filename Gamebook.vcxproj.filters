@@ -153,6 +153,12 @@
     <CustomBuild Include="Fighting Fantasy\FF28 - Phantoms of Fear.dot">
       <Filter>Fighting Fantasy</Filter>
     </CustomBuild>
+    <CustomBuild Include="Fighting Fantasy\FF11 - Talisman of Death.dot">
+      <Filter>Fighting Fantasy</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Fighting Fantasy\FF29 - Midnight Rogue.dot">
+      <Filter>Fighting Fantasy</Filter>
+    </CustomBuild>
   </ItemGroup>
   <ItemGroup>
     <Text Include="vertex.txt">

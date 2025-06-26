@@ -15,7 +15,7 @@ digraph {
 		menu
 	}
 
-	title [label = "Fighting Fantasy --: Title\n\n \
+	title [label = "Fighting Fantasy #--: Title\n\n \
 		Light Green Fill: Benefits\l \
 		Pink Fill: Penalties\l \
 		Red Fill: Death\l \

@@ -1,0 +1,1789 @@
+digraph {
+	rankdir=LR
+	mclimit=50
+	nodesep=.3
+	ranksep=.4
+	node [height=.7
+		width=.7
+		shape=ellipse
+		margin=0]
+	edge[weight=5]
+	stylesheet="../style.css"
+	
+	subgraph ShopMenu {
+		node [fontcolor = "purple" shape = "rect" margin = 0.1]
+		menu
+	}
+
+	title [label = "Fighting Fantasy #29: Midnight Rogue\n\n \
+		Light Green Fill: Benefits\l \
+		Pink Fill: Penalties\l \
+		Red Fill: Death\l \
+		Blue Text: Key Items/Events\l \
+		Red Text: Lost Items\Negative Eventsl \
+		Orange Text: Codewords/Spells\l \
+		Purple Text: Shops\l \
+		Blue Line: Forced Items/Events\l \
+		Light Blue Text/Line: Optional Items/Events\l \
+		Purple Line: Dice Events\l \
+		Green Line: Stat Test Passed\l \
+		Brown Line: Stat Test Failed\l \
+		Magenta Line: Combat Related Events\l \
+		Grey Text: Riddle/Numeric Code\l \
+		Grey Line: Hidden Option\l \
+		Orange Line: Codewords/Spells\l \
+		Red Line: Possible Error\l \
+		Gold Fill: Required Nodes\l \
+		Light Blue Fill: Recommended Nodes\l \
+		Gold Outline: Recommended Path\l \
+		Green Box: Combat\l \
+		SK/ST/LK/AT/AR/TM/CW/CL: Skill/Stamina/Luck/Attack Strength/Attack Round/Time/Consecutive Win Round/Consecutive Lose Round\l \
+		?: Chance of this happening, depending on instructions in text\l \
+		*: Special Combat Rules\l \
+		-: Negative Status\l \
+		+: Positive Status\l \
+		^: Damage can be reduced by items\l \
+		@: Take 2 items\l\l \
+		Starting Stats:\l \
+		Initial Skill: 1d6+6\l \
+		Initial Stamina: 2d6+12\l \
+		Initial Luck: 1d6+6\l\l \
+		Starting Gear:\l \
+		skill/stamina/luck potion: +all SK/ST/LK&1ILK\l \
+		10 meal: +4ST\l \
+		sword\l \
+		leather armor\l \
+		lantern\l \
+		tinderbox\l \
+		backpack\l \
+		2d6+6 gold\l\l \
+		Key Items:\l \
+		magic sword: After winning AR, get +1AT next round.\l \
+		cmtt\l\l \
+		Special Combat Rules:\l \
+		Shadow: Same SK/ST as you.\l \
+		Scitalis: No damage on first AR win.\l \
+		Skeleton Lord: After Skeleton Lord wins AR, it gets +1AT next round.\l \
+		Possessor Spirit: When lose AR, lose additional -1LK.\l \
+		Giant Spider (304): No damage on first AR win.\l \
+		rules\l\l \
+		Notes:\l \
+		Order: meal/gold/item/AT/SK/ST/LK\l \
+		"
+		shape = "box"
+		margin = 0.1]
+		
+	subgraph Boost {
+		node [style = "filled" color = "greenyellow"]
+		boo1 [label = "\N\n text"]
+		boo3 [label = "\N\n text"]
+		048 [label = "\N\n +1LK"]
+		094 [label = "\N\n +1LK"]
+		215 [label = "\N\n +1LK"]
+		247 [label = "\N\n +all SK"]
+		366 [label = "\N\n +1LK"]
+		381 [label = "\N\n +1LK"]
+		bstt
+	}
+
+	subgraph Damage {
+		node [style = "filled" color = "pink"]
+		dam1 [label = "\N\n text"]
+		dam3 [label = "\N\n text"]
+		010 [label = "\N\n -2ST"]
+		027 [label = "\N\n -1d(/2?)ST\n (LK)"]
+		046 [label = "\N\n -2ST"]
+		056 [label = "\N\n -1SK\n -2~4ST\n (4dST)"]
+		128 [label = "\N\n -1d(/2?)ST\n (LK)"]
+		140 [label = "\N\n -2ST"]
+		145 [label = "\N\n -2ST"]
+		157 [label = "\N\n -?ST\n (SKx?)"]
+		165 [label = "\N\n -4ST"]
+		192 [label = "\N\n -1SK\n -2ST\n -1LK"]
+		199 [label = "\N\n -1SK\n -1ST"]
+		202 [label = "\N\n -4ST"]
+		204 [label = "\N\n -1SK\n -1ST"]
+		209 [label = "\N\n -3ST"]
+		220 [label = "\N\n -1d(/2?)ST\n (LK)"]
+		235 [label = "\N\n -1SK"]
+		241 [label = "\N\n -1ST"]
+		245 [label = "\N\n -?ST\n -2AT"]
+		249 [label = "\N\n -3AT?\n (!weapon)"]
+		251 [label = "\N\n -1LK"]
+		257 [label = "\N\n -1SK\n -1ST"]
+		264 [label = "\N\n -2ST"]
+		266 [label = "\N\n -2ST?\n (SK)"]
+		267 [label = "\N\n -2ST\n -?ST\n (SKx?)"]
+		282 [label = "\N\n -1ST"]
+		285 [label = "\N\n -2ST"]
+		287 [label = "\N\n -3ST"]
+		297 [label = "\N\n -3ST"]
+		304 [label = "\N\n -1ST"]
+		311 [label = "\N\n -2ST"]
+		313 [label = "\N\n -2ST"]
+		330 [label = "\N\n -1LK"]
+		348 [label = "\N\n -1ST"]
+		356 [label = "\N\n -1d(/2?)ST\n (LK)"]
+		360 [label = "\N\n -4ST"]
+		371 [label = "\N\n -3ST"]
+		375 [label = "\N\n -2ST"]
+		389 [label = "\N\n -3ST"]
+		390 [label = "\N\n -1ST"]
+		391 [label = "\N\n -1ST"]
+		393 [label = "\N\n -1SK\n -2ST\n -1LK"]
+		ddgg
+	}
+	
+	subgraph Death {
+		node [style = "filled" color = "red"]
+		ddt
+		ddt2
+		monddt
+		monddt2
+		018
+		029
+		036
+		040
+		042
+		049
+		051
+		065
+		107
+		111
+		137
+		171
+		175
+		194
+		212
+		269
+		296
+		299
+		312
+		320
+		329
+		349
+		370
+		379
+		380 [label = "\N\n -4ST"]
+		ddtt
+	}
+
+	subgraph Key_Item {
+		node [fontcolor = "blue" shape = "rect"]
+		key1 [label = "\N\n info" tooltip = "info text"]
+		key2 [label = "\N\n text"]
+		key3 [label = "\N\n text"]
+		key4 [fontcolor = "crimson" label = "\N\n -text"]
+		boo2 [class = "bst" label = "\N\n text"]
+		boo4 [class = "bst" label = "\N\n text"]
+		boo5 [class = "bst" label = "\N\n text"]
+		dam2 [class = "ddg" label = "\N\n text"]
+		dam4 [class = "ddg" label = "\N\n text"]
+		dam5 [class = "ddg" label = "\N\n text"]
+		opt
+		opt2 [class = "bst"]
+		opt3 [class = "bst"]
+		057 [label = "\N\n 2 gold\n dagger"]
+		143 [label = "\N\n 5 gold"]
+		147 [label = "\N\n 1 gold"]
+		168 [label = "\N\n 2 meal\n map"]
+		185 [label = "\N\n R key"]
+		196 [label = "\N\n 5 gold\n shortsword\n chair-leg\n 2 heavy chain\n rags (+sneak)"]
+		208 [label = "\N\n obsidian disc"]
+		211 [label = "\N\n black hooded cloat (+hide)"]
+		234 [class = "bst" label = "\N\n rope & grapnel (+climb)\n +1LK"]
+		242 [label = "\N\n brandy (+1 gold or +2STx3)\n painting (+2 gold)"]
+		253 [label = "\N\n info" tooltip = "need 2 key, Brass keeps one"]
+		288 [label = "\N\n magic sword\n helmet (+1SK)\n stone axe"]
+		291 [class = "bst" label = "\N\n lock picks (+pick lock)\n +1LK"]
+		323 [label = "\N\n 5 gold\n throwing knife\n wire"]
+		364 [label = "\N\n info" tooltip = "Brass symbol coin, short and field street, just by field gate"]
+		382 [label = "\N\n 2 meal"]
+		kkyy
+	}
+	
+	subgraph Key_Loss {
+		node [fontcolor = "crimson" shape = "rect"]
+		015 [label = "\N\n -rope & grapnel"]
+		101 [label = "\N\n -1 gold"]
+		125 [label = "\N\n -rope & grapnel"]
+		166 [class = "ddg" label = "\N\n -sword (-3SK)"]
+		263 [label = "\N\n -cloak"]
+		308 [label = "\N\n -cloak"]
+		309 [label = "\N\n -1 gold"]
+		340 [label = "\N\n -chain"]
+		373 [class = "ddg" label = "\N\n -sword (-3SK)"]
+		397 [class = "ddg" label = "\N\n -item\n -4ST"]
+		kkll
+	}
+
+	subgraph Key_Word {
+		node [fontcolor = "grey" shape = "rect"]
+		wrd1 [label = "\N\n text"]
+		wrd2 [label = "\N\n text"]
+		wrd3 [label = "\N\n text"]
+		090 [label = "\N\n 10 gold\n L key\n Barrow Hill\n Brass2: 90" ]
+		289 [label = "\N\n Brass3: 289" ]
+		335 [label = "\N\n 20 gold\n Barrow Hill\n Brass1: 335" ]
+		pwdd
+	}
+	
+	subgraph Shop {
+		node [fontcolor = "purple" shape = "rect"]
+		shop1 [label = "\N\n text"]
+		shpp
+	}
+	
+	subgraph Combat {
+		style = "filled" color = "palegreen"
+		subgraph cluster_00 {
+			label = "Monster\n 0/0\n 0/0"
+			mon1 [label = "\N\n text"]
+			mon2 [shape = "rect" class = "kky" label = "\N\n text"]
+			mon3 [label = "\N\n text"]
+			mon4 [shape = "rect" class = "kky" label = "\N\n text"]
+			mon5 [shape = "rect" class = "kky" label = "\N\n text"]
+			monboo1 [class = "bst" label = "\N\n text"]
+			monboo2 [shape = "rect" class = "bst kky" label = "\N\n text"]
+			monboo3 [class = "bst" label = "\N\n text"]
+			monboo4 [shape = "rect" class = "bst kky" label = "\N\n text"]
+			monboo5 [shape = "rect" class = "bst kky" label = "\N\n text"]
+			mondam1 [class = "ddg" label = "\N\n text"]
+			mondam2 [shape = "rect" class = "ddg kky" label = "\N\n text"]
+			mondam3 [class = "ddg" label = "\N\n text"]
+			mondam4 [shape = "rect" class = "ddg kky" label = "\N\n text"]
+			mondam5 [shape = "rect" class = "ddg kky" label = "\N\n text"]
+			monopt [shape = "rect" class = "bst kky"]
+			monddt
+			monopt2 [shape = "rect" class = "bst kky"]
+			monddt2
+			monopt3 [shape = "rect" class = "bst kky"]
+		}
+		
+		subgraph cluster_01 {
+			label = "Piranha\n 6/6"
+			002 [label = "\N\n -1AT"]
+		}
+		
+		subgraph cluster_02 {
+			label = "Shapechanger\n 10/10"
+			006
+		}
+		
+		subgraph cluster_03 {
+			label = "Wood Golem\n 8/6"
+			010
+		}
+		
+		subgraph cluster_04 {
+			label = "Shadow*\n ?/?"
+			011
+		}
+		
+		subgraph cluster_05 {
+			label = "Ghoul\n 8/7"
+			019
+		}
+		
+		subgraph cluster_06 {
+			label = "Thug\n 7/6\n 6/6\n 5/7"
+			028
+		}
+		
+		subgraph cluster_07 {
+			label = "Skeleton Lord*\n 8/6"
+			031
+		}
+		
+		subgraph cluster_08 {
+			label = "Shapechanger\n 10/10"
+			033
+		}
+		
+		subgraph cluster_09 {
+			label = "Ghoul\n 8/7"
+			035
+		}
+		
+		subgraph cluster_10 {
+			label = "Ogre\n 8/10"
+			037
+		}
+		
+		subgraph cluster_11 {
+			label = "Crystal Warrior\n 10/13"
+			041 [label = "\N\n -2AT?\n (!stone axe)"]
+		}
+		
+		subgraph cluster_12 {
+			label = "Scitalis*\n 8/10"
+			046
+		}
+		
+		subgraph cluster_13 {
+			label = "Wood Golem\n 8/4"
+			053
+		}
+		
+		subgraph cluster_14 {
+			label = "Footpad\n 8/6"
+			078
+		}
+		
+		subgraph cluster_15 {
+			label = "Animated Corpse\n 5/6"
+			082
+		}
+		
+		subgraph cluster_16 {
+			label = "Footpad\n 7/5\n 6/6\n 5/6"
+			096
+		}
+		
+		subgraph cluster_17 {
+			label = "Jib-Jib\n 1/2"
+			106
+		}
+		
+		subgraph cluster_18 {
+			label = "Ogre\n ?/?"
+			114 [label = "\N\n -2AT?"]
+		}
+		
+		subgraph cluster_19 {
+			label = "Chest Creature\n 5/6"
+			120
+		}
+		
+		subgraph cluster_20 {
+			label = "Poltergeist\n 6/-"
+			121 [label = "\N\n -1EDG"]
+		}
+		
+		subgraph cluster_21 {
+			label = "Guard\n 6/6"
+			131
+		}
+		
+		subgraph cluster_22 {
+			label = "Wood Golem\n 8/6"
+			140
+		}
+		
+		subgraph cluster_23 {
+			label = "Posessor Spirit*\n 10/10"
+			142
+		}
+		
+		subgraph cluster_24 {
+			label = "Poltergeist\n 6/-"
+			152 [label = "\N\n -1EDG"]
+		}
+		
+		subgraph cluster_25 {
+			label = "Shadow*\n ?/-"
+			154
+		}
+		
+		subgraph cluster_26 {
+			label = "Crystal Warrior\n 10/11"
+			169 [label = "\N\n -2ST?\n (!stone axe)"]
+		}
+		
+		subgraph cluster_27 {
+			label = "Dog 7/7\n Servants 7/9"
+			176
+		}
+		
+		subgraph cluster_28 {
+			label = "Crystal Warrior\n 10/13"
+			178
+		}
+		
+		subgraph cluster_29 {
+			label = "Wood Golem\n 8/4"
+			183
+		}
+		
+		subgraph cluster_30 {
+			label = "Giant Spider\n 7/8"
+			207
+		}
+		
+		subgraph cluster_31 {
+			label = "Tangleweed\n 7/6"
+			216
+		}
+		
+		subgraph cluster_32 {
+			label = "Guardsman\n 8/6 7/5"
+			224
+		}
+		
+		subgraph cluster_33 {
+			label = "Gargoyle\n 9/10"
+			225 [label = "\N\n -3AT"]
+		}
+		
+		subgraph cluster_34 {
+			label = "Ghoul\n 8/7"
+			230
+		}
+		
+		subgraph cluster_35 {
+			label = "Skeleton\n 6/5 5/4"
+			233
+		}
+		
+		subgraph cluster_36 {
+			label = "Unseen Monster\n 5/8"
+			245
+		}
+		
+		subgraph cluster_37 {
+			label = "Dog 7/7\n Servants 7/9"
+			254
+		}
+		
+		subgraph cluster_38 {
+			label = "Bats\n 5/12"
+			280 [label = "\N\n -2AT"]
+		}
+		
+		subgraph cluster_39 {
+			label = "Giant Spider\n 7/8"
+			304 [label = "\N*"]
+		}
+		
+		subgraph cluster_40 {
+			label = "Guard\n 6/4"
+			310
+		}
+		
+		subgraph cluster_41 {
+			label = "Ghoul\n 8/7"
+			313
+		}
+		
+		subgraph cluster_42 {
+			label = "Poltergeist\n 6/-"
+			317 [label = "\N\n -1EDG"]
+		}
+		
+		subgraph cluster_43 {
+			label = "Ogre\n 8/12"
+			328
+		}
+		
+		subgraph cluster_44 {
+			label = "Unseen Monster\n 5/8"
+			331 [label = "\N\n -2AT"]
+		}
+		
+		subgraph cluster_45 {
+			label = "Dog 7/7\n Servants 7/9"
+			336
+		}
+		
+		subgraph cluster_46 {
+			label = "Poltergeist\n 6/-"
+			339 [label = "\N\n -1EDG"]
+		}
+		
+		subgraph cluster_47 {
+			label = "Skeleton\n 6/5\n 5/4"
+			366
+		}
+		
+		subgraph cluster_48 {
+			label = "Shapechanger\n 10/10"
+			367
+		}
+		
+		subgraph cluster_49 {
+			label = "Drawf\n 7/7\n 6/7\n 6/6"
+			367
+		}
+		
+		subgraph cluster_50 {
+			label = "Gargoyle\n 9/10"
+			395
+		}
+		
+		cbtt
+	}
+
+	subgraph Optional {
+		node [shape = "rect" class = "opt kky"]
+		opt [class = "opt kky"]
+		monopt [class = "opt kky"]
+		opt2 [class = "opt kky"]
+		monopt2 [class = "opt kky"]
+		opt3 [class = "opt kky"]
+		monopt3 [class = "opt kky"]
+		optt
+	}
+	
+	subgraph Path {
+		node [class = "path" penwidth = 3 color = "gold"]
+		txt2
+		key2 [class = "path"]
+		wrd2 [class = "path"]
+		key3
+		wrd3
+		boo3 [class = "path"]
+		boo4 [class = "path bst"]
+		boo5
+		dam3 [class = "path"]
+		dam4 [class = "path ddg"]
+		dam5
+		monboo3 [class = "path bst"]
+		monboo4 [class = "path bst kky"]
+		monboo5
+		mondam3 [class = "path ddg"]
+		mondam4 [class = "path ddg kky"]
+		mondam5
+		mon3 [class = "path"]
+		mon4 [class = "path kky"]
+		ddt2 [class = "path"]
+		opt3 [class = "path opt kky"]
+		monddt2 [class = "path"]
+		monopt3 [class = "path opt kky"]
+		pptt
+	}
+	
+	subgraph Required {
+		node [shape = "rect" class = "req kky"]
+		key3 [class = "req kky"]
+		wrd3 [class = "req kky"]
+		boo5 [class = "req kky"]
+		dam5 [class = "req kky"]
+		monboo5 [class = "req kky"]
+		mondam5 [class = "req kky"]
+		mon5 [class = "req kky"]
+		400 [class = "req" shape = "octagon"]
+	}
+	
+	subgraph Required2 {
+		node [shape = "rect" class = "req2 kky"]
+		req2 [class = "req2 kky"]
+	}
+	
+	mon1 -> mon2 -> mon3 -> mon4 -> mon5 [penwidth = 3]
+	boo1 -> boo2 -> boo3 -> boo4 -> boo5 [penwidth = 3]
+	dam1 -> dam2 -> dam3 -> dam4 -> dam5 [penwidth = 3]
+	txt1 -> key1 -> txt2 -> key2 -> key3 -> key4
+	wrd1 -> wrd2 -> wrd3
+	opt -> ddt -> opt2 -> ddt2 -> opt3
+	monboo1 -> monboo2 -> monboo3 -> monboo4 -> monboo5
+	mondam1 -> mondam2 -> mondam3 -> mondam4 -> mondam5
+	monopt -> monddt -> monopt2 -> monddt2 -> monopt3
+
+	myTitle -> z001 [penwidth = 3]
+	z001 -> z002 [class = "dice" label = "1-3"]
+	z001 -> z003 [class = "dice" label = "4-6"]
+	z002 -> z004 [class = "pass" label = "LK"]
+	z002 -> z005 [class = "fail"]
+	z003 -> z006 [dir = "both"]
+	z004 -> z007 [class = "req" label = "req"]
+	z004 -> z008 [class = "opt" label = "-opt"]
+	z005 -> z009 [class = "pwd" label = "password"]
+	z009 -> z010 [class = "err" label = "error(?)"]
+	z010 -> z011 [class = "cbt" label = "escape"]
+	z011 -> z012 [class = "skl" label = "spell"]
+	{
+		rank = same
+		z003
+		z006
+	}
+
+	title -> 001
+	001 -> 129
+	001 -> 156
+	001 -> 203
+	002 -> 008
+	003 -> 259 [class = "skl" label = "pick lock"]
+	003 -> 163
+	003 -> 156
+	003 -> 144
+	004 -> 015 [class = "req" label = "rope & grapple"]
+	004 -> 257
+	005 -> 094 [class = "pass" label = "LK"]
+	005 -> 220 [class = "fail"]
+	006 -> 155
+	007 -> 129
+	007 -> 276
+	008 -> 294
+	008 -> 346
+	008 -> 383
+	009 -> 026
+	009 -> 117
+	009 -> 387
+	010 -> 123 [class = "cbt" label = "win AR"]
+	011 -> 237
+	012 -> 082
+	012 -> 192
+	013 -> 079
+	014 -> 195
+	014 -> 203
+	015 -> 257 [class = "pass" label = "SK"]
+	015 -> 209 [class = "fail"]
+	016 -> 146
+	016 -> 391
+	017 -> 210
+	018
+	019 -> 171 [class = "cbt" label = "lose 4 AR"]
+	019 -> 057
+	020 -> 208 [class = "skl" label = "pick pocket"]
+	020 -> 049
+	021 -> 090
+	021 -> 156
+	021 -> 144
+	022 -> 307
+	022 -> 141 [class = "skl" label = "pick lock"]
+	022 -> 141 [class = "req" label = "lock-picks"]
+	023 -> 142 [class = "req" label = "magic weapon"]
+	023 -> 111
+	024 -> 324 [class = "skl" label = "pick lock"]
+	024 -> 245
+	025 -> 084
+	026 -> 234 [class = "opt" label = "-1 gold"]
+	026 -> 309
+	026 -> 117
+	026 -> 387
+	027 -> 191
+	028 -> 332 [class = "cbt" label = "AR>3"]
+	029
+	030 -> 132 [class = "skl" label = "spot hidden"]
+	030 -> 206
+	031 -> 288
+	032 -> 211 [class = "skl" label = "pick lock"]
+	032 -> 384
+	032 -> 129
+	033 -> 155
+	034 -> 228
+	034 -> 252
+	035 -> 171 [class = "cbt" label = "lose 4 AR"]
+	035 -> 057
+	036
+	037 -> 342
+	038 -> 205 [class = "pass" label = "SK-1"]
+	038 -> 310 [class = "fail"]
+	039 -> 302
+	040
+	041 -> 316
+	042
+	043 -> 348
+	043 -> 303 [class = "skl" label = "spot hidden"]
+	043 -> 198
+	044 -> 177
+	045 -> 215
+	045 -> 110
+	045 -> 281
+	046 -> 168
+	047 -> 255
+	047 -> 368
+	047 -> 062
+	048 -> 159
+	048 -> 004
+	049
+	050 -> 060
+	050 -> 201
+	051
+	052 -> 314 [class = "skl" label = "spot hidden"]
+	052 -> 212
+	053 -> 136
+	054 -> 090
+	054 -> 156
+	054 -> 144
+	055 -> 335
+	056 -> 043
+	057 -> 246
+	058 -> 139 [class = "pass" label = "pick lock\n SK"]
+	058 -> 221 [class = "fail"]
+	058 -> 221
+	059 -> 126 [class = "skl" label = "spot hidden"]
+	059 -> 317
+	060 -> 129
+	060 -> 144
+	061 -> 225
+	061 -> 004
+	061 -> 119
+	062 -> 147 [class = "skl" label = "pick pocket"]
+	062 -> 109
+	062 -> 368
+	062 -> 047
+	063 -> 190 [class = "pass" label = "SK"]
+	063 -> 390 [class = "fail"]
+	064 -> 289 [class = "opt" label = "-2 gold"]
+	064 -> 309
+	064 -> 026
+	064 -> 387
+	065
+	066 -> 026
+	066 -> 117
+	066 -> 387
+	067 -> 381 [class = "skl" label = "spot hidden"]
+	067 -> 027
+	068 -> 121
+	068 -> 339
+	069 -> 362 [class = "req" label = "map"]
+	069 -> 081
+	070 -> 050
+	070 -> 277
+	070 -> 076
+	071 -> 227 [class = "req" label = "5 gold"]
+	071 -> 112
+	072 -> 226
+	073 -> 125 [class = "req" label = "rope & grapnel"]
+	073 -> 263 [class = "req" label = "black hooded cloak"]
+	073 -> 340 [class = "req" label = "heavy chain"]
+	074 -> 326 [class = "skl" label = "sneak"]
+	074 -> 372
+	074 -> 345
+	074 -> 210
+	075 -> 358 [class = "skl" label = "sneak"]
+	075 -> 127
+	075 -> 246
+	076 -> 070
+	076 -> 277
+	076 -> 321
+	076 -> 144
+	076 -> 129
+	077 -> 301
+	077 -> 287
+	078 -> 166 [class = "fail" label = "1+1\n LK"]
+	078 -> 218 [class = "cbt" label = "win"]
+	079 -> 241
+	079 -> 351
+	080 -> 159
+	080 -> 225
+	080 -> 271
+	081 -> 178 [class = "pass" label = "LK"]
+	081 -> 370 [class = "fail"]
+	082 -> 192 [class = "cbt" label = "win AR\n flee"]
+	082 -> 023
+	083 -> 106
+	084 -> 010
+	084 -> 140
+	084 -> 374
+	085 -> 184 [class = "pass" label = "hide\n SK"]
+	085 -> 311 [class = "fail"]
+	085 -> 311
+	086 -> 033
+	086 -> 229 [class = "pass" label = "SK"]
+	086 -> 367 [class = "fail"]
+	087 -> 214 [class = "pass" label = "SK"]
+	087 -> 380 [class = "fail"]
+	088 -> 197 [class = "skl" label = "pick pocket"]
+	088 -> 160
+	088 -> 115
+	089 -> 054 [class = "skl" label = "secret sign"]
+	089 -> 349
+	090 -> 377
+	090 -> 156
+	090 -> 144
+	091 -> 190 [class = "pass" label = "SK"]
+	091 -> 107 [class = "fail"]
+	092 -> 034 [class = "req" label = "killed monster"]
+	092 -> 200
+	093 -> 153 [class = "skl" label = "spot hidden"]
+	093 -> 210
+	094 -> 191
+	095 -> 368
+	096 -> 196
+	097 -> 188 [class = "pass" label = "SK"]
+	097 -> 162 [class = "fail"]
+	098 -> 136
+	099 -> 360 [class = "skl" label = "pick lock"]
+	099 -> 316
+	100 -> 077
+	101 -> 131
+	102 -> 300
+	103 -> 384
+	103 -> 318
+	104 -> 273 [class = "req" label = "L key"]
+	104 -> 124 [class = "req" label = "R key"]
+	104 -> 055 [class = "req" label = "L+R key"]
+	104 -> 165 [class = "skl" label = "pick lock"]
+	104 -> 143
+	104 -> 325
+	104 -> 306
+	105 -> 177
+	106 -> 398
+	106 -> 388 [class = "cbt" label = "AR>1"]
+	107
+	108 -> 238 [class = "pass" label = "LK"]
+	108 -> 375 [class = "fail"]
+	109 -> 007
+	109 -> 336
+	109 -> 170 [class = "skl" label = "hide"]
+	109 -> 254
+	110 -> 129
+	110 -> 144
+	111
+	112 -> 028
+	112 -> 333
+	112 -> 283
+	113 -> 067
+	114 -> 328
+	115 -> 063 [class = "req" label = "black hooded cloak/\n goot rags"]
+	115 -> 172
+	116 -> 238 [class = "skl" label = "climb"]
+	116 -> 238 [class = "req" label = "climbing equipment"]
+	116 -> 276 [class = "skl" label = "pick lock"]
+	116 -> 129
+	116 -> 144
+	117 -> 289 [class = "opt" label = "-2 gold"]
+	117 -> 064
+	118 -> 182 [class = "skl" label = "spot hidden"]
+	118 -> 020
+	119 -> 330
+	119 -> 291
+	120 -> 089
+	121 -> 351 [class = "cbt" label = "AR>1"]
+	122 -> 177
+	123 -> 053 [class = "req" label = "magic weapon"]
+	123 -> 098 [class = "req" label = "torch"]
+	123 -> 183
+	124 -> 335 [class = "skl" label = "pick lock"]
+	124 -> 202
+	125 -> 232 [class = "pass" label = "SK"]
+	125 -> 389 [class = "fail"]
+	126 -> 317
+	126 -> 152
+	127 -> 035 [class = "pass" label = "SK"]
+	127 -> 313 [class = "fail"]
+	128 -> 084
+	129 -> 075
+	129 -> 246
+	130 -> 269
+	130 -> 292
+	131 -> 299 [class = "cbt" label = "AR>3"]
+	131 -> 337
+	132 -> 100 [class = "skl" label = "secret sign"]
+	132 -> 344
+	133 -> 158 [class = "req" label = "magic weapon"]
+	133 -> 180
+	134 -> 143
+	134 -> 242
+	134 -> 306
+	135 -> 177
+	136 -> 046
+	136 -> 374
+	137
+	138 -> 315
+	138 -> 193
+	138 -> 261
+	139 -> 079
+	140 -> 123 [class = "cbt" label = "AR>1"]
+	141 -> 137
+	142 -> 323
+	143 -> 242
+	143 -> 306
+	143 -> 325
+	144 -> 369
+	144 -> 022
+	144 -> 167
+	144 -> 2848 [class = "req" label = "Barrow Hill"]
+	145 -> 182 [class = "skl" label = "spot hidden"]
+	145 -> 020
+	146 -> 018 [class = "pass" label = "LK"]
+	146 -> 329 [class = "fail"]
+	147 -> 368
+	147 -> 047
+	148 -> 008 [class = "pass" label = "SK"]
+	148 -> 002 [class = "fail"]
+	149 -> 135 [class = "pass" label = "LK"]
+	149 -> 347 [class = "fail"]
+	150 -> 366
+	150 -> 233
+	151 -> 144 [class = "pass" label = "SK"]
+	151 -> 096 [class = "fail"]
+	152 -> 351 [class = "cbt" label = "AR>3"]
+	153 -> 173
+	153 -> 210
+	154 -> 381 [class = "skl" label = "AR>3\n spot hidden"]
+	154 -> 027 [class = "cbt" label = "AR>3"]
+	155 -> 025 [class = "skl" label = "sneak"]
+	155 -> 128
+	156 -> 122 [class = "skl" label = "hide"]
+	156 -> 293
+	157 -> 324 [class = "skl" label = "pick lock"]
+	157 -> 324 [class = "pass" label = "SK"]
+	158 -> 001.158
+	159 -> 225
+	159 -> 004
+	159 -> 179 [class = "skl" label = "hide"]
+	159 -> 061
+	160 -> 091 [class = "pass" label = "SK"]
+	160 -> 040 [class = "fail"]
+	161 -> 352
+	162 -> 327
+	162 -> 149
+	162 -> 224
+	163 -> 187 [class = "skl" label = "pick lock"]
+	163 -> 003
+	163 -> 156
+	163 -> 144
+	164 -> 056
+	164 -> 043
+	165 -> 143
+	165 -> 306
+	165 -> 325
+	166 -> 078
+	167 -> 223
+	167 -> 016 [class = "skl" label = "climb"]
+	167 -> 016 [class = "opt" label = "rope & grapnel"]
+	168 -> 374
+	169 -> 099
+	170 -> 368
+	171
+	172 -> 190 [class = "pass" label = "SK"]
+	172 -> 107 [class = "fail"]
+	173 -> 017 [class = "pass" label = "SK"]
+	173 -> 356 [class = "fail"]
+	174 -> 252
+	175
+	176 -> 194 [class = "cbt" label = "AR>3/\n kill dog\n AR>1"]
+	177 -> 384
+	177 -> 032
+	178 -> 169 [class = "cbt" label = "AR>1"]
+	179 -> 298
+	179 -> 350
+	180 -> 243 [class = "cbt" label = "lose AR"]
+	180 -> 354 [class = "cbt" label = "win AR"]
+	181 -> 090
+	181 -> 156
+	181 -> 144
+	182 -> 041
+	182 -> 208 [class = "skl" label = "pick pocket"]
+	182 -> 049
+	182 -> 316
+	183 -> 136
+	184 -> 005 [class = "pass" label = "-weapon\n SK"]
+	184 -> 249 [class = "fail" label = "-weapon"]
+	184 -> 067
+	185 -> 070
+	185 -> 076
+	185 -> 321
+	185 -> 129
+	185 -> 144
+	186 -> 334
+	186 -> 252
+	187 -> 003
+	187 -> 156
+	187 -> 144
+	188 -> 177
+	189 -> 106
+	190 -> 069
+	191 -> 039 [class = "skl" label = "secret sign"]
+	191 -> 231
+	192 -> 142 [class = "req" label = "magic weapon"]
+	192 -> 111
+	193 -> 261
+	193 -> 396 [class = "skl" label = "hide"]
+	194
+	195 -> 278
+	195 -> 203
+	195 -> 364 [class = "pass" label = "-gold"]
+	195 -> 066 [class = "fail"]
+	196 -> 386
+	197 -> 069
+	198 -> 150
+	199 -> 227 [class = "req" label = "-5 gold"]
+	199 -> 112
+	200 -> 174 [class = "pass" label = "LK"]
+	200 -> 065 [class = "fail"]
+	201 -> 076
+	201 -> 277
+	201 -> 321
+	201 -> 144
+	201 -> 129
+	202 -> 143
+	202 -> 306
+	202 -> 325
+	203 -> 309
+	203 -> 026
+	203 -> 117
+	203 -> 387
+	204 -> 301
+	205 -> 093 [class = "skl" label = "secret sign"]
+	205 -> 292
+	206 -> 077
+	207 -> 285 [class = "cbt" label = "lose AR"]
+	207 -> 353
+	208 -> 316
+	209 -> 386
+	210 -> 080
+	210 -> 271
+	211 -> 103
+	211 -> 318
+	212
+	213 -> 290
+	213 -> 341
+	214 -> 400
+	215 -> 325
+	216 -> 236
+	217 -> 278
+	217 -> 203
+	218 -> 244 [class = "pass" label = "SK"]
+	218 -> 096 [class = "fail"]
+	219 -> 248
+	220 -> 191
+	221 -> 013 [class = "skl" label = "pick pocket"]
+	221 -> 264
+	222 -> 359
+	222 -> 274
+	223 -> 036
+	223 -> 144
+	224 -> 224
+	224 -> 188 [class = "cbt" label = "win/tie AR\n flee"]
+	225 -> 319 [class = "cbt" label = "win AR"]
+	225 -> 365 [class = "pass" label = "SK"]
+	225 -> 389 [class = "fail"]
+	226 -> 395
+	226 -> 354
+	227 -> 195
+	227 -> 203
+	228 -> 174 [class = "pass" label = "LK"]
+	228 -> 065 [class = "fail"]
+	229 -> 155
+	230 -> 171 [class = "cbt" label = "lose 4 AR"]
+	230 -> 057
+	231 -> 302
+	232 -> 354
+	233 -> 031
+	234 -> 309
+	234 -> 117
+	234 -> 387
+	235 -> 304
+	236 -> 352
+	236 -> 161
+	237 -> 381 [class = "skl" label = "spot hidden"]
+	237 -> 027
+	238 -> 276 [class = "skl" label = "pick lock"]
+	238 -> 129
+	238 -> 144
+	239 -> 341
+	240 -> 363 [class = "req" label = "silver whistle"]
+	240 -> 280
+	241 -> 355
+	241 -> 282
+	242 -> 143
+	242 -> 104
+	242 -> 325
+	242 -> 306
+	243 -> 354 [class = "pass" label = "LK"]
+	243 -> 175 [class = "fail"]
+	244 -> 386
+	245 -> 186 [class = "pass" label = "SK"]
+	245 -> 324 [class = "cbt" label = "win\n SK"]
+	246 -> 074
+	246 -> 345
+	246 -> 210
+	247 -> 323
+	248 -> 204
+	248 -> 301
+	249 -> 011
+	249 -> 154
+	250 -> 382
+	251 -> 131
+	252 -> 011
+	252 -> 154
+	252 -> 373
+	252 -> 085
+	252 -> 113
+	253 -> 278
+	253 -> 203
+	254 -> 194 [class = "cbt" label = "AR>3/\n kill dog\n AR>1"]
+	255 -> 095 [class = "skl" label = "sneak"]
+	255 -> 176
+	256 -> 037
+	256 -> 114 [class = "skl" label = "hide"]
+	257 -> 226
+	258 -> 028
+	258 -> 283
+	259 -> 090
+	259 -> 377
+	260 -> 275
+	261 -> 129
+	261 -> 144
+	262 -> 210
+	263 -> 232 [class = "pass" label = "SK"]
+	263 -> 389 [class = "fail"]
+	264 -> 305 [class = "pass" label = "LK"]
+	264 -> 379 [class = "fail"]
+	265 -> 290
+	265 -> 341
+	266 -> 131
+	267 -> 240 [class = "skl" label = "climb"]
+	267 -> 240 [class = "req" label = "rope & grapple"]
+	267 -> 240 [class = "pass" label = "SK"]
+	268 -> 097
+	268 -> 149
+	268 -> 224
+	269
+	270 -> 210
+	271 -> 151
+	271 -> 078
+	271 -> 072 [class = "skl" label = "climb"]
+	272 -> 129
+	272 -> 144
+	273 -> 355 [class = "skl" label = "pick lock"]
+	273 -> 202
+	274 -> 250 [class = "pass" label = "LK"]
+	274 -> 394 [class = "fail"]
+	275 -> 001
+	276 -> 047
+	276 -> 062
+	276 -> 368
+	277 -> 396 [class = "skl" label = "sneak"]
+	277 -> 138
+	278 -> 195
+	278 -> 203
+	278 -> 014 [class = "pass" label = "SK"]
+	278 -> 376 [class = "fail"]
+	279 -> 342
+	280 -> 043
+	281 -> 129
+	281 -> 144
+	282 -> 068
+	283 -> 203 [class = "opt" label = "-magic potion/\n -5 meal"]
+	283 -> 028
+	283 -> 333
+	284 -> 392 [class = "pwd" label = "barrow hill"]
+	284 -> 001.284
+	285 -> 235 [class = "pass" label = "ST"]
+	285 -> 312 [class = "fail"]
+	286 -> 240
+	287 -> 219
+	287 -> 371
+	288 -> 102 [class = "skl" label = "secret sign"]
+	288 -> 052
+	289 -> 309
+	289 -> 026
+	289 -> 387
+	290 -> 382 [class = "pass" label = "SK(+2?)\n (spot hidden)"]
+	290 -> 222 [class = "fail"]
+	291 -> 350
+	292 -> 087 [class = "req" label = "obsidian disc"]
+	292 -> 308 [class = "req" label = "black cloak"]
+	292 -> 397
+	293 -> 149
+	293 -> 327
+	293 -> 097
+	293 -> 224
+	294 -> 346
+	294 -> 383
+	295 -> 021 [class = "skl" label = "spot hidden"]
+	295 -> 120
+	296
+	297 -> 236
+	298 -> 385
+	298 -> 350
+	299
+	300 -> 279 [class = "skl" label = "sneak"]
+	300 -> 256
+	301 -> 002
+	301 -> 148
+	302 -> 012 [class = "pass" label = "SK"]
+	302 -> 393 [class = "fail"]
+	303 -> 056
+	303 -> 164
+	304 -> 285 [class = "cbt" label = "lose AR"]
+	304 -> 353
+	305 -> 079
+	306 -> 144
+	306 -> 129
+	307 -> 144
+	307 -> 137
+	308 -> 269
+	308 -> 130
+	308 -> 292
+	308 -> 338 [class = "opt" label = "-2LK"]
+	309 -> 195
+	309 -> 278
+	310 -> 299 [class = "cbt" label = "AR>3"]
+	310 -> 337
+	311 -> 011
+	311 -> 154
+	312
+	313 -> 171 [class = "cbt" label = "lose 3 AR"]
+	313 -> 057
+	314 -> 300
+	315 -> 070
+	315 -> 076
+	315 -> 321
+	315 -> 277
+	316 -> 269
+	316 -> 130
+	316 -> 292
+	317 -> 152 [class = "pass" label = "SK"]
+	318 -> 384
+	319 -> 158 [class = "opt" label = "magical weapon"]
+	319 -> 073
+	319 -> 389
+	320
+	321 -> 134 [class = "skl" label = "pick lock"]
+	321 -> 045
+	321 -> 129
+	321 -> 144
+	322 -> 144
+	323 -> 006
+	323 -> 086
+	323 -> 155
+	324 -> 092
+	324 -> 252
+	325 -> 177
+	325 -> 070
+	325 -> 076
+	326 -> 038
+	326 -> 266
+	327 -> 044 [class = "pass" label = "-gold"]
+	327 -> 268 [class = "fail"]
+	328 -> 342
+	329
+	330 -> 350
+	331 -> 157
+	332 -> 026
+	332 -> 117
+	332 -> 387
+	333 -> 009 [class = "pass" label = "SK"]
+	333 -> 258 [class = "fail"]
+	334 -> 174 [class = "pass" label = "LK"]
+	334 -> 065 [class = "fail"]
+	335 -> 143
+	335 -> 306
+	335 -> 325
+	336 -> 194 [class = "cbt" label = "AR>3/\n kill dog\n AR>1"]
+	337 -> 210
+	338 -> 145 [class = "skl" label = "pick lock"]
+	338 -> 118 [class = "pass" label = "SK"]
+	338 -> 029 [class = "fail"]
+	339 -> 059 [class = "cbt" label = "AR>3"]
+	340 -> 232 [class = "pass" label = "SK"]
+	340 -> 389 [class = "fail"]
+	341 -> 088 [class = "skl" label = "spot hidden"]
+	341 -> 378
+	342 -> 013 [class = "skl" label = "pick pocket"]
+	342 -> 264
+	342 -> 058
+	343 -> 286 [class = "skl" label = "spot hidden"]
+	343 -> 267
+	344 -> 077
+	345 -> 251 [class = "pass" label = "-gold"]
+	345 -> 101 [class = "fail"]
+	346 -> 294
+	346 -> 383
+	347 -> 097
+	347 -> 224
+	347 -> 327
+	348 -> 043
+	349 -> 181 [class = "skl" label = "spot hidden"]
+	350 -> 357 [class = "skl" label = "spot hidden"]
+	350 -> 189
+	350 -> 083
+	351 -> 216 [class = "skl" label = "climb"]
+	351 -> 297
+	351 -> 241
+	352 -> 024 [class = "skl" label = "sneak"]
+	352 -> 331
+	353 -> 265 [class = "skl" label = "climb"]
+	353 -> 399
+	354 -> 083
+	354 -> 189
+	354 -> 357 [class = "skl" label = "spot hidden"]
+	355 -> 068
+	356 -> 210
+	357 -> 003
+	357 -> 163
+	358 -> 246
+	358 -> 230
+	358 -> 019
+	359 -> 382
+	360 -> 182 [class = "skl" label = "spot hidden"]
+	360 -> 020
+	361 -> 185 [class = "pass" label = "SK"]
+	361 -> 261 [class = "fail"]
+	362 -> 178
+	363 -> 073
+	364 -> 253 [class = "skl" label = "secret sign"]
+	364 -> 217
+	365 -> 225
+	365 -> 073
+	366 -> 031
+	367 -> 155
+	368 -> 321
+	368 -> 048
+	369 -> 322
+	370 -> 178 [class = "pass" label = "LK"]
+	371 -> 248
+	372 -> 131
+	372 -> 345
+	372 -> 270
+	373 -> 005 [class = "pass" label = "SK"]
+	373 -> 249 [class = "fail"]
+	374 -> 207 [class = "pass" label = "SK"]
+	374 -> 304 [class = "fail"]
+	375 -> 116 [class = "skl" label = "hide"]
+	375 -> 272
+	376 -> 071 [class = "pass" label = "LK"]
+	376 -> 199 [class = "fail"]
+	377 -> 295 [class = "pass" label = "pick lock\n SK-2"]
+	377 -> 090
+	377 -> 156
+	377 -> 144
+	378 -> 088 [class = "pass" label = "LK"]
+	378 -> 042 [class = "fail"]
+	379
+	380 -> 087 [class = "pass" label = "LK"]
+	381 -> 191
+	382 -> 341
+	383 -> 343
+	384 -> 276 [class = "skl" label = "pick lock"]
+	384 -> 108
+	384 -> 129
+	385 -> 330
+	385 -> 291
+	386 -> 159
+	386 -> 225
+	386 -> 004 [class = "skl" label = "climb"]
+	386 -> 004 [class = "req" label = "rope & grapnel"]
+	387 -> 156
+	387 -> 129
+	388 -> 156
+	388 -> 144
+	389 -> 048 [class = "skl" label = "hide"]
+	389 -> 175
+	390 -> 190 [class = "pass" label = "SK"]
+	390 -> 051 [class = "fail"]
+	391 -> 144 [class = "pass" label = "SK"]
+	391 -> 036 [class = "fail"]
+	392 -> 030
+	392 -> 077
+	393 -> 082
+	393 -> 192
+	394 -> 239 [class = "skl" label = "climb"]
+	394 -> 296
+	395 -> 133 [class = "cbt" label = "win AR"]
+	396 -> 361 [class = "skl" label = "pick pocket"]
+	396 -> 261
+	396 -> 070
+	396 -> 076
+	396 -> 321
+	396 -> 129
+	396 -> 144
+	397 -> 269
+	397 -> 130
+	397 -> 292
+	397 -> 338 [class = "opt" label = "-2LK"]
+	398 -> 003
+	398 -> 163
+	399 -> 213 [class = "pass" label = "LK"]
+	399 -> 320 [class = "fail"]
+	400
+
+/*
+	001 [fontsize=25]
+	002 [fontsize=25]
+	003 [fontsize=25]
+	004 [fontsize=25]
+	005 [fontsize=25]
+	006 [fontsize=25]
+	007 [fontsize=25]
+	008 [fontsize=25]
+	009 [fontsize=25]
+	010 [fontsize=25]
+	011 [fontsize=25]
+	012 [fontsize=25]
+	013 [fontsize=25]
+	014 [fontsize=25]
+	015 [fontsize=25]
+	016 [fontsize=25]
+	017 [fontsize=25]
+	018 [fontsize=25]
+	019 [fontsize=25]
+	020 [fontsize=25]
+	021 [fontsize=25]
+	022 [fontsize=25]
+	023 [fontsize=25]
+	024 [fontsize=25]
+	025 [fontsize=25]
+	026 [fontsize=25]
+	027 [fontsize=25]
+	028 [fontsize=25]
+	029 [fontsize=25]
+	030 [fontsize=25]
+	031 [fontsize=25]
+	032 [fontsize=25]
+	033 [fontsize=25]
+	034 [fontsize=25]
+	035 [fontsize=25]
+	036 [fontsize=25]
+	037 [fontsize=25]
+	038 [fontsize=25]
+	039 [fontsize=25]
+	040 [fontsize=25]
+	041 [fontsize=25]
+	042 [fontsize=25]
+	043 [fontsize=25]
+	044 [fontsize=25]
+	045 [fontsize=25]
+	046 [fontsize=25]
+	047 [fontsize=25]
+	048 [fontsize=25]
+	049 [fontsize=25]
+	050 [fontsize=25]
+	051 [fontsize=25]
+	052 [fontsize=25]
+	053 [fontsize=25]
+	054 [fontsize=25]
+	055 [fontsize=25]
+	056 [fontsize=25]
+	057 [fontsize=25]
+	058 [fontsize=25]
+	059 [fontsize=25]
+	060 [fontsize=25]
+	061 [fontsize=25]
+	062 [fontsize=25]
+	063 [fontsize=25]
+	064 [fontsize=25]
+	065 [fontsize=25]
+	066 [fontsize=25]
+	067 [fontsize=25]
+	068 [fontsize=25]
+	069 [fontsize=25]
+	070 [fontsize=25]
+	071 [fontsize=25]
+	072 [fontsize=25]
+	073 [fontsize=25]
+	074 [fontsize=25]
+	075 [fontsize=25]
+	076 [fontsize=25]
+	077 [fontsize=25]
+	078 [fontsize=25]
+	079 [fontsize=25]
+	080 [fontsize=25]
+	081 [fontsize=25]
+	082 [fontsize=25]
+	083 [fontsize=25]
+	084 [fontsize=25]
+	085 [fontsize=25]
+	086 [fontsize=25]
+	087 [fontsize=25]
+	088 [fontsize=25]
+	089 [fontsize=25]
+	090 [fontsize=25]
+	091 [fontsize=25]
+	092 [fontsize=25]
+	093 [fontsize=25]
+	094 [fontsize=25]
+	095 [fontsize=25]
+	096 [fontsize=25]
+	097 [fontsize=25]
+	098 [fontsize=25]
+	099 [fontsize=25]
+	100 [fontsize=25]
+	101 [fontsize=25]
+	102 [fontsize=25]
+	103 [fontsize=25]
+	104 [fontsize=25]
+	105 [fontsize=25]
+	106 [fontsize=25]
+	107 [fontsize=25]
+	108 [fontsize=25]
+	109 [fontsize=25]
+	110 [fontsize=25]
+	111 [fontsize=25]
+	112 [fontsize=25]
+	113 [fontsize=25]
+	114 [fontsize=25]
+	115 [fontsize=25]
+	116 [fontsize=25]
+	117 [fontsize=25]
+	118 [fontsize=25]
+	119 [fontsize=25]
+	120 [fontsize=25]
+	121 [fontsize=25]
+	122 [fontsize=25]
+	123 [fontsize=25]
+	124 [fontsize=25]
+	125 [fontsize=25]
+	126 [fontsize=25]
+	127 [fontsize=25]
+	128 [fontsize=25]
+	129 [fontsize=25]
+	130 [fontsize=25]
+	131 [fontsize=25]
+	132 [fontsize=25]
+	133 [fontsize=25]
+	134 [fontsize=25]
+	135 [fontsize=25]
+	136 [fontsize=25]
+	137 [fontsize=25]
+	138 [fontsize=25]
+	139 [fontsize=25]
+	140 [fontsize=25]
+	141 [fontsize=25]
+	142 [fontsize=25]
+	143 [fontsize=25]
+	144 [fontsize=25]
+	145 [fontsize=25]
+	146 [fontsize=25]
+	147 [fontsize=25]
+	148 [fontsize=25]
+	149 [fontsize=25]
+	150 [fontsize=25]
+	151 [fontsize=25]
+	152 [fontsize=25]
+	153 [fontsize=25]
+	154 [fontsize=25]
+	155 [fontsize=25]
+	156 [fontsize=25]
+	157 [fontsize=25]
+	158 [fontsize=25]
+	159 [fontsize=25]
+	160 [fontsize=25]
+	161 [fontsize=25]
+	162 [fontsize=25]
+	163 [fontsize=25]
+	164 [fontsize=25]
+	165 [fontsize=25]
+	166 [fontsize=25]
+	167 [fontsize=25]
+	168 [fontsize=25]
+	169 [fontsize=25]
+	170 [fontsize=25]
+	171 [fontsize=25]
+	172 [fontsize=25]
+	173 [fontsize=25]
+	174 [fontsize=25]
+	175 [fontsize=25]
+	176 [fontsize=25]
+	177 [fontsize=25]
+	178 [fontsize=25]
+	179 [fontsize=25]
+	180 [fontsize=25]
+	181 [fontsize=25]
+	182 [fontsize=25]
+	183 [fontsize=25]
+	184 [fontsize=25]
+	185 [fontsize=25]
+	186 [fontsize=25]
+	187 [fontsize=25]
+	188 [fontsize=25]
+	189 [fontsize=25]
+	190 [fontsize=25]
+	191 [fontsize=25]
+	192 [fontsize=25]
+	193 [fontsize=25]
+	194 [fontsize=25]
+	195 [fontsize=25]
+	196 [fontsize=25]
+	197 [fontsize=25]
+	198 [fontsize=25]
+	199 [fontsize=25]
+	200 [fontsize=25]
+	201 [fontsize=25]
+	202 [fontsize=25]
+	203 [fontsize=25]
+	204 [fontsize=25]
+	205 [fontsize=25]
+	206 [fontsize=25]
+	207 [fontsize=25]
+	208 [fontsize=25]
+	209 [fontsize=25]
+	210 [fontsize=25]
+	211 [fontsize=25]
+	212 [fontsize=25]
+	213 [fontsize=25]
+	214 [fontsize=25]
+	215 [fontsize=25]
+	216 [fontsize=25]
+	217 [fontsize=25]
+	218 [fontsize=25]
+	219 [fontsize=25]
+	220 [fontsize=25]
+	221 [fontsize=25]
+	222 [fontsize=25]
+	223 [fontsize=25]
+	224 [fontsize=25]
+	225 [fontsize=25]
+	226 [fontsize=25]
+	227 [fontsize=25]
+	228 [fontsize=25]
+	229 [fontsize=25]
+	230 [fontsize=25]
+	231 [fontsize=25]
+	232 [fontsize=25]
+	233 [fontsize=25]
+	234 [fontsize=25]
+	235 [fontsize=25]
+	236 [fontsize=25]
+	237 [fontsize=25]
+	238 [fontsize=25]
+	239 [fontsize=25]
+	240 [fontsize=25]
+	241 [fontsize=25]
+	242 [fontsize=25]
+	243 [fontsize=25]
+	244 [fontsize=25]
+	245 [fontsize=25]
+	246 [fontsize=25]
+	247 [fontsize=25]
+	248 [fontsize=25]
+	249 [fontsize=25]
+	250 [fontsize=25]
+	251 [fontsize=25]
+	252 [fontsize=25]
+	253 [fontsize=25]
+	254 [fontsize=25]
+	255 [fontsize=25]
+	256 [fontsize=25]
+	257 [fontsize=25]
+	258 [fontsize=25]
+	259 [fontsize=25]
+	260 [fontsize=25]
+	261 [fontsize=25]
+	262 [fontsize=25]
+	263 [fontsize=25]
+	264 [fontsize=25]
+	265 [fontsize=25]
+	266 [fontsize=25]
+	267 [fontsize=25]
+	268 [fontsize=25]
+	269 [fontsize=25]
+	270 [fontsize=25]
+	271 [fontsize=25]
+	272 [fontsize=25]
+	273 [fontsize=25]
+	274 [fontsize=25]
+	275 [fontsize=25]
+	276 [fontsize=25]
+	277 [fontsize=25]
+	278 [fontsize=25]
+	279 [fontsize=25]
+	280 [fontsize=25]
+	281 [fontsize=25]
+	282 [fontsize=25]
+	283 [fontsize=25]
+	284 [fontsize=25]
+	285 [fontsize=25]
+	286 [fontsize=25]
+	287 [fontsize=25]
+	288 [fontsize=25]
+	289 [fontsize=25]
+	290 [fontsize=25]
+	291 [fontsize=25]
+	292 [fontsize=25]
+	293 [fontsize=25]
+	294 [fontsize=25]
+	295 [fontsize=25]
+	296 [fontsize=25]
+	297 [fontsize=25]
+	298 [fontsize=25]
+	299 [fontsize=25]
+	300 [fontsize=25]
+	301 [fontsize=25]
+	302 [fontsize=25]
+	303 [fontsize=25]
+	304 [fontsize=25]
+	305 [fontsize=25]
+	306 [fontsize=25]
+	307 [fontsize=25]
+	308 [fontsize=25]
+	309 [fontsize=25]
+	310 [fontsize=25]
+	311 [fontsize=25]
+	312 [fontsize=25]
+	313 [fontsize=25]
+	314 [fontsize=25]
+	315 [fontsize=25]
+	316 [fontsize=25]
+	317 [fontsize=25]
+	318 [fontsize=25]
+	319 [fontsize=25]
+	320 [fontsize=25]
+	321 [fontsize=25]
+	322 [fontsize=25]
+	323 [fontsize=25]
+	324 [fontsize=25]
+	325 [fontsize=25]
+	326 [fontsize=25]
+	327 [fontsize=25]
+	328 [fontsize=25]
+	329 [fontsize=25]
+	330 [fontsize=25]
+	331 [fontsize=25]
+	332 [fontsize=25]
+	333 [fontsize=25]
+	334 [fontsize=25]
+	335 [fontsize=25]
+	336 [fontsize=25]
+	337 [fontsize=25]
+	338 [fontsize=25]
+	339 [fontsize=25]
+	340 [fontsize=25]
+	341 [fontsize=25]
+	342 [fontsize=25]
+	343 [fontsize=25]
+	344 [fontsize=25]
+	345 [fontsize=25]
+	346 [fontsize=25]
+	347 [fontsize=25]
+	348 [fontsize=25]
+	349 [fontsize=25]
+	350 [fontsize=25]
+	351 [fontsize=25]
+	352 [fontsize=25]
+	353 [fontsize=25]
+	354 [fontsize=25]
+	355 [fontsize=25]
+	356 [fontsize=25]
+	357 [fontsize=25]
+	358 [fontsize=25]
+	359 [fontsize=25]
+	360 [fontsize=25]
+	361 [fontsize=25]
+	362 [fontsize=25]
+	363 [fontsize=25]
+	364 [fontsize=25]
+	365 [fontsize=25]
+	366 [fontsize=25]
+	367 [fontsize=25]
+	368 [fontsize=25]
+	369 [fontsize=25]
+	370 [fontsize=25]
+	371 [fontsize=25]
+	372 [fontsize=25]
+	373 [fontsize=25]
+	374 [fontsize=25]
+	375 [fontsize=25]
+	376 [fontsize=25]
+	377 [fontsize=25]
+	378 [fontsize=25]
+	379 [fontsize=25]
+	380 [fontsize=25]
+	381 [fontsize=25]
+	382 [fontsize=25]
+	383 [fontsize=25]
+	384 [fontsize=25]
+	385 [fontsize=25]
+	386 [fontsize=25]
+	387 [fontsize=25]
+	388 [fontsize=25]
+	389 [fontsize=25]
+	390 [fontsize=25]
+	391 [fontsize=25]
+	392 [fontsize=25]
+	393 [fontsize=25]
+	394 [fontsize=25]
+	395 [fontsize=25]
+	396 [fontsize=25]
+	397 [fontsize=25]
+	398 [fontsize=25]
+	399 [fontsize=25]
+	400 [fontsize=25]
+*/
+}

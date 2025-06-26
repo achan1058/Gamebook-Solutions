@@ -279,6 +279,16 @@
     </CustomBuild>
     <CustomBuild Include="Fighting Fantasy\FF28 - Phantoms of Fear.dot">
       <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuild>
+    <CustomBuild Include="Fighting Fantasy\FF11 - Talisman of Death.dot">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuild>
+    <CustomBuild Include="Fighting Fantasy\FF29 - Midnight Rogue.dot">
+      <FileType>Document</FileType>
     </CustomBuild>
     <None Include="style.css" />
     <CustomBuild Include="CSS template.dot">
