@@ -45,10 +45,10 @@ digraph {
 		^: Damage can be reduced by items\l \
 		@: Take 2 items\l\l \
 		Starting Stats:\l \
-		Initial Skill: 1d6+6\l \
-		Initial Stamina: 2d6+12\l \
-		Initial Luck: 1d6+6\l\l \
-		Initial Power: 2d6+6\l \
+		Initial Skill: 1d+6\l \
+		Initial Stamina: 2d+12\l \
+		Initial Luck: 1d+6\l\l \
+		Initial Power: 2d+6\l \
 		Starting Gear:\l \
 		skill/stamina/luck potion: +all SK/ST/LK&1ILK\l \
 		10 meal: +4ST\l \
@@ -57,7 +57,7 @@ digraph {
 		lantern\l \
 		tinderbox\l \
 		backpack\l \
-		2d6+6 gold\l\l \
+		2d+6 gold\l\l \
 		Key Items:\l \
 		herbs: +3STx2\l \
 		net: can avoid 1 fight\l \

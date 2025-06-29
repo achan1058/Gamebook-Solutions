@@ -45,9 +45,9 @@ digraph {
 		^: Damage can be reduced by items\l \
 		@: Take 2 items\l\l \
 		Starting Stats:\l \
-		Initial Skill: 1d6+6\l \
-		Initial Stamina: 2d6+12\l \
-		Initial Luck: 1d6+6\l\l \
+		Initial Skill: 1d+6\l \
+		Initial Stamina: 2d+12\l \
+		Initial Luck: 1d+6\l\l \
 		Initial Trail: 0\l\l \
 		Starting Gear:\l \
 		2 meal: +4ST\l \

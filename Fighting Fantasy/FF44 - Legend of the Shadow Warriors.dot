@@ -48,9 +48,9 @@ digraph {
 		^: Damage can be reduced by items\l \
 		@: Take 2 items\l\l \
 		Starts with:\l \
-		Initial Skill: 1d6+6\l \
-		Initial Stamina: 2d6+12\l \
-		Initial Luck: 1d6+6\l\l \
+		Initial Skill: 1d+6\l \
+		Initial Stamina: 2d+12\l \
+		Initial Luck: 1d+6\l\l \
 		skill/stamina/luck potion: +all SK/ST/LK&1ILK\l \
 		10 meal: +4ST\l \
 		sword\l \
@@ -58,7 +58,7 @@ digraph {
 		lantern\l \
 		tinderbox\l \
 		backpack\l \
-		2d6+6 gold\l\l \
+		2d+6 gold\l\l \
 		Comments:\l \
 		085*: Same stats and weapon as yourself\l \
 		luck amulet: +all LK\l \

@@ -32,9 +32,9 @@ digraph {
 		?: Chance of this happening, depending on text condition\l \
 		*: Special Combat Rules\l\l \
 		Starting Stats:\l \
-		Initial Skill: 1d6+6\l \
-		Initial Stamina: 2d6+12\l \
-		Initial Luck: 1d6+6\l\l \
+		Initial Skill: 1d+6\l \
+		Initial Stamina: 2d+12\l \
+		Initial Luck: 1d+6\l\l \
 		Starting Gear:\l \
 		sword\l \
 		backpack\l\l \

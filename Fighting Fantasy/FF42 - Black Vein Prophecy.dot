@@ -48,9 +48,9 @@ digraph {
 		^: Damage can be reduced by items\l \
 		@: Take 2 items\l\l \
 		Starts with:\l \
-		Initial Skill: 1d6+6\l \
-		Initial Stamina: 2d6+12\l \
-		Initial Luck: 1d6+6\l\l \
+		Initial Skill: 1d+6\l \
+		Initial Stamina: 2d+12\l \
+		Initial Luck: 1d+6\l\l \
 		skill/stamina/luck potion: +all SK/ST/LK&1ILK\l \
 		10 meal: +4ST\l \
 		sword\l \
@@ -58,7 +58,7 @@ digraph {
 		lantern\l \
 		tinderbox\l \
 		backpack\l \
-		2d6+6 gold\l\l \
+		2d+6 gold\l\l \
 		Comments:\l \
 		024*: Same stats as yourself\l \
 		125*: -2ST per round\l \
@@ -73,12 +73,12 @@ digraph {
 		boo1 [label = "\N\n text"]
 		boo3 [label = "\N\n text"]
 		037 [label = "\N\n +2ST"]
-		107 [label = "\N\n ISK=1d6+4"]
-		170 [label = "\N\n ILK=1d6+6"]
-		223 [label = "\N\n IST=2d6+12"]
+		107 [label = "\N\n ISK=1d+4"]
+		170 [label = "\N\n ILK=1d+6"]
+		223 [label = "\N\n IST=2d+12"]
 		245 [label = "\N\n +2LK"]
 		286 [label = "\N\n +2ST"]
-		357 [label = "\N\n IST=2d6+12"]
+		357 [label = "\N\n IST=2d+12"]
 		375 [label = "\N\n +4ST"]
 		bstt
 	}
@@ -222,7 +222,7 @@ digraph {
 		275 [label = "\N\n silken mask"]
 		277 [label = "\N\n Izkhao"]
 		284 [label = "\N\n Credas idol"]
-		321 [class = "bst" fontcolor = "crimson" label = "\N\n -shield\n ILK=1d6+6"]
+		321 [class = "bst" fontcolor = "crimson" label = "\N\n -shield\n ILK=1d+6"]
 		325 [label = "\N\n brooch: 343"]
 		326 [label = "\N\n small jar"]
 		331 [label = "\N\n scroll?"]

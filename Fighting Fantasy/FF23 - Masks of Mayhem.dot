@@ -48,9 +48,9 @@ digraph {
 		^: Damage can be reduced by items\l \
 		@: Take 2 items\l\l \
 		Starts with:\l \
-		Initial Skill: 1d6+6\l \
-		Initial Stamina: 2d6+12\l \
-		Initial Luck: 1d6+6\l\l \
+		Initial Skill: 1d+6\l \
+		Initial Stamina: 2d+12\l \
+		Initial Luck: 1d+6\l\l \
 		skill/stamina/luck potion: +all SK/ST/LK&1ILK\l \
 		10 meal: +4ST\l \
 		sword\l \
@@ -58,7 +58,7 @@ digraph {
 		lantern\l \
 		tinderbox\l \
 		backpack\l \
-		2d6+6 gold\l\l \
+		2d+6 gold\l\l \
 		Comments:\l \
 		039-: Meals restore 3ST until finding another flask\l \
 		067-: Meals restore 3ST until finding another flask\l \
@@ -88,11 +88,11 @@ digraph {
 		node [style = "filled" color = "pink"]
 		dam1 [label = "\N\n text"]
 		dam3 [label = "\N\n text"]
-		003 [label = "\N\n -1d6ST"]
+		003 [label = "\N\n -1dST"]
 		012 [label = "\N\n -2ST"]
 		018 [label = "\N\n -2ST"]
 		027 [label = "\N\n -2ST"]
-		035 [label = "\N\n -1d6+1ST"]
+		035 [label = "\N\n -1d+1ST"]
 		052 [label = "\N\n -4ST"]
 		083 [label = "\N\n -2LK"]
 		097 [label = "\N\n -2ST"]
@@ -106,7 +106,7 @@ digraph {
 		234 [label = "\N\n -2ST"]
 		253 [label = "\N\n -2ST"]
 		259 [label = "\N\n -2ST"]
-		274 [label = "\N\n -1d6ST"]
+		274 [label = "\N\n -1dST"]
 		277 [label = "\N\n -1LK"]
 		311 [label = "\N\n -1ST"]
 		312 [label = "\N\n -?ST\n (1-2)"]
@@ -156,6 +156,7 @@ digraph {
 		260
 		262
 		263
+		263.2 [label = "263"]
 		273
 		280
 		288
@@ -193,16 +194,15 @@ digraph {
 		011 [class = "ddg" label = "\N\n curse\n -2LK"]
 		013 [fontcolor = "crimson" label = "\N\n eat 2 meal"]
 		015 [class = "ddg" label = "\N\n -2ST?\n (!eat meal)"]
-		022 [label = "\N\n Vashti?"]
 		029 [label = "\N\n untie?\n (LK)"]
 		030 [label = "\N\n Cholumbara"]
 		034 [fontcolor = "crimson" label = "\N\n eat 1 meal"]
 		039 [fontcolor = "crimson" label = "\N\n -flask"]
-		042 [fontcolor = "crimson" label = "\N\n -other items"]
 		044 [label = "\N\n info" tooltip = "juja riddle"]
 		067 [fontcolor = "crimson" label = "\N\n -flask"]
 		071 [class = "bst" fontcolor = "crimson" label = "\N\n -helmet\n +4ST"]
 		082 [class = "ddg" fontcolor = "crimson" label = "\N\n -all meal\n -3ST"]
+		088 [label = "\N\n Vashti"]
 		099 [class = "bst" fontcolor = "crimson" label = "\N\n -1 gold\n +2ST"]
 		103 [fontcolor = "crimson" label = "\N\n -invisibility cloak"]
 		105 [label = "\N\n ant?"]
@@ -211,8 +211,10 @@ digraph {
 		115 [class = "ddg" label = "\N\n -2ST?\n (!eat meal)"]
 		121 [class = "bst" fontcolor = "crimson" label = "\N\n +2~4ST\n (eat meal)"]
 		132 [label = "\N\n 10 meals\n pack\n flask"]
+		137 [label = "\N\n search-party"]
 		150 [label = "\N\n magic mirror?"]
 		152 [class = "bst" label = "\N\n +4ST?\n (sorrel)"]
+		156 [label = "\N\n sword (+1SK)"]
 		167 [label = "\N\n info" tooltip = "3 doors pick wooden"]
 		169 [class = "bst" label = "\N\n info\n +1LK" tooltip = "holding 2 objects between oaks"]
 		172 [label = "\N\n 3 of:\n brass ear-ring\n Snattacat's tusk\n leather pouch\n 5 gold\n stone statuette\n water flask"]
@@ -222,18 +224,21 @@ digraph {
 		194 [label = "\N\n tied"]
 		205 [fontcolor = "crimson" label = "\N\n -item"]
 		219 [class = "ddg" label = "\N\n -2ST?\n (!eat meal)"]
+		220 [label = "\N\n helmet"]
 		232 [class = "bst" label = "\N\n info\n +1LK" tooltip = "sceptre and orb"]
 		238 [label = "\N\n info" tooltip = "3 doors pick wooden"]
 		244 [fontcolor = "crimson" label = "\N\n -cloak"]
 		246 [class = "ddg" label = "\N\n -companion\n -2ST"]
-		248 [class = "bst" label = "\N\n crystal mirror\n 30 gold\n magic bow (+1SK)\n -galrin"]
+		248 [class = "bst" label = "\N\n crystal mirror\n 30 gold\n magic bow (+1SK)\n -Galrin"]
 		268 [label = "\N\n helmet\n 3 companions"]
 		269 [label = "\N\n rope"]
 		269 [label = "\N\n pick-axe head"]
 		304 [class = "ddg" label = "\N\n +0~10 gold\n (-0~5ST)"]
-		333 [class = "bst" label = "\N\n tiger's claws\n Hever horn\n 3ST\n +2LK"]
+		333 [class = "bst" label = "\N\n tiger's claws\n Hever horn\n +3ST\n +2LK"]
 		340 [class = "ddg" fontcolor = "crimson" label = "\N\n -all meal\n -2ST"]
+		342 [label = "\N\n search-party"]
 		353 [label = "\N\n info" tooltip = "always pick middle way"]
+		358 [label = "\N\n hands tied"]
 		361 [class = "ddg" fontcolor = "crimson" label = "\N\n -1d meal\n -1ST"]
 		374 [fontcolor = "crimson" label = "\N\n -meal"]
 		394 [label = "\N\n copper nugget"]
@@ -250,7 +255,7 @@ digraph {
 		092 [label = "\N\n sceptre: 1"]
 		161 [label = "\N\n orb: 21"]
 		215 [class = "bst" label = "\N\n page: 208\n +4ST\n +2LK"]
-		301 [label = "\N\n tusk: 11 dragons\n 8 seeds"]
+		301 [label = "\N\n apple seeds: 11x8"]
 		346 [class = "bst" label = "\N\n Galrin: 100\n +2LK"]
 		wrdd
 	}
@@ -325,7 +330,7 @@ digraph {
 		
 		subgraph cluster_08 {
 			label = "Nandibear\n 9/11"
-			064 [label = "\N\n -1d6EST"]
+			064 [label = "\N\n -1dEST"]
 		}
 		
 		subgraph cluster_09 {
@@ -380,7 +385,7 @@ digraph {
 		
 		subgraph cluster_19 {
 			label = "Wight\n 9/12"
-			156 [shape = "rect" label = "\N\n sword (+1SK)"]
+			156
 		}
 		
 		subgraph cluster_20 {
@@ -410,7 +415,7 @@ digraph {
 		
 		subgraph cluster_25 {
 			label = "Pygmy Orc\n 6/10\n 5/8"
-			220 [shape = "rect" label = "\N\n helmet"]
+			220
 		}
 		
 		subgraph cluster_26 {
@@ -876,9 +881,10 @@ digraph {
 	164 -> 326 [class = "opt" label = "-item"]
 	164 -> 336
 	165 -> 381
-	165 -> 263
+	165 -> 263.2 [class = "err" label = "error?"]
+	165 -> 229 [class = "pwd" label = "fix"]
 	165 -> 193
-	166 -> 014 [class = "req" label = "companion"]
+	166 -> 014 [class = "req" label = "search-party"]
 	166 -> 356
 	167 -> 374
 	168 -> 052 [class = "dice" label = "1-2"]
@@ -940,7 +946,7 @@ digraph {
 	206 -> 168
 	207 -> 361 [class = "cbt" label = "flee\n -2ST"]
 	207 -> 346
-	208 -> 088 [class = "pwd" label = "seeds x dragons"]
+	208 -> 088 [class = "pwd" label = "apple seeds"]
 	208 -> 329
 	209
 	210 -> 275 [class = "pass" label = "LK"]
@@ -958,7 +964,7 @@ digraph {
 	216
 	217 -> 133 [class = "pass" label = "LK"]
 	217 -> 116 [class = "fail"]
-	218 -> 319 [class = "req" label = "tied"]
+	218 -> 319 [class = "req" label = "hands tied"]
 	218 -> 154
 	219 -> 399
 	219 -> 276
@@ -998,8 +1004,8 @@ digraph {
 	238 -> 374
 	239 -> 160 [class = "pass" label = "LK"]
 	239 -> 260 [class = "fail"]
-	240 -> 177 [class = "pass" label = "tiger escape"]
-	240 -> 371 [class = "pass" label = "tiger found"]
+	240 -> 177 [class = "dice" label = "tiger escaped"]
+	240 -> 371 [class = "dice" label = "tiger found"]
 	240 -> 262 [class = "dice" label = "C9"]
 	241 -> 204
 	241 -> 298

@@ -48,17 +48,17 @@ digraph {
 		^: Damage can be reduced by items\l \
 		@: Take 2 items\l\l \
 		Starts with:\l \
-		Initial Skill: 1d6+6\l \
-		Initial Stamina: 2d6+12\l \
-		Initial Luck: 1d6+6\l\l \
-		Initial Presence: 1d6/2+4\l\l \
+		Initial Skill: 1d+6\l \
+		Initial Stamina: 2d+12\l \
+		Initial Luck: 1d+6\l\l \
+		Initial Presence: 1d/2+4\l\l \
 		skill/stamina/luck potion: +all SK/ST/LK&1ILK\l \
 		12 meal: +4ST\l \
 		knife\l \
 		leather jerkin\l \
 		waterskin\l \
 		backpack\l \
-		2d6+6 gold\l\l \
+		2d+6 gold\l\l \
 		Comments:\l \
 		Presence can exceed initial value\l \
 		Knife does 1ST damage on roll of 1~4\l \
@@ -107,19 +107,19 @@ digraph {
 		dam3 [label = "\N\n text"]
 		011 [label = "\N\n -3ST"]
 		012 [label = "\N\n -2ST"]
-		025 [label = "\N\n -1d6ST"]
+		025 [label = "\N\n -1dST"]
 		030 [label = "\N\n -1LK\n -1PR"]
 		033 [label = "\N\n -3ST"]
 		037 [label = "\N-\n -2ST"]
 		050 [label = "\N\n -4ST"]
-		054 [label = "\N\n -1d6ST"]
-		068 [label = "\N\n -1d6ST"]
+		054 [label = "\N\n -1dST"]
+		068 [label = "\N\n -1dST"]
 		071 [label = "\N\n -2ST"]
 		072 [label = "\N\n -4ST"]
 		075 [label = "\N\n -3ST?\n (SK)"]
 		081 [label = "\N\n -4ST"]
 		092 [label = "\N\n -3ST"]
-		093 [label = "\N\n -1d6ST"]
+		093 [label = "\N\n -1dST"]
 		116 [label = "\N\n -1LK"]
 		122 [label = "\N\n -2ST"]
 		131 [label = "\N\n -1~4ST\n (SK)"]
@@ -143,7 +143,7 @@ digraph {
 		288 [label = "\N\n -2ST"]
 		292 [label = "\N\n -2ST?\n (gems)"]
 		297 [label = "\N\n -1ST"]
-		301 [label = "\N\n -1d6ST"]
+		301 [label = "\N\n -1dST"]
 		303 [label = "\N\n -3ST"]
 		315 [label = "\N-"]
 		319 [label = "\N\n -3ST"]
@@ -222,7 +222,7 @@ digraph {
 		117 [label = "\N\n blue potion"]
 		118 [fontcolor = "crimson" label = "\N\n 2 gifts"]
 		129 [label = "\N\n info" tooltip = "apprentice did work for wizards, air spirit in circle, wizard in dungens below black tower"]
-		140 [class = "ddg" label = "\N\n potion of luck (+1d6/2LK)"]
+		140 [class = "ddg" label = "\N\n potion of luck (+1d/2LK)"]
 		141 [fontcolor = "crimson" label = "\N\n -meal"]
 		143 [fontcolor = "crimson" label = "\N\n -meal"]
 		151 [label = "\N\n spikes and rods"]
