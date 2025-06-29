@@ -74,8 +74,8 @@ digraph {
 		herbal liqueur: Each half bottle restores 4ST\l \
 		pitcher plant liquid: Neutralize first fire attack/spell/trap\l \
 		stoneskin: Ignore first enemy hit each combat until opponent rolls 21+\l \
-		Parraine: 3 services: -disease, 6DMG, +8ST\l \
-		blade venom: +1DMG\l \
+		Parraine: 3 services: -disease, 6DG, +8ST\l \
+		blade venom: +1DG\l \
 		Order: item/gold/AT/SK/ST/LK/PR\l \
 		"
 		shape = "box"
@@ -459,7 +459,7 @@ digraph {
 		
 		subgraph cluster_24 {
 			label = "Skeleton Warrior\n 8/6"
-			171 [label = "\N\n -1DMG?\n (!stone axe)"]
+			171 [label = "\N\n -1DG?\n (!stone axe)"]
 		}
 		
 		subgraph cluster_25 {
@@ -479,7 +479,7 @@ digraph {
 
 		subgraph cluster_28 {
 			label = "Mutant Amoeba\n 8/11"
-			189 [label = "\N\n -1DMG?\n (!sheild)\n -1AT?"]
+			189 [label = "\N\n -1DG?\n (!sheild)\n -1AT?"]
 		}
 		
 		subgraph cluster_29 {
@@ -504,7 +504,7 @@ digraph {
 		
 		subgraph cluster_33 {
 			label = "Earth Elemental\n 14/22"
-			205 [label = "\N*\n -1DMG\n +2EDMG"]
+			205 [label = "\N*\n -1DG\n +2EDG"]
 		}
 		
 		subgraph cluster_34 {
@@ -559,7 +559,7 @@ digraph {
 		
 		subgraph cluster_44 {
 			label = "Red Skeleton Group\n 8/10+PR/2"
-			275 [label = "\N\n -1DMG?\n (stone axe)"]
+			275 [label = "\N\n -1DG?\n (stone axe)"]
 		}
 		
 		subgraph cluster_45 {
@@ -579,12 +579,12 @@ digraph {
 		
 		subgraph cluster_48 {
 			label = "Bone Golem\n 8/9"
-			348 [label = "\N\n +1EDMG"]
+			348 [label = "\N\n +1EDG"]
 		}
 		
 		subgraph cluster_49 {
 			label = "Skeleton\n 6/6"
-			353 [label = "\N\n +1EDMG?\n (-stone axe)"]
+			353 [label = "\N\n +1EDG?\n (-stone axe)"]
 		}
 		
 		subgraph cluster_50 {
@@ -594,7 +594,7 @@ digraph {
 		
 		subgraph cluster_51 {
 			label = "Earth Elemental\n 14/22"
-			358 [class = "ddt" label = "\N\n -1DMG\n +2EDMG\n -1LK"]
+			358 [class = "ddt" label = "\N\n -1DG\n +2EDG\n -1LK"]
 		}
 		
 		subgraph cluster_52 {
