@@ -49,7 +49,7 @@ digraph {
 		Initial Stamina: 2d+12\l \
 		Initial Luck: 1d+6\l\l \
 		Starting Gear:\l \
-		skill/stamina/luck potion: +all SK/ST/LK&1ILK\l \
+		skill/stamina/luck potion: +all SK / +all ST/ +all LK & +1ILK\l \
 		10 meal: +4ST\l \
 		sword\l \
 		leather armor\l \
@@ -111,6 +111,11 @@ digraph {
 	subgraph Key_Loss {
 		node [fontcolor = "crimson" shape = "rect"]
 		kkll
+	}
+	
+	subgraph Key_Text {
+		node [shape = "rect"]
+		kkxx
 	}
 
 	subgraph Key_Word {
