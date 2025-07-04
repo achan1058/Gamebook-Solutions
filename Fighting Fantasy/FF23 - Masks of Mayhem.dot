@@ -18,12 +18,12 @@ digraph {
 
 	// a box for a graph label
 	// note that you can override the defaults set above
-	title [label = "Fighting Fantasy --: Title\n\n \
+	title [label = "Fighting Fantasy #23: Masks of Mayhem\n\n \
 		Light Green Fill: Benefits\l \
 		Pink Fill: Penalties\l \
 		Red Fill: Death\l \
 		Blue Text: Key Items/Events\l \
-		Red Text: Lost Items\Negative Eventsl \
+		Red Text: Lost Items/Negative Events\l \
 		Purple Text: Shops\l \
 		Blue Line: Forced Items/Events\l \
 		Light Blue Text/Line: Optional Items/Events\l \
@@ -41,7 +41,6 @@ digraph {
 		SK/ST/LK/AT/AR: Skill/Stamina/Luck/Attack Strength/Attack Round\l \
 		?: Chance of this happening, depending on instructions in text\l \
 		*: Special Combat Rules\l \
-		-: Negative Status\l \
 		+: Positive Status\l \
 		^: Damage can be reduced by items\l \
 		@: Take 2 items\l\l \
@@ -56,11 +55,15 @@ digraph {
 		leather armor\l \
 		backpack\l\l \
 		Key Items:\l \
+		magic bow/Wight sword: Can go above ISK.\l \
+		Hever horn: -1ESK unless instructed otherwise.\l \
 		-water flaak: Meal restore +3ST instead of +4ST\l \
 		227-: Meals restore 3ST at mountain\l \
 		cmtt\l\l \
 		Special Combat Rules:\l \
-		Tentacle (207*): Roll d6 before each tentacle, 1-2: -1ST\n 5-6: +1DG\l \
+		-: Immune to horn of Hever\l \
+		Mordida: Enemy alternately attacks. If lose AR vs first, lose additional -2ST.\l \
+		Tentacle (207*): Roll d6 before each tentacle 1-2: -1ST, 5-6: +1DG\l \
 		rules\l\l \
 		Notes:\l \
 		Order: meal/gold/item/AT/SK/ST/LK\l \
@@ -76,9 +79,7 @@ digraph {
 		026 [label = "\N\n +2ST"]
 		066 [label = "\N\n +1LK"]
 		075 [label = "\N\n +1LK"]
-		086 [color = "greenyellow:pink" label = "\N\n +1LK\n -2ST"]
 		177 [label = "\N\n +2ST"]
-		266 [color = "greenyellow:pink" label = "\N\n +1LK\n -2ST"]
 		308 [label = "\N\n +all SK/\n +all ST/\n +all LK"]
 		389 [label = "\N\n +4ST"]
 //		bstt
@@ -100,22 +101,25 @@ digraph {
 		097 [label = "\N\n -2ST"]
 		110 [label = "\N\n -1LK"]
 		118 [label = "\N\n -3ST"]
+		145 [label = "\N\n -?ST\n(AR)"]
 		147 [label = "\N\n -1ST"]
 		182 [label = "\N\n -1ST"]
 		186 [label = "\N\n -1SK"]
 		199 [label = "\N\n -3ST"]
 		203 [label = "\N\n -2ST"]
+		212 [label = "\N\n -1ST"]
 		233 [label = "\N\n -3ST"]
 		234 [label = "\N\n -2ST"]
 		253 [label = "\N\n -2ST"]
 		259 [label = "\N\n -2ST"]
+		266 [label = "\N\n -2ST\n -1LK"]
 		274 [label = "\N\n -1dST"]
 		277 [label = "\N\n -1LK"]
 		311 [label = "\N\n -1ST"]
-		312 [label = "\N\n -?ST\n (1-2)"]
+		312 [label = "\N\n -?ST\n (1-2)x?"]
 		337 [label = "\N\n -2ST"]
 		339 [label = "\N\n -2ST"]
-		376 [label = "\N\n -6ST"]
+		375 [label = "\N\n -2ST?\n (lose AR)"]
 		377 [label = "\N\n -3ST"]
 	//	ddgg
 	}
@@ -195,52 +199,50 @@ digraph {
 		opt2 [class = "bst"]
 		opt3 [class = "bst"]
 		*/
-		002 [fontcolor = "crimson" label = "\N\n eat 2 meal"]
-		011 [class = "ddg" label = "\N\n curse\n -2LK"]
 		013 [fontcolor = "crimson" label = "\N\n eat 2 meal"]
-		015 [class = "ddg" label = "\N\n -2ST?\n (!eat meal)"]
 		029 [label = "\N\n untie?\n (LK)"]
 		030 [label = "\N\n Cholumbara"]
-		034 [fontcolor = "crimson" label = "\N\n eat 1 meal"]
-		044 [label = "\N\n info" tooltip = "juja riddle"]
+		044 [label = "\N\n info" tooltip = "Juja riddle: swamp"]
 		071 [class = "bst" fontcolor = "crimson" label = "\N\n -helmet\n +4ST"]
-		077 [label = "\N\n wildcat pelt?\n (AR&le;4)"]
+		077 [class = "ddg" label = "\N\n -2ST\n wildcat pelt?\n (AR&le;4)"]
 		082 [class = "ddg" fontcolor = "crimson" label = "\N\n -all meal\n -3ST"]
 		088 [label = "\N\n Vashti"]
-		099 [class = "bst" fontcolor = "crimson" label = "\N\n -1 gold\n +2ST"]
-		105 [label = "\N\n ant?"]
+		098 [label = "\N\n 3 gold?\n (win)"]
+		099 [class = "bst" fontcolor = "crimson" label = "\N\n +2ST?\n (-1 gold)"]
+		105 [label = "\N\n ant trail"]
 		106 [label = "\N\n 10 gold\n garnet ring"]
 		111 [fontcolor = "crimson" label = "\N\n -helmet"]
-		121 [class = "bst" fontcolor = "crimson" label = "\N\n +2~4ST\n (eat meal)"]
-		132 [label = "\N\n 10 meal\n pack\n flask"]
+		132 [label = "\N\n =10 meal\n water flask"]
 		137 [label = "\N\n search-party"]
+		144 [label = "\N\n copper nugget"]
 		150 [label = "\N\n crystal mirror"]
 		152 [class = "bst" label = "\N\n +4ST?\n (sorrel)"]
-		156 [label = "\N\n sword (+1SK)"]
+		156 [label = "\N\n Wight sword: +1SK"]
 		167 [label = "\N\n info" tooltip = "3 doors pick wooden"]
 		169 [class = "bst" label = "\N\n info\n +1LK" tooltip = "holding 2 objects between oaks trees, one object is long"]
-		172 [label = "\N\n 3 of:\n brass ear-ring\n Snattacat's tusk\n leather pouch\n 5 gold\n stone statuette\n water flask"]
-		179 [class = "ddg" label = "\N\n curse\n -2LK"]
-		188 [fontcolor = "crimson" label = "\N\n -helmet?\n (4x1)"]
+		172 [label = "\N\n 3 of:\n Snattacat's tusk\n leather pouch\n 5 gold\n statuette\n water flask"]
+		188 [fontcolor = "crimson" label = "\N\n -helmet?\n (1)x4"]
 		194 [label = "\N\n tied"]
-		205 [fontcolor = "crimson" label = "\N\n -item"]
-		219 [class = "ddg" label = "\N\n -2ST?\n (!eat meal)"]
+		213 [label = "\N\n copper nugget"]
 		220 [label = "\N\n helmet"]
-		232 [class = "bst" label = "\N\n info\n +1LK" tooltip = "sceptre and orb"]
+		232 [class = "bst" label = "\N\n info\n +1LK" tooltip = "get sceptre and orb"]
+		237 [label = "\N\n copper nugget"]
 		238 [label = "\N\n info" tooltip = "3 doors pick wooden"]
 		245 [label = "\N\n sorrel"]
 		246 [class = "ddg" label = "\N\n -companion\n -2ST"]
 		248 [class = "bst" label = "\N\n 30 gold\n crystal mirror\n magic bow: +1SK"]
-		268 [label = "\N\n helmet\n 3 companions"]
+		268 [label = "\N\n helmet"]
 		269 [label = "\N\n rope"]
 		282 [label = "\N\n snow-shoes"]
+		283 [label = "\N\n pick-axe head"]
 		304 [class = "ddg" label = "\N\n +0~10 gold\n (-0~5ST)"]
+		309 [label = "\N\n Doragar"]
 		318 [label = "\N\n snow-shoes"]
 		333 [class = "bst" label = "\N\n tiger's claws\n Hever horn\n +3ST\n +2LK"]
 		342 [label = "\N\n search-party"]
 		353 [label = "\N\n info" tooltip = "always pick middle way"]
-		358 [label = "\N\n hands tied"]
 		374 [fontcolor = "crimson" label = "\N\n -meal"]
+		386 [label = "\N\n bejewelled choker"]
 		394 [label = "\N\n copper nugget"]
 //		kkyy
 	}
@@ -248,18 +250,28 @@ digraph {
 	subgraph Key_Loss {
 		node [fontcolor = "crimson" shape = "rect"]
 //		kkll
+		002 [label = "\N\n -2 meal"]
 		005 [label = "\N\n -all meal"]
+		011 [class = "ddg" label = "\N\n cursed\n -2LK"]
+		034 [label = "\N\n eat meal"]
 		039 [label = "\N\n -water flask"]
 		067 [label = "\N\n -water flask"]
+		179 [class = "ddg" label = "\N\n cursed\n -2LK"]
 		183 [class = "ddg" label = "\N\n -1d meal\n -1ST"]
 		340 [class = "ddg" label = "\N\n -all meal\n -sorrel\n -2ST"]
+		358 [label = "\N\n hands tied"]
 		361 [class = "ddg" label = "\N\n -1d meal\n -1ST"]
+		376 [class = "ddg" label = "\N\n -all meal\n -6ST"]
 	}
 	
 	subgraph Key_Text {
 		node [shape = "rect"]
 //		kkxx
+		086 [style = "filled" color = "greenyellow:pink" label = "\N\n +1LK\n -2ST?\n (!eat meal)"]
+		015 [class = "ddg" label = "\N\n -2ST?\n (!eat meal)"]
 		115 [class = "ddg" label = "\N\n -2ST?\n (!eat meal)"]
+		121 [class = "bst" label = "\N\n +2LK\n +2~4ST\n (eat meal)"]
+		219 [class = "ddg" label = "\N\n -2ST?\n (!eat meal)"]
 		398 [class = "ddg" label = "\N\n -2ST?\n (!eat meal)"]
 	}
 
@@ -281,7 +293,18 @@ digraph {
 	subgraph Shop {
 		node [fontcolor = "purple" shape = "rect"]
 //		shop1 [label = "\N\n text"]
-		080 [label = "\N\n 3g: luck potion (+all LK)\l 5g: healing potion (+6ST)\l 10g: invisibility cloak\l 5g: antifreeze potion\l 6g: boots of agility\l"]
+		080 [label = "\N\n Canches"]
+		080.1 [label = "Canches\n \
+			3g: luck potion: +all LK\l \
+			5g: healing potion: +6ST\l \
+			10g: invisibility cloak\l \
+			5g: antifreeze potion\l \
+			6g: boots of agility\l"]
+		{
+			rank = same
+			080
+			080.1
+		}
 //		shpp
 	}
 	
@@ -313,8 +336,13 @@ digraph {
 		}
 		*/
 		subgraph cluster_01 {
-			label = "Pygmy Orc\n 7/10"
+			label = "Pygmy Orc\n 7(6?)/10"
 			014
+			subgraph cluster_01a {
+				label = "Pygmy Orc\n 6/10 5/8"
+				color = "black" fillcolor = "palegreen"
+				129
+			}
 		}
 		
 		subgraph cluster_02 {
@@ -352,7 +380,7 @@ digraph {
 		}
 		
 		subgraph cluster_09 {
-			label = "Wildcat*\n 6/8"
+			label = "Wildcat-\n 6/8"
 			077
 		}
 		
@@ -364,7 +392,7 @@ digraph {
 		
 		subgraph cluster_11 {
 			label = "Hill Giant\n 9/11"
-			098 [shape = "rect" label = "\N\n 3 gold?\n (win)"]
+			098
 		}
 		
 		subgraph cluster_13 {
@@ -377,11 +405,6 @@ digraph {
 			120
 		}
 		
-		subgraph cluster_15 {
-			label = "Pygmy Orc\n 6/10 5/8"
-			129
-		}
-		
 		subgraph cluster_16 {
 			label = "Ice Hulk\n 6/12"
 			060
@@ -392,7 +415,7 @@ digraph {
 		
 		subgraph cluster_17 {
 			label = "Chimera\n 7/6"
-			145 [class = "ddg" label = "\N\n -1ST/round"]
+			145
 		}
 		
 		subgraph cluster_18 {
@@ -423,7 +446,7 @@ digraph {
 		
 		subgraph cluster_24 {
 			label = "Vermin\n 5/6"
-			212 [class = "ddg" label = "\N\n -1ST/round"]
+			212
 		}
 		
 		subgraph cluster_25 {
@@ -448,7 +471,7 @@ digraph {
 		
 		subgraph cluster_32 {
 			label = "Doragar\n 9/10"
-			309 [shape = "rect" class = "kky"label = "\N\n Doragar"]
+			309
 		}
 		
 		subgraph cluster_33 {
@@ -479,17 +502,17 @@ digraph {
 		subgraph cluster_39 {
 			label = "Saber-toothed Tiger\n 11/12"
 			348 [label = "\N\n +2EDG"]
-			371 [label = "\N\n -1dEST\n -1SK?\n (EST)"]
+			371 [label = "\N\n -1dEST\n -1ESK?\n (EST)"]
 		}
 		
 		subgraph cluster_40 {
 			label = "Mordida*\n 5/8 5/10"
-			375 [class = "ddg" label = "\N\n -2ST?\n (lose AR)"]
+			375
 		}
 		
 		subgraph cluster_43 {
-			label = "Skeleton\n 5/8\n 5/7"
-			386 [shape = "rect" class = "kky" label = "\N\n bejewelled choker"]
+			label = "Skeleton\n 5/8 5/7"
+			386
 		}
 		
 //		cbtt
@@ -536,6 +559,37 @@ digraph {
 		monopt3 [class = "path opt kky"]
 		pptt
 		*/
+		107
+		279
+		092
+		231
+
+
+		364
+		057
+		352
+		373
+		309 [class = "path kky"]
+		172
+		141
+		086 [class = "path"]
+		388
+		370
+		151
+		127
+		228
+		015 [class = "path ddg"]
+		399
+		051
+		033
+		064 [class = "path"]
+		222
+		112
+		301
+		121 [class = "path bst"]
+		343
+		200
+		178
 	}
 	
 	subgraph Required {
@@ -549,6 +603,9 @@ digraph {
 		mondam5 [class = "req kky"]
 		mon5 [class = "req kky"]
 		*/
+		092 [class = "req pwd"]
+		172 [class = "req kky"]
+		301 [class = "req pwd"]
 		400 [class = "req" shape = "octagon"]
 	}
 	
@@ -639,7 +696,7 @@ digraph {
 	028 -> 005
 	028 -> 087
 	029 -> 173
-	030 -> 112
+//	030 -> 112
 	031 -> 263
 	031 -> 156
 	032 -> 019
@@ -668,7 +725,7 @@ digraph {
 	045 -> 382
 	046 -> 204
 	046 -> 298
-	047 -> 090
+	047 -> 090 [class = "opt" label = "rope"]
 	047 -> 278
 	047 -> 134
 	047 -> 359
@@ -694,7 +751,7 @@ digraph {
 	059 -> 100 [class = "pwd" label = "Galrin"]
 //	060 -> 142
 	142 -> 060 [dir = back]
-	061 -> 309
+	061 -> 309 [weight = 10]
 	061 -> 141
 	062 -> 332
 	063
@@ -723,9 +780,9 @@ digraph {
 	078 -> 120
 	079 -> 171
 	079 -> 097
-	080 -> 236
-	080 -> 323
-	080 -> 336
+//	080 -> 236
+//	080 -> 323
+//	080 -> 336
 	081 -> 258 [class = "req" label = "Vashti"]
 	081 -> 347
 	082 -> 178
@@ -751,9 +808,8 @@ digraph {
 	096 -> 035 [class = "fail"]
 	097 -> 316
 	097 -> 234
-	098 -> 180 [class = "opt" label = "-invisibility cloak"]
+	098 -> 180 [color = "cyan3:black" fontcolor = "cyan3" label = "-invisibility cloak"]
 	098 -> 311
-	098 -> 180
 	099 -> 024
 	100 -> 295
 	101 -> 222
@@ -775,9 +831,9 @@ digraph {
 	111 -> 166
 	111 -> 377
 	111 -> 342
-	112 -> 301 [class = "req" label = "snattacat's tusk"]
+	112 -> 301 [dir = both color = "blue:black" fontcolor = "blue" label = "Snattacat's tusk"]
 	112 -> 331 [class = "req" label = "leather pouch"]
-	112 -> 030 [class = "req" label = "statuette"]
+	112 -> 030 [dir = both color = "blue:black" fontcolor = "blue" label = "statuette"]
 	112 -> 121
 	113 -> 273 [class = "cbt" label = "flee"]
 	113 -> 126
@@ -861,7 +917,7 @@ digraph {
 	157 -> 012 [class = "pass" label = "SK"]
 	158 -> 009
 	158 -> 048
-	159 -> 293 [class = "dice" label = "3x(2-6)"]
+	159 -> 293 [class = "dice" label = "2-6x3"]
 	160 -> 219 [class = "pass" label = "LK"]
 	160 -> 349 [class = "fail"]
 	161 -> 357
@@ -869,7 +925,7 @@ digraph {
 	162 -> 259 [class = "pass" label = "LK"]
 	162 -> 139 [class = "fail"]
 	163
-	164 -> 326 [class = "opt" label = "-item"]
+	164 -> 326
 	164 -> 336
 	165 -> 381
 	165 -> 263.2 [class = "err" label = "error?"]
@@ -927,12 +983,12 @@ digraph {
 	199 -> 117
 	200 -> 178
 	201 -> 293
-	202 -> 105 [class = "req" label = "+ant?"]
+	202 -> 105
 	202 -> 091
 	202 -> 140
 	203 -> 104
 	204 -> 256
-	205 -> 396
+//	205 -> 396
 	206 -> 102
 	206 -> 168
 	207 -> 361 [class = "cbt" label = "flee\n -2ST"]
@@ -944,7 +1000,7 @@ digraph {
 	210 -> 360 [class = "fail"]
 	211 -> 115
 	212 -> 036
-	212 -> 107
+	212 -> 107 [weight = 1]
 	212 -> 343
 	213 -> 325
 	213 -> 370
@@ -963,7 +1019,7 @@ digraph {
 	220 -> 020
 	221 -> 007 [class = "pass" label = "LK"]
 	221 -> 191 [class = "fail"]
-	222 -> 112 [class = "req" label = "Dorager"]
+	222 -> 112 [class = "req" label = "Doragar"]
 	222 -> 121
 	223 -> 336
 	223 -> 323
@@ -986,7 +1042,7 @@ digraph {
 	234 -> 274
 	234 -> 294
 	235 -> 038 [class = "pass" label = "SK&ge;8\n ST&ge;12"]
-	236 -> 080 [class = "opt" label = "gold"]
+	236 -> 080 [dir = both color = "cyan3:black" fontcolor = "cyan3" label = "gold"]
 	236 -> 397
 	236 -> 185
 	237 -> 283
@@ -1096,7 +1152,7 @@ digraph {
 	299 -> 078
 	300 -> 125
 	300 -> 374
-	301 -> 112
+//	301 -> 112
 	302 -> 116 [class = "fail"]
 	302 -> 075 [class = "pass" label = "SK"]
 	303 -> 089
@@ -1108,7 +1164,7 @@ digraph {
 	307 -> 157
 	307 -> 330
 	308 -> 374
-	309 -> 172
+	309 -> 172 [weight = 10]
 	310 -> 089
 	311 -> 180
 	312 -> 078 [class = "dice" label = "5-6x3"]
@@ -1131,15 +1187,15 @@ digraph {
 	321 -> 026
 	322 -> 379
 	322 -> 207
-	323 -> 080 [class = "opt" label = "gold"]
+	323 -> 080 [dir = both color = "cyan3:black" fontcolor = "cyan3" label = "gold"]
 	323 -> 375
 	323 -> 185
 	324
 	325 -> 370
-	326 -> 223 [class = "req" label = "3 gold"]
-	326 -> 110 [class = "req" label = "jewelled neck-band"]
-	326 -> 044 [class = "req" label = "garnet ring"]
-	326 -> 196 [class = "req" label = "Cholumbara"]
+	326 -> 223 [class = "req" label = "-3 gold"]
+	326 -> 110 [class = "req" label = "-bejewelled choker"]
+	326 -> 044 [class = "req" label = "-garnet ring"]
+	326 -> 196 [class = "req" label = "-Cholumbara"]
 	327 -> 201
 	328
 	329
@@ -1152,7 +1208,7 @@ digraph {
 	334 -> 130
 	334 -> 028
 	335 -> 072
-	336 -> 080 [class = "opt" label = "gold"]
+	336 -> 080 [dir = both color = "cyan3:black" fontcolor = "cyan3" label = "gold"]
 	336 -> 013
 	336 -> 185
 	337 -> 108
@@ -1176,7 +1232,7 @@ digraph {
 //	348 -> 371
 	349
 	350 -> 236
-	350 -> 055
+	350 -> 055 [weight = 10]
 	351 -> 115
 	352 -> 373 [class = "pass" label = "LK"]
 	352 -> 163 [class = "fail"]
@@ -1186,7 +1242,7 @@ digraph {
 	354 -> 032
 	355 -> 283
 	355 -> 364
-	356 -> 220 [class = "opt" label = "bow & arrows"]
+	356 -> 220 [class = "opt" label = "magic bow"]
 	356 -> 252
 	357 -> 025
 	357 -> 125
@@ -1241,7 +1297,7 @@ digraph {
 	386 -> 214
 	387 -> 022 [class = "pwd" label = "scepter\n orb"]
 	387 -> 037
-	388 -> 325
+	388 -> 325 [weight = 10]
 	388 -> 370
 	389 -> 026
 	389 -> 184
@@ -1255,9 +1311,9 @@ digraph {
 	394 -> 355
 	394 -> 388
 	395 -> 256
-	396 -> 299 [class = "req" label = "2 gold"]
-	396 -> 066 [class = "req" label = "Cholumbara"]
-	396 -> 205 [class = "req" label = "copper nugget"]
+	396 -> 299 [class = "req" label = "-2 gold"]
+	396 -> 066 [class = "req" label = "-Cholumbara"]
+	396 -> 205 [dir = both color = "blue:black" fontcolor = "blue" label = "-copper nugget"]
 	396 -> 266
 	397 -> 179
 	397 -> 077
@@ -1267,326 +1323,137 @@ digraph {
 	399 -> 147
 	400
 
-	002 [fontsize=25]
-	003 [fontsize=25]
 	004 [fontsize=25]
-	006 [fontsize=25]
-	007 [fontsize=25]
-	008 [fontsize=25]
-	010 [fontsize=25]
-	011 [fontsize=25]
-	013 [fontsize=25]
-	014 [fontsize=25]
-	015 [fontsize=25]
 	016 [fontsize=25]
-	017 [fontsize=25]
-	018 [fontsize=25]
 	019 [fontsize=25]
-	020 [fontsize=25]
 	022 [fontsize=25]
-	023 [fontsize=25]
-	024 [fontsize=25]
 	025 [fontsize=25]
-	026 [fontsize=25]
-	027 [fontsize=25]
 	029 [fontsize=25]
-	030 [fontsize=25]
-	031 [fontsize=25]
 	032 [fontsize=25]
-	033 [fontsize=25]
-	034 [fontsize=25]
 	035 [fontsize=25]
-	036 [fontsize=25]
 	037 [fontsize=25]
 	038 [fontsize=25]
 	040 [fontsize=25]
-	041 [fontsize=25]
-	042 [fontsize=25]
 	043 [fontsize=25]
-	044 [fontsize=25]
 	046 [fontsize=25]
-	047 [fontsize=25]
 	049 [fontsize=25]
 	050 [fontsize=25]
-	051 [fontsize=25]
-	052 [fontsize=25]
-	054 [fontsize=25]
-	055 [fontsize=25]
-	056 [fontsize=25]
-	057 [fontsize=25]
-	058 [fontsize=25]
 	059 [fontsize=25]
 	060 [fontsize=25]
-	061 [fontsize=25]
-	062 [fontsize=25]
-	063 [fontsize=25]
-	064 [fontsize=25]
 	065 [fontsize=25]
-	066 [fontsize=25]
-	068 [fontsize=25]
 	070 [fontsize=25]
-	071 [fontsize=25]
 	072 [fontsize=25]
 	074 [fontsize=25]
 	075 [fontsize=25]
-	077 [fontsize=25]
-	078 [fontsize=25]
-	080 [fontsize=25]
 	081 [fontsize=25]
-	083 [fontsize=25]
-	084 [fontsize=25]
-	086 [fontsize=25]
 	088 [fontsize=25]
-	090 [fontsize=25]
-	091 [fontsize=25]
-	092 [fontsize=25]
-	093 [fontsize=25]
 	094 [fontsize=25]
 	096 [fontsize=25]
-	098 [fontsize=25]
-	099 [fontsize=25]
 	100 [fontsize=25]
-	101 [fontsize=25]
-	102 [fontsize=25]
 	103 [fontsize=25]
-	104 [fontsize=25]
-	105 [fontsize=25]
-	107 [fontsize=25]
-	110 [fontsize=25]
-	111 [fontsize=25]
-	112 [fontsize=25]
 	113 [fontsize=25]
-	114 [fontsize=25]
 	116 [fontsize=25]
 	117 [fontsize=25]
-	118 [fontsize=25]
 	119 [fontsize=25]
-	120 [fontsize=25]
-	121 [fontsize=25]
 	122 [fontsize=25]
 	123 [fontsize=25]
-	124 [fontsize=25]
 	125 [fontsize=25]
 	126 [fontsize=25]
-	127 [fontsize=25]
 	128 [fontsize=25]
-	129 [fontsize=25]
 	131 [fontsize=25]
-	132 [fontsize=25]
 	133 [fontsize=25]
-	134 [fontsize=25]
 	136 [fontsize=25]
-	137 [fontsize=25]
-	138 [fontsize=25]
 	139 [fontsize=25]
-	140 [fontsize=25]
-	141 [fontsize=25]
 	142 [fontsize=25]
 	143 [fontsize=25]
-	144 [fontsize=25]
-	145 [fontsize=25]
 	146 [fontsize=25]
-	147 [fontsize=25]
-	148 [fontsize=25]
-	149 [fontsize=25]
-	151 [fontsize=25]
-	152 [fontsize=25]
 	153 [fontsize=25]
 	155 [fontsize=25]
-	156 [fontsize=25]
 	159 [fontsize=25]
-	160 [fontsize=25]
 	161 [fontsize=25]
 	162 [fontsize=25]
-	163 [fontsize=25]
-	164 [fontsize=25]
 	165 [fontsize=25]
-	166 [fontsize=25]
 	167 [fontsize=25]
-	168 [fontsize=25]
 	170 [fontsize=25]
-	172 [fontsize=25]
 	173 [fontsize=25]
 	174 [fontsize=25]
-	175 [fontsize=25]
 	176 [fontsize=25]
-	177 [fontsize=25]
-	178 [fontsize=25]
-	179 [fontsize=25]
-	180 [fontsize=25]
-	181 [fontsize=25]
 	182 [fontsize=25]
-	184 [fontsize=25]
-	185 [fontsize=25]
 	187 [fontsize=25]
 	188 [fontsize=25]
-	189 [fontsize=25]
-	190 [fontsize=25]
-	191 [fontsize=25]
 	193 [fontsize=25]
 	194 [fontsize=25]
-	196 [fontsize=25]
-	197 [fontsize=25]
 	198 [fontsize=25]
 	199 [fontsize=25]
-	200 [fontsize=25]
 	201 [fontsize=25]
-	202 [fontsize=25]
-	203 [fontsize=25]
 	204 [fontsize=25]
-	205 [fontsize=25]
-	206 [fontsize=25]
 	208 [fontsize=25]
 	210 [fontsize=25]
-	212 [fontsize=25]
-	213 [fontsize=25]
-	214 [fontsize=25]
 	215 [fontsize=25]
 	217 [fontsize=25]
-	219 [fontsize=25]
-	220 [fontsize=25]
-	221 [fontsize=25]
-	222 [fontsize=25]
-	223 [fontsize=25]
 	224 [fontsize=25]
-	225 [fontsize=25]
 	227 [fontsize=25]
-	228 [fontsize=25]
 	229 [fontsize=25]
-	231 [fontsize=25]
-	232 [fontsize=25]
 	233 [fontsize=25]
 	235 [fontsize=25]
-	236 [fontsize=25]
-	237 [fontsize=25]
 	238 [fontsize=25]
-	239 [fontsize=25]
-	240 [fontsize=25]
 	241 [fontsize=25]
-	243 [fontsize=25]
 	244 [fontsize=25]
 	246 [fontsize=25]
-	247 [fontsize=25]
-	249 [fontsize=25]
 	250 [fontsize=25]
-	252 [fontsize=25]
-	253 [fontsize=25]
-	255 [fontsize=25]
 	256 [fontsize=25]
 	258 [fontsize=25]
 	259 [fontsize=25]
-	260 [fontsize=25]
 	261 [fontsize=25]
 	262 [fontsize=25]
 	264 [fontsize=25]
-	265 [fontsize=25]
-	266 [fontsize=25]
 	267 [fontsize=25]
-	268 [fontsize=25]
 	271 [fontsize=25]
-	272 [fontsize=25]
 	273 [fontsize=25]
 	275 [fontsize=25]
-	276 [fontsize=25]
-	277 [fontsize=25]
-	278 [fontsize=25]
-	279 [fontsize=25]
-	281 [fontsize=25]
 	282 [fontsize=25]
-	283 [fontsize=25]
 	284 [fontsize=25]
-	285 [fontsize=25]
 	287 [fontsize=25]
-	288 [fontsize=25]
-	289 [fontsize=25]
 	290 [fontsize=25]
-	291 [fontsize=25]
-	292 [fontsize=25]
 	293 [fontsize=25]
 	295 [fontsize=25]
-	296 [fontsize=25]
 	298 [fontsize=25]
-	299 [fontsize=25]
 	300 [fontsize=25]
-	301 [fontsize=25]
 	302 [fontsize=25]
-	304 [fontsize=25]
-	305 [fontsize=25]
 	306 [fontsize=25]
 	308 [fontsize=25]
-	309 [fontsize=25]
-	311 [fontsize=25]
-	312 [fontsize=25]
-	313 [fontsize=25]
 	314 [fontsize=25]
-	315 [fontsize=25]
 	317 [fontsize=25]
 	318 [fontsize=25]
 	320 [fontsize=25]
-	321 [fontsize=25]
-	323 [fontsize=25]
 	324 [fontsize=25]
-	325 [fontsize=25]
-	326 [fontsize=25]
 	327 [fontsize=25]
-	328 [fontsize=25]
 	329 [fontsize=25]
-	331 [fontsize=25]
-	332 [fontsize=25]
-	333 [fontsize=25]
 	335 [fontsize=25]
-	336 [fontsize=25]
 	338 [fontsize=25]
 	339 [fontsize=25]
-	340 [fontsize=25]
 	341 [fontsize=25]
-	342 [fontsize=25]
-	343 [fontsize=25]
 	344 [fontsize=25]
 	345 [fontsize=25]
 	347 [fontsize=25]
-	348 [fontsize=25]
-	349 [fontsize=25]
-	350 [fontsize=25]
-	352 [fontsize=25]
 	353 [fontsize=25]
 	354 [fontsize=25]
-	355 [fontsize=25]
-	356 [fontsize=25]
 	357 [fontsize=25]
-	359 [fontsize=25]
 	360 [fontsize=25]
-	362 [fontsize=25]
 	363 [fontsize=25]
-	364 [fontsize=25]
-	365 [fontsize=25]
 	366 [fontsize=25]
 	368 [fontsize=25]
 	369 [fontsize=25]
-	370 [fontsize=25]
-	371 [fontsize=25]
 	372 [fontsize=25]
-	373 [fontsize=25]
 	374 [fontsize=25]
-	375 [fontsize=25]
-	376 [fontsize=25]
-	377 [fontsize=25]
 	378 [fontsize=25]
 	380 [fontsize=25]
 	381 [fontsize=25]
 	383 [fontsize=25]
-	384 [fontsize=25]
-	386 [fontsize=25]
 	387 [fontsize=25]
-	388 [fontsize=25]
-	389 [fontsize=25]
 	390 [fontsize=25]
 	392 [fontsize=25]
 	393 [fontsize=25]
-	394 [fontsize=25]
 	395 [fontsize=25]
-	396 [fontsize=25]
-	397 [fontsize=25]
-	399 [fontsize=25]
 	400 [fontsize=25]
 }
