@@ -19,26 +19,26 @@ digraph {
 		Light Green Fill: Benefits\l \
 		Pink Fill: Penalties\l \
 		Red Fill: Death\l \
+		Green Box: Combat\l \
 		Blue Text: Key Items/Events\l \
+		Grey Text: Riddle/Numeric Code\l \
 		Red Text: Lost Items/Negative Events\l \
 		Orange Text: Codewords/Spells\l \
 		Purple Text: Shops\l \
 		Blue Line: Forced Items/Events\l \
 		Light Blue Text/Line: Optional Items/Events\l \
+		Grey Line: Hidden Option\l \
 		Purple Line: Dice Events\l \
 		Green Line: Stat Test Passed\l \
 		Brown Line: Stat Test Failed\l \
 		Magenta Line: Combat Related Events\l \
-		Grey Text: Riddle/Numeric Code\l \
-		Grey Line: Hidden Option\l \
 		Orange Line: Codewords/Spells\l \
 		Red Line: Possible Error\l \
 		Gold Fill: Required Nodes\l \
 		Light Blue Fill: Recommended Nodes\l \
 		Gold Outline: Recommended Path\l \
-		Green Box: Combat\l \
 		SK/ST/LK/AT/AR/TM/CW/CL: Skill/Stamina/Luck/Attack Strength/Attack Round/Time/Consecutive Win Round/Consecutive Lose Round\l \
-		?: Chance of this happening, depending on instructions in text\l \
+		?: May happen depending on text in parentheses\l \
 		*: Special Combat Rules\l \
 		-: Negative Status\l \
 		+: Positive Status\l \

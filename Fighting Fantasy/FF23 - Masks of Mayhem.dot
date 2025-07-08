@@ -11,39 +11,31 @@ digraph {
 	edge[weight=5]
 	stylesheet="../style.css"
 	
-	subgraph ShopMenu {
-		node [fontcolor = "purple" shape = "rect" margin = 0.1]
-//		menu
-	}
-
 	// a box for a graph label
 	// note that you can override the defaults set above
 	title [label = "Fighting Fantasy #23: Masks of Mayhem\n\n \
 		Light Green Fill: Benefits\l \
 		Pink Fill: Penalties\l \
 		Red Fill: Death\l \
+		Green Box: Combat\l \
 		Blue Text: Key Items/Events\l \
+		Grey Text: Riddle/Numeric Code\l \
 		Red Text: Lost Items/Negative Events\l \
 		Purple Text: Shops\l \
 		Blue Line: Forced Items/Events\l \
 		Light Blue Text/Line: Optional Items/Events\l \
+		Grey Line: Hidden Option\l \
 		Purple Line: Dice Events\l \
 		Green Line: Stat Test Passed\l \
 		Brown Line: Stat Test Failed\l \
 		Magenta Line: Combat Related Events\l \
-		Grey Text: Riddle/Numeric Code\l \
-		Grey Line: Hidden Option\l \
 		Red Line: Possible Error\l \
 		Gold Fill: Required Nodes\l \
 		Light Blue Fill: Recommended Nodes\l \
 		Gold Outline: Recommended Path\l \
-		Green Box: Combat\l \
 		SK/ST/LK/AT/AR: Skill/Stamina/Luck/Attack Strength/Attack Round\l \
-		?: Chance of this happening, depending on instructions in text\l \
-		*: Special Combat Rules\l \
-		+: Positive Status\l \
-		^: Damage can be reduced by items\l \
-		@: Take 2 items\l\l \
+		?: May happen depending on text in parentheses\l \
+		*: Special Combat Rules\l\l \
 		Starting Stats:\l \
 		Initial Skill: 1d+6\l \
 		Initial Stamina: 2d+12\l \
@@ -53,29 +45,34 @@ digraph {
 		10 meal: +4ST\l \
 		sword\l \
 		leather armor\l \
+		water flask\l \
 		backpack\l\l \
 		Key Items:\l \
 		magic bow/Wight sword: Can go above ISK.\l \
 		Hever horn: -1ESK unless instructed otherwise.\l \
-		-water flask: Meal restore +3ST instead of +4ST\l \
-		cold: Meals restore 3ST at mountain\l \
-		cmtt\l\l \
+		water flask: If rotted, meals only restore +3ST.\l \
+		cold: Meals only restore +3ST.\l\l \
 		Special Combat Rules:\l \
-		-: Immune to horn of Hever\l \
+		-: Immune to Hever horn\l \
 		Mordida: Enemy alternately attacks. If lose AR vs first, lose additional -2ST.\l \
-		Tentacle (207*): Roll d6 before each tentacle 1-2: -1ST, 5-6: +1DG\l \
-		Tribesman: If win AR against opponent, they cannot attack next round.\l \
-		rules\l\l \
+		Tentacle (207*): Roll d6 before each tentacle 1-2: -1ST, 5-6: +1DG.\l \
+		Tentacle (330*): Fight 2 at a time. If one dies, another replaces it.\l \
+		Tribesman: If win AR against opponent, they cannot attack next round.\l\l \
 		Notes:\l \
-		Order: meal/gold/item/AT/SK/ST/LK\l \
-		"
+		Get LK potion and use after getting copper nugget.\l \
+		Visit wood elves for +1LK plus the tentacle fight is easier.\l \
+		Get 10 gold from Spriggan instead of ant trail, since at SK&ge;9 you lose less ST that way.\l \
+		Eat meal after Spriggan and Doragar.\l \
+		Get 5 gold, Snattacat's tusk, and statuette at Doragar's den.\l \
+		Skip Saber-toothed Tiger since it is harder than Morgana, and we can afford the -2LK penalty.\l \
+		Eat all food after Hellfire Spirit.\l \
+		Buy invisibility cloak and antifreeze potion at Canches.\l \
+		Restore +all ST at Juju.\l"
 		shape = "box"
 		margin = 0.1]
 		
 	subgraph Boost {
 		node [style = "filled" color = "greenyellow"]
-//		boo1 [label = "\N\n text"]
-//		boo3 [label = "\N\n text"]
 		010 [label = "\N\n +1LK"]
 		026 [label = "\N\n +2ST"]
 		066 [label = "\N\n +1LK"]
@@ -83,13 +80,10 @@ digraph {
 		177 [label = "\N\n +2ST"]
 		308 [label = "\N\n +all SK/\n +all ST/\n +all LK"]
 		389 [label = "\N\n +4ST"]
-//		bstt
 	}
 
 	subgraph Damage {
 		node [style = "filled" color = "pink"]
-//		dam1 [label = "\N\n text"]
-//		dam3 [label = "\N\n text"]
 		003 [label = "\N\n -1dST"]
 		012 [label = "\N\n -2ST"]
 		018 [label = "\N\n -2ST"]
@@ -123,15 +117,10 @@ digraph {
 		339 [label = "\N\n -2ST"]
 		375 [label = "\N\n -2ST?\n (lose AR)"]
 		377 [label = "\N\n -3ST"]
-	//	ddgg
 	}
 	
 	subgraph Death {
 		node [style = "filled" color = "red"]
-//		ddt
-//		ddt2
-//		monddt
-//		monddt2
 		017
 		059
 		063
@@ -148,7 +137,7 @@ digraph {
 		139
 		146
 		153
-		159 [fontcolor = "blue" shape = "rect" label = "\N\n -helmet?\n (2)x3"]
+		159 [class = "kky" shape = "rect" label = "\N\n -helmet?\n (2)x3"]
 		163
 		170
 		174
@@ -181,26 +170,10 @@ digraph {
 		360
 		363
 		381
-//		ddtt
 	}
 
 	subgraph Key_Item {
 		node [fontcolor = "blue" shape = "rect"]
-		/*
-		key1 [label = "\N\n info" tooltip = "info text"]
-		key2 [label = "\N\n text"]
-		key3 [label = "\N\n text"]
-		key4 [fontcolor = "crimson" label = "\N\n -text"]
-		boo2 [class = "bst" label = "\N\n text"]
-		boo4 [class = "bst" label = "\N\n text"]
-		boo5 [class = "bst" label = "\N\n text"]
-		dam2 [class = "ddg" label = "\N\n text"]
-		dam4 [class = "ddg" label = "\N\n text"]
-		dam5 [class = "ddg" label = "\N\n text"]
-		opt
-		opt2 [class = "bst"]
-		opt3 [class = "bst"]
-		*/
 		022 [label = "\N\n Vashti"]
 		029 [label = "\N\n -hands tied?\n (LK)"]
 		030 [label = "\N\n Cholumbara"]
@@ -232,17 +205,15 @@ digraph {
 		304 [class = "ddg" label = "\N\n +0~10 gold\n (-0~5ST)"]
 		309 [label = "\N\n Doragar"]
 		318 [label = "\N\n snow-shoes"]
-		333 [class = "bst" label = "\N\n tiger's claws\n Hever horn\n +3ST\n +2LK"]
+		333 [class = "bst" label = "\N\n tiger's claws\n Hever horn: -1ESK\n +3ST\n +2LK"]
 		342 [label = "\N\n search-party"]
 		353 [label = "\N\n info" tooltip = "Juja: always pick the middle way"]
 		386 [label = "\N\n bejewelled choker"]
 		394 [label = "\N\n copper nugget"]
-//		kkyy
 	}
 	
 	subgraph Key_Loss {
 		node [fontcolor = "crimson" shape = "rect"]
-//		kkll
 		013 [label = "\N\n -2 meal"]
 		002 [label = "\N\n -2 meal"]
 		005 [label = "\N\n -all meal"]
@@ -270,7 +241,6 @@ digraph {
 	
 	subgraph Key_Text {
 		node [shape = "rect"]
-//		kkxx
 		086 [style = "filled" color = "greenyellow:pink" label = "\N\n +1LK\n -2ST?\n (!eat meal)"]
 		015 [class = "ddg" label = "\N\n -2ST?\n (!eat meal)"]
 		099 [class = "bst" label = "\N\n +2ST?\n (-1 gold)"]
@@ -282,9 +252,6 @@ digraph {
 
 	subgraph Key_Word {
 		node [fontcolor = "grey" shape = "rect"]
-//		wrd1 [label = "\N\n text"]
-//		wrd2 [label = "\N\n text"]
-//		wrd3 [label = "\N\n text"]
 		001 [label = "\N\n helmet\n Ifor Tynin: 40"]
 		085 [class = "bst" label = "\N\n Galrin: 100\n +2LK"]
 		092 [label = "\N\n sceptre: 1"]
@@ -292,54 +259,27 @@ digraph {
 		215 [class = "bst" label = "\N\n page: 208\n +4ST\n +2LK"]
 		301 [label = "\N\n apple seeds: 11x8"]
 		346 [class = "bst" label = "\N\n Galrin: 100\n +2LK"]
-//		wrdd
 	}
 	
 	subgraph Shop {
 		node [fontcolor = "purple" shape = "rect"]
-//		shop1 [label = "\N\n text"]
 		080 [label = "\N\n Canches"]
 		080.1 [label = "Canches\n \
 			3g: luck potion: +all LK\l \
 			5g: healing potion: +6ST\l \
 			10g: invisibility cloak\l \
 			5g: antifreeze potion\l \
-			6g: boots of agility\l"]
+			6g: agility boots\l"]
 		{
 			rank = same
 			080
 			080.1
 		}
-//		shpp
 	}
 	
 	subgraph Combat {
 		style = "filled" color = "palegreen"
-		/*
-		subgraph cluster_00 {
-			label = "Monster\n 0/0\n 0/0"
-			mon1 [label = "\N\n text"]
-			mon2 [shape = "rect" class = "kky" label = "\N\n text"]
-			mon3 [label = "\N\n text"]
-			mon4 [shape = "rect" class = "kky" label = "\N\n text"]
-			mon5 [shape = "rect" class = "kky" label = "\N\n text"]
-			monboo1 [class = "bst" label = "\N\n text"]
-			monboo2 [shape = "rect" class = "bst kky" label = "\N\n text"]
-			monboo3 [class = "bst" label = "\N\n text"]
-			monboo4 [shape = "rect" class = "bst kky" label = "\N\n text"]
-			monboo5 [shape = "rect" class = "bst kky" label = "\N\n text"]
-			mondam1 [class = "ddg" label = "\N\n text"]
-			mondam2 [shape = "rect" class = "ddg kky" label = "\N\n text"]
-			mondam3 [class = "ddg" label = "\N\n text"]
-			mondam4 [shape = "rect" class = "ddg kky" label = "\N\n text"]
-			mondam5 [shape = "rect" class = "ddg kky" label = "\N\n text"]
-			monopt [shape = "rect" class = "bst kky"]
-			monddt
-			monopt2 [shape = "rect" class = "bst kky"]
-			monddt2
-			monopt3 [shape = "rect" class = "bst kky"]
-		}
-		*/
+
 		subgraph cluster_01 {
 			label = "Pygmy Orc\n 7(6?)/10"
 			014
@@ -519,57 +459,51 @@ digraph {
 			label = "Skeleton\n 5/8 5/7"
 			386
 		}
-		
-//		cbtt
 	}
 
 	subgraph Optional {
 		node [shape = "rect" class = "opt kky"]
-		/*
-		opt [class = "opt kky"]
-		monopt [class = "opt kky"]
-		opt2 [class = "opt kky"]
-		monopt2 [class = "opt kky"]
-		opt3 [class = "opt kky"]
-		monopt3 [class = "opt kky"]
-		optt
-		*/
+		030 [class = "opt"]
+		080 [class = "opt"]
+		106 [class = "opt"]
+		156 [class = "opt"]
 	}
 	
 	subgraph Path {
 		node [class = "path" penwidth = 3 color = "gold"]
-		/*
-		txt2
-		key2 [class = "path"]
-		wrd2 [class = "path"]
-		key3
-		wrd3
-		boo3 [class = "path"]
-		boo4 [class = "path bst"]
-		boo5
-		dam3 [class = "path"]
-		dam4 [class = "path ddg"]
-		dam5
-		monboo3 [class = "path bst"]
-		monboo4 [class = "path bst kky"]
-		monboo5
-		mondam3 [class = "path ddg"]
-		mondam4 [class = "path ddg kky"]
-		mondam5
-		mon3 [class = "path"]
-		mon4 [class = "path kky"]
-		ddt2 [class = "path"]
-		opt3 [class = "path opt kky"]
-		monddt2 [class = "path"]
-		monopt3 [class = "path opt kky"]
-		pptt
-		*/
+		001
+		053
+		021
+		316
+		226
+		257
+		322
+		379 [class = "path"]
+		346
+		385
+		171 [class = "path"]
+		106 [class = "path opt"]
+		398 [class = "path ddg"]
+		334
+		028
+		218
+		154
+		169 [class = "path bst"]
+		382
+		138
+		156 [class = "path opt"]
+		362
+		181
 		107
 		279
 		092
 		231
-
-
+		036
+		289
+		054
+		124
+		313
+		237 [class = "path"]
 		364
 		057
 		352
@@ -581,8 +515,7 @@ digraph {
 		388
 		370
 		151
-		127
-		228
+		104
 		015 [class = "path ddg"]
 		399
 		051
@@ -591,64 +524,112 @@ digraph {
 		222
 		112
 		301
+		030 [class = "path opt"]
 		121 [class = "path bst"]
 		343
 		200
 		178
+		396
+		066 [class = "path"]
+		078
+		042
+		389 [class = "path"]
+		184
+		232 [class = "path bst"]
+		026 [class = "path"]
+		149
+		083 [class = "path"]
+		384
+		093 [class = "path"]
+		132 [class = "path"]
+		020
+		202
+		105 [class = "path"]
+		140
+		034 [class = "path"]
+		068
+		291
+		243
+		285
+		214
+		336
+		080 [class = "path opt"]
+		013 [class = "path"]
+		148
+		206
+		168
+		114
+		010 [class = "path"]
+		070
+		327 [class = "path"]
+		201
+		293
+		380 [class = "path"]
+		122
+		261
+		320
+		161
+		357
+		125
+		345
+		165
+		193
+		264
+		215
+		308 [class = "path"]
+		374 [class = "path"]
+		126
+		387
+		022
+		208
+		088
+		037
+		344
+		128
+		282 [class = "path"]
+		173
+		287
+		341
+		284
+		123
+		198 [class = "path"]
+		267
+		046 [class = "path"]
+		204
+		256
+		032
+		224
+		049
+		016
+		059 [class = "path"]
+		100
+		295 [class = "path"]
+		081
+		258
+		040 [class = "path"]
+		400
 	}
 	
 	subgraph Required {
 		node [shape = "rect" class = "req kky"]
-		/*
-		key3 [class = "req kky"]
-		wrd3 [class = "req kky"]
-		boo5 [class = "req kky"]
-		dam5 [class = "req kky"]
-		monboo5 [class = "req kky"]
-		mondam5 [class = "req kky"]
-		mon5 [class = "req kky"]
-		*/
+		001 [class = "req pwd"]
+		022 [class = "req kky"]
 		092 [class = "req pwd"]
 		172 [class = "req kky"]
+		161 [class = "req pwd"]
+		215 [class = "req pwd"]
 		301 [class = "req pwd"]
+		346 [class = "req pwd"]
 		400 [class = "req" shape = "octagon"]
 	}
 	
 	subgraph Required2 {
 		node [shape = "rect" class = "req2 kky"]
-//		req2 [class = "req2 kky"]
+		085 [class = "req2 pwd"]
 	}
-	/*
-	mon1 -> mon2 -> mon3 -> mon4 -> mon5 [penwidth = 3]
-	boo1 -> boo2 -> boo3 -> boo4 -> boo5 [penwidth = 3]
-	dam1 -> dam2 -> dam3 -> dam4 -> dam5 [penwidth = 3]
-	txt1 -> key1 -> txt2 -> key2 -> key3 -> key4
-	wrd1 -> wrd2 -> wrd3
-	opt -> ddt -> opt2 -> ddt2 -> opt3
-	monboo1 -> monboo2 -> monboo3 -> monboo4 -> monboo5
-	mondam1 -> mondam2 -> mondam3 -> mondam4 -> mondam5
-	monopt -> monddt -> monopt2 -> monddt2 -> monopt3
 
-	myTitle -> z001 [penwidth = 3]
-	z001 -> z002 [class = "dice" label = "1-3"]
-	z001 -> z003 [class = "dice" label = "4-6"]
-	z002 -> z004 [class = "pass" label = "LK"]
-	z002 -> z005 [class = "fail"]
-	z003 -> z006 [dir = "both"]
-	z004 -> z007 [class = "req" label = "req"]
-	z004 -> z008 [class = "opt" label = "-opt"]
-	z005 -> z009 [class = "info" label = "info"]
-	z009 -> z010 [class = "err" label = "error(?)"]
-	z010 -> z011 [class = "cbt" label = "escape"]
-	z011 -> z012 [class = "skl" label = "spell"]
-	{
-		rank = same
-		z003
-		z006
-	}
-	*/
-	title -> 001
-	001 -> 053
+	title -> 001 [penwidth = 3]
+	001 -> 053 [penwidth = 3]
 	002 -> 068
 	003 -> 394
 	003 -> 144
@@ -663,30 +644,30 @@ digraph {
 	009 -> 211
 	009 -> 073
 	010 -> 098
-	010 -> 070
+	010 -> 070 [penwidth = 3]
 	011 -> 056
 	011 -> 323
 	012 -> 085
-	013 -> 148
+	013 -> 148 [penwidth = 3]
 	013 -> 047
 	013 -> 332
 	013 -> 062
 	013 -> 221
 	014 -> 268
 	014 -> 129 [class = "cbt" label = "AR>5"]
-	015 -> 399
+	015 -> 399 [penwidth = 3]
 	015 -> 276
-	016 -> 059
+	016 -> 059 [penwidth = 3]
 	016 -> 306
 	017
 	018 -> 313
 	019 -> 335 [class = "req" label = "Hever horn"]
 	019 -> 072
 	020 -> 140
-	020 -> 202
-	021 -> 316
+	020 -> 202 [penwidth = 3]
+	021 -> 316 [penwidth = 3]
 	021 -> 242
-	022 -> 208 [class = "pwd" label = "page"]
+	022 -> 208 [penwidth = 3 class = "pwd" label = "page"]
 	022 -> 329
 	023 -> 164
 	023 -> 336
@@ -695,9 +676,9 @@ digraph {
 	025 -> 338 [class = "opt" label = "-healing potion"]
 	025 -> 300
 	026 -> 058 [class = "req" label = "crystal mirror"]
-	026 -> 149
+	026 -> 149 [penwidth = 3]
 	027 -> 362
-	028 -> 218
+	028 -> 218 [penwidth = 3]
 	028 -> 005
 	028 -> 087
 	029 -> 173
@@ -705,30 +686,30 @@ digraph {
 	031 -> 263
 	031 -> 156
 	032 -> 019
-	032 -> 224
-	033 -> 064 [class = "pass" label = "SK-1"]
+	032 -> 224 [penwidth = 3]
+	033 -> 064 [penwidth = 3 class = "pass" label = "SK-1"]
 	033 -> 006 [class = "fail"]
-	034 -> 068
+	034 -> 068 [penwidth = 3]
 	035 -> 204
 	036 -> 343
-	036 -> 289
+	036 -> 289 [penwidth = 3]
 	036 -> 225 [class = "opt" label = "rope"]
-	037 -> 344 [class = "req" label = "wildcat's pelt/\n antifreeze potion"]
+	037 -> 344 [penwidth = 3 class = "req" label = "wildcat's pelt/\n antifreeze potion"]
 	037 -> 227
 	038 -> 302 [class = "opt" label = "rope"]
 	038 -> 217
 	039 -> 076
-	040 -> 400
+	040 -> 400 [penwidth = 3]
 	041 -> 277
 	041 -> 140
 	042 -> 071
-	042 -> 389
+	042 -> 389 [penwidth = 3]
 	043 -> 393
 	044 -> 336
 	044 -> 323
 	044 -> 249
 	045 -> 382
-	046 -> 204
+	046 -> 204 [penwidth = 3]
 	046 -> 298
 	047 -> 090 [class = "opt" label = "rope"]
 	047 -> 278
@@ -736,39 +717,39 @@ digraph {
 	047 -> 359
 	048 -> 358
 	049 -> 306
-	049 -> 016
+	049 -> 016 [penwidth = 3]
 	050 -> 029
-	051 -> 033 [class = "pass" label = "LK"]
+	051 -> 033 [penwidth = 3 class = "pass" label = "LK"]
 	051 -> 006 [class = "fail"]
 	052 -> 114
 	053 -> 109
 	053 -> 245
-	053 -> 021
-	054 -> 124 [class = "pass" label = "LK"]
+	053 -> 021 [penwidth = 3]
+	054 -> 124 [penwidth = 3 class = "pass" label = "LK"]
 	054 -> 018 [class = "fail"]
 	055 -> 323
 	055 -> 336
 	056 -> 023
 	056 -> 336
-	057 -> 352
+	057 -> 352 [penwidth = 3]
 	057 -> 388
 	058 -> 209.2
-	059 -> 100 [class = "pwd" label = "Galrin"]
+	059 -> 100 [penwidth = 3 class = "pwd" label = "Galrin"]
 //	060 -> 142
 	142 -> 060 [dir = back]
 	061 -> 309 [weight = 10]
 	061 -> 141
 	062 -> 332
 	063
-	064 -> 222
+	064 -> 222 [penwidth = 3]
 	065
-	066 -> 078
+	066 -> 078 [penwidth = 3]
 	067 -> 226
-	068 -> 291 [class = "req" label = "ant trail"]
+	068 -> 291 [penwidth = 3 class = "req" label = "ant trail"]
 	068 -> 350
 	069 -> 382
 	070 -> 103 [class = "opt" label = "-invisibility cloak"]
-	070 -> 327
+	070 -> 327 [penwidth = 3]
 	071 -> 166
 	071 -> 137
 	072 -> 369
@@ -781,30 +762,30 @@ digraph {
 	076 -> 135 [class = "pass" label = "LK"]
 	076 -> 280 [class = "fail"]
 	077 -> 013
-	078 -> 042
+	078 -> 042 [penwidth = 3]
 	078 -> 120
 	079 -> 171
 	079 -> 097
 //	080 -> 236
 //	080 -> 323
 //	080 -> 336
-	081 -> 258 [class = "req" label = "Vashti"]
+	081 -> 258 [penwidth = 3 class = "req" label = "Vashti"]
 	081 -> 347
 	082 -> 178
-	083 -> 384
+	083 -> 384 [penwidth = 3]
 	084 -> 315
 	084 -> 056
 	085 -> 108
-	086 -> 388
+	086 -> 388 [penwidth = 3]
 	087 -> 192 [class = "req" label = "captured"]
 	087 -> 150
-	088 -> 037
+	088 -> 037 [penwidth = 3]
 	089 -> 254
 	090
 	091 -> 255 [class = "pass" label = "LK"]
 	091 -> 041 [class = "fail"]
-	092 -> 231
-	093 -> 132
+	092 -> 231 [penwidth = 3]
+	093 -> 132 [penwidth = 3]
 	094 -> 244 [class = "dice" label = "1-3"]
 	094 -> 174 [class = "dice" label = "4-6"]
 	095 -> 297
@@ -816,18 +797,18 @@ digraph {
 	098 -> 180 [color = "cyan3:black" fontcolor = "cyan3" label = "-invisibility cloak"]
 	098 -> 311
 	099 -> 024
-	100 -> 295
+	100 -> 295 [penwidth = 3]
 	101 -> 222
 	102
 	103 -> 327
 	104 -> 197 [class = "fail"]
-	104 -> 015 [class = "pass" label = "ST&ge;12"]
+	104 -> 015 [penwidth = 3 class = "pass" label = "ST&ge;12"]
 	105 -> 304
-	105 -> 140
+	105 -> 140 [penwidth = 3]
 	106 -> 115
-	106 -> 398
+	106 -> 398 [penwidth = 3]
 	107 -> 231
-	107 -> 279
+	107 -> 279 [penwidth = 3]
 	108 -> 027
 	108 -> 138
 	109
@@ -836,13 +817,13 @@ digraph {
 	111 -> 166
 	111 -> 377
 	111 -> 342
-	112 -> 301 [dir = both color = "blue:black" fontcolor = "blue" label = "Snattacat's tusk"]
+	112 -> 301 [penwidth = 3 dir = both color = "blue:black" fontcolor = "blue" label = "Snattacat's tusk"]
 	112 -> 331 [class = "req" label = "leather pouch"]
-	112 -> 030 [dir = both color = "blue:black" fontcolor = "blue" label = "statuette"]
-	112 -> 121
+	112 -> 030 [penwidth = 3 dir = both color = "blue:black" fontcolor = "blue" label = "statuette"]
+	112 -> 121 [penwidth = 3]
 	113 -> 273 [class = "cbt" label = "flee"]
 	113 -> 126
-	114 -> 010
+	114 -> 010 [penwidth = 3]
 	115 -> 263
 	115 -> 082
 	116
@@ -852,27 +833,27 @@ digraph {
 	119
 	120 -> 008 [class = "cbt" label = ">2AR"]
 	120 -> 111 [class = "cbt" label = ">2AR"]
-	121 -> 343
-	122 -> 261
+	121 -> 343 [penwidth = 3]
+	122 -> 261 [penwidth = 3]
 	122 -> 393
-	123 -> 198 [class = "req" label = "snow-shoes/\n agility boots"]
+	123 -> 198 [penwidth = 3 class = "req" label = "snow-shoes/\n agility boots"]
 	123 -> 363
-	124 -> 313
+	124 -> 313 [penwidth = 3]
 	125 -> 374
-	125 -> 345
-	126 -> 387
+	125 -> 345 [penwidth = 3]
+	126 -> 387 [penwidth = 3]
 	126 -> 037
 	127 -> 203 [class = "fail"]
 	127 -> 228 [class = "pass" label = "SK-1"]
 	128 -> 390 [class = "opt" label = "-invisibility cloak"]
 	128 -> 383
-	128 -> 282
+	128 -> 282 [penwidth = 3]
 	129 -> 268
 	130 -> 297 [class = "pass" label = "LK"]
 	130 -> 358 [class = "fail"]
 	131 -> 153 [class = "fail"]
 	131 -> 354 [class = "pass" label = "ST&ge;11"]
-	132 -> 020
+	132 -> 020 [penwidth = 3]
 	133 -> 372 [class = "req" label = "agility boots"]
 	133 -> 188 [class = "req" label = "rope"]
 	133 -> 159
@@ -882,13 +863,13 @@ digraph {
 	135 -> 307
 	136
 	137 -> 166
-	138 -> 156
+	138 -> 156 [penwidth = 3]
 	138 -> 263
 	138 -> 189
 	139
 	140 -> 002
-	140 -> 034
-	141 -> 086 [class = "pass" label = "LK"]
+	140 -> 034 [penwidth = 3]
+	141 -> 086 [penwidth = 3 class = "pass" label = "LK"]
 	141 -> 163 [class = "fail"]
 	142 -> 267 [color = "cyan3:black" fontcolor = "cyan3" label = "-invisibility cloak"]
 	142 -> 392 [class = "cbt" label = "win AR"]
@@ -901,21 +882,21 @@ digraph {
 	146
 	147 -> 101
 	148 -> 134 [class = "fail"]
-	148 -> 206 [class = "pass" label = "SK"]
+	148 -> 206 [penwidth = 3 class = "pass" label = "SK"]
 	149 -> 240
-	149 -> 083
+	149 -> 083 [penwidth = 3]
 	150 -> 209
 	150 -> 351
 	151 -> 127
-	151 -> 104
+	151 -> 104 [penwidth = 3]
 	152 -> 024
 	153
 	154 -> 248 [class = "opt" label = "-Galrin"]
-	154 -> 169
+	154 -> 169 [penwidth = 3]
 	154 -> 069
 	155 -> 314
 	155 -> 194
-	156 -> 362
+	156 -> 362 [penwidth = 3]
 	156 -> 003
 	157 -> 216 [class = "fail"]
 	157 -> 012 [class = "pass" label = "SK"]
@@ -924,7 +905,7 @@ digraph {
 	159 -> 293 [class = "dice" label = "2-6x3"]
 	160 -> 219 [class = "pass" label = "LK"]
 	160 -> 349 [class = "fail"]
-	161 -> 357
+	161 -> 357 [penwidth = 3]
 	161 -> 374
 	162 -> 259 [class = "pass" label = "LK"]
 	162 -> 139 [class = "fail"]
@@ -934,18 +915,18 @@ digraph {
 	165 -> 381
 	165 -> 263.2 [class = "err" label = "error?"]
 	165 -> 229 [class = "pwd" label = "fix"]
-	165 -> 193
+	165 -> 193 [penwidth = 3]
 	166 -> 014 [class = "req" label = "search-party"]
 	166 -> 356
 	167 -> 374
 	168 -> 052 [class = "dice" label = "1-2"]
 	168 -> 017 [class = "dice" label = "3-4"]
-	168 -> 114 [class = "dice" label = "5-6"]
-	169 -> 382
+	168 -> 114 [penwidth = 3 class = "dice" label = "5-6"]
+	169 -> 382 [penwidth = 3]
 	170
-	171 -> 106
-	172 -> 141
-	173 -> 287
+	171 -> 106 [penwidth = 3]
+	172 -> 141 [penwidth = 3]
+	173 -> 287 [penwidth = 3]
 	173 -> 210 [class = "req" label = "1 companion"]
 	173 -> 176 [class = "req" label = "2 companions"]
 	174
@@ -954,17 +935,17 @@ digraph {
 	176 -> 360 [class = "fail"]
 	177 -> 384
 	178 -> 305
-	178 -> 396
+	178 -> 396 [penwidth = 3]
 	179 -> 077
 	180 -> 247
 	180 -> 117
 	181 -> 036
 	181 -> 212
-	181 -> 107
+	181 -> 107 [penwidth = 3]
 	182 -> 142
 	183 -> 108
 	184 -> 296
-	184 -> 232
+	184 -> 232 [penwidth = 3]
 	185
 	186 -> 337 [class = "pass" label = "LK"]
 	186 -> 310 [class = "fail"]
@@ -976,28 +957,28 @@ digraph {
 	191
 	192
 	193 -> 229
-	193 -> 264
+	193 -> 264 [penwidth = 3]
 	193 -> 187
 	194 -> 173
 	195 -> 391 [class = "dice" label = "1-4"]
 	195 -> 095 [class = "dice" label = "5-6"]
 	196 -> 223
 	197
-	198 -> 267
+	198 -> 267 [penwidth = 3]
 	199 -> 117
-	200 -> 178
-	201 -> 293
-	202 -> 105
+	200 -> 178 [penwidth = 3]
+	201 -> 293 [penwidth = 3]
+	202 -> 105 [penwidth = 3]
 	202 -> 091
 	202 -> 140
 	203 -> 104
-	204 -> 256
+	204 -> 256 [penwidth = 3]
 //	205 -> 396
 	206 -> 102
-	206 -> 168
+	206 -> 168 [penwidth = 3]
 	207 -> 361 [class = "cbt" label = "flee\n -2ST"]
 	207 -> 346
-	208 -> 088 [class = "pwd" label = "apple seeds"]
+	208 -> 088 [penwidth = 3 class = "pwd" label = "apple seeds"]
 	208 -> 329
 	209
 	210 -> 275 [class = "pass" label = "LK"]
@@ -1009,39 +990,39 @@ digraph {
 	213 -> 325
 	213 -> 370
 	214 -> 323
-	214 -> 336
-	215 -> 308
+	214 -> 336 [penwidth = 3]
+	215 -> 308 [penwidth = 3]
 	215 -> 167
 	216
 	217 -> 133 [class = "pass" label = "LK"]
 	217 -> 116 [class = "fail"]
 	218 -> 319 [class = "req" label = "captured"]
-	218 -> 154
+	218 -> 154 [penwidth = 3]
 	219 -> 399
 	219 -> 276
 	220 -> 321
 	220 -> 020
 	221 -> 007 [class = "pass" label = "LK"]
 	221 -> 191 [class = "fail"]
-	222 -> 112 [class = "req" label = "Doragar"]
+	222 -> 112 [penwidth = 3 class = "req" label = "Doragar"]
 	222 -> 121
 	223 -> 336
 	223 -> 323
-	224 -> 049
+	224 -> 049 [penwidth = 3]
 	224 -> 019
 	225 -> 237
 	225 -> 213
-	226 -> 257 [class = "pass" label = "LK"]
+	226 -> 257 [penwidth = 3 class = "pass" label = "LK"]
 	226 -> 280 [class = "fail"]
 	227 -> 128
 	228 -> 015
 	229
 	230 -> 039
 	230 -> 076
-	231 -> 036
+	231 -> 036 [penwidth = 3]
 	231 -> 212
 	231 -> 343
-	232 -> 026
+	232 -> 026 [penwidth = 3]
 	233 -> 250
 	234 -> 274
 	234 -> 294
@@ -1050,7 +1031,7 @@ digraph {
 	236 -> 397
 	236 -> 185
 	237 -> 283
-	237 -> 364
+	237 -> 364 [penwidth = 3]
 	238 -> 125
 	238 -> 374
 	239 -> 160 [class = "pass" label = "LK"]
@@ -1063,7 +1044,7 @@ digraph {
 	242 -> 079
 	242 -> 171
 	243 -> 386
-	243 -> 285
+	243 -> 285 [penwidth = 3]
 	244 -> 173
 	245 -> 230
 	245 -> 303
@@ -1084,27 +1065,27 @@ digraph {
 	254 -> 367
 	255 -> 277
 	255 -> 140
-	256 -> 032
+	256 -> 032 [penwidth = 3]
 	256 -> 119
 	256 -> 290
 	257 -> 361
-	257 -> 322
-	258 -> 040 [class = "pwd" label = "Ifor Tynin"]
+	257 -> 322 [penwidth = 3]
+	258 -> 040 [penwidth = 3 class = "pwd" label = "Ifor Tynin"]
 	258 -> 347
 	259 -> 117
 	260
-	261 -> 320
+	261 -> 320 [penwidth = 3]
 	261 -> 074
 	261 -> 393
 	262
 	263
 	264 -> 229
 	264 -> 381
-	264 -> 215
+	264 -> 215 [penwidth = 3]
 	265 -> 017 [class = "dice" label = "1-4"]
 	265 -> 253 [class = "dice" label = "5-6"]
 	266 -> 078
-	267 -> 046 [class = "opt" label = "-invisibility cloak"]
+	267 -> 046 [penwidth = 3 class = "opt" label = "-invisibility cloak"]
 	267 -> 241
 	268 -> 321
 	269 -> 108
@@ -1122,33 +1103,33 @@ digraph {
 	277 -> 140
 	278 -> 134
 	279 -> 231
-	279 -> 092
+	279 -> 092 [penwidth = 3]
 	280
 	281 -> 132
-	282 -> 173
+	282 -> 173 [penwidth = 3]
 	283 -> 364
 	283 -> 388
 	284 -> 142 [class = "opt" label = "!snow-shoes"]
-	284 -> 123
+	284 -> 123 [penwidth = 3]
 	285 -> 055
-	285 -> 214
+	285 -> 214 [penwidth = 3]
 	286 -> 130
 	286 -> 358
 	287 -> 143
-	287 -> 341
+	287 -> 341 [penwidth = 3]
 	288
 	289 -> 175
-	289 -> 054
+	289 -> 054 [penwidth = 3]
 	290 -> 065 [class = "dice" label = "1-4"]
 	290 -> 366 [class = "dice" label = "5-6"]
 	291 -> 055
-	291 -> 243
+	291 -> 243 [penwidth = 3]
 	292
 	293 -> 043
-	293 -> 380
+	293 -> 380 [penwidth = 3]
 	294 -> 398
 	295 -> 004 [class = "req" label = "cursed"]
-	295 -> 081
+	295 -> 081 [penwidth = 3]
 	296 -> 026
 	297 -> 115
 	298 -> 395 [class = "req" label = "pick-axe head"]
@@ -1167,12 +1148,12 @@ digraph {
 	306 -> 170
 	307 -> 157
 	307 -> 330
-	308 -> 374
-	309 -> 172 [weight = 10]
+	308 -> 374 [penwidth = 3]
+	309 -> 172 [penwidth = 3 weight = 10]
 	310 -> 089
 	311 -> 180
 	312 -> 078 [class = "dice" label = "5-6x3"]
-	313 -> 237
+	313 -> 237 [penwidth = 3]
 	313 -> 213
 	314 -> 271 [class = "pass" label = "LK"]
 	314 -> 050 [class = "fail"]
@@ -1180,16 +1161,16 @@ digraph {
 	315 -> 056
 	315 -> 323
 	316 -> 067
-	316 -> 226
+	316 -> 226 [penwidth = 3]
 	317
 	318 -> 173
 	319 -> 270 [class = "req" label = "garnet ring"]
 	319 -> 045
-	320 -> 161 [class = "req" label = "helmet"]
+	320 -> 161 [penwidth = 3 class = "req" label = "helmet"]
 	320 -> 074
 	321 -> 184
 	321 -> 026
-	322 -> 379
+	322 -> 379 [penwidth = 3]
 	322 -> 207
 	323 -> 080 [dir = both color = "cyan3:black" fontcolor = "cyan3" label = "gold"]
 	323 -> 375
@@ -1200,7 +1181,7 @@ digraph {
 	326 -> 110 [class = "req" label = "-bejewelled choker"]
 	326 -> 044 [class = "req" label = "-garnet ring"]
 	326 -> 196 [class = "req" label = "-Cholumbara"]
-	327 -> 201
+	327 -> 201 [penwidth = 3]
 	328
 	329
 	330 -> 183 [class = "cbt" label = "flee\n -2ST"]
@@ -1210,10 +1191,10 @@ digraph {
 	332 -> 221
 	333 -> 384
 	334 -> 130
-	334 -> 028
+	334 -> 028 [penwidth = 3]
 	335 -> 072
-	336 -> 080 [dir = both color = "cyan3:black" fontcolor = "cyan3" label = "gold"]
-	336 -> 013
+	336 -> 080 [penwidth = 3 dir = both color = "cyan3:black" fontcolor = "cyan3" label = "gold"]
+	336 -> 013 [penwidth = 3]
 	336 -> 185
 	337 -> 108
 	338 -> 353
@@ -1221,24 +1202,24 @@ digraph {
 	339 -> 204
 	340 -> 263
 	340 -> 156
-	341 -> 284
+	341 -> 284 [penwidth = 3]
 	341 -> 142
 	342 -> 166
 	343 -> 376 [class = "req" label = "meal&le;2"]
-	343 -> 200
-	344 -> 128
+	343 -> 200 [penwidth = 3]
+	344 -> 128 [penwidth = 3]
 	345 -> 374
 	345 -> 187
 	345 -> 229
-	345 -> 165
-	346 -> 385
+	345 -> 165 [penwidth = 3]
+	346 -> 385 [penwidth = 3]
 	347
 //	348 -> 371
 	349
 	350 -> 236
-	350 -> 055 [weight = 10]
+	350 -> 055
 	351 -> 115
-	352 -> 373 [class = "pass" label = "LK"]
+	352 -> 373 [penwidth = 3 class = "pass" label = "LK"]
 	352 -> 163 [class = "fail"]
 	353 -> 125
 	353 -> 374
@@ -1249,18 +1230,18 @@ digraph {
 	356 -> 220 [class = "opt" label = "magic bow"]
 	356 -> 252
 	357 -> 025
-	357 -> 125
+	357 -> 125 [penwidth = 3]
 	358 -> 028
 	359 -> 134 [class = "fail"]
 	359 -> 365 [class = "pass" label = "SK"]
 	360
 	361 -> 398
 	361 -> 171
-	362 -> 181
+	362 -> 181 [penwidth = 3]
 	362 -> 343
 	363
 	364 -> 328
-	364 -> 057
+	364 -> 057 [penwidth = 3]
 	365 -> 102
 	365 -> 265
 	366 -> 131
@@ -1270,41 +1251,41 @@ digraph {
 	368 -> 038
 	369 -> 016
 	370 -> 239
-	370 -> 151
+	370 -> 151 [penwidth = 3]
 	371 -> 348 [dir = both color = "magenta:black" fontcolor = "magenta" label = "AR>4"]
 	371 -> 333
 	371 -> 177 [class = "cbt" label = "flee"]
 	372 -> 293
 	373 -> 061
-	373 -> 309
+	373 -> 309 [penwidth = 3]
 	374 -> 113
-	374 -> 126
+	374 -> 126 [penwidth = 3]
 	375 -> 013
 	376 -> 178
 	377 -> 342
 	378 -> 146 [class = "dice" label = "1-3"]
 	378 -> 233 [class = "dice" label = "4-6"]
 	379 -> 361 [class = "cbt" label = "flee\n -2ST"]
-	379 -> 346
+	379 -> 346 [penwidth = 3]
 	380 -> 393 [class = "dice" label = "4-10"]
-	380 -> 122 [class = "dice" label = "2,3,11,12"]
+	380 -> 122 [penwidth = 3 class = "dice" label = "2,3,11,12"]
 	381
 	382 -> 027
-	382 -> 138
+	382 -> 138 [penwidth = 3]
 	383 -> 155 [class = "req" label = "tiger's claws"]
 	383 -> 194
-	384 -> 093
+	384 -> 093 [penwidth = 3]
 	384 -> 281
 	385 -> 398
-	385 -> 171
+	385 -> 171 [penwidth = 3]
 	386 -> 084
 	386 -> 214
-	387 -> 022 [class = "pwd" label = "scepter\n orb"]
+	387 -> 022 [penwidth = 3 class = "pwd" label = "scepter\n orb"]
 	387 -> 037
 	388 -> 325 [weight = 10]
-	388 -> 370
+	388 -> 370 [penwidth = 3]
 	389 -> 026
-	389 -> 184
+	389 -> 184 [penwidth = 3]
 	390 -> 094
 	390 -> 318
 	391 -> 358
@@ -1316,14 +1297,14 @@ digraph {
 	394 -> 388
 	395 -> 256
 	396 -> 299 [class = "req" label = "-2 gold"]
-	396 -> 066 [class = "req" label = "-Cholumbara"]
+	396 -> 066 [penwidth = 3 class = "req" label = "-Cholumbara"]
 	396 -> 205 [dir = both color = "blue:black" fontcolor = "blue" label = "-copper nugget"]
 	396 -> 266
 	397 -> 179
 	397 -> 077
-	398 -> 334
+	398 -> 334 [penwidth = 3]
 	398 -> 251
-	399 -> 051
+	399 -> 051 [penwidth = 3]
 	399 -> 147
 	400
 }
